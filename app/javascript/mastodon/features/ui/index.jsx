@@ -96,7 +96,7 @@ import { areCollectionsEnabled } from '../collections/utils';
 import { getNavigationSkipLinkId, SkipLinks } from './components/skip_links';
 
 const messages = defineMessages({
-  beforeUnload: { id: 'ui.beforeunload', defaultMessage: 'Your draft will be lost if you leave Mastodon.' },
+  beforeUnload: { id: 'ui.beforeunload', defaultMessage: 'Your draft will be lost if you leave Nutshell.' },
 });
 
 const mapStateToProps = state => ({
@@ -414,7 +414,7 @@ class UI extends PureComponent {
   };
 
   handleDonate = () => {
-    location.href = 'https://joinmastodon.org/sponsors#donate'
+    location.href = 'http://nutshell.localhost:3000'
   }
 
   componentDidMount () {

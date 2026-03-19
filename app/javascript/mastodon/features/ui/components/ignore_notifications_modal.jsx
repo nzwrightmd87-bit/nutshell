@@ -75,7 +75,7 @@ export const IgnoreNotificationsModal = ({ filterType }) => {
         </div>
 
         <div>
-          <FormattedMessage id='ignore_notifications_modal.disclaimer' defaultMessage="Mastodon cannot inform users that you've ignored their notifications. Ignoring notifications will not stop the messages themselves from being sent." />
+          <FormattedMessage id='ignore_notifications_modal.disclaimer' defaultMessage="Nutshell cannot inform users that you've ignored their notifications. Ignoring notifications will not stop the messages themselves from being sent." />
         </div>
       </div>
 

@@ -4,6 +4,7 @@ class ActivityPub::DeliveryWorker
   include Sidekiq::Worker
   include RoutingHelper
   include JsonLdHelper
+  include DomainControlHelper
 
   STOPLIGHT_COOL_OFF_TIME = 60
   STOPLIGHT_FAILURE_THRESHOLD = 10
@@ -24,6 +25,8 @@ class ActivityPub::DeliveryWorker
 
   def perform(json, source_account_id, inbox_url, options = {})
     @options        = options.with_indifferent_access
+
+    return if federation_disabled?
 
     return unless @options[:bypass_availability] || DeliveryFailureTracker.available?(inbox_url)
 

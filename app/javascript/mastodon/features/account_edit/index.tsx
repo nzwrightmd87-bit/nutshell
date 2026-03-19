@@ -255,7 +255,7 @@ export const AccountEdit: FC = () => {
             >
               <FormattedMessage
                 id='account_edit.custom_fields.tip_content'
-                defaultMessage='You can easily add credibility to your Mastodon account by verifying links to any websites you own.'
+                defaultMessage='You can easily add credibility to your Nutshell account by verifying links to any websites you own.'
               />
             </DismissibleCallout>
           )}

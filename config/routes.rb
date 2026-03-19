@@ -218,6 +218,16 @@ Rails.application.routes.draw do
 
   resource :authorize_interaction, only: [:show]
   resource :share, only: [:show]
+  resource :billing, only: :show, controller: :billing do
+    get :success
+    get :cancel
+  end
+  get '/black_envelope', to: 'black_envelope_launches#show'
+
+  namespace :webhooks do
+    resource :square, only: :create, controller: :square
+    resource :resend, only: :create, controller: :resend
+  end
 
   draw(:admin)
 

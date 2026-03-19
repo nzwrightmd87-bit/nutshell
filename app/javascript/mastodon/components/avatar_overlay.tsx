@@ -1,6 +1,14 @@
+import { useCallback, useState } from 'react';
+
 import { useHovering } from 'mastodon/hooks/useHovering';
 import { autoPlayGif } from 'mastodon/initial_state';
 import type { Account } from 'mastodon/models/account';
+import {
+  avatarPlaceholderColor,
+  avatarPlaceholderFontSize,
+  avatarPlaceholderInitial,
+  isMissingAvatar,
+} from 'mastodon/utils/avatar_placeholder';
 
 interface Props {
   account: Account | undefined; // FIXME: remove `undefined` once we know for sure its always there
@@ -10,14 +18,6 @@ interface Props {
   overlaySize?: number;
 }
 
-const handleImgLoadError = (error: { currentTarget: HTMLElement }) => {
-  //
-  // When the img tag fails to load the image, set the img tag to display: none. This prevents the
-  // alt-text from overrunning the containing div.
-  //
-  error.currentTarget.style.display = 'none';
-};
-
 export const AvatarOverlay: React.FC<Props> = ({
   account,
   friend,
@@ -25,6 +25,8 @@ export const AvatarOverlay: React.FC<Props> = ({
   baseSize = 36,
   overlaySize = 24,
 }) => {
+  const [isBaseAvatarBroken, setIsBaseAvatarBroken] = useState(false);
+  const [isOverlayAvatarBroken, setIsOverlayAvatarBroken] = useState(false);
   const { hovering, handleMouseEnter, handleMouseLeave } =
     useHovering(autoPlayGif);
   const accountSrc = hovering
@@ -33,6 +35,21 @@ export const AvatarOverlay: React.FC<Props> = ({
   const friendSrc = hovering
     ? friend?.get('avatar')
     : friend?.get('avatar_static');
+  const accountImageSrc = typeof accountSrc === 'string' ? accountSrc : '';
+  const friendImageSrc = typeof friendSrc === 'string' ? friendSrc : '';
+
+  const handleBaseAvatarError = useCallback(() => {
+    setIsBaseAvatarBroken(true);
+  }, [setIsBaseAvatarBroken]);
+
+  const handleOverlayAvatarError = useCallback(() => {
+    setIsOverlayAvatarBroken(true);
+  }, [setIsOverlayAvatarBroken]);
+
+  const showBaseInitialAvatar =
+    isBaseAvatarBroken || isMissingAvatar(accountImageSrc);
+  const showOverlayInitialAvatar =
+    isOverlayAvatarBroken || isMissingAvatar(friendImageSrc);
 
   return (
     <div
@@ -46,11 +63,21 @@ export const AvatarOverlay: React.FC<Props> = ({
           className='account__avatar'
           style={{ width: `${baseSize}px`, height: `${baseSize}px` }}
         >
-          {accountSrc && (
+          {showBaseInitialAvatar ? (
+            <span
+              className='account__avatar__initials'
+              style={{
+                backgroundColor: avatarPlaceholderColor(account),
+                fontSize: avatarPlaceholderFontSize(baseSize),
+              }}
+            >
+              {avatarPlaceholderInitial(account)}
+            </span>
+          ) : (
             <img
-              src={accountSrc}
+              src={accountImageSrc}
               alt={account?.get('acct')}
-              onError={handleImgLoadError}
+              onError={handleBaseAvatarError}
             />
           )}
         </div>
@@ -60,11 +87,21 @@ export const AvatarOverlay: React.FC<Props> = ({
           className='account__avatar'
           style={{ width: `${overlaySize}px`, height: `${overlaySize}px` }}
         >
-          {friendSrc && (
+          {showOverlayInitialAvatar ? (
+            <span
+              className='account__avatar__initials'
+              style={{
+                backgroundColor: avatarPlaceholderColor(friend),
+                fontSize: avatarPlaceholderFontSize(overlaySize),
+              }}
+            >
+              {avatarPlaceholderInitial(friend)}
+            </span>
+          ) : (
             <img
-              src={friendSrc}
+              src={friendImageSrc}
               alt={friend?.get('acct')}
-              onError={handleImgLoadError}
+              onError={handleOverlayAvatarError}
             />
           )}
         </div>

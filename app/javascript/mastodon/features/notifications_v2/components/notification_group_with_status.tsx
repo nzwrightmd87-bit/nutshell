@@ -46,6 +46,7 @@ export const NotificationGroupWithStatus: React.FC<{
   type: string;
   unread: boolean;
   additionalContent?: JSX.Element;
+  noFill?: boolean;
 }> = ({
   icon,
   iconId,
@@ -59,6 +60,7 @@ export const NotificationGroupWithStatus: React.FC<{
   type,
   unread,
   additionalContent,
+  noFill = false,
 }) => {
   const dispatch = useAppDispatch();
   const account = useAppSelector((state) =>
@@ -106,7 +108,7 @@ export const NotificationGroupWithStatus: React.FC<{
         tabIndex={0}
       >
         <div className='notification-group__icon'>
-          <Icon icon={icon} id={iconId} />
+          <Icon icon={icon} id={iconId} noFill={noFill} />
         </div>
 
         <div className='notification-group__main'>

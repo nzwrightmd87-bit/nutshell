@@ -11,7 +11,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { useDispatch, useSelector } from 'react-redux';
 
 import MoreHorizIcon from '@/material-icons/400-24px/more_horiz.svg?react';
-import ReplyIcon from '@/material-icons/400-24px/reply.svg?react';
+import ReplyIcon from '@/svg-icons/chat_bubble.svg?react';
 import { replyCompose } from 'mastodon/actions/compose';
 import { markConversationRead, deleteConversation } from 'mastodon/actions/conversations';
 import { openModal } from 'mastodon/actions/modal';

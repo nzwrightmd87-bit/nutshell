@@ -35,6 +35,7 @@ import BundleColumnError from './bundle_column_error';
 import { ColumnLoading } from './column_loading';
 import { ComposePanel, RedirectToMobileComposeIfNeeded } from './compose_panel';
 import DrawerLoading from './drawer_loading';
+import { Search } from '@/mastodon/features/compose/components/search';
 
 const componentMap = {
   COMPOSE: Compose,
@@ -89,6 +90,7 @@ export const ColumnsArea = forwardRef<
   }
 >(({ children, singleColumn }, ref) => {
   const renderComposePanel = !useBreakpoint('full');
+  const isOpenable = useBreakpoint('openable');
   const columns = useAppSelector((state) =>
     (state.settings as Record<{ columns: List<Record<Column>> }>).get(
       'columns',
@@ -109,6 +111,11 @@ export const ColumnsArea = forwardRef<
         </div>
 
         <div className='columns-area__panels__main'>
+          {!isOpenable && (
+            <div className='columns-area__panels__main__search'>
+              <Search singleColumn />
+            </div>
+          )}
           <div className='tabs-bar__wrapper'>
             <TabsBarPortal />
           </div>

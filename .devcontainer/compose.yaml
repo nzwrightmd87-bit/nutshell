@@ -1,9 +1,12 @@
+name: nutshell
+
 services:
   app:
     working_dir: /workspaces/mastodon/
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
+    image: nutshell-app
     volumes:
       - ..:/workspaces/mastodon:cached
     environment:
@@ -22,8 +25,40 @@ services:
       ES_HOST: es
       ES_PORT: '9200'
       LIBRE_TRANSLATE_ENDPOINT: http://libretranslate:5000
-      LOCAL_DOMAIN: ${LOCAL_DOMAIN:-localhost:3000}
-      VITE_DEV_SERVER_PUBLIC: ${VITE_DEV_SERVER_PUBLIC:-localhost:3036}
+      LOCAL_DOMAIN: ${LOCAL_DOMAIN:-nutshell.localhost:3000}
+      VITE_DEV_SERVER_PUBLIC: ${VITE_DEV_SERVER_PUBLIC:-nutshell.localhost:3036}
+      LIMITED_FEDERATION_MODE: ${LIMITED_FEDERATION_MODE:-true}
+      DISABLE_FEDERATION: ${DISABLE_FEDERATION:-true}
+      PAID_MEMBERSHIPS_ENABLED: ${PAID_MEMBERSHIPS_ENABLED:-true}
+      PAID_MEMBERSHIPS_PROVIDER: ${PAID_MEMBERSHIPS_PROVIDER:-square}
+      PAID_MEMBERSHIPS_MONTHLY_PRICE_CENTS: ${PAID_MEMBERSHIPS_MONTHLY_PRICE_CENTS:-500}
+      PAID_MEMBERSHIPS_YEARLY_PRICE_CENTS: ${PAID_MEMBERSHIPS_YEARLY_PRICE_CENTS:-4800}
+      PAID_MEMBERSHIPS_PLACEHOLDER_CODE_REQUIRED: ${PAID_MEMBERSHIPS_PLACEHOLDER_CODE_REQUIRED:-true}
+      PAID_MEMBERSHIPS_PLACEHOLDER_ACCESS_CODE: ${PAID_MEMBERSHIPS_PLACEHOLDER_ACCESS_CODE:-NUTSHELL-DEV-MEMBER}
+      PAID_MEMBERSHIPS_ALLOW_INVITES: ${PAID_MEMBERSHIPS_ALLOW_INVITES:-false}
+      PAID_MEMBERSHIPS_SUCCESS_URL: ${PAID_MEMBERSHIPS_SUCCESS_URL:-http://nutshell.localhost:3000/billing/success}
+      PAID_MEMBERSHIPS_CANCEL_URL: ${PAID_MEMBERSHIPS_CANCEL_URL:-http://nutshell.localhost:3000/billing/cancel}
+      SQUARE_ENVIRONMENT: ${SQUARE_ENVIRONMENT:-sandbox}
+      SQUARE_APPLICATION_ID: ${SQUARE_APPLICATION_ID:-}
+      SQUARE_ACCESS_TOKEN: ${SQUARE_ACCESS_TOKEN:-}
+      SQUARE_LOCATION_ID: ${SQUARE_LOCATION_ID:-}
+      SQUARE_MONTHLY_CHECKOUT_URL: ${SQUARE_MONTHLY_CHECKOUT_URL:-}
+      SQUARE_YEARLY_CHECKOUT_URL: ${SQUARE_YEARLY_CHECKOUT_URL:-}
+      SQUARE_WEBHOOK_SIGNATURE_KEY: ${SQUARE_WEBHOOK_SIGNATURE_KEY:-}
+      SQUARE_WEBHOOK_NOTIFICATION_URL: ${SQUARE_WEBHOOK_NOTIFICATION_URL:-http://nutshell.localhost:3000/webhooks/square}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      RESEND_DOMAIN: ${RESEND_DOMAIN:-nutshell.localhost}
+      RESEND_WEBHOOK_SECRET: ${RESEND_WEBHOOK_SECRET:-}
+      RESEND_WEBHOOK_URL: ${RESEND_WEBHOOK_URL:-http://nutshell.localhost:3000/webhooks/resend}
+      SMTP_DELIVERY_METHOD: ${SMTP_DELIVERY_METHOD:-smtp}
+      SMTP_SERVER: ${SMTP_SERVER:-smtp.resend.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_LOGIN: ${SMTP_LOGIN:-resend}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM_ADDRESS: ${SMTP_FROM_ADDRESS:-notifications@nutshell.localhost}
+      SMTP_DOMAIN: ${SMTP_DOMAIN:-nutshell.localhost}
+      SMTP_AUTH_METHOD: ${SMTP_AUTH_METHOD:-plain}
+      SMTP_ENABLE_STARTTLS_AUTO: ${SMTP_ENABLE_STARTTLS_AUTO:-true}
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
     ports:

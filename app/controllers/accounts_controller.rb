@@ -9,6 +9,7 @@ class AccountsController < ApplicationController
 
   vary_by -> { public_fetch_mode? ? 'Accept, Accept-Language, Cookie' : 'Accept, Accept-Language, Cookie, Signature' }
 
+  before_action :reject_federation_if_disabled!, if: -> { request.format == :json }
   before_action :require_account_signature!, if: -> { request.format == :json && authorized_fetch_mode? }
 
   skip_around_action :set_locale, if: -> { [:json, :rss].include?(request.format&.to_sym) }

@@ -2,6 +2,7 @@
 
 class AppSignUpService < BaseService
   include RegistrationHelper
+  include PaidMembershipsHelper
 
   def call(app, remote_ip, params)
     @app       = app
@@ -9,10 +10,12 @@ class AppSignUpService < BaseService
     @params    = params
 
     raise Mastodon::NotPermittedError unless allowed_registration?(remote_ip, invite)
+    raise Mastodon::ValidationError, paid_membership_registration_error_message unless paid_membership_registration_allowed_for_email?(invite, @params[:email])
 
     ApplicationRecord.transaction do
       create_user!
       create_access_token!
+      claim_membership_for_user!(@user)
     end
 
     @access_token

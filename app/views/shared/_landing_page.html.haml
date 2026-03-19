@@ -1,0 +1,208 @@
+- content_for :body_classes, 'landing-page-body'
+- content_for :force_color_scheme, 'dark'
+
+- monthly_price = number_to_currency(5, precision: 0)
+- annual_price = number_to_currency(48, precision: 0)
+
+.landing-page
+  %header.landing-page__header
+    = link_to root_path, class: 'landing-page__brand' do
+      = render_stacked_logo
+
+    .landing-page__header-actions
+      = link_to 'See plans', '#pricing', class: 'button button-tertiary landing-page__header-link'
+      = link_to_login t('auth.login'), class: 'button button-secondary landing-page__header-link'
+
+  %main.landing-page__main
+    %section.landing-page__hero
+      .landing-page__hero-panel
+        %p.landing-page__eyebrow Social media without surveillance advertising
+        %h1.landing-page__title Nutshell
+        %p.landing-page__lede Most social platforms are free because you are the product.
+        %p.landing-page__body Your attention, behavior, and personal data are packaged and sold into advertising and data-broker markets.
+        %p.landing-page__body That means governments and surveillance buyers can end up purchasing access to the same data streams built around so-called free platforms.
+        %p.landing-page__body Nutshell flips the model.
+        %p.landing-page__body Members pay directly, so the platform works for the people using it, not for the data purchasers.
+
+        %ul.landing-page__promise-list
+          %li No ads
+          %li No selling user data
+          %li No engagement manipulation
+
+        .landing-page__hero-actions
+          = link_to "Join for #{monthly_price}/month", billing_path(plan: :monthly), class: 'button landing-page__cta landing-page__cta--primary'
+          %span.landing-page__or or
+          = link_to "Get the annual plan for #{annual_price}/year", billing_path(plan: :yearly), class: 'button button-secondary landing-page__cta'
+
+        %p.landing-page__login-note
+          Already a member?
+          = link_to_login 'Log in'
+
+      .landing-page__hero-card
+        %section.landing-page__mini-section
+          %h2 A simpler deal
+          %ul.landing-page__checklist
+            %li You pay for the platform
+            %li Your data is not sold
+            %li Your attention is not the product
+          %p That single change reshapes everything about how the platform can operate.
+
+        %section.landing-page__mini-section
+          %h2 At a glance
+          %dl.landing-page__facts
+            %div
+              %dt Revenue source
+              %dd User subscriptions
+            %div
+              %dt Advertising
+              %dd None
+            %div
+              %dt Data sales
+              %dd None
+            %div
+              %dt Business model
+              %dd Users are customers not products
+
+    .landing-page__grid
+      %section.landing-page__section
+        %h2 What you can do inside Nutshell
+        %p Nutshell is designed to feel like social media before advertising models took over.
+        %p BlackEnvelope is Nutshell's end-to-end encrypted messaging layer. Private keys stay on your device, the server stores ciphertext and metadata only, and private conversations happen there instead of in the public feed.
+        .landing-page__feature-grid
+          %article.landing-page__feature
+            %h3 Join communities
+            %p Create and participate in discussion groups built around real interests.
+          %article.landing-page__feature
+            %h3 Post and share updates
+            %p A simple feed where content appears because people share it, not because an algorithm is optimizing outrage.
+          %article.landing-page__feature
+            %h3 Send private messages in BlackEnvelope
+            %p Friend-only direct messaging handled through Nutshell's end-to-end encrypted chat layer.
+          %article.landing-page__feature
+            %h3 Join private BlackEnvelope groups
+            %p Create invite-based groups with structured topics and an all-messages stream for group discussion.
+
+      %section.landing-page__section
+        %h2 Why people are leaving traditional social media
+        %p Most social platforms are built on advertising and data sale revenue.
+        %p That creates incentives to:
+        %ul.landing-page__bullet-list
+          %li keep users scrolling as long as possible
+          %li amplify emotional or polarizing content
+          %li track behavior across devices and platforms
+          %li optimize feeds for engagement rather than usefulness
+          %li create data streams that governments and surveillance buyers can purchase
+        %p When the business model changes, the product changes.
+
+      %section.landing-page__section
+        %h2 How Nutshell works
+        %ol.landing-page__steps
+          %li
+            %strong Members subscribe directly to the platform.
+            Instead of data sale revenue, the platform is supported by subscriptions.
+          %li
+            %strong Subscription revenue supports the platform.
+            Infrastructure, development, and operations are funded by members.
+          %li
+            %strong Because advertisers and data purchasers are not the customer, the platform can prioritize users.
+            Features can be built around privacy, usability, and healthy communities rather than ad metrics.
+
+      %section.landing-page__section
+        %h2 Why Nutshell is different
+        .landing-page__feature-grid
+          %article.landing-page__feature
+            %h3 Users are the customer not the product
+            %p The platform works for the people paying for it, not for data purchasers.
+          %article.landing-page__feature
+            %h3 No surveillance advertising
+            %p There is no incentive to track or profile users.
+          %article.landing-page__feature
+            %h3 Real communities
+            %p Discussion spaces are designed for conversation rather than algorithmic amplification.
+          %article.landing-page__feature
+            %h3 Cleaner feeds
+            %p Content appears because members share it, not because an algorithm needs engagement spikes.
+          %article.landing-page__feature
+            %h3 No ads
+            %p The platform does not depend on advertising infrastructure.
+          %article.landing-page__feature
+            %h3 No data-sale business model
+            %p Nutshell is built to remove the incentive to package member data for outside buyers.
+
+      %section#pricing.landing-page__section.landing-page__section--pricing
+        %div.landing-page__section-intro
+          %h2 Simple pricing
+          %p Two plans. Same access.
+          %p The annual plan gives members a better rate and gives the platform more stable funding.
+
+        .landing-page__pricing-grid
+          %article.landing-page__pricing-card
+            %p.landing-page__pricing-name Monthly Plan
+            %p.landing-page__pricing-amount #{monthly_price} per month
+            %ul.landing-page__bullet-list
+              %li Full platform access for public feeds
+              %li BlackEnvelope end-to-end encrypted (E2EE) messaging
+              %li BlackEnvelope end-to-end encrypted (E2EE) private groups and topics
+              %li No advertising
+              %li No sale of user data
+            = link_to 'Choose monthly', billing_path(plan: :monthly), class: 'button landing-page__pricing-cta'
+
+          %article.landing-page__pricing-card.landing-page__pricing-card--featured
+            %p.landing-page__pricing-name Annual Plan
+            %p.landing-page__pricing-amount #{annual_price} per year
+            %ul.landing-page__bullet-list
+              %li Full platform access for public feeds
+              %li BlackEnvelope end-to-end encrypted (E2EE) messaging
+              %li BlackEnvelope end-to-end encrypted (E2EE) private groups and topics
+              %li No advertising
+              %li No sale of user data
+            %p.landing-page__pricing-note Save 20% compared to monthly.
+            = link_to 'Choose annual', billing_path(plan: :yearly), class: 'button landing-page__pricing-cta'
+
+      %section.landing-page__section.landing-page__quote
+        %blockquote.landing-page__quote-text
+          When users pay directly, the platform answers to them, not advertisers.
+        %p.landing-page__quote-attribution Nutshell principle
+
+      %section.landing-page__section
+        %h2 The Nutshell philosophy
+        %p Most social platforms describe themselves as free. But the real cost is hidden.
+        %p Data collection, behavioral profiling, engagement manipulation, and advertising infrastructure all exist to monetize attention.
+        %p Once that data becomes a product, governments can and do buy access through the same markets that serve advertisers and data brokers.
+        %p Nutshell removes that incentive entirely.
+        %p Members pay directly. The platform answers only to the customers and serves them directly.
+        %p It does not solve every problem, but it does remove the business incentive to exploit users' attention and data.
+
+      %section.landing-page__section
+        %h2 Frequently asked questions
+        .landing-page__faq-list
+          %article.landing-page__faq
+            %h3 Why charge a subscription?
+            %p Because free social platforms make money by packaging user attention, behavior, and data for advertisers, data brokers, and other buyers. In practice, governments can and do buy access to those markets too. Nutshell uses direct subscriptions so incentives stay aligned with members.
+          %article.landing-page__faq
+            %h3 Will Nutshell have ads?
+            %p The platform is designed to be ad-free. Subscription revenue allows the platform to operate without advertising infrastructure.
+          %article.landing-page__faq
+            %h3 Is this promising perfect privacy?
+            %p No platform should promise complete privacy guarantees. Nutshell's public feed is not end-to-end encrypted, but BlackEnvelope handles private messaging and groups with end-to-end encryption (E2EE). Private keys stay on your device and the server stores ciphertext and metadata only.
+          %article.landing-page__faq
+            %h3 What do members get?
+            %p Members receive full access to the public social network plus BlackEnvelope, Nutshell's private messaging layer for friend-only encrypted direct messages, invite-based groups, topic-based discussions, and realtime chat.
+          %article.landing-page__faq
+            %h3 What is BlackEnvelope?
+            %p BlackEnvelope is Nutshell's end-to-end encrypted messaging and groups system. It is designed for private-by-default discovery, encrypted direct chat, private groups with invites, topic-based discussion, and key ownership that stays with the member's device.
+          %article.landing-page__faq
+            %h3 What happens to my data if I cancel?
+            %p Before canceling, members can use Nutshell's account export and backup tools to keep copies of their data.
+          %article.landing-page__faq
+            %h3 Can I export my content?
+            %p Yes. Nutshell includes account export and backup tools so members can take their account data with them.
+
+      %section.landing-page__closing
+        %p.landing-page__eyebrow Pay directly. Join intentionally.
+        %h2 A social network funded by its members, not by the purchase of your private data.
+        %p No ads. No selling user data. No surveillance business model.
+        %p.landing-page__closing-price Join Nutshell for #{monthly_price}/month or #{annual_price}/year.
+        .landing-page__hero-actions
+          = link_to 'Join Nutshell', billing_path, class: 'button landing-page__cta landing-page__cta--primary'
+          = link_to_login t('auth.login'), class: 'button button-secondary landing-page__cta'

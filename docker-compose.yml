@@ -1,7 +1,26 @@
-# This file is designed for production server deployment, not local development work
-# For a containerized local dev environment, see: https://github.com/mastodon/mastodon/blob/main/docs/DEVELOPMENT.md#docker
+# Nutshell Tier 1: Single-box production deployment
+# Mastodon + BlackEnvelope + Caddy reverse proxy
 
 services:
+  caddy:
+    image: caddy:2.8-alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL:-admin@nutshell.sbs}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - external_network
+    depends_on:
+      - web
+      - streaming
+      - black-envelope
+
   db:
     restart: always
     image: postgres:14-alpine
@@ -25,41 +44,9 @@ services:
     volumes:
       - ./redis:/data
 
-  # es:
-  #   restart: always
-  #   image: docker.elastic.co/elasticsearch/elasticsearch:7.17.29
-  #   environment:
-  #     - "ES_JAVA_OPTS=-Xms512m -Xmx512m -Des.enforce.bootstrap.checks=true"
-  #     - "xpack.license.self_generated.type=basic"
-  #     - "xpack.security.enabled=false"
-  #     - "xpack.watcher.enabled=false"
-  #     - "xpack.graph.enabled=false"
-  #     - "xpack.ml.enabled=false"
-  #     - "bootstrap.memory_lock=true"
-  #     - "cluster.name=es-mastodon"
-  #     - "discovery.type=single-node"
-  #     - "thread_pool.write.queue_size=1000"
-  #   networks:
-  #      - external_network
-  #      - internal_network
-  #   healthcheck:
-  #      test: ["CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1"]
-  #   volumes:
-  #      - ./elasticsearch:/usr/share/elasticsearch/data
-  #   ulimits:
-  #     memlock:
-  #       soft: -1
-  #       hard: -1
-  #     nofile:
-  #       soft: 65536
-  #       hard: 65536
-  #   ports:
-  #     - '127.0.0.1:9200:9200'
-
   web:
-    # You can uncomment the following line if you want to not use the prebuilt image, for example if you have local code changes
-    # build: .
-    image: ghcr.io/mastodon/mastodon:v4.5.7
+    build: .
+    image: nutshell-web:latest
     restart: always
     env_file: .env.production
     command: bundle exec puma -C config/puma.rb
@@ -67,23 +54,18 @@ services:
       - external_network
       - internal_network
     healthcheck:
-      # prettier-ignore
-      test: ['CMD-SHELL',"curl -s --noproxy localhost localhost:3000/health | grep -q 'OK' || exit 1"]
-    ports:
-      - '127.0.0.1:3000:3000'
+      test: ['CMD-SHELL', "curl -s --noproxy localhost localhost:3000/health | grep -q 'OK' || exit 1"]
     depends_on:
       - db
       - redis
-      # - es
     volumes:
       - ./public/system:/mastodon/public/system
 
   streaming:
-    # You can uncomment the following lines if you want to not use the prebuilt image, for example if you have local code changes
-    # build:
-    #   dockerfile: ./streaming/Dockerfile
-    #   context: .
-    image: ghcr.io/mastodon/mastodon-streaming:v4.5.7
+    build:
+      dockerfile: ./streaming/Dockerfile
+      context: .
+    image: nutshell-streaming:latest
     restart: always
     env_file: .env.production
     command: node ./streaming/index.js
@@ -91,18 +73,13 @@ services:
       - external_network
       - internal_network
     healthcheck:
-      # prettier-ignore
       test: ['CMD-SHELL', "curl -s --noproxy localhost localhost:4000/api/v1/streaming/health | grep -q 'OK' || exit 1"]
-    ports:
-      - '127.0.0.1:4000:4000'
     depends_on:
       - db
       - redis
 
   sidekiq:
-    # You can uncomment the following line if you want to not use the prebuilt image, for example if you have local code changes
-    # build: .
-    image: ghcr.io/mastodon/mastodon:v4.5.7
+    image: nutshell-web:latest
     restart: always
     env_file: .env.production
     command: bundle exec sidekiq
@@ -115,26 +92,48 @@ services:
     volumes:
       - ./public/system:/mastodon/public/system
     healthcheck:
-      test: ['CMD-SHELL', "ps aux | grep '[s]idekiq\ 8' || false"]
+      test: ['CMD-SHELL', "ps aux | grep '[s]idekiq\\ 8' || false"]
 
-  ## Uncomment to enable federation with tor instances along with adding the following ENV variables
-  ## http_hidden_proxy=http://privoxy:8118
-  ## ALLOW_ACCESS_TO_HIDDEN_SERVICE=true
-  # tor:
-  #   image: sirboops/tor
-  #   networks:
-  #      - external_network
-  #      - internal_network
-  #
-  # privoxy:
-  #   image: sirboops/privoxy
-  #   volumes:
-  #     - ./priv-config:/opt/config
-  #   networks:
-  #     - external_network
-  #     - internal_network
+  black-envelope:
+    build:
+      context: ../black_envelope/BlackEnvelope
+      dockerfile: deployment/e2ee_chat/Dockerfile
+    restart: always
+    environment:
+      CYPHER_CHAT_DB: /data/chat.db
+      CYPHER_CHAT_WEB_DIR: /app/web/e2ee_chat
+      CYPHER_CHAT_DIRECT_PAYLOAD_MAX_BYTES: ${CYPHER_CHAT_DIRECT_PAYLOAD_MAX_BYTES:-40000000}
+      CYPHER_CHAT_GROUP_PAYLOAD_MAX_BYTES: ${CYPHER_CHAT_GROUP_PAYLOAD_MAX_BYTES:-150000000}
+      CYPHER_CHAT_STORAGE_LIMIT_BYTES: ${CYPHER_CHAT_STORAGE_LIMIT_BYTES:-524288000}
+      CYPHER_CHAT_STORAGE_WARN_BYTES: ${CYPHER_CHAT_STORAGE_WARN_BYTES:-471859200}
+      CYPHER_CHAT_TOKEN_SECRET: ${CYPHER_CHAT_TOKEN_SECRET}
+      CYPHER_CHAT_NUTSHELL_SSO_SECRET: ${CYPHER_CHAT_NUTSHELL_SSO_SECRET:-}
+      CYPHER_CHAT_NUTSHELL_SSO_TTL_SECONDS: ${CYPHER_CHAT_NUTSHELL_SSO_TTL_SECONDS:-300}
+      CYPHER_CHAT_NUTSHELL_PUBLIC_URL: ${CYPHER_CHAT_NUTSHELL_PUBLIC_URL:-}
+      CYPHER_CHAT_ADMIN_USERNAME: ${CYPHER_CHAT_ADMIN_USERNAME:-}
+      CYPHER_CHAT_REGISTRATION_CODE: ${CYPHER_CHAT_REGISTRATION_CODE:-}
+      APP_BASE_URL: ${APP_BASE_URL:-}
+      PASSWORD_RESET_TTL_SECONDS: ${PASSWORD_RESET_TTL_SECONDS:-3600}
+      VAPID_PRIVATE_KEY: ${VAPID_PRIVATE_KEY:-}
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:-}
+      VAPID_SUBJECT: ${VAPID_SUBJECT:-mailto:admin@nutshell.sbs}
+    volumes:
+      - black_envelope_data:/data
+    networks:
+      - external_network
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/health').read()\""]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
 
 networks:
   external_network:
   internal_network:
     internal: true
+
+volumes:
+  caddy_data:
+  caddy_config:
+  black_envelope_data:

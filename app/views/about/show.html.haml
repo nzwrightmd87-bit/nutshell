@@ -1,6 +1,13 @@
-- content_for :page_title, t('about.title')
+- if @render_landing_page
+  - content_for :header_tags do
+    %meta{ name: 'robots', content: 'noindex' }/
+    = render partial: 'shared/og', locals: { description: 'Social media without surveillance advertising.' }
 
-- content_for :header_tags do
-  = render partial: 'shared/og'
+  = render 'shared/landing_page'
+- else
+  - content_for :page_title, t('about.title')
 
-= render partial: 'shared/web_app'
+  - content_for :header_tags do
+    = render partial: 'shared/og'
+
+  = render partial: 'shared/web_app'

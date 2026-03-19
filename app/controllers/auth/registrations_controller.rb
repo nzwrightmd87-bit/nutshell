@@ -3,6 +3,7 @@
 class Auth::RegistrationsController < Devise::RegistrationsController
   include RegistrationHelper
   include Auth::RegistrationSpamConcern
+  include PaidMembershipsHelper
 
   layout :determine_layout
 
@@ -28,7 +29,20 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    super
+    if paid_membership_registration_allowed_for_email?(@invite, params.dig(:user, :email))
+      super do |user|
+        claim_membership_for_user!(user) if user.persisted?
+      end
+    else
+      build_resource(sign_up_params)
+      resource.validate
+      resource.errors.add(:base, paid_membership_registration_error_message)
+
+      clean_up_passwords resource
+      set_minimum_password_length
+
+      render :new, status: :unprocessable_content
+    end
   end
 
   def update

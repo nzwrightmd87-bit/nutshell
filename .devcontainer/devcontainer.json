@@ -1,5 +1,5 @@
 {
-  "name": "Mastodon on local machine",
+  "name": "Nutshell on local machine",
   "dockerComposeFile": "compose.yaml",
   "service": "app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

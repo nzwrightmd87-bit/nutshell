@@ -6,12 +6,21 @@ import { Link } from 'react-router-dom';
 import { useHovering } from 'mastodon/hooks/useHovering';
 import { autoPlayGif } from 'mastodon/initial_state';
 import type { Account } from 'mastodon/models/account';
+import {
+  avatarPlaceholderColor,
+  avatarPlaceholderFontSize,
+  avatarPlaceholderInitial,
+  isMissingAvatar,
+} from 'mastodon/utils/avatar_placeholder';
 
 import { useAccount } from '../hooks/useAccount';
 
 interface Props {
   account:
-    | Pick<Account, 'id' | 'acct' | 'avatar' | 'avatar_static'>
+    | Pick<
+        Account,
+        'id' | 'acct' | 'avatar' | 'avatar_static' | 'display_name' | 'username'
+      >
     | undefined; // FIXME: remove `undefined` once we know for sure its always there
   size?: number;
   style?: React.CSSProperties;
@@ -35,7 +44,6 @@ export const Avatar: React.FC<Props> = ({
   counterBorderColor,
 }) => {
   const { hovering, handleMouseEnter, handleMouseLeave } = useHovering(animate);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const style = {
@@ -45,10 +53,11 @@ export const Avatar: React.FC<Props> = ({
   };
 
   const src = hovering || animate ? account?.avatar : account?.avatar_static;
-
-  const handleLoad = useCallback(() => {
-    setLoading(false);
-  }, [setLoading]);
+  const showInitialAvatar = error || isMissingAvatar(src);
+  const fallbackStyle: React.CSSProperties = {
+    backgroundColor: avatarPlaceholderColor(account),
+    fontSize: avatarPlaceholderFontSize(size),
+  };
 
   const handleError = useCallback(() => {
     setError(true);
@@ -58,14 +67,17 @@ export const Avatar: React.FC<Props> = ({
     <span
       className={classNames(className, 'account__avatar', {
         'account__avatar--inline': inline,
-        'account__avatar--loading': loading,
       })}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={style}
     >
-      {src && !error && (
-        <img src={src} alt='' onLoad={handleLoad} onError={handleError} />
+      {showInitialAvatar ? (
+        <span className='account__avatar__initials' style={fallbackStyle}>
+          {avatarPlaceholderInitial(account)}
+        </span>
+      ) : (
+        <img src={src} alt='' onError={handleError} />
       )}
 
       {counter && (

@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   helper_method :use_seamless_external_login?
   helper_method :sso_account_settings
   helper_method :limited_federation_mode?
+  helper_method :federation_disabled?
   helper_method :skip_csrf_meta_tags?
 
   before_action :check_self_destruct!
@@ -139,5 +140,9 @@ class ApplicationController < ActionController::Base
 
   def set_cache_control_defaults
     response.cache_control.replace(private: true, no_store: true)
+  end
+
+  def reject_federation_if_disabled!
+    not_found if federation_disabled?
   end
 end

@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import type { Map, List } from 'immutable';
 
-import elephantUIPlane from '@/images/elephant_ui_plane.svg';
+import nutshellMascot from '@/images/nutshell_mascot.svg';
 import type { RenderSlideFn } from '@/mastodon/components/carousel';
 import { Carousel } from '@/mastodon/components/carousel';
 import { CustomEmojiProvider } from '@/mastodon/components/emoji/context';
@@ -49,7 +49,7 @@ export const Announcements: FC = () => {
         className='announcements__mastodon'
         alt=''
         draggable='false'
-        src={mascot ?? elephantUIPlane}
+        src={mascot ?? nutshellMascot}
       />
 
       <CustomEmojiProvider emojis={emojis}>

@@ -8,6 +8,7 @@ class CollectionsController < ApplicationController
 
   vary_by -> { public_fetch_mode? ? 'Accept, Accept-Language, Cookie' : 'Accept, Accept-Language, Cookie, Signature' }
 
+  before_action :reject_federation_if_disabled!
   before_action :check_feature_enabled
   before_action :require_account_signature!, only: :show, if: -> { request.format == :json && authorized_fetch_mode? }
   before_action :set_collection

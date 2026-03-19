@@ -1,25 +1,22 @@
 import classNames from 'classnames';
 
 import logo from '@/images/logo.svg';
+import icon from '@/images/logo-symbol-icon.svg';
+import stacked from '@/images/logo-stacked.svg';
+import wordmark from '@/images/logo-symbol-wordmark.svg';
 
 export const WordmarkLogo: React.FC = () => (
-  <svg viewBox='0 0 261 66' className='logo logo--wordmark' role='img'>
-    <title>Mastodon</title>
-    <use xlinkHref='#logo-symbol-wordmark' />
-  </svg>
+  <img src={wordmark} alt='Nutshell' className='logo logo--wordmark' />
 );
 
 export const IconLogo: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
-    viewBox='0 0 79 79'
-    className={classNames('logo logo--icon', className)}
-    role='img'
-  >
-    <title>Mastodon</title>
-    <use xlinkHref='#logo-symbol-icon' />
-  </svg>
+  <img src={icon} alt='Nutshell' className={classNames('logo logo--icon', className)} />
+);
+
+export const StackedLogo: React.FC<{ className?: string }> = ({ className }) => (
+  <img src={stacked} alt='Nutshell' className={classNames('logo logo--stacked', className)} />
 );
 
 export const SymbolLogo: React.FC = () => (
-  <img src={logo} alt='Mastodon' className='logo logo--icon' />
+  <img src={logo} alt='Nutshell' className='logo logo--icon' />
 );

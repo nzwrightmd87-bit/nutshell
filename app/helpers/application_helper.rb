@@ -36,7 +36,7 @@ module ApplicationHelper
 
   def available_sign_up_path
     if closed_registrations? || omniauth_only?
-      'https://joinmastodon.org/#getting-started'
+      ENV.fetch('INSTANCE_LANDING_PAGE', 'http://nutshell.localhost:3000')
     else
       ENV.fetch('SSO_ACCOUNT_SIGN_UP', new_user_registration_path)
     end
@@ -255,7 +255,7 @@ module ApplicationHelper
   end
 
   def mascot_url
-    full_asset_url(instance_presenter.mascot&.file&.url || frontend_asset_path('images/elephant_ui_plane.svg'))
+    full_asset_url(frontend_asset_path('images/nutshell_mascot.svg'))
   end
 
   def copyable_input(options = {})
@@ -272,11 +272,11 @@ module ApplicationHelper
   end
 
   def app_store_url_ios
-    'https://apps.apple.com/app/mastodon-for-iphone-and-ipad/id1571998974'
+    ENV.fetch('IOS_APP_URL', 'http://nutshell.localhost:3000')
   end
 
   def app_store_url_android
-    'https://play.google.com/store/apps/details?id=org.joinmastodon.android'
+    ENV.fetch('ANDROID_APP_URL', 'http://nutshell.localhost:3000')
   end
 
   def within_authorization_flow?

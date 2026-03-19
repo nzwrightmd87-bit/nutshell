@@ -26,8 +26,8 @@ export const ModalPlaceholder: React.FC<{
       ) : (
         <div className='modal-placeholder__error'>
           <GIF
-            src='/oops.gif'
-            staticSrc='/oops.png'
+            src='/nutshell-oops.svg'
+            staticSrc='/nutshell-oops.svg'
             className='modal-placeholder__error__image'
           />
 

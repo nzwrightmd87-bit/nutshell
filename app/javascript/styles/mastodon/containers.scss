@@ -23,6 +23,12 @@
       margin-inline-end: 10px;
     }
 
+    .logo--stacked {
+      width: min(188px, 100%);
+      height: auto;
+      margin-inline-end: 0;
+    }
+
     a {
       display: flex;
       justify-content: center;

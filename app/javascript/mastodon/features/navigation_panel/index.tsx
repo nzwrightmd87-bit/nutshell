@@ -16,6 +16,7 @@ import BookmarksActiveIcon from '@/material-icons/400-24px/bookmarks-fill.svg?re
 import BookmarksIcon from '@/material-icons/400-24px/bookmarks.svg?react';
 import CollectionsActiveIcon from '@/material-icons/400-24px/category-fill.svg?react';
 import CollectionsIcon from '@/material-icons/400-24px/category.svg?react';
+import GroupsIcon from '@/material-icons/400-24px/groups.svg?react';
 import HomeActiveIcon from '@/material-icons/400-24px/home-fill.svg?react';
 import HomeIcon from '@/material-icons/400-24px/home.svg?react';
 import InfoIcon from '@/material-icons/400-24px/info.svg?react';
@@ -25,15 +26,14 @@ import PersonAddActiveIcon from '@/material-icons/400-24px/person_add-fill.svg?r
 import PersonAddIcon from '@/material-icons/400-24px/person_add.svg?react';
 import PublicIcon from '@/material-icons/400-24px/public.svg?react';
 import SettingsIcon from '@/material-icons/400-24px/settings.svg?react';
-import StarActiveIcon from '@/material-icons/400-24px/star-fill.svg?react';
-import StarIcon from '@/material-icons/400-24px/star.svg?react';
+import StarActiveIcon from '@/svg-icons/rock_on.svg?react';
+import StarIcon from '@/svg-icons/rock_on_outline.svg?react';
 import TrendingUpIcon from '@/material-icons/400-24px/trending_up.svg?react';
 import { fetchFollowRequests } from 'mastodon/actions/accounts';
 import { openNavigation, closeNavigation } from 'mastodon/actions/navigation';
 import { Account } from 'mastodon/components/account';
 import { IconWithBadge } from 'mastodon/components/icon_with_badge';
-import { WordmarkLogo } from 'mastodon/components/logo';
-import { Search } from 'mastodon/features/compose/components/search';
+import { StackedLogo } from 'mastodon/components/logo';
 import { ColumnLink } from 'mastodon/features/ui/components/column_link';
 import { getNavigationSkipLinkId } from 'mastodon/features/ui/components/skip_links';
 import { useBreakpoint } from 'mastodon/features/ui/hooks/useBreakpoint';
@@ -72,6 +72,14 @@ const messages = defineMessages({
     defaultMessage: 'Live feed',
   },
   direct: { id: 'navigation_bar.direct', defaultMessage: 'Private mentions' },
+  blackEnvelope: {
+    id: 'navigation_bar.black_envelope',
+    defaultMessage: 'BlackEnvelope',
+  },
+  blackEnvelopeTag: {
+    id: 'navigation_bar.black_envelope_tag',
+    defaultMessage: 'Messages & groups',
+  },
   favourites: { id: 'navigation_bar.favourites', defaultMessage: 'Favorites' },
   bookmarks: { id: 'navigation_bar.bookmarks', defaultMessage: 'Bookmarks' },
   collections: {
@@ -211,7 +219,6 @@ export const NavigationPanel: React.FC<{ multiColumn?: boolean }> = ({
   const intl = useIntl();
   const { signedIn, permissions, disabledAccountId } = useIdentity();
   const location = useLocation();
-  const showSearch = useBreakpoint('full') && !multiColumn;
 
   let banner: React.ReactNode;
 
@@ -237,11 +244,9 @@ export const NavigationPanel: React.FC<{ multiColumn?: boolean }> = ({
           className='column-link column-link--logo'
           id={getNavigationSkipLinkId()}
         >
-          <WordmarkLogo />
+          <StackedLogo />
         </Link>
       </div>
-
-      {showSearch && <Search singleColumn />}
 
       {!multiColumn && <ProfileCard />}
 
@@ -348,6 +353,14 @@ export const NavigationPanel: React.FC<{ multiColumn?: boolean }> = ({
               icon='at'
               iconComponent={AlternateEmailIcon}
               text={intl.formatMessage(messages.direct)}
+            />
+            <ColumnLink
+              transparent
+              href='/black_envelope'
+              icon='groups'
+              iconComponent={GroupsIcon}
+              text={intl.formatMessage(messages.blackEnvelope)}
+              badge={intl.formatMessage(messages.blackEnvelopeTag)}
             />
 
             <hr />

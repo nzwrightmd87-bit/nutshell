@@ -1,13 +1,14 @@
 import { FormattedMessage } from 'react-intl';
 
-import { GIF } from './gif';
+import nutshellMascot from '@/images/nutshell_mascot.svg';
 
 export const RegenerationIndicator: React.FC = () => (
   <div className='regeneration-indicator'>
-    <GIF
-      src='/loading.gif'
-      staticSrc='/loading.png'
+    <img
+      src={nutshellMascot}
       className='regeneration-indicator__figure'
+      alt=''
+      role='presentation'
     />
 
     <div className='regeneration-indicator__label'>

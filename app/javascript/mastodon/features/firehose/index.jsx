@@ -142,7 +142,7 @@ const Firehose = ({ feedType, multiColumn }) => {
     <DismissableBanner id='public_timeline'>
       <FormattedMessage
         id='dismissable_banner.public_timeline'
-        defaultMessage='These are the most recent public posts from people on the fediverse that people on {domain} follow.'
+        defaultMessage='These are the most recent public posts from people on other servers that people on {domain} follow.'
         values={{ domain }}
       />
     </DismissableBanner>

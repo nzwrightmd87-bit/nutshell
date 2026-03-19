@@ -1,0 +1,17 @@
+- content_for :page_title do
+  = t('auth.sign_up.membership_gate_title')
+
+.form-container
+  = render 'shared/membership_pricing', selected_plan: @selected_plan
+
+  .form-section.membership-status-card
+    %h1.title= t('auth.sign_up.billing_how_it_works_title')
+    %p.lead= t('auth.sign_up.billing_how_it_works_body')
+
+    %ol.membership-steps
+      %li= t('auth.sign_up.billing_step_one')
+      %li= t('auth.sign_up.billing_step_two')
+      %li= t('auth.sign_up.billing_step_three')
+
+    .actions
+      = link_to t('auth.register'), new_user_registration_path, class: 'button'

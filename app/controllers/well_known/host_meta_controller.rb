@@ -4,6 +4,8 @@ module WellKnown
   class HostMetaController < ActionController::Base # rubocop:disable Rails/ApplicationController
     include RoutingHelper
 
+    before_action :reject_federation_if_disabled!
+
     def show
       @webfinger_template = "#{webfinger_url}?resource={uri}"
       expires_in 3.days, public: true
@@ -24,6 +26,12 @@ module WellKnown
           }
         end
       end
+    end
+
+    private
+
+    def reject_federation_if_disabled!
+      head :not_found if Rails.configuration.x.mastodon.federation_disabled
     end
   end
 end

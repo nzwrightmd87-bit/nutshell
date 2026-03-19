@@ -15,6 +15,8 @@ module AccountControllerConcern
   private
 
   def set_link_headers
+    return if federation_disabled?
+
     response.headers['Link'] = LinkHeader.new(
       [
         webfinger_account_link,

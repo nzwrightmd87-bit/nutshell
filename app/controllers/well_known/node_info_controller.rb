@@ -8,6 +8,8 @@ module WellKnown
     # and thus re-issuing session cookies
     serialization_scope nil
 
+    before_action :reject_federation_if_disabled!
+
     def index
       expires_in 3.days, public: true
       render_with_cache json: {}, serializer: NodeInfo::DiscoverySerializer, adapter: NodeInfo::Adapter, expires_in: 3.days, root: 'nodeinfo'
@@ -16,6 +18,12 @@ module WellKnown
     def show
       expires_in 30.minutes, public: true
       render_with_cache json: {}, serializer: NodeInfo::Serializer, adapter: NodeInfo::Adapter, expires_in: 30.minutes, root: 'nodeinfo'
+    end
+
+    private
+
+    def reject_federation_if_disabled!
+      head :not_found if Rails.configuration.x.mastodon.federation_disabled
     end
   end
 end

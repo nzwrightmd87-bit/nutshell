@@ -3,9 +3,10 @@
 These terms of service (the "Terms") cover your access and use of Server
 Operator's ("Administrator", "we", or "us") instance, located at %{domain} (the
 "Instance"). These Terms apply solely to your use of the Instance as operated
-by the Administrator. Please note that we have no affiliation with Mastodon
-gGmbH (“Mastodon”) and these Terms do not contain any representations or
-warranties or other promises from Mastodon about your use of the Instance. If
+by the Administrator. Please note that we have no affiliation with any
+third-party software vendors and these Terms do not contain any representations
+or warranties or other promises from those vendors about your use of the
+Instance. If
 you would like to contact us for any reason, please direct all questions,
 comments, concerns and notices to us by following the instructions provided in
 the Notice section below.
@@ -149,7 +150,7 @@ use of the Instance.
 ## Links to and From Other Websites
 
 You may gain access to other websites and Instances via links on the Instance.
-These Terms apply to the Instance only and do not apply to Mastodon, other
+These Terms apply to the Instance only and do not apply to other
 Instances, or other parties' websites. Similarly, you may have come to the
 Instance via a link from another website or Instance. The terms of use of other
 websites and Instances do not apply to the Instance. Administrator assumes no

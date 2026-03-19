@@ -2,7 +2,7 @@
 %html{ lang: I18n.locale, dir: locale_direction }
   %head
     %meta{ 'charset' => 'utf-8' }
-    %title Mastodon
+    %title= site_title
     %meta{ name: 'x-apple-disable-message-reformatting' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
     %meta{ name: 'format-detection', content: 'telephone=no, date=no, address=no, email=no, url=no' }
@@ -11,7 +11,7 @@
       \table { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
     %style{ 'data-premailer': 'ignore' }
       \.email a { color: inherit; text-decoration: none; }
-      \.email-btn-hover:hover { background-color: #563acc !important; }
+      \.email-btn-hover:hover { background-color: #e84400 !important; }
     /[if mso]
       <xml>
       <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -50,7 +50,8 @@
                                 /[if mso]
                                   </v:textbox></v:rect>
                                 = link_to root_url, class: 'email-header-logo-a' do
-                                  = image_tag frontend_asset_url('images/mailer-new/common/logo-header.png'), alt: 'Mastodon', width: 157, height: 40
+                                  %span.email-brand-wordmark
+                                    NUTSHELL
 
                           -# Heading
                           = yield :heading
@@ -75,7 +76,7 @@
                   %td.email-footer-td
                     %p.email-footer-p
                       = link_to root_url, class: 'email-footer-logo-a' do
-                        = image_tag frontend_asset_url('images/mailer-new/common/logo-footer.png'), alt: 'Mastodon', width: 44, height: 44
+                        %span.email-brand-mark N
                     %p.email-footer-p
                       = t 'about.hosted_on', domain: site_hostname
                     %p.email-footer-p

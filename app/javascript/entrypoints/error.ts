@@ -5,13 +5,7 @@ ready(() => {
 
   if (!image) return;
 
-  image.addEventListener('mouseenter', () => {
-    image.src = '/oops.gif';
-  });
-
-  image.addEventListener('mouseleave', () => {
-    image.src = '/oops.png';
-  });
+  image.src = '/nutshell-oops.svg';
 }).catch((e: unknown) => {
   console.error(e);
 });

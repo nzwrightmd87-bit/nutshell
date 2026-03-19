@@ -1,5 +1,5 @@
 {
-  "name": "Mastodon on GitHub Codespaces",
+  "name": "Nutshell on GitHub Codespaces",
   "dockerComposeFile": "../compose.yaml",
   "service": "app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

@@ -11,10 +11,10 @@ import { connect } from 'react-redux';
 import BookmarkIcon from '@/material-icons/400-24px/bookmark-fill.svg?react';
 import BookmarkBorderIcon from '@/material-icons/400-24px/bookmark.svg?react';
 import MoreHorizIcon from '@/material-icons/400-24px/more_horiz.svg?react';
-import ReplyIcon from '@/material-icons/400-24px/reply.svg?react';
-import ReplyAllIcon from '@/material-icons/400-24px/reply_all.svg?react';
-import StarIcon from '@/material-icons/400-24px/star-fill.svg?react';
-import StarBorderIcon from '@/material-icons/400-24px/star.svg?react';
+import ReplyIcon from '@/svg-icons/chat_bubble.svg?react';
+import ReplyAllIcon from '@/svg-icons/chat_bubble.svg?react';
+import LikeIcon from '@/svg-icons/rock_on.svg?react';
+import LikeBorderIcon from '@/svg-icons/rock_on_outline.svg?react';
 import { identityContextPropShape, withIdentity } from 'mastodon/identity_context';
 import { PERMISSION_MANAGE_USERS, PERMISSION_MANAGE_FEDERATION } from 'mastodon/permissions';
 import { WithRouterPropTypes } from 'mastodon/utils/react_router';
@@ -39,8 +39,8 @@ const messages = defineMessages({
   share: { id: 'status.share', defaultMessage: 'Share' },
   more: { id: 'status.more', defaultMessage: 'More' },
   replyAll: { id: 'status.replyAll', defaultMessage: 'Reply to thread' },
-  favourite: { id: 'status.favourite', defaultMessage: 'Favorite' },
-  removeFavourite: { id: 'status.remove_favourite', defaultMessage: 'Remove from favorites' },
+  favourite: { id: 'status.favourite', defaultMessage: 'Like' },
+  removeFavourite: { id: 'status.remove_favourite', defaultMessage: 'Remove like' },
   bookmark: { id: 'status.bookmark', defaultMessage: 'Bookmark' },
   removeBookmark: { id: 'status.remove_bookmark', defaultMessage: 'Remove bookmark' },
   open: { id: 'status.open', defaultMessage: 'Expand this status' },
@@ -123,6 +123,7 @@ class StatusActionBar extends ImmutablePureComponent {
 
     if (signedIn) {
       this.props.onReply(this.props.status);
+      this.props.history.push(`/@${this.props.status.getIn(['account', 'acct'])}/${this.props.status.get('id')}`);
     } else {
       this.props.onInteractionModal(this.props.status, 'reply');
     }
@@ -394,7 +395,7 @@ class StatusActionBar extends ImmutablePureComponent {
           <BoostButton status={status} counters={withCounters} />
         </div>
         <div className='status__action-bar__button-wrapper'>
-          <IconButton className='status__action-bar__button star-icon' animate active={status.get('favourited')} title={favouriteTitle} icon='star' iconComponent={status.get('favourited') ? StarIcon : StarBorderIcon} onClick={this.handleFavouriteClick} counter={withCounters ? status.get('favourites_count') : undefined} />
+          <IconButton className='status__action-bar__button star-icon' animate active={status.get('favourited')} title={favouriteTitle} icon='star' iconComponent={status.get('favourited') ? LikeIcon : LikeBorderIcon} onClick={this.handleFavouriteClick} counter={withCounters ? status.get('favourites_count') : undefined} noFill />
         </div>
         <div className='status__action-bar__button-wrapper'>
           <IconButton className='status__action-bar__button bookmark-icon' disabled={!signedIn} active={status.get('bookmarked')} title={bookmarkTitle} icon='bookmark' iconComponent={status.get('bookmarked') ? BookmarkIcon : BookmarkBorderIcon} onClick={this.handleBookmarkClick} />

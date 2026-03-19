@@ -20,21 +20,21 @@ export const WrapstodonSharedPage: FC = () => {
           <IconLogo className={classes.logo} />
           <FormattedMessage
             id='annual_report.shared_page.footer'
-            defaultMessage='Generated with {heart} by the Mastodon team'
-            values={{ heart: '🐘' }}
+            defaultMessage='Generated with {heart} by the Nutshell team'
+            values={{ heart: '🔥' }}
             tagName='p'
           />
           <ul className={classes.linkList}>
             <li>
-              <a href='https://joinmastodon.org'>
+              <a href='http://nutshell.localhost:3000'>
                 <FormattedMessage
                   id='footer.about_mastodon'
-                  defaultMessage='About Mastodon'
+                  defaultMessage='About Nutshell'
                 />
               </a>
             </li>
             <li>
-              <a href='https://joinmastodon.org/sponsors'>
+              <a href='http://nutshell.localhost:3000'>
                 <FormattedMessage
                   id='annual_report.shared_page.donate'
                   defaultMessage='Donate'
@@ -47,7 +47,7 @@ export const WrapstodonSharedPage: FC = () => {
         <div className={classes.footerSection}>
           <FormattedMessage
             id='annual_report.shared_page.footer_server_info'
-            defaultMessage='{username} uses {domain}, one of many communities powered by Mastodon.'
+            defaultMessage='{username} uses {domain}, one of many communities powered by Nutshell.'
             values={{
               username: <DisplayName variant='simple' account={account} />,
               domain: <strong>{domain}</strong>,

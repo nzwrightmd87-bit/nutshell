@@ -5,10 +5,10 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
 
 import OpenInNewIcon from '@/material-icons/400-24px/open_in_new.svg?react';
-import ReplyIcon from '@/material-icons/400-24px/reply.svg?react';
-import ReplyAllIcon from '@/material-icons/400-24px/reply_all.svg?react';
-import StarIcon from '@/material-icons/400-24px/star-fill.svg?react';
-import StarBorderIcon from '@/material-icons/400-24px/star.svg?react';
+import ReplyIcon from '@/svg-icons/chat_bubble.svg?react';
+import ReplyAllIcon from '@/svg-icons/chat_bubble.svg?react';
+import LikeIcon from '@/svg-icons/rock_on.svg?react';
+import LikeBorderIcon from '@/svg-icons/rock_on_outline.svg?react';
 import { replyCompose } from 'mastodon/actions/compose';
 import { toggleFavourite } from 'mastodon/actions/interactions';
 import { openModal } from 'mastodon/actions/modal';
@@ -37,10 +37,10 @@ const messages = defineMessages({
     id: 'status.cannot_reblog',
     defaultMessage: 'This post cannot be boosted',
   },
-  favourite: { id: 'status.favourite', defaultMessage: 'Favorite' },
+  favourite: { id: 'status.favourite', defaultMessage: 'Like' },
   removeFavourite: {
     id: 'status.remove_favourite',
-    defaultMessage: 'Remove from favorites',
+    defaultMessage: 'Remove like',
   },
   open: { id: 'status.open', defaultMessage: 'Expand this status' },
 });
@@ -178,9 +178,10 @@ export const Footer: React.FC<{
         active={status.get('favourited') as boolean}
         title={favouriteTitle}
         icon='star'
-        iconComponent={status.get('favourited') ? StarIcon : StarBorderIcon}
+        iconComponent={status.get('favourited') ? LikeIcon : LikeBorderIcon}
         onClick={handleFavouriteClick}
         counter={status.get('favourites_count') as number}
+        noFill
       />
 
       {withOpenButton && (

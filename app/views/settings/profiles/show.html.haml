@@ -5,7 +5,7 @@
   %h2= t('settings.profile')
   = render partial: 'settings/shared/profile_navigation'
 
-= simple_form_for @account, url: settings_profile_path, html: { id: :edit_profile } do |f|
+= simple_form_for @account, url: settings_profile_path, html: { id: :edit_profile, data: { account_id: @account.id } } do |f|
   = render 'shared/error_messages', object: @account
 
   %p.lead= t('edit_profile.hint_html')
@@ -56,7 +56,15 @@
 
     .fields-row__column.fields-row__column-6
       .fields-group
-        = image_tag @account.header.url, class: 'fields-group__thumbnail', id: 'account_header-preview'
+        .profile-header-editor
+          .profile-header-editor__canvas#account_header-preview-canvas
+            .profile-header-editor__viewport#account_header-preview-viewport
+              .profile-header-editor__stage#account_header-preview-stage
+                = image_tag @account.header.url, class: 'fields-group__thumbnail fields-group__thumbnail--header', id: 'account_header-preview', draggable: false
+        .profile-header-editor__controls
+          %label.profile-header-editor__label{ for: 'account_header-zoom' } Banner zoom
+          %input#account_header-zoom.profile-header-editor__zoom{ type: 'range', min: '1', max: '3', step: '0.01', value: '1', disabled: true }
+        %p.hint.profile-header-editor__hint Drag up or down to position your banner. Use the zoom bar if you want a tighter crop.
         - if @account.header.present?
           = link_to settings_profile_picture_path('header'), data: { method: :delete }, class: 'link-button link-button--destructive' do
             = material_symbol 'delete'

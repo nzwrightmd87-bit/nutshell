@@ -2,20 +2,20 @@
 # important settings can be changed from the admin interface.
 
 defaults: &defaults
-  site_title: Mastodon
+  site_title: Nutshell
   site_short_description: ''
   site_description: ''
   site_extended_description: ''
   site_terms: ''
   site_contact_username: ''
   site_contact_email: ''
-  registrations_mode: 'none'
+  registrations_mode: 'open'
   profile_directory: true
   closed_registrations_message: ''
-  local_live_feed_access: 'public'
-  remote_live_feed_access: 'public'
-  local_topic_feed_access: 'public'
-  remote_topic_feed_access: 'public'
+  local_live_feed_access: 'authenticated'
+  remote_live_feed_access: 'disabled'
+  local_topic_feed_access: 'authenticated'
+  remote_topic_feed_access: 'disabled'
   show_staff_badge: true
   preview_sensitive_media: false
   noindex: false
@@ -24,16 +24,16 @@ defaults: &defaults
   trendable_by_default: false
   disallowed_hashtags: # space separated string or list of hashtags without the hash
   bootstrap_timeline_accounts: ''
-  activity_api_enabled: true
-  peers_api_enabled: true
+  activity_api_enabled: false
+  peers_api_enabled: false
   show_domain_blocks: 'disabled'
   show_domain_blocks_rationale: 'disabled'
   require_invite_text: false
   backups_retention_period: 7
   captcha_enabled: false
   allow_referrer_origin: false
-  landing_page: 'trends'
-  wrapstodon: true
+  landing_page: 'about'
+  wrapstodon: false
 
 development:
   <<: *defaults

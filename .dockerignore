@@ -19,7 +19,7 @@ vendor/bundle
 postgres
 postgres14
 redis
-elasticsearch
+/elasticsearch
 chart
 storybook-static
 .yarn/

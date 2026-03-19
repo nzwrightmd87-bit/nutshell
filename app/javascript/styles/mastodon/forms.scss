@@ -414,6 +414,92 @@ code {
         height: 90px;
         object-fit: cover;
       }
+
+      &#account_header-preview,
+      &--header {
+        margin-bottom: 0;
+        border-radius: 0;
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        max-width: none;
+        max-height: none;
+        transform-origin: center center;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .profile-header-editor {
+    margin-bottom: 10px;
+
+    &__canvas {
+      position: relative;
+      width: 100%;
+      padding-block: clamp(18px, 3vw, 32px);
+      overflow: hidden;
+      cursor: default;
+      user-select: none;
+      touch-action: none;
+
+      &.is-active {
+        background: var(--color-background-alt);
+      }
+
+      &.is-draggable {
+        cursor: grab;
+      }
+
+      &.is-dragging {
+        cursor: grabbing;
+      }
+    }
+
+    &__viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 1;
+      overflow: visible;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 1px solid var(--color-border);
+        box-shadow: 0 0 0 9999px rgb(0 0 0 / 18%);
+        pointer-events: none;
+      }
+    }
+
+    &__stage {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      will-change: transform;
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__label {
+      font-weight: 500;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    &__zoom {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__hint {
+      margin-top: 8px;
     }
   }
 
@@ -719,6 +805,104 @@ code {
 
   .status-card {
     contain: unset;
+  }
+}
+
+.membership-paywall {
+  margin-bottom: 24px;
+
+  &__title {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__lead,
+  &__status,
+  &__hint {
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+
+  &__status,
+  &__hint,
+  &__savings {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  &__plans {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__plan {
+    border: 1px solid var(--color-border-primary);
+    border-radius: 16px;
+    background: var(--color-bg-tertiary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &--selected {
+      border-color: var(--color-border-brand);
+      box-shadow: 0 0 0 1px var(--color-border-brand);
+    }
+  }
+
+  &__plan-name {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0;
+  }
+
+  &__price-amount {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__interval {
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--color-text-secondary);
+  }
+
+  &__cta {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.membership-status-card {
+  margin-bottom: 24px;
+}
+
+.membership-steps {
+  margin: 0 0 24px;
+  padding-inline-start: 20px;
+  color: var(--color-text-primary);
+
+  li + li {
+    margin-top: 8px;
   }
 }
 
