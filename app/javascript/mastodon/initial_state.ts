@@ -18,6 +18,7 @@ interface InitialStateMeta {
   disabled_account_id?: string;
   display_media: string;
   domain: string;
+  black_envelope_url?: string;
   expand_spoilers?: boolean;
   limited_federation_mode: boolean;
   locale: string;
@@ -105,6 +106,7 @@ export const disableHoverCards = getMeta('disable_hover_cards');
 export const disabledAccountId = getMeta('disabled_account_id');
 export const displayMedia = getMeta('display_media');
 export const domain = getMeta('domain');
+export const blackEnvelopeUrl = getMeta('black_envelope_url');
 export const emojiStyle = getMeta('emoji_style') ?? 'auto';
 export const expandSpoilers = getMeta('expand_spoilers');
 export const forceSingleColumn = !getMeta('advanced_layout');

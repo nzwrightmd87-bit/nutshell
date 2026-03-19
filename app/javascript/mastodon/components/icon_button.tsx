@@ -29,6 +29,7 @@ interface Props {
   href?: string;
   ariaHidden?: boolean;
   ariaControls?: string;
+  noFill?: boolean;
 }
 
 export const IconButton = forwardRef<HTMLButtonElement, Props>(
@@ -54,6 +55,7 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(
       tabIndex = 0,
       ariaHidden = false,
       ariaControls,
+      noFill = false,
     },
     buttonRef,
   ) => {
@@ -108,7 +110,7 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(
 
     let contents = (
       <>
-        <Icon id={icon} icon={iconComponent} aria-hidden='true' />{' '}
+        <Icon id={icon} icon={iconComponent} aria-hidden='true' noFill={noFill} />{' '}
         {typeof counter !== 'undefined' && (
           <span className='icon-button__counter'>
             <AnimatedNumber value={counter} />

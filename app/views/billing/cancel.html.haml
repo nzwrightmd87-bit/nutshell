@@ -1,0 +1,10 @@
+- content_for :page_title do
+  = t('auth.sign_up.billing_cancel_title')
+
+.form-container
+  .form-section.membership-status-card
+    %h1.title= t('auth.sign_up.billing_cancel_title')
+    %p.lead= t('auth.sign_up.billing_cancel_body')
+
+    .actions
+      = link_to t('auth.sign_up.membership_gate_title'), billing_path(plan: @selected_plan), class: 'button'

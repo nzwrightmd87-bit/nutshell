@@ -37,7 +37,7 @@ const messages = defineMessages({
   local: { id: 'directory.local', defaultMessage: 'From {domain} only' },
   federated: {
     id: 'directory.federated',
-    defaultMessage: 'From known fediverse',
+    defaultMessage: 'From connected servers',
   },
 });
 

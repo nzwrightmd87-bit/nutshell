@@ -85,6 +85,7 @@ class User < ApplicationRecord
   has_many :invites, inverse_of: :user, dependent: nil
   has_many :login_activities, inverse_of: :user, dependent: :destroy
   has_many :markers, inverse_of: :user, dependent: :destroy
+  has_many :memberships, inverse_of: :user, dependent: nil
   has_many :webauthn_credentials, dependent: :destroy
   has_many :ips, class_name: 'UserIp', inverse_of: :user, dependent: nil
 
@@ -121,6 +122,7 @@ class User < ApplicationRecord
   before_create :set_approved
   before_create :set_age_verified_at
   after_commit :send_pending_devise_notifications
+  after_create_commit :enqueue_black_envelope_provisioning
   after_create_commit :trigger_webhooks
 
   normalizes :locale, with: ->(locale) { I18n.available_locales.exclude?(locale.to_sym) ? nil : locale }
@@ -213,6 +215,14 @@ class User < ApplicationRecord
       save(validate: false)
       prepare_returning_user!
     end
+  end
+
+  def enqueue_black_envelope_provisioning
+    return unless BlackEnvelope::Configuration.sso_enabled?
+
+    BlackEnvelopeProvisionWorker.perform_async(id)
+  rescue StandardError => e
+    Rails.logger.warn("BlackEnvelope provisioning enqueue failed for user #{id}: #{e.class} #{e.message}")
   end
 
   def pending?

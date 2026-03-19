@@ -211,11 +211,7 @@ class Status extends ImmutablePureComponent {
     const { signedIn } = this.props.identity;
 
     if (signedIn) {
-      if (askReplyConfirmation) {
-        dispatch(openModal({ modalType: 'CONFIRM_REPLY', modalProps: { status } }));
-      } else {
-        dispatch(replyCompose(status));
-      }
+      dispatch(replyCompose(status));
     } else {
       dispatch(openModal({
         modalType: 'INTERACTION',

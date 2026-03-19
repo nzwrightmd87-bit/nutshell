@@ -69,7 +69,10 @@ class FanOutOnWriteService < BaseService
   end
 
   def deliver_to_self!
-    FeedManager.instance.push_to_home(@account, @status, update: update?) if @account.local?
+    return unless @account.local?
+    return if @status.reply? && @status.in_reply_to_account_id != @account.id
+
+    FeedManager.instance.push_to_home(@account, @status, update: update?)
   end
 
   def notify_quoted_account!

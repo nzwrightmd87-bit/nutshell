@@ -32,5 +32,6 @@
   /publish
   /search
   /start/(*any)
-  /statuses/(*any)
-).each { |path| get path, to: 'home#index' }
+).each { |path| get path, to: 'home#index', defaults: { public_app_route: true } }
+
+get '/statuses/(*any)', to: 'home#index'

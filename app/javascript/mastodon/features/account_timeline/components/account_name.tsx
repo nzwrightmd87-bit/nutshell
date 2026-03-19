@@ -180,7 +180,7 @@ const AccountNameHelp: FC<{
             </ol>
             <FormattedMessage
               id='account.name.help.footer'
-              defaultMessage='Just like you can send emails to people using different email clients, you can interact with people on other Mastodon servers – and with anyone on other social apps powered by the same set of rules as Mastodon uses (the ActivityPub protocol).'
+              defaultMessage='Just like you can send emails to people using different email clients, you can interact with people on other Nutshell servers – and with anyone on other social apps powered by the same set of rules as Nutshell uses (the ActivityPub protocol).'
               tagName='p'
             />
           </div>

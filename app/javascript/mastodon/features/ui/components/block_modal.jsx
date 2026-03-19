@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import AlternateEmailIcon from '@/material-icons/400-24px/alternate_email.svg?react';
 import BlockIcon from '@/material-icons/400-24px/block.svg?react';
 import CampaignIcon from '@/material-icons/400-24px/campaign.svg?react';
-import ReplyIcon from '@/material-icons/400-24px/reply.svg?react';
+import ReplyIcon from '@/svg-icons/chat_bubble.svg?react';
 import VisibilityOffIcon from '@/material-icons/400-24px/visibility_off.svg?react';
 import { blockAccount } from 'mastodon/actions/accounts';
 import { closeModal } from 'mastodon/actions/modal';

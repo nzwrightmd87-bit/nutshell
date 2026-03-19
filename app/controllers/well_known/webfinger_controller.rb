@@ -4,6 +4,7 @@ module WellKnown
   class WebfingerController < ActionController::Base # rubocop:disable Rails/ApplicationController
     include RoutingHelper
 
+    before_action :reject_federation_if_disabled!
     before_action :set_account
     before_action :check_account_suspension
 
@@ -58,6 +59,10 @@ module WellKnown
     def not_found
       expires_in(3.minutes, public: true)
       head 404
+    end
+
+    def reject_federation_if_disabled!
+      head :not_found if Rails.configuration.x.mastodon.federation_disabled
     end
   end
 end

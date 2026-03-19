@@ -191,13 +191,13 @@ export const DomainPill: React.FC<{
                 <p>
                   <FormattedMessage
                     id='domain_pill.activitypub_like_language'
-                    defaultMessage='ActivityPub is like the language Mastodon speaks with other social networks.'
+                    defaultMessage='ActivityPub is like the language Nutshell speaks with other social networks.'
                   />
                 </p>
                 <p>
                   <FormattedMessage
                     id='domain_pill.activitypub_lets_connect'
-                    defaultMessage='It lets you connect and interact with people not just on Mastodon, but across different social apps too.'
+                    defaultMessage='It lets you connect and interact with people not just on Nutshell, but across different social apps too.'
                   />
                 </p>
               </>

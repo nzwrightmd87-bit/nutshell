@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class EmojisController < ApplicationController
+  before_action :reject_federation_if_disabled!
   before_action :set_emoji
 
   vary_by -> { 'Signature' if authorized_fetch_mode? }

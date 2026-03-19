@@ -3,11 +3,11 @@
 ## Overview
 
 Before starting local development, read the [CONTRIBUTING] guide to understand
-what changes are desirable and what general processes to use. You should also read the project's [AI Contribution Policy] to understand how we approach AI-assisted contributions.
+what changes are desirable and what general processes to use.
 
 ## Environments
 
-The following instructions will guide you through the process of setting up a local development instance of Mastodon on your computer.
+The following instructions will guide you through the process of setting up a local development instance of Nutshell on your computer.
 
 There are instructions for these environments:
 
@@ -30,7 +30,7 @@ complete the following steps:
   `vagrant plugin install vagrant-hostsupdater`
 - Run `vagrant up`
 - Run `vagrant ssh -c "cd /vagrant && bin/dev"`
-- Open `http://mastodon.local` in your browser
+- Open `http://nutshell.localhost:3000` in your browser
 
 ### macOS
 
@@ -53,7 +53,7 @@ To set up **macOS** for native development, complete the following steps:
 
 ### Linux
 
-The Mastodon documentation has a [guide on installing Mastodon from source](https://docs.joinmastodon.org/dev/setup/#manual) on Linux.
+For Nutshell-specific local setup details, refer to `REBELS_SETUP.md`.
 
 ### Docker
 
@@ -71,7 +71,7 @@ docker compose -f .devcontainer/compose.yaml exec app bin/dev
 ### Dev Containers
 
 Within IDEs that support the [Development Containers] specification, start the
-"Mastodon on local machine" container from the editor. The necessary `docker
+"Nutshell on local machine" container from the editor. The necessary `docker
 compose` commands to build and setup the container should run automatically. For
 **Visual Studio Code** this requires installing the [Dev Container extension].
 
@@ -85,22 +85,20 @@ development environment configured with the software needed for this project.
 - Click the button to create a new codespace, and confirm the options
 - Wait for the environment to build (takes a few minutes)
 - When the editor is ready, run `bin/dev` in the terminal
-- Wait for an _Open in Browser_ prompt. This will open Mastodon
+- Wait for an _Open in Browser_ prompt. This will open Nutshell
 - On the _Ports_ tab "stream" setting change _Port visibility_ → _Public_
 
 ## Next steps
 
 - Once you have successfully set up a development environment, it will be available on http://localhost:3000
-- Log in as the default admin user with the username `admin@mastodon.local` or `admin@localhost` (depending on your setup) and the password `mastodonadmin`.
-- Check out the [Mastodon docs] for tips on working with emails in development (you'll need this when creating new user accounts) as well as a list of useful commands for testing and updating your dev instance.
+- Log in as the default admin user with the username `admin@nutshell.localhost` or `admin@localhost` (depending on your setup) and the password configured in your local setup.
+- Check `REBELS_SETUP.md` for tips on working with emails in development (you'll need this when creating new user accounts) as well as useful commands for testing and updating your dev instance.
 - You can optionally populate your database with sample data by running `bin/rails dev:populate_sample_data`. This will create a `@showcase_account` account with various types of contents.
 
-[codespace]: https://codespaces.new/mastodon/mastodon?quickstart=1&devcontainer_path=.devcontainer%2Fcodespaces%2Fdevcontainer.json
+[codespace]: https://codespaces.new
 [CONTRIBUTING]: ../CONTRIBUTING.md
 [Dev Container extension]: https://containers.dev/supporting#dev-containers
 [Development Containers]: https://containers.dev/supporting
 [Docker]: https://docs.docker.com
 [GitHub Codespaces]: https://docs.github.com/en/codespaces
 [Homebrew]: https://brew.sh
-[Mastodon docs]: https://docs.joinmastodon.org/dev/setup/#working-with-emails-in-development
-[AI Contribution Policy]: https://github.com/mastodon/.github/blob/main/AI_POLICY.md

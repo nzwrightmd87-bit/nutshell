@@ -277,7 +277,7 @@ export function submitCompose(successCallback) {
         dispatch(importFetchedStatus({ ...response.data }));
       }
 
-      if (statusId === null && response.data.visibility !== 'direct') {
+      if (statusId === null && response.data.visibility !== 'direct' && response.data.in_reply_to_id === null) {
         insertIfOnline('home');
       }
 

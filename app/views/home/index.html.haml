@@ -1,7 +1,13 @@
-- content_for :header_tags do
-  - unless request.path == '/'
-    %meta{ name: 'robots', content: 'noindex' }/
+- if @render_landing_page
+  - content_for :header_tags do
+    = render partial: 'shared/og', locals: { description: 'Social media without surveillance advertising.' }
 
-  = render partial: 'shared/og'
+  = render 'shared/landing_page'
+- else
+  - content_for :header_tags do
+    - unless request.path == '/'
+      %meta{ name: 'robots', content: 'noindex' }/
 
-= render 'shared/web_app'
+    = render partial: 'shared/og'
+
+  = render 'shared/web_app'

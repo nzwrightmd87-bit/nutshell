@@ -1,0 +1,11 @@
+- content_for :page_title do
+  = t('auth.sign_up.billing_success_title')
+
+.form-container
+  .form-section.membership-status-card
+    %h1.title= t('auth.sign_up.billing_success_title')
+    %p.lead= t('auth.sign_up.billing_success_body')
+    %p= t('auth.sign_up.billing_success_email_hint')
+
+    .actions
+      = link_to t('auth.sign_up.billing_success_cta'), new_user_registration_path, class: 'button'

@@ -485,7 +485,7 @@ const InteractionModal: React.FC<{
         <p>
           <FormattedMessage
             id='interaction_modal.action'
-            defaultMessage="To interact with {name}'s post, you need to sign into your account on whatever Mastodon server you use."
+            defaultMessage="To interact with {name}'s post, you need to sign into your account on whatever Nutshell server you use."
             values={{ name }}
           />
         </p>

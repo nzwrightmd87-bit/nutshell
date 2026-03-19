@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import type { Map as ImmutableMap, List as ImmutableList } from 'immutable';
 
-import elephantUIPlane from '@/images/elephant_ui_plane.svg';
+import nutshellMascot from '@/images/nutshell_mascot.svg';
 import EditIcon from '@/material-icons/400-24px/edit_square.svg?react';
 import PeopleIcon from '@/material-icons/400-24px/group.svg?react';
 import HomeIcon from '@/material-icons/400-24px/home-fill.svg?react';
@@ -167,7 +167,7 @@ const Compose: React.FC<{ multiColumn: boolean }> = ({ multiColumn }) => {
             <ComposeFormContainer />
 
             <div className='drawer__inner__mastodon with-zig-zag-decoration'>
-              <img alt='' draggable='false' src={mascot ?? elephantUIPlane} />
+              <img alt='' draggable='false' src={mascot ?? nutshellMascot} />
             </div>
           </div>
         </div>

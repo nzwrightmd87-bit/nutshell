@@ -46,6 +46,11 @@ export function updateTimeline(timeline, status, { accept = undefined, bogusQuot
       return;
     }
 
+    // Filter replies out of home, community, and public timelines — replies should only appear in thread view
+    if (['home', 'community', 'public'].includes(timeline) && status.in_reply_to_id !== null && status.in_reply_to_id !== undefined) {
+      return;
+    }
+
     if (getState().getIn(['timelines', timeline, 'isPartial'])) {
       // Prevent new items from being added to a partial timeline,
       // since it will be reloaded anyway

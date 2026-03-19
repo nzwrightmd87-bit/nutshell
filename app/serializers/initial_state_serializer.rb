@@ -111,9 +111,10 @@ class InitialStateSerializer < ActiveModel::Serializer
       activity_api_enabled: Setting.activity_api_enabled,
       admin: object.admin&.id&.to_s,
       domain: Addressable::IDNA.to_unicode(instance_presenter.domain),
+      black_envelope_url: black_envelope_url,
       limited_federation_mode: Rails.configuration.x.mastodon.limited_federation_mode,
       locale: I18n.locale,
-      mascot: instance_presenter.mascot&.file&.url,
+      mascot: nil,
       profile_directory: Setting.profile_directory,
       registrations_open: Setting.registrations_mode != 'none' && !Rails.configuration.x.single_user_mode,
       repository: Mastodon::Version.repository,
@@ -149,5 +150,9 @@ class InitialStateSerializer < ActiveModel::Serializer
 
   def sso_redirect
     "/auth/auth/#{Devise.omniauth_providers[0]}" if ENV['ONE_CLICK_SSO_LOGIN'] == 'true' && ENV['OMNIAUTH_ONLY'] == 'true' && Devise.omniauth_providers.length == 1
+  end
+
+  def black_envelope_url
+    BlackEnvelope::Configuration.app_url
   end
 end

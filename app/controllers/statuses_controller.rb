@@ -8,6 +8,8 @@ class StatusesController < ApplicationController
 
   vary_by -> { public_fetch_mode? ? 'Accept, Accept-Language, Cookie' : 'Accept, Accept-Language, Cookie, Signature' }
 
+  before_action :reject_federation_if_disabled!, only: :show, if: -> { request.format == :json }
+  before_action :reject_federation_if_disabled!, only: :activity
   before_action :require_account_signature!, only: [:show, :activity], if: -> { request.format == :json && authorized_fetch_mode? }
   before_action :set_status
   before_action :redirect_to_original, only: :show
@@ -56,6 +58,8 @@ class StatusesController < ApplicationController
   end
 
   def set_link_headers
+    return if federation_disabled?
+
     response.headers['Link'] = LinkHeader.new(
       [[ActivityPub::TagManager.instance.uri_for(@status), [%w(rel alternate), %w(type application/activity+json)]]]
     ).to_s

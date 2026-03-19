@@ -1,0 +1,35 @@
+{
+  email {$LETSENCRYPT_EMAIL}
+}
+
+nutshell.sbs {
+  encode zstd gzip
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
+
+  # Streaming API (WebSocket)
+  handle /api/v1/streaming* {
+    reverse_proxy streaming:4000
+  }
+
+  # Everything else goes to Rails
+  handle {
+    reverse_proxy web:3000
+  }
+}
+
+app.nutshell.sbs {
+  encode zstd gzip
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
+
+  reverse_proxy black-envelope:8787
+}

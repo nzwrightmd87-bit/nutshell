@@ -12,6 +12,9 @@
 
   = render 'shared/error_messages', object: resource
 
+  - if paid_memberships_enabled?
+    = render 'shared/membership_pricing', show_access_code_hint: true
+
   - if @invite.present? && @invite.autofollow?
     .fields-group.invited-by
       %p.hint= t('invites.invited_by')
@@ -25,7 +28,7 @@
                  required: true,
                  wrapper: :with_label
     = f.input :email,
-              hint: false,
+              hint: paid_memberships_enabled? ? t('auth.sign_up.email_must_match_payment') : false,
               input_html: { autocomplete: 'username', placeholder: ' ' },
               required: true,
               wrapper: :with_label
