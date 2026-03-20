@@ -1314,6 +1314,8 @@ en:
       membership_gate_title: Membership plans
       membership_gate_preamble: Choose a plan and complete checkout. When you sign up, use the same email address you used for payment and your account will be activated automatically.
       email_must_match_payment: Use the same email address you used for your membership payment.
+      email_opt_in: I would like to receive email notifications from Nutshell
+      email_opt_in_hint: You will receive emails about activity on your account such as follows, mentions, and replies. You can change this at any time in your notification settings.
       membership_email_error: No active membership was found for this email address. Please complete your membership payment first, then sign up using the same email.
       monthly_plan_name: Monthly membership
       monthly_plan_note: $5 each month, cancel anytime.

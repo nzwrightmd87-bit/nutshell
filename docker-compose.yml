@@ -49,7 +49,8 @@ services:
     image: nutshell-web:latest
     restart: always
     env_file: .env.production
-    command: bundle exec puma -C config/puma.rb
+    entrypoint: ["/bin/bash", "/opt/mastodon/docker-secrets-entrypoint.sh"]
+    command: ["bundle", "exec", "puma", "-C", "config/puma.rb"]
     networks:
       - external_network
       - internal_network
@@ -60,6 +61,8 @@ services:
       - redis
     volumes:
       - ./public/system:/mastodon/public/system
+      - ./docker-secrets-entrypoint.sh:/opt/mastodon/docker-secrets-entrypoint.sh:ro
+      - ./secrets:/run/secrets:ro
 
   streaming:
     build:
@@ -68,7 +71,8 @@ services:
     image: nutshell-streaming:latest
     restart: always
     env_file: .env.production
-    command: node ./streaming/index.js
+    entrypoint: ["/bin/bash", "/opt/entrypoint-secrets.sh"]
+    command: ["node", "./streaming/index.js"]
     networks:
       - external_network
       - internal_network
@@ -77,12 +81,16 @@ services:
     depends_on:
       - db
       - redis
+    volumes:
+      - ./docker-secrets-entrypoint.sh:/opt/entrypoint-secrets.sh:ro
+      - ./secrets:/run/secrets:ro
 
   sidekiq:
     image: nutshell-web:latest
     restart: always
     env_file: .env.production
-    command: bundle exec sidekiq
+    entrypoint: ["/bin/bash", "/opt/mastodon/docker-secrets-entrypoint.sh"]
+    command: ["bundle", "exec", "sidekiq"]
     depends_on:
       - db
       - redis
@@ -91,6 +99,8 @@ services:
       - internal_network
     volumes:
       - ./public/system:/mastodon/public/system
+      - ./docker-secrets-entrypoint.sh:/opt/mastodon/docker-secrets-entrypoint.sh:ro
+      - ./secrets:/run/secrets:ro
     healthcheck:
       test: ['CMD-SHELL', "ps aux | grep '[s]idekiq\\ 8' || false"]
 

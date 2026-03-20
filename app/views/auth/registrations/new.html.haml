@@ -86,5 +86,13 @@
               required: false,
               wrapper: :with_label
 
+  .fields-group
+    = f.input :email_opt_in,
+              as: :boolean,
+              label: t('auth.sign_up.email_opt_in'),
+              hint: t('auth.sign_up.email_opt_in_hint'),
+              required: false,
+              wrapper: :with_label
+
   .actions
     = f.button :button, @invite.present? ? t('auth.register') : sign_up_message, type: :submit

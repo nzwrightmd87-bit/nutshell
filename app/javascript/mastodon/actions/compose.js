@@ -4,6 +4,7 @@ import axios from 'axios';
 import { throttle } from 'lodash';
 
 import api from 'mastodon/api';
+import { compressFile } from 'mastodon/utils/media_compression';
 import { browserHistory } from 'mastodon/components/router';
 import { countableText } from 'mastodon/features/compose/util/counter';
 import { search as emojiSearch } from 'mastodon/features/emoji/emoji_mart_search_light';
@@ -348,39 +349,45 @@ export function uploadCompose(files) {
     for (const [i, file] of Array.from(files).entries()) {
       if (media.size + i > (uploadLimit - 1)) break;
 
-      const data = new FormData();
-      data.append('file', file);
+      // Compress large files client-side before upload (avoids Cloudflare 100MB limit)
+      compressFile(file).then((processedFile) => {
+        // Update total with compressed size
+        total = total - file.size + processedFile.size;
 
-      api().post('/api/v2/media', data, {
-        onUploadProgress: function({ loaded }){
-          progress[i] = loaded;
-          dispatch(uploadComposeProgress(progress.reduce((a, v) => a + v, 0), total));
-        },
-      }).then(({ status, data }) => {
-        // If server-side processing of the media attachment has not completed yet,
-        // poll the server until it is, before showing the media attachment as uploaded
+        const data = new FormData();
+        data.append('file', processedFile);
 
-        if (status === 200) {
-          dispatch(uploadComposeSuccess(data, file));
-        } else if (status === 202) {
-          dispatch(uploadComposeProcessing());
+        return api().post('/api/v2/media', data, {
+          onUploadProgress: function({ loaded }){
+            progress[i] = loaded;
+            dispatch(uploadComposeProgress(progress.reduce((a, v) => a + v, 0), total));
+          },
+        }).then(({ status, data }) => {
+          // If server-side processing of the media attachment has not completed yet,
+          // poll the server until it is, before showing the media attachment as uploaded
 
-          let tryCount = 1;
+          if (status === 200) {
+            dispatch(uploadComposeSuccess(data, processedFile));
+          } else if (status === 202) {
+            dispatch(uploadComposeProcessing());
 
-          const poll = () => {
-            api().get(`/api/v1/media/${data.id}`).then(response => {
-              if (response.status === 200) {
-                dispatch(uploadComposeSuccess(response.data, file));
-              } else if (response.status === 206) {
-                const retryAfter = (Math.log2(tryCount) || 1) * 1000;
-                tryCount += 1;
-                setTimeout(() => poll(), retryAfter);
-              }
-            }).catch(error => dispatch(uploadComposeFail(error)));
-          };
+            let tryCount = 1;
 
-          poll();
-        }
+            const poll = () => {
+              api().get(`/api/v1/media/${data.id}`).then(response => {
+                if (response.status === 200) {
+                  dispatch(uploadComposeSuccess(response.data, processedFile));
+                } else if (response.status === 206) {
+                  const retryAfter = (Math.log2(tryCount) || 1) * 1000;
+                  tryCount += 1;
+                  setTimeout(() => poll(), retryAfter);
+                }
+              }).catch(error => dispatch(uploadComposeFail(error)));
+            };
+
+            poll();
+          }
+        });
       }).catch(error => dispatch(uploadComposeFail(error)));
     }
   };

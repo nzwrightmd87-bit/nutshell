@@ -136,7 +136,7 @@ years old. If you are under the age of 18, do not use this site.
 # Open source
 
 Nutshell is built on open-source software. The source code is publicly available
-at [github.com/dissident-nutshell/nutshell](https://github.com/dissident-nutshell/nutshell)
+at [github.com/nzwrightmd87-bit/nutshell](https://github.com/nzwrightmd87-bit/nutshell)
 for review and audit. Transparency is a core value of this platform.
 
 ---

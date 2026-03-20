@@ -2,6 +2,10 @@
   email {$LETSENCRYPT_EMAIL}
 }
 
+www.nutshell.sbs {
+  redir https://nutshell.sbs{uri} permanent
+}
+
 nutshell.sbs {
   encode zstd gzip
 
@@ -14,6 +18,21 @@ nutshell.sbs {
   # Streaming API (WebSocket)
   handle /api/v1/streaming* {
     reverse_proxy streaming:4000
+  }
+
+  # Media uploads - allow larger bodies
+  handle /api/v1/media* {
+    request_body {
+      max_size 200MB
+    }
+    reverse_proxy web:3000
+  }
+
+  handle /api/v2/media* {
+    request_body {
+      max_size 200MB
+    }
+    reverse_proxy web:3000
   }
 
   # Everything else goes to Rails
