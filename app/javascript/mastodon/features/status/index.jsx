@@ -99,6 +99,7 @@ const makeMapStateToProps = () => {
       status,
       ancestorsIds,
       descendantsIds,
+      inReplyTos: state.contexts.inReplyTos,
       askReplyConfirmation: state.getIn(['compose', 'text']).trim().length !== 0,
       domain: state.getIn(['meta', 'domain']),
       pictureInPicture: getPictureInPicture(state, { id: props.params.statusId }),
@@ -465,6 +466,22 @@ class Status extends ImmutablePureComponent {
     this.handleTranslate(this.props.status);
   };
 
+  getThreadDepth (id, rootId) {
+    const { inReplyTos } = this.props;
+    let depth = 0;
+    let currentId = id;
+    const maxDepth = 3;
+
+    while (currentId && currentId !== rootId && depth < maxDepth) {
+      currentId = inReplyTos[currentId];
+      if (currentId && currentId !== rootId) {
+        depth++;
+      }
+    }
+
+    return Math.min(depth, maxDepth);
+  }
+
   renderChildren (list, ancestors) {
     const { params: { statusId } } = this.props;
 
@@ -476,6 +493,7 @@ class Status extends ImmutablePureComponent {
         previousId={i > 0 ? list[i - 1] : undefined}
         nextId={list[i + 1] || (ancestors && statusId)}
         rootId={statusId}
+        threadDepth={this.getThreadDepth(id, statusId)}
         shouldHighlightOnMount={this.state.newRepliesIds.includes(id)}
       />
     ));

@@ -1459,6 +1459,16 @@ body > [data-popper-placement] {
   }
 }
 
+// Nested reply indentation (Facebook-style threading, max 3 levels deep)
+.status__wrapper[style*='--thread-depth'] {
+  margin-inline-start: calc(var(--thread-depth) * 32px);
+  border-inline-start: 2px solid var(--color-border-primary);
+
+  .status__line {
+    inset-inline-start: calc(16px + ((46px - 2px) * 0.5));
+  }
+}
+
 .focusable {
   &:focus-visible {
     outline: 2px solid var(--color-text-brand);
@@ -1543,6 +1553,7 @@ body > [data-popper-placement] {
   &--first-in-thread {
     border-top: 1px solid var(--color-border-primary);
   }
+
 
   &__line {
     --thread-line-color: var(--color-border-primary);

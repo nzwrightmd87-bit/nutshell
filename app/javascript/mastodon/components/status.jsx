@@ -120,6 +120,7 @@ class Status extends ImmutablePureComponent {
     cachedMediaWidth: PropTypes.number,
     scrollKey: PropTypes.string,
     skipPrepend: PropTypes.bool,
+    threadDepth: PropTypes.number,
     avatarSize: PropTypes.number,
     deployPictureInPicture: PropTypes.func,
     unfocusable: PropTypes.bool,
@@ -570,7 +571,7 @@ class Status extends ImmutablePureComponent {
 
     return (
       <Hotkeys handlers={handlers} focusable={!unfocusable}>
-        <div className={classNames('status__wrapper', `status__wrapper-${status.get('visibility')}`, { 'status__wrapper-reply': !!status.get('in_reply_to_id'), unread, focusable: !this.props.muted })} tabIndex={this.props.muted || unfocusable ? null : 0} data-featured={featured ? 'true' : null} aria-label={textForScreenReader({intl, status, rebloggedByText, isQuote: isQuotedPost})} ref={this.handleRef} data-nosnippet={status.getIn(['account', 'noindex'], true) || undefined}>
+        <div className={classNames('status__wrapper', `status__wrapper-${status.get('visibility')}`, { 'status__wrapper-reply': !!status.get('in_reply_to_id'), unread, focusable: !this.props.muted })} style={this.props.threadDepth > 0 ? { '--thread-depth': this.props.threadDepth } : undefined} tabIndex={this.props.muted || unfocusable ? null : 0} data-featured={featured ? 'true' : null} aria-label={textForScreenReader({intl, status, rebloggedByText, isQuote: isQuotedPost})} ref={this.handleRef} data-nosnippet={status.getIn(['account', 'noindex'], true) || undefined}>
           {!skipPrepend && prepend}
 
           <div
@@ -583,6 +584,9 @@ class Status extends ImmutablePureComponent {
                 'status--is-quote': isQuotedPost,
                 'status--has-quote': !!status.get('quote'),
                 'status--highlighted-entry': this.props.shouldHighlightOnMount,
+                'status--depth-1': this.props.threadDepth === 1,
+                'status--depth-2': this.props.threadDepth === 2,
+                'status--depth-3': this.props.threadDepth >= 3,
               })
             }
             data-id={status.get('id')}
