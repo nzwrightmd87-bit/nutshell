@@ -157,6 +157,8 @@ class Status extends ImmutablePureComponent {
      * Used to highlight newly added replies in the UI
      */
     newRepliesIds: [],
+    /** Tracks which statuses have their sub-replies expanded */
+    expandedReplies: {},
   };
 
   UNSAFE_componentWillMount () {
@@ -482,21 +484,112 @@ class Status extends ImmutablePureComponent {
     return Math.min(depth, maxDepth);
   }
 
+  handleToggleReplies = (statusId) => {
+    this.setState((prevState) => ({
+      expandedReplies: {
+        ...prevState.expandedReplies,
+        [statusId]: !prevState.expandedReplies[statusId],
+      },
+    }));
+  };
+
+  // Build a map of parentId → [childIds] from the descendants
+  getReplyTree () {
+    const { descendantsIds, inReplyTos, params: { statusId } } = this.props;
+    const childrenMap = {};
+
+    for (const id of descendantsIds) {
+      const parentId = inReplyTos[id] || statusId;
+      if (!childrenMap[parentId]) {
+        childrenMap[parentId] = [];
+      }
+      childrenMap[parentId].push(id);
+    }
+
+    return childrenMap;
+  }
+
+  // Count all nested replies under a status (recursive)
+  countReplies (statusId, childrenMap) {
+    const children = childrenMap[statusId] || [];
+    let count = children.length;
+    for (const childId of children) {
+      count += this.countReplies(childId, childrenMap);
+    }
+    return count;
+  }
+
+  // Recursively render a tree of replies with indentation and collapsing
+  renderReplyTree (parentId, childrenMap, depth = 0) {
+    const { params: { statusId } } = this.props;
+    const { expandedReplies } = this.state;
+    const children = childrenMap[parentId] || [];
+
+    if (children.length === 0) return null;
+
+    return children.map((id) => {
+      const subReplyCount = this.countReplies(id, childrenMap);
+      const isExpanded = !!expandedReplies[id];
+      const threadDepth = Math.min(depth, 3);
+
+      return (
+        <div key={id}>
+          <StatusQuoteManager
+            id={id}
+            contextType='thread'
+            rootId={statusId}
+            threadDepth={threadDepth}
+            shouldHighlightOnMount={this.state.newRepliesIds.includes(id)}
+          />
+          {subReplyCount > 0 && !isExpanded && (
+            <button
+              type='button'
+              className='thread-replies-toggle'
+              style={threadDepth > 0 ? { marginInlineStart: `${threadDepth * 32}px` } : undefined}
+              onClick={() => this.handleToggleReplies(id)}
+            >
+              View {subReplyCount} {subReplyCount === 1 ? 'reply' : 'replies'}
+            </button>
+          )}
+          {subReplyCount > 0 && isExpanded && (
+            <>
+              <button
+                type='button'
+                className='thread-replies-toggle'
+                style={threadDepth > 0 ? { marginInlineStart: `${threadDepth * 32}px` } : undefined}
+                onClick={() => this.handleToggleReplies(id)}
+              >
+                Hide {subReplyCount === 1 ? 'reply' : 'replies'}
+              </button>
+              {this.renderReplyTree(id, childrenMap, Math.min(depth + 1, 3))}
+            </>
+          )}
+        </div>
+      );
+    });
+  }
+
   renderChildren (list, ancestors) {
     const { params: { statusId } } = this.props;
 
-    return list.map((id, i) => (
-      <StatusQuoteManager
-        key={id}
-        id={id}
-        contextType='thread'
-        previousId={i > 0 ? list[i - 1] : undefined}
-        nextId={list[i + 1] || (ancestors && statusId)}
-        rootId={statusId}
-        threadDepth={this.getThreadDepth(id, statusId)}
-        shouldHighlightOnMount={this.state.newRepliesIds.includes(id)}
-      />
-    ));
+    // For ancestors, render flat as before
+    if (ancestors) {
+      return list.map((id, i) => (
+        <StatusQuoteManager
+          key={id}
+          id={id}
+          contextType='thread'
+          previousId={i > 0 ? list[i - 1] : undefined}
+          nextId={list[i + 1] || statusId}
+          rootId={statusId}
+          shouldHighlightOnMount={this.state.newRepliesIds.includes(id)}
+        />
+      ));
+    }
+
+    // For descendants, render as collapsible tree
+    const childrenMap = this.getReplyTree();
+    return this.renderReplyTree(statusId, childrenMap, 0);
   }
 
   setContainerRef = c => {
