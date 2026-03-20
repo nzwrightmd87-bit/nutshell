@@ -42,6 +42,7 @@ class MediaAttachment < ApplicationRecord
 
   IMAGE_LIMIT = 16.megabytes
   VIDEO_LIMIT = 99.megabytes
+  VIDEO_UPLOAD_LIMIT = 200.megabytes
 
   MAX_VIDEO_MATRIX_LIMIT = 8_294_400 # 3840x2160px
   MAX_VIDEO_FRAME_RATE   = 120
@@ -186,10 +187,11 @@ class MediaAttachment < ApplicationRecord
                     convert_options: GLOBAL_CONVERT_OPTIONS
 
   before_file_validate :set_type_and_extension
+  before_file_validate :compress_oversized_video
   before_file_validate :check_video_dimensions
 
   validates_attachment_content_type :file, content_type: IMAGE_MIME_TYPES + VIDEO_MIME_TYPES + AUDIO_MIME_TYPES
-  validates_attachment_size :file, less_than: ->(m) { m.larger_media_format? ? VIDEO_LIMIT : IMAGE_LIMIT }
+  validates_attachment_size :file, less_than: ->(m) { m.larger_media_format? ? VIDEO_UPLOAD_LIMIT : IMAGE_LIMIT }
   remotable_attachment :file, VIDEO_LIMIT, suppress_errors: false, download_on_assign: false, attribute_name: :remote_url
 
   has_attached_file :thumbnail,
@@ -360,6 +362,59 @@ class MediaAttachment < ApplicationRecord
 
   def set_processing
     self.processing = delay_processing? ? :queued : :complete
+  end
+
+  def compress_oversized_video
+    return unless video? && file.queued_for_write[:original].present?
+
+    original_path = file.queued_for_write[:original].path
+    file_size = File.size(original_path)
+
+    return unless file_size > VIDEO_LIMIT
+
+    Rails.logger.info("[media-compress] Video #{file_size} bytes exceeds #{VIDEO_LIMIT}, compressing with ffmpeg")
+
+    compressed_path = "#{original_path}.compressed.mp4"
+
+    begin
+      # Target bitrate to fit under VIDEO_LIMIT with some headroom
+      movie = ffmpeg_data(original_path)
+      return unless movie.valid?
+
+      duration = movie.duration.to_f
+      return if duration <= 0
+
+      # Target 90% of limit to leave room for container overhead
+      target_bytes = VIDEO_LIMIT * 0.9
+      target_bitrate_kbps = ((target_bytes * 8) / duration / 1000).to_i
+      # Reserve 128kbps for audio
+      video_bitrate_kbps = [target_bitrate_kbps - 128, 500].max
+
+      system(
+        'ffmpeg', '-y', '-i', original_path,
+        '-c:v', 'libx264', '-preset', 'fast',
+        '-b:v', "#{video_bitrate_kbps}k",
+        '-maxrate', "#{video_bitrate_kbps * 2}k",
+        '-bufsize', "#{video_bitrate_kbps * 4}k",
+        '-c:a', 'aac', '-b:a', '128k',
+        '-movflags', '+faststart',
+        compressed_path,
+        out: File::NULL, err: File::NULL
+      )
+
+      if File.exist?(compressed_path) && File.size(compressed_path) < file_size
+        FileUtils.mv(compressed_path, original_path)
+        # Reset memoized ffmpeg data since the file changed
+        @ffmpeg_data = nil
+        Rails.logger.info("[media-compress] Compressed to #{File.size(original_path)} bytes")
+      else
+        Rails.logger.warn('[media-compress] Compression did not reduce file size, keeping original')
+        File.delete(compressed_path) if File.exist?(compressed_path)
+      end
+    rescue => e
+      Rails.logger.warn("[media-compress] Compression failed: #{e.message}")
+      File.delete(compressed_path) if compressed_path && File.exist?(compressed_path)
+    end
   end
 
   def check_video_dimensions

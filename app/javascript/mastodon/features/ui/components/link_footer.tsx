@@ -73,7 +73,7 @@ export const LinkFooter: React.FC<{
       </p>
 
       <p>
-        <a href='https://github.com/dissident-nutshell/nutshell' target='_blank' rel='noopener noreferrer'>
+        <a href='https://github.com/nzwrightmd87-bit/nutshell' target='_blank' rel='noopener noreferrer'>
           <FormattedMessage id='footer.source_code' defaultMessage='Review the source code' />
         </a>
         <DividingCircle />

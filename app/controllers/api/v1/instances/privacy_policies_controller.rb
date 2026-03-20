@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Api::V1::Instances::PrivacyPoliciesController < Api::V1::Instances::BaseController
+  skip_before_action :require_authenticated_user!
   before_action :set_privacy_policy
 
   def show

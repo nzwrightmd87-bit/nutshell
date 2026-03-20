@@ -139,6 +139,9 @@ class User < ApplicationRecord
   attribute :external, :boolean, default: false
   attribute :bypass_registration_checks, :boolean, default: false
   attribute :date_of_birth, :date
+  attribute :email_opt_in, :boolean, default: false
+
+  after_create :disable_notification_emails_unless_opted_in
 
   def self.those_who_can(*any_of_privileges)
     matching_role_ids = UserRole.that_can(*any_of_privileges).map(&:id)
@@ -544,5 +547,23 @@ class User < ApplicationRecord
 
   def trigger_webhooks
     TriggerWebhookWorker.perform_async('account.created', 'Account', account_id)
+  end
+
+  def disable_notification_emails_unless_opted_in
+    return if email_opt_in
+
+    settings.update(
+      'notification_emails.follow' => false,
+      'notification_emails.reblog' => false,
+      'notification_emails.favourite' => false,
+      'notification_emails.mention' => false,
+      'notification_emails.quote' => false,
+      'notification_emails.follow_request' => false,
+      'notification_emails.report' => false,
+      'notification_emails.pending_account' => false,
+      'notification_emails.trends' => false,
+      'notification_emails.appeal' => false
+    )
+    save!
   end
 end
