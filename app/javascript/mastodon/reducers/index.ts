@@ -8,6 +8,7 @@ import { accountsFamiliarFollowersReducer } from './accounts_familiar_followers'
 import { accountsMapReducer } from './accounts_map';
 import { alertsReducer } from './alerts';
 import announcements from './announcements';
+import { blackEnvelopeReducer } from './black_envelope';
 import { composeReducer } from './compose';
 import { contextsReducer } from './contexts';
 import conversations from './conversations';
@@ -44,6 +45,7 @@ import user_lists from './user_lists';
 
 const reducers = {
   announcements,
+  blackEnvelope: blackEnvelopeReducer,
   dropdownMenu: dropdownMenuReducer,
   timelines,
   meta,
