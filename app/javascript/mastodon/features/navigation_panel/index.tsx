@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -46,6 +46,7 @@ import {
 } from 'mastodon/initial_state';
 import { transientSingleColumn } from 'mastodon/is_mobile';
 import { canViewFeed } from 'mastodon/permissions';
+import { fetchBlackEnvelopeUnreadCount } from 'mastodon/reducers/black_envelope';
 import { selectUnreadNotificationGroupsCount } from 'mastodon/selectors/notifications';
 import { useAppSelector, useAppDispatch } from 'mastodon/store';
 
@@ -143,6 +144,40 @@ const NotificationsLink = () => {
         />
       }
       text={intl.formatMessage(messages.notifications)}
+    />
+  );
+};
+
+const UNREAD_POLL_INTERVAL = 60_000;
+
+const BlackEnvelopeLink = () => {
+  const intl = useIntl();
+  const dispatch = useAppDispatch();
+  const count = useAppSelector((state) => state.blackEnvelope.unreadCount);
+
+  const fetchCount = useCallback(() => {
+    void dispatch(fetchBlackEnvelopeUnreadCount());
+  }, [dispatch]);
+
+  useEffect(() => {
+    fetchCount();
+    const id = setInterval(fetchCount, UNREAD_POLL_INTERVAL);
+    return () => clearInterval(id);
+  }, [fetchCount]);
+
+  return (
+    <ColumnLink
+      transparent
+      href='/black_envelope'
+      icon={
+        <IconWithBadge
+          id='groups'
+          icon={GroupsIcon}
+          count={count}
+          className='column-link__icon'
+        />
+      }
+      text={intl.formatMessage(messages.blackEnvelope)}
     />
   );
 };
@@ -354,14 +389,7 @@ export const NavigationPanel: React.FC<{ multiColumn?: boolean }> = ({
               iconComponent={AlternateEmailIcon}
               text={intl.formatMessage(messages.direct)}
             />
-            <ColumnLink
-              transparent
-              href='/black_envelope'
-              icon='groups'
-              iconComponent={GroupsIcon}
-              text={intl.formatMessage(messages.blackEnvelope)}
-              badge={intl.formatMessage(messages.blackEnvelopeTag)}
-            />
+            <BlackEnvelopeLink />
 
             <hr />
 

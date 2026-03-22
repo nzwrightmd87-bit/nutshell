@@ -23,6 +23,10 @@ module BlackEnvelope
         join_path(internal_url, 'api/integrations/nutshell/provision')
       end
 
+      def unread_count_url
+        join_path(internal_url, 'api/integrations/nutshell/unread-count')
+      end
+
       def integration_secret
         ENV['BLACK_ENVELOPE_SSO_SECRET'].presence || default_integration_secret
       end

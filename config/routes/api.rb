@@ -135,6 +135,10 @@ namespace :api, format: false do
       resources :statuses, only: [:index]
     end
 
+    namespace :black_envelope do
+      get 'notifications/unread_count', to: 'notifications#unread_count'
+    end
+
     namespace :emails do
       resources :confirmations, only: [:create]
       get :check_confirmation, to: 'confirmations#check'
