@@ -166,20 +166,18 @@ const BlackEnvelopeLink = () => {
   }, [fetchCount]);
 
   return (
-    <ColumnLink
-      transparent
-      href='/black_envelope'
-      icon={
-        <IconWithBadge
-          id='groups'
-          icon={GroupsIcon}
-          count={count}
-          className='column-link__icon'
-        />
-      }
-      text={intl.formatMessage(messages.blackEnvelope)}
-      badge={intl.formatMessage(messages.blackEnvelopeTag)}
-    />
+    <a href='/black_envelope' className='column-link column-link--transparent'>
+      <IconWithBadge
+        id='groups'
+        icon={GroupsIcon}
+        count={count}
+        className='column-link__icon'
+      />
+      <span className='black-envelope-link__label'>
+        <span>{intl.formatMessage(messages.blackEnvelope)}</span>
+        <span className='black-envelope-link__subtitle'>{intl.formatMessage(messages.blackEnvelopeTag)}</span>
+      </span>
+    </a>
   );
 };
 
