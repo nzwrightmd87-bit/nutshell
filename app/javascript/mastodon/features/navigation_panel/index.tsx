@@ -79,7 +79,7 @@ const messages = defineMessages({
   },
   blackEnvelopeTag: {
     id: 'navigation_bar.black_envelope_tag',
-    defaultMessage: 'Messages & groups',
+    defaultMessage: 'E2EE Messages & Groups',
   },
   favourites: { id: 'navigation_bar.favourites', defaultMessage: 'Favorites' },
   bookmarks: { id: 'navigation_bar.bookmarks', defaultMessage: 'Bookmarks' },
@@ -178,6 +178,7 @@ const BlackEnvelopeLink = () => {
         />
       }
       text={intl.formatMessage(messages.blackEnvelope)}
+      badge={intl.formatMessage(messages.blackEnvelopeTag)}
     />
   );
 };
