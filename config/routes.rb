@@ -221,6 +221,7 @@ Rails.application.routes.draw do
   resource :billing, only: :show, controller: :billing do
     get :success
     get :cancel
+    get :checkout
   end
   get '/black_envelope', to: 'black_envelope_launches#show'
 

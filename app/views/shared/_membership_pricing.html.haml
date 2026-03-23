@@ -8,7 +8,6 @@
     - { monthly: t('auth.sign_up.monthly_plan_name'), yearly: t('auth.sign_up.yearly_plan_name') }.each do |plan, label|
       - plan_classes = ['membership-paywall__plan']
       - plan_classes << 'membership-paywall__plan--selected' if selected_plan == plan
-      - checkout_url = paid_membership_checkout_url(plan)
 
       %section{ class: plan_classes }
         %p.membership-paywall__plan-name= label
@@ -21,7 +20,6 @@
         - else
           %p.membership-paywall__savings= t('auth.sign_up.monthly_plan_note')
 
-        - if checkout_url.present?
-          = link_to t('auth.sign_up.square_checkout'), checkout_url, class: 'button button-secondary membership-paywall__cta', target: '_blank', rel: 'noreferrer'
+        = link_to t('auth.sign_up.square_checkout'), checkout_billing_path(plan: plan), class: 'button button-secondary membership-paywall__cta'
 
   %p.membership-paywall__hint= t('auth.sign_up.continue_after_payment')
