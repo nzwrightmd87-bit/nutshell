@@ -79,7 +79,7 @@ class BillingController < ApplicationController
         location_id: location_id,
       },
       checkout_options: {
-        redirect_url: billing_success_url,
+        redirect_url: success_billing_url,
       },
     }
 
