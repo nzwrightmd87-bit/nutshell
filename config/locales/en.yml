@@ -1324,6 +1324,7 @@ en:
       yearly_plan_interval: /yr
       yearly_plan_savings: $48 yearly saves $12 compared with paying monthly for a full year.
       square_checkout: Continue to Square
+      checkout_unavailable: Checkout is temporarily unavailable. Please try again shortly.
       continue_after_payment: After completing payment, come back here and create your account using the same email address.
       billing_how_it_works_title: How it works
       billing_how_it_works_body: "Getting started with Nutshell takes just a few steps:"
