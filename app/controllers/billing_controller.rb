@@ -18,11 +18,16 @@ class BillingController < ApplicationController
   def cancel; end
 
   def checkout
+    static_url = paid_membership_checkout_url(@selected_plan)
+    if static_url.present?
+      redirect_to static_url, allow_other_host: true
+      return
+    end
+
     plan_variation_id = square_plan_variation_id(@selected_plan)
     access_token = ENV.fetch('SQUARE_ACCESS_TOKEN', '').strip
     location_id = ENV.fetch('SQUARE_LOCATION_ID', '').strip
 
-    # Fall back to static links if API isn't configured
     if access_token.blank? || location_id.blank? || plan_variation_id.blank?
       fallback_to_static_link
       return
@@ -79,7 +84,8 @@ class BillingController < ApplicationController
         location_id: location_id,
       },
       checkout_options: {
-        redirect_url: success_billing_url,
+        redirect_url: success_billing_url(plan: @selected_plan),
+        subscription_plan_id: plan_variation_id,
       },
     }
 
