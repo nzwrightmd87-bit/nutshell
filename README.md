@@ -1,20 +1,20 @@
-# Rebels
+# Nutshell
 
-Community-first social media platform branded for Rebels.
+Nutshell social app, built from a Mastodon fork and customized for a private, paid, community-first platform.
 
 <p align="center">
-  <img src="./app/javascript/images/rebels_mascot.svg?raw=true" alt="Rebels mascot" width="320" />
+  <img src="./app/javascript/images/logo-stacked.svg?raw=true" alt="Nutshell" width="320" />
 </p>
 
 ## Project
 
-Rebels is a self-hosted social platform with Rebels branding applied across the web UI, logos, mascots, and defaults.
+This directory contains the Rails, React, Sidekiq, Redis, PostgreSQL, and streaming app that powers the social side of Nutshell. It includes Nutshell branding, the paid-membership signup flow, federation restrictions, custom post UI behavior, landing-page changes, and the launch bridge into BlackEnvelope.
 
 ## Local Development
 
 Use the setup guide:
 
-- `REBELS_SETUP.md`
+- `NUTSHELL_SETUP.md`
 
 ## Core Stack
 
@@ -22,6 +22,8 @@ Use the setup guide:
 - PostgreSQL
 - Redis + Sidekiq
 - Node.js + React
+- Vite
+- BlackEnvelope SSO/provisioning bridge
 
 ## License
 

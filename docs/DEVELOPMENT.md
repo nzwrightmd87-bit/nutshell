@@ -53,7 +53,7 @@ To set up **macOS** for native development, complete the following steps:
 
 ### Linux
 
-For Nutshell-specific local setup details, refer to `REBELS_SETUP.md`.
+For Nutshell-specific local setup details, refer to `NUTSHELL_SETUP.md`.
 
 ### Docker
 
@@ -92,7 +92,7 @@ development environment configured with the software needed for this project.
 
 - Once you have successfully set up a development environment, it will be available on http://localhost:3000
 - Log in as the default admin user with the username `admin@nutshell.localhost` or `admin@localhost` (depending on your setup) and the password configured in your local setup.
-- Check `REBELS_SETUP.md` for tips on working with emails in development (you'll need this when creating new user accounts) as well as useful commands for testing and updating your dev instance.
+- Check `NUTSHELL_SETUP.md` for local domain, account, production-config, and verification notes.
 - You can optionally populate your database with sample data by running `bin/rails dev:populate_sample_data`. This will create a `@showcase_account` account with various types of contents.
 
 [codespace]: https://codespaces.new
