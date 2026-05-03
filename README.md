@@ -4,6 +4,8 @@ Nutshell is a paid-membership social platform for people who want a quieter soci
 
 This repository contains the main Nutshell social app. It is built from a heavily customized Mastodon codebase and adds Nutshell branding, paid memberships, a closed-community posture, custom onboarding, and an integration bridge to BlackEnvelope, the platform's private encrypted messaging and groups app.
 
+Canonical GitHub repository: `https://github.com/dissident5678/nutshell`
+
 <p align="center">
   <img src="./app/javascript/images/logo-stacked.svg?raw=true" alt="Nutshell" width="320" />
 </p>
