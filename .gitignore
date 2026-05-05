@@ -45,6 +45,11 @@ node_modules/
 .trae/
 skills-lock.json
 
+# Ignore local AI instruction mirrors inside vendored BlackEnvelope
+black_envelope/BlackEnvelope/AGENTS.md
+black_envelope/BlackEnvelope/CLAUDE.md
+black_envelope/BlackEnvelope/GEMINI.md
+
 # Ignore postgres + redis + elasticsearch volume optionally created by docker-compose
 /postgres
 /postgres14
