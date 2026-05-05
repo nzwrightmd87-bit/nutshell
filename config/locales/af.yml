@@ -3,7 +3,7 @@ af:
   about:
     contact_missing: Nie ingestel nie
     contact_unavailable: n.v.t
-    hosted_on: Mastodon gehuisves op %{domain}
+    hosted_on: Nutshell gehuisves op %{domain}
     title: Aangaande
   accounts:
     followers:

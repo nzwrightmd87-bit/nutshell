@@ -3,10 +3,10 @@ lad:
   simple_form:
     hints:
       account:
-        discoverable: Tus publikasyones publikas i profil pueden ser avaliadas o rekomendadas en varias partes de Mastodon i tu profil puede ser sujerido a otros utilizadores.
+        discoverable: Tus publikasyones publikas i profil pueden ser avaliadas o rekomendadas en varias partes de Nutshell i tu profil puede ser sujerido a otros utilizadores.
         display_name: Tu nombre para amostrar.
         fields: Tu deskripsyon, pronombres, edad, todo lo ke keras.
-        indexable: Tus publikasyones publikas pueden apareser en rezultados de bushkeda en Mastodon. Personas ke enteraktuaron kon tus publikasyones syempre pueden bushkarlas inkluzo si trokes esta preferensya.
+        indexable: Tus publikasyones publikas pueden apareser en rezultados de bushkeda en Nutshell. Personas ke enteraktuaron kon tus publikasyones syempre pueden bushkarlas inkluzo si trokes esta preferensya.
         note: 'Puedes @enmentar a otra djente o #etiketas.'
         show_collections: Otra djente podra ver tus segidos i suivantes. Personas a las kualas siges siempre podran ver que las estas sigiendo.
         unlocked: Djente va poder segirte sin solisitar tu achetasyon. Deseleksyona si keres revizar solisitasyones de segimyento i dechidir si keres achetar o refuzar a muevos suivantes.
@@ -54,7 +54,7 @@ lad:
         phrase: Se aplikara sin importar las mayuskulas o los avizos de kontenido de una publikasyon
         scopes: A los kualos APIs la aplikasyon tendra akseso. Si eskojes el alkanse de nivel mas alto, no kale eskojer las individualas.
         setting_aggregate_reblogs: No amostra muevas repartajasyones para las publikasyones ke an sido resientemente repartajadas (solo afekta a las repartajasyones risividas resientemente)
-        setting_always_send_emails: Normalmente los avizos por posta elektronika no se embiaran kuando estes uzando Mastodon aktivamente
+        setting_always_send_emails: Normalmente los avizos por posta elektronika no se embiaran kuando estes uzando Nutshell aktivamente
         setting_default_sensitive: Tu muevo kontenido multimedia esta eskondido i puede ser amostrado kon un klik
         setting_display_media_default: Eskonde kontenido multimedia markado komo sensivle
         setting_display_media_hide_all: Siempre eskonde todo el kontenido multimedia
@@ -77,13 +77,13 @@ lad:
       form_admin_settings:
         activity_api_enabled: Numero de publikasyones publikadas lokalmente, utilizadores activos i enrejistrasyones muevas kada semana
         closed_registrations_message: Amostrado kuando las enrejistrasyones estan serrados
-        custom_css: Puedes aplikar estilos personalizados a la version web de Mastodon.
+        custom_css: Puedes aplikar estilos personalizados a la version web de Nutshell.
         mascot: Reemplaza la ilustrasyon en la enterfaz web avanzada.
         peers_api_enabled: Una lista de nombres de domeno ke este sirvidor tiene topado en el Fediverso. Aki no se inkluye dingun dato sovre si federas kon un sirvidor determinado, solo ke tu sirvidor lo konese. Esto es utilizado por los servisyos ke rekopilan estatistikas sovre la federasyon en un senso djeneral.
         profile_directory: El katalogo de profiles lista a todos los utilizadores ke tienen optado por ke sus kuento pueda ser deskuvierto.
         require_invite_text: Kuando las enrejistrasyones rekieren achetasyon manuala, faze obligatoria la entrada de teksto "Por ke keres unirte?" en lugar de ser opsyonal
         site_contact_email: Komo la djente puede ponerse en kontakto kontigo para konsultas legales o de ayuda.
-        site_contact_username: Komo puede kontaktarte la djente en Mastodon.
+        site_contact_username: Komo puede kontaktarte la djente en Nutshell.
         site_extended_description: Kualseker enformasyon adisyonala ke pueda ser util para los vizitantes i tus utilizadores. Se puede estrukturar kon formato Markdown.
         site_short_description: Una breve deskripsyon para ayudar a identifikar tu sirvidor de forma unika. Ken lo administra?
         site_terms: Utiliza tu propia politika de privasita o deshala en blanko para kulanear la predeterminada Puede estrukturarse kon formato Markdown.
@@ -96,7 +96,7 @@ lad:
       form_challenge:
         current_password: Estas entrando en un area siguro
       imports:
-        data: Archivo CSV eksportado dizde otra instansya de Mastodon
+        data: Archivo CSV eksportado dizde otra instansya de Nutshell
       invite_request:
         text: Esto nos ayudara a revizar tu aplikasyon
       ip_block:
@@ -290,7 +290,7 @@ lad:
         software_updates:
           all: Avizame de kada aktualizasyon
           critical: Avizame solo de aktualizasyones kritikas
-          label: Mueva version de Mastodon esta desponivle
+          label: Mueva version de Nutshell esta desponivle
           none: Nunkua avizame de aktualizasyones (no rekomendado)
           patch: Avizame de aktualizasyones de yerros
         trending_tag: Un muevo trend nesesita revizyon

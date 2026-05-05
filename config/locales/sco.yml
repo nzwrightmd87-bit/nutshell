@@ -1,10 +1,10 @@
 ---
 sco:
   about:
-    about_mastodon_html: 'The social network o wir future: Nae adverts, nae corporate surveillance; ethical design, an decentralization! Ain yer ain data wi Mastodon!'
+    about_mastodon_html: 'The social network o wir future: Nae adverts, nae corporate surveillance; ethical design, an decentralization! Ain yer ain data wi Nutshell!'
     contact_missing: No set
     contact_unavailable: N/A
-    hosted_on: Mastodon hostit on %{domain}
+    hosted_on: Nutshell hostit on %{domain}
     title: Aboot
   accounts:
     followers:
@@ -599,7 +599,7 @@ sco:
         moderation: Moderation
         special: Special
       delete: Delete
-      description_html: Wi <strong>uiser roles</strong>, ye kin customize whit functions an areas o Mastodon yer uisers kin access.
+      description_html: Wi <strong>uiser roles</strong>, ye kin customize whit functions an areas o Nutshell yer uisers kin access.
       edit: Edit '%{name}' role
       everyone: Defaut permissions
       everyone_full_description_html: This is the <strong>base role</strong> affectin <strong>aw uisers</strong>, even thaim athoot a assignt role. Aw ither roles inherit permissions fae it.
@@ -660,13 +660,13 @@ sco:
         rules_hint: There a dedicatit area fir the rules thit yer uisers ur expectit tae haud tae.
         title: Aboot
       appearance:
-        preamble: Customize Mastodon's wab interface.
+        preamble: Customize Nutshell's wab interface.
         title: Appearance
       branding:
-        preamble: Yer server's ain brandin haes it staun oot fae ither servers in the netwirk. This information wull mibbie get displayit athort a variety o environments, sic as Mastodon's wab interface, native applications, in link previews on ither wabsteids an athin messaging apps, an mair asides. Fir this raison, it is best fir tae keep this information claer, short an concise.
+        preamble: Yer server's ain brandin haes it staun oot fae ither servers in the netwirk. This information wull mibbie get displayit athort a variety o environments, sic as Nutshell's wab interface, native applications, in link previews on ither wabsteids an athin messaging apps, an mair asides. Fir this raison, it is best fir tae keep this information claer, short an concise.
         title: Brandin
       content_retention:
-        preamble: Control hou uiser-generatit content is stored in Mastodon.
+        preamble: Control hou uiser-generatit content is stored in Nutshell.
         title: Content retention
       discovery:
         follow_recommendations: Follae recommendations
@@ -811,7 +811,7 @@ sco:
     webhooks:
       add_new: Add enpynt
       delete: Delete
-      description_html: A <strong>wabhook</strong> lets Mastodon push <strong>rael-time notifications</strong> aboot srlectit events tae yer ain application, sae thit yer application kin <strong>automatically trigger reactions</strong>.
+      description_html: A <strong>wabhook</strong> lets Nutshell push <strong>rael-time notifications</strong> aboot srlectit events tae yer ain application, sae thit yer application kin <strong>automatically trigger reactions</strong>.
       disable: Turn aff
       disabled: Turnt aff
       edit: Edit enpynt
@@ -868,7 +868,7 @@ sco:
     animations_and_accessibility: Animations an accessibility
     discovery: Discovery
     localization:
-      body: Mastodon is translatit bi volunteers.
+      body: Nutshell is translatit bi volunteers.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Awbody kin contribute.
     sensitive_content: Sensitive content
@@ -889,9 +889,9 @@ sco:
     delete_account: Delete accoont
     delete_account_html: If ye'r wantin tae delete yer accoont, ye kin <a href="%{path}">dae it here</a>. Ye'll get asked fir confirmation.
     description:
-      prefix_invited_by_user: "@%{name} invites ye tae jyne this server o Mastodon!"
-      prefix_sign_up: Sign up on Mastodon the day!
-      suffix: Wi a accoont, ye'll be able tae follae fowk, post updates an exchynge messages wi uisers fae onie Mastodon server an mair!
+      prefix_invited_by_user: "@%{name} invites ye tae jyne this server o Nutshell!"
+      prefix_sign_up: Sign up on Nutshell the day!
+      suffix: Wi a accoont, ye'll be able tae follae fowk, post updates an exchynge messages wi uisers fae onie Nutshell server an mair!
     dont_have_your_security_key: Dinnae hae yer security key?
     forgot_password: Forgot yer passwird?
     invalid_reset_password_token: Passwird reset token isnae valid or expirit. Please request a new ane.
@@ -1007,7 +1007,7 @@ sco:
       content: We're sorry, but somethin went wrang on oor en.
       title: This page isnae correct
     '503': The page cuidnae be served doon tae a temporary server failure.
-    noscript_html: Fir tae uise the Mastodon wab application, please turn on JavaScript. Alternatively, try ane o the <a href="%{apps_path}">native apps</a> fir Mastodon fir yer platform.
+    noscript_html: Fir tae uise the Nutshell wab application, please turn on JavaScript. Alternatively, try ane o the <a href="%{apps_path}">native apps</a> fir Nutshell fir yer platform.
   existing_username_validator:
     not_found: cuidnae fin a local uiser wi that uisernemm
     not_found_multiple: cuidnae fin %{usernames}
@@ -1320,7 +1320,7 @@ sco:
       weibo: Weibo
     current_session: Current session
     description: "%{browser} on %{platform}"
-    explanation: Thir's the wab broosers logged in tae yer Mastodon accoont the noo.
+    explanation: Thir's the wab broosers logged in tae yer Nutshell accoont the noo.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1344,7 +1344,7 @@ sco:
     aliases: Accoont aliases
     appearance: Appearance
     authorized_apps: Authorized apps
-    back: Back tae Mastodon
+    back: Back tae Nutshell
     delete: Accoont deletion
     development: Development
     edit_profile: Edit profile
@@ -1500,7 +1500,7 @@ sco:
         suspend: Accoont suspendit
     welcome:
       explanation: Here some tips fir tae get ye stertit
-      subject: Welcome tae Mastodon, 'mon in
+      subject: Welcome tae Nutshell, 'mon in
       title: Welcome aboord, %{name}!
   users:
     follow_limit_reached: Ye cannae follae mair than %{limit} fowk

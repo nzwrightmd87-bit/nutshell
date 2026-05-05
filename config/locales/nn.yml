@@ -1,10 +1,10 @@
 ---
 nn:
   about:
-    about_mastodon_html: 'Framtidas sosiale nettverk: Ingen annonsar, ingen verksemder som overvaker deg, etisk design og desentralisering! Eig dataene dine med Mastodon!'
+    about_mastodon_html: 'Framtidas sosiale nettverk: Ingen annonsar, ingen verksemder som overvaker deg, etisk design og desentralisering! Eig dataene dine med Nutshell!'
     contact_missing: Ikkje sett
     contact_unavailable: I/T
-    hosted_on: "%{domain} er vert for Mastodon"
+    hosted_on: "%{domain} er vert for Nutshell"
     title: Om
   accounts:
     errors:
@@ -766,7 +766,7 @@ nn:
         moderation: Moderering
         special: Særskild
       delete: Slett
-      description_html: Med <strong>brukarroller</strong> kan du kontrollera kva funksjonar og område av Mastodon brukarane dine har tilgang til.
+      description_html: Med <strong>brukarroller</strong> kan du kontrollera kva funksjonar og område av Nutshell brukarane dine har tilgang til.
       edit: Endr rollen '%{name}'
       everyone: Standard-tillatelser
       everyone_full_description_html: Dette er <strong>grunnrolla</strong> som påverkar <strong>alle brukarar</strong>, jamvel dei utan ei tildelt rolle. Alle andre rollar arvar tilgangsløve frå denne.
@@ -838,34 +838,34 @@ nn:
         rules_hint: Det er eit eige område for reglar som brukarar må retta seg etter.
         title: Om
       allow_referrer_origin:
-        desc: Når medlemene dine klikkar på lenker til eksterne sider, kan nettlesaren deira òg senda adressa til Mastodon-tenaren som referanse. Skru av dette viss det ville identifisera medlemene dine, til dømes viss dette er ein personleg Mastodon-tenar.
-        title: Gje eksterne sider lov til å sjå at Mastodon-tenaren din er kjelde til trafikken
+        desc: Når medlemene dine klikkar på lenker til eksterne sider, kan nettlesaren deira òg senda adressa til Nutshell-tenaren som referanse. Skru av dette viss det ville identifisera medlemene dine, til dømes viss dette er ein personleg Nutshell-tenar.
+        title: Gje eksterne sider lov til å sjå at Nutshell-tenaren din er kjelde til trafikken
       appearance:
         preamble: Tilpasse web-grensesnittet.
         title: Utsjånad
       branding:
-        preamble: Profileringa av tenaren din skil den frå andre tenarar i nettverket. Informasjonen kan bli vist ulike stader, til dømes i Mastodon sitt web-grensesnitt, i eigne applikasjonar, i førehandsvisningar på andre nettsider, i meldingsappar og så bortetter. På grunn av dette er det best at denne informasjonen er enkel, kort og treffande.
+        preamble: Profileringa av tenaren din skil den frå andre tenarar i nettverket. Informasjonen kan bli vist ulike stader, til dømes i Nutshell sitt web-grensesnitt, i eigne applikasjonar, i førehandsvisningar på andre nettsider, i meldingsappar og så bortetter. På grunn av dette er det best at denne informasjonen er enkel, kort og treffande.
         title: Profilering
       captcha_enabled:
         desc_html: Dette baserer seg på eksterne skript frå hCaptcha, noko som kan vera eit tryggleiks- og personvernsproblem. <strong>I tillegg kan dette gjera registreringsprosessen monaleg mindre tilgjengeleg (særleg for folk med nedsett funksjonsevne)</strong>. Dette gjer at du bør du vurdera alternative tiltak, som til dømes godkjennings- eller invitasjonsbasert registrering.
         title: Krev at nye brukarar løyser ein CAPTCHA for å bekrefte kontoen sin
       content_retention:
         danger_zone: Faresone
-        preamble: Styr korleis brukargenerert innhald blir lagra i Mastodon.
+        preamble: Styr korleis brukargenerert innhald blir lagra i Nutshell.
         title: Bevaring av innhald
       default_noindex:
         desc_html: Påverkar alle brukarar som ikkje har justert denne innstillinga sjølve
         title: Ikkje la brukarar indekserast av søkjemotorar som standard
       discovery:
         follow_recommendations: Fylgjeforslag
-        preamble: Å framheva interessant innhald er viktig for å ta imot nye brukarar som ikkje nødvendigvis kjenner nokon på Mastodon. Kontroller korleis oppdagingsfunksjonane på tenaren din fungerer.
+        preamble: Å framheva interessant innhald er viktig for å ta imot nye brukarar som ikkje nødvendigvis kjenner nokon på Nutshell. Kontroller korleis oppdagingsfunksjonane på tenaren din fungerer.
         privacy: Personvern
         profile_directory: Profilkatalog
         public_timelines: Offentlege tidsliner
         publish_statistics: Publiser statistikk
         title: Oppdaging
         trends: Populært
-        wrapstodon: Mastodon-året
+        wrapstodon: Nutshell-året
       domain_blocks:
         all: Til alle
         disabled: Til ingen
@@ -901,7 +901,7 @@ nn:
       destroyed_msg: Vellukka sletting av sideopplasting!
     software_updates:
       critical_update: Kritisk – gjer vel og oppdater snart
-      description: Me rår til å halda Mastodon-installasjonen oppdatert for å dra nytte av nye feilrettingar og funksjonar. Dessutan er det av og til kritisk å oppdatera Mastodon til rett tid for å ungå sikkerheitsproblem. På grunn av dette vil Mastodon sjå etter oppdateringar kvart 30. minutt og halda deg orientert etter innstillingane du har sett for e-postvarsling.
+      description: Me rår til å halda Nutshell-installasjonen oppdatert for å dra nytte av nye feilrettingar og funksjonar. Dessutan er det av og til kritisk å oppdatera Nutshell til rett tid for å ungå sikkerheitsproblem. På grunn av dette vil Nutshell sjå etter oppdateringar kvart 30. minutt og halda deg orientert etter innstillingane du har sett for e-postvarsling.
       documentation_link: Lær meir
       release_notes: Oppdateringsnotat
       title: Tilgjengelege oppdateringar
@@ -969,7 +969,7 @@ nn:
         message_html: Indekskarta for Elasticsearch er utdaterte. Køyr <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Sjå dokumentasjonen
-        message_html: Elasticsearch-klynga di har meir enn ein node, men Mastodon er ikkje sett opp til å bruka dei.
+        message_html: Elasticsearch-klynga di har meir enn ein node, men Nutshell er ikkje sett opp til å bruka dei.
       elasticsearch_preset_single_node:
         action: Sjå dokumentasjonen
         message_html: Elasticsearch-klynga di har berre ein node. <code>ES_PRESET</code> bør vera <code>single_node_cluster</code>.
@@ -987,13 +987,13 @@ nn:
         message_html: Ingen Sidekiq-prosess kjører for %{value} køen(e). Vennligst se gjennom Sidekiq-konfigurasjonen din
       software_version_check:
         action: Sjå tilgjengelege oppdateringar
-        message_html: Ei Mastodon-oppdatering er tilgjengeleg.
+        message_html: Ei Nutshell-oppdatering er tilgjengeleg.
       software_version_critical_check:
         action: Sjå tilgjengelege oppdateringar
-        message_html: Ei kritisk oppdatering til Mastodon er tilgjengeleg. Oppdater så snart som mogleg.
+        message_html: Ei kritisk oppdatering til Nutshell er tilgjengeleg. Oppdater så snart som mogleg.
       software_version_patch_check:
         action: Sjå tilgjengelege oppdateringar
-        message_html: Ei feilretting for Mastodon er tilgjengeleg.
+        message_html: Ei feilretting for Nutshell er tilgjengeleg.
       upload_check_privacy_error:
         action: Sjekk her for meir informasjon
         message_html: "<strong>Vevtenaren din er sett opp feil. Personvernet til brukarane din er i fare.</strong>"
@@ -1036,7 +1036,7 @@ nn:
       history: Historikk
       live: Direkte
       no_history: Det er ikkje registrert nokon endringar i bruksvilkåra enno.
-      no_terms_of_service_html: Du har ingen bruksvilkår for Mastodon-tenaren din. Slike vilkår klårgjer plikter og rettar for bruk av tenesta, og kan avgrensa ansvaret ditt viss du kjem opp i usemje med brukarar.
+      no_terms_of_service_html: Du har ingen bruksvilkår for Nutshell-tenaren din. Slike vilkår klårgjer plikter og rettar for bruk av tenesta, og kan avgrensa ansvaret ditt viss du kjem opp i usemje med brukarar.
       notified_on_html: Brukarane vart varsla %{date}
       notify_users: Varsle brukarane
       preview:
@@ -1153,7 +1153,7 @@ nn:
     webhooks:
       add_new: Legg til endepunkt
       delete: Slett
-      description_html: Ei <strong>vevkopling</strong> gjer det mogleg for Mastodon å senda <strong>varsel i sanntid</strong> om utvalde hendingar til ditt eige program, slik at programmet ditt kan <strong>reagera automatisk</strong>.
+      description_html: Ei <strong>vevkopling</strong> gjer det mogleg for Nutshell å senda <strong>varsel i sanntid</strong> om utvalde hendingar til ditt eige program, slik at programmet ditt kan <strong>reagera automatisk</strong>.
       disable: Skru av
       disabled: Skrudd av
       edit: Rediger endepunkt
@@ -1187,8 +1187,8 @@ nn:
       next_steps: Du kan godkjenna anken for å endra modereringsavgjerda, eller du kan oversjå anken.
       subject: "%{username} ankar ei modereringsavgjer på %{instance}"
     new_critical_software_updates:
-      body: Nye kritiske versjonar av Mastodon er tilgjengeleg. Du vil kanskje oppdatera så snart som mogleg!
-      subject: Kritiske Mastodon-oppdateringar er tilgjengeleg for %{instance}!
+      body: Nye kritiske versjonar av Nutshell er tilgjengeleg. Du vil kanskje oppdatera så snart som mogleg!
+      subject: Kritiske Nutshell-oppdateringar er tilgjengeleg for %{instance}!
     new_pending_account:
       body: Detaljer om den nye kontoen er nedenfor. Du kan godkjenne eller avvise denne søknaden.
       subject: Ny konto opp til vurdering på %{instance} (%{username})
@@ -1197,8 +1197,8 @@ nn:
       body_remote: Nokon frå %{domain} har meldt %{target}
       subject: Ny rapport for %{instance} (#%{id})
     new_software_updates:
-      body: Nye versjonar av Mastodon er tilgjengeleg, du vil kanskje oppdatera!
-      subject: Nye versjonar av Mastodon er tilgjengeleg for %{instance}!
+      body: Nye versjonar av Nutshell er tilgjengeleg, du vil kanskje oppdatera!
+      subject: Nye versjonar av Nutshell er tilgjengeleg for %{instance}!
     new_trends:
       body: 'Du må sjå gjennom desse elementa før dei kan visast offentleg:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ nn:
     boosting_preferences_info_html: "<strong>Tips:</strong> Å trykkja <kbd>Shift</kbd> + <kbd>klikk</kbd> på %{icon} framhev-ikonet vil framheva innlegget uansett innstillingar."
     discovery: Oppdaging
     localization:
-      body: Mastodon er omsett av friviljuge.
+      body: Nutshell er omsett av friviljuge.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Alle kan bidra.
     sensitive_content: Ømtolig innhald
@@ -1261,9 +1261,9 @@ nn:
     delete_account: Slett konto
     delete_account_html: Om du vil sletta kontoen din, kan du <a href="%{path}">gå hit</a>. Du vert spurd etter stadfesting.
     description:
-      prefix_invited_by_user: "@%{name} spør deg om å verta med i ein Mastodon-tenar!"
-      prefix_sign_up: Meld deg på Mastodon i dag!
-      suffix: Med ein konto kan du fylgja folk, skriva innlegg og veksla meldingar med brukarar frå kva som helst annan Mastodon-tenar og meir!
+      prefix_invited_by_user: "@%{name} spør deg om å verta med i ein Nutshell-tenar!"
+      prefix_sign_up: Meld deg på Nutshell i dag!
+      suffix: Med ein konto kan du fylgja folk, skriva innlegg og veksla meldingar med brukarar frå kva som helst annan Nutshell-tenar og meir!
     didnt_get_confirmation: Fekk du ikkje stadfestingslenka?
     dont_have_your_security_key: Har du ikke sikkerhetsnøkkelen din?
     forgot_password: Har du gløymt passordet ditt?
@@ -1300,7 +1300,7 @@ nn:
     set_new_password: Lag nytt passord
     setup:
       email_below_hint_html: Sjekk søppelpostmappa di, eller be om ein ny. Du kan endra e-postadressa di dersom ho er feil.
-      email_settings_hint_html: Klikk på lenka me sende til %{email} for å byrja å bruka Mastodon. Me ventar her til så lenge.
+      email_settings_hint_html: Klikk på lenka me sende til %{email} for å byrja å bruka Nutshell. Me ventar her til så lenge.
       link_not_received: Fekk du ikkje lenka?
       new_confirmation_instructions_sent: Du vil få ein ny e-post med stadfestingslenke innan nokre minutt!
       title: Sjekk innboksen din
@@ -1309,7 +1309,7 @@ nn:
       title: Logg inn på %{domain}
     sign_up:
       manual_review: Når du lagar ein konto på %{domain}, vil moderatorane våre gå gjennom påmeldinga di manuelt. For å hjelpa oss med påmeldinga di, er det fint om du skriv litt om deg sjølv og kvifor du vil ha ein konto på %{domain}.
-      preamble: Med ein konto på denne Mastodon-tenaren kan du fylgja andre folk på allheimen, uansett kvar dei har brukarkontoen sin.
+      preamble: Med ein konto på denne Nutshell-tenaren kan du fylgja andre folk på allheimen, uansett kvar dei har brukarkontoen sin.
       title: La oss få deg satt i gang på %{domain}.
     status:
       account_status: Kontostatus
@@ -1325,7 +1325,7 @@ nn:
     user_privacy_agreement_html: Eg har lese og godtar <a href="%{privacy_policy_path}" target="_blank">personvernerklæringa</a>
   author_attribution:
     example_title: Eksempeltekst
-    hint_html: Skriv du nyhende eller blogginnlegg utanfor Mastodon? Her kan du kontrollera korleis du blir kreditert når artiklane dine blir delte på Mastodon.
+    hint_html: Skriv du nyhende eller blogginnlegg utanfor Nutshell? Her kan du kontrollera korleis du blir kreditert når artiklane dine blir delte på Nutshell.
     instructions: 'Sjå til at denne koden er i HTML-koden i artikkelen din:'
     more_from_html: Meir frå %{name}
     s_blog: Bloggen til %{name}
@@ -1433,7 +1433,7 @@ nn:
       content: Orsak. Vi har gjort noko feil.
       title: Denne sida er ikkje rett
     '503': Siden kunne ikke vises på grunn av en midlertidig serverfeil.
-    noscript_html: For å bruke Mastodon webapplikasjon må du aktivere JavaScript. Alternativt kan du forsøke en av de mange <a href="%{apps_path}">integrerte appene</a> for Mastodon til din plattform.
+    noscript_html: For å bruke Nutshell webapplikasjon må du aktivere JavaScript. Alternativt kan du forsøke en av de mange <a href="%{apps_path}">integrerte appene</a> for Nutshell til din plattform.
   existing_username_validator:
     not_found: fann ingen lokalbrukar med det namnet
     not_found_multiple: fann ikkje %{usernames}
@@ -1653,7 +1653,7 @@ nn:
     unsubscribe:
       action: Ja, meld av
       complete: Meldt av
-      confirmation_html: Er du sikker på at du ikkje lenger ynskjer å motta %{type} frå Mastodon på %{domain} til e-posten din %{email}? Du kan alltids gjera om på dette i <a href="%{settings_path}">innstillingar for e-postvarsling</a>.
+      confirmation_html: Er du sikker på at du ikkje lenger ynskjer å motta %{type} frå Nutshell på %{domain} til e-posten din %{email}? Du kan alltids gjera om på dette i <a href="%{settings_path}">innstillingar for e-postvarsling</a>.
       emails:
         notification_emails:
           favourite: e-postar om favorittmarkeringar
@@ -1662,7 +1662,7 @@ nn:
           mention: e-postar om omtaler
           reblog: e-postar om framhevingar
       resubscribe_html: Om du har avslutta abonnementet ved ein feil, kan du abonnera på nytt i <a href="%{settings_path}">innstillingar for e-postvarsling</a>.
-      success_html: Du vil ikkje lenger få %{type} frå Mastodon på %{domain} til e-posten på %{email}.
+      success_html: Du vil ikkje lenger få %{type} frå Nutshell på %{domain} til e-posten på %{email}.
       title: Meld av
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ nn:
     posting_defaults: Innleggsstandarder
     public_timelines: Offentlege tidsliner
   privacy:
-    hint_html: "<strong>Tilpass korleis du vil at andre skal finna profilen og innlegga dine.</strong> Mastodon har fleire funksjonar du kan ta i bruk for å få kontakt med eit større publikum. Sjå gjerne gjennom innstillingane slik at du er sikker på at dei passar til deg og din bruk."
+    hint_html: "<strong>Tilpass korleis du vil at andre skal finna profilen og innlegga dine.</strong> Nutshell har fleire funksjonar du kan ta i bruk for å få kontakt med eit større publikum. Sjå gjerne gjennom innstillingane slik at du er sikker på at dei passar til deg og din bruk."
     privacy: Personvern
     privacy_hint_html: Kontroller kor mykje du vil dela. Folk finn interessante profilar og fine appar ved å sjå gjennom kva andre fylgjer og kva appar dei legg ut innlegg med, men det kan henda du vil gøyma desse opplysingane.
     reach: Nå andre
     reach_hint_html: Hald styring med om du vil at andre skal kunna oppdaga og fylgja deg. Vil du at innlegga dine skal stå på Utforsk-sida? Vil du at andre skal sjå deg i tilrådingane for kven dei skal fylgja? Vil du ta imot nye fylgjarar automatisk, eller vil du kontrollera kvar einskild fylgjar?
     search: Søk
-    search_hint_html: Kontroller korleis du vil at folk skal finna deg. Vil du at folk skal finna deg ut frå dei offentlege innlegga dine? Vil du at folk utanfor Mastodon skal kunna finna profilen din når dei søkjer på nettet? Ver merksam på at det er uråd å garantera heilt for at søkjemotorar ikkje finn deg.
+    search_hint_html: Kontroller korleis du vil at folk skal finna deg. Vil du at folk skal finna deg ut frå dei offentlege innlegga dine? Vil du at folk utanfor Nutshell skal kunna finna profilen din når dei søkjer på nettet? Ver merksam på at det er uråd å garantera heilt for at søkjemotorar ikkje finn deg.
     title: Personvern og rekkjevidd
   privacy_policy:
     title: Retningslinjer for personvern
@@ -1882,7 +1882,7 @@ nn:
     current_session: Noverande økt
     date: Dato
     description: "%{browser} på %{platform}"
-    explanation: Desse nettlesarane er logga inn på Mastodon-kontoen din.
+    explanation: Desse nettlesarane er logga inn på Nutshell-kontoen din.
     ip: IP-adresse
     platforms:
       adobe_air: Adobe Air
@@ -1908,7 +1908,7 @@ nn:
     aliases: Kallenamn til kontoen
     appearance: Utsjånad
     authorized_apps: Godkjende appar
-    back: Tilbake til Mastodon
+    back: Tilbake til Nutshell
     delete: Kontosletting
     development: Utvikling
     edit_profile: Endr profil
@@ -1983,9 +1983,9 @@ nn:
       direct: Privat omtale
       private: Berre fylgjarar
       public: Offentleg
-      public_long: Alle på og utanfor Mastodon
+      public_long: Alle på og utanfor Nutshell
       unlisted: Stille offentleg
-      unlisted_long: Gøymt frå søkjeresultat, populært og offentleg på Mastodon
+      unlisted_long: Gøymt frå søkjeresultat, populært og offentleg på Nutshell
   statuses_cleanup:
     enabled: Slett gamle innlegg automatisk
     enabled_hint: Sletter innleggene dine automatisk når de oppnår en angitt alder, med mindre de samsvarer med ett av unntakene nedenfor
@@ -2036,7 +2036,7 @@ nn:
     review_link: Les gjennom brukarvilkåra
     title: Brukarvilkåra på %{domain} er endra
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d.%b %Y, %H:%M"
@@ -2062,7 +2062,7 @@ nn:
     recovery_codes_regenerated: Generering av reservekoder fullført
     recovery_instructions_html: Hvis du skulle miste tilgang til telefonen din, kan du bruke en av gjenopprettingskodene nedenfor til å gjenopprette tilgang til din konto. <strong>Oppbevar gjenopprettingskodene sikkert</strong>, for eksempel ved å skrive dem ut og gjemme dem på et lurt sted bare du vet om.
     resume_app_authorization: Hald fram å godkjenna applikasojnen
-    role_requirement: "%{domain} krev at du set opp tofaktorinnlogging før du kan bruka Mastodon."
+    role_requirement: "%{domain} krev at du set opp tofaktorinnlogging før du kan bruka Nutshell."
     webauthn: Sikkerhetsnøkler
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ nn:
       subtitle: Klaga di vart avvist.
       title: Anke avvist
     backup_ready:
-      explanation: Du ba om ein fullstendig tryggingskopi av Mastodon-kontoen din.
+      explanation: Du ba om ein fullstendig tryggingskopi av Nutshell-kontoen din.
       extra: No kan du lasta han ned!
       subject: Arkivet ditt er klart til å lastes ned
       title: Nedlasting av arkiv
@@ -2142,7 +2142,7 @@ nn:
       apps_android_action: Få det på Google Play
       apps_ios_action: Last ned på App Store
       apps_step: Last ned dei offisielle appane våre.
-      apps_title: Mastodon-appar
+      apps_title: Nutshell-appar
       checklist_subtitle: 'La oss hjelpa deg i gang på denne nye sosiale reisa:'
       checklist_title: Kom i gang
       edit_profile_action: Tilpass til deg
@@ -2150,16 +2150,16 @@ nn:
       edit_profile_title: Tilpass profilen din
       explanation: Her er nokre tips for å koma i gang
       feature_action: Lær meir
-      feature_audience: Mastodon gjev deg eit unikt høve til å styra kven som ser innhaldet ditt, utan mellommenn. Viss du installerer Mastodon på din eigen tenar, kan du fylgja og bli fylgt frå alle andre Mastodon-tenarar på nett, og det er ingen andre enn du som har kontrollen.
+      feature_audience: Nutshell gjev deg eit unikt høve til å styra kven som ser innhaldet ditt, utan mellommenn. Viss du installerer Nutshell på din eigen tenar, kan du fylgja og bli fylgt frå alle andre Nutshell-tenarar på nett, og det er ingen andre enn du som har kontrollen.
       feature_audience_title: Få tilhengjarar på ein trygg måte
-      feature_control: Du veit best kva du vil ha på tidslina di. Her er ingen algoritmar eller reklame som kastar bort tida. Du kan fylgja folk på ein kvar Mastodon-tenar frå brukarkontoen din, få innlegga deira i kronologisk rekkjefylgje, og gjera ditt eige hjørne av internett litt meir ditt.
+      feature_control: Du veit best kva du vil ha på tidslina di. Her er ingen algoritmar eller reklame som kastar bort tida. Du kan fylgja folk på ein kvar Nutshell-tenar frå brukarkontoen din, få innlegga deira i kronologisk rekkjefylgje, og gjera ditt eige hjørne av internett litt meir ditt.
       feature_control_title: Hald kontroll over tidslina di
-      feature_creativity: På Mastodon kan du laga innlegg med lyd, film og bilete, du kan skildra media for betre tilgjenge, du kan laga avrøystingar, innhaldsåtvaringar og eigne smilefjes, du kan klyppa til småbilete og endå meir for å uttrykkja deg på nettet. Mastodon passar for deg, anten du vil skriva eller leggja ut kunst, musikk eller podkastar.
+      feature_creativity: På Nutshell kan du laga innlegg med lyd, film og bilete, du kan skildra media for betre tilgjenge, du kan laga avrøystingar, innhaldsåtvaringar og eigne smilefjes, du kan klyppa til småbilete og endå meir for å uttrykkja deg på nettet. Nutshell passar for deg, anten du vil skriva eller leggja ut kunst, musikk eller podkastar.
       feature_creativity_title: Ustoppeleg kreativt
-      feature_moderation: Med Mastodon bestemmer du sjølv. Kvar tenar har sine eigne reglar og retningsliner som blir laga lokalt og ikkje sentralt i eit stort firma, slik det er med andre sosiale nettverk. Det gjer at alle slags grupper kan få ein Mastodon-tenar som passar til dei. Du kan bli med på ein tenar som har reglar du er samd med, eller du kan laga din eigen tenar.
+      feature_moderation: Med Nutshell bestemmer du sjølv. Kvar tenar har sine eigne reglar og retningsliner som blir laga lokalt og ikkje sentralt i eit stort firma, slik det er med andre sosiale nettverk. Det gjer at alle slags grupper kan få ein Nutshell-tenar som passar til dei. Du kan bli med på ein tenar som har reglar du er samd med, eller du kan laga din eigen tenar.
       feature_moderation_title: Moderering slik det bør vera
       follow_action: Fylg
-      follow_step: Å fylgja interessante folk er det det handlar om på Mastodon.
+      follow_step: Å fylgja interessante folk er det det handlar om på Nutshell.
       follow_title: Tilpass tidslina di
       follows_subtitle: Fylg kjende folk
       follows_title: Kven du kan fylgja
@@ -2173,10 +2173,10 @@ nn:
       post_action: Skriv
       post_step: Sei hei til verda med tekst, bilete, filmar eller meiningsmålingar.
       post_title: Skriv ditt fyrste innlegg
-      share_step: Fortel venene dine korleis dei finn deg på Mastodon.
-      share_title: Del Mastodon-profilen din
+      share_step: Fortel venene dine korleis dei finn deg på Nutshell.
+      share_title: Del Nutshell-profilen din
       sign_in_action: Logg inn
-      subject: Velkomen til Mastodon
+      subject: Velkomen til Nutshell
       title: Velkomen om bord, %{name}!
   users:
     follow_limit_reached: Du kan ikkje fylgja fleire enn %{limit} folk
@@ -2189,7 +2189,7 @@ nn:
   verification:
     extra_instructions_html: <strong>Tips:</strong> Linken på nettsida di kan vera usynleg. Den viktige delen er <code>rel="me"</code>, som på nettstader med brukargenerert innhald vil hindra at andre kan låst som dei er deg. Du kan til og med bruka <code>link</code> i staden for <code>a</code> i toppteksten til sida, men HTML-koden må vera tilgjengeleg utan å måtte køyra JavaScript.
     here_is_how: Slik gjer du
-    hint_html: "<strong>Stadfesting av eigen identitet på Mastodon er for alle.</strong> Basert på opne nettstandardar, gratis no og for alltid. Alt du treng er ei personleg nettside der folk kjenner deg att. Om du lagar ein link som peikar på denne nettsida frå profilen din, vil profilen din få ein synleg indikator i dei tilfella der nettsida har ein link som peikar attende på profilen."
+    hint_html: "<strong>Stadfesting av eigen identitet på Nutshell er for alle.</strong> Basert på opne nettstandardar, gratis no og for alltid. Alt du treng er ei personleg nettside der folk kjenner deg att. Om du lagar ein link som peikar på denne nettsida frå profilen din, vil profilen din få ein synleg indikator i dei tilfella der nettsida har ein link som peikar attende på profilen."
     instructions_html: Kopier og lim inn i koden nedanfor i HTML-koden for nettsida di. Legg deretter adressa til nettsida di til i ei av ekstrafelta på profilen din frå fana "Rediger profil" og lagre endringane.
     verification: Stadfesting
     verified_links: Dine verifiserte lenker
@@ -2213,5 +2213,5 @@ nn:
     otp_required: For å bruke sikkerhetsnøkler, må du først aktivere to-faktor autentisering.
     registered_on: Registrert den %{date}
   wrapstodon:
-    description: Sjå korleis %{name} brukte Mastodon i år!
-    title: Mastodon-året %{year} for %{name}
+    description: Sjå korleis %{name} brukte Nutshell i år!
+    title: Nutshell-året %{year} for %{name}

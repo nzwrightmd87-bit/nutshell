@@ -1,10 +1,10 @@
 ---
 hu:
   about:
-    about_mastodon_html: 'A jövő közösségi hálózata: Hirdetések és céges megfigyelés nélkül, etikus dizájnnal és decentralizációval! Legyél a saját adataid ura a Mastodonnal!'
+    about_mastodon_html: 'A jövő közösségi hálózata: Hirdetések és céges megfigyelés nélkül, etikus dizájnnal és decentralizációval! Legyél a saját adataid ura a Nutshellnal!'
     contact_missing: Nincs megadva
     contact_unavailable: N/A
-    hosted_on: "%{domain} Mastodon-kiszolgáló"
+    hosted_on: "%{domain} Nutshell-kiszolgáló"
     title: Névjegy
   accounts:
     errors:
@@ -766,7 +766,7 @@ hu:
         moderation: Moderáció
         special: Speciális
       delete: Törlés
-      description_html: A <strong>felhasználói szerepekkel</strong> testreszabhatod, hogy a felhasználóid milyen Mastodon funkciókat és területeket érjenek el.
+      description_html: A <strong>felhasználói szerepekkel</strong> testreszabhatod, hogy a felhasználóid milyen Nutshell funkciókat és területeket érjenek el.
       edit: "'%{name}' szerep szerkesztése"
       everyone: Alapértelmezett engedélyek
       everyone_full_description_html: Ez az <strong>alap szerep</strong>, mely <strong>minden felhasználóra</strong> kihat, azokra is, akiknek nincs hozzárendelt szerepük. Minden más szerep ebből örökli az engedélyeit.
@@ -838,27 +838,27 @@ hu:
         rules_hint: Van egy helyünk a szabályoknak, melyeket a felhasználóidnak be kellene tartani.
         title: Névjegy
       allow_referrer_origin:
-        desc: Amikor a felhasználók külső webhelyekre mutató hivatkozásokra kattintanak, a böngészőjük elküldheti a Mastodon kiszolgálócímét hivatkozóként (Referer fejléc). Kapcsold ki a funkciót, ha ez egyértelműen azonosítaná a felhasználókat, például ha ez egy személyes Mastodon-kiszolgáló.
-        title: Engedélyezés, hogy külső oldalak a Mastodon-kiszolgálódat lássák a forgalom forrásaként
+        desc: Amikor a felhasználók külső webhelyekre mutató hivatkozásokra kattintanak, a böngészőjük elküldheti a Nutshell kiszolgálócímét hivatkozóként (Referer fejléc). Kapcsold ki a funkciót, ha ez egyértelműen azonosítaná a felhasználókat, például ha ez egy személyes Nutshell-kiszolgáló.
+        title: Engedélyezés, hogy külső oldalak a Nutshell-kiszolgálódat lássák a forgalom forrásaként
       appearance:
-        preamble: A Mastodon webes felületének testreszabása.
+        preamble: A Nutshell webes felületének testreszabása.
         title: Megjelenés
       branding:
-        preamble: A kiszolgáló márkajelzése különbözteti meg a hálózat többi kiszolgálójától. Ez az információ számos környezetben megjelenhet, például a Mastodon webes felületén, natív alkalmazásokban, más weboldalakon és üzenetküldő alkalmazásokban megjelenő hivatkozások előnézetben stb. Ezért a legjobb, ha ez az információ világos, rövid és tömör.
+        preamble: A kiszolgáló márkajelzése különbözteti meg a hálózat többi kiszolgálójától. Ez az információ számos környezetben megjelenhet, például a Nutshell webes felületén, natív alkalmazásokban, más weboldalakon és üzenetküldő alkalmazásokban megjelenő hivatkozások előnézetben stb. Ezért a legjobb, ha ez az információ világos, rövid és tömör.
         title: Branding
       captcha_enabled:
         desc_html: Ez hCaptcha-ból származó külső scripteket használ, mely biztonsági vagy adatvédelmi résnek bizonyulhat. Ezen kívül ez <strong>a regisztrációs folyamatot jelentősen megnehezítheti bizonyos (kifejezetten különleges szükségletű) emberek számára</strong>. Emiatt fontold meg más módszerek, mint pl. jóváhagyás-alapú vagy meghívásalapú regisztráció használatát.
         title: Az új felhasználóknak egy CAPTCHA-t kell megoldaniuk, hogy megerősítsék a fiókjuk regisztrációját
       content_retention:
         danger_zone: Veszélyzóna
-        preamble: A felhasználók által előállított tartalom Mastodonon való tárolásának szabályozása.
+        preamble: A felhasználók által előállított tartalom Nutshellon való tárolásának szabályozása.
         title: Tartalom megtartása
       default_noindex:
         desc_html: Azokat a felhasználókat érinti, akik nem módosították ezt a beállítást
         title: Alapértelmezetten ne indexeljék a keresők a felhasználókat
       discovery:
         follow_recommendations: Ajánlottak követése
-        preamble: Az érdekes tartalmak felszínre hozása fontos szerepet játszik az új felhasználók bevonásában, akik esetleg nem ismerik a Mastodont. Szabályozd, hogy a különböző felfedezési funkciók hogyan működjenek a kiszolgálón.
+        preamble: Az érdekes tartalmak felszínre hozása fontos szerepet játszik az új felhasználók bevonásában, akik esetleg nem ismerik a Nutshellt. Szabályozd, hogy a különböző felfedezési funkciók hogyan működjenek a kiszolgálón.
         privacy: Adatvédelem
         profile_directory: Profiladatbázis
         public_timelines: Nyilvános idővonalak
@@ -901,7 +901,7 @@ hu:
       destroyed_msg: Sikeresen töröltük a site feltöltését!
     software_updates:
       critical_update: Kritikus - frissíts gyorsan
-      description: Javasolt, hogy a Mastodon telepítésed naprakész legyen, hogy kihasználhasd a legújabb javításokat és funkciókat. Ezenkívül néha különösen fontos a Mastodon időben történő frissítése a biztonsági problémák elkerülése érdekében. Ezen okok miatt a Mastodon 30 percenként ellenőrzi a frissítéseket és az e-mail-értesítési beállításoknak megfelelően értesítést küld.
+      description: Javasolt, hogy a Nutshell telepítésed naprakész legyen, hogy kihasználhasd a legújabb javításokat és funkciókat. Ezenkívül néha különösen fontos a Nutshell időben történő frissítése a biztonsági problémák elkerülése érdekében. Ezen okok miatt a Nutshell 30 percenként ellenőrzi a frissítéseket és az e-mail-értesítési beállításoknak megfelelően értesítést küld.
       documentation_link: További információ
       release_notes: Kiadási megjegyzések
       title: Elérhető frissítések
@@ -969,7 +969,7 @@ hu:
         message_html: Az Elasticsearch index leképezések elavultak. Futtasd le a <code>tootctl search deploy --only=%{value}</code> parancsot
       elasticsearch_preset:
         action: Dokumentáció megtekintése
-        message_html: Az Elasticsearch klaszter egynél több csomóponttal rendelkezik, de a Mastodon nincs beállítva ezek használatára.
+        message_html: Az Elasticsearch klaszter egynél több csomóponttal rendelkezik, de a Nutshell nincs beállítva ezek használatára.
       elasticsearch_preset_single_node:
         action: Dokumentácó megtekintése
         message_html: Az Elasticsearch klaszterednek csak egy csomópontja van, az <code>ES_PRESET</code> értéket <code>single_node_cluster</code> értékre kell állítani.
@@ -987,13 +987,13 @@ hu:
         message_html: Nincs Sidekiq folyamat, mely a %{value} sorhoz van rendelve. Kérlek, nézd át a Sidekiq beállításait
       software_version_check:
         action: Elérhető frissítések megtekintése
-        message_html: Egy Mastodon-frissítés elérhető.
+        message_html: Egy Nutshell-frissítés elérhető.
       software_version_critical_check:
         action: Elérhető frissítések megtekintése
-        message_html: Kritikus Mastodon frissítés érhető el, frissíts a lehető leggyorsabban.
+        message_html: Kritikus Nutshell frissítés érhető el, frissíts a lehető leggyorsabban.
       software_version_patch_check:
         action: Elérhető frissítések megtekintése
-        message_html: Egy hibajavító Mastodon-frissítés elérhető.
+        message_html: Egy hibajavító Nutshell-frissítés elérhető.
       upload_check_privacy_error:
         action: Itt találsz több információt
         message_html: "<strong>A webkiszolgálód félre van konfigurálva. Kockázat merül fel a felhasználóid adatainak biztonságával kapcsolatban.</strong>"
@@ -1153,7 +1153,7 @@ hu:
     webhooks:
       add_new: Végpont hozzáadása
       delete: Törlés
-      description_html: Egy <strong>webhook</strong> lehetővé teszi a Mastodon számára, hogy <strong>valósidejű értesítéseket</strong> küldjön le a kiválasztott eseményekről a te alkalmazásodnak, így az alkalmazásod <strong>automatikusan reagálhat</strong> ezekre.
+      description_html: Egy <strong>webhook</strong> lehetővé teszi a Nutshell számára, hogy <strong>valósidejű értesítéseket</strong> küldjön le a kiválasztott eseményekről a te alkalmazásodnak, így az alkalmazásod <strong>automatikusan reagálhat</strong> ezekre.
       disable: Letiltás
       disabled: Letiltva
       edit: Végpont szerkesztése
@@ -1187,8 +1187,8 @@ hu:
       next_steps: Jóváhagyhatod a fellebbezést, hogy semmissé tedd a moderátori döntést, vagy figyelmen kívül hagyhatod.
       subject: "%{username} fellebbez egy moderátori döntést a %{instance} szerveren"
     new_critical_software_updates:
-      body: Megjelent a Mastodon új kritikus verziója, érdemes lehet a lehető leghamarabb frissíteni!
-      subject: A %{instance} kiszolgálóhoz kritikus Mastodon frissítések érhetőek el!
+      body: Megjelent a Nutshell új kritikus verziója, érdemes lehet a lehető leghamarabb frissíteni!
+      subject: A %{instance} kiszolgálóhoz kritikus Nutshell frissítések érhetőek el!
     new_pending_account:
       body: Az új fiók részletesen alább látható. Ezt a jelentkezést engedélyezheted vagy elutasíthatod.
       subject: Új fiók (%{username}) engedélyezésre vár a %{instance} szerveren
@@ -1197,8 +1197,8 @@ hu:
       body_remote: Valaki a %{domain} domainről jelentette %{target}
       subject: 'Új jelentés az alábbi szerveren: %{instance} (#%{id})'
     new_software_updates:
-      body: Új Mastodon verziók jelentek meg, amelyeket érdemes frissíteni!
-      subject: Új Mastodon verziók érhetőek el a %{instance} kiszolgálóhoz!
+      body: Új Nutshell verziók jelentek meg, amelyeket érdemes frissíteni!
+      subject: Új Nutshell verziók érhetőek el a %{instance} kiszolgálóhoz!
     new_trends:
       body: 'A következő elemeket ellenőrizni kell, mielőtt nyilvánosan megjelennének:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ hu:
     boosting_preferences_info_html: "<strong>Tipp:</strong> A beállításoktól függetlenül, ha <kbd>Shift</kbd> + <kbd>katinttást</kbd> használsz a %{icon} Megtolás ikonon, akkor azonnal megteszi."
     discovery: Felfedezés
     localization:
-      body: A Mastodont önkéntesek fordítják.
+      body: A Nutshellt önkéntesek fordítják.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Bárki közreműködhet.
     sensitive_content: Kényes tartalom
@@ -1261,9 +1261,9 @@ hu:
     delete_account: Felhasználói fiók törlése
     delete_account_html: Felhasználói fiókod törléséhez <a href="%{path}">kattints ide</a>. A rendszer újbóli megerősítést fog kérni.
     description:
-      prefix_invited_by_user: "@%{name} meghív téged, hogy csatlakozz ehhez a Mastodon-kiszolgálóhoz."
-      prefix_sign_up: Regisztrláj még ma a Mastodonra!
-      suffix: Egy fiókkal követhetsz másokat, bejegyzéseket tehetsz közzé, eszmét cserélhetsz más Mastodon szerverek felhasználóival!
+      prefix_invited_by_user: "@%{name} meghív téged, hogy csatlakozz ehhez a Nutshell-kiszolgálóhoz."
+      prefix_sign_up: Regisztrláj még ma a Nutshellra!
+      suffix: Egy fiókkal követhetsz másokat, bejegyzéseket tehetsz közzé, eszmét cserélhetsz más Nutshell szerverek felhasználóival!
     didnt_get_confirmation: Nem kaptál visszaigazoló hivatkozást?
     dont_have_your_security_key: Nincs biztonsági kulcsod?
     forgot_password: Elfelejtetted a jelszavad?
@@ -1300,7 +1300,7 @@ hu:
     set_new_password: Új jelszó beállítása
     setup:
       email_below_hint_html: Nézd meg a levélszemét mappát, vagy kérj egy újat. Módosíthatod az e-mail-címet, ha az hibás.
-      email_settings_hint_html: A Mastodon használatának megkezdéséhez kattints a(z) %{email} címre küldött hivatkozásra. Itt fogunk várni.
+      email_settings_hint_html: A Nutshell használatának megkezdéséhez kattints a(z) %{email} címre küldött hivatkozásra. Itt fogunk várni.
       link_not_received: Nem kaptad meg a hivatkozást?
       new_confirmation_instructions_sent: Néhány perc múlva új e-mailt fogsz kapni a megerősítési hivatkozással.
       title: Bejövő postaláda ellenőrzése
@@ -1309,7 +1309,7 @@ hu:
       title: 'Bejelentkezés ide: %{domain}'
     sign_up:
       manual_review: A(z) %{domain} regisztrációi a moderátorok kézi felülvizsgálatán mennek át. Hogy segítsd a regisztráció feldolgozását, írj röviden magadról, és hogy miért szeretnél fiókot a(z) %{domain} oldalon.
-      preamble: Egy fiókkal ezen a Mastodon kiszolgálón követhetsz bárkit a födiverzumban, függetlenül attól, hogy az illető fiókja melyik kiszolgálón található.
+      preamble: Egy fiókkal ezen a Nutshell kiszolgálón követhetsz bárkit a födiverzumban, függetlenül attól, hogy az illető fiókja melyik kiszolgálón található.
       title: Állítsuk be a fiókod a %{domain} kiszolgálón.
     status:
       account_status: Fiók állapota
@@ -1325,7 +1325,7 @@ hu:
     user_privacy_agreement_html: Elolvastam és egyetértek az <a href="%{privacy_policy_path}" target="_blank">adatvédemi nyilatkozattal</a>
   author_attribution:
     example_title: Mintaszöveg
-    hint_html: Mastodonon kívül írsz híreket vagy blogbejegyzéseket? Szabályozd, hogyan tüntethetnek fel szerzőként, amikor Mastodonon osztják meg őket.
+    hint_html: Nutshellon kívül írsz híreket vagy blogbejegyzéseket? Szabályozd, hogyan tüntethetnek fel szerzőként, amikor Nutshellon osztják meg őket.
     instructions: 'Győződj meg róla, hogy ez a kód a cikked HTML-jében van:'
     more_from_html: 'Több tőle: %{name}'
     s_blog: "%{name} blogja"
@@ -1433,7 +1433,7 @@ hu:
       content: Sajnáljuk, valami hiba történt a mi oldalunkon.
       title: Az oldal nem megfelelő
     '503': Az oldalt átmeneti kiszolgálóprobléma miatt nem lehet kiszolgálni.
-    noscript_html: A Mastodon webalkalmazás használatához engedélyezned kell a JavaScriptet. A másik megoldás, hogy kipróbálsz egy platformodnak megfelelő <a href="%{apps_path}">alkalmazást</a>.
+    noscript_html: A Nutshell webalkalmazás használatához engedélyezned kell a JavaScriptet. A másik megoldás, hogy kipróbálsz egy platformodnak megfelelő <a href="%{apps_path}">alkalmazást</a>.
   existing_username_validator:
     not_found: ezzel a névvel nem találtunk helyi felhasználót
     not_found_multiple: nem találtuk %{usernames} felhasználó(ka)t
@@ -1653,7 +1653,7 @@ hu:
     unsubscribe:
       action: Igen, leiratkozás
       complete: Leiratkozva
-      confirmation_html: 'Biztos, hogy leiratkozol arról, hogy %{type} típusú üzeneteket kapj a(z) %{domain} Mastodon-kiszolgálótól erre a címedre: %{email}? Bármikor újra feliratkozhatsz az <a href="%{settings_path}">e-mail-értesítési beállításokban</a>.'
+      confirmation_html: 'Biztos, hogy leiratkozol arról, hogy %{type} típusú üzeneteket kapj a(z) %{domain} Nutshell-kiszolgálótól erre a címedre: %{email}? Bármikor újra feliratkozhatsz az <a href="%{settings_path}">e-mail-értesítési beállításokban</a>.'
       emails:
         notification_emails:
           favourite: kedvencnek jelölés értesítő e-mailjei
@@ -1662,7 +1662,7 @@ hu:
           mention: megemlítés értesítő e-mailjei
           reblog: megtolás értesítő e-mailjei
       resubscribe_html: Ha tévedésből iratkoztál le, újra feliratkozhatsz az <a href="%{settings_path}">e-mail-értesítési beállításoknál</a>.
-      success_html: 'Mostantól nem kapsz %{type} típusú üzeneket a(z) %{domain} Mastodon-kiszolgálón erre a címedre: %{email}.'
+      success_html: 'Mostantól nem kapsz %{type} típusú üzeneket a(z) %{domain} Nutshell-kiszolgálón erre a címedre: %{email}.'
       title: Leiratkozás
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ hu:
     posting_defaults: Bejegyzések alapértelmezései
     public_timelines: Nyilvános idővonalak
   privacy:
-    hint_html: "<strong>Testreszabható a profil és a bejegyzések megjelenése.</strong> A Mastodon számos funkciója segíthet szélesebb közönség elérésében, ha engedélyezve van. Szánj egy percet a beállítások áttekintésére, hogy megbizonyosodj arról, hogy ezek megfelelnek a te felhasználási esetednek."
+    hint_html: "<strong>Testreszabható a profil és a bejegyzések megjelenése.</strong> A Nutshell számos funkciója segíthet szélesebb közönség elérésében, ha engedélyezve van. Szánj egy percet a beállítások áttekintésére, hogy megbizonyosodj arról, hogy ezek megfelelnek a te felhasználási esetednek."
     privacy: Adatvédelem
     privacy_hint_html: Szabályozd, hogy mások számára miket szeretnél nyilvánosságra hozni. Az emberek érdekes profilokat és nagyszerű alkalmazásokat fedezhetnek fel, amikor böngésznek mások követései között és látják, hogy mely alkalmazásokból tesznek közzé bejegyzéseket, de az is lehet, hogy inkább elrejtenéd ezeket az infókat.
     reach: Elérés
     reach_hint_html: Szabályozd, hogy szeretnéd-e, hogy új emberek felfedezzenek és kövessenek. Szeretnéd, hogy a bejegyzéseid megjelenjenek a Felfedezés képernyőn? Szeretnéd, hogy mások is lássanak téged a követési ajánlataikban? Szeretnéd automatikusan elfogadni az összes új követőt vagy egyesével szabályozni mindegyiket?
     search: Keresés
-    search_hint_html: Irányítsd, hogyan találjanak meg. Szeretnéd, hogy az emberek megtaláljanak az alapján, amiről nyilvános bejegyzést írtál? Szeretnéd, hogy a Mastodonon kívüli emberek megtalálják a profilodat, amikor az interneten keresnek? Ne feledd, hogy a nyilvános információk esetében nem garantálható az összes keresőmotorból való teljes kizárás.
+    search_hint_html: Irányítsd, hogyan találjanak meg. Szeretnéd, hogy az emberek megtaláljanak az alapján, amiről nyilvános bejegyzést írtál? Szeretnéd, hogy a Nutshellon kívüli emberek megtalálják a profilodat, amikor az interneten keresnek? Ne feledd, hogy a nyilvános információk esetében nem garantálható az összes keresőmotorból való teljes kizárás.
     title: Adatvédelem és elérés
   privacy_policy:
     title: Adatvédelmi irányelvek
@@ -1908,7 +1908,7 @@ hu:
     aliases: Fiók aliasok
     appearance: Megjelenés
     authorized_apps: Jóváhagyott alkalmazások
-    back: Vissza a Mastodonhoz
+    back: Vissza a Nutshellhoz
     delete: Fiók törlése
     development: Fejlesztőknek
     edit_profile: Profil szerkesztése
@@ -1983,9 +1983,9 @@ hu:
       direct: Privát említés
       private: Csak követőknek
       public: Nyilvános
-      public_long: Bárki a Mastodonon és azon kívül
+      public_long: Bárki a Nutshellon és azon kívül
       unlisted: Csendes nyilvános
-      unlisted_long: Elrejtve a Mastodon keresési találataiban, a felkapottak között és a nyilvános idővonalakon
+      unlisted_long: Elrejtve a Nutshell keresési találataiban, a felkapottak között és a nyilvános idővonalakon
   statuses_cleanup:
     enabled: Régi bejegyzések automatikus törlése
     enabled_hint: Automatikusan törli a bejegyzéseidet, ahogy azok elérik a megadott korhatárt, kivéve azokat, melyek illeszkednek valamely alábbi kivételre
@@ -2036,7 +2036,7 @@ hu:
     review_link: Felhasználási feltételek áttekintése
     title: A(z) %{domain} felhasználási feltételei megváltoznak
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%Y. %b %d., %H:%M"
@@ -2062,7 +2062,7 @@ hu:
     recovery_codes_regenerated: A visszaállítási kódokat sikeresen újrageneráltuk
     recovery_instructions_html: A visszaállítási kódok egyikének segítségével tudsz majd belépni, ha elveszítenéd a telefonod. <strong>Tartsd biztos helyen a visszaállítási kódjaid</strong>! Például nyomtasd ki őket és tárold a többi fontos iratoddal együtt.
     resume_app_authorization: Alkalmazás jogosultság-ellenőrzésének folytatása
-    role_requirement: A(z) %{domain} megköveteli a kétlépcsős hitelesítés beállítása a Mastodon használata előtt.
+    role_requirement: A(z) %{domain} megköveteli a kétlépcsős hitelesítés beállítása a Nutshell használata előtt.
     webauthn: Biztonsági kulcsok
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ hu:
       subtitle: A fellebbezésedet visszautasították.
       title: Fellebbezés visszautasítva
     backup_ready:
-      explanation: A Mastodon fiókod teljes biztonsági mentését kérted.
+      explanation: A Nutshell fiókod teljes biztonsági mentését kérted.
       extra: Már letöltésre kész!
       subject: Az adataidról készült archív letöltésre kész
       title: Archiválás
@@ -2142,7 +2142,7 @@ hu:
       apps_android_action: Beszerzés a Google Play-en
       apps_ios_action: Letöltés az App Store-ból
       apps_step: Hivatalos alkalmazásaink letöltése.
-      apps_title: Mastodon alkalmazások
+      apps_title: Nutshell alkalmazások
       checklist_subtitle: 'Indulás a közösségi érintkezés új élvonalába:'
       checklist_title: Üdvözlő ellenőrzőlista
       edit_profile_action: Személyre szabás
@@ -2150,16 +2150,16 @@ hu:
       edit_profile_title: Profil testreszabása
       explanation: Néhány tipp a kezdeti lépésekhez
       feature_action: További információk
-      feature_audience: A Mastodon egyedülálló lehetőséget biztosít arra, hogy közvetítők nélkül kezeld a közönségedet. A saját infrastruktúrádra telepített Mastodon lehetővé teszi, hogy kövess másokat, és ők is tudjanak követni bármely más online Mastodon-kiszolgálóról, és ez ne legyen saját magadon kívül senki más irányítása alatt.
+      feature_audience: A Nutshell egyedülálló lehetőséget biztosít arra, hogy közvetítők nélkül kezeld a közönségedet. A saját infrastruktúrádra telepített Nutshell lehetővé teszi, hogy kövess másokat, és ők is tudjanak követni bármely más online Nutshell-kiszolgálóról, és ez ne legyen saját magadon kívül senki más irányítása alatt.
       feature_audience_title: Építsd magabiztosan a közönségedet
-      feature_control: Te tudod legjobban, hogy mit szeretnél látni a kezdőlapodon. Nincsenek algoritmusok vagy reklámok, melyek pazarolnák az idődet. Kövess bárkit, bármelyik Mastodon-kiszolgálón, egyetlen fiókkal, és fogadd a bejegyzéseiket időrendi sorrendben, így a saját ízlésednek tetszővé teheted az internet egy kis szegletét.
+      feature_control: Te tudod legjobban, hogy mit szeretnél látni a kezdőlapodon. Nincsenek algoritmusok vagy reklámok, melyek pazarolnák az idődet. Kövess bárkit, bármelyik Nutshell-kiszolgálón, egyetlen fiókkal, és fogadd a bejegyzéseiket időrendi sorrendben, így a saját ízlésednek tetszővé teheted az internet egy kis szegletét.
       feature_control_title: Vedd kézbe az idővonalad feletti irányítást
-      feature_creativity: A Mastodon támogatja a hangot, a videót és a képeket tartalmazó bejegyzéseket, az akadálymentesítési leírásokat, a szavazásokat, a tartalmi figyelmeztetéseket, az animált profilképeket, az egyéni emodzsikat, a bélyegképek körbevágását és még több mindent, hogy segítsen az online önkifejezésben. Tegyél közzé műalkotásokat, zenét vagy podcastet, a Mastodonra számíthatsz.
+      feature_creativity: A Nutshell támogatja a hangot, a videót és a képeket tartalmazó bejegyzéseket, az akadálymentesítési leírásokat, a szavazásokat, a tartalmi figyelmeztetéseket, az animált profilképeket, az egyéni emodzsikat, a bélyegképek körbevágását és még több mindent, hogy segítsen az online önkifejezésben. Tegyél közzé műalkotásokat, zenét vagy podcastet, a Nutshellra számíthatsz.
       feature_creativity_title: Páratlan kreativitás
-      feature_moderation: A Mastodon visszaadja a döntést a te kezedbe. Minden kiszolgáló saját szabályokkal rendelkezik, melyeket helyben tartatnak be, és nem központilag, mint a céges közösségi médiánál, így a lehető legrugalmasabban lehet válaszolni emberek különböző csoportjainak igényeire. Csatlakozz egy kiszolgálóhoz, melynek egyetértesz a szabályaival, vagy készíts egy sajátot.
+      feature_moderation: A Nutshell visszaadja a döntést a te kezedbe. Minden kiszolgáló saját szabályokkal rendelkezik, melyeket helyben tartatnak be, és nem központilag, mint a céges közösségi médiánál, így a lehető legrugalmasabban lehet válaszolni emberek különböző csoportjainak igényeire. Csatlakozz egy kiszolgálóhoz, melynek egyetértesz a szabályaival, vagy készíts egy sajátot.
       feature_moderation_title: Moderálás, ahogy annak lennie kell
       follow_action: Követés
-      follow_step: A Mastodon az érdekes emberek követéséről szól.
+      follow_step: A Nutshell az érdekes emberek követéséről szól.
       follow_title: Kezdőlapi hírfolyam testreszabása
       follows_subtitle: Jól ismert fiókok követése
       follows_title: Kit érdemes követni
@@ -2173,10 +2173,10 @@ hu:
       post_action: Bejegyzés írása
       post_step: Köszöntsd a világot szöveggel, fotókkal, videókkal vagy szavazásokkal.
       post_title: Az első bejegyzés létrehozása
-      share_step: Tudasd az ismerőseiddel, hogyan találhatnak meg a Mastodonon.
-      share_title: Oszd meg a Mastodon profilodat
+      share_step: Tudasd az ismerőseiddel, hogyan találhatnak meg a Nutshellon.
+      share_title: Oszd meg a Nutshell profilodat
       sign_in_action: Bejelentkezés
-      subject: Üdvözöl a Mastodon
+      subject: Üdvözöl a Nutshell
       title: Üdv a fedélzeten, %{name}!
   users:
     follow_limit_reached: Nem követhetsz több, mint %{limit} embert
@@ -2189,7 +2189,7 @@ hu:
   verification:
     extra_instructions_html: <strong>Tipp:</strong> A hivatkozás a weboldaladon lehet láthatatlan. A fontos rész a <code>rel="me"</code>, mely megakadályozza, hogy mások a nevedben lépjenek fel olyan oldalakon, ahol van felhasználók által előállított tartalom. A <code>link</code> tag-et az oldal fejlécében is használhatod az <code>a</code> tag helyett, de a HTML-nek elérhetőnek kell lennie JavaScript futtatása nélkül is.
     here_is_how: Itt van, hogyan kell
-    hint_html: "<strong>A személyazonosságod ellenőrizhetősége a Mastodonon mindenki számára elérhető.</strong> Ez nyílt webes szabványok alapján, most és mindörökké szabadon és ingyenesen történik. Ehhez csak egy saját weboldalra van szükséged, mely alapján mások felismernek téged. Ha a profilodról erre a weboldalra hivatkozol, mi ellenőrizzük, hogy erről az oldalról visszahivatkozol-e a profilodra, és siker esetén erről vizuális jelzést is adunk a profilodon."
+    hint_html: "<strong>A személyazonosságod ellenőrizhetősége a Nutshellon mindenki számára elérhető.</strong> Ez nyílt webes szabványok alapján, most és mindörökké szabadon és ingyenesen történik. Ehhez csak egy saját weboldalra van szükséged, mely alapján mások felismernek téged. Ha a profilodról erre a weboldalra hivatkozol, mi ellenőrizzük, hogy erről az oldalról visszahivatkozol-e a profilodra, és siker esetén erről vizuális jelzést is adunk a profilodon."
     instructions_html: Az alábbi kódot másold be a weboldalad HTML kódjába. Ezután add hozzá a weboldalad címét a profilod egyik extra mezőjéhez a "Profil szerkesztése" fülön és mentsd a változásokat.
     verification: Ellenőrzés
     verified_links: Ellenőrzött hivatkozásaid
@@ -2213,5 +2213,5 @@ hu:
     otp_required: A biztonsági kulcsok használatához először engedélyezd a kétlépcsős hitelesítést.
     registered_on: 'Regisztráció ekkor: %{date}'
   wrapstodon:
-    description: Nézd meg, hogy %{name} hogyan használta a Mastodont az éven!
+    description: Nézd meg, hogy %{name} hogyan használta a Nutshellt az éven!
     title: Wrapstodon %{year} – %{name}

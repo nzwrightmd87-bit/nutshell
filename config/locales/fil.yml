@@ -1,10 +1,10 @@
 ---
 fil:
   about:
-    about_mastodon_html: 'Ang social network ng hinaharap: Walang mga ad, walang corporate na pagmamanman, etikal na disenyo, at desentralisasyon! Sa iyo ang data mo sa Mastodon!'
+    about_mastodon_html: 'Ang social network ng hinaharap: Walang mga ad, walang corporate na pagmamanman, etikal na disenyo, at desentralisasyon! Sa iyo ang data mo sa Nutshell!'
     contact_missing: Hindi naka-set
     contact_unavailable: N/A
-    hosted_on: Mastodon hosted sa %{domain}
+    hosted_on: Nutshell hosted sa %{domain}
     title: About
   accounts:
     instance_actor_flash: Ang account na ito ay virtual actor na ginagamit para i-represent ang mismong server at hindi anumang indibidwal na user. Ginagamit ito para sa mga layunin ng pederasyon at hindi dapat i-suspend.

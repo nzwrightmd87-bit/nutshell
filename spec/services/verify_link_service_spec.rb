@@ -21,7 +21,7 @@ RSpec.describe VerifyLinkService do
         <<~HTML
           <!doctype html>
           <body>
-            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel="me">Follow me on Mastodon</a>
+            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel="me">Follow me on Nutshell</a>
           </body>
         HTML
       end
@@ -36,7 +36,7 @@ RSpec.describe VerifyLinkService do
         <<~HTML
           <!doctype html>
           <body>
-            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel="me noopener noreferrer" target="_blank">Follow me on Mastodon</a>
+            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel="me noopener noreferrer" target="_blank">Follow me on Nutshell</a>
           </body>
         HTML
       end
@@ -51,7 +51,7 @@ RSpec.describe VerifyLinkService do
         <<~HTML
           <!doctype html>
           <body>
-            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel=ME>Follow me on Mastodon</a>
+            <a href="#{ActivityPub::TagManager.instance.url_for(account)}" rel=ME>Follow me on Nutshell</a>
           </body>
         HTML
       end
@@ -135,7 +135,7 @@ RSpec.describe VerifyLinkService do
             <link type="text/html" rel="me" />
           </head>
           <body>
-            <a rel="me" target="_blank">Follow me on Mastodon</a>
+            <a rel="me" target="_blank">Follow me on Nutshell</a>
           </body>
         HTML
       end
@@ -175,7 +175,7 @@ RSpec.describe VerifyLinkService do
         <<~HTML
           <!doctype html>
           <body>
-            <a href="https://profile.example.com/alice" rel="me">Follow me on Mastodon</a>
+            <a href="https://profile.example.com/alice" rel="me">Follow me on Nutshell</a>
           </body>
         HTML
       end

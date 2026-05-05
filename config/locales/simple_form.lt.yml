@@ -4,10 +4,10 @@ lt:
     hints:
       account:
         attribution_domains: Po vieną eilutėje. Apsaugo nuo klaidingų atributų.
-        discoverable: Tavo vieši įrašai ir profilis gali būti rodomi arba rekomenduojami įvairiose Mastodon vietose, o profilis gali būti siūlomas kitiems naudotojams.
+        discoverable: Tavo vieši įrašai ir profilis gali būti rodomi arba rekomenduojami įvairiose Nutshell vietose, o profilis gali būti siūlomas kitiems naudotojams.
         display_name: Tavo pilnas vardas arba smagus vardas.
         fields: Tavo pagrindinis puslapis, įvardžiai, amžius, bet kas, ko tik nori.
-        indexable: Tavo vieši įrašai gali būti rodomi Mastodon paieškos rezultatuose. Žmonės, kurie bendravo su tavo įrašais, gali jų ieškoti nepriklausomai nuo to.
+        indexable: Tavo vieši įrašai gali būti rodomi Nutshell paieškos rezultatuose. Žmonės, kurie bendravo su tavo įrašais, gali jų ieškoti nepriklausomai nuo to.
         note: 'Gali @paminėti kitus žmones arba #grotažymes.'
         show_collections: Žmonės galės peržiūrėti tavo sekimus ir sekėjus. Žmonės, kuriuos seki, matys, kad juos seki, nepaisant to.
         unlocked: Žmonės galės jus sekti nepaprašę patvirtinimo. Panaikinkite žymėjimą, jei norite peržiūrėti sekimo prašymus ir pasirinkti, ar priimti, ar atmesti naujus sekėjus.
@@ -54,11 +54,11 @@ lt:
         password: Naudok bent 8 simbolius
         phrase: Bus suderinta, neatsižvelgiant į teksto lygį arba įrašo turinio įspėjimą
         scopes: Prie kurių API programai bus leidžiama pasiekti. Pasirinkus aukščiausio lygio sritį, atskirų sričių pasirinkti nereikia.
-        setting_advanced_layout: Rodykite „Mastodon“ kaip kelių stulpelių išdėstymą, leidžiantį peržiūrėti įrašų srautą, pranešimus ir trečiąjį stulpelį pagal savo pasirinkimą. Nerekomenduojama mažesniems ekranams.
+        setting_advanced_layout: Rodykite „Nutshell“ kaip kelių stulpelių išdėstymą, leidžiantį peržiūrėti įrašų srautą, pranešimus ir trečiąjį stulpelį pagal savo pasirinkimą. Nerekomenduojama mažesniems ekranams.
         setting_aggregate_reblogs: Neberodyti naujų pasidalinimų įrašais, kuriais neseniai buvo pasidalinta (taikoma tik naujai daromiems pasidalinimams)
-        setting_always_send_emails: Paprastai el. laiško pranešimai nebus siunčiami, kai aktyviai naudoji Mastodon.
+        setting_always_send_emails: Paprastai el. laiško pranešimai nebus siunčiami, kai aktyviai naudoji Nutshell.
         setting_boost_modal: Kai ši funkcija įjungta, pasidalijant įrašu pirmiausia atsivers patvirtinimo langas, kuriame galėsite pakeisti savo pasidalijimo matomumo nustatymus.
-        setting_default_quote_policy_private: Tik sekėjams skirti įrašai, paskelbti platformoje „Mastodon“, negali būti cituojami kitų.
+        setting_default_quote_policy_private: Tik sekėjams skirti įrašai, paskelbti platformoje „Nutshell“, negali būti cituojami kitų.
         setting_default_quote_policy_unlisted: Kai žmonės jus cituos, jų įrašai taip pat bus paslėpti iš populiariausių naujienų srauto.
         setting_default_sensitive: Jautrioji medija pagal numatytuosius nustatymus yra paslėpta ir gali būti atskleista spustelėjus.
         setting_display_media_default: Slėpti mediją, pažymėtą kaip jautrią
@@ -88,20 +88,20 @@ lt:
         backups_retention_period: Naudotojai gali generuoti savo įrašų archyvus, kuriuos vėliau galės atsisiųsti. Nustačius teigiamą reikšmę, šie archyvai po nurodyto dienų skaičiaus bus automatiškai ištrinti iš saugyklos.
         bootstrap_timeline_accounts: Šios paskyros bus rekomenduojamos naujiems naudotojams Rekomenduojami sekimai skyrelyje. Pateikite rekomenduojamas paskyras, atskirtas kableliais.
         content_cache_retention_period: Visi įrašai iš kitų serverių (įskaitant pakėlimus ir atsakymus) bus ištrinti po nurodyto dienų skaičiaus, neatsižvelgiant į bet kokią vietinio naudotojo sąveiką su tais įrašais. Tai taikoma ir tiems įrašams, kuriuos vietinis naudotojas yra pažymėjęs kaip žymes ar mėgstamus. Privačios paminėjimai tarp naudotojų iš skirtingų instancijų taip pat bus prarastos ir jų bus neįmanoma atkurti. Šis nustatymas skirtas naudoti ypatingos paskirties instancijose, o įgyvendinus jį bendram naudojimui, pažeidžiami daugelio naudotojų lūkesčiai.
-        favicon: WEBP, PNG, GIF arba JPG. Pakeičia numatytąją Mastodon svetaines piktogramą pasirinktine piktograma.
+        favicon: WEBP, PNG, GIF arba JPG. Pakeičia numatytąją Nutshell svetaines piktogramą pasirinktine piktograma.
         mascot: Pakeičia išplėstinės žiniatinklio sąsajos iliustraciją.
         media_cache_retention_period: Nuotolinių naudotojų įrašytų įrašų medijos failai talpinami tavo serveryje. Nustačius teigiamą reikšmę, medijos bus ištrinamos po nurodyto dienų skaičiaus. Jei medijos duomenų bus paprašyta po to, kai jie bus ištrinti, jie bus atsiųsti iš naujo, jei šaltinio turinys vis dar prieinamas. Dėl apribojimų, susijusių su nuorodų peržiūros kortelių apklausos dažnumu trečiųjų šalių svetainėse, rekomenduojama nustatyti šią reikšmę ne trumpesnę kaip 14 dienų, kitaip nuorodų peržiūros kortelės nebus atnaujinamos pagal pareikalavimą iki to laiko.
         min_age: Registracijos metu naudotojai bus paprašyti patvirtinti savo gimimo datą.
         peers_api_enabled: Domenų pavadinimų sąrašas, su kuriais šis serveris susidūrė fediverse. Čia nėra duomenų apie tai, ar tu bendrauji su tam tikru serveriu, tik apie tai, kad tavo serveris apie jį žino. Tai naudojama tarnybose, kurios renka federacijos statistiką bendrąja prasme.
         require_invite_text: Kai registraciją reikia patvirtinti rankiniu būdu, teksto įvesties laukelį „Kodėl nori prisijungti?“ padaryk privalomą, o ne pasirenkamą
         site_contact_email: Kaip žmonės gali su tavimi susisiekti teisiniais ar pagalbos užklausimais.
-        site_contact_username: Kaip žmonės gali tave pasiekti Mastodon.
+        site_contact_username: Kaip žmonės gali tave pasiekti Nutshell.
         site_extended_description: Bet kokia papildoma informacija, kuri gali būti naudinga lankytojams ir naudotojams. Gali būti struktūrizuota naudojant Markdown sintaksę.
         theme: Tema, kurią mato atsijungę lankytojai ir nauji vartotojai.
         thumbnail: Maždaug 2:1 dydžio vaizdas, rodomas šalia tavo serverio informacijos.
         trends: Tendencijos rodo, kurie įrašai, grotažymės ir naujienų istorijos tavo serveryje sulaukia didžiausio susidomėjimo.
       imports:
-        data: CSV failas, eksportuotas iš kito „Mastodon“ serverio.
+        data: CSV failas, eksportuotas iš kito „Nutshell“ serverio.
       invite_request:
         text: Tai padės mums peržiūrėti tavo paraišką
       rule:
@@ -239,7 +239,7 @@ lt:
         quote: Kažkas jus paminėjo
         reblog: Kažkas dalinosi tavo įrašu
         software_updates:
-          label: Yra nauja Mastodon versija
+          label: Yra nauja Nutshell versija
           patch: Pranešti apie klaidų ištaisymo atnaujinimus
         trending_tag: Reikia peržiūros naujam tendencijai
       rule:

@@ -126,7 +126,7 @@ nn:
         admin/accounts: Kontoadministrasjon
         admin/all: Alle administrative funksjonar
         admin/reports: Rapportadministrasjon
-        all: Full tilgang til Mastodon-kontoen din
+        all: Full tilgang til Nutshell-kontoen din
         blocks: Blokkeringar
         bookmarks: Bokmerke
         conversations: Samtalar
@@ -139,7 +139,7 @@ nn:
         media: Mediavedlegg
         mutes: Dempingar
         notifications: Varsel
-        profile: Mastodon-profilen din
+        profile: Nutshell-profilen din
         push: Pushvarsel
         reports: Rapportar
         search: Søk

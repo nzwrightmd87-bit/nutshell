@@ -18,7 +18,7 @@ class Admin::Metrics::Dimension::SoftwareVersionsDimension < Admin::Metrics::Dim
 
     {
       key: 'mastodon',
-      human_key: 'Mastodon',
+      human_key: 'Nutshell',
       value: value,
       human_value: value,
     }

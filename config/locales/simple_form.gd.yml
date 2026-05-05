@@ -7,7 +7,7 @@ gd:
         discoverable: Dh’fhaoidte gun dèid na postaichean poblach ’s a’ phròifil agad a bhrosnachadh no a mholadh ann an caochladh roinnean de Mhastodon agus gun dèid a’ phròifil agad a mholadh do chàch.
         display_name: D’ ainm slàn no spòrsail.
         fields: An duilleag-dhachaigh agad, roimhearan, aois, rud sam bith a thogras tu.
-        indexable: Faodaidh na postaichean poblach agad a nochdadh am measg toraidhean luirg air Mastodon. ’S urrainn dhan fheadhainn a rinn eadar-ghabhail leis na postaichean agad lorg annta air a h-uile dòigh.
+        indexable: Faodaidh na postaichean poblach agad a nochdadh am measg toraidhean luirg air Nutshell. ’S urrainn dhan fheadhainn a rinn eadar-ghabhail leis na postaichean agad lorg annta air a h-uile dòigh.
         note: "’S urrainn dhut @iomradh a thoirt air càch no air #tagaicheanHais."
         show_collections: "’S urrainn do chàch na dàimhean leantainn agad a rùrachadh. Chì daoine a leanas tu gu bheil thu ’gan leantainn air a h-uile dòigh."
         unlocked: "’S urrainnear do leantainn gun aonta iarraidh. Thoir a’ chromag air falbh ma tha thu airson lèirmheas a dhèanamh air iarrtasan leantainn agus cur romhad an gabh thu ri luchd-leantainn ùr no an diùilt thu iad."
@@ -54,11 +54,11 @@ gd:
         password: Cleachd co-dhiù 8 caractaran
         phrase: Thèid a mhaidseadh gun aire air litrichean mòra ’s beaga no air rabhadh susbainte puist
         scopes: Na APIan a dh’fhaodas an aplacaid inntrigeadh. Ma thaghas tu sgòp air ìre as àirde, cha leig thu leas sgòpaichean fa leth a thaghadh.
-        setting_advanced_layout: Seall Mastodon ’na ioma-cholbh ach am faic thu an loidhne-ama, na brathan agus treas colbh a thaghas tu fhèin. Cha mholamaid seo air sgrìnichean beaga.
+        setting_advanced_layout: Seall Nutshell ’na ioma-cholbh ach am faic thu an loidhne-ama, na brathan agus treas colbh a thaghas tu fhèin. Cha mholamaid seo air sgrìnichean beaga.
         setting_aggregate_reblogs: Na seall brosnachaidhean ùra do phostaichean a chaidh a bhrosnachadh o chionn goirid (cha doir seo buaidh ach air brosnachaidhean ùra o seo a-mach)
-        setting_always_send_emails: Mar as àbhaist, cha dèid brathan puist-d a chur nuair a a bhios tu ri Mastodon gu cunbhalach
+        setting_always_send_emails: Mar as àbhaist, cha dèid brathan puist-d a chur nuair a a bhios tu ri Nutshell gu cunbhalach
         setting_boost_modal: Ma tha seo an comas, thèid còmhradh dearbhaidh a shealltainn far an urrainn dhut faicsinneachd a’ phuist agad atharrachadh nuair a bhios tu ri brosnachadh.
-        setting_default_quote_policy_private: Chan urrainn do chàch postaichean dhan luchd-leantainn a-mhàin a chaidh a sgrìobhadh le Mastodon a luaidh.
+        setting_default_quote_policy_private: Chan urrainn do chàch postaichean dhan luchd-leantainn a-mhàin a chaidh a sgrìobhadh le Nutshell a luaidh.
         setting_default_quote_policy_unlisted: Nuair a luaidheas daoine thu, thèid am post aca-san fhalach o loidhnichean-ama nan treandaichean.
         setting_default_sensitive: Thèid meadhanan frionasach fhalach a ghnàth is gabhaidh an nochdadh le briogadh orra
         setting_display_media_default: Falaich meadhanan ris a bheil comharra gu bheil iad frionasach
@@ -101,7 +101,7 @@ gd:
         profile_directory: Seallaidh eòlaire nam pròifil liosta dhen luchd-cleachdaidh a dh’aontaich gun gabh an rùrachadh.
         require_invite_text: Nuair a bhios aontachadh a làimh riatanach dhan chlàradh, dèan an raon teacsa “Carson a bu mhiann leat ballrachd fhaighinn?” riatanach seach roghainneil
         site_contact_email: Mar a ruigear thu le ceistean laghail no taice.
-        site_contact_username: Mar a ruigear thu air Mastodon.
+        site_contact_username: Mar a ruigear thu air Nutshell.
         site_extended_description: Cuir fiosrachadh sam bith eile ris a bhios feumail do dh’aoighean ’s an luchd-cleachdaidh agad. ’S urrainn dhut structar a chur air le co-chàradh Markdown.
         site_short_description: Tuairisgeul goirid a chuidicheas le aithneachadh sònraichte an fhrithealaiche agad. Cò leis is cò dha a tha e?
         site_terms: Cleachd am poileasaidh prìobhaideachd agad fhèin no fàg bàn e gus am fear bunaiteach a chleachdadh. ’S urrainn dhut structar a chur air le co-chàradh Markdown.
@@ -111,11 +111,11 @@ gd:
         thumbnail: Dealbh mu 2:1 a thèid a shealltainn ri taobh fiosrachadh an fhrithealaiche agad.
         trendable_by_default: Geàrr leum thar lèirmheas a làimh na susbainte a’ treandadh. Gabhaidh nithean fa leth a thoirt far nan treandaichean fhathast an uairsin.
         trends: Seallaidh na treandaichean na postaichean, tagaichean hais is naidheachdan a tha fèill mhòr orra air an fhrithealaiche agad.
-        wrapstodon: Tairg gintinn geàrr-chunntais àbhaich air mar a chleachd iad Mastodon rè a’ bhliadhna dhan luchd-cleachdaidh ionadail. Bidh an gleus seo ri fhaighinn eadar an 10mh is 31mh dhen Dùbhlachd gach bliadhna ’s thèid a thairgsinn dhan luchd-cleachdaidh a rinn co-dhiù aon post poblach no sàmhach ’s a chleachd co-dhiù aon taga hais rè a’ bhliadhna.
+        wrapstodon: Tairg gintinn geàrr-chunntais àbhaich air mar a chleachd iad Nutshell rè a’ bhliadhna dhan luchd-cleachdaidh ionadail. Bidh an gleus seo ri fhaighinn eadar an 10mh is 31mh dhen Dùbhlachd gach bliadhna ’s thèid a thairgsinn dhan luchd-cleachdaidh a rinn co-dhiù aon post poblach no sàmhach ’s a chleachd co-dhiù aon taga hais rè a’ bhliadhna.
       form_challenge:
         current_password: Tha thu a’ tighinn a-steach gu raon tèarainte
       imports:
-        data: Faidhle CSV a chaidh às-phortadh o fhrithealaiche Mastodon eile
+        data: Faidhle CSV a chaidh às-phortadh o fhrithealaiche Nutshell eile
       invite_request:
         text: Bidh e nas fhasa dhuinn lèirmheas a dhèanamh air d’ iarrtas
       ip_block:

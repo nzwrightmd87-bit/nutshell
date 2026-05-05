@@ -23,55 +23,55 @@ sc:
         explanation: As creadu unu contu in %{host} cun custu indiritzu de posta eletrònica. T'ammancat unu clic pro s'ativatzione. Si non fias tue, non càrcules custu messàgiu de posta eletrònica.
         explanation_when_pending: As pedidu un'invitu a %{host} cun custu indiritzu de posta eletrònica. Cunfirmadu s'indiritzu de posta eletrònica, amus a revisionare sa dimanda tua. Podes intrare pro cambiare is detàllios o cantzellare su contu tuo, ma non podes atzèdere a sa majoria de is funtziones finas a chi su contu tuo siat aprovadu. Si sa dimanda tua est refudada, is datos ant a èssere bogados, duncas no t'ant a pedire prus peruna atzione. Si non fias tue, non càrcules custu messàgiu de posta eletrònica.
         extra_html: Verìfica puru <a href="%{terms_path}">is règulas de su serbidore</a> e <a href="%{policy_path}">is cunditziones de servìtziu nostras</a>.
-        subject: 'Mastodon: Istrutziones de cunfirma pro %{instance}'
+        subject: 'Nutshell: Istrutziones de cunfirma pro %{instance}'
         title: Verìfica s'indiritzu de posta eletrònica
       email_changed:
         explanation: 'Custu indiritzu de posta eletrònica pro su contu tuo est essende mudadu a:'
         extra: Si no as mudadu indiritzu de posta, forsis un'àtera persone at otentu s'atzessu de su contu tuo. Muda sa crae tua a sa lestra o chistiona cun s'amministratzione de su serbidore si ses blocadu a foras dae su contu tuo.
-        subject: 'Mastodon: Indiritzu de posta mudadu'
+        subject: 'Nutshell: Indiritzu de posta mudadu'
         title: Indiritzu de posta eletrònica nou
       password_change:
         explanation: Sa crae de su contu tuo est istada mudada.
         extra: Si no as mudadu sa crae tua, forsis un'àtera persone at otentu s'atzessu de su contu tuo. Muda sa crae tua a sa lestra o chistiona cun s'amministratzione de su serbidore si ses blocadu a foras dae su contu tuo.
-        subject: 'Mastodon: Crae mudada'
+        subject: 'Nutshell: Crae mudada'
         title: Crae mudada
       reconfirmation_instructions:
         explanation: Cunfirma s'indiritzu nou pro mudare s'indiritzu de posta eletrònica.
-        extra: Si custa muda no dd'as pedida tue, non càrcules custu messàgiu de posta eletrònica. Custu indiritzu de posta eletrònica pro su contu de Mastodon no at a mudare finas a s'atzessu tuo a su ligàmene in subra.
-        subject: 'Mastodon: Cunfirma indiritzu de posta eletrònica pro %{instance}'
+        extra: Si custa muda no dd'as pedida tue, non càrcules custu messàgiu de posta eletrònica. Custu indiritzu de posta eletrònica pro su contu de Nutshell no at a mudare finas a s'atzessu tuo a su ligàmene in subra.
+        subject: 'Nutshell: Cunfirma indiritzu de posta eletrònica pro %{instance}'
         title: Verìfica s'indiritzu de posta eletrònica
       reset_password_instructions:
         action: Muda sa crae
         explanation: As pedidu una crae noa pro su contu tuo.
         extra: Si no dd'as pedida tue, non càrcules custu messàgiu de posta eletrònica. Custa crae no at a mudare finas a s'atzessu tuo a su ligàmene in subra pro sa creatzione de una noa.
-        subject: 'Mastodon: Istrutziones pro resetare sa crae'
+        subject: 'Nutshell: Istrutziones pro resetare sa crae'
         title: Càmbiu de crae
       two_factor_disabled:
-        subject: 'Mastodon: Autenticatzione a duos fatores disativada'
+        subject: 'Nutshell: Autenticatzione a duos fatores disativada'
         title: 2FA disativada
       two_factor_enabled:
-        subject: 'Mastodon: Autenticatzione a duos fatores ativada'
+        subject: 'Nutshell: Autenticatzione a duos fatores ativada'
         title: 2FA ativada
       two_factor_recovery_codes_changed:
         explanation: Is còdighes de recùperu betzos sunt istados disativados e àteros noos generados.
-        subject: 'Mastodon: Còdighes de recùperu a duos fatores re-generados'
+        subject: 'Nutshell: Còdighes de recùperu a duos fatores re-generados'
         title: còdighes de recùperu 2FA mudados
       unlock_instructions:
-        subject: 'Mastodon: Istrutziones pro s''isblocu'
+        subject: 'Nutshell: Istrutziones pro s''isblocu'
       webauthn_credential:
         added:
           explanation: Sa crae de seguresa chi sighit est istada agiunta a su contu tuo
-          subject: 'Mastodon: Crae de seguresa noa'
+          subject: 'Nutshell: Crae de seguresa noa'
           title: Est istada agiunta una crae de seguresa noa
         deleted:
           explanation: Sa crae de seguresa chi sighit est istada cantzellada dae su contu tuo
-          subject: 'Mastodon: Crae de seguresa cantzellada'
+          subject: 'Nutshell: Crae de seguresa cantzellada'
           title: Una de is craes de seguresa tuas est istada cantzellada
       webauthn_disabled:
-        subject: 'Mastodon: Autenticatzione cun craes de seguresa disabilitada'
+        subject: 'Nutshell: Autenticatzione cun craes de seguresa disabilitada'
         title: Craes de seguresa disabilitadas
       webauthn_enabled:
-        subject: 'Mastodon: Autenticatzione cun sa crae de seguresa ativada'
+        subject: 'Nutshell: Autenticatzione cun sa crae de seguresa ativada'
         title: Craes de seguresa abilitadas
     omniauth_callbacks:
       failure: 'Faddina in s''autenticatzione dae %{kind}; resone: "%{reason}".'

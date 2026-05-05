@@ -30,7 +30,7 @@ FROM ${BASE_REGISTRY}/ruby:${RUBY_VERSION}-slim-${DEBIAN_VERSION} AS ruby
 ARG MASTODON_VERSION_PRERELEASE=""
 # Append build metadata or fork information to version.rb [--build-arg MASTODON_VERSION_METADATA="pr-123456"]
 ARG MASTODON_VERSION_METADATA=""
-# Will be available as Mastodon::Version.source_commit
+# Will be available through the version helper source_commit
 ARG SOURCE_COMMIT=""
 
 # Allow Ruby on Rails to serve static files
@@ -46,26 +46,26 @@ ARG UID="991"
 # Linux GID (group id) for the mastodon user, change with [--build-arg GID=1234]
 ARG GID="991"
 
-# Apply Mastodon build options based on options above
+# Apply Nutshell build options based on options above
 ENV \
-  # Apply Mastodon version information
+  # Apply Nutshell version information
   MASTODON_VERSION_PRERELEASE="${MASTODON_VERSION_PRERELEASE}" \
   MASTODON_VERSION_METADATA="${MASTODON_VERSION_METADATA}" \
   SOURCE_COMMIT="${SOURCE_COMMIT}" \
-  # Apply Mastodon static files and YJIT options
+  # Apply Nutshell static files and YJIT options
   RAILS_SERVE_STATIC_FILES=${RAILS_SERVE_STATIC_FILES} \
   RUBY_YJIT_ENABLE=${RUBY_YJIT_ENABLE} \
   # Apply timezone
   TZ=${TZ}
 
 ENV \
-  # Configure the IP to bind Mastodon to when serving traffic
+  # Configure the IP to bind Nutshell to when serving traffic
   BIND="0.0.0.0" \
   # Use production settings for Yarn, Node.js and related tools
   NODE_ENV="production" \
   # Use production settings for Ruby on Rails
   RAILS_ENV="production" \
-  # Add Ruby and Mastodon installation to the PATH
+  # Add Ruby and Nutshell installation to the PATH
   DEBIAN_FRONTEND="noninteractive" \
   PATH="${PATH}:/opt/ruby/bin:/opt/mastodon/bin" \
   # Optimize jemalloc 5.x performance
@@ -271,7 +271,7 @@ FROM build AS precompiler
 
 ARG TARGETPLATFORM
 
-# Copy Mastodon sources into layer
+# Copy Nutshell sources into layer
 COPY . /opt/mastodon/
 
 # Copy Node.js binaries/libraries into layer
@@ -300,13 +300,13 @@ COPY --from=bundler /usr/local/bundle/ /usr/local/bundle/
 
 RUN \
   ldconfig; \
-  # Use Ruby on Rails to create Mastodon assets
+  # Use Ruby on Rails to create Nutshell assets
   SECRET_KEY_BASE_DUMMY=1 \
   bundle exec rails assets:precompile; \
   # Cleanup temporary files
   rm -fr /opt/mastodon/tmp;
 
-# Prep final Mastodon Ruby layer
+# Prep final Nutshell Ruby layer
 FROM ruby AS mastodon
 
 ARG TARGETPLATFORM
@@ -358,7 +358,7 @@ RUN \
   libx265-215 \
   ;
 
-# Copy Mastodon sources into final layer
+# Copy Nutshell sources into final layer
 COPY . /opt/mastodon/
 
 # Copy compiled assets to layer
@@ -385,10 +385,10 @@ RUN \
   bundle exec bootsnap precompile --gemfile app/ lib/;
 
 RUN \
-  # Pre-create and chown system volume to Mastodon user
+  # Pre-create and chown system volume to Nutshell user
   mkdir -p /opt/mastodon/public/system; \
   chown mastodon:mastodon /opt/mastodon/public/system; \
-  # Set Mastodon user as owner of tmp folder
+  # Set Nutshell user as owner of tmp folder
   chown -R mastodon:mastodon /opt/mastodon/tmp;
 
 # Set the running user for resulting container

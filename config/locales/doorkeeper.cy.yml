@@ -126,7 +126,7 @@ cy:
         admin/accounts: Gweinyddu cyfrifon
         admin/all: Pob swyddogaeth weinyddol
         admin/reports: Gweinyddu adroddiadau
-        all: Mynediad llawn i'ch cyfrif Mastodon
+        all: Mynediad llawn i'ch cyfrif Nutshell
         blocks: Blociau
         bookmarks: Llyfrnodau
         conversations: Sgyrsiau
@@ -139,7 +139,7 @@ cy:
         media: Atodiadau cyfryngau
         mutes: Anwybyddiadau
         notifications: Hysbysiadau
-        profile: Eich proffil Mastodon
+        profile: Eich proffil Nutshell
         push: Hysbysiadau gwthiadwy
         reports: Adroddiadau
         search: Chwilio

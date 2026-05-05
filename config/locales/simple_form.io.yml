@@ -4,10 +4,10 @@ io:
     hints:
       account:
         attribution_domains: Un en singla lineo.
-        discoverable: Vua publika posti e profilo povas remarkesar o rekomendesar en diferanta parti di Mastodon e vua profilo povas sugestesar ad altra uzanti.
+        discoverable: Vua publika posti e profilo povas remarkesar o rekomendesar en diferanta parti di Nutshell e vua profilo povas sugestesar ad altra uzanti.
         display_name: Vua tota nomo o vua gaya nomo.
         fields: Vua retsituo, pronomi, evo, irgo quan vu volas.
-        indexable: Vua posta publika povos aparar en rezultaji di serchi che Mastodon. Personi qui interagis kun vua posti povos serchar oli irgakaze.
+        indexable: Vua posta publika povos aparar en rezultaji di serchi che Nutshell. Personi qui interagis kun vua posti povos serchar oli irgakaze.
         note: 'Vu povas @mencionar altra personi o #hashtagi.'
         show_collections: Personi povos navigar tra vua sequati e sequanti. Personi quin vu sequas, vidos ke vu sequas li irgakaze.
         unlocked: Personi povos sequar vu sen demandar aprobo.
@@ -55,7 +55,7 @@ io:
         phrase: Parigesos ne ye textosituaciono o konteneyoaverto di posto
         scopes: Quala API quon softwaro permisesas acesar. Se vu selektas alta skopo, vu ne mustas selektar individui.
         setting_aggregate_reblogs: Ne montrez nova repeti di posti qui ja repetesis recente (nur efektigas repeti recevata nove)
-        setting_always_send_emails: Normale retpostoavizi ne sendesas kande vu aktiva uzas Mastodon
+        setting_always_send_emails: Normale retpostoavizi ne sendesas kande vu aktiva uzas Nutshell
         setting_default_sensitive: Trublema audvidaji originala celesas e povas descelesar per kliko
         setting_display_media_default: Celez audvidaji qua markesis quale trublema
         setting_display_media_hide_all: Omnatempe celas audvidaji
@@ -82,15 +82,15 @@ io:
         backups_retention_period: Uzanto povas igar arkivi di sua afishi por deskargar pose.
         closed_registrations_message: Montresas kande registradi klozesas
         content_cache_retention_period: Omna posti de altra servili efacesos (anke repeti e respondi) pos decidita quanto di dii, sen ye irga lokala uzantointerago kun ti posti. Privata mencioni inter uzanto de dessanta servili anke desganos e neposible riganesos.
-        custom_css: Vu povas pozar kustumizita staili en retverso di Mastodon.
-        favicon: WEBP, PNG, GIF o JPG. Ol remplas la originala imajeto di Mastodon kun personaligita imajeto.
+        custom_css: Vu povas pozar kustumizita staili en retverso di Nutshell.
+        favicon: WEBP, PNG, GIF o JPG. Ol remplas la originala imajeto di Nutshell kun personaligita imajeto.
         mascot: Remplas montreso en avanca retintervizajo.
         media_cache_retention_period: Audvidajdosieri di afishi da deslokala uzanti retmemoresis sur vua servilo. Se audvidajdatumo demandesas pos ol forigesis, ol rideskargesos.
         peers_api_enabled: Listo di domeni quin ca servilo trovis en la fediverso. Nula informo inkluzesas hike pri ka vu federas kun partikulara servilo, nur ke vua servilo savas pri lo. Co es uzata da enti qui kolektas statistiki pri federeso generale.
         profile_directory: La profiluyo listigas omna uzanti qua volunte esar deskovrebla.
         require_invite_text: Kande registragi bezonas manuala aprobo, "Por quo vu volas adeskar?" textoenpoza esos mustiga
         site_contact_email: Quale personi povas kontaktar vu por legala o suportquestioni.
-        site_contact_username: Quale personi povas kontaktar vu en Mastodon.
+        site_contact_username: Quale personi povas kontaktar vu en Nutshell.
         site_extended_description: Irga plusa informi quo forsan esar utila por vizitanti e uzanti. Povas strukturigesar per sintaxo di Markdown.
         site_short_description: Kurta deskripto por helpar unala identifikar ca servilo. Qua funcionigar lu e por qua?
         site_terms: Uzez vua sua privatesguidilo o ignorez por uzar la originalo. Povas strukturigesar per sintaxo di Markdown.
@@ -103,7 +103,7 @@ io:
       form_challenge:
         current_password: Vu eniras sekura areo
       imports:
-        data: Dosiero CSV de altra instaluro di Mastodon
+        data: Dosiero CSV de altra instaluro di Nutshell
       invite_request:
         text: Co helpos ni kontrolar vua apliko
       ip_block:
@@ -304,7 +304,7 @@ io:
         software_updates:
           all: Notifikar pri omna aktualigi
           critical: Notifikar pri nur urjanta aktualigi
-          label: Nova Mastodon-versiono es disponebla
+          label: Nova Nutshell-versiono es disponebla
           none: Nultempe notifikar pri aktualigi (ne rekomendata)
           patch: Notifikar pri problemosolvanta aktualigi
         trending_tag: Nova popularo bezonas kontrolo

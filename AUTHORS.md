@@ -1,7 +1,7 @@
 Authors
 =======
 
-Mastodon is available on [GitHub](https://github.com/mastodon/mastodon)
+Nutshell is available on [GitHub](https://github.com/mastodon/mastodon)
 and provided thanks to the work of the following contributors:
 
 * [Gargron](https://github.com/Gargron)
@@ -954,7 +954,7 @@ This document is provided for informational purposes only. Since it is only upda
 
 ## Translators
 
-Following people have contributed to translation of Mastodon:
+Following people have contributed to translation of Nutshell:
 
 - GunChleoc (*Scottish Gaelic*)
 - KNTRO (*Spanish, Argentina*)

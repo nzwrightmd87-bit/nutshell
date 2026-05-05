@@ -1,10 +1,10 @@
 ---
 fi:
   about:
-    about_mastodon_html: 'Tulevaisuuden sosiaalinen verkosto: ei mainoksia, ei valvontaa, toteutettu avoimilla protokollilla ja hajautettu rakenne! Pidä tietosi ominasi Mastodonin avulla!'
+    about_mastodon_html: 'Tulevaisuuden sosiaalinen verkosto: ei mainoksia, ei valvontaa, toteutettu avoimilla protokollilla ja hajautettu rakenne! Pidä tietosi ominasi Nutshellin avulla!'
     contact_missing: Ei asetettu
     contact_unavailable: Ei saatavilla
-    hosted_on: Mastodon palvelimella %{domain}
+    hosted_on: Nutshell palvelimella %{domain}
     title: Tietoja
   accounts:
     errors:
@@ -766,7 +766,7 @@ fi:
         moderation: Moderointi
         special: Erityistä
       delete: Poista
-      description_html: "<strong>Käyttäjärooleilla</strong> voit mukauttaa sitä, mihin Mastodonin toimintoihin ja alueisiin käyttäjilläsi on pääsy."
+      description_html: "<strong>Käyttäjärooleilla</strong> voit mukauttaa sitä, mihin Nutshellin toimintoihin ja alueisiin käyttäjilläsi on pääsy."
       edit: Muokkaa roolia ”%{name}”
       everyone: Oletuskäyttöoikeudet
       everyone_full_description_html: Tämä on <strong>perusrooli</strong>, joka vaikuttaa <strong>kaikkiin käyttäjiin</strong>, jopa ilman asetettua roolia. Kaikki muut roolit perivät sen käyttöoikeudet.
@@ -838,27 +838,27 @@ fi:
         rules_hint: On olemassa erityinen alue sääntöjä, joita käyttäjien odotetaan noudattavan.
         title: Tietoja
       allow_referrer_origin:
-        desc: Kun käyttäjät napsauttavat ulkoisille sivustoille johtavia linkkejä, heidän selaimensa saattaa lähettää Mastodon-palvelimesi osoitteen viittauksena. Poista tämä käytöstä, jos se yksilöi käyttäjäsi, esimerkiksi jos tämä on henkilökohtainen Mastodon-palvelin.
-        title: Salli ulkoisten sivustojen nähdä Mastodon-palvelin liikenteen lähteenä
+        desc: Kun käyttäjät napsauttavat ulkoisille sivustoille johtavia linkkejä, heidän selaimensa saattaa lähettää Nutshell-palvelimesi osoitteen viittauksena. Poista tämä käytöstä, jos se yksilöi käyttäjäsi, esimerkiksi jos tämä on henkilökohtainen Nutshell-palvelin.
+        title: Salli ulkoisten sivustojen nähdä Nutshell-palvelin liikenteen lähteenä
       appearance:
-        preamble: Mukauta Mastodonin selainkäyttöliittymää.
+        preamble: Mukauta Nutshellin selainkäyttöliittymää.
         title: Ulkoasu
       branding:
-        preamble: Palvelimesi brändäys erottaa sen muista verkon palvelimista. Nämä tiedot voivat näkyä monissa eri ympäristöissä, kuten Mastodonin selainkäyttöliittymässä, natiivisovelluksissa, linkkien esikatseluissa muilla sivustoilla, viestintäsovelluksissa ja niin edelleen. Siksi nämä tiedot kannattaa pitää selvinä, lyhyinä ja ytimekkäinä.
+        preamble: Palvelimesi brändäys erottaa sen muista verkon palvelimista. Nämä tiedot voivat näkyä monissa eri ympäristöissä, kuten Nutshellin selainkäyttöliittymässä, natiivisovelluksissa, linkkien esikatseluissa muilla sivustoilla, viestintäsovelluksissa ja niin edelleen. Siksi nämä tiedot kannattaa pitää selvinä, lyhyinä ja ytimekkäinä.
         title: Brändäys
       captcha_enabled:
         desc_html: Tämä perustuu ulkoisiin hCaptchan skripteihin, mikä voi olla turvallisuus- ja yksityisyysongelma. Lisäksi <strong>tämä voi tehdä rekisteröitymisprosessista joillekin (erityisesti vammaisille) ihmisille huomattavasti vähemmän saavutettavan</strong>. Harkitse siksi vaihtoehtoisia toimia, kuten hyväksymis- tai kutsuperusteista rekisteröitymistä.
         title: Vaadi uusia käyttäjiä vahvistaamaan tilinsä ratkaisemalla CAPTCHA-vahvistus
       content_retention:
         danger_zone: Vaaravyöhyke
-        preamble: Määritä, miten käyttäjän luoma sisältö tallennetaan Mastodoniin.
+        preamble: Määritä, miten käyttäjän luoma sisältö tallennetaan Nutshelliin.
         title: Sisällön säilytys
       default_noindex:
         desc_html: Vaikuttaa kaikkiin käyttäjiin, jotka eivät ole muuttaneet tätä asetusta itse
         title: Jätä käyttäjät oletusarvoisesti hakukoneindeksoinnin ulkopuolelle
       discovery:
         follow_recommendations: Seurantasuositukset
-        preamble: Mielenkiintoisen sisällön esille tuominen on keskeistä perehdyttäessä uusia käyttäjiä, jotka eivät ehkä tunne ketään Mastodonissa. Hallitse, miten eri löydettävyysominaisuudet toimivat palvelimellasi.
+        preamble: Mielenkiintoisen sisällön esille tuominen on keskeistä perehdyttäessä uusia käyttäjiä, jotka eivät ehkä tunne ketään Nutshellissa. Hallitse, miten eri löydettävyysominaisuudet toimivat palvelimellasi.
         privacy: Yksityisyys
         profile_directory: Profiilihakemisto
         public_timelines: Julkiset aikajanat
@@ -901,7 +901,7 @@ fi:
       destroyed_msg: Sivustolatauksen poisto onnistui!
     software_updates:
       critical_update: Kriittinen – päivitä viivyttelemättä
-      description: On suositeltavaa pitää Mastodon-asennus ajantasaisena ja siten hyödyntää uusimpia korjauksia sekä ominaisuuksia. Lisäksi joskus on ratkaisevan tärkeää päivittää Mastodon ajoissa tietoturvaongelmien välttämiseksi. Näistä syistä Mastodon tarkistaa päivitykset 30 minuutin välein, ja ilmoittaa sinulle sähköposti-ilmoitusasetustesi mukaisesti.
+      description: On suositeltavaa pitää Nutshell-asennus ajantasaisena ja siten hyödyntää uusimpia korjauksia sekä ominaisuuksia. Lisäksi joskus on ratkaisevan tärkeää päivittää Nutshell ajoissa tietoturvaongelmien välttämiseksi. Näistä syistä Nutshell tarkistaa päivitykset 30 minuutin välein, ja ilmoittaa sinulle sähköposti-ilmoitusasetustesi mukaisesti.
       documentation_link: Lue lisää
       release_notes: Julkaisutiedot
       title: Saatavilla olevat päivitykset
@@ -969,7 +969,7 @@ fi:
         message_html: Elasticsearch-indeksin sidokset ovat vanhentuneet. Suorita <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Katso käyttöohjeet
-        message_html: Elasticsearch-klusterissa on useampi kuin yksi solmu, mutta Mastodonia ei ole määritetty käyttämään niitä.
+        message_html: Elasticsearch-klusterissa on useampi kuin yksi solmu, mutta Nutshellia ei ole määritetty käyttämään niitä.
       elasticsearch_preset_single_node:
         action: Katso käyttöohjeet
         message_html: Elasticsearch-klusterissa on vain yksi solmu. <code>ES_PRESET</code> tulisi asettaa arvoon <code>single_node_cluster</code>.
@@ -987,13 +987,13 @@ fi:
         message_html: Ei ole Sidekiq-prosessia käynnissä jonossa %{value}. Tarkista Sidekiq-asetukset
       software_version_check:
         action: Näytä saatavilla olevat päivitykset
-        message_html: Saatavilla on Mastodon-päivitys.
+        message_html: Saatavilla on Nutshell-päivitys.
       software_version_critical_check:
         action: Näytä saatavilla olevat päivitykset
-        message_html: Kriittinen Mastodon-päivitys on saatavilla. Tee päivitys mahdollisimman ripeästi.
+        message_html: Kriittinen Nutshell-päivitys on saatavilla. Tee päivitys mahdollisimman ripeästi.
       software_version_patch_check:
         action: Näytä saatavilla olevat päivitykset
-        message_html: Mastodonin virhekorjauspäivitys on saatavilla.
+        message_html: Nutshellin virhekorjauspäivitys on saatavilla.
       upload_check_privacy_error:
         action: Katso lisätietoja täältä
         message_html: "<strong>Verkkopalvelimesi on määritetty väärin. Käyttäjiesi tietosuoja on vaarassa.</strong>"
@@ -1153,7 +1153,7 @@ fi:
     webhooks:
       add_new: Lisää päätepiste
       delete: Poista
-      description_html: "<strong>Webhookin</strong> avulla Mastodon voi puskea sovellukseesi <strong>reaaliaikaisia ilmoituksia</strong> valituista tapahtumista, jotta sovelluksesi voi <strong>laukaista reaktioita automaattisesti</strong>."
+      description_html: "<strong>Webhookin</strong> avulla Nutshell voi puskea sovellukseesi <strong>reaaliaikaisia ilmoituksia</strong> valituista tapahtumista, jotta sovelluksesi voi <strong>laukaista reaktioita automaattisesti</strong>."
       disable: Poista käytöstä
       disabled: Poissa käytöstä
       edit: Muokkaa päätepistettä
@@ -1187,8 +1187,8 @@ fi:
       next_steps: Voit hyväksyä valituksen, jolloin moderointipäätös kumoutuu, tai sivuuttaa sen.
       subject: "%{username} valittaa palvelinta %{instance} koskevasta moderointipäätöksestä"
     new_critical_software_updates:
-      body: Mastodonin uusia kriittisen tärkeitä versioita on julkaistu, joten saatat haluta päivittää niin pian kuin mahdollista!
-      subject: Palvelimelle %{instance} on saatavilla kriittisiä Mastodon-päivityksiä!
+      body: Nutshellin uusia kriittisen tärkeitä versioita on julkaistu, joten saatat haluta päivittää niin pian kuin mahdollista!
+      subject: Palvelimelle %{instance} on saatavilla kriittisiä Nutshell-päivityksiä!
     new_pending_account:
       body: Uuden tilin tiedot ovat alla. Voit hyväksyä tai hylätä tämän hakemuksen.
       subject: Uusi tili tarkastettavana palvelimella %{instance} (%{username})
@@ -1197,8 +1197,8 @@ fi:
       body_remote: Joku palvelimelta %{domain} raportoi kohteen %{target}
       subject: Uusi raportti palvelimelta %{instance} (nro %{id})
     new_software_updates:
-      body: Uusia Mastodon-versioita on julkaistu, joten saatat haluta päivittää!
-      subject: Palvelimelle %{instance} ovat saatavilla uusia Mastodon-versioita!
+      body: Uusia Nutshell-versioita on julkaistu, joten saatat haluta päivittää!
+      subject: Palvelimelle %{instance} ovat saatavilla uusia Nutshell-versioita!
     new_trends:
       body: 'Seuraavat kohteet on tarkistettava ennen kuin ne voidaan näyttää julkisesti:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ fi:
     boosting_preferences_info_html: "<strong>Vinkki:</strong> Asetuksista riippumatta <kbd>Vaihto</kbd> + <kbd>napsautus</kbd> %{icon} Tehosta-kuvakkeeseen tehostaa välittömästi."
     discovery: Löydettävyys
     localization:
-      body: Mastodonin ovat kääntäneet vapaaehtoiset.
+      body: Nutshellin ovat kääntäneet vapaaehtoiset.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Kaikki voivat osallistua.
     sensitive_content: Arkaluonteinen sisältö
@@ -1261,8 +1261,8 @@ fi:
     delete_account: Poista tili
     delete_account_html: Jos haluat poistaa tilisi, voit <a href="%{path}">edetä tästä</a>. Sinua pyydetään vahvistamaan poisto.
     description:
-      prefix_invited_by_user: "@%{name} kutsuu sinut liittymään tälle Mastodonin palvelimelle!"
-      prefix_sign_up: Liity Mastodoniin tänään!
+      prefix_invited_by_user: "@%{name} kutsuu sinut liittymään tälle Nutshellin palvelimelle!"
+      prefix_sign_up: Liity Nutshelliin tänään!
       suffix: Tilillä voit seurata ihmisiä, julkaista päivityksiä ja lähetellä viestejä muille käyttäjille miltä palvelimelta tahansa ja paljon muuta!
     didnt_get_confirmation: Etkö saanut vahvistuslinkkiä?
     dont_have_your_security_key: Eikö sinulla ole suojausavainta?
@@ -1300,7 +1300,7 @@ fi:
     set_new_password: Aseta uusi salasana
     setup:
       email_below_hint_html: Tarkista roskapostikansiosi tai pyydä uusi viesti. Voit korjata sähköpostiosoitteesi tarvittaessa.
-      email_settings_hint_html: Jotta voit aloittaa Mastodonin käytön, napsauta linkkiä, jonka lähetimme osoitteeseen %{email}. Odotamme täällä.
+      email_settings_hint_html: Jotta voit aloittaa Nutshellin käytön, napsauta linkkiä, jonka lähetimme osoitteeseen %{email}. Odotamme täällä.
       link_not_received: Etkö saanut linkkiä?
       new_confirmation_instructions_sent: Saat pian uuden vahvistuslinkin sisältävän sähköpostiviestin!
       title: Tarkista sähköpostilaatikkosi
@@ -1309,7 +1309,7 @@ fi:
       title: Kirjaudu palvelimelle %{domain}
     sign_up:
       manual_review: Palvelimen %{domain} ylläpito tarkastaa rekisteröitymiset käsin. Helpottaaksesi rekisteröitymisesi käsittelyä kerro hieman itsestäsi ja siitä, miksi haluat luoda käyttäjätilin palvelimelle %{domain}.
-      preamble: Kun sinulla on tili tällä Mastodon-palvelimella, voit seurata kaikkia muita fediversumin käyttäjiä riippumatta siitä, missä heidän tilinsä on.
+      preamble: Kun sinulla on tili tällä Nutshell-palvelimella, voit seurata kaikkia muita fediversumin käyttäjiä riippumatta siitä, missä heidän tilinsä on.
       title: Otetaan %{domain} käyttöösi.
     status:
       account_status: Tilin tila
@@ -1325,7 +1325,7 @@ fi:
     user_privacy_agreement_html: Olen lukenut ja hyväksyn <a href="%{privacy_policy_path}" target="_blank">tietosuojakäytännön</a>
   author_attribution:
     example_title: Esimerkkiteksti
-    hint_html: Kirjoitatko uutisia tai blogitekstejä Mastodonin ulkopuolella? Määrää, kuinka tulet tunnustetuksi, kun niitä jaetaan Mastodonissa.
+    hint_html: Kirjoitatko uutisia tai blogitekstejä Nutshellin ulkopuolella? Määrää, kuinka tulet tunnustetuksi, kun niitä jaetaan Nutshellissa.
     instructions: 'Varmista, että artikkelisi HTML:ssä on tämä koodi:'
     more_from_html: Lisää tekijältä %{name}
     s_blog: Käyttäjän %{name} blogi
@@ -1433,7 +1433,7 @@ fi:
       content: Valitettavasti jotain meni pieleen meidän päässämme.
       title: Sivu ei ole oikein
     '503': Sivua ei voitu näyttää palvelimen väliaikaisen vian vuoksi.
-    noscript_html: Käyttääksesi Mastodonin verkkosovellusta, ota JavaScript käyttöön. Vaihtoehtoisesti voit kokeilla käyttämällesi alustalle kehitettyjä Mastodonin <a href="%{apps_path}">natiivisovelluksia</a>.
+    noscript_html: Käyttääksesi Nutshellin verkkosovellusta, ota JavaScript käyttöön. Vaihtoehtoisesti voit kokeilla käyttämällesi alustalle kehitettyjä Nutshellin <a href="%{apps_path}">natiivisovelluksia</a>.
   existing_username_validator:
     not_found: paikallista käyttäjää ei löydy kyseisellä käyttäjänimellä
     not_found_multiple: käyttäjänimiä %{usernames} ei löytynyt
@@ -1653,7 +1653,7 @@ fi:
     unsubscribe:
       action: Kyllä, peru tilaus
       complete: Tilaus lopetettiin
-      confirmation_html: Haluatko varmasti lopettaa Mastodonin sähköposti-ilmoitusten vastaanottamisen aiheesta %{type} palvelimelta %{domain} osoitteeseesi %{email}? Voit tilata ilmoitusviestejä milloin tahansa uudelleen <a href="%{settings_path}">sähköposti-ilmoitusten asetuksista</a>.
+      confirmation_html: Haluatko varmasti lopettaa Nutshellin sähköposti-ilmoitusten vastaanottamisen aiheesta %{type} palvelimelta %{domain} osoitteeseesi %{email}? Voit tilata ilmoitusviestejä milloin tahansa uudelleen <a href="%{settings_path}">sähköposti-ilmoitusten asetuksista</a>.
       emails:
         notification_emails:
           favourite: sähköposti-ilmoituksia suosikkeihin lisäämisistä
@@ -1662,7 +1662,7 @@ fi:
           mention: sähköposti-ilmoituksia maininnoista
           reblog: sähköposti-ilmoituksia tehostuksista
       resubscribe_html: Jos olet perunut tilauksen erehdyksessä, voit tilata ilmoitusviestejä uudelleen <a href="%{settings_path}">sähköposti-ilmoitusten asetuksista</a>.
-      success_html: Sinulle ei enää lähetetä Mastodonin %{type} palvelimelta %{domain} osoitteeseen %{email}.
+      success_html: Sinulle ei enää lähetetä Nutshellin %{type} palvelimelta %{domain} osoitteeseen %{email}.
       title: Lopeta tilaus
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ fi:
     posting_defaults: Julkaisun oletukset
     public_timelines: Julkiset aikajanat
   privacy:
-    hint_html: "<strong>Määritä, kuinka haluat profiilisi ja julkaisujesi löytyvän.</strong> Mastodonissa on monia ominaisuuksia, joiden käyttöönotto voi auttaa sinua tavoittamaan laajemman yleisön. Käytä hetki tarkistaaksesi, sopivatko nämä asetukset käyttöösi."
+    hint_html: "<strong>Määritä, kuinka haluat profiilisi ja julkaisujesi löytyvän.</strong> Nutshellissa on monia ominaisuuksia, joiden käyttöönotto voi auttaa sinua tavoittamaan laajemman yleisön. Käytä hetki tarkistaaksesi, sopivatko nämä asetukset käyttöösi."
     privacy: Yksityisyys
     privacy_hint_html: Määritä, kuinka paljon muita avustavia tietoja haluat paljastaa. Käyttäjät löytävät kiinnostavia profiileja ja hienoja sovelluksia, kun he selaavat toisten seuraamia käyttäjiä ja kun he näkevät, millä sovelluksilla nämä julkaisevat. Saatat kuitenkin haluta piilottaa nämä tiedot.
     reach: Tavoittavuus
     reach_hint_html: Määritä, haluatko tulla uusien käyttäjien löytämäksi ja seuraamaksi. Haluatko julkaisujesi näkyvän Selaa-sivulla? Haluatko muiden käyttäjien näkevän sinut seurantasuosituksissaan? Haluatko hyväksyä kaikki uudet seuraajat automaattisesti vai päättää jokaisesta erikseen?
     search: Haku
-    search_hint_html: Määritä, kuinka haluat tulla löydetyksi. Haluatko, että sinut löydetään julkisten julkaisujesi perusteella? Haluatko, että Mastodonin ulkopuoliset ihmiset löytävät profiilisi tehdessään hakuja verkossa? Otathan huomioon, ettei julkisten tietojen täyttä kaikista hakukoneista poisjäämistä voi taata.
+    search_hint_html: Määritä, kuinka haluat tulla löydetyksi. Haluatko, että sinut löydetään julkisten julkaisujesi perusteella? Haluatko, että Nutshellin ulkopuoliset ihmiset löytävät profiilisi tehdessään hakuja verkossa? Otathan huomioon, ettei julkisten tietojen täyttä kaikista hakukoneista poisjäämistä voi taata.
     title: Yksityisyys ja tavoittavuus
   privacy_policy:
     title: Tietosuojakäytäntö
@@ -1882,7 +1882,7 @@ fi:
     current_session: Nykyinen istunto
     date: Päivämäärä
     description: "%{browser} %{platform}"
-    explanation: Nämä verkkoselaimet ovat parhaillaan kirjautuneena Mastodon-tilillesi.
+    explanation: Nämä verkkoselaimet ovat parhaillaan kirjautuneena Nutshell-tilillesi.
     ip: IP-osoite
     platforms:
       adobe_air: alustalla Adobe Air
@@ -1908,7 +1908,7 @@ fi:
     aliases: Tilin aliakset
     appearance: Ulkoasu
     authorized_apps: Valtuutetut sovellukset
-    back: Takaisin Mastodoniin
+    back: Takaisin Nutshelliin
     delete: Tilin poisto
     development: Kehitys
     edit_profile: Muokkaa profiilia
@@ -1983,9 +1983,9 @@ fi:
       direct: Yksityismaininta
       private: Vain seuraajat
       public: Julkinen
-      public_long: Kuka tahansa Mastodonissa ja sen ulkopuolella
+      public_long: Kuka tahansa Nutshellissa ja sen ulkopuolella
       unlisted: Vaivihkaa julkinen
-      unlisted_long: Piilotetaan Mastodonin hakutuloksista, trendeistä ja julkisilta aikajanoilta
+      unlisted_long: Piilotetaan Nutshellin hakutuloksista, trendeistä ja julkisilta aikajanoilta
   statuses_cleanup:
     enabled: Poista vanhat julkaisut automaattisesti
     enabled_hint: Poistaa julkaisusi automaattisesti, kun ne saavuttavat valitun ikäkynnyksen, ellei jokin alla olevista poikkeuksista tule kyseeseen
@@ -2036,7 +2036,7 @@ fi:
     review_link: Käy käyttöehdot läpi
     title: Palvelimen %{domain} käyttöehdot muuttuvat
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%-d.%-m.%Y klo %-H.%M"
@@ -2062,7 +2062,7 @@ fi:
     recovery_codes_regenerated: Uusien palautuskoodien luonti onnistui
     recovery_instructions_html: Jos menetät puhelimesi, voit kirjautua tilillesi jollakin alla olevista palautuskoodeista. <strong>Pidä palautuskoodit hyvässä tallessa</strong>. Voit esimerkiksi tulostaa ne ja säilyttää muiden tärkeiden papereiden joukossa.
     resume_app_authorization: Jatka sovelluksen valtuutusta
-    role_requirement: "%{domain} vaatii ottamaan kaksivaiheisen todennuksen käyttöön ennen kuin voit käyttää Mastodonia."
+    role_requirement: "%{domain} vaatii ottamaan kaksivaiheisen todennuksen käyttöön ennen kuin voit käyttää Nutshellia."
     webauthn: Suojausavaimet
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ fi:
       subtitle: Valituksesi on hylätty.
       title: Valitus hylätty
     backup_ready:
-      explanation: Olet pyytänyt täyden varmuuskopion Mastodon-tilistäsi.
+      explanation: Olet pyytänyt täyden varmuuskopion Nutshell-tilistäsi.
       extra: Se on nyt valmis ladattavaksi!
       subject: Arkisto on valmiina ladattavaksi
       title: Arkiston tallennus
@@ -2142,7 +2142,7 @@ fi:
       apps_android_action: Hanki Google Playstä
       apps_ios_action: Lataa App Storesta
       apps_step: Lataa viralliset sovelluksemme.
-      apps_title: Mastodon-sovellukset
+      apps_title: Nutshell-sovellukset
       checklist_subtitle: 'Näin pääset alkuun tällä uudella sosiaalisella alustalla:'
       checklist_title: Tervetulon tarkistuslista
       edit_profile_action: Mukauta
@@ -2150,16 +2150,16 @@ fi:
       edit_profile_title: Mukauta profiiliasi
       explanation: Näillä vinkeillä pääset alkuun
       feature_action: Lue lisää
-      feature_audience: Mastodon tarjoaa sinulle ainutlaatuisen mahdollisuuden hallita yleisöäsi ilman välikäsiä. Omassa infrastruktuurissasi toimiva Mastodon on täysin hallinnassasi ja antaa sinun seurata ja tulla seuratuksi miltä tahansa verkon Mastodon-palvelimelta.
+      feature_audience: Nutshell tarjoaa sinulle ainutlaatuisen mahdollisuuden hallita yleisöäsi ilman välikäsiä. Omassa infrastruktuurissasi toimiva Nutshell on täysin hallinnassasi ja antaa sinun seurata ja tulla seuratuksi miltä tahansa verkon Nutshell-palvelimelta.
       feature_audience_title: Rakenna yleisöäsi luottavaisin mielin
-      feature_control: Tiedät itse parhaiten, mitä haluat nähdä kotisyötteessäsi. Ei algoritmeja eikä mainoksia tuhlaamassa aikaasi. Seuraa yhdellä tilillä ketä tahansa, miltä tahansa Mastodon-palvelimelta, vastaanota heidän julkaisunsa aikajärjestyksessä ja tee omasta internetin nurkastasi hieman enemmän omanlaisesi.
+      feature_control: Tiedät itse parhaiten, mitä haluat nähdä kotisyötteessäsi. Ei algoritmeja eikä mainoksia tuhlaamassa aikaasi. Seuraa yhdellä tilillä ketä tahansa, miltä tahansa Nutshell-palvelimelta, vastaanota heidän julkaisunsa aikajärjestyksessä ja tee omasta internetin nurkastasi hieman enemmän omanlaisesi.
       feature_control_title: Pidä aikajanasi hallussasi
-      feature_creativity: Mastodon tukee ääni-, video- ja kuvajulkaisuja, saavutettavuuskuvauksia, äänestyksiä, sisältövaroituksia, animoituja avattaria, mukautettuja emojeita, pienoiskuvien rajauksen hallintaa ja paljon muuta, mikä auttaa ilmaisemaan itseäsi verkossa. Julkaisetpa sitten taidetta, musiikkia tai podcastia, Mastodon on sinua varten.
+      feature_creativity: Nutshell tukee ääni-, video- ja kuvajulkaisuja, saavutettavuuskuvauksia, äänestyksiä, sisältövaroituksia, animoituja avattaria, mukautettuja emojeita, pienoiskuvien rajauksen hallintaa ja paljon muuta, mikä auttaa ilmaisemaan itseäsi verkossa. Julkaisetpa sitten taidetta, musiikkia tai podcastia, Nutshell on sinua varten.
       feature_creativity_title: Luovuutta vertaansa vailla
-      feature_moderation: Mastodon palauttaa päätöksenteon käsiisi. Jokainen palvelin luo omat sääntönsä ja määräyksensä, joita valvotaan paikallisesti eikä ylhäältä alas kuten kaupallisessa sosiaalisessa mediassa, mikä tekee siitä joustavimman vastaamaan eri ihmisryhmien tarpeisiin. Liity palvelimelle, jonka säännöt sopivat sinulle, tai ylläpidä omaa palvelinta.
+      feature_moderation: Nutshell palauttaa päätöksenteon käsiisi. Jokainen palvelin luo omat sääntönsä ja määräyksensä, joita valvotaan paikallisesti eikä ylhäältä alas kuten kaupallisessa sosiaalisessa mediassa, mikä tekee siitä joustavimman vastaamaan eri ihmisryhmien tarpeisiin. Liity palvelimelle, jonka säännöt sopivat sinulle, tai ylläpidä omaa palvelinta.
       feature_moderation_title: Moderointi juuri kuten sen pitäisi olla
       follow_action: Seuraa
-      follow_step: Mastodonissa on kyse kiinnostavien käyttäjien seuraamisesta.
+      follow_step: Nutshellissa on kyse kiinnostavien käyttäjien seuraamisesta.
       follow_title: Mukauta kotisyötettäsi
       follows_subtitle: Seuraa tunnettuja tilejä
       follows_title: Seurantaehdotuksia
@@ -2173,10 +2173,10 @@ fi:
       post_action: Kirjoita
       post_step: Tervehdi maailmaa sanoin, kuvin, videoin ja äänestyksin.
       post_title: Tee ensimmäinen julkaisusi
-      share_step: Kerro ystävillesi, kuinka sinut voi löytää Mastodonista.
-      share_title: Jaa Mastodon-profiilisi
+      share_step: Kerro ystävillesi, kuinka sinut voi löytää Nutshellista.
+      share_title: Jaa Nutshell-profiilisi
       sign_in_action: Kirjaudu sisään
-      subject: Tervetuloa Mastodoniin
+      subject: Tervetuloa Nutshelliin
       title: Tervetuloa mukaan, %{name}!
   users:
     follow_limit_reached: Et voi seurata yli %{limit} käyttäjää
@@ -2189,7 +2189,7 @@ fi:
   verification:
     extra_instructions_html: <strong>Vinkki:</strong> Verkkosivustollasi oleva linkki voi olla myös näkymätön. Olennainen osuus on <code>rel="me"</code>, joka estää toiseksi henkilöksi tekeytymisen verkkosivustoilla, joilla on käyttäjien luomaa sisältöä. Voit käyttää jopa <code>link</code>-elementtiä sivun <code>head</code>-osassa elementin <code>a</code> sijaan, mutta HTML:n pitää olla käytettävissä ilman JavaScript-koodin suorittamista.
     here_is_how: Näin se onnistuu
-    hint_html: "<strong>Henkilöllisyyden vahvistaminen on Mastodonissa jokaisen käyttäjän ulottuvilla.</strong> Se perustuu avoimiin standardeihin ja on maksutonta nyt ja aina. Tarvitset vain henkilökohtaisen verkkosivuston, jonka perusteella sinut voidaan tunnistaa. Kun teet linkin tuolle verkkosivulle profiilistasi, tarkistamme, että verkkosivustolla on linkki takaisin profiiliisi, ja näytämme profiilissasi visuaalisen ilmaisimen."
+    hint_html: "<strong>Henkilöllisyyden vahvistaminen on Nutshellissa jokaisen käyttäjän ulottuvilla.</strong> Se perustuu avoimiin standardeihin ja on maksutonta nyt ja aina. Tarvitset vain henkilökohtaisen verkkosivuston, jonka perusteella sinut voidaan tunnistaa. Kun teet linkin tuolle verkkosivulle profiilistasi, tarkistamme, että verkkosivustolla on linkki takaisin profiiliisi, ja näytämme profiilissasi visuaalisen ilmaisimen."
     instructions_html: Kopioi ja liitä seuraava koodi verkkosivustosi HTML-lähdekoodiin. Lisää sitten verkkosivustosi osoite johonkin profiilisi lisäkentistä ”Muokkaa profiilia” -⁠välilehdellä ja tallenna muutokset.
     verification: Vahvistus
     verified_links: Vahvistetut linkkisi
@@ -2213,5 +2213,5 @@ fi:
     otp_required: Jos haluat käyttää suojausavaimia, ota ensin kaksivaiheinen todennus käyttöön.
     registered_on: Rekisteröity %{date}
   wrapstodon:
-    description: Katso, kuinka %{name} käytti Mastodonia tänä vuonna!
+    description: Katso, kuinka %{name} käytti Nutshellia tänä vuonna!
     title: Käyttäjän %{name} Wrapstodon vuodelle %{year}

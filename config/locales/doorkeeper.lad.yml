@@ -121,7 +121,7 @@ lad:
         admin/accounts: Administrasyon de kuentos
         admin/all: Todas las funksyones administrativas
         admin/reports: Administrasyon de raportos
-        all: Akseso total a tu kuento de Mastodon
+        all: Akseso total a tu kuento de Nutshell
         blocks: Blokos
         bookmarks: Markadores
         conversations: Konversasyones
@@ -134,7 +134,7 @@ lad:
         media: Aneksos de multimedia
         mutes: Silensiasyones
         notifications: Avizos
-        profile: Tu profil de Mastodon
+        profile: Tu profil de Nutshell
         push: Avizos arrepushados
         reports: Raportos
         search: Bushkeda

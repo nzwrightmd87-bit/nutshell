@@ -1,7 +1,7 @@
 {
   "about.blocks": "Մոդերացուող սպասարկիչներ",
   "about.contact": "Կապ՝",
-  "about.disclaimer": "Մաստոդոնը ազատ, բաց ելակոդով ծրագրակազմ է, յայտնի Mastodon gGmbH ապրանքանշանով։",
+  "about.disclaimer": "Nutshell is open-source software built for your community.",
   "about.domain_blocks.silenced.title": "Սահմանափակ",
   "about.domain_blocks.suspended.title": "Սպասող",
   "about.not_available": "Այս տեղեկութիւնը տեսանելի չի այս սերուերում։",
@@ -102,7 +102,7 @@
   "compose.language.search": "Որոնել լեզուներ",
   "compose.published.open": "Բացել",
   "compose_form.direct_message_warning_learn_more": "Իմանալ աւելին",
-  "compose_form.encryption_warning": "Posts on Mastodon are not end-to-end encrypted. Do not share any dangerous information over Mastodon.",
+  "compose_form.encryption_warning": "Posts on Nutshell are not end-to-end encrypted. Do not share any dangerous information over Nutshell.",
   "compose_form.hashtag_warning": "This post won't be listed under any hashtag as it is unlisted. Only public posts can be searched by hashtag.",
   "compose_form.lock_disclaimer": "Քո հաշիւը {locked} չէ։ Իւրաքանչիւրութիւն ոք կարող է հետեւել քեզ եւ տեսնել միայն հետեւողների համար նախատեսուած գրառումները։",
   "compose_form.lock_disclaimer.lock": "փակ",

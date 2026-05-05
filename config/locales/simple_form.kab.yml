@@ -20,7 +20,7 @@ kab:
         irreversible: Tisuffaɣ i tessazedgeḍ ad ttwakksent i lebda, ula ma tekkseḍ imsizdeg-nni ar zdat
         locale: Tutlayt n ugrudem, imaylen d yilɣa yettudemren
         password: Seqdec ma drus 8 n yisekkilen
-        setting_always_send_emails: S umata, ilɣa s yimayl ur d-ttwaceyyεen ara mi ara tesseqdaceḍ Mastodon s wudem urmid
+        setting_always_send_emails: S umata, ilɣa s yimayl ur d-ttwaceyyεen ara mi ara tesseqdaceḍ Nutshell s wudem urmid
         setting_display_media_default: Ffer imidyaten yettwacreḍ d infariyen
         setting_display_media_hide_all: Ffer yal tikkelt akk taywalt
         setting_display_media_show_all: Ffer yal tikkelt teywalt yettwacreḍ d tanafrit
@@ -29,7 +29,7 @@ kab:
         name: 'Ha-t-an kra seg ihacṭagen i tesseqdaceḍ ussan-a ineggura maḍi :'
       form_admin_settings:
         min_age: Ad ttwasutren yiseqdacen ad sentemen azemz-nsen n tlalit deg ujerred
-        site_contact_username: Amek i zemren ad ak·em-id-afen medden ɣef Mastodon.
+        site_contact_username: Amek i zemren ad ak·em-id-afen medden ɣef Nutshell.
       form_challenge:
         current_password: Tkecmeḍ ɣer temnaḍt taɣellsant
       imports:

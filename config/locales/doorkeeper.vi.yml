@@ -126,7 +126,7 @@ vi:
         admin/accounts: Quản trị tài khoản
         admin/all: Mọi chức năng quản trị
         admin/reports: Quản trị báo cáo
-        all: Toàn quyền truy cập tài khoản Mastodon
+        all: Toàn quyền truy cập tài khoản Nutshell
         blocks: Chặn
         bookmarks: Tút đã lưu
         conversations: Thảo luận
@@ -139,7 +139,7 @@ vi:
         media: Tập tin đính kèm
         mutes: Đã phớt lờ
         notifications: Thông báo
-        profile: Hồ sơ Mastodon của bạn
+        profile: Hồ sơ Nutshell của bạn
         push: Thông báo đẩy
         reports: Báo cáo
         search: Tìm kiếm

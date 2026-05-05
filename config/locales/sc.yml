@@ -1,10 +1,10 @@
 ---
 sc:
   about:
-    about_mastodon_html: 'Sa rete sotziale de su benidore: sena publitzidade, sena vigilàntzia corporativa, disinnu èticu e detzentralizatzione! Sias mere de is datos tuos cun Mastodon!'
+    about_mastodon_html: 'Sa rete sotziale de su benidore: sena publitzidade, sena vigilàntzia corporativa, disinnu èticu e detzentralizatzione! Sias mere de is datos tuos cun Nutshell!'
     contact_missing: No cunfiguradu
     contact_unavailable: No a disponimentu
-    hosted_on: Mastodon allogiadu in %{domain}
+    hosted_on: Nutshell allogiadu in %{domain}
     title: Informatziones
   accounts:
     followers:
@@ -657,7 +657,7 @@ sc:
     animations_and_accessibility: Animatziones e atzessibilidade
     discovery: Iscoberta
     localization:
-      body: Mastodon est bortadu in manera voluntària.
+      body: Nutshell est bortadu in manera voluntària.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Chie si siat podet contribuire.
     sensitive_content: Cuntenutu sensìbile
@@ -684,9 +684,9 @@ sc:
     delete_account: Cantzella su contu
     delete_account_html: Si boles cantzellare su contu, ddu podes <a href="%{path}">fàghere inoghe</a>. T'amus a dimandare una cunfirmatzione.
     description:
-      prefix_invited_by_user: "@%{name} t'at invitadu a custu serbidore de Mastodon!"
-      prefix_sign_up: Registra·ti oe a Mastodon!
-      suffix: Cun unu contu as a pòdere sighire gente, publicare e cuncambiare messàgios cun persones de cale si siat serbidore de Mastodon e àteru!
+      prefix_invited_by_user: "@%{name} t'at invitadu a custu serbidore de Nutshell!"
+      prefix_sign_up: Registra·ti oe a Nutshell!
+      suffix: Cun unu contu as a pòdere sighire gente, publicare e cuncambiare messàgios cun persones de cale si siat serbidore de Nutshell e àteru!
     dont_have_your_security_key: Non tenes sa crae de seguresa tua?
     forgot_password: Ti ses iscarèssidu de sa crae?
     invalid_reset_password_token: Su còdighe de autorizatzione pro resetare sa crae no est vàlidu o est iscadidu. Dimanda·nde un'àteru.
@@ -787,7 +787,7 @@ sc:
       content: Faddina dae s'ala nostra.
       title: Custa pàgina no est curreta
     '503': Faddina in sa trasmissione de sa pàgina pro more de una faddina temporànea de su serbidore.
-    noscript_html: Pro impreare s'aplicatzione web de Mastodon, ativa JavaScript. In alternativa, proa una de is <a href="%{apps_path}">aplicatziones nativas</a> pro Mastodon in sa prataforma tua.
+    noscript_html: Pro impreare s'aplicatzione web de Nutshell, ativa JavaScript. In alternativa, proa una de is <a href="%{apps_path}">aplicatziones nativas</a> pro Nutshell in sa prataforma tua.
   existing_username_validator:
     not_found: impossìbile agatare utentes locales cun cussu nòmine
     not_found_multiple: impossìbile agatare %{usernames}
@@ -1087,7 +1087,7 @@ sc:
     current_session: Sessione atuale
     date: Data
     description: "%{browser} de %{platform}"
-    explanation: Custos sunt is navigadores web de is chi ses intradu in su contu tuo de Mastodon.
+    explanation: Custos sunt is navigadores web de is chi ses intradu in su contu tuo de Nutshell.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1112,7 +1112,7 @@ sc:
     aliases: Nomìngios de su contu
     appearance: Aspetu
     authorized_apps: Aplicatziones autorizadas
-    back: Torra a Mastodon
+    back: Torra a Nutshell
     delete: Eliminatzione de su contu
     development: Isvilupu
     edit_profile: Modìfica profilu
@@ -1218,7 +1218,7 @@ sc:
     welcome:
       apps_ios_action: Iscàrriga·dda dae sa butega de aplicatziones
       apps_step: Iscàrriga is aplicatziones ufitziales nostras.
-      apps_title: Aplicatziones de Mastodon
+      apps_title: Aplicatziones de Nutshell
       edit_profile_action: Personaliza
       edit_profile_title: Personaliza su profilu tuo
       explanation: Inoghe ddoe at una paja de impòsitos pro cumintzare
@@ -1227,9 +1227,9 @@ sc:
       follow_title: Personaliza s'ischermu printzipale
       post_action: Iscrie
       post_title: Pùblica pro sa primu borta
-      share_title: Cumpartzi su profilu tuo de Mastodon
+      share_title: Cumpartzi su profilu tuo de Nutshell
       sign_in_action: Intra
-      subject: Ti donamus su benebènnidu a Mastodon
+      subject: Ti donamus su benebènnidu a Nutshell
       title: Ti donamus su benebènnidu, %{name}!
   users:
     follow_limit_reached: Non podes sighire prus de %{limit} persones

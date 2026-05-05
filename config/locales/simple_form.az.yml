@@ -8,7 +8,7 @@ az:
         current_password: Təhlükəsizlik səbəblərinə görə lütfən hazırkı hesabın parolunu daxil edin
         phrase: Mətndəki böyük-kiçik hərfdən və ya göndərişin məzmun xəbərdarlığından asılı olmayaraq uyuşdurulacaq
         setting_aggregate_reblogs: Təzəlikcə təkrar paylaşılmış göndərişlər üçün yeni təkrar paylaşımlar göstərilməsin (yalnız yeni alınan təkrar paylaşımlara təsir edir).
-        setting_always_send_emails: Normalda, Mastodon-u aktiv olaraq istifadə etdiyiniz zaman e-poçt bildirişləri göndərilməyəcək
+        setting_always_send_emails: Normalda, Nutshell-u aktiv olaraq istifadə etdiyiniz zaman e-poçt bildirişləri göndərilməyəcək
         setting_default_sensitive: Həssas media, ilkin olaraq gizlədilir və bir kliklə göstərilə bilər
         setting_display_media_default: Həssas olaraq işarələnmiş medianı gizlət
         setting_display_media_hide_all: Medianı həmişə gizlət
@@ -21,7 +21,7 @@ az:
       form_admin_settings:
         content_cache_retention_period: Digər serverlərdən olan bütün göndərişlər (təkrar paylaşımlar və cavablar daxil olmaqla) göstərilən gün sayından sonra, lokal istifadəçilərin həmin göndərişlərlə qarşılıqlı əlaqəsinə baxılmadan silinəcək. Buna, lokal istifadəçinin həmin göndərişi əlfəcinlərə və ya sevimlilərə əlavə etdiyi hallar da daxildir. Fərqli instansiyalardakı istifadəçilər arasında olan şəxsi adçəkmələr də itəcək və bərpası mümkün olmayacaq. Bu ayarın istifadəsi xüsusi məqsədli instansiyalar üçün nəzərdə tutulub və ümumi məqsədli istifadəyə tətbiq edildikdə bir çox istifadəçi gözləntilərini qarşılamaya bilər.
       imports:
-        data: Digər Mastodon serverindən xaricə köçürdüyünüz CSV faylı
+        data: Digər Nutshell serverindən xaricə köçürdüyünüz CSV faylı
       ip_block:
         severities:
           no_access: Bütün resurslara erişimi əngəllə

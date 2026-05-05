@@ -126,7 +126,7 @@ fr:
         admin/accounts: Gestion des comptes
         admin/all: Toutes les fonctionnalités d'administration
         admin/reports: Gestion des rapports
-        all: Accès complet à votre compte Mastodon
+        all: Accès complet à votre compte Nutshell
         blocks: Bloqués
         bookmarks: Marque-pages
         conversations: Conversations
@@ -139,7 +139,7 @@ fr:
         media: Fichiers médias
         mutes: Masqués
         notifications: Notifications
-        profile: Votre profil Mastodon
+        profile: Votre profil Nutshell
         push: Notifications push
         reports: Signalements
         search: Recherche

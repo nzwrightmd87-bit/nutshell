@@ -1,7 +1,7 @@
 {
   "about.blocks": "ڕاژە سەرپەرشتیکراو",
   "about.contact": "پەیوەندی کردن:",
-  "about.disclaimer": "ماستودۆن بە خۆڕایە، پرۆگرامێکی سەرچاوە کراوەیە، وە نیشانە بازرگانیەکەی ماستودۆن (gGmbH)ە",
+  "about.disclaimer": "Nutshell is open-source software built for your community.",
   "about.domain_blocks.no_reason_available": "هۆکار بەردەست نیە",
   "about.domain_blocks.preamble": "ماستۆدۆن بە گشتی ڕێگەت پێدەدات بە پیشاندانی ناوەڕۆکەکان و کارلێک کردن لەگەڵ بەکارهێنەران لە هەر ڕاژەیەکی تر بە گشتی. ئەمانە ئەو بەدەرکردنانەن کە کراون لەسەر ئەم ڕاژە تایبەتە.",
   "about.domain_blocks.silenced.explanation": "بە گشتی ناتوانی زانیاریە تایبەتەکان و ناوەڕۆکی ئەم ڕاژەیە ببینی، مەگەر بە ڕوونی بەدوایدا بگەڕێیت یان هەڵیبژێریت بۆ شوێنکەوتنی.",
@@ -129,7 +129,7 @@
   "compose.published.open": "بیکەوە",
   "compose.saved.body": "پۆستەکە سەیڤ کراوە.",
   "compose_form.direct_message_warning_learn_more": "زیاتر فێربه",
-  "compose_form.encryption_warning": "Posts on Mastodon are not end-to-end encrypted. Do not share any dangerous information over Mastodon.",
+  "compose_form.encryption_warning": "Posts on Nutshell are not end-to-end encrypted. Do not share any dangerous information over Nutshell.",
   "compose_form.hashtag_warning": "ئەم بڵاوکراوەیە لە ژێر هیچ هاشتاگێکدا دا نانرێت وەک ئەوەیە، کە گشتی نەبێت. تەنها بڵاوکراوە گشتیەکان دەتوانرێ بە هاشتاگ گەڕانی بۆ بکرێت.",
   "compose_form.lock_disclaimer": "هەژمێرەکەی لە حاڵەتی {locked}. هەر کەسێک دەتوانێت شوێنت بکەوێت بۆ پیشاندانی بابەتەکانی تەنها دوایخۆی.",
   "compose_form.lock_disclaimer.lock": "قفڵ دراوە",

@@ -4,10 +4,10 @@ gl:
     hints:
       account:
         attribution_domains: Un por liña. Como protección para falsas atribucións.
-        discoverable: As túas publicacións públicas e perfil poden mostrarse ou recomendarse en varias zonas de Mastodon e o teu perfil ser suxerido a outras usuarias.
+        discoverable: As túas publicacións públicas e perfil poden mostrarse ou recomendarse en varias zonas de Nutshell e o teu perfil ser suxerido a outras usuarias.
         display_name: O teu nome completo ou un nome divertido.
         fields: Páxina web, pronome, idade, o que ti queiras.
-        indexable: As túas publicacións públicas poderían aparecer nos resultados das buscas en Mastodon. En calquera caso, as persoas que interactúen coas túas publicacións poderán buscalas igualmente.
+        indexable: As túas publicacións públicas poderían aparecer nos resultados das buscas en Nutshell. En calquera caso, as persoas que interactúen coas túas publicacións poderán buscalas igualmente.
         note: 'Podes @mencionar a outras persoas ou #cancelos.'
         show_collections: Calquera poderá ver os teus seguimentos e seguidoras, e as persoas ás que segues tamén poden ver que as segues.
         unlocked: Poderán seguirte directamente sen solicitar o seguimento. Desmarca isto se queres revisar manualmente cada solicitude e decidir se aceptas ou rexeitas novos seguimentos.
@@ -54,11 +54,11 @@ gl:
         password: Utiliza 8 caracteres ao menos
         phrase: Concordará independentemente das maiúsculas ou avisos de contido na publicación
         scopes: A que APIs terá acceso a aplicación. Se escolles un ámbito de alto nivel, non precisas seleccionar elementos individuais.
-        setting_advanced_layout: Mostrar Mastodon coa disposición en varias columnas, para poder ver a cronoloxía, notificacións e unha terceira columna da túa elección. Non se recomenda con pantallas pequenas.
+        setting_advanced_layout: Mostrar Nutshell coa disposición en varias columnas, para poder ver a cronoloxía, notificacións e unha terceira columna da túa elección. Non se recomenda con pantallas pequenas.
         setting_aggregate_reblogs: Non mostrar novas promocións de publicacións que foron promovidas recentemente (só afecta a promocións recén recibidas)
-        setting_always_send_emails: Como norma xeral non che enviamos correos electrónicos se usas activamente Mastodon
+        setting_always_send_emails: Como norma xeral non che enviamos correos electrónicos se usas activamente Nutshell
         setting_boost_modal: Ao activar a opción as promocións primeiro abrirán un cadro de confirmación no que poderás cambiar a visibilidade da túa promoción.
-        setting_default_quote_policy_private: As publicacións só para seguidoras creadas con Mastodon non poden ser citadas.
+        setting_default_quote_policy_private: As publicacións só para seguidoras creadas con Nutshell non poden ser citadas.
         setting_default_quote_policy_unlisted: Cando alguén te cite, a súa publicación non aparecerá nas cronoloxías de popularidade.
         setting_default_sensitive: Medios sensibles marcados como ocultos por defecto e móstranse cun click
         setting_display_media_default: Ocultar medios marcados como sensibles
@@ -91,8 +91,8 @@ gl:
         bootstrap_timeline_accounts: Vas fixar estas contas na parte superior das recomendacións de seguimento. Escribe unha lista de contas separadas por vírgulas.
         closed_registrations_message: Móstrase cando non se admiten novas usuarias
         content_cache_retention_period: Todas as publicacións procedentes de outros servidores (incluído promocións e respostas) van ser eliminadas despois do número de días indicado, sen importar as interaccións das usuarias locais con esas publicacións. Esto inclúe publicacións que a usuaria local marcou como favoritas ou incluíu nos marcadores. As mencións privadas entre usuarias de diferentes instancias tamén se eliminarán e non se poderán restablecer. O uso desta ferramenta esta orientado a situacións especiais e estraga moitas das expectativas das usuarias ao implementala cun propósito de uso xeral.
-        custom_css: Podes aplicar deseños personalizados na versión web de Mastodon.
-        favicon: WEBP, PNG, GIF ou JPG. Sobrescribe a icona de favoritos de Mastodon por defecto cunha icona personalizada.
+        custom_css: Podes aplicar deseños personalizados na versión web de Nutshell.
+        favicon: WEBP, PNG, GIF ou JPG. Sobrescribe a icona de favoritos de Nutshell por defecto cunha icona personalizada.
         landing_page: Elixe a páxina que verán as persoas que se acheguen por primeira vez ao teu servidor. Se elixes «Tendencias» entón debes activar as tendencias nos Axustes de Descubrimento. Se elixes «Cronoloxía local», hai que configurar nos Axustes de Descubrimento a opción «Acceso das cronoloxías en directo ás publicacións locais» como «Calquera».
         mascot: Sobrescribe a ilustración na interface web avanzada.
         media_cache_retention_period: Os ficheiros multimedia de publicacións de usuarias remotas están almacenados no teu servidor. Ao establecer un valor positivo, o multimedia vaise eliminar despois do número de días establecido. Se o multimedia fose requerido após ser eliminado entón descargaríase outra vez, se aínda está dispoñible na orixe. Debido a restricións sobre a frecuencia en que o servizo de vista previa trae recursos de terceiras partes, é recomendable establecer este valor polo menos en 14 días, ou as tarxetas de vista previa non se actualizarán baixo demanda para casos anteriores a ese prazo.
@@ -101,7 +101,7 @@ gl:
         profile_directory: O directorio de perfís inclúe a tódalas usuarias que optaron por ser descubribles.
         require_invite_text: Cando os rexistros requiren aprobación manual, facer que o texto "Por que te queres rexistrar?" do convite sexa obrigatorio en lugar de optativo
         site_contact_email: De que xeito se pode contactar contigo para temas legais ou obter axuda.
-        site_contact_username: De que xeito se pode contactar contigo en Mastodon.
+        site_contact_username: De que xeito se pode contactar contigo en Nutshell.
         site_extended_description: Calquera información adicional que poida ser útil para visitantes e usuarias. Pode utilizarse sintaxe Markdown.
         site_short_description: Breve descrición que axuda a identificar de xeito único o teu servidor. Quen o xestiona, a quen vai dirixido?
         site_terms: Escribe a túa propia directiva de privacidade ou usa o valor por defecto. Podes usar sintaxe Markdown.
@@ -111,11 +111,11 @@ gl:
         thumbnail: Imaxe con proporcións 2:1 mostrada xunto á información sobre o servidor.
         trendable_by_default: Omitir a revisión manual dos contidos populares. Poderás igualmente eliminar manualmente os elementos que vaian aparecendo.
         trends: As tendencias mostran publicacións, cancelos e novas historias que teñen popularidade no teu servidor.
-        wrapstodon: Ofrecerlle ás usuarias locais crear un divertido resumo do seu uso de Mastodon durante o ano. Esta ferramenta está dispoñible entre o 10 e o 31 de Decembro de cada ano, e ofréceselle ás usuarias que publicaron polo menos unha mensaxe Pública ou Pública Limitada e utilizaron polo menos un cancelo durante o ano.
+        wrapstodon: Ofrecerlle ás usuarias locais crear un divertido resumo do seu uso de Nutshell durante o ano. Esta ferramenta está dispoñible entre o 10 e o 31 de Decembro de cada ano, e ofréceselle ás usuarias que publicaron polo menos unha mensaxe Pública ou Pública Limitada e utilizaron polo menos un cancelo durante o ano.
       form_challenge:
         current_password: Estás entrando nun área segura
       imports:
-        data: Ficheiro CSV exportado desde outro servidor Mastodon
+        data: Ficheiro CSV exportado desde outro servidor Nutshell
       invite_request:
         text: Esto axudaranos a revisar a tua solicitude
       ip_block:
@@ -164,7 +164,7 @@ gl:
         name: Nome público do rol, se o rol se mostra como unha insignia
         permissions_as_keys: As usuarias con este rol terán acceso a...
         position: O rol superior decide nos conflitos en certas situacións. Algunhas accións só poden aplicarse sobre roles cunha prioridade menor
-        require_2fa: Váiselle pedir ás usuarias con este rol que configuren un segundo factor de autenticación para usar Mastodon
+        require_2fa: Váiselle pedir ás usuarias con este rol que configuren un segundo factor de autenticación para usar Nutshell
       username_block:
         allow_with_approval: No lugar de evitar a cración directa de contas, as contas mediante regras van precisar a túa aprobación
         comparison: Ten en conta o Sunthorpe Problem cando se bloquean coincidencias parciais
@@ -348,7 +348,7 @@ gl:
         software_updates:
           all: Notificar todas as actualizacións
           critical: Notificar só as actualizacións críticas
-          label: Hai unha nova versión de Mastodon dispoñible
+          label: Hai unha nova versión de Nutshell dispoñible
           none: Non notificar nunca as actualizacións (non se aconsella)
           patch: Notificar as actualizacións de arranxos
         trending_tag: Hai que revisar un novo tema popular

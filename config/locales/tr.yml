@@ -1,10 +1,10 @@
 ---
 tr:
   about:
-    about_mastodon_html: 'Geleceğin sosyal ağı: Reklam yok, kurumsal gözetim yok, etik tasarım ve merkeziyetsizlik! Mastodon ile verilerinizin sahibi olun!'
+    about_mastodon_html: 'Geleceğin sosyal ağı: Reklam yok, kurumsal gözetim yok, etik tasarım ve merkeziyetsizlik! Nutshell ile verilerinizin sahibi olun!'
     contact_missing: Ayarlanmadı
     contact_unavailable: Bulunamadı
-    hosted_on: Mastodon %{domain} üzerinde barındırılıyor
+    hosted_on: Nutshell %{domain} üzerinde barındırılıyor
     title: Hakkında
   accounts:
     errors:
@@ -766,7 +766,7 @@ tr:
         moderation: Denetim
         special: Özel
       delete: Sil
-      description_html: "<strong>Kullanıcı rolleri</strong> ile, kullanıcılarınızın Mastodon'un hangi işlevlerine ve alanlarına erişebileceğini düzenleyebilirsiniz."
+      description_html: "<strong>Kullanıcı rolleri</strong> ile, kullanıcılarınızın Nutshell'un hangi işlevlerine ve alanlarına erişebileceğini düzenleyebilirsiniz."
       edit: "'%{name}' rolünü düzenle"
       everyone: Varsayılan izinler
       everyone_full_description_html: Bu, herhangi bir rol atanmamış olanlar da olmak üzere <strong>tüm kullanıcıları</strong> etkileyen <strong>temel rol</strong>dür. Diğer tüm roller izinleri bu rolden alıyorlar.
@@ -838,27 +838,27 @@ tr:
         rules_hint: Kullanıcılarınızın uyması beklenen kurallar için özel bir alan var.
         title: Hakkında
       allow_referrer_origin:
-        desc: Kullanıcılarınız harici sitelere giden bağlantılara tıkladığında, tarayıcıları Mastodon sunucunuzun adresini yönlendiren olarak gönderebilir. Bu, kullanıcılarınızı benzersiz bir şekilde tanımlayacaksa, örneğin bu kişisel bir Mastodon sunucusuysa, bunu devre dışı bırakın.
-        title: Harici sitelerin Mastodon sunucunuzu bir trafik kaynağı olarak görmesine izin verin
+        desc: Kullanıcılarınız harici sitelere giden bağlantılara tıkladığında, tarayıcıları Nutshell sunucunuzun adresini yönlendiren olarak gönderebilir. Bu, kullanıcılarınızı benzersiz bir şekilde tanımlayacaksa, örneğin bu kişisel bir Nutshell sunucusuysa, bunu devre dışı bırakın.
+        title: Harici sitelerin Nutshell sunucunuzu bir trafik kaynağı olarak görmesine izin verin
       appearance:
-        preamble: Mastodon'un web arayüzünü düzenleyin.
+        preamble: Nutshell'un web arayüzünü düzenleyin.
         title: Görünüm
       branding:
-        preamble: Sunucunuzun markalaşması ağdaki diğer sunuculardan farklıdır. Bu bilgiler Mastodon'un web arayüzü, doğal uygulamalar, diğer sitelerdeki ve ileti uygulamalarındaki bağlantı önizlemeleri, vb. gibi çeşitli ortamlarda görüntülenebilir. Bu nedenle bu bilgiyi açık, kısa ve özlü tutmak en iyisidir.
+        preamble: Sunucunuzun markalaşması ağdaki diğer sunuculardan farklıdır. Bu bilgiler Nutshell'un web arayüzü, doğal uygulamalar, diğer sitelerdeki ve ileti uygulamalarındaki bağlantı önizlemeleri, vb. gibi çeşitli ortamlarda görüntülenebilir. Bu nedenle bu bilgiyi açık, kısa ve özlü tutmak en iyisidir.
         title: Marka
       captcha_enabled:
         desc_html: Bu, güvenlik ve gizlilikle ilgili bir endişe kaynağı olabilecek hCaptcha'nın harici komut dosyalarına dayanır. Ayrıca <strong>bu, kayıt sürecini bazı (özellikle engelli) kişiler için önemli ölçüde daha az erişilebilir hale getirebilir</strong>. Bu nedenlerle, lütfen onaya dayalı veya davete dayalı kayıt gibi alternatif önlemleri göz önünde bulundurun.
         title: Yeni kullanıcıların hesaplarını doğrulamaları için bir CAPTCHA çözmelerini gerektir
       content_retention:
         danger_zone: Tehlikeli bölge
-        preamble: Kullanıcıların ürettiği içeriğin Mastodon'da nasıl saklanacağını denetleyin.
+        preamble: Kullanıcıların ürettiği içeriğin Nutshell'da nasıl saklanacağını denetleyin.
         title: İçerik saklama
       default_noindex:
         desc_html: Bu ayarı kendileri değiştirmeyen tüm kullanıcıları etkiler
         title: Varsayılan olarak kullanıcıları arama motoru indekslemesinin dışında tut
       discovery:
         follow_recommendations: Takip önerileri
-        preamble: İlginç içeriği gezinmek, Mastodon'da kimseyi tanımayan yeni kullanıcıları alıştırmak için oldukça etkilidir. Sunucunuzdaki çeşitli keşif özelliklerinin nasıl çalıştığını denetleyin.
+        preamble: İlginç içeriği gezinmek, Nutshell'da kimseyi tanımayan yeni kullanıcıları alıştırmak için oldukça etkilidir. Sunucunuzdaki çeşitli keşif özelliklerinin nasıl çalıştığını denetleyin.
         privacy: Gizlilik
         profile_directory: Profil dizini
         public_timelines: Genel zaman çizelgeleri
@@ -901,7 +901,7 @@ tr:
       destroyed_msg: Site yüklemesi başarıyla silindi!
     software_updates:
       critical_update: Kritik — lütfen hemen güncelleyin
-      description: Son düzeltme ve özelliklerden yararlanmak için Mastodon kurulumunu güncel tutmanızı öneriyoruz. Üstelik güvenlik sorunlarından kaçınmak için Mastodon'u zamanında güncellemek kritiktir. Bu nedenlerle Mastodon her 30 dakikada bir güncellemeleri denetler ve e-posta bildirim seçeneğinize göre size haber verir.
+      description: Son düzeltme ve özelliklerden yararlanmak için Nutshell kurulumunu güncel tutmanızı öneriyoruz. Üstelik güvenlik sorunlarından kaçınmak için Nutshell'u zamanında güncellemek kritiktir. Bu nedenlerle Nutshell her 30 dakikada bir güncellemeleri denetler ve e-posta bildirim seçeneğinize göre size haber verir.
       documentation_link: Daha fazlası
       release_notes: Sürüm notları
       title: Mevcut güncellemeler
@@ -969,7 +969,7 @@ tr:
         message_html: Elasticsearch indeks eşlemeleri artık güncel değil. Lütfen <code>tootctl search deploy --only=%{value}</code> komutunu çalıştırın
       elasticsearch_preset:
         action: Belgelere bakın
-        message_html: Elasticsearch kümenizin birden fazla düğümü var ama Mastodon onları kullanmak üzere yapılandırılmamış.
+        message_html: Elasticsearch kümenizin birden fazla düğümü var ama Nutshell onları kullanmak üzere yapılandırılmamış.
       elasticsearch_preset_single_node:
         action: Belgelere bakın
         message_html: Elasticsearch kümenizin tek bir düğümü var, <code>ES_PRESET</code> değişkenine <code>single_node_cluster</code> değeri verilmelidir.
@@ -987,13 +987,13 @@ tr:
         message_html: "%{value} kuyruk(lar)ı için herhangi bir Sidekiq süreci çalışmıyor. Lütfen Sidekiq yapılandırmanızı gözden geçirin"
       software_version_check:
         action: Mevcut güncellemeleri görün
-        message_html: Mastodon güncellemesi mevcut.
+        message_html: Nutshell güncellemesi mevcut.
       software_version_critical_check:
         action: Mevcut güncellemeleri göster
-        message_html: Kritik bir Mastodon güncellemesi var, lütfen en kısa sürede güncelleyin.
+        message_html: Kritik bir Nutshell güncellemesi var, lütfen en kısa sürede güncelleyin.
       software_version_patch_check:
         action: Mevcut güncellemeleri göster
-        message_html: Mastodon yama güncellemesi mevcut.
+        message_html: Nutshell yama güncellemesi mevcut.
       upload_check_privacy_error:
         action: Daha fazla bilgi için buraya tıklayın
         message_html: "<strong>Web sunucunuz hatalı yapılandırılmış. Kullanıcılarınızın gizliliği tehlikede.</strong>"
@@ -1153,7 +1153,7 @@ tr:
     webhooks:
       add_new: Uç nokta ekle
       delete: Sil
-      description_html: Bir <strong>web kancası</strong> Mastodon'un, uygulamanızda seçili olaylar hakkında <strong>gerçek zamanlı bildirimler</strong> göndermesini sağlar, böylece uygulamanız <strong>otomatik olarak tepkileri tetikleyebilir</strong>.
+      description_html: Bir <strong>web kancası</strong> Nutshell'un, uygulamanızda seçili olaylar hakkında <strong>gerçek zamanlı bildirimler</strong> göndermesini sağlar, böylece uygulamanız <strong>otomatik olarak tepkileri tetikleyebilir</strong>.
       disable: Devre dışı bırak
       disabled: Devre dışı
       edit: Uç nokta düzenle
@@ -1187,8 +1187,8 @@ tr:
       next_steps: Yönetim kararını geri almak için itirazı onaylayabilir veya itirazı görmezden gelebilirsiniz.
       subject: "%{username}, %{instance} hakkındaki bir yönetim kararına itiraz ediyor"
     new_critical_software_updates:
-      body: Mastodon'un yeni kritik sürümleri yayınlandı, en kısa sürede güncellemek isteyebilirsiniz!
-      subject: "%{instance} için kritik Mastodon güncellemeleri mevcut!"
+      body: Nutshell'un yeni kritik sürümleri yayınlandı, en kısa sürede güncellemek isteyebilirsiniz!
+      subject: "%{instance} için kritik Nutshell güncellemeleri mevcut!"
     new_pending_account:
       body: Yeni hesabın detayları aşağıdadır. Bu başvuruyu onaylayabilir ya da reddedebilirsiniz.
       subject: "%{instance} üzerinde gözden geçirmek için yeni hesap (%{username})"
@@ -1197,8 +1197,8 @@ tr:
       body_remote: "%{domain} alan adından birisi %{target} kişisini bildirdi"
       subject: "%{instance} için yeni şikayet (#%{id})"
     new_software_updates:
-      body: Yeni Mastodon sürümleri yayınlandı, güncellemek isteyebilirsiniz!
-      subject: "%{instance} için yeni Mastodon sürümleri mevcut!"
+      body: Yeni Nutshell sürümleri yayınlandı, güncellemek isteyebilirsiniz!
+      subject: "%{instance} için yeni Nutshell sürümleri mevcut!"
     new_trends:
       body: 'Aşağıdaki öğeler herkese açık olarak gösterilmeden önce gözden geçirilmelidir:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ tr:
     boosting_preferences_info_html: "<strong>İpucu:</strong> Ayarlardan bağımsız olarak, %{icon} Öne Çıkar simgesine <kbd>Shift</kbd> + <kbd>Tıklama</kbd> uygulandığından öne çıkarma hemen gerçekleştirilir."
     discovery: Keşfet
     localization:
-      body: Mastodon, gönüllüler tarafından çevrilmektedir.
+      body: Nutshell, gönüllüler tarafından çevrilmektedir.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Herkes katkıda bulunabilir.
     sensitive_content: Hassas içerik
@@ -1261,9 +1261,9 @@ tr:
     delete_account: Hesabı sil
     delete_account_html: Hesabını silmek istersen, <a href="%{path}">buradan devam edebilirsin</a>. Onay istenir.
     description:
-      prefix_invited_by_user: "@%{name} sizi bu Mastodon sunucusuna katılmaya davet ediyor!"
-      prefix_sign_up: Bugün Mastodon'a kaydolun!
-      suffix: Bir hesapla, kişileri takip edebilir, güncellemeler gönderebilir, herhangi bir Mastodon sunucusundan kullanıcılarla mesaj alışverişinde bulunabilir ve daha birçok şey yapabilirsin!
+      prefix_invited_by_user: "@%{name} sizi bu Nutshell sunucusuna katılmaya davet ediyor!"
+      prefix_sign_up: Bugün Nutshell'a kaydolun!
+      suffix: Bir hesapla, kişileri takip edebilir, güncellemeler gönderebilir, herhangi bir Nutshell sunucusundan kullanıcılarla mesaj alışverişinde bulunabilir ve daha birçok şey yapabilirsin!
     didnt_get_confirmation: Onaylama bağlantısını almadınız mı?
     dont_have_your_security_key: Güvenlik anahtarınız yok mu?
     forgot_password: Parolanızı mı unuttunuz?
@@ -1300,7 +1300,7 @@ tr:
     set_new_password: Yeni parola belirle
     setup:
       email_below_hint_html: İstenmeyenler dizininize bakın veya başka bir onay bağlantısı isteyin. Eğer yanlışsa e-posta adresinizi de düzeltebilirsiniz.
-      email_settings_hint_html: Mastodon kullanmaya başlamak %{email} adresine gönderdiğimiz bağlantıya tıklayın. Sizi burada bekliyoruz.
+      email_settings_hint_html: Nutshell kullanmaya başlamak %{email} adresine gönderdiğimiz bağlantıya tıklayın. Sizi burada bekliyoruz.
       link_not_received: Bağlantı gelmedi mi?
       new_confirmation_instructions_sent: Birkaç dakika içerisinde onaylama bağlantısını içeren yeni bir e-posta alacaksınız!
       title: Gelen kutunuzu kontrol edin
@@ -1309,7 +1309,7 @@ tr:
       title: "%{domain} giriş yapın"
     sign_up:
       manual_review: "%{domain} kayıtları moderatörler tarafından manuel olarak inceleniyor. Kaydınızı işlememizi kolaylaştırmak için kendiniz ve %{domain} sunucusundan neden hesap istediğiniz hakkında biraz bilgi verin."
-      preamble: Bu Mastodon sunucusu üzerinden bir hesap ile fediverseteki herhangi bir kişiyi, hangi sunucuda olursa olsun, takip edebilirsiniz.
+      preamble: Bu Nutshell sunucusu üzerinden bir hesap ile fediverseteki herhangi bir kişiyi, hangi sunucuda olursa olsun, takip edebilirsiniz.
       title: "%{domain} için kurulumunuzu yapalım."
     status:
       account_status: Hesap durumu
@@ -1325,7 +1325,7 @@ tr:
     user_privacy_agreement_html: <a href="%{privacy_policy_path}" target="_blank">Gizlilik politikasını</a> okudum ve kabul ettim
   author_attribution:
     example_title: Örnek metin
-    hint_html: Mastodon dışında haber veya günlük yazıları mı yazıyorsunuz? Bu yazılar Mastodon'da paylaşıldığında size nasıl atıf yapılacağını denetleyin.
+    hint_html: Nutshell dışında haber veya günlük yazıları mı yazıyorsunuz? Bu yazılar Nutshell'da paylaşıldığında size nasıl atıf yapılacağını denetleyin.
     instructions: 'Bu kodun yazınızın HTML''sinde olduğundan emin olun:'
     more_from_html: "%{name} kişisinden daha fazlası"
     s_blog: "%{name} kişisinin Günlüğü"
@@ -1433,7 +1433,7 @@ tr:
       content: Üzgünüz, ancak bir şey ters gitti.
       title: Bu sayfa doğru değil
     '503': Geçici sunucu hatası nedeniyle sayfa görüntülenemedi.
-    noscript_html: Mastodon web uygulamasını kullanmak için lütfen JavaScript'i etkinleştirin. Alternatif olarak, platformunuz için Mastodon <a href="%{apps_path}">yerel uygulamalardan</a> birini deneyin.
+    noscript_html: Nutshell web uygulamasını kullanmak için lütfen JavaScript'i etkinleştirin. Alternatif olarak, platformunuz için Nutshell <a href="%{apps_path}">yerel uygulamalardan</a> birini deneyin.
   existing_username_validator:
     not_found: bu kullanıcı adına sahip yerel bir kullanıcı bulunamadı
     not_found_multiple: "%{usernames} bulunamadı"
@@ -1653,7 +1653,7 @@ tr:
     unsubscribe:
       action: Evet, abonelikten çık
       complete: Abonelikten çık
-      confirmation_html: '%{domain} üzerindeki Mastodon için %{type} almayı durdurarak %{email} adresinize aboneliğinizi iptal etmek istediğinizden emin misiniz? <a href="%{settings_path}">e-posta bildirim ayarlarınızdan</a> her zaman yeniden abone olabilirsiniz.'
+      confirmation_html: '%{domain} üzerindeki Nutshell için %{type} almayı durdurarak %{email} adresinize aboneliğinizi iptal etmek istediğinizden emin misiniz? <a href="%{settings_path}">e-posta bildirim ayarlarınızdan</a> her zaman yeniden abone olabilirsiniz.'
       emails:
         notification_emails:
           favourite: favori bildirim e-postaları
@@ -1662,7 +1662,7 @@ tr:
           mention: bahsetme bildirim e-postaları
           reblog: öne çıkanlar bildirim e-postaları
       resubscribe_html: Abonelikten yanlışlıkla çıktıysanız, <a href="%{settings_path}">e-posta bildirim ayarlarınızdan</a> yeniden abone olabilirsiniz.
-      success_html: Artık %{email} adresindeki e-postanıza %{domain} üzerindeki Mastodon için %{type} almayacaksınız.
+      success_html: Artık %{email} adresindeki e-postanıza %{domain} üzerindeki Nutshell için %{type} almayacaksınız.
       title: Abonelikten çık
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ tr:
     posting_defaults: Gönderi varsayılanları
     public_timelines: Genel zaman çizelgeleri
   privacy:
-    hint_html: "<strong>Profilinizin ve gönderilerinizin nasıl bulunmasını istediğinizi yapılandırın.</strong> Mastodon'daki çeşitli özellik etkinleştirildiklerinde çok daha geniş bir izleyici kitlesine ulaşmanıza yardımcı olabilir. Durumunuza uyup uymadığını anlamak için bu ayarlara bir göz atın."
+    hint_html: "<strong>Profilinizin ve gönderilerinizin nasıl bulunmasını istediğinizi yapılandırın.</strong> Nutshell'daki çeşitli özellik etkinleştirildiklerinde çok daha geniş bir izleyici kitlesine ulaşmanıza yardımcı olabilir. Durumunuza uyup uymadığını anlamak için bu ayarlara bir göz atın."
     privacy: Gizlilik
     privacy_hint_html: Başkalarına ne kadar bilgi göstermek istediğinizi denetleyin. İnsanlar ilginç profilleri ve havalı uygulamaları diğer kişilerin takiplerine ve gönderileri paylaştıkları uygulamalara bakarak keşfederler, ama belki de gizli tutmak isteyebilirsiniz.
     reach: Erişim
     reach_hint_html: Yeni insanlar tarafından ne kadar keşfedilmek ve takip edilmek istediğinizi denetleyin. Gönderilerinizin Keşfet ekranında görüntülenmesini istiyor musunuz? Başkalarının takip önerileri listesinde görünmek istiyor musunuz? Tüm yeni takipçileri otomatik olarak kabul etmek mi yoksa her bir istek üzerinden ayrıntılı denetim mi istiyorsunuz?
     search: Ara
-    search_hint_html: Nasıl bulunmak istediğinizi denetleyin. Herkese açık gönderileriniz aracılığıyla daha fazla insanın sizi bulmasını istiyor musunuz? Mastodon dışındaki kişilerin webte arama yaptığında profilinizi bulmasını istiyor musunuz? Tüm arama motorlarından tamamen çıkmanın herkese açık bilgiler için garanti olmadığını lütfen unutmayın.
+    search_hint_html: Nasıl bulunmak istediğinizi denetleyin. Herkese açık gönderileriniz aracılığıyla daha fazla insanın sizi bulmasını istiyor musunuz? Nutshell dışındaki kişilerin webte arama yaptığında profilinizi bulmasını istiyor musunuz? Tüm arama motorlarından tamamen çıkmanın herkese açık bilgiler için garanti olmadığını lütfen unutmayın.
     title: Gizlilik ve erişim
   privacy_policy:
     title: Gizlilik Politikası
@@ -1882,7 +1882,7 @@ tr:
     current_session: Geçerli oturum
     date: Tarih
     description: "%{platform} - %{browser}"
-    explanation: Bunlar, Mastodon hesabınızda şu anda oturum açmış web tarayıcılarıdır.
+    explanation: Bunlar, Nutshell hesabınızda şu anda oturum açmış web tarayıcılarıdır.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1908,7 +1908,7 @@ tr:
     aliases: Hesap takma adları
     appearance: Görünüm
     authorized_apps: Yetkili uygulamalar
-    back: Mastodon'a geri dön
+    back: Nutshell'a geri dön
     delete: Hesap silme
     development: Geliştirme
     edit_profile: Profili düzenle
@@ -1983,9 +1983,9 @@ tr:
       direct: Özel değini
       private: Sadece takipçiler
       public: Herkese açık
-      public_long: Mastodon'da olan olmayan herkes
+      public_long: Nutshell'da olan olmayan herkes
       unlisted: Sessizce herkese açık
-      unlisted_long: Mastodon arama sonuçlarında, öne çıkanlarda ve herkese açık zaman çizelgesinde gizli
+      unlisted_long: Nutshell arama sonuçlarında, öne çıkanlarda ve herkese açık zaman çizelgesinde gizli
   statuses_cleanup:
     enabled: Eski gönderileri otomatik olarak sil
     enabled_hint: Belirli bir zaman eşiğine ulaşan eski gönderilerinizi, aşağıdaki istisnalara uymadıkları sürece otomatik olarak siler
@@ -2036,7 +2036,7 @@ tr:
     review_link: Hizmet şartlarını incele
     title: "%{domain} adresindeki hizmet şartları değişiyor"
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d %b %Y %H:%M"
@@ -2062,7 +2062,7 @@ tr:
     recovery_codes_regenerated: Kurtarma kodları başarıyla yeniden oluşturuldu
     recovery_instructions_html: 'Eğer telefonunuza erişiminizi kaybederseniz, aşağıdaki kurtarma kodlarından birini kullanarak hesabınıza giriş yapabilirsiniz. <strong>Kurtarma kodlarınızı güvenli halde tutunuz.</strong> Örneğin: kodların çıktısını alıp diğer önemli belgeleriniz ile birlikte saklayabilirsiniz.'
     resume_app_authorization: Uygulama yetkilendirmeyi sürdür
-    role_requirement: "%{domain} Mastodon'u kullanabilmeniz için İki Aşamalı Kimlik Doğrulama'yı ayarlamanızı gerektirir."
+    role_requirement: "%{domain} Nutshell'u kullanabilmeniz için İki Aşamalı Kimlik Doğrulama'yı ayarlamanızı gerektirir."
     webauthn: Güvenlik anahtarları
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ tr:
       subtitle: İtirazınız reddedildi.
       title: İtiraz reddedildi
     backup_ready:
-      explanation: Mastodon hesabınız tam bir yedeğini istediniz.
+      explanation: Nutshell hesabınız tam bir yedeğini istediniz.
       extra: Şimdi indirebilirsiniz!
       subject: Arşiviniz indirilmeye hazır
       title: Arşiv paketlemesi
@@ -2142,7 +2142,7 @@ tr:
       apps_android_action: Google Play'den edinin
       apps_ios_action: App Store'dan İndirin
       apps_step: Resmi uygulamalarımızı indirin.
-      apps_title: Mastodon uygulamaları
+      apps_title: Nutshell uygulamaları
       checklist_subtitle: 'Bu yeni sosyal sınırda başlamanızı sağlar:'
       checklist_title: Hoşgeldiniz Yapılacaklar Listesi
       edit_profile_action: Kişiselleştir
@@ -2150,13 +2150,13 @@ tr:
       edit_profile_title: Profilinizi kişiselleştirin
       explanation: İşte sana başlangıç için birkaç ipucu
       feature_action: Daha fazlası
-      feature_audience: Mastodon, hedef kitlenizi aracılar olmadan yönetmeniz için size eşsiz bir olanak sağlar. Kendi altyapınızda barındırdığınız Mastodon sunucusu, çevrimiçi olarak başka bir Mastodon sunucusundan takip etmenizi ve takip edilmenizi sağlar ve sizden başka kimsenin kontrolü altında değildir.
+      feature_audience: Nutshell, hedef kitlenizi aracılar olmadan yönetmeniz için size eşsiz bir olanak sağlar. Kendi altyapınızda barındırdığınız Nutshell sunucusu, çevrimiçi olarak başka bir Nutshell sunucusundan takip etmenizi ve takip edilmenizi sağlar ve sizden başka kimsenin kontrolü altında değildir.
       feature_audience_title: Kitlenizi güvenle oluşturun
-      feature_control: Ana akışınızda ne görmek istediğinizi en iyi siz biliyorsunuz. Algoritma veya zamanınızı harcayan reklamlar yok. Tek bir hesapla herhangi bir Mastodon sunucusunda olan bir kimseyi takip edin ve gönderilere zamana göre sıralanmış şekilde erişin. Kendi internet köşenizi biraz daha kendinize benzetin.
+      feature_control: Ana akışınızda ne görmek istediğinizi en iyi siz biliyorsunuz. Algoritma veya zamanınızı harcayan reklamlar yok. Tek bir hesapla herhangi bir Nutshell sunucusunda olan bir kimseyi takip edin ve gönderilere zamana göre sıralanmış şekilde erişin. Kendi internet köşenizi biraz daha kendinize benzetin.
       feature_control_title: Zaman akışınızın denetimi sizde kalsın
-      feature_creativity: Mastodon kendinizi çevrimiçi ifade edebilmenize yardımcı olmak için ses, video ve görsel, erişilebilirlik açıklamaları, anketler, içerik uyarıları, hareketli avatarlar, özel emojiler, önizleme resmini kesme denetimi ve daha fazlasını destekliyor. Kendi sanatınızı, müziğinizi veya podcastinizi yayınlıyorsanız Mastodon kullanımınıza açık.
+      feature_creativity: Nutshell kendinizi çevrimiçi ifade edebilmenize yardımcı olmak için ses, video ve görsel, erişilebilirlik açıklamaları, anketler, içerik uyarıları, hareketli avatarlar, özel emojiler, önizleme resmini kesme denetimi ve daha fazlasını destekliyor. Kendi sanatınızı, müziğinizi veya podcastinizi yayınlıyorsanız Nutshell kullanımınıza açık.
       feature_creativity_title: Benzersiz yaratıcılık
-      feature_moderation: Mastodon karar vermeyi yeniden size bırakıyor. Her sunucu kendi kurallarını ve düzenlemelerini oluşturur. Bu kurallar da kurumsal sosyal medyalar gibi tepeden değil, yerel olarak uygulanıyor; bu da Mastodon'u farklı insan gruplarının ihtiyaçlarına yanıt vermede esnek kılıyor. Kurallarına katıldığınız bir sunucuya katılın veya kendi sunucunuzu barındırın.
+      feature_moderation: Nutshell karar vermeyi yeniden size bırakıyor. Her sunucu kendi kurallarını ve düzenlemelerini oluşturur. Bu kurallar da kurumsal sosyal medyalar gibi tepeden değil, yerel olarak uygulanıyor; bu da Nutshell'u farklı insan gruplarının ihtiyaçlarına yanıt vermede esnek kılıyor. Kurallarına katıldığınız bir sunucuya katılın veya kendi sunucunuzu barındırın.
       feature_moderation_title: Olması gerektiği gibi moderasyon
       follow_action: Takip et
       follow_step: Kendi akışınızı düzenliyorsunuz. Hadi onu ilginç kullanıcılarla dolduralım.
@@ -2173,10 +2173,10 @@ tr:
       post_action: Oluştur
       post_step: Dünyaya metin, fotoğraf, video ve anketlerle merhaba deyin.
       post_title: İlk gönderinizi oluşturun
-      share_step: Arkadaşlarınıza Mastodon'da size nasıl ulaşabileceklerini söyleyin.
-      share_title: Mastodon profilinizi paylaşın
+      share_step: Arkadaşlarınıza Nutshell'da size nasıl ulaşabileceklerini söyleyin.
+      share_title: Nutshell profilinizi paylaşın
       sign_in_action: Oturum aç
-      subject: Mastodon'a hoş geldiniz
+      subject: Nutshell'a hoş geldiniz
       title: Gemiye hoşgeldin, %{name}!
   users:
     follow_limit_reached: "%{limit} kişiden daha fazlasını takip edemezsiniz"
@@ -2189,7 +2189,7 @@ tr:
   verification:
     extra_instructions_html: <strong>İpucu:</strong> Web sitenizdeki bağlantı görünmez olabilir. Önemli olan, kullanıcı tarafından oluşturulan içeriğe sahip web sitelerinde kimliğe bürünmeyi önleyen <code>rel="me"</code>'dir. Sayfa başlığında <code>a</code> yerine bir <code>bağlantı</code> etiketi de kullanabilirsiniz, ancak HTML'ye JavaScript çalıştırılmadan erişilebilir olmalıdır.
     here_is_how: İşte yapmanın yolu
-    hint_html: "<strong>Mastodon'da kendini doğrulamak herkese açık.</strong> Açık web standartlarına dayanır, şimdi ve her zaman ücretsizdir. Tüm gereken insanların sizi onunla tanımladığı bir kişisel websitesidir. Profilinizde bu websitesinin bağlantısını verdiğinizde, websitesinizin profilinize bağlantı verip vermediğini denetleyip üzerinde görsel bir işaret koyacağız."
+    hint_html: "<strong>Nutshell'da kendini doğrulamak herkese açık.</strong> Açık web standartlarına dayanır, şimdi ve her zaman ücretsizdir. Tüm gereken insanların sizi onunla tanımladığı bir kişisel websitesidir. Profilinizde bu websitesinin bağlantısını verdiğinizde, websitesinizin profilinize bağlantı verip vermediğini denetleyip üzerinde görsel bir işaret koyacağız."
     instructions_html: Aşağıdaki kodu kopyalayın ve websitenizin HTML'sine yapıştırın. Daha sonra "Profil Düzenle" sekmesini kullanarak profilinizdeki ek sahalardan birine websitenizin adresini ekleyin ve değişiklikleri kaydedin.
     verification: Doğrulama
     verified_links: Doğrulanmış bağlantılarınız
@@ -2213,5 +2213,5 @@ tr:
     otp_required: Güvenlik anahtarlarını kullanmak için lütfen önce iki adımlı kimlik doğrulamayı etkinleştirin.
     registered_on: "%{date} tarihinde kaydoldu"
   wrapstodon:
-    description: "%{name} kullanıcısının bu yıl Mastodon'u nasıl kullandığını görün!"
+    description: "%{name} kullanıcısının bu yıl Nutshell'u nasıl kullandığını görün!"
     title: "%{name} için %{year} Wrapstodon'u"

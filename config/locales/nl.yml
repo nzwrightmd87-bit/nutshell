@@ -1,10 +1,10 @@
 ---
 nl:
   about:
-    about_mastodon_html: 'Het sociale netwerk van de toekomst: geen reclame, geen meekijkende bedrijven, ethisch ontwerp, en gedecentraliseerd! Met Mastodon ben je baas over je eigen gegevens!'
+    about_mastodon_html: 'Het sociale netwerk van de toekomst: geen reclame, geen meekijkende bedrijven, ethisch ontwerp, en gedecentraliseerd! Met Nutshell ben je baas over je eigen gegevens!'
     contact_missing: Niet ingesteld
     contact_unavailable: n.v.t
-    hosted_on: Mastodon op %{domain}
+    hosted_on: Nutshell op %{domain}
     title: Over
   accounts:
     errors:
@@ -766,7 +766,7 @@ nl:
         moderation: Moderatie
         special: Speciaal
       delete: Verwijderen
-      description_html: Met <strong>gebruikersrollen</strong> kun je de functies en onderdelen van Mastodon waar jouw gebruikers toegang tot hebben aanpassen.
+      description_html: Met <strong>gebruikersrollen</strong> kun je de functies en onderdelen van Nutshell waar jouw gebruikers toegang tot hebben aanpassen.
       edit: Rol '%{name}' bewerken
       everyone: Standaardrechten
       everyone_full_description_html: Dit is de <strong>basisrol</strong> die van toepassing is op <strong>alle gebruikers</strong>, zelfs voor diegenen zonder toegewezen rol. Alle andere rollen hebben de rechten van deze rol als minimum.
@@ -838,27 +838,27 @@ nl:
         rules_hint: Er is een speciaal gebied voor regels waaraan uw gebruikers zich dienen te houden.
         title: Over
       allow_referrer_origin:
-        desc: Wanneer je gebruikers op links naar externe sites klikken, kan hun browser het adres van jouw Mastodon-server als de referrer verzenden. Zet dit uit als dit jouw gebruikers uniek zou identificeren, bijvoorbeeld als dit een persoonlijke Mastodon-server is.
-        title: Externe sites toestaan om jouw Mastodon-server te zien als de bron
+        desc: Wanneer je gebruikers op links naar externe sites klikken, kan hun browser het adres van jouw Nutshell-server als de referrer verzenden. Zet dit uit als dit jouw gebruikers uniek zou identificeren, bijvoorbeeld als dit een persoonlijke Nutshell-server is.
+        title: Externe sites toestaan om jouw Nutshell-server te zien als de bron
       appearance:
-        preamble: Mastodons webomgeving aanpassen.
+        preamble: Nutshells webomgeving aanpassen.
         title: Weergave
       branding:
-        preamble: De branding van jouw server laat zien hoe het met andere servers in het netwerk verschilt. Deze informatie wordt op verschillende plekken getoond, zoals in de webomgeving van Mastodon, in mobiele apps, in linkvoorbeelden op andere websites en berichten-apps, enz. Daarom is het belangrijk om de informatie helder, kort en beknopt te houden.
+        preamble: De branding van jouw server laat zien hoe het met andere servers in het netwerk verschilt. Deze informatie wordt op verschillende plekken getoond, zoals in de webomgeving van Nutshell, in mobiele apps, in linkvoorbeelden op andere websites en berichten-apps, enz. Daarom is het belangrijk om de informatie helder, kort en beknopt te houden.
         title: Branding
       captcha_enabled:
         desc_html: Dit is afhankelijk van externe scripts van hCaptcha, wat veiligheids- en privacyrisico's met zich mee kan brengen. Bovendien kan <strong>dit het registratieproces aanzienlijk minder toegankelijk maken voor sommige (vooral gehandicapte) mensen</strong>. Om deze redenen kun je het beste alternatieve maatregelen overwegen, zoals registratie op basis van goedkeuring of op uitnodiging.
         title: Nieuwe gebruikers dienen een CAPTCHA op te lossen om hun account te bevestigen
       content_retention:
         danger_zone: Gevarenzone
-        preamble: Toezicht houden op hoe berichten en media van gebruikers op Mastodon worden bewaard.
+        preamble: Toezicht houden op hoe berichten en media van gebruikers op Nutshell worden bewaard.
         title: Bewaartermijn berichten
       default_noindex:
         desc_html: Heeft invloed op alle gebruikers die deze instelling niet zelf hebben veranderd
         title: Gebruikers standaard niet door zoekmachines laten indexeren
       discovery:
         follow_recommendations: Aanbevolen accounts
-        preamble: Interessante inhoud uitlichten is van essentieel belang voor onboarding van nieuwe gebruikers, die mogelijk niemand op Mastodon kennen. Bepaal hoe verschillende functies voor het ontdekken van inhoud en gebruikers op jouw server werken.
+        preamble: Interessante inhoud uitlichten is van essentieel belang voor onboarding van nieuwe gebruikers, die mogelijk niemand op Nutshell kennen. Bepaal hoe verschillende functies voor het ontdekken van inhoud en gebruikers op jouw server werken.
         privacy: Privacy
         profile_directory: Gebruikersgids
         public_timelines: Openbare tijdlijnen
@@ -901,7 +901,7 @@ nl:
       destroyed_msg: Verwijderen website-upload geslaagd!
     software_updates:
       critical_update: Kritiek — update snel
-      description: Het wordt aanbevolen om je Mastodon-installatie up-to-date te houden om gebruik te kunnen maken van de nieuwste oplossingen en functies. Bovendien is het soms cruciaal om Mastodon tijdig bij te werken om veiligheidsproblemen te voorkomen. Om deze redenen controleert Mastodon elke 30 minuten updates en brengt je hiervan op de hoogte volgens jouw voorkeuren voor e-mailmeldingen.
+      description: Het wordt aanbevolen om je Nutshell-installatie up-to-date te houden om gebruik te kunnen maken van de nieuwste oplossingen en functies. Bovendien is het soms cruciaal om Nutshell tijdig bij te werken om veiligheidsproblemen te voorkomen. Om deze redenen controleert Nutshell elke 30 minuten updates en brengt je hiervan op de hoogte volgens jouw voorkeuren voor e-mailmeldingen.
       documentation_link: Meer leren
       release_notes: Release-opmerkingen
       title: Beschikbare updates
@@ -969,7 +969,7 @@ nl:
         message_html: Elasticsearch-indextoewijzingen zijn verouderd. Voer <code>tootctl search deploy --only=%{value}</code> uit
       elasticsearch_preset:
         action: Zie documentatie
-        message_html: Jouw Elasticsearch-cluster heeft meer dan één node, maar Mastodon is niet geconfigureerd om ze te gebruiken.
+        message_html: Jouw Elasticsearch-cluster heeft meer dan één node, maar Nutshell is niet geconfigureerd om ze te gebruiken.
       elasticsearch_preset_single_node:
         action: Zie documentatie
         message_html: Jouw Elasticsearch-cluster heeft slechts één node, <code>ES_PRESET</code> moet worden ingesteld op <code>single_node_cluster</code>.
@@ -987,13 +987,13 @@ nl:
         message_html: Er draait geen Sidekiqproces voor de wachtrij(en) %{value}. Controleer je Sidekiqconfiguratie
       software_version_check:
         action: Beschikbare updates bekijken
-        message_html: Er is een Mastodon-update beschikbaar.
+        message_html: Er is een Nutshell-update beschikbaar.
       software_version_critical_check:
         action: Bekijk de beschikbare updates
-        message_html: Er is een kritieke update voor Mastodon beschikbaar. Update zo snel mogelijk.
+        message_html: Er is een kritieke update voor Nutshell beschikbaar. Update zo snel mogelijk.
       software_version_patch_check:
         action: Beschikbare updates bekijken
-        message_html: Er is een Mastodon-update voor een bugfix beschikbaar.
+        message_html: Er is een Nutshell-update voor een bugfix beschikbaar.
       upload_check_privacy_error:
         action: Klik hier voor meer informatie
         message_html: "<strong>Jouw webserver is verkeerd geconfigureerd. De privacy van je gebruikers is in gevaar.</strong>"
@@ -1153,7 +1153,7 @@ nl:
     webhooks:
       add_new: Eindpunt toevoegen
       delete: Verwijderen
-      description_html: Met een <strong>webhook</strong> kan Mastodon <strong>meldingen in real-time</strong> over gekozen gebeurtenissen naar jouw eigen toepassing sturen, zodat je applicatie <strong>automatisch reacties kan genereren</strong>.
+      description_html: Met een <strong>webhook</strong> kan Nutshell <strong>meldingen in real-time</strong> over gekozen gebeurtenissen naar jouw eigen toepassing sturen, zodat je applicatie <strong>automatisch reacties kan genereren</strong>.
       disable: Uitschakelen
       disabled: Uitgeschakeld
       edit: Eindpunt bewerken
@@ -1187,8 +1187,8 @@ nl:
       next_steps: Je kunt het bezwaar goedkeuren om daarmee de moderatiemaatregel ongedaan te maken, of je kunt het verwerpen.
       subject: "%{username} maakt bezwaar tegen een moderatiemaatregel op %{instance}"
     new_critical_software_updates:
-      body: Nieuwe kritische versies van Mastodon zijn vrijgegeven. Je zou zo snel mogelijk moeten bijwerken!
-      subject: Kritieke Mastodon-updates zijn beschikbaar voor %{instance}!
+      body: Nieuwe kritische versies van Nutshell zijn vrijgegeven. Je zou zo snel mogelijk moeten bijwerken!
+      subject: Kritieke Nutshell-updates zijn beschikbaar voor %{instance}!
     new_pending_account:
       body: Zie hieronder de details van het nieuwe account. Je kunt de aanvraag goedkeuren of afwijzen.
       subject: Er dient een nieuw account op %{instance} te worden beoordeeld (%{username})
@@ -1197,8 +1197,8 @@ nl:
       body_remote: Iemand van %{domain} heeft %{target} gerapporteerd
       subject: Nieuwe rapportage op %{instance} (#%{id})
     new_software_updates:
-      body: Nieuwe versies van Mastodon zijn vrijgegeven. Je wilt misschien bijwerken!
-      subject: Nieuwe versies van Mastodon zijn beschikbaar voor %{instance}!
+      body: Nieuwe versies van Nutshell zijn vrijgegeven. Je wilt misschien bijwerken!
+      subject: Nieuwe versies van Nutshell zijn beschikbaar voor %{instance}!
     new_trends:
       body: 'De volgende items moeten worden beoordeeld voordat ze openbaar kunnen worden getoond:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ nl:
     boosting_preferences_info_html: "<strong>Tip:</strong> Ongeacht je instellingen, kun je met <kbd>Shift</kbd> + <kbd>Klik</kbd> op het %{icon} boostpictogram onmiddelijk boosten."
     discovery: Ontdekken
     localization:
-      body: Mastodon wordt door vrijwilligers vertaald.
+      body: Nutshell wordt door vrijwilligers vertaald.
       guide_link: https://crowdin.com/project/mastodon/nl
       guide_link_text: Iedereen kan bijdragen.
     sensitive_content: Gevoelige inhoud
@@ -1261,9 +1261,9 @@ nl:
     delete_account: Account verwijderen
     delete_account_html: Wanneer je jouw account graag wilt verwijderen, kun je dat <a href="%{path}">hier doen</a>. We vragen jou daar om een bevestiging.
     description:
-      prefix_invited_by_user: "@%{name} nodigt je hierbij uit om een account aan te maken op deze Mastodonserver!"
-      prefix_sign_up: Registreer je vandaag nog op Mastodon!
-      suffix: Met een account ben je in staat om mensen te volgen, berichten te plaatsen en uit te wisselen met mensen die zich op andere Mastodonservers bevinden en meer!
+      prefix_invited_by_user: "@%{name} nodigt je hierbij uit om een account aan te maken op deze Nutshellserver!"
+      prefix_sign_up: Registreer je vandaag nog op Nutshell!
+      suffix: Met een account ben je in staat om mensen te volgen, berichten te plaatsen en uit te wisselen met mensen die zich op andere Nutshellservers bevinden en meer!
     didnt_get_confirmation: Geen bevestigingslink ontvangen?
     dont_have_your_security_key: Heb je jouw beveiligingssleutel niet bij de hand?
     forgot_password: Wachtwoord vergeten?
@@ -1300,7 +1300,7 @@ nl:
     set_new_password: Nieuw wachtwoord instellen
     setup:
       email_below_hint_html: Controleer je map met spam, of vraag een nieuwe bevestigingslink aan. Je kan je e-mailadres corrigeren als het verkeerd is.
-      email_settings_hint_html: Klik op de link die we naar %{email} hebben gestuurd om Mastodon te gebruiken. We wachten wel even.
+      email_settings_hint_html: Klik op de link die we naar %{email} hebben gestuurd om Nutshell te gebruiken. We wachten wel even.
       link_not_received: Geen link ontvangen?
       new_confirmation_instructions_sent: Je ontvangt binnen enkele minuten een nieuwe e-mail met de bevestigingslink!
       title: Kijk in je mailbox
@@ -1309,7 +1309,7 @@ nl:
       title: Inloggen op %{domain}
     sign_up:
       manual_review: Inschrijvingen op %{domain} worden handmatig door onze moderatoren beoordeeld. Schrijf wat over jezelf en waarom je een account op %{domain} wilt. Hiermee help je ons om de aanvraag van jouw account goed te kunnen verwerken.
-      preamble: Met een account op deze Mastodon-server kun je iedereen in de fediverse volgen, ongeacht waar deze persoon een account heeft.
+      preamble: Met een account op deze Nutshell-server kun je iedereen in de fediverse volgen, ongeacht waar deze persoon een account heeft.
       title: Laten we je account op %{domain} instellen.
     status:
       account_status: Accountstatus
@@ -1325,7 +1325,7 @@ nl:
     user_privacy_agreement_html: Ik heb het <a href="%{privacy_policy_path}" target="_blank">privacybeleid</a> gelezen en ga ermee akkoord
   author_attribution:
     example_title: Voorbeeldtekst
-    hint_html: Schrijf je nieuws- of blogartikelen buiten Mastodon? Bepaal hoe je geattribueerd wordt als deze gedeeld worden op Mastodon.
+    hint_html: Schrijf je nieuws- of blogartikelen buiten Nutshell? Bepaal hoe je geattribueerd wordt als deze gedeeld worden op Nutshell.
     instructions: 'Zorg ervoor dat deze code in de HTML van je artikel zit:'
     more_from_html: Meer van %{name}
     s_blog: De weblog van %{name}
@@ -1433,7 +1433,7 @@ nl:
       content: Het spijt ons, er is aan onze kant iets fout gegaan.
       title: Er is iets mis
     '503': De pagina kon door een tijdelijke serverstoring niet worden geladen.
-    noscript_html: Schakel JavaScript in om de webapp van Mastodon te kunnen gebruiken. Als alternatief kan je een <a href="%{apps_path}">Mastodon-app</a> zoeken voor jouw platform.
+    noscript_html: Schakel JavaScript in om de webapp van Nutshell te kunnen gebruiken. Als alternatief kan je een <a href="%{apps_path}">Nutshell-app</a> zoeken voor jouw platform.
   existing_username_validator:
     not_found: Kon geen lokale gebruiker met die gebruikersnaam vinden
     not_found_multiple: Kon %{usernames} niet vinden
@@ -1623,7 +1623,7 @@ nl:
       one: 1 keer
       other: "%{count} keer"
     max_uses_prompt: Onbeperkt
-    prompt: Genereer en deel speciale links om mensen toegang tot deze Mastodonserver te geven
+    prompt: Genereer en deel speciale links om mensen toegang tot deze Nutshellserver te geven
     table:
       expires_at: Verloopt op
       uses: Aantal keer te gebruiken
@@ -1653,7 +1653,7 @@ nl:
     unsubscribe:
       action: Ja, afmelden
       complete: Afgemeld
-      confirmation_html: Weet je zeker dat je je wilt afmelden voor het ontvangen van %{type} van Mastodon op %{domain} op je e-mailadres %{email}? Je kunt je altijd opnieuw abonneren in jouw <a href="%{settings_path}">instellingen voor e-mailmeldingen</a>.
+      confirmation_html: Weet je zeker dat je je wilt afmelden voor het ontvangen van %{type} van Nutshell op %{domain} op je e-mailadres %{email}? Je kunt je altijd opnieuw abonneren in jouw <a href="%{settings_path}">instellingen voor e-mailmeldingen</a>.
       emails:
         notification_emails:
           favourite: e-mailmeldingen voor favorieten
@@ -1662,7 +1662,7 @@ nl:
           mention: e-mailmeldingen voor vermeldingen
           reblog: e-mailmeldingen voor boosts
       resubscribe_html: Als je je per ongeluk hebt afgemeld, kun je je opnieuw abonneren in jouw <a href="%{settings_path}">instellingen voor e-mailmeldingen</a>.
-      success_html: Je ontvangt niet langer %{type} van Mastodon op %{domain} op je e-mailadres %{email}.
+      success_html: Je ontvangt niet langer %{type} van Nutshell op %{domain} op je e-mailadres %{email}.
       title: Afmelden
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ nl:
     posting_defaults: Jouw nieuwe berichten
     public_timelines: Openbare tijdlijnen
   privacy:
-    hint_html: "<strong>Hoe wil je dat jouw profiel en berichten kunnen worden gevonden?</strong> Een verscheidenheid aan functies in Mastodon kunnen je helpen om een groter publiek te bereiken als ze zijn ingeschakeld. Neem rustig de tijd om deze instellingen te bekijken, om er zo zeker van te zijn dat ze aan jouw wensen voldoen."
+    hint_html: "<strong>Hoe wil je dat jouw profiel en berichten kunnen worden gevonden?</strong> Een verscheidenheid aan functies in Nutshell kunnen je helpen om een groter publiek te bereiken als ze zijn ingeschakeld. Neem rustig de tijd om deze instellingen te bekijken, om er zo zeker van te zijn dat ze aan jouw wensen voldoen."
     privacy: Privacy
     privacy_hint_html: Hoeveel informatie wil je aan andere gebruikers kwijt? Mensen ontdekken interessante accounts en coole apps door te bekijken welke accounts jij volgt en door te bekijken welke app jij gebruikt voor het plaatsen van berichten. Het kan achter zo zijn dat je dit liever verborgen houdt.
     reach: Bereik
     reach_hint_html: Wil je door nieuwe mensen worden ontdekt en gevolgd? Wil je dat jouw berichten op de pagina Verkennen worden getoond? Wil je aan andere mensen worden aanbevolen en in de gebruikersgids staan? Wil je nieuwe volgers automatisch accepteren of wil je die handmatig kunnen goedkeuren?
     search: Zoeken
-    search_hint_html: Hoe wil je worden gevonden? Wil je dat mensen jou kunnen vinden via jouw openbare berichten? Wil je dat mensen buiten Mastodon jouw profiel kunnen vinden wanneer ze op het web zoeken? Vergeet echter niet dat jouw openbare berichten en profiel nooit volledig beschermd kunnen worden tegen zoekmachines.
+    search_hint_html: Hoe wil je worden gevonden? Wil je dat mensen jou kunnen vinden via jouw openbare berichten? Wil je dat mensen buiten Nutshell jouw profiel kunnen vinden wanneer ze op het web zoeken? Vergeet echter niet dat jouw openbare berichten en profiel nooit volledig beschermd kunnen worden tegen zoekmachines.
     title: Privacy en bereik
   privacy_policy:
     title: Privacybeleid
@@ -1882,7 +1882,7 @@ nl:
     current_session: Huidige sessie
     date: Datum
     description: "%{browser} op %{platform}"
-    explanation: Dit zijn de webbrowsers die momenteel met jouw Mastodonaccount zijn ingelogd.
+    explanation: Dit zijn de webbrowsers die momenteel met jouw Nutshellaccount zijn ingelogd.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1908,7 +1908,7 @@ nl:
     aliases: Accountaliassen
     appearance: Uiterlijk
     authorized_apps: Geautoriseerde apps
-    back: Terug naar Mastodon
+    back: Terug naar Nutshell
     delete: Account verwijderen
     development: Ontwikkelaars
     edit_profile: Profiel bewerken
@@ -1983,9 +1983,9 @@ nl:
       direct: Privébericht
       private: Alleen volgers
       public: Openbaar
-      public_long: Iedereen op en buiten Mastodon
+      public_long: Iedereen op en buiten Nutshell
       unlisted: Minder openbaar
-      unlisted_long: Niet zichtbaar in de zoekresultaten van Mastodon, onder trends, hashtags en op openbare tijdlijnen
+      unlisted_long: Niet zichtbaar in de zoekresultaten van Nutshell, onder trends, hashtags en op openbare tijdlijnen
   statuses_cleanup:
     enabled: Automatisch oude berichten verwijderen
     enabled_hint: Verwijder jouw berichten automatisch zodra ze een bepaalde leeftijdsgrens bereiken, tenzij ze overeenkomen met een van de onderstaande uitzonderingen
@@ -2036,7 +2036,7 @@ nl:
     review_link: De gebruiksvoorwaarden bekijken
     title: De gebruiksvoorwaarden van %{domain} worden gewijzigd
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d %B %Y om %H:%M"
@@ -2062,7 +2062,7 @@ nl:
     recovery_codes_regenerated: Opnieuw genereren herstelcodes geslaagd
     recovery_instructions_html: Wanneer je ooit de toegang verliest tot jouw telefoon, kan je met behulp van een van de herstelcodes hieronder opnieuw toegang krijgen tot jouw account. <strong>Zorg ervoor dat je de herstelcodes op een veilige plek bewaart</strong>. Je kunt ze bijvoorbeeld printen en ze samen met andere belangrijke documenten bewaren.
     resume_app_authorization: Applicatie-machtiging hervatten
-    role_requirement: "%{domain} vereist dat je Tweestapsverificatie instelt voordat je Mastodon kunt gebruiken."
+    role_requirement: "%{domain} vereist dat je Tweestapsverificatie instelt voordat je Nutshell kunt gebruiken."
     webauthn: Beveiligingssleutels
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ nl:
       subtitle: Jouw bezwaar is afgewezen.
       title: Bezwaar afgewezen
     backup_ready:
-      explanation: Je hebt een volledige back-up van je Mastodon-account aangevraagd.
+      explanation: Je hebt een volledige back-up van je Nutshell-account aangevraagd.
       extra: Het staat nu klaar om te worden gedownload!
       subject: Jouw archief staat klaar om te worden gedownload
       title: Archief ophalen
@@ -2142,7 +2142,7 @@ nl:
       apps_android_action: Via Google Play downloaden
       apps_ios_action: Via de App Store downloaden
       apps_step: Onze officiële apps downloaden.
-      apps_title: Mastodon-apps
+      apps_title: Nutshell-apps
       checklist_subtitle: 'Laten we aan dit nieuwe sociale avontuur beginnen:'
       checklist_title: Welkomstchecklist
       edit_profile_action: Personaliseren
@@ -2150,16 +2150,16 @@ nl:
       edit_profile_title: Je profiel aanpassen
       explanation: Hier zijn enkele tips om je op weg te helpen
       feature_action: Meer informatie
-      feature_audience: Mastodon biedt je een unieke mogelijkheid om je publiek te beheren zonder tussenpersonen. Mastodon, geïmplementeerd in jouw eigen infrastructuur, stelt je in staat om elke andere Mastodon-server online te volgen en door hen gevolgd te worden, en staat onder controle van niemand, behalve die van jou.
+      feature_audience: Nutshell biedt je een unieke mogelijkheid om je publiek te beheren zonder tussenpersonen. Nutshell, geïmplementeerd in jouw eigen infrastructuur, stelt je in staat om elke andere Nutshell-server online te volgen en door hen gevolgd te worden, en staat onder controle van niemand, behalve die van jou.
       feature_audience_title: Bouw jouw publiek in vertrouwen op
-      feature_control: Je weet zelf het beste wat je op jouw starttijdlijn wilt zien. Geen algoritmen of advertenties om je tijd te verspillen. Volg iedereen op elke Mastodon-server vanaf één account en ontvang hun berichten in chronologische volgorde, en maak jouw hoekje op het internet een beetje meer zoals jezelf.
+      feature_control: Je weet zelf het beste wat je op jouw starttijdlijn wilt zien. Geen algoritmen of advertenties om je tijd te verspillen. Volg iedereen op elke Nutshell-server vanaf één account en ontvang hun berichten in chronologische volgorde, en maak jouw hoekje op het internet een beetje meer zoals jezelf.
       feature_control_title: Houd controle over je eigen tijdlijn
-      feature_creativity: Mastodon ondersteunt audio-, video- en fotoberichten, toegankelijkheidsbeschrijvingen, peilingen, inhoudswaarschuwingen, geanimeerde profielfoto's, aangepaste lokale emoji's, controle over het bijwerken van miniaturen en meer, om je te helpen jezelf online uit te drukken. Of je nu jouw kunst, jouw muziek of jouw podcast publiceert, Mastodon staat voor je klaar.
+      feature_creativity: Nutshell ondersteunt audio-, video- en fotoberichten, toegankelijkheidsbeschrijvingen, peilingen, inhoudswaarschuwingen, geanimeerde profielfoto's, aangepaste lokale emoji's, controle over het bijwerken van miniaturen en meer, om je te helpen jezelf online uit te drukken. Of je nu jouw kunst, jouw muziek of jouw podcast publiceert, Nutshell staat voor je klaar.
       feature_creativity_title: Ongeëvenaarde creativiteit
-      feature_moderation: Mastodon legt de besluitvorming weer in jouw handen. Elke server creëert diens eigen regels en voorschriften, die lokaal worden gehandhaafd en niet van bovenaf zoals sociale media van bedrijven, waardoor het het meest flexibel is in het reageren op de behoeften van verschillende groepen mensen. Word lid van een server met de regels waarmee je akkoord gaat, of host jouw eigen.
+      feature_moderation: Nutshell legt de besluitvorming weer in jouw handen. Elke server creëert diens eigen regels en voorschriften, die lokaal worden gehandhaafd en niet van bovenaf zoals sociale media van bedrijven, waardoor het het meest flexibel is in het reageren op de behoeften van verschillende groepen mensen. Word lid van een server met de regels waarmee je akkoord gaat, of host jouw eigen.
       feature_moderation_title: Moderatie zoals het hoort
       follow_action: Volgen
-      follow_step: Op Mastodon draait het helemaal om het volgen van interessante mensen.
+      follow_step: Op Nutshell draait het helemaal om het volgen van interessante mensen.
       follow_title: Personaliseer je starttijdlijn
       follows_subtitle: Volg bekende accounts
       follows_title: Wie te volgen
@@ -2173,10 +2173,10 @@ nl:
       post_action: Opstellen
       post_step: Zeg hallo tegen de wereld met tekst, foto's, video's of peilingen.
       post_title: Je eerste bericht schrijven
-      share_step: Laat je vrienden weten waar je op Mastodon bent te vinden.
-      share_title: Je Mastodonprofiel delen
+      share_step: Laat je vrienden weten waar je op Nutshell bent te vinden.
+      share_title: Je Nutshellprofiel delen
       sign_in_action: Inloggen
-      subject: Welkom op Mastodon
+      subject: Welkom op Nutshell
       title: Welkom aan boord %{name}!
   users:
     follow_limit_reached: Je kunt niet meer dan %{limit} accounts volgen
@@ -2189,7 +2189,7 @@ nl:
   verification:
     extra_instructions_html: <strong>Tip:</strong> De link op je website kan onzichtbaar zijn. Het belangrijke onderdeel is <code>rel="me"</code> dat impersonatie op websites met user-generated content voorkomt. Je kunt zelfs een <code>link</code>-tag gebruiken in de header van de pagina in plaats van <code>a</code>, maar de HTML moet ook zonder JavaScript toegankelijk zijn.
     here_is_how: Zo werkt het
-    hint_html: "<strong>Verificatie van je identiteit op Mastodon is voor iedereen.</strong> Het is gebaseerd op open webstandaarden, en is en blijft altijd gratis. Alles wat nodig is is een persoonlijke website waar mensen je aan kunnen herkennen. Wanneer je vanuit jouw profiel naar deze website linkt, controleren wij of de website naar jouw profiel teruglinkt en geven wij dit duidelijk hierop aan."
+    hint_html: "<strong>Verificatie van je identiteit op Nutshell is voor iedereen.</strong> Het is gebaseerd op open webstandaarden, en is en blijft altijd gratis. Alles wat nodig is is een persoonlijke website waar mensen je aan kunnen herkennen. Wanneer je vanuit jouw profiel naar deze website linkt, controleren wij of de website naar jouw profiel teruglinkt en geven wij dit duidelijk hierop aan."
     instructions_html: Kopieer en plak de onderstaande code in de HTML van je website. Voeg vervolgens het adres van je website toe aan een van de extra velden op je profiel op het tabblad "Profiel bewerken" en sla de wijzigingen op.
     verification: Verificatie
     verified_links: Jouw geverifieerde links
@@ -2213,5 +2213,5 @@ nl:
     otp_required: Om beveiligingssleutels te kunnen gebruiken, moet je eerst tweestapsverificatie inschakelen.
     registered_on: Geregistreerd op %{date}
   wrapstodon:
-    description: Bekijk hoe %{name} dit jaar Mastodon heeft gebruikt!
+    description: Bekijk hoe %{name} dit jaar Nutshell heeft gebruikt!
     title: Wrapstodon %{year} voor %{name}

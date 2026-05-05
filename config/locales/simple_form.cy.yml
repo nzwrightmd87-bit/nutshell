@@ -4,10 +4,10 @@ cy:
     hints:
       account:
         attribution_domains: Un i bob llinell. Yn diogelu rhag priodoli ffug.
-        discoverable: Mae'n bosibl y bydd eich postiadau cyhoeddus a'ch proffil yn cael sylw neu'n cael eu hargymell mewn gwahanol feysydd o Mastodon ac efallai y bydd eich proffil yn cael ei awgrymu i ddefnyddwyr eraill.
+        discoverable: Mae'n bosibl y bydd eich postiadau cyhoeddus a'ch proffil yn cael sylw neu'n cael eu hargymell mewn gwahanol feysydd o Nutshell ac efallai y bydd eich proffil yn cael ei awgrymu i ddefnyddwyr eraill.
         display_name: Eich enw llawn neu'ch enw hwyl.
         fields: Eich tudalen cartref, rhagenwau, oed, neu unrhyw beth.
-        indexable: Mae'n bosib y bydd eich postiadau cyhoeddus yn ymddangos yng nghanlyniadau chwilio ar Mastodon. Mae'n bosibl y bydd pobl sydd wedi rhyngweithio â'ch postiadau yn dal i allu eu chwilio.
+        indexable: Mae'n bosib y bydd eich postiadau cyhoeddus yn ymddangos yng nghanlyniadau chwilio ar Nutshell. Mae'n bosibl y bydd pobl sydd wedi rhyngweithio â'ch postiadau yn dal i allu eu chwilio.
         note: 'Gallwch @grybwyll pobl eraill neu #hashnodau.'
         show_collections: Bydd pobl yn gallu pori trwy'r rhai rydych yn eu dilyn a'ch dilynwyr. Bydd y bobl rydych chi'n eu dilyn yn gweld eich bod chi'n eu dilyn beth bynnag.
         unlocked: Bydd pobl yn gallu eich dilyn heb ofyn am gymeradwyaeth. Dad-diciwch os ydych am adolygu ceisiadau i'ch dilyn a dewis a ydych am dderbyn neu wrthod dilynwyr newydd.
@@ -54,11 +54,11 @@ cy:
         password: Defnyddiwch o leiaf 8 nod
         phrase: Caiff ei gyfateb heb ystyriaeth o briflythrennu mewn testun neu rhybudd ynghylch cynnwys postiad
         scopes: Pa APIs y bydd y rhaglen yn cael mynediad iddynt. Os dewiswch gwmpas lefel uchaf, nid oes angen i chi ddewis rhai unigol.
-        setting_advanced_layout: Dangos Mastodon fel cynllun aml-golofn, sy'n eich galluogi i weld y llinell amser, hysbysiadau, a thrydedd golofn o'ch dewis chi. Nid gyfer sgriniau llai.
+        setting_advanced_layout: Dangos Nutshell fel cynllun aml-golofn, sy'n eich galluogi i weld y llinell amser, hysbysiadau, a thrydedd golofn o'ch dewis chi. Nid gyfer sgriniau llai.
         setting_aggregate_reblogs: Peidiwch â dangos hybiau newydd ar bostiadau sydd wedi cael eu hybu'n ddiweddar (dim ond yn effeithio ar hybiau newydd ei dderbyn)
-        setting_always_send_emails: Fel arfer ni fydd hysbysiadau e-bost yn cael eu hanfon pan fyddwch chi wrthi'n defnyddio Mastodon
+        setting_always_send_emails: Fel arfer ni fydd hysbysiadau e-bost yn cael eu hanfon pan fyddwch chi wrthi'n defnyddio Nutshell
         setting_boost_modal: Pan fydd wedi'i alluogi, bydd hybu'n agor deialog cadarnhau yn gyntaf lle gallwch newid gwelededd eich hwb.
-        setting_default_quote_policy_private: Does dim modd dyfynnu postiadau sydd wedi'u hysgrifennu ar Mastodon ar gyfer dim ond dilynwyr.
+        setting_default_quote_policy_private: Does dim modd dyfynnu postiadau sydd wedi'u hysgrifennu ar Nutshell ar gyfer dim ond dilynwyr.
         setting_default_quote_policy_unlisted: Pan fydd pobl yn eich dyfynnu, bydd eu postiad hefyd yn cael ei guddio rhag llinellau amser sy'n trendio.
         setting_default_sensitive: Mae cyfryngau sensitif wedi'u cuddio yn rhagosodedig a gellir eu datgelu trwy glicio
         setting_display_media_default: Cuddio cyfryngau wedi eu marcio'n sensitif
@@ -91,8 +91,8 @@ cy:
         bootstrap_timeline_accounts: Bydd y cyfrifon yma'n cael eu pinio i frig argymhellion dilyn defnyddwyr newydd. Darparwch restr cyfrifon wedi'u gwahanu gan gollnod.
         closed_registrations_message: Yn cael eu dangos pan fydd cofrestriadau wedi cau
         content_cache_retention_period: Bydd yr holl bostiadau gan weinyddion eraill (gan gynnwys hwb ac atebion) yn cael eu dileu ar ôl y nifer penodedig o ddyddiau, heb ystyried unrhyw ryngweithio defnyddiwr lleol â'r postiadau hynny. Mae hyn yn cynnwys postiadau lle mae defnyddiwr lleol wedi ei farcio fel nodau tudalen neu ffefrynnau. Bydd cyfeiriadau preifat rhwng defnyddwyr o wahanol achosion hefyd yn cael eu colli ac yn amhosibl eu hadfer. Mae'r defnydd o'r gosodiad hwn wedi'i fwriadu ar gyfer achosion pwrpas arbennig ac mae'n torri llawer o ddisgwyliadau defnyddwyr pan gaiff ei weithredu at ddibenion cyffredinol.
-        custom_css: Gallwch gymhwyso arddulliau cyfaddas ar fersiwn gwe Mastodon.
-        favicon: WEBP, PNG, GIF neu JPG. Yn diystyru'r favicon Mastodon rhagosodedig gydag eicon cyfaddas.
+        custom_css: Gallwch gymhwyso arddulliau cyfaddas ar fersiwn gwe Nutshell.
+        favicon: WEBP, PNG, GIF neu JPG. Yn diystyru'r favicon Nutshell rhagosodedig gydag eicon cyfaddas.
         landing_page: Yn dewis pa dudalen y mae ymwelwyr newydd yn ei gweld pan fyddan nhw'n cyrraedd eich gweinydd am y tro cyntaf. Os dewiswch "Trendio", yna mae angen galluogi tueddiadau yn y Gosodiadau Darganfod. Os dewiswch "Ffrydiau lleol", yna mae angen gosod "Mynediad i ffrydiau byw sy'n cynnwys postiadau lleol" i "Pawb" yn y Gosodiadau Darganfod.
         mascot: Yn diystyru'r darlun yn y rhyngwyneb gwe uwch.
         media_cache_retention_period: Mae ffeiliau cyfryngau o bostiadau a wneir gan ddefnyddwyr o bell yn cael eu storio ar eich gweinydd. Pan gaiff ei osod i werth positif, bydd y cyfryngau yn cael eu dileu ar ôl y nifer penodedig o ddyddiau. Os gofynnir am y data cyfryngau ar ôl iddo gael ei ddileu, caiff ei ail-lwytho i lawr, os yw'r cynnwys ffynhonnell yn dal i fod ar gael. Oherwydd cyfyngiadau ar ba mor aml y mae cardiau rhagolwg cyswllt yn pleidleisio i wefannau trydydd parti, argymhellir gosod y gwerth hwn i o leiaf 14 diwrnod, neu ni fydd cardiau rhagolwg cyswllt yn cael eu diweddaru ar alw cyn yr amser hwnnw.
@@ -101,7 +101,7 @@ cy:
         profile_directory: Mae'r cyfeiriadur proffil yn rhestru'r holl ddefnyddwyr sydd wedi dewis i fod yn ddarganfyddiadwy.
         require_invite_text: Pan fydd angen cymeradwyaeth â llaw ar gyfer cofrestriadau, gwnewch y “Pam ydych chi am ymuno?” mewnbwn testun yn orfodol yn hytrach na dewisol
         site_contact_email: Sut y gall pobl gysylltu â chi ar gyfer ymholiadau cyfreithiol neu gymorth.
-        site_contact_username: Sut y gall pobl eich cyrraedd ar Mastodon.
+        site_contact_username: Sut y gall pobl eich cyrraedd ar Nutshell.
         site_extended_description: Unrhyw wybodaeth ychwanegol a allai fod yn ddefnyddiol i ymwelwyr a'ch defnyddwyr. Mae modd ei strwythuro gyda chystrawen Markdown.
         site_short_description: Disgrifiad byr i helpu i adnabod eich gweinydd yn unigryw. Pwy sy'n ei redeg, ar gyfer pwy mae e?
         site_terms: Defnyddiwch eich polisi preifatrwydd eich hun neu gadewch yn wag i ddefnyddio'r rhagosodiad. Mae modd ei strwythuro gyda chystrawen Markdown.
@@ -111,11 +111,11 @@ cy:
         thumbnail: Delwedd tua 2:1 yn cael ei dangos ochr yn ochr â manylion eich gweinydd.
         trendable_by_default: Hepgor adolygiad llaw o gynnwys sy'n tueddu. Gall eitemau unigol gael eu tynnu o dueddiadau o hyd ar ôl y ffaith.
         trends: Mae pynciau llosg yn dangos y postiadau, hashnodau, a newyddion sy'n denu sylw ar eich gweinydd.
-        wrapstodon: Cynigiwch i ddefnyddwyr lleol greu crynodeb chwareus o'u defnydd o Mastodon yn ystod y flwyddyn. Mae'r nodwedd hon ar gael rhwng y 10fed a'r 31ain o Ragfyr bob blwyddyn, ac mae'n cael ei gynig i ddefnyddwyr a wnaeth o leiaf un postiad Cyhoeddus neu Gyhoeddus Tawel ac sydd wedi defnyddio o leiaf un hashnod o fewn y flwyddyn.
+        wrapstodon: Cynigiwch i ddefnyddwyr lleol greu crynodeb chwareus o'u defnydd o Nutshell yn ystod y flwyddyn. Mae'r nodwedd hon ar gael rhwng y 10fed a'r 31ain o Ragfyr bob blwyddyn, ac mae'n cael ei gynig i ddefnyddwyr a wnaeth o leiaf un postiad Cyhoeddus neu Gyhoeddus Tawel ac sydd wedi defnyddio o leiaf un hashnod o fewn y flwyddyn.
       form_challenge:
         current_password: Rydych chi'n mynd i mewn i ardal ddiogel
       imports:
-        data: Allforiwyd dogfen CSV o achos Mastodon arall
+        data: Allforiwyd dogfen CSV o achos Nutshell arall
       invite_request:
         text: Bydd hyn yn helpu ni adolygu eich cais
       ip_block:
@@ -168,7 +168,7 @@ cy:
         name: Enw cyhoeddus y rôl, os yw'r rôl wedi'i gosod i'w dangos fel bathodyn
         permissions_as_keys: Bydd defnyddwyr sydd â'r rôl hon yn cael mynediad at...
         position: Mae rôl uwch yn penderfynu ar ddatrys gwrthdrawiadau mewn rhai sefyllfaoedd. Dim ond ar rolau â blaenoriaeth is y gellir cyflawni rhai gweithredoedd
-        require_2fa: Bydd gofyn i ddefnyddwyr sydd â'r rôl hon osod dilysiad dau ffactor i ddefnyddio Mastodon
+        require_2fa: Bydd gofyn i ddefnyddwyr sydd â'r rôl hon osod dilysiad dau ffactor i ddefnyddio Nutshell
       username_block:
         allow_with_approval: Yn lle atal cofrestru’n llwyr, bydd angen eich cymeradwyaeth rhag cofrestru cyfatebol
         comparison: Byddwch yn ymwybodol o Broblem Scunthorpe wrth rwystro cyfatebion rhannol
@@ -352,7 +352,7 @@ cy:
         software_updates:
           all: Rhoi gwybod am bob ddiweddariad
           critical: Rhoi gwybod am ddiweddariadau critigol yn unig
-          label: Mae fersiwn Mastodon newydd ar gael
+          label: Mae fersiwn Nutshell newydd ar gael
           none: Byth rhoi gwybod am ddiweddariadau (nid argymhellir)
           patch: Rhoi gwybod am ddiweddariadau trwsio byg
         trending_tag: Mae pwnc llosg newydd angen adolygiad

@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=20"
   },
-  "description": "Mastodon's Streaming Server",
+  "description": "Nutshell's Streaming Server",
   "private": true,
   "type": "module",
   "repository": {

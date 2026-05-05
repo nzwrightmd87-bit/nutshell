@@ -126,7 +126,7 @@ is:
         admin/accounts: Stjórnun aðganga
         admin/all: Allar stjórnunaraðgerðir
         admin/reports: Stjórnun kæra
-        all: Fullur aðgangur að Mastodon-aðgangnum þínum
+        all: Fullur aðgangur að Nutshell-aðgangnum þínum
         blocks: Útilokanir
         bookmarks: Bókamerki
         conversations: Samtöl
@@ -139,7 +139,7 @@ is:
         media: Myndefnisviðhengi
         mutes: Þagganir
         notifications: Tilkynningar
-        profile: Mastodon notandasniðið þitt
+        profile: Nutshell notandasniðið þitt
         push: Ýti-tilkynningar
         reports: Kærur
         search: Leita

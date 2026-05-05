@@ -122,7 +122,7 @@ ru:
         admin/accounts: Управление учётными записями пользователей
         admin/all: Все административные функции
         admin/reports: Управление жалобами
-        all: Полный доступ к вашей учётной записи Mastodon
+        all: Полный доступ к вашей учётной записи Nutshell
         blocks: Блокировки
         bookmarks: Закладки
         conversations: Беседы
@@ -135,7 +135,7 @@ ru:
         media: Медиа
         mutes: Игнорируемые пользователи
         notifications: Уведомления
-        profile: Ваш профиль Mastodon
+        profile: Ваш профиль Nutshell
         push: Push-уведомления
         reports: Жалобы
         search: Поиск

@@ -3,10 +3,10 @@ zh-HK:
   simple_form:
     hints:
       account:
-        discoverable: 你的公開帖文和個人檔案可能會在 Mastodon 的各處被推薦或設為精選，並且可能把你的檔案推薦給其他使用者。
+        discoverable: 你的公開帖文和個人檔案可能會在 Nutshell 的各處被推薦或設為精選，並且可能把你的檔案推薦給其他使用者。
         display_name: 你的全名或暱稱。
         fields: 你的主頁、代名詞、年齡，任何你想顯示的資訊。
-        indexable: 你的公開帖文可能會出現在 Mastodon 的搜尋結果中。無論如何，與你帖文互動過的人都能搜尋到它。
+        indexable: 你的公開帖文可能會出現在 Nutshell 的搜尋結果中。無論如何，與你帖文互動過的人都能搜尋到它。
         note: '你可以 @提及他人 或使用 #主題標籤。'
         show_collections: 大家可瀏覽你追蹤的人和你的追蹤者。你追蹤的人無論如何都會看到你追蹤了他們。
       account_alias:
@@ -53,7 +53,7 @@ zh-HK:
         phrase: 過濾器會閱讀文章和內容警告標語的字眼，然後決定過濾與否
         scopes: 選擇應用程式可以存取的 API。 若你選擇最高階的權限範圍，則無須選擇個別項目。
         setting_aggregate_reblogs: 請勿顯示新近被轉推的文章（只影響最新被推的文章）
-        setting_always_send_emails: 通常當你積極使用 Mastodon 時，我們不會發送電郵通知給你
+        setting_always_send_emails: 通常當你積極使用 Nutshell 時，我們不會發送電郵通知給你
         setting_default_sensitive: 敏感媒體預設隱藏，且按一下即可重新顯示
         setting_display_media_default: 隱藏標為敏感的媒體
         setting_display_media_hide_all: 總是隱藏所有媒體
@@ -66,7 +66,7 @@ zh-HK:
         domain: 此網域將能從此站獲取資料，而此站發出的數據也會被處理和存儲。
       email_domain_block:
         domain: 這可以是電郵地址所示的域名或它使用的 MX 紀錄。註冊時系統將檢查它。
-        with_dns_records: Mastodon 會嘗試解析所給域名的 DNS 記錄，然後與解析結果一併封禁
+        with_dns_records: Nutshell 會嘗試解析所給域名的 DNS 記錄，然後與解析結果一併封禁
       featured_tag:
         name: 以下是你最近常用的標籤：
       filters:
@@ -78,14 +78,14 @@ zh-HK:
         backups_retention_period: 使用者可以生成帖文存檔，以便日後下載。如果設定為正值，這些存檔將在指定天數後自動從你的儲存空間中刪除。
         closed_registrations_message: 關閉註冊時顯示
         content_cache_retention_period: 所有來自其他伺服器的帖文（包括轉推和回覆），不論本站使用者有否與這些帖文互動，帖文都將在指定天數後被刪除。這包括本地使用者標記為書籤或加入最愛的帖文。不同站點之間的私人提及也將丟失，並且無法恢復。此設定適用於有特殊用途的站點，一般使用可能會破壞使用者體驗。
-        custom_css: 你可以在 Mastodon 網頁版套用自訂樣式。
+        custom_css: 你可以在 Nutshell 網頁版套用自訂樣式。
         mascot: 覆蓋進階網頁介面中的插圖。
         media_cache_retention_period: 遠端使用者帖文中的媒體檔案會緩存到你的伺服器上。當設定為正值時，媒體將在指定天數後被刪除。如果媒體資料在刪除後被請求，而源內容仍然可用，則會重新下載該媒體。由於連結預覽卡輪詢第三方網站的頻率有限制，建議將此值設定為至少 14 天，否則在此之前不會按需要更新連結預覽卡。
         peers_api_enabled: 本伺服器於聯邦宇宙相遇的網域名單。這裏不包括你與某伺服器有否聯網的數據，僅表示你的伺服器已知的網域。這是供收集一般跨站數據的服務使用。
         profile_directory: 個人檔案目錄羅列了所有選擇被發現的使用者。
         require_invite_text: 如果需要手動審核註冊，請將「為何你想加入？」文字欄設定為必填，而非選填。
         site_contact_email: 大家如何聯絡你有關法律或支援的查詢。
-        site_contact_username: 大家如何在 Mastodon 聯繫你。
+        site_contact_username: 大家如何在 Nutshell 聯繫你。
         site_extended_description: 所有對訪客和使用者有用的額外資訊，都可以用 Markdown 語法編寫。
         site_short_description: 用作辨別你的伺服器的一段簡短描述。誰營運它，它為誰服務的？
         site_terms: 使用你的私隱政策，或者留空使用預設的，可以用 Markdown 語法編寫。
@@ -286,7 +286,7 @@ zh-HK:
         software_updates:
           all: 通知所有更新
           critical: 只通知關鍵更新
-          label: 有新的 Mastodon 版本
+          label: 有新的 Nutshell 版本
           none: 永不通知更新（不推薦）
           patch: 通知除錯更新
         trending_tag: 新趨勢須經過審核

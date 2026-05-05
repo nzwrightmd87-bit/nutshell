@@ -126,7 +126,7 @@ el:
         admin/accounts: Διαχείριση λογαριασμών
         admin/all: Όλες οι λειτουργίες διαχείρησης
         admin/reports: Διαχείριση αναφορών
-        all: Πλήρης πρόσβαση στο λογαριασμό σου στο Mastodon
+        all: Πλήρης πρόσβαση στο λογαριασμό σου στο Nutshell
         blocks: Αποκλεισμοί
         bookmarks: Σελιδοδείκτες
         conversations: Συνομιλίες
@@ -139,7 +139,7 @@ el:
         media: Συνημμένα πολυμέσα
         mutes: Σιγάσεις
         notifications: Ειδοποιήσεις
-        profile: Το προφίλ σου στο Mastodon
+        profile: Το προφίλ σου στο Nutshell
         push: Push ειδοποιήσεις
         reports: Αναφορές
         search: Αναζήτηση

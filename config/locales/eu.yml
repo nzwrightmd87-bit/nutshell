@@ -1,10 +1,10 @@
 ---
 eu:
   about:
-    about_mastodon_html: 'Etorkizuneko sare soziala: ez iragarkirik eta ez zelatatze korporatiborik, diseinu etikoa eta deszentralizazioa! Izan zure datuen jabea Mastodonekin!'
+    about_mastodon_html: 'Etorkizuneko sare soziala: ez iragarkirik eta ez zelatatze korporatiborik, diseinu etikoa eta deszentralizazioa! Izan zure datuen jabea Nutshellekin!'
     contact_missing: Ezarri gabe
     contact_unavailable: E/E
-    hosted_on: Mastodon %{domain} domeinuan ostatatua
+    hosted_on: Nutshell %{domain} domeinuan ostatatua
     title: Honi buruz
   accounts:
     errors:
@@ -739,7 +739,7 @@ eu:
         moderation: Moderazioa
         special: Berezia
       delete: Ezabatu
-      description_html: "<strong>Erabiltzaile rolak</strong> erabiliz erabiltzaileek Mastodonen ze funtzio eta lekutara sarbidea duten pertsonalizatu dezakezu."
+      description_html: "<strong>Erabiltzaile rolak</strong> erabiliz erabiltzaileek Nutshellen ze funtzio eta lekutara sarbidea duten pertsonalizatu dezakezu."
       edit: Editatu '%{name}' rola
       everyone: Baimen lehenetsiak
       everyone_full_description_html: Hau <strong>erabiltzaile guztiei</strong> eragiten dien <strong>oinarrizko rola</strong> da, rol bat esleitu gabekoei ere bai. Gainerako rolek honetatik heredatzen dituzte baimenak.
@@ -807,24 +807,24 @@ eu:
         rules_hint: Erabiltzaileek jarraitu behar dituzten arauei eskainitako atal bat dago.
         title: Honi buruz
       appearance:
-        preamble: Mastodonen web interfazea pertsonalizatu.
+        preamble: Nutshellen web interfazea pertsonalizatu.
         title: Itxura
       branding:
-        preamble: 'Zure zerbitzariaren markak sareko beste zerbitzarietatik bereizten du. Informazio hau hainbat ingurunetan bistaratuko da: Mastodonen web interfazean, aplikazio natiboetan, esteken aurrebistak beste webguneetan eta mezularitza aplikazioetan eta abar. Horregatik, informazio hau garbia eta laburra izatea komeni da.'
+        preamble: 'Zure zerbitzariaren markak sareko beste zerbitzarietatik bereizten du. Informazio hau hainbat ingurunetan bistaratuko da: Nutshellen web interfazean, aplikazio natiboetan, esteken aurrebistak beste webguneetan eta mezularitza aplikazioetan eta abar. Horregatik, informazio hau garbia eta laburra izatea komeni da.'
         title: Marka
       captcha_enabled:
         desc_html: Hori egiteko hCaptcha-ko scriptak behar dira, hirugarrenenak izanik, segurtasun eta pribatutasun arazoak ekarri ditzaketeenak. Horrez gain, <strong>script horiengatik nabarmen zailagoa egiten zaie pertsona batzuei izena ematea (batez ere desgaitasunen bat duenei)</strong>. Hori dela eta, hausnartu beste neurri batzuk hartu ditzakezun, esaterako onarpenean oinarritutako izen ematea, edo gonbidapenen bidezkoa.
         title: Eskatu erabiltzaile berriei CAPTCHA bat ebazteko beren kontua berresteko
       content_retention:
         danger_zone: Eremu arriskutsua
-        preamble: Kontrolatu erabiltzaileek sortutako edukia nola biltegiratzen den Mastodonen.
+        preamble: Kontrolatu erabiltzaileek sortutako edukia nola biltegiratzen den Nutshellen.
         title: Edukia atxikitzea
       default_noindex:
         desc_html: Ezarpen hau aldatu ez duten erabiltzaile guztiei eragingo die
         title: Erabiltzaileei bilaketa-motorraren indexaziotik at egoteko aukera ematen die lehenetsitako aukera modura
       discovery:
         follow_recommendations: Jarraitzeko gomendioak
-        preamble: Eduki interesgarria aurkitzea garrantzitsua da Mastodoneko erabiltzaile berrientzat, behar bada inor ez dutelako ezagutuko. Kontrolatu zure zerbitzariko aurkikuntza-ezaugarriek nola funtzionatzen duten.
+        preamble: Eduki interesgarria aurkitzea garrantzitsua da Nutshelleko erabiltzaile berrientzat, behar bada inor ez dutelako ezagutuko. Kontrolatu zure zerbitzariko aurkikuntza-ezaugarriek nola funtzionatzen duten.
         privacy: Pribatutasuna
         profile_directory: Profil-direktorioa
         public_timelines: Denbora-lerro publikoak
@@ -867,7 +867,7 @@ eu:
       destroyed_msg: Guneko igoera ongi ezabatu da!
     software_updates:
       critical_update: Kritikoa — mesedez, eguneratu azkar
-      description: Gomendagarria da Mastodon instalazioa eguneratuta mantentzea azken konponketa eta funtzioez baliatzeko. Gainera, batzuetan ezinbestekoa da Mastodon garaiz eguneratzea segurtasun arazoak saihesteko. Arrazoi hauengatik, Mastodonek 30 minuturo eguneratzeak egiaztatzen ditu, eta zure posta elektroniko bidezko jakinarazpenen lehentasunen arabera jakinaraziko dizu.
+      description: Gomendagarria da Nutshell instalazioa eguneratuta mantentzea azken konponketa eta funtzioez baliatzeko. Gainera, batzuetan ezinbestekoa da Nutshell garaiz eguneratzea segurtasun arazoak saihesteko. Arrazoi hauengatik, Nutshellek 30 minuturo eguneratzeak egiaztatzen ditu, eta zure posta elektroniko bidezko jakinarazpenen lehentasunen arabera jakinaraziko dizu.
       documentation_link: Informazio gehiago
       release_notes: Bertsio oharrak
       title: Eguneraketak eskuragarri
@@ -933,7 +933,7 @@ eu:
         message_html: Elasticsearch indexatze-mapeatzeak zaharkituta daude. Exekutatu <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Ikusi dokumentazioa
-        message_html: Zure Elasticsearch-eko klusterrak nodo bat baino gehiago dauka, baina Mastodonek ezin ditu erabili ez dagoelako horretarako konfiguratuta.
+        message_html: Zure Elasticsearch-eko klusterrak nodo bat baino gehiago dauka, baina Nutshellek ezin ditu erabili ez dagoelako horretarako konfiguratuta.
       elasticsearch_preset_single_node:
         action: Ikusi dokumentazioa
         message_html: 'Zure Elasticsearch-eko klusterrak nodo bakarra dauka, hortaz, <code>ES_PRESET</code> balore honetan ezarri beharko zenuke: <code>single_node_cluster</code>.'
@@ -951,13 +951,13 @@ eu:
         message_html: Ez da ari Sidekiq prozesurik exekutatzen %{value} ilad(et)an. Egiaztatu Sidekiq konfigurazioa
       software_version_check:
         action: Ikusi eguneraketa eskuragarriak
-        message_html: Mastodon eguneratze bat eskuragarri dago.
+        message_html: Nutshell eguneratze bat eskuragarri dago.
       software_version_critical_check:
         action: Ikusi eguneraketa eskuragarriak
-        message_html: Mastodon eguneraketa kritikoa eskuragarri, mesedez eguneratu ahal bezain azkar.
+        message_html: Nutshell eguneraketa kritikoa eskuragarri, mesedez eguneratu ahal bezain azkar.
       software_version_patch_check:
         action: Ikusi eguneraketa eskuragarriak
-        message_html: Mastodon akats konponketa eguneratze bat eskuragarri dago.
+        message_html: Nutshell akats konponketa eguneratze bat eskuragarri dago.
       upload_check_privacy_error:
         action: Ikus hemen informazio gehiagorako
         message_html: "<strong>Zure zerbitzaria ez dago ongi konfiguratua. Zure erabiltzaileen pribatutasuna arriskuan dago.</strong>"
@@ -1097,7 +1097,7 @@ eu:
     webhooks:
       add_new: Gehitu amaiera-puntua
       delete: Ezabatu
-      description_html: "<strong>Webhook</strong> batek aukera ematen dio Mastodoni zure aplikazioari aukeratutako gertaeren <strong>jakinarazpenak denbora errealean</strong> bidaltzeko, zure aplikazioak <strong>automatikoki erantzunak abiarazi ditzan</strong>."
+      description_html: "<strong>Webhook</strong> batek aukera ematen dio Nutshelli zure aplikazioari aukeratutako gertaeren <strong>jakinarazpenak denbora errealean</strong> bidaltzeko, zure aplikazioak <strong>automatikoki erantzunak abiarazi ditzan</strong>."
       disable: Desgaitu
       disabled: Desgaituta
       edit: Editatu amaiera-puntua
@@ -1131,7 +1131,7 @@ eu:
       next_steps: Apelazioa onartu dezakezu moderazio erabakia desegiteko, edo ez ikusia egin.
       subject: "%{username} erabiltzailea %{instance} instantziako moderazio erabaki bat apelatzen ari da"
     new_critical_software_updates:
-      body: Mastodon-en bertsio kritiko berriak kaleratu dira, agian lehenbailehen eguneratu nahi duzu!
+      body: Nutshell-en bertsio kritiko berriak kaleratu dira, agian lehenbailehen eguneratu nahi duzu!
       subject: "%{instance} ek eguneraketa kritikoak eskuragarri ditu!"
     new_pending_account:
       body: Kontu berriaren xehetasunak azpian daude. Eskaera hau onartu edo ukatu dezakezu.
@@ -1141,8 +1141,8 @@ eu:
       body_remote: "%{domain} domeinuko norbaitek %{target} salatu du"
       subject: Salaketa berria %{instance} instantzian (#%{id})
     new_software_updates:
-      body: Mastodon bertsio berria atera da, eguneratu nahiko duzu, ezta!
-      subject: Mastodon bertsio berriak %{instance} rentzat eskuragarri daude!
+      body: Nutshell bertsio berria atera da, eguneratu nahiko duzu, ezta!
+      subject: Nutshell bertsio berriak %{instance} rentzat eskuragarri daude!
     new_trends:
       body: 'Ondorengo elementuak berrikusi behar dira publikoki bistaratu aurretik:'
       new_trending_links:
@@ -1164,7 +1164,7 @@ eu:
     animations_and_accessibility: Animazioak eta irisgarritasuna
     discovery: Aurkitzea
     localization:
-      body: Mastodon boluntarioek itzultzen dute.
+      body: Nutshell boluntarioek itzultzen dute.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Edonork lagundu dezake.
     sensitive_content: Eduki hunkigarria
@@ -1203,9 +1203,9 @@ eu:
     delete_account: Ezabatu kontua
     delete_account_html: Kontua ezabatu nahi baduzu, <a href="%{path}">jarraitu hemen</a>. Berrestea eskatuko zaizu.
     description:
-      prefix_invited_by_user: "@%{name} erabiltzaileak Mastodon zerbitzari honetara elkartzera gonbidatzen zaitu!"
-      prefix_sign_up: Eman izena Mastodon-en!
-      suffix: Kontu bat baduzu, jendeari jarraitu ahal izango diozu, bidalketak sortu eta Mastodon zein kanpoko zerbitzarietako erabiltzaileekin elkarrizketan aritu!
+      prefix_invited_by_user: "@%{name} erabiltzaileak Nutshell zerbitzari honetara elkartzera gonbidatzen zaitu!"
+      prefix_sign_up: Eman izena Nutshell-en!
+      suffix: Kontu bat baduzu, jendeari jarraitu ahal izango diozu, bidalketak sortu eta Nutshell zein kanpoko zerbitzarietako erabiltzaileekin elkarrizketan aritu!
     didnt_get_confirmation: Ez al duzu berrespen-esteka jaso?
     dont_have_your_security_key: Ez daukazu zure segurtasun gakoa?
     forgot_password: Pasahitza ahaztu duzu?
@@ -1250,7 +1250,7 @@ eu:
       title: "%{domain}-(e)an saioa hasi"
     sign_up:
       manual_review: "%{domain}-(e)n eginiko izen-emateak gure moderatzaileek eskuz aztertzen dituzte. Zure izen-ematea prozesatzen lagun gaitzazun, idatz ezazu zertxobait zuri buruz eta azaldu zergatik nahi duzun %{domain}-(e)n kontu bat."
-      preamble: Mastodon zerbitzari honetako kontu batekin, aukera izango duzu fedibertsoko edozein pertsona jarraitzeko, ez dio axola kontua non ostatatua dagoen.
+      preamble: Nutshell zerbitzari honetako kontu batekin, aukera izango duzu fedibertsoko edozein pertsona jarraitzeko, ez dio axola kontua non ostatatua dagoen.
       title: "%{domain} zerbitzariko kontua prestatuko dizugu."
     status:
       account_status: Kontuaren egoera
@@ -1358,7 +1358,7 @@ eu:
       content: Sentitzen dugu, zerbait okerra gertatu da gure aldean.
       title: Orri hau ez da zuzena
     '503': Orria ezin izan da zerbitzatu zerbitzariaren behin behineko arazo bat dela eta.
-    noscript_html: Mastodon web aplikazioa erabiltzeko, gaitu JavaScript. Bestela, probatu Mastodon plataformarako <a href="%{apps_path}">aplikazio natibo</a>ren bat.
+    noscript_html: Nutshell web aplikazioa erabiltzeko, gaitu JavaScript. Bestela, probatu Nutshell plataformarako <a href="%{apps_path}">aplikazio natibo</a>ren bat.
   existing_username_validator:
     not_found: ezin izan da izen hori duen kide lokalik aurkitu
     not_found_multiple: ezin izan dira aurkitu %{usernames}
@@ -1541,7 +1541,7 @@ eu:
       action: Bai, kendu harpidetza
       complete: Harpidetza kenduta
       confirmation_html: |-
-        Ziur Mastodonen %{domain} zerbitzariko %{type} %{email} helbide elektronikoan jasotzeari utzi nahi diozula?
+        Ziur Nutshellen %{domain} zerbitzariko %{type} %{email} helbide elektronikoan jasotzeari utzi nahi diozula?
         Beti harpidetu zaitezke berriro <a href="%{settings_path}">eposta jakinarazpenen hobespenetan</a>.
       emails:
         notification_emails:
@@ -1551,7 +1551,7 @@ eu:
           mention: aipamenen jakinarazpen e-mailak
           reblog: bultzaden jakinarazpen e-mailak
       resubscribe_html: Nahi gabe utzi badiozu jakinarazpenak jasotzeari, berriro harpidetu zaitezke <a href="%{settings_path}">e-mail jakinarazpenen hobespenetan</a>.
-      success_html: Ez duzu Mastodonen %{domain} zerbitzariko %{type} jasoko %{email} helbide elektronikoan.
+      success_html: Ez duzu Nutshellen %{domain} zerbitzariko %{type} jasoko %{email} helbide elektronikoan.
       title: Kendu harpidetza
   media_attachments:
     validations:
@@ -1689,13 +1689,13 @@ eu:
     posting_defaults: Bidalketarako lehenetsitakoak
     public_timelines: Denbora-lerro publikoak
   privacy:
-    hint_html: "<strong>Pertsonalizatu nola nahi duzun zure profila eta argitalpenak aurkitzea.</strong> Mastodonen hainbat ezaugarri gaituta daudenean lagungarri izan dakizkizuke publiko zabalago batera iristeko. Hartu une bat ezarpen horiek berrikusteko, zure erabilerara egokitzen direla ziurtatzeko."
+    hint_html: "<strong>Pertsonalizatu nola nahi duzun zure profila eta argitalpenak aurkitzea.</strong> Nutshellen hainbat ezaugarri gaituta daudenean lagungarri izan dakizkizuke publiko zabalago batera iristeko. Hartu une bat ezarpen horiek berrikusteko, zure erabilerara egokitzen direla ziurtatzeko."
     privacy: Pribatutasuna
     privacy_hint_html: Kontrolatu besteen onurarako zenbat partekatu nahi duzun. Jendeak profil interesgarriak eta aplikazio apartak aurki ditzazke zuk nor jarraitzen duzun eta argitaratzeko darabilzun aplikazioak ikustean, baina baliteke ezkutuan mantentzea nahiago izatea.
     reach: Irismena
     reach_hint_html: Kontrolatu jende berriak zu jarrai eta aurki zaitzakeen. Zure mezuak Arakatu pantailan agertzea nahi duzu? Beste pertsona batzuek nor jarraitzeko gomendioetan zu ikus zaitzaten nahi duzu? Automatikoki onartu nahi dituzu jarraitzaile berri guztiak, edo bakoitzaren gainean erabaki?
     search: Bilatu
-    search_hint_html: Kontrolatu nola aurki zaitzaketen. Nahi duzu jendeak publikoki argitaratu duzunagatik aurki zaitzala? Nahi duzu Mastodonetik kanpoko pertsonek weba arakatzean zure profila aurki dezatela? Kontuan izan bilaketa-motor guztien erabateko bazterketa ezin dela bermatu jendaurreko informaziorako.
+    search_hint_html: Kontrolatu nola aurki zaitzaketen. Nahi duzu jendeak publikoki argitaratu duzunagatik aurki zaitzala? Nahi duzu Nutshelletik kanpoko pertsonek weba arakatzean zure profila aurki dezatela? Kontuan izan bilaketa-motor guztien erabateko bazterketa ezin dela bermatu jendaurreko informaziorako.
     title: Pribatutasuna eta irismena
   privacy_policy:
     title: Pribatutasun politika
@@ -1770,7 +1770,7 @@ eu:
     current_session: Uneko saioa
     date: Data
     description: "%{browser} - %{platform}"
-    explanation: Zure Mastodon kontuan saioa hasita duten nabigatzaileak daude.
+    explanation: Zure Nutshell kontuan saioa hasita duten nabigatzaileak daude.
     ip: IP-a
     platforms:
       adobe_air: Adobe Air
@@ -1796,7 +1796,7 @@ eu:
     aliases: Kontuaren ezizenak
     appearance: Itxura
     authorized_apps: Baimendutako aplikazioak
-    back: Itzuli Mastodon-era
+    back: Itzuli Nutshell-era
     delete: Kontuaren ezabaketa
     development: Garapena
     edit_profile: Editatu profila
@@ -1871,9 +1871,9 @@ eu:
       direct: Aipu pribatua
       private: Jarraitzaileentzat soilik
       public: Publikoa
-      public_long: Mastodonen dagoen edo ez dagoen edonor
+      public_long: Nutshellen dagoen edo ez dagoen edonor
       unlisted: Ikusgarritasun mugatua
-      unlisted_long: Ezkutatuta Mastodon bilaketen emaitzetatik, joeretatik, eta denbora-lerro publikoetatik
+      unlisted_long: Ezkutatuta Nutshell bilaketen emaitzetatik, joeretatik, eta denbora-lerro publikoetatik
   statuses_cleanup:
     enabled: Ezabatu bidalketa zaharrak automatikoki
     enabled_hint: Zure bidalketa zaharrak automatikoki ezabatzen ditu zehazturiko denbora mugara iristean, beheko baldintza bat betetzen ez bada
@@ -1961,7 +1961,7 @@ eu:
       subtitle: Zure apelazioa baztertu da.
       title: Apelazioa baztertuta
     backup_ready:
-      explanation: Mastodon kontuaren babeskopia osoa eskatu duzu.
+      explanation: Nutshell kontuaren babeskopia osoa eskatu duzu.
       extra: Deskargatzeko prest!
       subject: Zure artxiboa deskargatzeko prest dago
       title: Artxiboa jasotzea
@@ -2019,7 +2019,7 @@ eu:
       apps_android_action: Eskuratu Google Play-en
       apps_ios_action: Deskargatu App Store-n
       apps_step: Deskargatu gure aplikazio ofizialak.
-      apps_title: Mastodon-en aplikazioak
+      apps_title: Nutshell-en aplikazioak
       checklist_subtitle: 'Murgil zaitez sare sozialen aro berri honetan:'
       checklist_title: Ongietorrien kontrol-zerrenda
       edit_profile_action: Pertsonalizatu
@@ -2027,16 +2027,16 @@ eu:
       edit_profile_title: Pertsonalizatu profila
       explanation: Hona hasteko aholku batzuk
       feature_action: Informazio gehiago
-      feature_audience: Mastodon-ek hartzaileak kudeatzeko aukera paregabea eskaintzen dizu tartean inor egon gabe. Mastodon zeure azpiegituran inplementatua izanik, lineako beste edozein Mastodon zerbitzarko edonor jarrai dezakezu, baita edonork zeu jarraitu ere. Soilik zeure kontrolpean.
+      feature_audience: Nutshell-ek hartzaileak kudeatzeko aukera paregabea eskaintzen dizu tartean inor egon gabe. Nutshell zeure azpiegituran inplementatua izanik, lineako beste edozein Nutshell zerbitzarko edonor jarrai dezakezu, baita edonork zeu jarraitu ere. Soilik zeure kontrolpean.
       feature_audience_title: Bildu hartzaileak uste osoarekin
-      feature_control: Aski ondo dakizu zer ikusi nahi duzun hasierako jarioan. Denbora galarazten duten algoritmorik edo iragarkirik gabe. Jarraitu beste Mastodon zerbitzarietako edozein kontu bakarretik eta jaso bere argitalpenak ordena kronologikoan. Zure interneteko txokoa zu bezala izan dadila.
+      feature_control: Aski ondo dakizu zer ikusi nahi duzun hasierako jarioan. Denbora galarazten duten algoritmorik edo iragarkirik gabe. Jarraitu beste Nutshell zerbitzarietako edozein kontu bakarretik eta jaso bere argitalpenak ordena kronologikoan. Zure interneteko txokoa zu bezala izan dadila.
       feature_control_title: Egon zure denbora-lerroaren kontrolpean
-      feature_creativity: Mastodon-ek audioa, bideoa edo irudia duen argitalpenak, erabilerraztasun-azalpenak, inkestak, edukiaren abisuak, abatar animatuak, emoji pertsonalizatuak, miniaturen mozketaren kontrola eta funtzio gehiago onartzen ditu, linean aditzera eman zaitezen laguntzeko. Artea, musika edo podcastak partekatzen badituzu, Mastodon hortxe duzu.
+      feature_creativity: Nutshell-ek audioa, bideoa edo irudia duen argitalpenak, erabilerraztasun-azalpenak, inkestak, edukiaren abisuak, abatar animatuak, emoji pertsonalizatuak, miniaturen mozketaren kontrola eta funtzio gehiago onartzen ditu, linean aditzera eman zaitezen laguntzeko. Artea, musika edo podcastak partekatzen badituzu, Nutshell hortxe duzu.
       feature_creativity_title: Sormen paregabea
-      feature_moderation: Mastodon-ek erabakiak hartzeko ahalmena dakar bueltan. Zerbitzari bakoitzak bere arau eta murrizketa propioak sortzen ditu, lokalki indarrean jartzen dira eta ez orokorki korporazioen sare-sozialen gisa. Era honetara, jende talde ezberdinen mesedeak asetzeko malguago bilakatzen da. Batu bertako arauekin ados zauden zerbitzari batera edo ostatatu zeurea.
+      feature_moderation: Nutshell-ek erabakiak hartzeko ahalmena dakar bueltan. Zerbitzari bakoitzak bere arau eta murrizketa propioak sortzen ditu, lokalki indarrean jartzen dira eta ez orokorki korporazioen sare-sozialen gisa. Era honetara, jende talde ezberdinen mesedeak asetzeko malguago bilakatzen da. Batu bertako arauekin ados zauden zerbitzari batera edo ostatatu zeurea.
       feature_moderation_title: Moderazioa behar lukeen bezalaxe
       follow_action: Jarraitu
-      follow_step: Jende interesgarria jarraitzean datza Mastodon.
+      follow_step: Jende interesgarria jarraitzean datza Nutshell.
       follow_title: Pertsonalizatu hasierako jarioa
       follows_subtitle: Jarraitu kontu ospetsuak
       follows_title: Nor jarraitu
@@ -2050,10 +2050,10 @@ eu:
       post_action: Idatzi
       post_step: Agurtu munduari testu, argazki, bideo zein inkesta batekin.
       post_title: Idatzi zeure lehen argitalpena
-      share_step: Esaiezu lagunei nola aurki zaitzaketen Mastodon-en.
-      share_title: Partekatu Mastodon profila
+      share_step: Esaiezu lagunei nola aurki zaitzaketen Nutshell-en.
+      share_title: Partekatu Nutshell profila
       sign_in_action: Hasi saioa
-      subject: Ongi etorri Mastodon-era
+      subject: Ongi etorri Nutshell-era
       title: Ongi etorri, %{name}!
   users:
     follow_limit_reached: Ezin dituzu %{limit} pertsona baino gehiago jarraitu
@@ -2066,7 +2066,7 @@ eu:
   verification:
     extra_instructions_html: <strong>Aholkua:</strong> webguneko esteka ikusezina izan daiteke. Muina <code>rel="me"</code> da, erabiltzaileak sortutako edukia duten webguneetan beste inor zure burutzat aurkeztea eragozten duena. <code>a</code> beharrean <code>esteka</code> motako etiketa bat ere erabil dezakezu orriaren goiburuan, baina HTMLak erabilgarri egon behar du JavaScript exekutatu gabe.
     here_is_how: Argibidea
-    hint_html: "<strong>Mastodonen nortasun-egiaztapena guztiontzat da.</strong> Web estandar irekietan oinarritua, orain eta betiko doan. Behar duzun guztia jendeak ezagutzen duen webgune pertsonal bat da. Mastodon profiletik webgune honetara estekatzen duzunean, webguneak Mastodon profilera estekatzen duela egiaztatuko dugu eta adierazle bat erakutsiko du."
+    hint_html: "<strong>Nutshellen nortasun-egiaztapena guztiontzat da.</strong> Web estandar irekietan oinarritua, orain eta betiko doan. Behar duzun guztia jendeak ezagutzen duen webgune pertsonal bat da. Nutshell profiletik webgune honetara estekatzen duzunean, webguneak Nutshell profilera estekatzen duela egiaztatuko dugu eta adierazle bat erakutsiko du."
     instructions_html: Kopiatu eta itsatsi ondoko kodea zure webguneko HTMLan. Ondoren, gehitu zure webgunearen helbidea zure profileko eremu gehigarrietako batean, "Editatu profila" fitxatik eta gorde aldaketak.
     verification: Egiaztaketa
     verified_links: Zure lotura egiaztatuak
@@ -2089,5 +2089,5 @@ eu:
     otp_required: Segurtasun gakoak erabili aurretik bi faktoreko autentifikazioa gaitu behar duzu.
     registered_on: "%{date}(e)an erregistratua"
   wrapstodon:
-    description: Begira nola erabili duen Mastodon %{name}(e)k urte honetan!
+    description: Begira nola erabili duen Nutshell %{name}(e)k urte honetan!
     title: "%{year}(e)ko Wrapstodona, %{name}(e)rentzat"

@@ -24,64 +24,64 @@ az:
         explanation: Bu e-poçt ünvanı ilə %{host} üzərində bir hesab yaratmısınız. Onu aktivləşdirməkdən bir klik uzaqlıqdasınız. Əgər bunu siz etməmisinizsə, lütfən e-poçtu yox sayın.
         explanation_when_pending: Bu e-poçt ünvanı ilə %{host} ünvanına dəvət üçün müraciət etmisiniz. E-poçt ünvanınızı təsdiqlədikdən sonra müraciətinizi nəzərdən keçirəcəyik. Hesab məlumatlarını dəyişdirmək və ya hesabınızı silmək üçün giriş edə bilərsiniz, ancaq hesabınız təsdiqlənənə qədər əksər funksiyalara erişə bilməyəcəksiniz. Müraciətinizə rədd cavabı gəlsə, veriləriniz silinəcək, sizdən heç bir əməliyyat etməyiniz istənilməyəcək. Əgər bu siz deyilsinizsə, lütfən bu e-poçtu yox sayın.
         extra_html: Həmçinin zəhmət olmasa, <a href="%{terms_path}">serverin qaydalarını</a> və <a href="%{policy_path}">istifadə şərtlərini</a> oxuyun.
-        subject: 'Mastodon: %{instance} üçün təsdiqlənmə təlimatları'
+        subject: 'Nutshell: %{instance} üçün təsdiqlənmə təlimatları'
         title: E-poçt ünvanını doğrula
       email_changed:
         explanation: 'Hesabınız üçün e-poçt ünvanı buna dəyişdirilir:'
         extra: E-poçtunuzu dəyişməmisinizsə, çox güman ki, kimsə hesabınıza erişib. Hesabınıza giriş edə bilmirsinizsə, lütfən parolunuzu dərhal dəyişdirin və ya server admini ilə əlaqə saxlayın.
-        subject: 'Mastodon: E-poçt dəyişdirildi'
+        subject: 'Nutshell: E-poçt dəyişdirildi'
         title: Yeni e-poçt ünvanı
       password_change:
         explanation: Hesabınızın parolu dəyişdirilib.
         extra: Parolunuzu dəyişməmisinizsə, çox güman ki, kimsə hesabınıza erişib. Hesabınıza giriş edə bilmirsinizsə, lütfən parolunuzu dərhal dəyişdirin və ya server admini ilə əlaqə saxlayın.
-        subject: 'Mastodon: Parol dəyişdirildi'
+        subject: 'Nutshell: Parol dəyişdirildi'
         title: Parol dəyişdirildi
       reconfirmation_instructions:
         explanation: E-poçtunuzu dəyişdirmək üçün yeni ünvanı təsdiqləyin.
-        extra: Bu dəyişikliyi siz etməmisinizsə, lütfən bu e-poçtu yox sayın. Yuxarıdakı keçidə erişənə qədər Mastodon hesabının e-poçt ünvanı dəyişməyəcək.
-        subject: 'Mastodon: %{instance} üçün e-poçtu təsdiqlə'
+        extra: Bu dəyişikliyi siz etməmisinizsə, lütfən bu e-poçtu yox sayın. Yuxarıdakı keçidə erişənə qədər Nutshell hesabının e-poçt ünvanı dəyişməyəcək.
+        subject: 'Nutshell: %{instance} üçün e-poçtu təsdiqlə'
         title: E-poçt ünvanını doğrula
       reset_password_instructions:
         action: Parolu dəyiş
         explanation: Siz hesabınız üçün yeni parol tələb etmisiniz.
         extra: Bunu siz tələb etməmisinizsə, lütfən bu e-poçtu yox sayın. Parolunuz, yuxarıdakı keçidə erişənə və siz yeni birini yaradana qədər dəyişməyəcək.
-        subject: 'Mastodon: Parol sıfırlama təlimatları'
+        subject: 'Nutshell: Parol sıfırlama təlimatları'
         title: Parolu sıfırla
       two_factor_disabled:
         explanation: Giriş etmək, indi yalnız e-poçt ünvanı və parol ilə mümkündür.
-        subject: 'Mastodon: İki faktorlu kimlik doğrulama sıradan çıxarılıb'
+        subject: 'Nutshell: İki faktorlu kimlik doğrulama sıradan çıxarılıb'
         subtitle: İki faktorlu kimlik doğrulama hesabınız üçün sıradan çıxarılıb.
         title: 2FA sıradan çıxarılıb
       two_factor_enabled:
         explanation: Giriş etmək üçün cütləşdirilmiş TOTP tətbiqi tərəfindən yaradılmış bir token tələb olunur.
-        subject: 'Mastodon: İki faktorlu kimlik doğrulama fəaldır'
+        subject: 'Nutshell: İki faktorlu kimlik doğrulama fəaldır'
         subtitle: İki faktorlu kimlik doğrulama hesabınız üçün fəallaşdırılıb.
         title: 2FA fəaldır
       two_factor_recovery_codes_changed:
         explanation: Əvvəlki geri qaytarma kodları yararsız sayıldı və yeniləri yaradıldı.
-        subject: 'Mastodon: İki faktorlu geri qaytarma kodları təkrar yaradılıb'
+        subject: 'Nutshell: İki faktorlu geri qaytarma kodları təkrar yaradılıb'
         subtitle: Əvvəlki geri qaytarma kodları yararsız sayıldı və yeniləri yaradıldı.
         title: 2FA geri qaytarma kodları dəyişdirilib
       unlock_instructions:
-        subject: 'Mastodon: Kilid açma təlimatları'
+        subject: 'Nutshell: Kilid açma təlimatları'
       webauthn_credential:
         added:
           explanation: Aşağıdakı güvənlik açarı, hesabınıza əlavə edilib
-          subject: 'Mastodon: Yeni güvənlik açarı'
+          subject: 'Nutshell: Yeni güvənlik açarı'
           title: Yeni bir güvənlik açarı əlavə edilib
         deleted:
           explanation: Aşağıdakı güvənlik açarı, hesabınızdan silinib
-          subject: 'Mastodon: Güvənlik açarı silindi'
+          subject: 'Nutshell: Güvənlik açarı silindi'
           title: Güvənlik açarlarınızdan biri silinib
       webauthn_disabled:
         explanation: Güvənlik açarı ilə kimlik doğrulama hesabınız üçün sıradan çıxarılıb.
         extra: Giriş, artıq yalnız cütləşdirilmiş TOTP tətbiqi tərəfindən yaradılmış token ilə mümkündür.
-        subject: 'Mastodon: Güvənlik açarları ilə kimlik doğrulama sıradan çıxarılıb'
+        subject: 'Nutshell: Güvənlik açarları ilə kimlik doğrulama sıradan çıxarılıb'
         title: Güvənlik açarları sıradan çıxarılıb
       webauthn_enabled:
         explanation: Güvənlik açarı ilə kimlik doğrulama hesabınız üçün fəallaşdırılıb.
         extra: Güvənlik açarınız artıq giriş üçün istifadə edilə bilər
-        subject: 'Mastodon: Güvənlik açarı ilə kimlik doğrulama fəaldır'
+        subject: 'Nutshell: Güvənlik açarı ilə kimlik doğrulama fəaldır'
         title: Güvənlik açarları fəaldır
     omniauth_callbacks:
       failure: '%{kind} üzərindən kimliyiniz doğrulana bilmədi, çünki "%{reason}".'

@@ -29,7 +29,7 @@ io:
       email_changed:
         explanation: 'Retpostadreso di vua konto chanjesas a:'
         extra: Se vu ne chanjesis vua retpostadreso, eble ulu adiris vua konto.
-        subject: 'Mastodon: Retpostadreso chanjesis'
+        subject: 'Nutshell: Retpostadreso chanjesis'
         title: Nova retpostadreso
       password_change:
         explanation: La pasvorto di vua konto chanjesis.
@@ -38,8 +38,8 @@ io:
         title: Pasvorto chanjesis
       reconfirmation_instructions:
         explanation: Konfirmez la nova adreso por chanjar vua retpostadreso.
-        extra: Se ca chanjo ne komencesis da vu, ignorez ca retposto. La retpostadreso por konto di Mastodon ne chanjesos til vu acesas la supera ligilo.
-        subject: 'Mastodon: Konfirmez retpostadreso por %{instance}'
+        extra: Se ca chanjo ne komencesis da vu, ignorez ca retposto. La retpostadreso por konto di Nutshell ne chanjesos til vu acesas la supera ligilo.
+        subject: 'Nutshell: Konfirmez retpostadreso por %{instance}'
         title: Verifikez retpostadreso
       reset_password_instructions:
         action: Chanjez pasvorto
@@ -49,17 +49,17 @@ io:
         title: Richanjo di pasvorto
       two_factor_disabled:
         explanation: Eniro esas nun posibla per nur retpostoadreso e pasvorto.
-        subject: 'Mastodon: Dufaktora yurizo desebligesis'
+        subject: 'Nutshell: Dufaktora yurizo desebligesis'
         subtitle: Dufaktora yurizo por vua konto desebligesis.
         title: 2FA desebligesis
       two_factor_enabled:
         explanation: Ficho facesis da parigita softwaro TOTP bezonesos por eniro.
-        subject: 'Mastodon: Dufaktora yurizo ebligesis'
+        subject: 'Nutshell: Dufaktora yurizo ebligesis'
         subtitle: Dufaktora yurizo ebligesis por vua konto.
         title: 2FA ebligesis
       two_factor_recovery_codes_changed:
         explanation: Antea rigankodexi devalidesis e novo facesis.
-        subject: 'Mastodon: 2-faktorrigankodexi rifacesis'
+        subject: 'Nutshell: 2-faktorrigankodexi rifacesis'
         subtitle: Antea rigankodexi desvalidesis e novo facesis.
         title: 2FA-rigankodexi chanjesis
       unlock_instructions:
@@ -67,21 +67,21 @@ io:
       webauthn_credential:
         added:
           explanation: Ca sekuresklefo adjuntesis ad vua konto
-          subject: 'Mastodon: Nova sekurklefo'
+          subject: 'Nutshell: Nova sekurklefo'
           title: Nova sekuresklefo adjuntesis
         deleted:
           explanation: Ca sekurklefo efacesis de vua konto
-          subject: 'Mastodon: Sekurklefo efacesis'
+          subject: 'Nutshell: Sekurklefo efacesis'
           title: 1 de vua sekurklefi efacesis
       webauthn_disabled:
         explanation: Yurizo kun sekuresklefi desebligesis por vua konto.
         extra: Eniro esas nun posibla per nur ficho qua facesis da parigita softwaro TOTP.
-        subject: 'Mastodon: Yurizo per sekuresklefi desebligesis'
+        subject: 'Nutshell: Yurizo per sekuresklefi desebligesis'
         title: Sekuresklefi desebligesis
       webauthn_enabled:
         explanation: Sekuresklefyurizo ebligesis por vua konto.
         extra: Vua sekuresklefo povas nun uzesar por eniro.
-        subject: 'Mastodon: Sekuresklefyurizo ebligesis'
+        subject: 'Nutshell: Sekuresklefyurizo ebligesis'
         title: Sekuresklefi ebligesis
     omniauth_callbacks:
       failure: 'Ni ne povis autentikigar tu per %{kind}: ''%{reason}''.'

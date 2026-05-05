@@ -1,10 +1,10 @@
 ---
 fy:
   about:
-    about_mastodon_html: Mastodon is in sosjaal netwurk dat gebrûk makket fan iepen webprotokollen en frije software. It is krekt lykas desintralisearre e-mail!
+    about_mastodon_html: Nutshell is in sosjaal netwurk dat gebrûk makket fan iepen webprotokollen en frije software. It is krekt lykas desintralisearre e-mail!
     contact_missing: Net ynsteld
     contact_unavailable: Net fan tapassing
-    hosted_on: Mastodon op %{domain}
+    hosted_on: Nutshell op %{domain}
     title: Oer
   accounts:
     followers:
@@ -746,7 +746,7 @@ fy:
         moderation: Moderaasje
         special: Spesjaal
       delete: Fuortsmite
-      description_html: Mei <strong>brûkersrollen</strong> kinne jo de funksjes en ûnderdielen fan Mastodon, wêr’t jo brûkers tagong ta hawwe, oanpasse.
+      description_html: Mei <strong>brûkersrollen</strong> kinne jo de funksjes en ûnderdielen fan Nutshell, wêr’t jo brûkers tagong ta hawwe, oanpasse.
       edit: Rol ‘%{name}’ bewurkje
       everyone: Standertrjochten
       everyone_full_description_html: Dit is de <strong>basisrol</strong> dy’t fan tapassing is op <strong>alle brûkers</strong>, sels foar dyjinge sûnder tawizen rol. Alle oare rollen hawwe de rjochten fan dizze rol as minimum.
@@ -815,20 +815,20 @@ fy:
         rules_hint: Der is in spesjaal gebied foar regels wêr’t jo brûkers harren oan hâlde moatte.
         title: Oer
       allow_referrer_origin:
-        desc: Wannear’t jo brûkers op koppelingen nei eksterne websites klikke, kin harren browser it adres fan jo Mastodon-server as de referrer ferstjoere. Skeakelje dit út as dit jo brûkers unyk identifisearje soe, bygelyks as dit in persoanlike Mastodon-server is.
-        title: Eksterne websites tastean om jo Mastodon-server as de boarne te sjen
+        desc: Wannear’t jo brûkers op koppelingen nei eksterne websites klikke, kin harren browser it adres fan jo Nutshell-server as de referrer ferstjoere. Skeakelje dit út as dit jo brûkers unyk identifisearje soe, bygelyks as dit in persoanlike Nutshell-server is.
+        title: Eksterne websites tastean om jo Nutshell-server as de boarne te sjen
       appearance:
-        preamble: Mastodon’s webomjouwing oanpasse.
+        preamble: Nutshell’s webomjouwing oanpasse.
         title: Werjefte
       branding:
-        preamble: De branding fan jo server lit sjen hoe’t it fan oare servers yn it netwurk ferskilt. Dizze ynformaasje wurdt op ferskate plakken toand, lykas yn de webomjouwing fan Mastodon, yn mobile apps, yn foarfertoaningen op oare websites en berjochte-apps, ensfh. Dêrom is it wichtich om de ynformaasje helder, koart en bûnich te hâlden.
+        preamble: De branding fan jo server lit sjen hoe’t it fan oare servers yn it netwurk ferskilt. Dizze ynformaasje wurdt op ferskate plakken toand, lykas yn de webomjouwing fan Nutshell, yn mobile apps, yn foarfertoaningen op oare websites en berjochte-apps, ensfh. Dêrom is it wichtich om de ynformaasje helder, koart en bûnich te hâlden.
         title: Branding
       captcha_enabled:
         desc_html: Dit is ôfhinklik fan eksterne scripts fan hCaptcha, wat feilichheids- en privacyrisiko’s meibringe kin. Boppe dat kin <strong>dit it registraasjeproses bot minder tagonklik meitsje foar guon (foaral handicapte) minsken</strong>. Om dizze redenen kinne jo it beste alternative maatregels oerweagje, lykas registraasje op basis fan goedkarring of op útnûging.
         title: Nije brûkers moatte in CAPTCHA oplosse om harren account te befêstigjen
       content_retention:
         danger_zone: Gefaresône
-        preamble: Tafersjoch hâlde op hoe’t berjochten en media fan brûkers op Mastodon bewarre wurde.
+        preamble: Tafersjoch hâlde op hoe’t berjochten en media fan brûkers op Nutshell bewarre wurde.
         title: Bewartermyn berjochten
       default_noindex:
         desc_html: Hat ynfloed op alle brûkers dy’t dizze ynstelling net sels wizige hawwe
@@ -866,7 +866,7 @@ fy:
       destroyed_msg: Fuortsmiten website-oplaad slagge!
     software_updates:
       critical_update: Krityk — fernij sa gau as mooglik
-      description: It wurdt oanrekommandearre om jo Mastodon-ynstallaasje by-de-tiid te hâlden om gebrûk meitsje te kinnen fan de nijste oplossingen en funksjes. Boppe dat is it somtiden krúsjaal om Mastodon tidich by te wurkjen om feiligheidsproblemen foar te kommen. Om dizze redenen kontrolearret Mastodon elke 30 minuten fernijingen en bringt jo hjirfan op de hichte neffens jo foarkarren foar e-mailmeldingen.
+      description: It wurdt oanrekommandearre om jo Nutshell-ynstallaasje by-de-tiid te hâlden om gebrûk meitsje te kinnen fan de nijste oplossingen en funksjes. Boppe dat is it somtiden krúsjaal om Nutshell tidich by te wurkjen om feiligheidsproblemen foar te kommen. Om dizze redenen kontrolearret Nutshell elke 30 minuten fernijingen en bringt jo hjirfan op de hichte neffens jo foarkarren foar e-mailmeldingen.
       documentation_link: Mear ynfo
       release_notes: Utjefte-opmerkingen
       title: Beskikbere fernijingen
@@ -932,7 +932,7 @@ fy:
         message_html: Elasticsearch-yndekstawizingen binne ferâldere. Fier <code>tootctl search deploy --only=%{value}</code> út
       elasticsearch_preset:
         action: Dokumintaasje besjen
-        message_html: Jo Elasticsearch-cluster hat mear as ien node, mar Mastodon is net konfigurearre om se te brûken.
+        message_html: Jo Elasticsearch-cluster hat mear as ien node, mar Nutshell is net konfigurearre om se te brûken.
       elasticsearch_preset_single_node:
         action: Dokumintaasje besjen
         message_html: Jo Elasticsearch-cluster hat mar ien node, <code>ES_PRESET</code> moat ynsteld wurde op <code>single_node_cluster</code>.
@@ -950,13 +950,13 @@ fy:
         message_html: Der draait gjin Sidekiq-proses foar de wachtrige(n) %{value}. Kontrolearje jo Sidekiq-konfiguraasje
       software_version_check:
         action: Beskikbere fernijingen besjen
-        message_html: Der is in Mastodon-fernijing beskikber.
+        message_html: Der is in Nutshell-fernijing beskikber.
       software_version_critical_check:
         action: Beskikbere fernijingen besjen
-        message_html: Der is in kritike fernijing foar Mastodon beskikber. Wurkje sa gau as mooglik by.
+        message_html: Der is in kritike fernijing foar Nutshell beskikber. Wurkje sa gau as mooglik by.
       software_version_patch_check:
         action: Beskikbere fernijingen besjen
-        message_html: Der is in Mastodon-fernijing foar in bugfix beskikber.
+        message_html: Der is in Nutshell-fernijing foar in bugfix beskikber.
       upload_check_privacy_error:
         action: Klik hjir foar mear ynformaasje
         message_html: "<strong>Jo webserver is ferkeard konfigurearre. De privacy fan jo brûkers is yn gefaar.</strong>"
@@ -1116,7 +1116,7 @@ fy:
     webhooks:
       add_new: Einpunt tafoegje
       delete: Fuortsmite
-      description_html: Mei in <strong>webhook</strong> kin Mastodon <strong>meldingen real-time</strong> oer keazen barrens nei jo eigen tapassing stjoere, sadat jo applikaasje <strong>automatysk reaksjes generearje kin</strong>.
+      description_html: Mei in <strong>webhook</strong> kin Nutshell <strong>meldingen real-time</strong> oer keazen barrens nei jo eigen tapassing stjoere, sadat jo applikaasje <strong>automatysk reaksjes generearje kin</strong>.
       disable: Utskeakelje
       disabled: Utskeakele
       edit: Einpunt bewurkje
@@ -1150,8 +1150,8 @@ fy:
       next_steps: Jo kinne it beswier goedkarre om dêrmei de moderaasjemaatregel ûngedien te meitsjen, of jo kinne it ferwerpe.
       subject: "%{username} makket beswier tsjin in moderaasjemaatregel op %{instance}"
     new_critical_software_updates:
-      body: Nije krityske ferzjes fan Mastodon binne frijjûn. Jo moatte sa gau as mooglik bywurkje!
-      subject: Kritike Mastodon-fernijingen binne beskikber foar %{instance}!
+      body: Nije krityske ferzjes fan Nutshell binne frijjûn. Jo moatte sa gau as mooglik bywurkje!
+      subject: Kritike Nutshell-fernijingen binne beskikber foar %{instance}!
     new_pending_account:
       body: Sjoch hjirûnder de details fan it nije account. Jo kinne de oanfraach goedkarre of ôfwize.
       subject: Der moat in nij account op %{instance} beoardiele wurde (%{username})
@@ -1160,8 +1160,8 @@ fy:
       body_remote: Ien fan %{domain} hat %{target} rapportearre
       subject: Nije rapportaazje op %{instance} (#%{id})
     new_software_updates:
-      body: Nije ferzjes fan Mastodon binne frijjûn. Jo wolle miskien bywurkje!
-      subject: Nije ferzjes fan Mastodon binne beskikber foar %{instance}!
+      body: Nije ferzjes fan Nutshell binne frijjûn. Jo wolle miskien bywurkje!
+      subject: Nije ferzjes fan Nutshell binne beskikber foar %{instance}!
     new_trends:
       body: 'De folgjende items moatte beoardiele wurde eardat se iepenbier toand wurde kinne:'
       new_trending_links:
@@ -1182,7 +1182,7 @@ fy:
     animations_and_accessibility: Animaasjes en tagonklikheid
     discovery: Untdekke
     localization:
-      body: Mastodon wurdt troch frijwilligers oerset.
+      body: Nutshell wurdt troch frijwilligers oerset.
       guide_link: https://crowdin.com/project/mastodon/fy
       guide_link_text: Elkenien kin bydrage.
     sensitive_content: Gefoelige ynhâld
@@ -1221,9 +1221,9 @@ fy:
     delete_account: Account fuortsmite
     delete_account_html: Wannear’t jo jo account graach fuortsmite wolle, kinne jo dat <a href="%{path}">hjir dwaan</a>. Wy freegje jo dêr om in befêstiging.
     description:
-      prefix_invited_by_user: "@%{name} nûget jo hjirby út om in account oan te meitsjen op dizze Mastodon-server!"
-      prefix_sign_up: Registrearje jo hjoed noch op Mastodon!
-      suffix: Mei in account binne jo yn steat om minsken te folgjen, berjochten te pleatsen en út te wikseljen mei minsken dy’t op oare Mastodon-servers binne en mear!
+      prefix_invited_by_user: "@%{name} nûget jo hjirby út om in account oan te meitsjen op dizze Nutshell-server!"
+      prefix_sign_up: Registrearje jo hjoed noch op Nutshell!
+      suffix: Mei in account binne jo yn steat om minsken te folgjen, berjochten te pleatsen en út te wikseljen mei minsken dy’t op oare Nutshell-servers binne en mear!
     didnt_get_confirmation: Gjin befêstigingskeppeling ûntfongen?
     dont_have_your_security_key: Hawwe jo jo befeiligingskaai net by de hân?
     forgot_password: Wachtwurd ferjitten?
@@ -1260,7 +1260,7 @@ fy:
     set_new_password: Nij wachtwurd ynstelle
     setup:
       email_below_hint_html: Kontrolearje jo map Net-winske, of freegje in nije befêstigingskeppeling oan. Jo kinne jo e-mailadres wizigje as it ferkeard is.
-      email_settings_hint_html: Klik op de keppeling dy’t wy nei %{email} stjoerd hawwe om Mastodon te brûken. Wy wachtsje hjir ôf.
+      email_settings_hint_html: Klik op de keppeling dy’t wy nei %{email} stjoerd hawwe om Nutshell te brûken. Wy wachtsje hjir ôf.
       link_not_received: Gjin keppeling krigen?
       new_confirmation_instructions_sent: Jo ûntfange binnen inkelde minuten in nij e-mailberjocht mei de befêstigingskeppeling!
       title: Kontrolearje jo Postfek YN
@@ -1269,7 +1269,7 @@ fy:
       title: Oanmelde op %{domain}
     sign_up:
       manual_review: Ynskriuwingen op %{domain} wurde hânmjittich troch de moderator beoardiele. Skriuw wat oer josels en wêrom jo in account wolle op %{domain} om ús te helpen jo registraasje te ferwurkjen.
-      preamble: Mei in account op dizze Mastodon-server kinne jo elkenien folgje op de fediverse, nettsjinsteande wêr’t dizze persoan in account hat.
+      preamble: Mei in account op dizze Nutshell-server kinne jo elkenien folgje op de fediverse, nettsjinsteande wêr’t dizze persoan in account hat.
       title: Litte wy jo account op %{domain} ynstelle.
     status:
       account_status: Accountsteat
@@ -1285,7 +1285,7 @@ fy:
     user_privacy_agreement_html: Ik haw it <a href="%{privacy_policy_path}" target="_blank">privacybelied</a> lêzen en gean dêrmei akkoard
   author_attribution:
     example_title: Faorbyldtekst
-    hint_html: Skriuwe jo nijs- of blogartikelen bûten Mastodon? Bepaal hoe’t jo oahelle wurde as dizze dield wurde op Mastodon.
+    hint_html: Skriuwe jo nijs- of blogartikelen bûten Nutshell? Bepaal hoe’t jo oahelle wurde as dizze dield wurde op Nutshell.
     instructions: 'Soargj derfoar dat dizze koade yn de HTML fan jo artikel sit:'
     more_from_html: Mear fan %{name}
     s_blog: Weblog fan %{name}
@@ -1386,7 +1386,7 @@ fy:
       content: It spyt ús, der is oan ús kant wat fout gien.
       title: Dizze side is skansearre
     '503': De side koe troch in tydlike serversteuring net laden wurde.
-    noscript_html: Skeakelje JavaScript yn om de webapp fan Mastodon brûke te kinnen. As alternatyf kinne jo in <a href="%{apps_path}">Mastodon-app</a> sykje foar jo platfoarm.
+    noscript_html: Skeakelje JavaScript yn om de webapp fan Nutshell brûke te kinnen. As alternatyf kinne jo in <a href="%{apps_path}">Nutshell-app</a> sykje foar jo platfoarm.
   existing_username_validator:
     not_found: koe gjin lokale brûker mei dy brûkersnamme fine
     not_found_multiple: koe %{usernames} net fine
@@ -1576,7 +1576,7 @@ fy:
       one: 1 kear
       other: "%{count} kear"
     max_uses_prompt: Gjin limyt
-    prompt: Generearje en diel spesjale keppelingen om minsken tagong ta dizze Mastodon-server te jaan
+    prompt: Generearje en diel spesjale keppelingen om minsken tagong ta dizze Nutshell-server te jaan
     table:
       expires_at: Ferrint op
       uses: Brûkt
@@ -1599,7 +1599,7 @@ fy:
     unsubscribe:
       action: Ja, ôfmelde
       complete: Ofmelden
-      confirmation_html: Binne jo wis dat jo jo ôfmelde wolle foar it ûntfangen fan %{type} fan Mastodon op %{domain} op jo e-mailadres %{email}? Jo kinne jo altyd opnij abonnearje yn jo <a href="%{settings_path}">ynstellingen foar e-mailmeldingen</a>.
+      confirmation_html: Binne jo wis dat jo jo ôfmelde wolle foar it ûntfangen fan %{type} fan Nutshell op %{domain} op jo e-mailadres %{email}? Jo kinne jo altyd opnij abonnearje yn jo <a href="%{settings_path}">ynstellingen foar e-mailmeldingen</a>.
       emails:
         notification_emails:
           favourite: e-mailmeldingen foar favoriten
@@ -1608,7 +1608,7 @@ fy:
           mention: e-mailmeldingen foar fermeldingen
           reblog: e-mailmeldingen foar boosts
       resubscribe_html: As jo jo mei fersin ôfmeld hawwe, kinne jo jo opnij abonnearje yn jo <a href="%{settings_path}">ynstellingen foar e-mailmeldingen</a>.
-      success_html: Jo ûntfange net langer %{type} fan Mastodon op %{domain} op jo e-mailadres %{email}.
+      success_html: Jo ûntfange net langer %{type} fan Nutshell op %{domain} op jo e-mailadres %{email}.
       title: Ofmelde
   media_attachments:
     validations:
@@ -1733,13 +1733,13 @@ fy:
     posting_defaults: Standertynstellingen foar berjochten
     public_timelines: Iepenbiere tiidlinen
   privacy:
-    hint_html: "<strong>Hoe wolle jo dat jo profyl en berjochten fûn wurde kinne?</strong> In ferskaat oan funksjes yn Mastodon kinne jo helpe om een grutter publyk te berikken as se ynskeakele binne. Nim de tiid om dizze ynstellingen te besjen, om der wis fan te wêzen dat se oan jo winsken foldogge."
+    hint_html: "<strong>Hoe wolle jo dat jo profyl en berjochten fûn wurde kinne?</strong> In ferskaat oan funksjes yn Nutshell kinne jo helpe om een grutter publyk te berikken as se ynskeakele binne. Nim de tiid om dizze ynstellingen te besjen, om der wis fan te wêzen dat se oan jo winsken foldogge."
     privacy: Privacy
     privacy_hint_html: Hoefolle ynformaasje wolle jo oan oare brûkers kwyt? Minsken ûntdekke ynteressante accounts en coole apps troch te besjen hokker accounts jo folgje en troch te besjen hokker app jo brûke foar it pleatsen fan berjochten. It kin lykwols sa wêze dat jo dit leaver ferburgen hâlde.
     reach: Berik
     reach_hint_html: Wolle jo troch nije minsken ûntdekt en folge wurde? Wolle jo dat jo berjochten op de side Ferkenne toand wurde? Wolle jo oan oare minsken Oanrekommandearre wurde en yn de brûkersgids stean? Wolle jo nije folgers automatysk akseptearje of wolle jo dy hânmjittich goedkarre kinne?
     search: Sykje
-    search_hint_html: Hoe wolle jo fûn wurde? Wolle jo dat minsken jo fine kinne fia jo iepenbiere berjochten? Wolle jo dat minsken bûten Mastodon jo profyl fine kinne wannear’t se op it web sykje? Ferjit lykwols net dat jo iepenbiere berjochten en profyl nea folslein beskerme wurde kinnen tsjin sykmasinen.
+    search_hint_html: Hoe wolle jo fûn wurde? Wolle jo dat minsken jo fine kinne fia jo iepenbiere berjochten? Wolle jo dat minsken bûten Nutshell jo profyl fine kinne wannear’t se op it web sykje? Ferjit lykwols net dat jo iepenbiere berjochten en profyl nea folslein beskerme wurde kinnen tsjin sykmasinen.
     title: Privacy en berik
   privacy_policy:
     title: Privacybelied
@@ -1814,7 +1814,7 @@ fy:
     current_session: Aktuele sesje
     date: Datum
     description: "%{browser} op %{platform}"
-    explanation: Dit binne de webbrowsers dy’t op dit stuit mei jo Mastodon-account oanmeld binne.
+    explanation: Dit binne de webbrowsers dy’t op dit stuit mei jo Nutshell-account oanmeld binne.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1840,7 +1840,7 @@ fy:
     aliases: Accountaliassen
     appearance: Werjefte
     authorized_apps: Autorisearre apps
-    back: Tebek nei Mastodon
+    back: Tebek nei Nutshell
     delete: Account fuortsmite
     development: Untwikkelers
     edit_profile: Profyl bewurkje
@@ -1989,7 +1989,7 @@ fy:
       subtitle: Jo beswier is ôfwêzen.
       title: Beswier ôfwêzen
     backup_ready:
-      explanation: Jo hawwe in folsleine reservekopy fan jo Mastodon-account oanfrege.
+      explanation: Jo hawwe in folsleine reservekopy fan jo Nutshell-account oanfrege.
       extra: It stiet no klear om download te wurden!
       subject: Jo argyf stiet klear om download te wurden
       title: Argyf ophelje
@@ -2050,7 +2050,7 @@ fy:
       apps_android_action: Fia Google Play downloade
       apps_ios_action: Fia de App Store downloade
       apps_step: Us offisjele apps downloade
-      apps_title: Mastodon-apps
+      apps_title: Nutshell-apps
       checklist_subtitle: 'Litte wy oan dit nije sosjale aventoer begjinne:'
       checklist_title: Wolkomstkontrôlelist
       edit_profile_action: Personalisearje
@@ -2058,16 +2058,16 @@ fy:
       edit_profile_title: Jo profyl personalisearje
       explanation: Hjir binne inkelde tips om jo op wei te helpen
       feature_action: Mear ynfo
-      feature_audience: Mastodon biedt jo in unike mooglikheid om jo publyk te behearen sûnder tuskenpersoanen. Mastodon, ymplemintearre yn jo eigen ynfrastruktuer, stelt jo yn steat om elke oare Mastodon-server online te folgjen en troch harren folge te wurden, en stiet ûnder kontrôle fan net ien, útsein dy fan jo.
+      feature_audience: Nutshell biedt jo in unike mooglikheid om jo publyk te behearen sûnder tuskenpersoanen. Nutshell, ymplemintearre yn jo eigen ynfrastruktuer, stelt jo yn steat om elke oare Nutshell-server online te folgjen en troch harren folge te wurden, en stiet ûnder kontrôle fan net ien, útsein dy fan jo.
       feature_audience_title: Bou jo publyk yn fertrouwen op
-      feature_control: Jo witte sels it bêste wat jo op jo tiidline sjen wolle. Gjin algoritmen of advertinsjes om jo tiid te fergriemen. Folgje elkenien op elke Mastodon-server fan ien account ôf en ûntfang harren berjochten yn gronologyske folchoarder, en meitsje jo hoekje op it ynternet in bytsje mear as josels.
+      feature_control: Jo witte sels it bêste wat jo op jo tiidline sjen wolle. Gjin algoritmen of advertinsjes om jo tiid te fergriemen. Folgje elkenien op elke Nutshell-server fan ien account ôf en ûntfang harren berjochten yn gronologyske folchoarder, en meitsje jo hoekje op it ynternet in bytsje mear as josels.
       feature_control_title: Hâld kontrôle oer jo eigen tiidline
-      feature_creativity: Mastodon stipet audio-, fideo- en fotoberjochten, tagonklikheidsbeskriuwingen, enkêten, ynhâldswarskôgingen, animearre avatars, oanpaste emoji, kontrôle oer it bywurkjen fan miniatueren en mear, om jo te helpen josels online te uterjen. Oft jo no jo keunst, muzyk of podcast publisearje, Mastodon stiet foar jo klear.
+      feature_creativity: Nutshell stipet audio-, fideo- en fotoberjochten, tagonklikheidsbeskriuwingen, enkêten, ynhâldswarskôgingen, animearre avatars, oanpaste emoji, kontrôle oer it bywurkjen fan miniatueren en mear, om jo te helpen josels online te uterjen. Oft jo no jo keunst, muzyk of podcast publisearje, Nutshell stiet foar jo klear.
       feature_creativity_title: Bjusterbaarlike kreativiteit
-      feature_moderation: Mastodon leit de beslútfoarming wer yn jo hannen. Elke server makket harren eigen rigels en foarskriften, dy’t lokaal hanthavene wurde en net fan boppe ôf, lykas sosjale media fan bedriuwen, wêrtroch it it meast fleksibel is yn it reagearjen op de behoeften fan ferskate groepen minsken. Wurd lid fan in server mei de rigels wêrmei’t jo akkoard geane, of host jo eigen.
+      feature_moderation: Nutshell leit de beslútfoarming wer yn jo hannen. Elke server makket harren eigen rigels en foarskriften, dy’t lokaal hanthavene wurde en net fan boppe ôf, lykas sosjale media fan bedriuwen, wêrtroch it it meast fleksibel is yn it reagearjen op de behoeften fan ferskate groepen minsken. Wurd lid fan in server mei de rigels wêrmei’t jo akkoard geane, of host jo eigen.
       feature_moderation_title: Moderaasje sa as it heart
       follow_action: Folgje
-      follow_step: Op Mastodon draait it hielendal om it folgjen fan ynteressante minsken.
+      follow_step: Op Nutshell draait it hielendal om it folgjen fan ynteressante minsken.
       follow_title: Personalisearje jo starttiidline
       follows_subtitle: Folgje bekende accounts
       follows_title: Wa te folgjen
@@ -2081,10 +2081,10 @@ fy:
       post_action: Opstelle
       post_step: Sis hallo tsjin de wrâld mei tekst, foto’s, fideo’s of peilingen.
       post_title: Jo earste berjocht meitsje
-      share_step: Lit jo freonen witte hoe’t jo te finen binne op Mastodon.
-      share_title: Jo Mastodon-profyl diele
+      share_step: Lit jo freonen witte hoe’t jo te finen binne op Nutshell.
+      share_title: Jo Nutshell-profyl diele
       sign_in_action: Oanmelde
-      subject: Wolkom op Mastodon
+      subject: Wolkom op Nutshell
       title: Wolkom oan board %{name}!
   users:
     follow_limit_reached: Jo kinne net mear as %{limit} accounts folgje
@@ -2097,7 +2097,7 @@ fy:
   verification:
     extra_instructions_html: <strong>Tip:</strong> De keppeling op jo website kin ûnsichtber wêze. It wichtige part is <code>rel="me"</code> dat ympersonaasje op websites mei user-generated ynhâld foarkomt. Jo kinne sels in <code>link</code>-label brûke yn de header fan de side yn stee fan <code>a</code>, mar de HTML moat ek sûnder JavaScript tagonklik wêze.
     here_is_how: Sa wurket it
-    hint_html: "<strong>Ferifikaasje fan jo identiteit op Mastodon is foar elkenien.</strong> It is basearre op iepen webstanderts, en is en bliuwt altyd fergees. Alles wat nedich is, is in persoanlike website dêr’t minsken jo oan werkenne kinne. Wannear’t jo fan jo profyl út nei dizze website keppelje, sille wy kontrolearje oft de website nei jo profyl weromkeppelt en dêr in fisuele yndikator fan toane."
+    hint_html: "<strong>Ferifikaasje fan jo identiteit op Nutshell is foar elkenien.</strong> It is basearre op iepen webstanderts, en is en bliuwt altyd fergees. Alles wat nedich is, is in persoanlike website dêr’t minsken jo oan werkenne kinne. Wannear’t jo fan jo profyl út nei dizze website keppelje, sille wy kontrolearje oft de website nei jo profyl weromkeppelt en dêr in fisuele yndikator fan toane."
     instructions_html: Kopiearje en plak de ûndersteande koade yn de HTML fan jo website. Foegje dernei it adres fan jo website ta oan ien fan de ekstra fjilden op jo profyl op it ljepblêd ‘Profyl bewurkje’ en bewarje de wizigingen.
     verification: Ferifikaasje
     verified_links: Jo ferifiearre keppelingen

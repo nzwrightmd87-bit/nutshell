@@ -1,10 +1,10 @@
 ---
 sv:
   about:
-    about_mastodon_html: 'Framtidens sociala medium: Ingen reklam. Ingen övervakning. Etisk design och decentralisering! Äg din data med Mastodon!'
+    about_mastodon_html: 'Framtidens sociala medium: Ingen reklam. Ingen övervakning. Etisk design och decentralisering! Äg din data med Nutshell!'
     contact_missing: Inte inställd
     contact_unavailable: Ej tillämplig
-    hosted_on: Mastodon-värd på %{domain}
+    hosted_on: Nutshell-värd på %{domain}
     title: Om
   accounts:
     errors:
@@ -763,7 +763,7 @@ sv:
         moderation: Moderering
         special: Särskild
       delete: Ta bort
-      description_html: Med <strong>användarroller</strong> kan du anpassa vilka funktioner och områden dina användare kan komma åt i Mastodon.
+      description_html: Med <strong>användarroller</strong> kan du anpassa vilka funktioner och områden dina användare kan komma åt i Nutshell.
       edit: Redigera roll för '%{name}'
       everyone: Standardbehörigheter
       everyone_full_description_html: Detta är den <strong>grundroll</strong> som påverkar <strong>alla användare</strong>, även de utan särskilt tilldelad roll. Alla andra roller ärver behörigheter från denna.
@@ -835,27 +835,27 @@ sv:
         rules_hint: Det finns ett dedikerat ställe för regler som användarna förväntas följa.
         title: Om
       allow_referrer_origin:
-        desc: När dina användare klickar på länkar till externa webbplatser, kan deras webbläsare skicka adressen till din Mastodon-server som referent. Inaktivera detta skulle kunna identifiera dina användare, t.ex. om detta är en personlig Mastodon-server.
-        title: Tillåt externa webbplatser att se din Mastodon-server som en trafikkälla
+        desc: När dina användare klickar på länkar till externa webbplatser, kan deras webbläsare skicka adressen till din Nutshell-server som referent. Inaktivera detta skulle kunna identifiera dina användare, t.ex. om detta är en personlig Nutshell-server.
+        title: Tillåt externa webbplatser att se din Nutshell-server som en trafikkälla
       appearance:
-        preamble: Anpassa Mastodons webbgränssnitt.
+        preamble: Anpassa Nutshells webbgränssnitt.
         title: Utseende
       branding:
-        preamble: Din servers profilering differentierar den från andra servrar på nätverket. Denna information kan visas i en mängd olika miljöer, så som Mastodons webbgränssnitt, nativapplikationer, länkförhandsvisningar på andra webbsidor och i meddelandeapplikationer och så vidare. Av dessa anledningar är det bäst att hålla informationen tydlig, kort och koncis.
+        preamble: Din servers profilering differentierar den från andra servrar på nätverket. Denna information kan visas i en mängd olika miljöer, så som Nutshells webbgränssnitt, nativapplikationer, länkförhandsvisningar på andra webbsidor och i meddelandeapplikationer och så vidare. Av dessa anledningar är det bäst att hålla informationen tydlig, kort och koncis.
         title: Profilering
       captcha_enabled:
         desc_html: Detta bygger på externa skript från hCaptcha vilket kan vara ett säkerhets- och integritetsproblem. Dessutom,<strong>kan detta göra registreringsprocessen betydligt mindre tillgänglig för vissa personer (särskilt funktionsnedsatta)</strong>. Av dessa skäl bör du överväga alternativa åtgärder såsom godkänningsbaserad eller inbjudningsbaserad registrering.
         title: Kräv att nya användare löser en CAPTCHA för att erkänna sitt konto
       content_retention:
         danger_zone: Farozon
-        preamble: Kontrollera hur användargenererat innehåll lagras i Mastodon.
+        preamble: Kontrollera hur användargenererat innehåll lagras i Nutshell.
         title: Bibehållande av innehåll
       default_noindex:
         desc_html: Påverkar alla användare som inte själva ändrat denna inställning
         title: Undantag användare från sökmotorindexering som standard
       discovery:
         follow_recommendations: Följrekommendationer
-        preamble: Att visa intressant innehåll är avgörande för nya användare som kanske inte känner någon på Mastodon. Styr hur olika upptäcktsfunktioner fungerar på din Server.
+        preamble: Att visa intressant innehåll är avgörande för nya användare som kanske inte känner någon på Nutshell. Styr hur olika upptäcktsfunktioner fungerar på din Server.
         privacy: Integritet
         profile_directory: Profilkatalog
         public_timelines: Offentliga tidslinjer
@@ -898,7 +898,7 @@ sv:
       destroyed_msg: Webbplatsuppladdningen har raderats!
     software_updates:
       critical_update: Kritiskt — vänligen uppdatera omgående
-      description: Det rekommenderas att hålla din Mastodon-installation uppdaterad för att ta nytta av de senaste fixarna och funktionerna. Dessutom är det ibland viktigt att uppdatera Mastodon i tid för att undvika säkerhetsproblem. Av dessa skäl kontrollerar Mastodon efter uppdateringar var 30:e minut och meddelar dig i enlighet med dina e-postaviseringsinställningar.
+      description: Det rekommenderas att hålla din Nutshell-installation uppdaterad för att ta nytta av de senaste fixarna och funktionerna. Dessutom är det ibland viktigt att uppdatera Nutshell i tid för att undvika säkerhetsproblem. Av dessa skäl kontrollerar Nutshell efter uppdateringar var 30:e minut och meddelar dig i enlighet med dina e-postaviseringsinställningar.
       documentation_link: Läs mer
       release_notes: Ändringslogg
       title: Tillgängliga uppdateringar
@@ -966,7 +966,7 @@ sv:
         message_html: Elasticsearch index mappningar är föråldrade. Vänligen kör <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Se dokumentation
-        message_html: Din Elasticsearch-kluster har mer än en nod, men Mastodon är inte konfigurerad att använda dem.
+        message_html: Din Elasticsearch-kluster har mer än en nod, men Nutshell är inte konfigurerad att använda dem.
       elasticsearch_preset_single_node:
         action: Se dokumentation
         message_html: Ditt Elasticsearch-kluster har bara en nod, <code>ES_PRESET</code> borde vara satt till <code>single_node_cluster</code>.
@@ -984,13 +984,13 @@ sv:
         message_html: Ingen Sidekiq-process körs för kön/köerna %{value}. Vänligen kontrollera din Sidekiq-konfiguration
       software_version_check:
         action: Se tillgängliga uppdateringar
-        message_html: En Mastodon-uppdatering är tillgänglig.
+        message_html: En Nutshell-uppdatering är tillgänglig.
       software_version_critical_check:
         action: Se tillgängliga uppdateringar
-        message_html: En kritisk uppdatering för Mastodon är tillgänglig. Uppdatera så snart som möjligt.
+        message_html: En kritisk uppdatering för Nutshell är tillgänglig. Uppdatera så snart som möjligt.
       software_version_patch_check:
         action: Se tillgängliga uppdateringar
-        message_html: En buggfix Mastodon-uppdatering är tillgänglig.
+        message_html: En buggfix Nutshell-uppdatering är tillgänglig.
       upload_check_privacy_error:
         action: Kolla här för mer information
         message_html: "<strong>Din webbserver är felkonfigurerad. Sekretessen för dina användare är i fara.</strong>"
@@ -1150,7 +1150,7 @@ sv:
     webhooks:
       add_new: Lägg till slutpunkt
       delete: Ta bort
-      description_html: En <strong>webhook</strong> gör det möjligt för Mastodon att skicka <strong>realtidsaviseringar</strong> om valda händelser till din egen applikation så att den <strong>automatiskt kan utlösa händelser</strong>.
+      description_html: En <strong>webhook</strong> gör det möjligt för Nutshell att skicka <strong>realtidsaviseringar</strong> om valda händelser till din egen applikation så att den <strong>automatiskt kan utlösa händelser</strong>.
       disable: Inaktivera
       disabled: Inaktiverad
       edit: Redigera slutpunkt
@@ -1184,8 +1184,8 @@ sv:
       next_steps: Du kan godkänna överklagan för att ångra modereringsbeslutet, eller ignorera det.
       subject: "%{username} överklagar ett modereringsbeslut på %{instance}"
     new_critical_software_updates:
-      body: En kritisk uppdatering för Mastodon har släppts. Du bör uppdatera så snart som möjligt!
-      subject: Kritiska uppdateringar för Mastodon är tillgängliga för %{instance}!
+      body: En kritisk uppdatering för Nutshell har släppts. Du bör uppdatera så snart som möjligt!
+      subject: Kritiska uppdateringar för Nutshell är tillgängliga för %{instance}!
     new_pending_account:
       body: Detaljerna för det nya kontot finns nedan. Du kan godkänna eller avvisa denna ansökan.
       subject: Nytt konto flaggat för granskning på %{instance} (%{username})
@@ -1194,8 +1194,8 @@ sv:
       body_remote: Någon från %{domain} har rapporterat %{target}
       subject: Ny rapport för %{instance} (#%{id})
     new_software_updates:
-      body: Nya Mastodon-versioner har släppts, du kanske vill uppdatera!
-      subject: Nya Mastodon-versioner finns tillgängliga för %{instance}!
+      body: Nya Nutshell-versioner har släppts, du kanske vill uppdatera!
+      subject: Nya Nutshell-versioner finns tillgängliga för %{instance}!
     new_trends:
       body: 'Följande objekt behöver granskas innan de kan visas publikt:'
       new_trending_links:
@@ -1219,7 +1219,7 @@ sv:
     boosting_preferences_info_html: "<strong>Tips:</strong> Oavsett inställningar kommer <kbd>Skifttangenten</kbd> + <kbd>Klick</kbd> på %{icon} boostikonen att boosta omedelbart."
     discovery: Upptäck
     localization:
-      body: Mastodon översätts av volontärer.
+      body: Nutshell översätts av volontärer.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Alla kan bidra.
     sensitive_content: Känsligt innehåll
@@ -1258,9 +1258,9 @@ sv:
     delete_account: Radera konto
     delete_account_html: Om du vill radera ditt konto kan du <a href="%{path}">fortsätta här</a>. Du kommer att bli ombedd att bekräfta.
     description:
-      prefix_invited_by_user: "@%{name} bjuder in dig att gå med i en Mastodon-server!"
-      prefix_sign_up: Registrera dig på Mastodon idag!
-      suffix: Med ett konto kommer du att kunna följa personer, göra inlägg och utbyta meddelanden med användare från andra Mastodon-servrar, och ännu mer!
+      prefix_invited_by_user: "@%{name} bjuder in dig att gå med i en Nutshell-server!"
+      prefix_sign_up: Registrera dig på Nutshell idag!
+      suffix: Med ett konto kommer du att kunna följa personer, göra inlägg och utbyta meddelanden med användare från andra Nutshell-servrar, och ännu mer!
     didnt_get_confirmation: Fick du ingen bekräftelselänk?
     dont_have_your_security_key: Har du inte din säkerhetsnyckel?
     forgot_password: Glömt ditt lösenord?
@@ -1297,7 +1297,7 @@ sv:
     set_new_password: Skriv in nytt lösenord
     setup:
       email_below_hint_html: Kolla din skräppost-mapp eller begär en ny. Du kan korrigera din e-postadress om den är fel.
-      email_settings_hint_html: Klicka på länken vi skickade till %{email} för att börja använda Mastodon. Vi väntar här.
+      email_settings_hint_html: Klicka på länken vi skickade till %{email} för att börja använda Nutshell. Vi väntar här.
       link_not_received: Fick du ingen länk?
       new_confirmation_instructions_sent: Du kommer att få ett nytt e-postmeddelande med bekräftelselänken om några minuter!
       title: Kolla din inkorg
@@ -1306,7 +1306,7 @@ sv:
       title: Logga in på %{domain}
     sign_up:
       manual_review: Registreringar på %{domain} går igenom manuell granskning av våra moderatorer. För att hjälpa oss att hantera din registrering, skriv lite om dig själv och varför du vill ha ett konto på %{domain}.
-      preamble: Med ett konto på denna Mastodon-server kan du följa alla andra personer i fediversum, oavsett vilken server deras konto tillhör.
+      preamble: Med ett konto på denna Nutshell-server kan du följa alla andra personer i fediversum, oavsett vilken server deras konto tillhör.
       title: Låt oss få igång dig på %{domain}.
     status:
       account_status: Kontostatus
@@ -1322,7 +1322,7 @@ sv:
     user_privacy_agreement_html: Jag har läst och godkänner <a href="%{privacy_policy_path}" target="_blank">integritetspolicyn</a>
   author_attribution:
     example_title: Exempeltext
-    hint_html: Skriver du nyheter eller bloggartiklar utanför Mastodon? Kontrollera hur du får krediteras när de delas på Mastodon.
+    hint_html: Skriver du nyheter eller bloggartiklar utanför Nutshell? Kontrollera hur du får krediteras när de delas på Nutshell.
     instructions: 'Se till att den här koden finns i din artikels HTML:'
     more_from_html: Mer från %{name}
     s_blog: "%{name}s blogg"
@@ -1430,7 +1430,7 @@ sv:
       content: Vi är ledsna, men något gick fel från vårat håll.
       title: Den här sidan är inte korrekt
     '503': Sidan kunde inte visas på grund av ett tillfälligt serverfel.
-    noscript_html: För att använda Mastodon webbapplikationen, vänligen aktivera JavaScript. Alternativt kan du prova en av <a href="%{apps_path}">inhemska appar</a> för Mastodon för din plattform.
+    noscript_html: För att använda Nutshell webbapplikationen, vänligen aktivera JavaScript. Alternativt kan du prova en av <a href="%{apps_path}">inhemska appar</a> för Nutshell för din plattform.
   existing_username_validator:
     not_found: kunde inte hitta en lokal användare med det användarnamnet
     not_found_multiple: kunde inte hitta %{usernames}
@@ -1650,7 +1650,7 @@ sv:
     unsubscribe:
       action: Ja, avsluta prenumerationen
       complete: Prenumeration avslutad
-      confirmation_html: Är du säker på att du vill avregistrera dig från att ta emot %{type} för Mastodon på %{domain} med din e-post på %{email}? Du kan alltid återprenumerera bland dina <a href="%{settings_path}">e-postmeddelandeinställningar</a>.
+      confirmation_html: Är du säker på att du vill avregistrera dig från att ta emot %{type} för Nutshell på %{domain} med din e-post på %{email}? Du kan alltid återprenumerera bland dina <a href="%{settings_path}">e-postmeddelandeinställningar</a>.
       emails:
         notification_emails:
           favourite: aviseringsmejl för favoriserade inlägg
@@ -1659,7 +1659,7 @@ sv:
           mention: aviseringsmejl för inlägg där du nämns
           reblog: aviseringsmejl för förhöjda inlägg
       resubscribe_html: Om du slutat prenumerera av misstag kan du återprenumerera i dina <a href="%{settings_path}">e-postaviseringsinställningar</a>.
-      success_html: Du får inte längre %{type} för Mastodon på %{domain} till din e-post på %{email}.
+      success_html: Du får inte längre %{type} för Nutshell på %{domain} till din e-post på %{email}.
       title: Avsluta prenumeration
   media_attachments:
     validations:
@@ -1798,13 +1798,13 @@ sv:
     posting_defaults: Standardinställningar för inlägg
     public_timelines: Publika tidslinjer
   privacy:
-    hint_html: "<strong>Anpassa hur du vill att din profil och dina inlägg ska hittas.</strong> En mängd funktioner i Mastodon kan hjälpa dig att nå en bredare publik när den är aktiverad. Ta en stund att granska dessa inställningar för att se att de passar ditt användningsfall."
+    hint_html: "<strong>Anpassa hur du vill att din profil och dina inlägg ska hittas.</strong> En mängd funktioner i Nutshell kan hjälpa dig att nå en bredare publik när den är aktiverad. Ta en stund att granska dessa inställningar för att se att de passar ditt användningsfall."
     privacy: Integritet
     privacy_hint_html: Kontrollera hur mycket du vill avslöja till förmån för andra. Andra upptäcker intressanta profiler och coola appar genom att bläddra bland vad andra följer och se vilka appar de lägger upp från, men du kanske föredrar att hålla det dolt.
     reach: Räckvidd
     reach_hint_html: Kontrollera om du vill bli upptäckt och följd av nya människor. Vill du att dina inlägg ska visas på Utforska-skärmen? Vill du att andra människor ska se dig i sina rekommendationer av andra att följa? Vill du acceptera alla nya följare automatiskt, eller ha detaljerad kontroll över varenda en?
     search: Sök
-    search_hint_html: Styr hur du vill bli funnen. Vill du att folk ska hitta dig efter vad du publicerat om? Vill du att personer utanför Mastodon ska hitta din profil när du söker på webben? Observera att total uteslutning från alla sökmotorer inte kan garanteras för offentlig information.
+    search_hint_html: Styr hur du vill bli funnen. Vill du att folk ska hitta dig efter vad du publicerat om? Vill du att personer utanför Nutshell ska hitta din profil när du söker på webben? Observera att total uteslutning från alla sökmotorer inte kan garanteras för offentlig information.
     title: Integritet och räckvidd
   privacy_policy:
     title: Integritetspolicy
@@ -1879,7 +1879,7 @@ sv:
     current_session: Nuvarande session
     date: Datum
     description: "%{browser} på %{platform}"
-    explanation: Detta är inloggade webbläsare på Mastodon just nu.
+    explanation: Detta är inloggade webbläsare på Nutshell just nu.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1905,7 +1905,7 @@ sv:
     aliases: Kontoalias
     appearance: Utseende
     authorized_apps: Godkända appar
-    back: Tillbaka till Mastodon
+    back: Tillbaka till Nutshell
     delete: Konto radering
     development: Utveckling
     edit_profile: Redigera profil
@@ -1980,9 +1980,9 @@ sv:
       direct: Privat omnämnande
       private: Endast följare
       public: Offentlig
-      public_long: Alla på och utanför Mastodon
+      public_long: Alla på och utanför Nutshell
       unlisted: Offentlig (begränsad)
-      unlisted_long: Dold från Mastodon-sökresultat, trendar och offentliga tidslinjer
+      unlisted_long: Dold från Nutshell-sökresultat, trendar och offentliga tidslinjer
   statuses_cleanup:
     enabled: Ta automatiskt bort gamla inlägg
     enabled_hint: Raderar dina inlägg automatiskt när de når en specifik ålder, såvida de inte matchar något av undantagen nedan
@@ -2033,7 +2033,7 @@ sv:
     review_link: Granska villkoren för tjänsten
     title: Villkoren för tjänsten i %{domain} ändras
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d %b %Y, %H:%M"
@@ -2059,7 +2059,7 @@ sv:
     recovery_codes_regenerated: Återställningskoder genererades på nytt
     recovery_instructions_html: Om du någonsin tappar åtkomst till din telefon kan du använda någon av återställningskoderna nedan för att återställa åtkomst till ditt konto. <strong> Håll återställningskoderna säkra </strong>. Du kan till exempel skriva ut dem och lagra dem med andra viktiga dokument.
     resume_app_authorization: Fortsätt app-autentisering
-    role_requirement: "%{domain} kräver att du ställer in tvåfaktorsautentisering innan du kan använda Mastodon."
+    role_requirement: "%{domain} kräver att du ställer in tvåfaktorsautentisering innan du kan använda Nutshell."
     webauthn: Säkerhetsnycklar
   user_mailer:
     announcement_published:
@@ -2078,7 +2078,7 @@ sv:
       subtitle: Din överklagan har avvisats.
       title: Överklagan avslagen
     backup_ready:
-      explanation: Du begärde en fullständig säkerhetskopia av ditt Mastodon-konto.
+      explanation: Du begärde en fullständig säkerhetskopia av ditt Nutshell-konto.
       extra: Nu redo för nedladdning!
       subject: Ditt arkiv är klart för nedladdning
       title: Arkivuttagning
@@ -2139,7 +2139,7 @@ sv:
       apps_android_action: Ladda ned på Google Play
       apps_ios_action: Ladda ner på App Store
       apps_step: Ladda ner våra officiella appar.
-      apps_title: Mastodon-appar
+      apps_title: Nutshell-appar
       checklist_subtitle: 'Låt oss komma igång med denna nya sociala upplevelse:'
       checklist_title: Välkomstchecklista
       edit_profile_action: Gör mer personlig
@@ -2147,16 +2147,16 @@ sv:
       edit_profile_title: Anpassa din profil
       explanation: Här är några tips för att komma igång
       feature_action: Lär dig mer
-      feature_audience: Mastodon ger dig en unik möjlighet att hantera din publik utan mellanhänder. Mastodon distribueras på din egen infrastruktur gör att du kan följa och följas från någon annan Mastodon-server online och är under ingen kontroll men din.
+      feature_audience: Nutshell ger dig en unik möjlighet att hantera din publik utan mellanhänder. Nutshell distribueras på din egen infrastruktur gör att du kan följa och följas från någon annan Nutshell-server online och är under ingen kontroll men din.
       feature_audience_title: Skapa förtroende hos din publik
-      feature_control: Du vet bäst vad du vill se i ditt hemflöde. Inga algoritmer eller annonser som slösar din tid. Följ vem som helst på vilken Mastodon-server som helst från ett enda konto, få deras inlägg i kronologisk ordning och gör ditt hörn av internet lite mer du.
+      feature_control: Du vet bäst vad du vill se i ditt hemflöde. Inga algoritmer eller annonser som slösar din tid. Följ vem som helst på vilken Nutshell-server som helst från ett enda konto, få deras inlägg i kronologisk ordning och gör ditt hörn av internet lite mer du.
       feature_control_title: Håll kontroll över din egen tidslinje
-      feature_creativity: Mastodon stöder ljud-, video- och bildinlägg, tillgänglighetsbeskrivningar, omröstningar, innehållsvarningar, animerade avatarer, anpassade emojis, miniatyrbildskontroll och mer, för att hjälpa dig att uttrycka dig själv online. Oavsett om du publicerar din konst, din musik eller din podcast finns Mastodon där för dig.
+      feature_creativity: Nutshell stöder ljud-, video- och bildinlägg, tillgänglighetsbeskrivningar, omröstningar, innehållsvarningar, animerade avatarer, anpassade emojis, miniatyrbildskontroll och mer, för att hjälpa dig att uttrycka dig själv online. Oavsett om du publicerar din konst, din musik eller din podcast finns Nutshell där för dig.
       feature_creativity_title: Oöverträffad kreativitet
-      feature_moderation: Mastodon lägger tillbaka beslutsfattandet i dina händer. Varje server skapar sina egna regler och förordningar som tillämpas lokalt istället för toppstyrt som i företagens sociala medier vilket gör det maximalt flexibelt i att tillgodose behoven hos olika grupper av människor. Gå med i en server med de regler du samtycker till eller var värd för din egen.
+      feature_moderation: Nutshell lägger tillbaka beslutsfattandet i dina händer. Varje server skapar sina egna regler och förordningar som tillämpas lokalt istället för toppstyrt som i företagens sociala medier vilket gör det maximalt flexibelt i att tillgodose behoven hos olika grupper av människor. Gå med i en server med de regler du samtycker till eller var värd för din egen.
       feature_moderation_title: Moderering som det borde vara
       follow_action: Följ
-      follow_step: Att följa intressanta människor är vad Mastodon handlar om.
+      follow_step: Att följa intressanta människor är vad Nutshell handlar om.
       follow_title: Anpassa ditt hemflöde
       follows_subtitle: Följ välkända konton
       follows_title: Rekommenderade profiler
@@ -2170,10 +2170,10 @@ sv:
       post_action: Skriv
       post_step: Säg hej till världen med text, foton, videor eller omröstningar.
       post_title: Skapa ditt första inlägg
-      share_step: Låt dina vänner veta hur de hittar dig på Mastodon.
-      share_title: Dela din Mastodon-profil
+      share_step: Låt dina vänner veta hur de hittar dig på Nutshell.
+      share_title: Dela din Nutshell-profil
       sign_in_action: Logga in
-      subject: Välkommen till Mastodon
+      subject: Välkommen till Nutshell
       title: Välkommen ombord, %{name}!
   users:
     follow_limit_reached: Du kan inte följa fler än %{limit} personer
@@ -2186,7 +2186,7 @@ sv:
   verification:
     extra_instructions_html: <strong>Tips:</strong> Länken på din webbplats kan vara osynlig. Den viktiga delen är <code>rel="me"</code> som förhindrar personifiering på webbplatser med användargenererat innehåll. Du kan även använda en <code>länk</code> tagg i huvudet på sidan istället för <code>en</code>, men HTML:en måste vara tillgänglig utan att exekvera JavaScript.
     here_is_how: Så här gör du
-    hint_html: "<strong>Verifiera din identitet på Mastodon är för alla.</strong> Baserat på öppna webbstandarder, nu och för evigt fria. Allt du behöver är en personlig webbplats som folk känner igen dig med. När du länkar till denna webbplats från din profil kommer vi att kontrollera att webbplatsen länkar tillbaka till din profil och visa en visuell indikator på den."
+    hint_html: "<strong>Verifiera din identitet på Nutshell är för alla.</strong> Baserat på öppna webbstandarder, nu och för evigt fria. Allt du behöver är en personlig webbplats som folk känner igen dig med. När du länkar till denna webbplats från din profil kommer vi att kontrollera att webbplatsen länkar tillbaka till din profil och visa en visuell indikator på den."
     instructions_html: Kopiera och klistra in koden nedan in i HTML-koden på din webbplats. Lägg sedan till adressen till din webbplats i ett av de extra fälten på din profil från fliken "Redigera profil" och spara ändringar.
     verification: Bekräftelse
     verified_links: Dina verifierade länkar
@@ -2210,5 +2210,5 @@ sv:
     otp_required: För att använda säkerhetsnycklar måste du först aktivera tvåfaktorsautentisering.
     registered_on: Registrerad den %{date}
   wrapstodon:
-    description: Se hur %{name} använde Mastodon i år!
+    description: Se hur %{name} använde Nutshell i år!
     title: Wrapstodon %{year} för %{name}

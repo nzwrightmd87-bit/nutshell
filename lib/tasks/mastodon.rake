@@ -9,7 +9,7 @@ namespace :mastodon do
     env    = {}
 
     if ENV['LOCAL_DOMAIN']
-      prompt.warn "It looks like you already configured Mastodon for domain '#{ENV['LOCAL_DOMAIN']}'."
+      prompt.warn "It looks like you already configured Nutshell for domain '#{ENV['LOCAL_DOMAIN']}'."
       prompt.warn 'Never re-run this task on an already-configured running server.'
       next prompt.warn 'Nothing saved. Bye!' if prompt.no?('Continue anyway?')
     end
@@ -52,7 +52,7 @@ namespace :mastodon do
 
       prompt.say "\n"
 
-      using_docker        = prompt.yes?('Are you using Docker to run Mastodon?')
+      using_docker        = prompt.yes?('Are you using Docker to run Nutshell?')
       db_connection_works = false
 
       prompt.say "\n"
@@ -397,7 +397,7 @@ namespace :mastodon do
 
         env['SMTP_FROM_ADDRESS'] = prompt.ask('E-mail address to send e-mails "from":') do |q|
           q.required true
-          q.default "Mastodon <notifications@#{env['LOCAL_DOMAIN']}>"
+          q.default "Nutshell <notifications@#{env['LOCAL_DOMAIN']}>"
           q.modify :strip
         end
 
@@ -439,7 +439,7 @@ namespace :mastodon do
           mail = ActionMailer::Base.new.mail(
             to: send_to,
             subject: 'Test', # rubocop:disable Rails/I18nLocaleTexts
-            body: 'Mastodon SMTP configuration works!'
+            body: 'Nutshell SMTP configuration works!'
           )
           mail.deliver
           break
@@ -458,7 +458,7 @@ namespace :mastodon do
 
       prompt.say "\n"
 
-      env['UPDATE_CHECK_URL'] = '' unless prompt.yes?('Do you want Mastodon to periodically check for important updates and notify you? (Recommended)', default: true)
+      env['UPDATE_CHECK_URL'] = '' unless prompt.yes?('Do you want Nutshell to periodically check for important updates and notify you? (Recommended)', default: true)
 
       prompt.say "\n"
       prompt.say 'This configuration will be written to .env.production'
@@ -522,10 +522,10 @@ namespace :mastodon do
 
         prompt.say "\n"
         if errors.any?
-          prompt.warn 'Your Mastodon server is set up, but there were some errors along the way, you may have to fix them:'
+          prompt.warn 'Your Nutshell server is set up, but there were some errors along the way, you may have to fix them:'
           errors.each { |error| prompt.warn "- #{error}" }
         else
-          prompt.ok 'All done! You can now power on the Mastodon server 🐘'
+          prompt.ok 'All done! You can now power on the Nutshell server 🐘'
         end
         prompt.say "\n"
 

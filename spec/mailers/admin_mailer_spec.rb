@@ -114,7 +114,7 @@ RSpec.describe AdminMailer do
           subject: I18n.t('admin_mailer.new_software_updates.subject', instance: Rails.configuration.x.local_domain)
         )
       expect(mail.body)
-        .to match('New Mastodon versions have been released, you may want to update!')
+        .to match('New Nutshell versions have been released, you may want to update!')
     end
   end
 
@@ -134,7 +134,7 @@ RSpec.describe AdminMailer do
           subject: I18n.t('admin_mailer.new_critical_software_updates.subject', instance: Rails.configuration.x.local_domain)
         )
       expect(mail.body)
-        .to match('New critical versions of Mastodon have been released, you may want to update as soon as possible!')
+        .to match('New critical versions of Nutshell have been released, you may want to update as soon as possible!')
       expect(mail)
         .to have_header('Importance', 'high')
         .and have_header('Priority', 'urgent')

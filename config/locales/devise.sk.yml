@@ -24,64 +24,64 @@ sk:
         explanation: S touto e-mailovou adresou ste si vytvorili účet na %{host}. Od aktivácie vás delí jediné kliknutie. Ak ste to neboli vy, tento e-mail ignorujte.
         explanation_when_pending: S touto e-mailovou adresou ste požiadali o pozvánku na %{host}. Po potvrdení vašej e-mailovej adresy vašu žiadosť skontrolujeme. Môžete sa prihlásiť, aby ste zmenili svoje údaje alebo vymazali svoje konto, ale kým nebude vaše konto schválené, nebudete mať prístup k väčšine funkcií. Ak bude vaša žiadosť zamietnutá, vaše údaje budú odstránené, takže sa od vás nebudú vyžadovať žiadne ďalšie kroky. Ak ste to neboli vy, tento e-mail ignorujte.
         extra_html: Prosím, pozrite sa aj na <a href="%{terms_path}"> pravidlá tohto servera</a> a <a href="%{policy_path}">naše pravidlá používania</a>.
-        subject: 'Mastodon: Potvrdzovacie pokyny pre %{instance}'
+        subject: 'Nutshell: Potvrdzovacie pokyny pre %{instance}'
         title: Overte svoj e-mail
       email_changed:
         explanation: 'E-mailová adresa vášho účtu bude zmenená na:'
         extra: Ak ste svoj e-mail nezmenili vy, je pravdepodobné, že niekto iný získal prístup k vášmu účtu. Čo najskôr zmeňte svoje heslo alebo, pokiaľ sa neviete prihlásiť, kontaktujte administrátora serveru.
-        subject: 'Mastodon: E-mailová adresa bola zmenená'
+        subject: 'Nutshell: E-mailová adresa bola zmenená'
         title: Nová e-mailová adresa
       password_change:
         explanation: Heslo k vášmu účtu bolo zmenené.
         extra: Ak ste si heslo nezmenili vy, je pravdepodobné, že niekto iný získal prístup k vášmu účtu. Čo najskôr zmeňte svoje heslo alebo, pokiaľ sa neviete prihlásiť, kontaktujte administrátora serveru.
-        subject: 'Mastodon: Heslo bolo zmenené'
+        subject: 'Nutshell: Heslo bolo zmenené'
         title: Heslo bolo zmenené
       reconfirmation_instructions:
         explanation: E-mail zmeníte potvrdením novej e-mailovej adresy.
-        extra: Pokiaľ ste túto akciu nevyžiadali vy, ignorujte tento email. E-mailová adresa pre váš účet na Mastodone totiž nebude zmenená, pokiaľ neprejdete na odkaz uvedený vyššie.
-        subject: 'Mastodon: Overte e-mail pre %{instance}'
+        extra: Pokiaľ ste túto akciu nevyžiadali vy, ignorujte tento email. E-mailová adresa pre váš účet na Nutshelle totiž nebude zmenená, pokiaľ neprejdete na odkaz uvedený vyššie.
+        subject: 'Nutshell: Overte e-mail pre %{instance}'
         title: Overte e-mailovú adresu
       reset_password_instructions:
         action: Zmeniť heslo
         explanation: Vyžiadali ste si pre svoj účet nové heslo.
         extra: Ak ste túto akciu nevyžiadali vy, ignorujte tento email. Vaše heslo nebude zmenené, pokiaľ neprejdete na odkaz uvedený vyššie a nevytvoríte si nové heslo.
-        subject: 'Mastodon: Pokyny pre obnovu hesla'
+        subject: 'Nutshell: Pokyny pre obnovu hesla'
         title: Obnova hesla
       two_factor_disabled:
         explanation: Prihlásenie je teraz možné iba pomocou e-mailu a hesla.
-        subject: 'Mastodon: Dvojfázové overovanie vypnuté'
+        subject: 'Nutshell: Dvojfázové overovanie vypnuté'
         subtitle: Dvojfázové overenie bolo pre váš účet vypnuté.
         title: Dvojfaktorové overovanie vypnuté
       two_factor_enabled:
         explanation: Na prihlásenie budete potrebovať kód vygenerovaný spárovanou aplikáciou pre overovanie.
-        subject: 'Mastodon: Dvojfázové overovanie zapnuté'
+        subject: 'Nutshell: Dvojfázové overovanie zapnuté'
         subtitle: Dvojfázové overenie bolo pre váš účet zapnuté.
         title: Dvojfaktorové overovanie zapnuté
       two_factor_recovery_codes_changed:
         explanation: Predošlé obnovovacie kódy boli zneplatnené a boli vygenerované nové.
-        subject: 'Mastodon: Dvojfázové obnovovacie kódy boli znovu vygenerované'
+        subject: 'Nutshell: Dvojfázové obnovovacie kódy boli znovu vygenerované'
         subtitle: Predošlé obnovovacie kódy boli zneplatnené a boli vygenerované nové.
         title: Obnovovacie kódy pre dvojfaktorové overovanie zmenené
       unlock_instructions:
-        subject: 'Mastodon: Pokyny na odomknutie účtu'
+        subject: 'Nutshell: Pokyny na odomknutie účtu'
       webauthn_credential:
         added:
           explanation: Do vášho konta bol pridaný nasledujúci bezpečnostný kľúč
-          subject: 'Mastodon: Nový bezpečnostný kľúč'
+          subject: 'Nutshell: Nový bezpečnostný kľúč'
           title: Bol pridaný nový bezpečnostný kľúč
         deleted:
           explanation: Z vášho účtu bol odstránený nasledujúci bezpečnostný kľúč
-          subject: 'Mastodon: Bezpečnostný kľúč odstránený'
+          subject: 'Nutshell: Bezpečnostný kľúč odstránený'
           title: Jeden z vašich bezpečnostných kľúčov bol odstránený
       webauthn_disabled:
         explanation: Overenie bezpečnostnými kľúčmi bolo pre váš účet vypnuté.
         extra: Odteraz sa môžete prihlásiť iba pomocou kódu vygenerovaného spárovanou aplikáciou pre overovanie.
-        subject: 'Mastodon: Overovanie s bezpečnostnými kľúčmi vypnuté'
+        subject: 'Nutshell: Overovanie s bezpečnostnými kľúčmi vypnuté'
         title: Bezpečnostné kľúče sú vypnuté
       webauthn_enabled:
         explanation: Overenie bezpečnostnými kľúčmi bolo pre váš účet zapnuté.
         extra: Odteraz môžete na prihlásenie použiť svoj bezpečnostný kľúč.
-        subject: 'Mastodon: Povolené overovanie bezpečnostným kľúčom'
+        subject: 'Nutshell: Povolené overovanie bezpečnostným kľúčom'
         title: Povolené bezpečnostné kľúče
     omniauth_callbacks:
       failure: 'Nebolo možné vás overiť z %{kind}, uvedený dôvod: „%{reason}“.'

@@ -1,5 +1,5 @@
 Below you'll find the original License file for the Silkscreen font.
-The file used on Mastodon is a custom file subset to only include the
+The file used on Nutshell is a custom file subset to only include the
 characters "Wrapstodon 0123456789" using the Font Squirrel Font-face Generator
 (https://www.fontsquirrel.com/tools/webfont-generator)
 

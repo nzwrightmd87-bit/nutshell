@@ -126,7 +126,7 @@ pt-PT:
         admin/accounts: Administração de contas
         admin/all: Todas as funções administrativas
         admin/reports: Administração de denúncias
-        all: Acesso total à sua conta Mastodon
+        all: Acesso total à sua conta Nutshell
         blocks: Bloqueios
         bookmarks: Itens Salvos
         conversations: Conversas
@@ -139,7 +139,7 @@ pt-PT:
         media: Anexos multimédia
         mutes: Ocultados
         notifications: Notificações
-        profile: O teu perfil Mastodon
+        profile: O teu perfil Nutshell
         push: Notificações "push"
         reports: Denúncias
         search: Pesquisar

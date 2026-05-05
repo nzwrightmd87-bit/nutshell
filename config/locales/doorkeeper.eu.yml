@@ -122,7 +122,7 @@ eu:
         admin/accounts: Kontuen administrazioa
         admin/all: Funtzio administratibo guztiak
         admin/reports: Salaketen administrazioa
-        all: Sarbide osoa zure Mastodon kontura
+        all: Sarbide osoa zure Nutshell kontura
         blocks: Blokeoak
         bookmarks: Laster-markak
         conversations: Elkarrizketak
@@ -135,7 +135,7 @@ eu:
         media: Multimedia eranskinak
         mutes: Mututzeak
         notifications: Jakinarazpenak
-        profile: Zure Mastodon profila
+        profile: Zure Nutshell profila
         push: Push jakinarazpenak
         reports: Salaketak
         search: Bilaketak

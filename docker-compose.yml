@@ -1,5 +1,5 @@
 # Nutshell Tier 1: Single-box production deployment
-# Mastodon + BlackEnvelope + Caddy reverse proxy
+# Nutshell + BlackEnvelope + Caddy reverse proxy
 
 services:
   caddy:

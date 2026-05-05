@@ -169,7 +169,7 @@ RSpec.describe ActivityPub::FetchRemoteStatusService do
           type: 'Article',
           name: 'Future of the Fediverse',
           content: 'Lorem Ipsum',
-          summary: '<p>Guest article by <a href="https://john.mastodon">John Mastodon</a></p><p>The fediverse is great reading this you will find out why!</p>',
+          summary: '<p>Guest article by <a href="https://john.nutshell">John Nutshell</a></p><p>The fediverse is great reading this you will find out why!</p>',
           attributedTo: ActivityPub::TagManager.instance.uri_for(sender),
         }
       end

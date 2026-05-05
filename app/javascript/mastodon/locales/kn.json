@@ -1,7 +1,7 @@
 {
   "about.blocks": "ನಿಯಂತ್ರಿತ ಸರ್ವರ್‌ಗಳು",
   "about.contact": "ಸಂಪರ್ಕ:",
-  "about.disclaimer": "ಮಾಸ್ಟೋಡಾನ್ ಇದು ಉಚಿತ, ಮುಕ್ತ ತಂತ್ರಾಂಶ ಮತ್ತು Mastodon gGmbH ಇದರ ನೊಂದಾಯಿತ ಗುರುತು.",
+  "about.disclaimer": "Nutshell is open-source software built for your community.",
   "about.domain_blocks.no_reason_available": "ಕಾರಣ ಲಭ್ಯವಿಲ್ಲ",
   "about.domain_blocks.preamble": "ಸಾಮಾನ್ಯವಾಗಿ ಮಾಸ್ಟೊಡಾನ್ ನಿಮಗೆ ಇತರೆ ಬಳಕೆದಾರರಿಂದ ಹಂಚಲ್ಪಟ್ಟ ವಿಷಯಗಳನ್ನು ನೋಡಲು ಮತ್ತು ಅವರೊಂದಿಗೆ ಸಂಭಾಷಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.\nಆದರೆ ಈ ಸರ್ವ್ರರ್‌ನಲ್ಲಿ ಅಳವಡಿಸಲಾದ ಕೆಲವು ವಿನಾಯಿತಿಗಳು ಇಂತಿವೆ.",
   "account.add_or_remove_from_list": "ಪಟ್ಟಿಗೆ ಸೇರಿಸು ಅಥವ ಪಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕು",
@@ -20,7 +20,7 @@
   "column.domain_blocks": "Hidden domains",
   "column.pins": "Pinned toot",
   "community.column_settings.media_only": "Media only",
-  "compose_form.encryption_warning": "Posts on Mastodon are not end-to-end encrypted. Do not share any dangerous information over Mastodon.",
+  "compose_form.encryption_warning": "Posts on Nutshell are not end-to-end encrypted. Do not share any dangerous information over Nutshell.",
   "compose_form.hashtag_warning": "This post won't be listed under any hashtag as it is unlisted. Only public posts can be searched by hashtag.",
   "compose_form.placeholder": "What is on your mind?",
   "compose_form.spoiler.marked": "Text is hidden behind warning",

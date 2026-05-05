@@ -47,7 +47,7 @@ class ActivityPub::LinkedDataSignature
 
     signature = Base64.strict_encode64(keypair.sign(OpenSSL::Digest.new('SHA256'), to_be_signed))
 
-    # Mastodon's context is either an array or a single URL
+    # Nutshell's context is either an array or a single URL
     context_with_security = Array(@json['@context'])
     context_with_security << 'https://w3id.org/security/v1'
     context_with_security.uniq!

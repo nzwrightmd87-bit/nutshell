@@ -33,6 +33,6 @@ Chewy.use_after_commit_callbacks = false
 
 # Elasticsearch uses Faraday internally. Faraday interprets the
 # http_proxy env variable by default which leads to issues when
-# Mastodon is run with hidden services enabled, because
+# Nutshell is run with hidden services enabled, because
 # Elasticsearch is *not* supposed to be accessed through a proxy
 Faraday.ignore_env_proxy = true

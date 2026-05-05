@@ -1,10 +1,10 @@
 ---
 an:
   about:
-    about_mastodon_html: 'Lo ret social d''o futuro: Sin anuncios, sin vichilancia corporativa, disenyo etico, y descentralización! Sé duenyo d''a tuya información con Mastodon!'
+    about_mastodon_html: 'Lo ret social d''o futuro: Sin anuncios, sin vichilancia corporativa, disenyo etico, y descentralización! Sé duenyo d''a tuya información con Nutshell!'
     contact_missing: No especificau
     contact_unavailable: No disponible
-    hosted_on: Mastodon alochau en %{domain}
+    hosted_on: Nutshell alochau en %{domain}
     title: Sobre
   accounts:
     followers:
@@ -604,7 +604,7 @@ an:
         moderation: Moderación
         special: Especial
       delete: Eliminar
-      description_html: Con <strong>rols d'usuario</strong>, puede personalizar las funcions y arias de Mastodon a las qualas pueden acceder los suyos usuarios.
+      description_html: Con <strong>rols d'usuario</strong>, puede personalizar las funcions y arias de Nutshell a las qualas pueden acceder los suyos usuarios.
       edit: Editar rol '%{name}'
       everyone: Permisos per defecto
       everyone_full_description_html: Este ye lo <strong>rol base</strong> que afecta a <strong>totz los usuarios</strong>, mesmo aquells sin un rol asignau. Totz los atros rols heredan permisos d'ell.
@@ -665,13 +665,13 @@ an:
         rules_hint: I hai una aria dedicada pa las reglas a las qualas s'aspera que los tuyos usuarios se adhieran.
         title: Sobre
       appearance:
-        preamble: Personalizar la interficie web de Mastodon.
+        preamble: Personalizar la interficie web de Nutshell.
         title: Apariencia
       branding:
-        preamble: La marca d'o tuyo servidor lo diferencia d'atros servidors d'o ret. Esta información puede amostrar-se a traviés d'una variedat d'entornos, como en a interficie web de Mastodon, en aplicacions nativas, en previsualizacions de vinclos en atros puestos web y en aplicacions de mensachería, etc. Per esta razón, ye millor mantener esta información clara, breu y concisa.
+        preamble: La marca d'o tuyo servidor lo diferencia d'atros servidors d'o ret. Esta información puede amostrar-se a traviés d'una variedat d'entornos, como en a interficie web de Nutshell, en aplicacions nativas, en previsualizacions de vinclos en atros puestos web y en aplicacions de mensachería, etc. Per esta razón, ye millor mantener esta información clara, breu y concisa.
         title: Marca
       content_retention:
-        preamble: Controlar cómo lo conteniu chenerau per l'usuario s'almagazena en Mastodon.
+        preamble: Controlar cómo lo conteniu chenerau per l'usuario s'almagazena en Nutshell.
         title: Retención de conteniu
       default_noindex:
         desc_html: Afecta a totz los usuarios que no han cambiau esta configuración per ells mesmos
@@ -820,7 +820,7 @@ an:
     webhooks:
       add_new: Anyadir endpoint
       delete: Eliminar
-      description_html: Un <strong>webhook</strong> permite a Mastodon ninviar <strong>notificacions en tiempo real</strong> sobre los eventos triaus a la tuya propia aplicación, pa que la tuya aplicación pueda <strong>lanzar reaccions automaticament</strong>.
+      description_html: Un <strong>webhook</strong> permite a Nutshell ninviar <strong>notificacions en tiempo real</strong> sobre los eventos triaus a la tuya propia aplicación, pa que la tuya aplicación pueda <strong>lanzar reaccions automaticament</strong>.
       disable: Deshabilitar
       disabled: Deshabilitau
       edit: Editar endpoint
@@ -877,7 +877,7 @@ an:
     animations_and_accessibility: Animacions y accesibilidat
     discovery: Descubrir
     localization:
-      body: Mastodon ye traduciu con la aduya de voluntarios.
+      body: Nutshell ye traduciu con la aduya de voluntarios.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Totz pueden contribuyir.
     sensitive_content: Conteniu sensible
@@ -898,9 +898,9 @@ an:
     delete_account: Borrar cuenta
     delete_account_html: Si deseya eliminar la suya cuenta, puede <a href="%{path}">proceder aquí</a>. Será pediu d'una confirmación.
     description:
-      prefix_invited_by_user: "@%{name} te convida a unir-te a este servidor de Mastodon!"
-      prefix_sign_up: Une-te a Mastodon hue!
-      suffix: Con una cuenta podrás seguir a chent, publicar novedatz y intercambiar mensaches con usuarios de qualsequier servidor de Mastodon y mas!
+      prefix_invited_by_user: "@%{name} te convida a unir-te a este servidor de Nutshell!"
+      prefix_sign_up: Une-te a Nutshell hue!
+      suffix: Con una cuenta podrás seguir a chent, publicar novedatz y intercambiar mensaches con usuarios de qualsequier servidor de Nutshell y mas!
     dont_have_your_security_key: No tiens la tuya clau de seguranza?
     forgot_password: Ixuplidés la tuya clau?
     invalid_reset_password_token: Lo token de reinicio de clau ye invalido u expiró. Per favor pide un nuevo.
@@ -927,7 +927,7 @@ an:
       preamble_html: Inicia sesión con as tuys credencials <strong>%{domain}</strong>. Si la tuya cuenta se troba en un servidor diferent, no podrás iniciar aquí una sesión.
       title: Iniciar sesión en %{domain}
     sign_up:
-      title: Creyar cuenta de Mastodon en %{domain}.
+      title: Creyar cuenta de Nutshell en %{domain}.
     status:
       account_status: Estau d'a cuenta
       functional: La tuya cuenta ye completament operativa.
@@ -1019,7 +1019,7 @@ an:
       content: Lo sentimos, bella cosa ha funcionau malament per la nuestra parte.
       title: Esta pachina no ye correcta
     '503': La pachina no s'ha puesto cargar a causa d'un fallo temporal d'o servidor.
-    noscript_html: Pa usar l'aplicación web de Mastodon, per favor activa Javascript. Alternativament, preba bella d'as <a href="%{apps_path}">aplicacions nativas</a> pa Mastodon pa la tuya plataforma.
+    noscript_html: Pa usar l'aplicación web de Nutshell, per favor activa Javascript. Alternativament, preba bella d'as <a href="%{apps_path}">aplicacions nativas</a> pa Nutshell pa la tuya plataforma.
   existing_username_validator:
     not_found: no podió trobar un usuario local con ixe nombre d'usuario
     not_found_multiple: no podió trobar %{usernames}
@@ -1335,7 +1335,7 @@ an:
       weibo: Weibo
     current_session: Sesión actual
     description: "%{browser} en %{platform}"
-    explanation: Estes son los navegadors web connectaus actualment en a tuya cuenta de Mastodon.
+    explanation: Estes son los navegadors web connectaus actualment en a tuya cuenta de Nutshell.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1515,7 +1515,7 @@ an:
         suspend: Cuenta suspendida
     welcome:
       explanation: Aquí i hai qualques consellos pa empecipiar
-      subject: Bienveniu a Mastodon
+      subject: Bienveniu a Nutshell
       title: Te damos la bienvenida a bordo, %{name}!
   users:
     follow_limit_reached: No puetz seguir a mas de %{limit} personas

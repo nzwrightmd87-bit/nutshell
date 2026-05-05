@@ -126,7 +126,7 @@ ga:
         admin/accounts: Cuntas a riar
         admin/all: Feidhmeanna riaracháin go léir
         admin/reports: Tuarascálacha a riar
-        all: Rochtain iomlán ar do chuntas Mastodon
+        all: Rochtain iomlán ar do chuntas Nutshell
         blocks: Bloic
         bookmarks: Leabharmharcanna
         conversations: Comhráite
@@ -139,7 +139,7 @@ ga:
         media: Ceangaltáin meán
         mutes: Múchann
         notifications: Fógraí
-        profile: Do phróifíl Mastodon
+        profile: Do phróifíl Nutshell
         push: Fógraí a bhrú
         reports: Tuarascálacha
         search: Cuardaigh

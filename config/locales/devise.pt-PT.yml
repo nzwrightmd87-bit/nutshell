@@ -25,64 +25,64 @@ pt-PT:
         explanation: Foi criada uma conta em %{host} com este endereço de e-mail. Está a um clique de ativá-la. Se não foi você que fez este registo, por favor ignore esta mensagem.
         explanation_when_pending: Candidatou-se com um convite para %{host} com este endereço de e-mail. Logo que confirme o seu endereço de e-mail, iremos rever a sua candidatura. Pode iniciar sessão para alterar os seus dados ou eliminar a sua conta, mas não poderá aceder à maioria das funções até que a sua conta seja aprovada. Se a sua inscrição for indeferida, os seus dados serão eliminados, pelo que não será necessária qualquer ação adicional da sua parte. Se não solicitou este convite, queira ignorar este e-mail.
         extra_html: Por favor leia as <a href="%{terms_path}">regras do servidor</a> e os <a href="%{policy_path}">nossos termos de serviço</a>.
-        subject: 'Mastodon: instruções de confirmação para %{instance}'
+        subject: 'Nutshell: instruções de confirmação para %{instance}'
         title: Verificar o endereço de e-mail
       email_changed:
         explanation: 'O e-mail associado à tua conta será alterado para:'
         extra: Se não alteraste o seu e-mail, é possível que alguém tenha conseguido aceder à tua conta. Por favor altera a tua palavra-passe imediatamente ou entra em contacto com um administrador do servidor se tiveres ficado sem acesso à tua conta.
-        subject: 'Mastodon: e-mail alterado'
+        subject: 'Nutshell: e-mail alterado'
         title: Novo endereço de e-mail
       password_change:
         explanation: A palavra-passe da tua conta foi alterada.
         extra: Se não alteraste a tua palavra-passe, é possível que alguém tenha conseguido aceder à tua conta. Por favor altera a tua palavra-passe imediatamente ou entra em contacto com um administrador do servidor se tiveres ficado sem acesso à tua conta.
-        subject: 'Mastodon: palavra-passe alterada'
+        subject: 'Nutshell: palavra-passe alterada'
         title: Palavra-passe alterada
       reconfirmation_instructions:
         explanation: Confirma o teu novo endereço para alterar o e-mail.
-        extra: Se esta alteração não foi iniciada por ti, ignora este e-mail. O endereço de e-mail da conta Mastodon não será alterado até acederes à hiperligação acima.
-        subject: 'Mastodon: confirmação de e-mail para %{instance}'
+        extra: Se esta alteração não foi iniciada por ti, ignora este e-mail. O endereço de e-mail da conta Nutshell não será alterado até acederes à hiperligação acima.
+        subject: 'Nutshell: confirmação de e-mail para %{instance}'
         title: Validar o endereço de e-mail
       reset_password_instructions:
         action: Alterar palavra-passe
         explanation: Pediste a alteração da palavra-passe da tua conta.
         extra: Se não fizeste este pedido, por favor ignora este e-mail. A tua palavra-passe não irá mudar se não acederes à hiperligação acima e criares uma nova.
-        subject: 'Mastodon: instruções para redefinir a palavra-passe'
+        subject: 'Nutshell: instruções para redefinir a palavra-passe'
         title: Solicitar nova palavra-passe
       two_factor_disabled:
         explanation: O início de sessão é agora possível utilizando apenas o endereço de e-mail e a palavra-passe.
-        subject: 'Mastodon: autenticação de dois fatores desativada'
+        subject: 'Nutshell: autenticação de dois fatores desativada'
         subtitle: A autenticação de dois fatores foi desativada para a tua conta.
         title: 2FA desativada
       two_factor_enabled:
         explanation: Para iniciar sessão, será necessário um token gerado pela aplicação TOTP emparelhada.
-        subject: 'Mastodon: autenticação de dois fatores ativada'
+        subject: 'Nutshell: autenticação de dois fatores ativada'
         subtitle: A autenticação de dois fatores foi ativada para a tua conta.
         title: 2FA ativado
       two_factor_recovery_codes_changed:
         explanation: Os códigos de recuperação anteriores foram invalidados e foram gerados novos códigos.
-        subject: 'Mastodon: foram gerados novos códigos de recuperação de dois fatores'
+        subject: 'Nutshell: foram gerados novos códigos de recuperação de dois fatores'
         subtitle: Os códigos de recuperação anteriores foram invalidados e foram gerados novos códigos.
         title: Códigos de recuperação 2FA alterados
       unlock_instructions:
-        subject: 'Mastodon: instruções para desbloquear'
+        subject: 'Nutshell: instruções para desbloquear'
       webauthn_credential:
         added:
           explanation: A seguinte chave de segurança foi adicionada à tua conta
-          subject: 'Mastodon: nova chave de segurança'
+          subject: 'Nutshell: nova chave de segurança'
           title: Foi adicionada uma nova chave de segurança
         deleted:
           explanation: A seguinte chave de segurança foi eliminada da sua conta
-          subject: 'Mastodon: chave de segurança eliminada'
+          subject: 'Nutshell: chave de segurança eliminada'
           title: Uma das tuas chaves de segurança foi eliminada
       webauthn_disabled:
         explanation: A autenticação com chaves de segurança foi desativada para a tua conta.
         extra: O início de sessão é agora possível utilizando apenas o token gerado pela aplicação TOTP emparelhada.
-        subject: 'Mastodon: autenticação com chave de segurança desativada'
+        subject: 'Nutshell: autenticação com chave de segurança desativada'
         title: Chaves de segurança desativadas
       webauthn_enabled:
         explanation: A autenticação por chave de segurança foi ativada para a tua conta.
         extra: A tua chave de segurança pode agora ser utilizada para iniciar a sessão.
-        subject: 'Mastodon: autenticação com chave de segurança ativada'
+        subject: 'Nutshell: autenticação com chave de segurança ativada'
         title: Chaves de segurança ativadas
     omniauth_callbacks:
       failure: Não foi possível autenticar %{kind} porque "%{reason}".

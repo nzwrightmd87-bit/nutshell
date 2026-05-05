@@ -7,7 +7,7 @@ RSpec.describe 'Terms of Service page' do
     visit terms_of_service_path
 
     expect(page)
-      .to have_css('noscript', text: /Mastodon/)
+      .to have_css('noscript', text: /Nutshell/)
       .and have_css('body', class: 'app-body')
   end
 end

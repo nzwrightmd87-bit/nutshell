@@ -9,7 +9,7 @@ module Mastodon::CLI
       long_desc <<~LONG_DESC
         Erase the server from the federation by broadcasting account delete
         activities to all known other servers. This allows a "clean exit" from
-        running a Mastodon server, as it leaves next to no cache behind on
+        running a Nutshell server, as it leaves next to no cache behind on
         other servers.
 
         This command is always interactive and requires confirmation twice.
@@ -28,7 +28,7 @@ module Mastodon::CLI
       LONG_DESC
       def self_destruct
         if SelfDestructHelper.self_destruct?
-          say('Self-destruct mode is already enabled for this Mastodon server', :green)
+          say('Self-destruct mode is already enabled for this Nutshell server', :green)
 
           pending_accounts = Account.local.without_suspended.count + Account.local.suspended.joins(:deletion_request).count
           sidekiq_stats = Sidekiq::Stats.new
@@ -57,7 +57,7 @@ module Mastodon::CLI
         fail_with_message 'Operation cancelled. Self-destruct will not begin.' if proceed_prompt_negative?
 
         say(<<~INSTRUCTIONS, :green)
-          To switch Mastodon to self-destruct mode, add the following variable to your evironment (e.g. by adding a line to your `.env.production`) and restart all Mastodon processes:
+          To switch Nutshell to self-destruct mode, add the following variable to your evironment (e.g. by adding a line to your `.env.production`) and restart all Nutshell processes:
             SELF_DESTRUCT=#{self_destruct_value}
           You can re-run this command to see the state of the self-destruct process.
         INSTRUCTIONS

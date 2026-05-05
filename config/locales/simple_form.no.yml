@@ -3,10 +3,10 @@
   simple_form:
     hints:
       account:
-        discoverable: Dine offentlige innlegg og profil kan bli omtalt eller anbefalt i ulike deler av Mastodon, og profilen din kan foreslås til andre brukere.
+        discoverable: Dine offentlige innlegg og profil kan bli omtalt eller anbefalt i ulike deler av Nutshell, og profilen din kan foreslås til andre brukere.
         display_name: Ditt fulle navn eller ditt morsomme navn.
         fields: Din hjemmeside, uttalelse, alder, eller alt annet du vil.
-        indexable: Dine offentlige innlegg kan vises i søkeresultat på Mastodon. Personer som har samhandlet med innleggene dine kan finne de uansett.
+        indexable: Dine offentlige innlegg kan vises i søkeresultat på Nutshell. Personer som har samhandlet med innleggene dine kan finne de uansett.
         note: 'Du kan @nevne andre eller #emneknagger.'
         show_collections: Folk vil kunne bla gjennom de du følger og dine følgere. Folk du følger vil uansett se at du følger dem.
       account_alias:
@@ -53,7 +53,7 @@
         phrase: Vil bli samsvart med, uansett bruk av store/små bokstaver eller innholdsvarselet til et innlegg
         scopes: Hvilke API-er programmet vil bli gitt tilgang til. Dersom du velger et toppnivåomfang, trenger du ikke å velge individuelle API-er.
         setting_aggregate_reblogs: Ikke vis nye fremhevinger for innlegg som nylig har blitt fremhevet (påvirker kun nylige fremhevinger)
-        setting_always_send_emails: E-postvarsler sendes normalt sett ikke mens du aktivt bruker Mastodon
+        setting_always_send_emails: E-postvarsler sendes normalt sett ikke mens du aktivt bruker Nutshell
         setting_default_sensitive: Følsomme media blir i utgangspunktet skjult, og kan vises frem ved hjelp av et klikk
         setting_display_media_default: Skjul media som er merket som følsomt
         setting_display_media_hide_all: Skjul alltid all media
@@ -76,13 +76,13 @@
       form_admin_settings:
         activity_api_enabled: Teller med lokale publiserte innlegg, aktive brukere og nye registreringer i ukentlige bøtter
         closed_registrations_message: Vises når det er stengt for registrering
-        custom_css: Du kan bruke egendefinerte stiler på nettversjonen av Mastodon.
+        custom_css: Du kan bruke egendefinerte stiler på nettversjonen av Nutshell.
         mascot: Overstyrer illustrasjonen i det avanserte webgrensesnittet.
         peers_api_enabled: En liste over domenenavn denne serveren har oppdaget i fødiverset. Dette er ikke noen indikasjon på om du fødererer med en gitt server, kun at din server vet om den. Dette brukes av tjenester som samler statistikk om fødiverset generelt.
         profile_directory: Profilkatalogen viser alle brukere som har valgt å kunne bli oppdaget.
         require_invite_text: Når registreringer krever manuell godkjenning, må du gjøre «Hvorfor vil du bli med?»-tekstinput obligatorisk i stedet for valgfritt
         site_contact_email: Hvordan mennesker får tak i deg for rettslige spørsmål eller brukerstøtte.
-        site_contact_username: Hvordan mennesker kan få tak i deg på Mastodon.
+        site_contact_username: Hvordan mennesker kan få tak i deg på Nutshell.
         site_extended_description: Eventuell ekstra informasjon som kan være nyttig for besøkende og dine brukere. Kan struktureres med Markdown-syntaks.
         site_short_description: En kort beskrivelse for å bidra til å definere din tjeners identitet. Hvem kjører den, hvem er det for?
         site_terms: Bruk dine egne personvernregler eller la stå tom for å bruke standarden. Kan struktureres med Markdown-syntaks.
@@ -95,7 +95,7 @@
       form_challenge:
         current_password: Du går inn i et sikkert område
       imports:
-        data: CSV-fil eksportert fra en annen Mastodon-instans
+        data: CSV-fil eksportert fra en annen Nutshell-instans
       invite_request:
         text: Dette vil hjelpe oss med å gjennomgå din søknad
       ip_block:
@@ -131,7 +131,7 @@
         url: Hvor hendelser vil bli sendt til
     labels:
       account:
-        discoverable: Anbefal profil og innlegg i Mastodons algoritmer
+        discoverable: Anbefal profil og innlegg i Nutshells algoritmer
         fields:
           name: Etikett
           value: Innhold
@@ -280,7 +280,7 @@
         software_updates:
           all: Varsle om alle oppdateringer
           critical: Varsle kun om kritiske oppdateringer
-          label: En ny versjon av Mastodon er tilgjengelig
+          label: En ny versjon av Nutshell er tilgjengelig
           none: Aldri varsle om oppdateringer (anbefales ikke)
           patch: Varsle om oppdateringer med feilrettinger
         trending_tag: Ny trend krever gjennomgang

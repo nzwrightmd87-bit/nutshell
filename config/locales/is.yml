@@ -1,10 +1,10 @@
 ---
 is:
   about:
-    about_mastodon_html: 'Samfélagsnet framtíðarinnar: Engar auglýsingar, ekkert eftirlit stórfyrirtækja, siðleg hönnun og engin miðstýring! Þú átt þín eigin gögn í Mastodon!'
+    about_mastodon_html: 'Samfélagsnet framtíðarinnar: Engar auglýsingar, ekkert eftirlit stórfyrirtækja, siðleg hönnun og engin miðstýring! Þú átt þín eigin gögn í Nutshell!'
     contact_missing: Ekki skilgreint
     contact_unavailable: Ekki til staðar
-    hosted_on: Mastodon hýst á %{domain}
+    hosted_on: Nutshell hýst á %{domain}
     title: Um hugbúnaðinn
   accounts:
     errors:
@@ -766,7 +766,7 @@ is:
         moderation: Umsjón
         special: Sérstakt
       delete: Eyða
-      description_html: Með <strong>hlutverkum notenda</strong> geturðu sérsniðið að hvaða aðgerðum og hvaða svæðum í Mastodon notendurnir þínir hafa aðgang.
+      description_html: Með <strong>hlutverkum notenda</strong> geturðu sérsniðið að hvaða aðgerðum og hvaða svæðum í Nutshell notendurnir þínir hafa aðgang.
       edit: Breyta hlutverki fyrir '%{name}'
       everyone: Sjálfgefnar heimildir
       everyone_full_description_html: Þetta er <strong>grunnhlutverk</strong> sem <strong>allir notendur</strong> fá, líka þeir sem ekki hafa fengið neitt sérstakt hlutverk. Öll önnur hlutverk erfa heimildir frá þessu.
@@ -838,13 +838,13 @@ is:
         rules_hint: Það er sérstakt svæði með þeim reglum sem ætlast er til að notendur þínir fari eftir.
         title: Um hugbúnaðinn
       allow_referrer_origin:
-        desc: Þegar notendurnir þínir smella á tengla á utanaðkomandi vefsvæði, gæti vafrinn þeirra sent vistfang Mastodon-þjónsins þíns sem tilvísanda (referrer). Gerðu þetta óvirkt ef slíkt myndi berskjalda notendurna, t.d. ef þetta er einkanetþjónn í Mastodon-sambandi.
-        title: Leyfa utanaðkomandi vefsvæðum að líta á Mastodon-þjóninn þinn sem efnisveitu
+        desc: Þegar notendurnir þínir smella á tengla á utanaðkomandi vefsvæði, gæti vafrinn þeirra sent vistfang Nutshell-þjónsins þíns sem tilvísanda (referrer). Gerðu þetta óvirkt ef slíkt myndi berskjalda notendurna, t.d. ef þetta er einkanetþjónn í Nutshell-sambandi.
+        title: Leyfa utanaðkomandi vefsvæðum að líta á Nutshell-þjóninn þinn sem efnisveitu
       appearance:
-        preamble: Sérsníddu vefviðmót Mastodon.
+        preamble: Sérsníddu vefviðmót Nutshell.
         title: Útlit
       branding:
-        preamble: Útlitsleg einkenni aðgreina netþjóninn þinn frá öðrum netþjónum á netkerfinu. Þessar upplýsingar geta birst á margvíslegum stöðum, eins og til dæmis í vefviðmóti Mastodon, einstökum forritum, í forskoðun tengla á öðrum vefsvæðum og innan samskiptaforrita, svo eitthvað sé talið. Þess vegna er vest að þessar upplýsingar séu skýrar, stuttar og tæmandi.
+        preamble: Útlitsleg einkenni aðgreina netþjóninn þinn frá öðrum netþjónum á netkerfinu. Þessar upplýsingar geta birst á margvíslegum stöðum, eins og til dæmis í vefviðmóti Nutshell, einstökum forritum, í forskoðun tengla á öðrum vefsvæðum og innan samskiptaforrita, svo eitthvað sé talið. Þess vegna er vest að þessar upplýsingar séu skýrar, stuttar og tæmandi.
         title: Útlitsleg aðgreining
       captcha_enabled:
         desc_html: |-
@@ -853,14 +853,14 @@ is:
         title: Nýir notendur munu þurfa að standast Turing skynpróf til að staðfesta notendaaðganginn
       content_retention:
         danger_zone: Hættusvæði
-        preamble: Stýrðu hvernig efni frá notendum sé geymt í Mastodon.
+        preamble: Stýrðu hvernig efni frá notendum sé geymt í Nutshell.
         title: Geymsla efnis
       default_noindex:
         desc_html: Hefur áhrif á alla þá notendur sem ekki hafa breytt þessum stillingum sjálfir
         title: Sjálfgefið láta notendur afþakka atriðaskráningu í leitarvélum
       discovery:
         follow_recommendations: Meðmæli um að fylgjast með
-        preamble: Að láta áhugavert efni koma skýrt fram er sérstaklega mikilvægt til að nálgast nýja notendur sem ekki þekkja neinn sem er á Mastodon. Stýrðu því hvernig hinir ýmsu eiginleikar við uppgötvun efnis virka á netþjóninum þínum.
+        preamble: Að láta áhugavert efni koma skýrt fram er sérstaklega mikilvægt til að nálgast nýja notendur sem ekki þekkja neinn sem er á Nutshell. Stýrðu því hvernig hinir ýmsu eiginleikar við uppgötvun efnis virka á netþjóninum þínum.
         privacy: Persónuvernd
         profile_directory: Notendamappa
         public_timelines: Opinberar tímalínur
@@ -903,7 +903,7 @@ is:
       destroyed_msg: Það tókst að eyða innsendingu á vefsvæði!
     software_updates:
       critical_update: Áríðandi - uppfærðu eins fljótt og auðið er
-      description: Mælt er með því að þú haldir Mastodon-uppsetningunni þinni uppfærðri til að vera með nýjustu lagfæringar og eiginleika. Aukinheldur er mikilvægt að halda Mastodon uppfærðu til að komast hjá öryggisveilum. Af þessum ástæðum athugar Mastodon með uppfærslur á 30 mínútna fresti og mun gera þér viðvart í samræmi við stillingar þínar á tilkynningum í tölvupósti.
+      description: Mælt er með því að þú haldir Nutshell-uppsetningunni þinni uppfærðri til að vera með nýjustu lagfæringar og eiginleika. Aukinheldur er mikilvægt að halda Nutshell uppfærðu til að komast hjá öryggisveilum. Af þessum ástæðum athugar Nutshell með uppfærslur á 30 mínútna fresti og mun gera þér viðvart í samræmi við stillingar þínar á tilkynningum í tölvupósti.
       documentation_link: Kanna nánar
       release_notes: Útgáfuupplýsingar
       title: Tiltækar uppfærslur
@@ -971,7 +971,7 @@ is:
         message_html: Elasticsearch atriðaskráningin er úrelt. Þú ættir að keyra <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Skoðaðu hjálparskjölin
-        message_html: Elasticsearch-klasinn þinn er með meira en einn hnút, en Mastodon er ekki sett upp til að nota þá.
+        message_html: Elasticsearch-klasinn þinn er með meira en einn hnút, en Nutshell er ekki sett upp til að nota þá.
       elasticsearch_preset_single_node:
         action: Skoðaðu hjálparskjölin
         message_html: Elasticsearch-klasinn þinn er með aðeins einn hnút, <code>ES_PRESET</code> ætti að vera stillt á <code>single_node_cluster</code>.
@@ -989,13 +989,13 @@ is:
         message_html: Ekkert Sidekiq-ferli er í gangi fyrir %{value} biðröð/biðraðir. Endilega athugaðu Sidekiq-uppsetninguna þína
       software_version_check:
         action: Skoða tiltækar uppfærslur
-        message_html: Uppfærsla er tiltæk fyrir Mastodon.
+        message_html: Uppfærsla er tiltæk fyrir Nutshell.
       software_version_critical_check:
         action: Skoða tiltækar uppfærslur
-        message_html: Áríðandi uppfærsla Mastodon er tiltæk, uppfærðu eins fljótt og auðið er.
+        message_html: Áríðandi uppfærsla Nutshell er tiltæk, uppfærðu eins fljótt og auðið er.
       software_version_patch_check:
         action: Skoða tiltækar uppfærslur
-        message_html: Uppfærsla með lagfæringum á Mastodon er tiltæk.
+        message_html: Uppfærsla með lagfæringum á Nutshell er tiltæk.
       upload_check_privacy_error:
         action: Skoðaðu hér til að fá frekari upplýsingar
         message_html: "<strong>Vefþjónninn þinn er ekki rétt stilltur. Friðhelgi notendanna þinna gæti verið í hættu.</strong>"
@@ -1155,7 +1155,7 @@ is:
     webhooks:
       add_new: Bæta við endapunkti
       delete: Eyða
-      description_html: "<strong>webhook-vefkrækja</strong> gerir Mastodon kleift að ýta <strong>rauntíma-tilkynningum</strong> um valda atburði til þinna eigin forrita, þannig að þau forrit getir <strong>sett sjálfvirk viðbrögð í gang</strong>."
+      description_html: "<strong>webhook-vefkrækja</strong> gerir Nutshell kleift að ýta <strong>rauntíma-tilkynningum</strong> um valda atburði til þinna eigin forrita, þannig að þau forrit getir <strong>sett sjálfvirk viðbrögð í gang</strong>."
       disable: Gera óvirkt
       disabled: Óvirkt
       edit: Breyta endapunkti
@@ -1189,8 +1189,8 @@ is:
       next_steps: Þú getur samþykkt áfrýjunina til að afturkalla ákvörðun umsjónarmanns, eða hunsað hana.
       subject: "%{username} er að áfrýja ákvörðun umsjónarmanns tekinni á %{instance}"
     new_critical_software_updates:
-      body: Nýjar áríðandi uppfærslur fyrir Mastodon hafa verið gefnar út, þú gætir viljað uppfæra eins fljótt og mögulegt er!
-      subject: Áríðandi Mastodon-uppfærslur eru tiltækar fyrir %{instance}!
+      body: Nýjar áríðandi uppfærslur fyrir Nutshell hafa verið gefnar út, þú gætir viljað uppfæra eins fljótt og mögulegt er!
+      subject: Áríðandi Nutshell-uppfærslur eru tiltækar fyrir %{instance}!
     new_pending_account:
       body: Nákvæmari upplýsingar um nýja notandaaðganginn eru hér fyrir neðan. Þú getur samþykkt eða hafnað þessari umsókn.
       subject: Nýr notandaaðgangur er kominn til yfirferðar á %{instance} (%{username})
@@ -1199,8 +1199,8 @@ is:
       body_remote: Einhver frá %{domain} hefur kært %{target}
       subject: Ný kæra vegna %{instance} (#%{id})
     new_software_updates:
-      body: Nýjar uppfærslur fyrir Mastodon hafa verið gefnar út, þú gætir viljað uppfæra!
-      subject: Nýjar Mastodon-uppfærslur eru tiltækar fyrir %{instance}!
+      body: Nýjar uppfærslur fyrir Nutshell hafa verið gefnar út, þú gætir viljað uppfæra!
+      subject: Nýjar Nutshell-uppfærslur eru tiltækar fyrir %{instance}!
     new_trends:
       body: 'Eftirfarandi atriði þarfnast yfirferðar áður en hægt er að birta þau opinberlega:'
       new_trending_links:
@@ -1224,7 +1224,7 @@ is:
     boosting_preferences_info_html: "<strong>Ábending:</strong> Hverjar svo sem stillingarnar eru, þá mun <kbd>Shift</kbd> + <kbd>smella</kbd> á %{icon} endurbirtingartáknið alltaf endurbirta strax."
     discovery: Uppgötvun
     localization:
-      body: Mastodon er þýtt af sjálfboðaliðum.
+      body: Nutshell er þýtt af sjálfboðaliðum.
       guide_link: https://crowdin.com/project/mastodon/is
       guide_link_text: Allir geta tekið þátt.
     sensitive_content: Viðkvæmt efni
@@ -1265,9 +1265,9 @@ is:
     delete_account: Eyða notandaaðgangi
     delete_account_html: Ef þú vilt eyða notandaaðgangnum þínum, þá geturðu <a href="%{path}">farið í það hér</a>. Þú verður beðin/n um staðfestingu.
     description:
-      prefix_invited_by_user: "@%{name} býður þér að taka þátt á þessum Mastodon-vefþjóni!"
-      prefix_sign_up: Skráðu þig á Mastodon strax í dag!
-      suffix: Með notandaaðgangi geturðu fylgst með fólki, sent inn færslur og skipst á skilaboðum við notendur á hvaða Mastodon-vefþjóni sem er, auk margs fleira!
+      prefix_invited_by_user: "@%{name} býður þér að taka þátt á þessum Nutshell-vefþjóni!"
+      prefix_sign_up: Skráðu þig á Nutshell strax í dag!
+      suffix: Með notandaaðgangi geturðu fylgst með fólki, sent inn færslur og skipst á skilaboðum við notendur á hvaða Nutshell-vefþjóni sem er, auk margs fleira!
     didnt_get_confirmation: Fékkstu ekki staðfestingartengil?
     dont_have_your_security_key: Ertu ekki með öryggislykilinn þinn?
     forgot_password: Gleymdirðu lykilorðinu?
@@ -1304,7 +1304,7 @@ is:
     set_new_password: Stilla nýtt lykilorð
     setup:
       email_below_hint_html: Skoðaðu ruslpóstmöppuna þína, eða biddu um annan póst. Þú getur leiðrétt tölvupóstfangið þitt ef þörf er á.
-      email_settings_hint_html: Smelltu á tengilinn sem við sendum á %{email} til að byrja að nota Mastodon. Við bíðum hér á meðan.
+      email_settings_hint_html: Smelltu á tengilinn sem við sendum á %{email} til að byrja að nota Nutshell. Við bíðum hér á meðan.
       link_not_received: Fékkstu ekki neinn tengil?
       new_confirmation_instructions_sent: Þú munt fá nýjan tölvupóst með staðfestingartengli innan skamms!
       title: Athugaðu pósthólfið þitt
@@ -1313,7 +1313,7 @@ is:
       title: Skrá inn á %{domain}
     sign_up:
       manual_review: Nýskráningar á %{domain} fara í gegnum handvirka yfirferð hjá umsjónarfólkinu okkar. Til að flýta fyrir skráningarferlinu, ættirðu að skrifa smávegis um þig og ástæður þess að þú viljir skrá þig á %{domain}.
-      preamble: Með notandaaðgangi á þessum Mastodon-þjóni geturðu fylgst með hverjum sem er á sambandsnetinu, sama hvar notandaaðgangurinn þeirra er hýstur.
+      preamble: Með notandaaðgangi á þessum Nutshell-þjóni geturðu fylgst með hverjum sem er á sambandsnetinu, sama hvar notandaaðgangurinn þeirra er hýstur.
       title: Förum núna að setja þig upp á %{domain}.
     status:
       account_status: Staða notandaaðgangs
@@ -1329,7 +1329,7 @@ is:
     user_privacy_agreement_html: Ég hef lesið og samþykkt <a href="%{privacy_policy_path}" target="_blank">persónuverndarstefnuna</a>
   author_attribution:
     example_title: Sýnitexti
-    hint_html: Ertu að skrifa fréttir eða bloggfærslur utan Mastodon? Stýrðu því hvernig vitnað er í þig þegar þeim er deilt á Mastodon.
+    hint_html: Ertu að skrifa fréttir eða bloggfærslur utan Nutshell? Stýrðu því hvernig vitnað er í þig þegar þeim er deilt á Nutshell.
     instructions: 'Gakktu úr skugga um að þessi kóði sé í HTML greinarinnar þinnar:'
     more_from_html: Meira frá %{name}
     s_blog: Bloggsvæði hjá %{name}
@@ -1437,7 +1437,7 @@ is:
       content: Því miður, en eitthvað fór úrskeiðis á okkar enda.
       title: Þessi síða er ekki rétt
     '503': Ekki var hægt að afgreiða síðuna vegna tímabundinnar bilunar á vefþjóni.
-    noscript_html: Til að nota vefútgáfu Mastodon þarftu að virkja JavaScript. Þú getur líka prófað eitt af Mastodon <a href="%{apps_path}">forritunum</a> fyrir stýrikerfið þitt.
+    noscript_html: Til að nota vefútgáfu Nutshell þarftu að virkja JavaScript. Þú getur líka prófað eitt af Nutshell <a href="%{apps_path}">forritunum</a> fyrir stýrikerfið þitt.
   existing_username_validator:
     not_found: Fann ekki staðværan notanda með þetta notandanafn
     not_found_multiple: tókst ekki að finna %{usernames}
@@ -1657,7 +1657,7 @@ is:
     unsubscribe:
       action: Já, hætta í áskrift
       complete: Hætta í áskrift
-      confirmation_html: Ertu viss um að þú viljir hætta áskrift sendinga á %{type} fyrir Mastodon á %{domain} til póstfangsins þíns %{email}? Þú getur alltaf aftur gerst áskrifandi í <a href="%{settings_path}">stillingunum fyrir tilkynningar í tölvupósti</a>.
+      confirmation_html: Ertu viss um að þú viljir hætta áskrift sendinga á %{type} fyrir Nutshell á %{domain} til póstfangsins þíns %{email}? Þú getur alltaf aftur gerst áskrifandi í <a href="%{settings_path}">stillingunum fyrir tilkynningar í tölvupósti</a>.
       emails:
         notification_emails:
           favourite: tilkynningum í tölvupósti um eftirlæti
@@ -1666,7 +1666,7 @@ is:
           mention: tilkynningum í tölvupósti um tilvísanir
           reblog: tilkynningum í tölvupósti um endurbirtingar
       resubscribe_html: Ef þú hættir áskrift fyrir mistök, geturðu alltaf aftur gerst áskrifandi í <a href="%{settings_path}">stillingunum fyrir tilkynningar í tölvupósti</a>.
-      success_html: Þú munt ekki lengur fá sendingar með %{type} fyrir Mastodon á %{domain} á póstfangið þitt %{email}.
+      success_html: Þú munt ekki lengur fá sendingar með %{type} fyrir Nutshell á %{domain} á póstfangið þitt %{email}.
       title: Taka úr áskrift
   media_attachments:
     validations:
@@ -1805,13 +1805,13 @@ is:
     posting_defaults: Sjálfgefin gildi við gerð færslna
     public_timelines: Opinberar tímalínur
   privacy:
-    hint_html: "<strong>Sérsníddu hvernig þú vilt að finna megi notandasnið þitt og færslur.</strong> Ýmsir eiginleikar í Mastodon geta hjálpað þér að ná til breiðari áheyrendahóps, séu þeir virkjaðir. Taktu þér tíma til að yfirfara þessar stillingar svo að þær henti þér."
+    hint_html: "<strong>Sérsníddu hvernig þú vilt að finna megi notandasnið þitt og færslur.</strong> Ýmsir eiginleikar í Nutshell geta hjálpað þér að ná til breiðari áheyrendahóps, séu þeir virkjaðir. Taktu þér tíma til að yfirfara þessar stillingar svo að þær henti þér."
     privacy: Gagnaleynd
     privacy_hint_html: Stýrðu því hve miklar upplýsingar þú birtir sem gætu gagnast öðrum. Fólk uppgötvar áhugaverða notendur og sniðug forrit með því að skoða hvað annað fólk fylgist með og hvaða forrit það notar til að birta færslur, en hinsvegar er þér frjálst að halda þessu leyndu.
     reach: Útbreiðsla
     reach_hint_html: Stýrðu hvort annað fólk geti fundið þig og fylgst með þér. Viltu að færslur frá þér birtist á Kanna-skjánum? Viltu að annað fólk sjái þigþar sem mælt er með hverjum hægt sé að fylgjast með? Viltu samþykkja alla nýja fylgjendur sjálfkrafa, eða viltu stýra því fyrir hvern og einn?
     search: Leit
-    search_hint_html: Stýrðu hvernig hægt sé að finna þig. Viltu að fólk finni þig út frá því sem þú hefur birt opinberlega? Viltu að fólk utan Mastodon geti fundið notandasniðið þitt þegar það leitar á vefnum? Athugaðu að ekki er hægt að tryggja algjöra útilokun frá öllum leitarvélum þegar um opinberlega birtar upplýsingar er að ræða.
+    search_hint_html: Stýrðu hvernig hægt sé að finna þig. Viltu að fólk finni þig út frá því sem þú hefur birt opinberlega? Viltu að fólk utan Nutshell geti fundið notandasniðið þitt þegar það leitar á vefnum? Athugaðu að ekki er hægt að tryggja algjöra útilokun frá öllum leitarvélum þegar um opinberlega birtar upplýsingar er að ræða.
     title: Gagnaleynd og útbreiðsla
   privacy_policy:
     title: Persónuverndarstefna
@@ -1886,7 +1886,7 @@ is:
     current_session: Núverandi seta
     date: Dagsetning
     description: "%{browser} á %{platform}"
-    explanation: Þetta eru vafrarnir sem núna eru skráðir inn á Mastodon-aðganginn þinn.
+    explanation: Þetta eru vafrarnir sem núna eru skráðir inn á Nutshell-aðganginn þinn.
     ip: IP-vistfang
     platforms:
       adobe_air: Adobe Air
@@ -1912,7 +1912,7 @@ is:
     aliases: Samnefni notandaaðgangs
     appearance: Útlit
     authorized_apps: Leyfð forrit
-    back: Til baka í Mastodon
+    back: Til baka í Nutshell
     delete: Eyðing notandaaðgangs
     development: Þróun
     edit_profile: Breyta notandasniði
@@ -1987,9 +1987,9 @@ is:
       direct: Einkaspjall
       private: Einungis fylgjendur
       public: Opinber
-      public_long: Hver sem er, á og utan Mastodon
+      public_long: Hver sem er, á og utan Nutshell
       unlisted: Hljóðlátt opinbert
-      unlisted_long: Falið frá leitarniðurstöðum Mastodon, vinsældalistum og opinberum tímalínum
+      unlisted_long: Falið frá leitarniðurstöðum Nutshell, vinsældalistum og opinberum tímalínum
   statuses_cleanup:
     enabled: Sjálfkrafa eyða eldri færslum
     enabled_hint: Eyðir sjálfkrafa færslum þínum um leið og þær ná tilteknum aldursmörkum, nema ef þær samsvara einni af undantekningunum hér fyrir neðan
@@ -2040,7 +2040,7 @@ is:
     review_link: Yfirfara þjónustuskilmála
     title: Þjónustuskilmálar eru að breytast á %{domain}
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d. %b, %Y, %H:%M"
@@ -2066,7 +2066,7 @@ is:
     recovery_codes_regenerated: Það tókst að endurgera endurheimtukóða
     recovery_instructions_html: Ef þú tapar símanum þínum geturðu notað einn af endurheimtukóðunum hér fyrir neðan til að fá aftur samband við notandaaðganginn þinn. <strong>Geymdu endurheimtukóðana á öruggum stað</strong>. Sem dæmi gætirðu prentað þá út og geymt með öðrum mikilvægum skjölum.
     resume_app_authorization: Halda áfram með auðkenningu forrits
-    role_requirement: "%{domain} krefst þess að þú setjir upp tveggja-þátta auðkenningu áður en þú getur notað Mastodon."
+    role_requirement: "%{domain} krefst þess að þú setjir upp tveggja-þátta auðkenningu áður en þú getur notað Nutshell."
     webauthn: Öryggislyklar
   user_mailer:
     announcement_published:
@@ -2085,7 +2085,7 @@ is:
       subtitle: Áfrýjun þinni hefur verið hafnað.
       title: Áfrýjun hafnað
     backup_ready:
-      explanation: Þú baðst um fullt öryggisafrit af Mastodon notandaaðgangnum þínum.
+      explanation: Þú baðst um fullt öryggisafrit af Nutshell notandaaðgangnum þínum.
       extra: Það er núna tilbúið til niðurhals!
       subject: Safnskráin þín er tilbúin til niðurhals
       title: Taka út í safnskrá
@@ -2146,7 +2146,7 @@ is:
       apps_android_action: Fáðu það á Google Play
       apps_ios_action: Sækja í App Store
       apps_step: Sæktu opinberu forritin okkar.
-      apps_title: Mastodon-forrit
+      apps_title: Nutshell-forrit
       checklist_subtitle: 'Komum þér í gang á þessum nýja samfélagsmiðli:'
       checklist_title: Til minnis í upphafi
       edit_profile_action: Sérsníða
@@ -2154,16 +2154,16 @@ is:
       edit_profile_title: Sérsníddu notandasniðið þitt
       explanation: Hér eru nokkrar ábendingar til að koma þér í gang
       feature_action: Kanna nánar
-      feature_audience: Mastodon gefur þér einstakt tækifæri til að eiga í samskiptum við áhorfendur þína milliliðalaust. Mastodon-netþjónn sem settur er upp á þínu eigin kerfi er ekki undir neins stjórn nema þinnar og gerir þér kleift að fylgjast með og eiga fylgjendur á hverjum þeim Mastodon-netþjóni sem er tengdur við internetið.
+      feature_audience: Nutshell gefur þér einstakt tækifæri til að eiga í samskiptum við áhorfendur þína milliliðalaust. Nutshell-netþjónn sem settur er upp á þínu eigin kerfi er ekki undir neins stjórn nema þinnar og gerir þér kleift að fylgjast með og eiga fylgjendur á hverjum þeim Nutshell-netþjóni sem er tengdur við internetið.
       feature_audience_title: Byggðu upp orðspor þitt og áheyrendafjölda
-      feature_control: Þú veist best hvað þú vilt sjá í heimastreyminu þínu. Engin reiknirit eða auglýsingar að þvælast fyrir. Fylgstu af einum aðgangi með hverjum sem er á milli Mastodon-netþjóna og fáðu færslurnar þeirra í tímaröð, þannig geturðu útbúið þitt eigið lítið horn á internetinu þar sem hlutirnir eru að þínu skapi.
+      feature_control: Þú veist best hvað þú vilt sjá í heimastreyminu þínu. Engin reiknirit eða auglýsingar að þvælast fyrir. Fylgstu af einum aðgangi með hverjum sem er á milli Nutshell-netþjóna og fáðu færslurnar þeirra í tímaröð, þannig geturðu útbúið þitt eigið lítið horn á internetinu þar sem hlutirnir eru að þínu skapi.
       feature_control_title: Hafðu stjórn á þinni eigin tímalínu
-      feature_creativity: Mastodon styður færslur með hljóði, myndum og myndskeiðum, lýsingum fyrir aukið aðgengi, kannanir, aðvörunum vegna efnis, hreyanlegum auðkennismyndum, sérsniðnum lyndistáknum, utanskurði smámynda ásamt fleiru; til að hjálpa þér við að tjá þig á netinu. Hvort sem þú sért að gefa út listina þína, tónlist eða hlaðvarp, þá er Mastodon til staðar fyrir þig.
+      feature_creativity: Nutshell styður færslur með hljóði, myndum og myndskeiðum, lýsingum fyrir aukið aðgengi, kannanir, aðvörunum vegna efnis, hreyanlegum auðkennismyndum, sérsniðnum lyndistáknum, utanskurði smámynda ásamt fleiru; til að hjálpa þér við að tjá þig á netinu. Hvort sem þú sért að gefa út listina þína, tónlist eða hlaðvarp, þá er Nutshell til staðar fyrir þig.
       feature_creativity_title: Óviðjafnanleg sköpunargleði
-      feature_moderation: Mastodon setur ákvarðanatökur aftur í þínar hendur. Hver netþjónn býr til sínar eigin reglur og venjur, sem gilda fyrir þann netþjón en eru ekki boðaðar með valdi að ofan og niður líkt og á samfélagsnetum stórfyrirtækja. Á þennan hátt svarar samfélagsmiðillinn þörfum mismunandi hópa. Taktu þátt á netþjóni með reglum sem þú samþykkir, eða hýstu þinn eigin.
+      feature_moderation: Nutshell setur ákvarðanatökur aftur í þínar hendur. Hver netþjónn býr til sínar eigin reglur og venjur, sem gilda fyrir þann netþjón en eru ekki boðaðar með valdi að ofan og niður líkt og á samfélagsnetum stórfyrirtækja. Á þennan hátt svarar samfélagsmiðillinn þörfum mismunandi hópa. Taktu þátt á netþjóni með reglum sem þú samþykkir, eða hýstu þinn eigin.
       feature_moderation_title: Umsjón með efni eins og slík á að vera
       follow_action: Fylgjast með
-      follow_step: Að fylgjast með áhugaverðu fólki er það sem Mastodon snýst um.
+      follow_step: Að fylgjast með áhugaverðu fólki er það sem Nutshell snýst um.
       follow_title: Aðlagaðu heimastreymið þitt eftir þínu höfði
       follows_subtitle: Fylgstu með vel þekktum notendum
       follows_title: Hverjum ætti að fylgjast með
@@ -2177,10 +2177,10 @@ is:
       post_action: Skrifa
       post_step: Heilsaðu heiminum með texta, ljósmyndum, myndskeiðum eða könnunum.
       post_title: Gerðu fyrstu færsluna þína
-      share_step: Láttu vini þína vita hvernig þeir geta fundið þig á Mastodon.
+      share_step: Láttu vini þína vita hvernig þeir geta fundið þig á Nutshell.
       share_title: Deildu notandasniðinu þínu
       sign_in_action: Skrá inn
-      subject: Velkomin í Mastodon
+      subject: Velkomin í Nutshell
       title: Velkomin/n um borð, %{name}!
   users:
     follow_limit_reached: Þú getur ekki fylgst með fleiri en %{limit} aðilum
@@ -2193,7 +2193,7 @@ is:
   verification:
     extra_instructions_html: <strong>Ábending:</strong> Tengillinn á vefsvæðinu þínu má vera ósýnilegur. Mikilvægi hlutinn er <code>rel="me"</code> sem kemur í veg fyrir auðkennastuld á vefsvæðum með notenda-framleiddu efni. Þú getur meira að segja notað <code>link</code> einindi í haus síðunnar í stað <code>a</code>, en HTML-kóðinn verður að vera aðgengilegur án keyrslu JavaScript.
     here_is_how: Svona gerum við það
-    hint_html: "<strong>Að sannreyna auðkenni þitt á Mastodon er fyrir alla.</strong> Byggt á opnum vefstöðlum, ókeypis núna og um ókomna tíð. Allt sem þú þarft er þitt eigið persónulegt vefsvæði sem aðrir geta notað til að þekkja þig. Þegar þú tengir á þetta vefsvæði úr notandasniðinu þínu, munum við athuga hvort vefsvæðið tengi til baka í notandasniðiið þitt og birtum þá sýnilegt merki um að svo sé."
+    hint_html: "<strong>Að sannreyna auðkenni þitt á Nutshell er fyrir alla.</strong> Byggt á opnum vefstöðlum, ókeypis núna og um ókomna tíð. Allt sem þú þarft er þitt eigið persónulegt vefsvæði sem aðrir geta notað til að þekkja þig. Þegar þú tengir á þetta vefsvæði úr notandasniðinu þínu, munum við athuga hvort vefsvæðið tengi til baka í notandasniðiið þitt og birtum þá sýnilegt merki um að svo sé."
     instructions_html: Afritaðu og límdu kóðann hér fyrir neðan inn í HTML-kóða vefsvæðisins þíns. Bættu síðan slóð vefsvæðisins þíns inn í einn af auka-reitunum í flipanum "Breyta notandasniði" og vistaðu síðan breytingarnar.
     verification: Sannprófun
     verified_links: Staðfestu tenglarnir þínir
@@ -2217,5 +2217,5 @@ is:
     otp_required: Til að nota öryggislykla skaltu fyrst virkja tveggja-þátta auðkenningu.
     registered_on: Skráði sig %{date}
   wrapstodon:
-    description: Sjáðu hvernig %{name} notaði Mastodon á árinu!
+    description: Sjáðu hvernig %{name} notaði Nutshell á árinu!
     title: Ársuppgjörið %{year} fyrir %{name}

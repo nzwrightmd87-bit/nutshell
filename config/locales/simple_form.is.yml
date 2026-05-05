@@ -4,10 +4,10 @@ is:
     hints:
       account:
         attribution_domains: Eitt á hverja línu. Ver fyrir röngum tilvísunum.
-        discoverable: Opinberar færslur og notandasnið þitt geta birst eða verið mælt með á hinum ýmsu svæðum í Mastodon auk þess sem hægt er að mæla með þér við aðra notendur.
+        discoverable: Opinberar færslur og notandasnið þitt geta birst eða verið mælt með á hinum ýmsu svæðum í Nutshell auk þess sem hægt er að mæla með þér við aðra notendur.
         display_name: Fullt nafn þitt eða eitthvað til gamans.
         fields: Heimasíðan þín, fornöfn, aldur eða eitthvað sem þú vilt koma á framfæri.
-        indexable: Opinberar færslur þínar gætu birst í leitarniðurstöðum á Mastodon. Fólk sem hefur haft afskipti af færslunum mun eftir sem áður geta leitað í þeim.
+        indexable: Opinberar færslur þínar gætu birst í leitarniðurstöðum á Nutshell. Fólk sem hefur haft afskipti af færslunum mun eftir sem áður geta leitað í þeim.
         note: 'Þú getur @minnst á annað fólk eða #myllumerki.'
         show_collections: Fólk mun geta skoðað þá sem fylgjast með þér og með hverjum þú fylgist. Fólk sem þú fylgist með mun alltaf sjá að þú sért að gera það.
         unlocked: Fólk mun geta fylgst með þér án þess að bíða eftir samykki. Taktu merkið úr þessu ef þú vilt yfirfara fylgjendabeiðnir og velja hvort þú samþykkir eða hafnar nýjum fylgjendum.
@@ -54,11 +54,11 @@ is:
         password: Notaðu minnst 8 stafi
         phrase: Verður notað til samsvörunar burtséð frá stafstöðu texta eða viðvörunar vegna efnis í færslu
         scopes: Að hvaða API-kerfisviðmótum forritið fær aðgang. Ef þú velur efsta-stigs svið, þarftu ekki að gefa einstakar heimildir.
-        setting_advanced_layout: Birta Mastodon í margra dálka framsetningu, sem gerir kleift að skoða saman tímalínu, tilkynningar og þriðja dálk að eigin vali. Ekki er mælt með þessu fyrir smærri skjái.
+        setting_advanced_layout: Birta Nutshell í margra dálka framsetningu, sem gerir kleift að skoða saman tímalínu, tilkynningar og þriðja dálk að eigin vali. Ekki er mælt með þessu fyrir smærri skjái.
         setting_aggregate_reblogs: Ekki sýna nýjar endurbirtingar á færslum sem hafa nýlega verið endurbirtar (hefur bara áhrif á ný-mótteknar endurbirtingar)
-        setting_always_send_emails: Venjulega eru tilkynningar í tölvupósti ekki sendar þegar þú ert virk/ur í að nota Mastodon
+        setting_always_send_emails: Venjulega eru tilkynningar í tölvupósti ekki sendar þegar þú ert virk/ur í að nota Nutshell
         setting_boost_modal: Þegar þetta er virkt, mun endurbirting fyrst opna staðfestingarglugga, þar sem þú getur breytt sýnileika endurbirtingarinnar þinnar.
-        setting_default_quote_policy_private: Aðrir geta ekki vitnað í færslur einungis til fylgjenda sem skrifaðar eru á Mastodon.
+        setting_default_quote_policy_private: Aðrir geta ekki vitnað í færslur einungis til fylgjenda sem skrifaðar eru á Nutshell.
         setting_default_quote_policy_unlisted: Þegar fólk vitnar í þig verða færslurnar þeirr einnig faldar á vinsældatímalínum.
         setting_default_sensitive: Viðkvæmt myndefni er sjálfgefið falið og er hægt að birta með smelli
         setting_display_media_default: Fela myndefni sem merkt er viðkvæmt
@@ -91,8 +91,8 @@ is:
         bootstrap_timeline_accounts: Þessi aðgangar verða festir efst á listann yfir þá aðila sem mælt er með að nýir notendur fylgist með. Gefðu upp lista yfir aðganga aðgreindan með kommum.
         closed_registrations_message: Birtist þegar lokað er á nýskráningar
         content_cache_retention_period: Öllum færslum af öðrum netþjónum (þar með taldar endurbirtingar og svör) verður eytt eftir uppgefinn fjölda daga, án tillits til gagnvirkni staðværra notenda við þessar færslur. Þetta á einnig við um færslur sem notandinn hefur merkt sem bókamerki eða eftirlæti. Beinar tilvísanir (einkaspjall) milli notenda af mismunandi netþjónum munu einnig tapast og er engin leið til að endurheimta þær. Notkun á þessari stillingu er einungis ætluð sérstilltum netþjónum og mun skemma fyrir notendum ef þetta er sett upp fyrir almenna notkun.
-        custom_css: Þú getur virkjað sérsniðna stíla í vefútgáfu Mastodon.
-        favicon: WEBP, PNG, GIF eða JPG. Tekur yfir sjálfgefna Mastodon favicon-táknmynd með sérsniðinni táknmynd.
+        custom_css: Þú getur virkjað sérsniðna stíla í vefútgáfu Nutshell.
+        favicon: WEBP, PNG, GIF eða JPG. Tekur yfir sjálfgefna Nutshell favicon-táknmynd með sérsniðinni táknmynd.
         landing_page: Þetta ákvarðar hvaða síðu nýir gestir sjá þegar þeir koma fyrst á netþjóninn þinn. Ef þú velur "Vinsælt" þá þurfa vinsælar færslur að vera virkjaðar í stillingum fyrir Uppgötvun. Ef þú velur "Staðbundið streymi" þá þarf "Aðgangur að beinum streymum, þar með töldum staðværum færslum" að vera stillt á "Allir" í stillingum fyrir Uppgötvun.
         mascot: Þetta tekyr yfir myndskreytinguna í ítarlega vefviðmótinu.
         media_cache_retention_period: Myndefnisskrár úr færslum sem gerðar eru af fjartengdum notendum eru geymdar á netþjóninum þínum. Þegar þetta er stillt á jákvætt gildi, verður þessum skrám eytt sjáfkrafa eftir þeim tiltekna fjölda daga. Ef beðið er um myndefnið eftir að því er eytt, mun það verða sótt aftur ef frumgögnin eru ennþá aðgengileg. Vegna takmarkana á hversu oft forskoðunarspjöld tengla eru sótt á utanaðkomandi netþjóna, þá er mælt með því að setja þetta gildi á að minnsta kosti 14 daga, annars gæti mistekist að uppfæra forskoðunarspjöld tengla eftir þörfum fyrir þann tíma.
@@ -101,7 +101,7 @@ is:
         profile_directory: Notendamappan telur upp alla þá notendur sem hafa valið að vera uppgötvanlegir.
         require_invite_text: Þegar nýskráningar krefjast handvirks samþykkis, þá skal gera textann í “Hvers vegna viltu taka þátt?” að kröfu en ekki valkvæðan
         site_contact_email: Hovernig fólk getur haft samband við þig til að fá aðstoð eða vegna lagalegra mála.
-        site_contact_username: Hovernig fólk getur haft samband við þig á Mastodon.
+        site_contact_username: Hovernig fólk getur haft samband við þig á Nutshell.
         site_extended_description: Hverjar þær viðbótarupplýsingar sem gætu nýst gestum þínum og notendum. Má sníða með Markdown-málskipan.
         site_short_description: Stutt lýsing sem hjálpar til við að auðkenna netþjóninn þinn. Hver er að reka hann, fyrir hverja er hann?
         site_terms: Notaðu þína eigin persónuverndarstefnu eða skildu þetta eftir autt til að nota sjálfgefna stefnu. Má sníða með Markdown-málskipan.
@@ -111,11 +111,11 @@ is:
         thumbnail: Mynd um það bil 2:1 sem birtist samhliða upplýsingum um netþjóninn þinn.
         trendable_by_default: Sleppa handvirkri yfirferð á vinsælu efni. Áfram verður hægt að fjarlægja stök atriði úr vinsældarlistum.
         trends: Vinsældir sýna hvaða færslur, myllumerki og fréttasögur séu í umræðunni á netþjóninum þínum.
-        wrapstodon: Býður notendum á netþjóninum upp á skemmtilega samantekt um notkun þeirra á Mastodon á árinu sem er að líða. Þessi eiginleiki er í boði á milli 10. og 31. desember ár hvert og býðst þeim notendum sem hafa gert að minnsta kosti eina opinbera eða hljóðlega opinbera færslu og notað a. m. k. eitt myllumerki á árinu.
+        wrapstodon: Býður notendum á netþjóninum upp á skemmtilega samantekt um notkun þeirra á Nutshell á árinu sem er að líða. Þessi eiginleiki er í boði á milli 10. og 31. desember ár hvert og býðst þeim notendum sem hafa gert að minnsta kosti eina opinbera eða hljóðlega opinbera færslu og notað a. m. k. eitt myllumerki á árinu.
       form_challenge:
         current_password: Þú ert að fara inn á öryggissvæði
       imports:
-        data: CSV-skrá sem flutt hefur verið út af öðrum Mastodon-þjóni
+        data: CSV-skrá sem flutt hefur verið út af öðrum Nutshell-þjóni
       invite_request:
         text: Þetta mun hjálpa okkur við að yfirfara umsóknina þína
       ip_block:
@@ -164,7 +164,7 @@ is:
         name: Opinbert heiti hlutverks, ef birta á hlutverk sem merki
         permissions_as_keys: Notendur með þetta hlutverk munu hafa aðgang að...
         position: Rétthærra hlutverk ákvarðar lausn árekstra í ákveðnum tilfellum. Sumar aðgerðir er aðeins hægt að framkvæma á hlutverk með lægri forgangi
-        require_2fa: Notendur með þetta hlutverk munu þurfa að setja upp tveggja-þátta auðkenningu til að nota Mastodon
+        require_2fa: Notendur með þetta hlutverk munu þurfa að setja upp tveggja-þátta auðkenningu til að nota Nutshell
       username_block:
         allow_with_approval: Í stað þess að loka alfarið á nýskráningar, munu samsvarandi nýskráningar þurfa samþykki þitt
         comparison: Hafðu í huga Scunthorpe-vandamálið (Scunthorpe inniheldur orð sem ýmsar síur reyna að banna) þegar þú útilokar samsvarandi orðhluta
@@ -348,7 +348,7 @@ is:
         software_updates:
           all: Láta vita við allar uppfærslur
           critical: Láta einungis vita við áríðandi uppfærslur
-          label: Ný útgáfa á Mastodon er tiltæk
+          label: Ný útgáfa á Nutshell er tiltæk
           none: Aldrei láta vita um uppfærslur (ekki mælt með því)
           patch: Láta vita við uppfærslur með lagfæringum
         trending_tag: Nýtt vinsælt efni krefst yfirferðar

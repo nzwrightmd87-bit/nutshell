@@ -4,10 +4,10 @@ cs:
     hints:
       account:
         attribution_domains: Jeden na řádek. Chrání před falešným připisováním autorství.
-        discoverable: Vaše veřejné příspěvky a profil mohou být zobrazeny nebo doporučeny v různých oblastech Mastodonu a váš profil může být navrhován ostatním uživatelům.
+        discoverable: Vaše veřejné příspěvky a profil mohou být zobrazeny nebo doporučeny v různých oblastech Nutshellu a váš profil může být navrhován ostatním uživatelům.
         display_name: Vaše celé jméno nebo přezdívka.
         fields: Vaše domovská stránka, zájmena, věk, cokoliv chcete.
-        indexable: Vaše veřejné příspěvky se mohou objevit ve výsledcích vyhledávání na Mastodonu. Lidé, kteří s vašimi příspěvky interagovaly, je mohou stále vyhledávat.
+        indexable: Vaše veřejné příspěvky se mohou objevit ve výsledcích vyhledávání na Nutshellu. Lidé, kteří s vašimi příspěvky interagovaly, je mohou stále vyhledávat.
         note: 'Můžete @zmínit jiné osoby nebo #hashtagy.'
         show_collections: Lidé budou moci procházet skrz sledující. Lidé, které sledujete, uvidí, že je sledujete bezohledně.
         unlocked: Lidé vás budou moci sledovat, aniž by vás žádali o schválení. Zrušte zaškrtnutí, pokud chcete kontrolovat požadavky o sledování a vybírat si, zda přijmete nebo odmítnete nové sledující.
@@ -54,11 +54,11 @@ cs:
         password: Použijte alespoň 8 znaků
         phrase: Shoda bude nalezena bez ohledu na velikost písmen v textu příspěvku či varování o obsahu
         scopes: Která API bude aplikace moct používat. Pokud vyberete rozsah nejvyššího stupně, nebudete je muset vybírat jednotlivě.
-        setting_advanced_layout: Zobrazit Mastodon ve vícesloupovém rozvržení, umožňující zobrazení časoé osy, oznámení a třetího sloupce vašeho výběru. Není doporučeno pro menší obrazovky.
+        setting_advanced_layout: Zobrazit Nutshell ve vícesloupovém rozvržení, umožňující zobrazení časoé osy, oznámení a třetího sloupce vašeho výběru. Není doporučeno pro menší obrazovky.
         setting_aggregate_reblogs: Nezobrazovat nové boosty pro příspěvky, které byly nedávno boostnuty (ovlivňuje pouze nově přijaté boosty)
-        setting_always_send_emails: Jinak nebudou e-mailové notifikace posílány, když Mastodon aktivně používáte
+        setting_always_send_emails: Jinak nebudou e-mailové notifikace posílány, když Nutshell aktivně používáte
         setting_boost_modal: Pokud je povoleno, boostnutí nejprve otevře dialogové okno pro potvrzení, ve kterém můžete změnit viditelnost svého boostu.
-        setting_default_quote_policy_private: Příspěvky pouze pro sledující, které jsou vytvořeny na Mastodonu, nemohou být citovány ostatními.
+        setting_default_quote_policy_private: Příspěvky pouze pro sledující, které jsou vytvořeny na Nutshellu, nemohou být citovány ostatními.
         setting_default_quote_policy_unlisted: Když vás lidé citují, jejich příspěvek bude v časové ose populárních příspěvků také skryt.
         setting_default_sensitive: Citlivá média jsou ve výchozím stavu skryta a mohou být zobrazena kliknutím
         setting_display_media_default: Skrývat média označená jako citlivá
@@ -91,8 +91,8 @@ cs:
         bootstrap_timeline_accounts: Tyto účty budou připnuty na vrcholu doporučení pro nové uživatele. Napište čárkou oddělený seznam účtů.
         closed_registrations_message: Zobrazeno při zavření registrace
         content_cache_retention_period: Všechny příspěvky z jiných serverů (včetně boostů a odpovědí) budou po uplynutí stanoveného počtu dní smazány bez ohledu na interakci místního uživatele s těmito příspěvky. To se týká i příspěvků, které místní uživatel přidal do záložek nebo oblíbených. Soukromé zmínky mezi uživateli z různých instancí budou rovněž ztraceny a nebude možné je obnovit. Použití tohoto nastavení je určeno pro instance pro speciální účely a při implementaci pro obecné použití porušuje mnohá očekávání uživatelů.
-        custom_css: Můžete použít vlastní styly ve verzi Mastodonu.
-        favicon: WEBP, PNG, GIF nebo JPG. Nahradí výchozí favicon Mastodonu vlastní ikonou.
+        custom_css: Můžete použít vlastní styly ve verzi Nutshellu.
+        favicon: WEBP, PNG, GIF nebo JPG. Nahradí výchozí favicon Nutshellu vlastní ikonou.
         landing_page: Vybere stránku, kterou návštěvníci uvidí, když prvně přijdou na tvůj server. Pokud zvolíte "Trendy", je třeba povolit trendy v nastavení objevování. Pokud zvolíte "Místní kanál", je třeba v nastavení Objevování nastavit "Přístup k živým kanálům s lokálními příspěvky" na "Všichni".
         mascot: Přepíše ilustraci v pokročilém webovém rozhraní.
         media_cache_retention_period: Mediální soubory z příspěvků vzdálených uživatelů se ukládají do mezipaměti na vašem serveru. Pokud je nastaveno na kladnou hodnotu, budou média po zadaném počtu dní odstraněna. Pokud jsou mediální data vyžádána po jejich odstranění, budou znovu stažena, pokud je zdrojový obsah stále k dispozici. Vzhledem k omezením týkajícím se četnosti dotazů karet náhledů odkazů na weby třetích stran se doporučuje nastavit tuto hodnotu alespoň na 14 dní, jinak nebudou karty náhledů odkazů na vyžádání aktualizovány dříve.
@@ -101,7 +101,7 @@ cs:
         profile_directory: Adresář profilu obsahuje seznam všech uživatelů, kteří se přihlásili, aby mohli být nalezeni.
         require_invite_text: Pokud přihlášení vyžaduje ruční schválení, měl by být textový vstup „Proč se chcete připojit?“ povinný spíše než volitelný
         site_contact_email: Jak vás mohou lidé kontaktovat v případě právních dotazů nebo dotazů na podporu.
-        site_contact_username: Jak vás lidé mohou oslovit na Mastodon.
+        site_contact_username: Jak vás lidé mohou oslovit na Nutshell.
         site_extended_description: Jakékoli další informace, které mohou být užitečné pro návštěvníky a vaše uživatele. Může být strukturováno pomocí Markdown syntaxe.
         site_short_description: Krátký popis, který pomůže jednoznačně identifikovat váš server. Kdo ho provozuje, pro koho je určen?
         site_terms: Použijte vlastní zásady ochrany osobních údajů nebo ponechte prázdné pro použití výchozího nastavení. Může být strukturováno pomocí Markdown syntaxe.
@@ -111,11 +111,11 @@ cs:
         thumbnail: Přibližně 2:1 obrázek zobrazený vedle informací o vašem serveru.
         trendable_by_default: Přeskočit manuální kontrolu populárního obsahu. Jednotlivé položky mohou být odstraněny z trendů později.
         trends: Trendy zobrazují, které příspěvky, hashtagy a zprávy získávají na serveru pozornost.
-        wrapstodon: Nabídněte místním uživatelům možnost vygenerovat hravé shrnutí jejich používání Mastodonu během roku. Tato funkce je dostupná od 10. do 31. prosince každého roku a je nabízena uživatelům, kteří během roku vytvořili alespoň jeden veřejný nebo tichý příspěvek a použili alespoň jeden hashtag.
+        wrapstodon: Nabídněte místním uživatelům možnost vygenerovat hravé shrnutí jejich používání Nutshellu během roku. Tato funkce je dostupná od 10. do 31. prosince každého roku a je nabízena uživatelům, kteří během roku vytvořili alespoň jeden veřejný nebo tichý příspěvek a použili alespoň jeden hashtag.
       form_challenge:
         current_password: Vstupujete do zabezpečeného prostoru
       imports:
-        data: Soubor CSV exportovaný z jiného serveru Mastodon
+        data: Soubor CSV exportovaný z jiného serveru Nutshell
       invite_request:
         text: To nám pomůže posoudit vaši žádost
       ip_block:
@@ -166,7 +166,7 @@ cs:
         name: Veřejný název role, pokud má být role zobrazena jako odznak
         permissions_as_keys: Uživatelé s touto rolí budou moci...
         position: Vyšší role rozhoduje o řešení konfliktů v určitých situacích. Některé akce lze provádět pouze na rolích s nižší prioritou
-        require_2fa: Uživatelé s touto rolí budou muset nastavit dvoufázové ověření pro použití Mastodonu
+        require_2fa: Uživatelé s touto rolí budou muset nastavit dvoufázové ověření pro použití Nutshellu
       username_block:
         allow_with_approval: Namísto toho, aby se zabránilo registraci, bude vyžadováno vaše schválení
         comparison: Mějte prosím na paměti 'Scunthorpe problém' při blokování částečných shod
@@ -350,7 +350,7 @@ cs:
         software_updates:
           all: Upozornit na všechny aktualizace
           critical: Upozornit pouze na kritické aktualizace
-          label: Nová verze Mastodonu k dispozici
+          label: Nová verze Nutshellu k dispozici
           none: Nikdy neoznamovat aktualizace (nedoporučeno)
           patch: Upozornit na aktualizace chyb
         trending_tag: Nový trend vyžaduje posouzení

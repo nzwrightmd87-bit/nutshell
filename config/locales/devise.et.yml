@@ -25,64 +25,64 @@ et:
         explanation: Oled loonud %{host} konto selle e-postiaadressiga. Oled konto aktiveerimisest ühe kliki kaugusel. Kui see polnud sina, palun eira seda kirja.
         explanation_when_pending: "Selle e-postiaadressiga on esitatud taotlus saada %{host} kasutajaks. E-postiaadress vajab kinnitamist. Pärast seda vaatame me taotluse üle. Saad siseneda, et oma andmeid muuta või konto kustutada, aga enamustele tegevustele ei pääse enne ligi, kui konto on meie moderaatorite poolt kinnitatud. Kui konto on kinnitatud, saabub selle kohta eraldi e-kiri.\nKui taotlus lükatakse aga tagasi, kustutatakse ka andmed ja mingit järeltegevust pole vaja. \nKui see polnud sina, siis palun eira seda kirja."
         extra_html: Palun tutvu <a href="%{terms_path}">meie serveri reeglitega</a> ning <a href="%{policy_path}">meie kasutustingimustega</a>.
-        subject: 'Mastodon: %{instance} kinnitamisjuhised'
+        subject: 'Nutshell: %{instance} kinnitamisjuhised'
         title: Kinnita e-postiaadress
       email_changed:
         explanation: 'Sinu konto e-postiaadress muudetakse:'
         extra: Kui sa ei muutnud oma e-posti, on tõenäoline, et kellelgi on ligipääs su kontole. Palun muuda koheselt oma salasõna. Kui oled aga oma kontole ligipääsu kaotanud, palun võta kohe ühendust oma serveri haldajaga.
-        subject: 'Mastodon: e-post muudetud'
+        subject: 'Nutshell: e-post muudetud'
         title: Uus e-postiaadress
       password_change:
         explanation: Konto salasõna on vahetatud.
         extra: Kui sa ei muutnud oma salasõna, on tõenäoline, et keegi on su kontole ligi pääsenud. Palun muuda viivitamata oma salasõna. Kui sa oma kontole ligi ei pääse, võta ühendust serveri haldajaga.
-        subject: 'Mastodon: salasõna on muudetud'
+        subject: 'Nutshell: salasõna on muudetud'
         title: Salasõna on muudetud
       reconfirmation_instructions:
         explanation: Kinnita uus aadress, et oma e-posti aadress muuta.
-        extra: Kui see muudatus pole sinu poolt algatatud, palun eira seda kirja. Selle Mastodoni konto e-postiaadress ei muutu enne, kui vajutad üleval olevale lingile.
-        subject: 'Mastodon: kinnita e-postiaadress %{instance} jaoks'
+        extra: Kui see muudatus pole sinu poolt algatatud, palun eira seda kirja. Selle Nutshelli konto e-postiaadress ei muutu enne, kui vajutad üleval olevale lingile.
+        subject: 'Nutshell: kinnita e-postiaadress %{instance} jaoks'
         title: Kinnita e-postiaadress
       reset_password_instructions:
         action: Muuda salasõna
         explanation: Sa palusid oma kasutajakontole luua uus salasõna.
         extra: Kui see tuleb üllatusena, võid seda kirja eirata. Salasõna ei muutu enne ülaoleva lingi külastamist ja uue salasõna sisestamist.
-        subject: 'Mastodon: salasõna lähtestamisjuhendid'
+        subject: 'Nutshell: salasõna lähtestamisjuhendid'
         title: Salasõna lähtestamine
       two_factor_disabled:
         explanation: Sisselogimine on nüüd võimalik vaid e-postiaadressi ja salasõnaga.
-        subject: 'Mastodon: Kaheastmeline autentimine välja lülitatud'
+        subject: 'Nutshell: Kaheastmeline autentimine välja lülitatud'
         subtitle: Kaheastmeline autoriseerimine on sinu konto jaoks nüüd välja lülitatud.
         title: 2FA keelatud
       two_factor_enabled:
         explanation: Sisenemiseks on vaja seotud kaheastmelise autoriseerimise äpi genereeritud võtit.
-        subject: 'Mastodon: kaheastmeline autentimine sisse lülitatud'
+        subject: 'Nutshell: kaheastmeline autentimine sisse lülitatud'
         subtitle: Sinu konto jaoks on kaheastmeline autoriseerimine sisse lülitatud.
         title: 2FA lubatud
       two_factor_recovery_codes_changed:
         explanation: Eelmised taastekoodid on nüüd kehtetud ning loodud uued.
-        subject: 'Mastodon: Kaheastmelise autentimise taastuskoodid taasloodud'
+        subject: 'Nutshell: Kaheastmelise autentimise taastuskoodid taasloodud'
         subtitle: Eelmised taastekoodid on tühistatud ja uued genereeritud.
         title: 2FA taastekoodid muudetud
       unlock_instructions:
-        subject: 'Mastodon: Lahti lukustamis juhendid'
+        subject: 'Nutshell: Lahti lukustamis juhendid'
       webauthn_credential:
         added:
           explanation: Kontole on lisatud järgnev turvavõti
-          subject: 'Mastodon: uus turvavõti'
+          subject: 'Nutshell: uus turvavõti'
           title: Uus turvavõti on lisatud
         deleted:
           explanation: Järgnev turvavõti on kontolt kustutatud
-          subject: 'Mastodon: turvavõti kustutatud'
+          subject: 'Nutshell: turvavõti kustutatud'
           title: Üks sinu turvavõtmetest on kustutatud
       webauthn_disabled:
         explanation: Turvavõtmega autoriseerimine on sinu konto jaoks välja lülitatud.
         extra: Sisenemine on nüüd võimalik vaid seotud kaheastmelise autoriseerimise äpi genereeritud võtmega.
-        subject: 'Mastodon: autentimine turvavõtmega on välja lülitatud'
+        subject: 'Nutshell: autentimine turvavõtmega on välja lülitatud'
         title: Turvavõtmed on välja lülitatud
       webauthn_enabled:
         explanation: Turvavõtmega autoriseerimine on sinu konto jaoks nüüd sisse lülitatud.
         extra: Nüüd saab sisselogimiseks kasutada sinu turvavõtit.
-        subject: 'Mastodon: turvavõtme autentimine sisse lülitatud'
+        subject: 'Nutshell: turvavõtme autentimine sisse lülitatud'
         title: Turvavõtmed on sisse lülitatud
     omniauth_callbacks:
       failure: Ei saanud sind tuvastada %{kind} kaudu, kuna "%{reason}".

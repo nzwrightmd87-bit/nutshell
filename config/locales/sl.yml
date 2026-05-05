@@ -1,10 +1,10 @@
 ---
 sl:
   about:
-    about_mastodon_html: 'Družbeno omrežje prihodnosti: brez oglasov, brez nadzora korporacij, etično oblikovano in decentralizirano! Ohranite lastništvo nad svojimi podatki z Mastodonom!'
+    about_mastodon_html: 'Družbeno omrežje prihodnosti: brez oglasov, brez nadzora korporacij, etično oblikovano in decentralizirano! Ohranite lastništvo nad svojimi podatki z Nutshellom!'
     contact_missing: Ni nastavljeno
     contact_unavailable: Ni na voljo
-    hosted_on: Mastodon gostuje na %{domain}
+    hosted_on: Nutshell gostuje na %{domain}
     title: O programu
   accounts:
     errors:
@@ -766,7 +766,7 @@ sl:
         moderation: Moderiranje
         special: Posebno
       delete: Izbriši
-      description_html: Z <strong>uporabniškimi vlogami</strong> lahko prilagodite, do katerih funkcij in področij Mastodona lahko dostopajo vaši uporabniki.
+      description_html: Z <strong>uporabniškimi vlogami</strong> lahko prilagodite, do katerih funkcij in področij Nutshella lahko dostopajo vaši uporabniki.
       edit: Uredi vlogo %{name}
       everyone: Privzete pravice
       everyone_full_description_html: To je <strong>osnovna vloga</strong>, ki vpliva na <strong>vse uporabnike</strong>, celo na tiste brez dodeljene vloge. Vse druge vloge dedujejo njene pravice.
@@ -836,17 +836,17 @@ sl:
         rules_hint: Na voljo je poseben prostor za pravila, ki jih naj spoštujejo vaši uporabniki.
         title: O programu
       appearance:
-        preamble: Prilagodite spletni vmesnik Mastodona.
+        preamble: Prilagodite spletni vmesnik Nutshella.
         title: Videz
       branding:
-        preamble: Blagovna znamka vašega strežnika ga loči od drugih strežnikov v omrežju. Podatki se lahko prikžejo prek številnih okolij, kot so spletni vmesnik Mastodona, domorodni programi, predogledi povezav na drugih spletiščih, aplikacije za sporočanje itn. Zatorej je najbolje, da te podatke ohranite jasne, kratke in pomenljive.
+        preamble: Blagovna znamka vašega strežnika ga loči od drugih strežnikov v omrežju. Podatki se lahko prikžejo prek številnih okolij, kot so spletni vmesnik Nutshella, domorodni programi, predogledi povezav na drugih spletiščih, aplikacije za sporočanje itn. Zatorej je najbolje, da te podatke ohranite jasne, kratke in pomenljive.
         title: Blagovne znamke
       captcha_enabled:
         desc_html: To se zanaša na zunanje skripte hCaptcha in lahko predstavlja tveganje za varnost in zasebnost. Poleg tega <strong>to lahko nekaterim ljudem (posebno invalidom) občutno oteži dostopnost registracijskega postopka</strong>. Zato svetujemo, da razmislite o drugih ukrepih, kot je na primer registracija na podlagi odobritve ali povabila.
         title: Od novih uporabnikov zahtevaj reševanje CAPTCHA za potrditev računov
       content_retention:
         danger_zone: Območje nevarnosti
-        preamble: Nazdor nad hrambo vsebine uporabnikov v Mastodonu.
+        preamble: Nazdor nad hrambo vsebine uporabnikov v Nutshellu.
         title: Hramba vsebin
       default_noindex:
         desc_html: Vpliva na vse uporabnike, ki niso sami spremenili te nastavitve
@@ -893,7 +893,7 @@ sl:
       destroyed_msg: Prenos na strežnik uspešno izbrisan!
     software_updates:
       critical_update: Kritično — čim prej posodobite
-      description: Vašo namestitev Mastodona je priporočeno vedno imeti posodobljeno in tako koristiti najnovejše popravke ter zmožnosti. Poleg tega je včasih nujno čim prej posodobiti Mastodon in se s tem izogniti varnostnim težavam. Zato Mastodon vsakih 30 minut preverja razpoložljivost posodobitev in vas o njih obvešča glede na vaše nastavitve obveščanja po e-pošti.
+      description: Vašo namestitev Nutshella je priporočeno vedno imeti posodobljeno in tako koristiti najnovejše popravke ter zmožnosti. Poleg tega je včasih nujno čim prej posodobiti Nutshell in se s tem izogniti varnostnim težavam. Zato Nutshell vsakih 30 minut preverja razpoložljivost posodobitev in vas o njih obvešča glede na vaše nastavitve obveščanja po e-pošti.
       documentation_link: Več o tem
       release_notes: Opombe ob izdaji
       title: Razpoložljive posodobitve
@@ -959,7 +959,7 @@ sl:
         message_html: Preslikave kazala Elasticsearch so zastarele. Poženite <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Glejte dokumentacijo
-        message_html: Vaša gruča Elasticsearch vsebuje več kot eno vozlišče, vendar Mastodon ni nastavljen, da bi jih uporabljal.
+        message_html: Vaša gruča Elasticsearch vsebuje več kot eno vozlišče, vendar Nutshell ni nastavljen, da bi jih uporabljal.
       elasticsearch_preset_single_node:
         action: Glejte dokumentacijo
         message_html: Vaša gruča Elasticsearch vsebuje samo eno vozlišče, <code>ES_PRESET</code> bi moralo biti nastavljeno na <code>single_node_cluster</code>.
@@ -977,13 +977,13 @@ sl:
         message_html: Noben proces Sidekiq ne poteka za %{value} vrst. Preglejte svojo prilagoditev Sidekiq
       software_version_check:
         action: Oglejte si razpoložljive posodobitve
-        message_html: Na voljo je posodobitev Mastodona.
+        message_html: Na voljo je posodobitev Nutshella.
       software_version_critical_check:
         action: Glejte razpoložljive posodobitve
-        message_html: Na voljo je kritična posodobitev Mastodona. Posodobite čim prej.
+        message_html: Na voljo je kritična posodobitev Nutshella. Posodobite čim prej.
       software_version_patch_check:
         action: Glejte razpoložljive posodobitve
-        message_html: Na voljo je posodobitev Mastodona s popravki hroščev.
+        message_html: Na voljo je posodobitev Nutshella s popravki hroščev.
       upload_check_privacy_error:
         action: Preverite tukaj za več informacij
         message_html: "<strong>Vaš spletni strežnik je napačno nastavljen. Zasebnost vaših uporabnikov je izpostavljena tveganjem.</strong>"
@@ -1151,7 +1151,7 @@ sl:
     webhooks:
       add_new: Dodaj končno točko
       delete: Izbriši
-      description_html: "<strong>Spletna zanka</strong> omogoča, da Mastodon potiska <strong>obvestila v resničnem času</strong> o izbranih dogodkih vašemu programu, tako da ta lahko <strong>samodejno proži odzive</strong>."
+      description_html: "<strong>Spletna zanka</strong> omogoča, da Nutshell potiska <strong>obvestila v resničnem času</strong> o izbranih dogodkih vašemu programu, tako da ta lahko <strong>samodejno proži odzive</strong>."
       disable: Onemogoči
       disabled: Onemogočeno
       edit: Uredi končno točko
@@ -1187,8 +1187,8 @@ sl:
       next_steps: Pritožbi lahko ugodite in s tem razveljavite moderatorsko odločitev ali pa jo prezrete.
       subject: "%{username} se je pritožil na moderatorsko odločitev na %{instance}"
     new_critical_software_updates:
-      body: Izdane so bile nove kritične različice Mastodona. Priporočena je čimprejšnja posodobitev.
-      subject: Za %{instance} so na voljo kritične posodobitve Mastodona!
+      body: Izdane so bile nove kritične različice Nutshella. Priporočena je čimprejšnja posodobitev.
+      subject: Za %{instance} so na voljo kritične posodobitve Nutshella!
     new_pending_account:
       body: Podrobnosti o novem računu so navedene spodaj. To aplikacijo lahko odobrite ali zavrnete.
       subject: Nov račun za pregled na %{instance} (%{username})
@@ -1197,8 +1197,8 @@ sl:
       body_remote: Nekdo iz %{domain} je prijavil %{target}
       subject: Nove prijave za %{instance} (#%{id})
     new_software_updates:
-      body: Izdane so bile nove različice Mastodona. Priporočena je posodobitev.
-      subject: Za %{instance} so na voljo nove različice Mastodona.
+      body: Izdane so bile nove različice Nutshella. Priporočena je posodobitev.
+      subject: Za %{instance} so na voljo nove različice Nutshella.
     new_trends:
       body: 'Naslednji elementi potrebujejo pregled, preden jih je možno javno prikazati:'
       new_trending_links:
@@ -1220,7 +1220,7 @@ sl:
     animations_and_accessibility: Animacije in dostopnost
     discovery: Odkrito
     localization:
-      body: Mastodon prevajamo prostovoljci.
+      body: Nutshell prevajamo prostovoljci.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Vsakdo lahko prispeva.
     sensitive_content: Občutljiva vsebina
@@ -1259,9 +1259,9 @@ sl:
     delete_account: Izbriši račun
     delete_account_html: Če želite izbrisati svoj račun, lahko nadaljujete <a href="%{path}">tukaj</a>. Prosili vas bomo za potrditev.
     description:
-      prefix_invited_by_user: "@%{name} vas vabi, da se pridružite temu strežniku Mastodon!"
-      prefix_sign_up: Še danes se priključite Mastodonu!
-      suffix: Z računom boste lahko sledili osebam, objavljali posodobitve in izmenjevali sporočila z uporabniki s poljubnega strežnika Mastodon in še veliko več!
+      prefix_invited_by_user: "@%{name} vas vabi, da se pridružite temu strežniku Nutshell!"
+      prefix_sign_up: Še danes se priključite Nutshellu!
+      suffix: Z računom boste lahko sledili osebam, objavljali posodobitve in izmenjevali sporočila z uporabniki s poljubnega strežnika Nutshell in še veliko več!
     didnt_get_confirmation: Ali niste prejeli potrditvene povezave?
     dont_have_your_security_key: Ali imate svoj varnostni ključ?
     forgot_password: Ste pozabili svoje geslo?
@@ -1298,7 +1298,7 @@ sl:
     set_new_password: Nastavi novo geslo
     setup:
       email_below_hint_html: Poglejte v mapo neželene pošte ali zaprosite za novega. Če ste podali napačen e-naslov, ga lahko popravite.
-      email_settings_hint_html: Kliknite na povezavo, ki smo vam jo poslali na %{email}, pa boste lahko začeli uporabljati Mastodon. Tukajle bomo počakali.
+      email_settings_hint_html: Kliknite na povezavo, ki smo vam jo poslali na %{email}, pa boste lahko začeli uporabljati Nutshell. Tukajle bomo počakali.
       link_not_received: Ali ste prejeli povezavo?
       new_confirmation_instructions_sent: Čez nekaj minut boste prejeli novo e-sporočilo s potrditveno povezavo!
       title: Preverite svojo dohodno e-pošto
@@ -1307,7 +1307,7 @@ sl:
       title: Vpiši se v %{domain}
     sign_up:
       manual_review: Registracije na %{domain} ročno pregledajo naši moderatorji. Da nam olajšate obdelavo vaše prijave, zapišite kaj o sebi in zakaj si želite račun na %{domain}.
-      preamble: Če ustvarite račun na tem strežniku Mastodona, boste lahko sledili komur koli v fediverzumu, ne glede na to, kje gostuje njegov/njen račun.
+      preamble: Če ustvarite račun na tem strežniku Nutshella, boste lahko sledili komur koli v fediverzumu, ne glede na to, kje gostuje njegov/njen račun.
       title: Naj vas namestimo na %{domain}.
     status:
       account_status: Stanje računa
@@ -1323,7 +1323,7 @@ sl:
     user_privacy_agreement_html: Prebral sem <a href="%{privacy_policy_path}" target="_blank">politiko zasebnosti</a> in soglašam z njo
   author_attribution:
     example_title: Vzorčno besedilo
-    hint_html: Ali pišete novičke ali spletni dnevnik kje drugje poleg Mastodona? Poskrbite, da bo vaše avtorstvo pravilno navedeno, ko bo kdo delil vaše delo na Mastodonu.
+    hint_html: Ali pišete novičke ali spletni dnevnik kje drugje poleg Nutshella? Poskrbite, da bo vaše avtorstvo pravilno navedeno, ko bo kdo delil vaše delo na Nutshellu.
     instructions: 'Poskrbite, da bo v dokumentu HTML vašega prispevka naslednja koda:'
     more_from_html: Več od %{name}
     s_blog: Spletni dnevnik %{name}
@@ -1430,7 +1430,7 @@ sl:
       content: Žal nam je, toda na našem koncu je prišlo do napake.
       title: Ta stran ni pravilna
     '503': Strani ni mogoče postreči zaradi začasne odpovedi strežnika.
-    noscript_html: Če želite uporabljati spletno aplikacijo Mastodon, omogočite JavaScript. Druga možnost je, da za svojo platformo poskusite eno od <a href="%{apps_path}">lastnih aplikacij</a> za Mastodon.
+    noscript_html: Če želite uporabljati spletno aplikacijo Nutshell, omogočite JavaScript. Druga možnost je, da za svojo platformo poskusite eno od <a href="%{apps_path}">lastnih aplikacij</a> za Nutshell.
   existing_username_validator:
     not_found: s tem uporabniškim imenom ni bilo mogoče najti lokalnega uporabnika
     not_found_multiple: ni bilo mogoče najti %{usernames}
@@ -1689,7 +1689,7 @@ sl:
     unsubscribe:
       action: Da, odjavi me
       complete: Odjavljeni
-      confirmation_html: Ali se res želite odjaviti od prejemanja %{type} za Mastodon na %{domain} na svojo e-pošto %{email}? Kadarkoli se lahko znova prijavite iz svojih <a href="%{settings_path}">nastavitev e-poštnih obvestil</a>.
+      confirmation_html: Ali se res želite odjaviti od prejemanja %{type} za Nutshell na %{domain} na svojo e-pošto %{email}? Kadarkoli se lahko znova prijavite iz svojih <a href="%{settings_path}">nastavitev e-poštnih obvestil</a>.
       emails:
         notification_emails:
           favourite: e-sporočil z obvestili o priljubljenosti
@@ -1698,7 +1698,7 @@ sl:
           mention: e-sporočil z obvestili o omembah
           reblog: e-sporočil z obvestili o izpostavljanju
       resubscribe_html: Če ste se odjavili po pomoti, se lahko znova prijavite iz svojih <a href="%{settings_path}">nastavitev e-poštnih obvestil</a>.
-      success_html: Nič več ne boste prejemali %{type} za Mastodon na %{domain} na svoj e-naslov %{email}.
+      success_html: Nič več ne boste prejemali %{type} za Nutshell na %{domain} na svoj e-naslov %{email}.
       title: Odjavi od naročnine
   media_attachments:
     validations:
@@ -1830,13 +1830,13 @@ sl:
     posting_defaults: Privzete nastavitev objavljanja
     public_timelines: Javne časovnice
   privacy:
-    hint_html: "<strong>Prilagodite, kako lahko drugi najdejo vaš profil in vaše objave.</strong> V Mastodonu obstaja več zmožnosti, ki vam pomagajo doseči širše občinstvo, če so omogočene. Vzemite si čas in preverite, ali te nastavitve ustrezajo vašemu namenu uporabe."
+    hint_html: "<strong>Prilagodite, kako lahko drugi najdejo vaš profil in vaše objave.</strong> V Nutshellu obstaja več zmožnosti, ki vam pomagajo doseči širše občinstvo, če so omogočene. Vzemite si čas in preverite, ali te nastavitve ustrezajo vašemu namenu uporabe."
     privacy: Zasebnost
     privacy_hint_html: Nadzorujte, koliko informacij želite razkriti drugim. Ljudje lahko zanimive profile in aplikacije odkrijejo z brskanjem po seznamih sledenih in ko vidijo katere programe drugi uporabljajo za objavljanje. Morda pa bi to želeli skriti in varovati zasebnost.
     reach: Dosegljivost
     reach_hint_html: Nadzorujte, ali želite, da vas drugi ljudje najdejo in vam pričnejo slediti. Ali želite, da se vaše objave prikažejo na strani Razišči? Ali želite, da vas drugi ljudje vidijo med predlogi za sledenje? Ali želite nove sledilce odobriti samodejno, ali vsakega posebej odobriti ročno?
     search: Iskanje
-    search_hint_html: Nadzorujte, kako želite, da vas najdejo. Ali želite, da vas ljudje najdejo po javnih objavah? Ali želite, da ljudje, ki niso na Mastodonu, lahko najdejo vaš profil med iskanjem po spletu? Vedite, da javnih objav in podatkov ni mogoče povsem izvzeti iz podatkovnih zbirk vseh spletnih iskalnikov.
+    search_hint_html: Nadzorujte, kako želite, da vas najdejo. Ali želite, da vas ljudje najdejo po javnih objavah? Ali želite, da ljudje, ki niso na Nutshellu, lahko najdejo vaš profil med iskanjem po spletu? Vedite, da javnih objav in podatkov ni mogoče povsem izvzeti iz podatkovnih zbirk vseh spletnih iskalnikov.
     title: Zasebnost in dosegljivost
   privacy_policy:
     title: Pravilnik o zasebnosti
@@ -1911,7 +1911,7 @@ sl:
     current_session: Trenutna seja
     date: Datum
     description: "%{browser} na %{platform}"
-    explanation: To so spletni brskalniki, ki so trenutno prijavljeni v vaš Mastodon račun.
+    explanation: To so spletni brskalniki, ki so trenutno prijavljeni v vaš Nutshell račun.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1937,7 +1937,7 @@ sl:
     aliases: Vzdevki računa
     appearance: Videz
     authorized_apps: Pooblaščene aplikacije
-    back: Nazaj na Mastodon
+    back: Nazaj na Nutshell
     delete: Brisanje računa
     development: Razvoj
     edit_profile: Uredi profil
@@ -2016,7 +2016,7 @@ sl:
       direct: Zasebna omemba
       private: Samo sledilci
       public: Javno
-      public_long: Vsem, ki so ali niso na Mastodonu
+      public_long: Vsem, ki so ali niso na Nutshellu
       unlisted: Tiho javno
   statuses_cleanup:
     enabled: Samodejno izbriši stare objave
@@ -2104,7 +2104,7 @@ sl:
       subtitle: Vaša pritožba je bila zavržena.
       title: Pritožba zavrnjena
     backup_ready:
-      explanation: Zahtevali ste polno varnostno kopijo svojega računa Mastodon.
+      explanation: Zahtevali ste polno varnostno kopijo svojega računa Nutshell.
       extra: Zdaj je na voljo za prenos!
       subject: Vaš arhiv je pripravljen za prenos
       title: Prevzem arhiva
@@ -2165,7 +2165,7 @@ sl:
       apps_android_action: Na voljo v Google Play
       apps_ios_action: Prenesi iz trgovine App Store
       apps_step: Prenesite naše uradne aplikacije.
-      apps_title: Programi za Mastodon
+      apps_title: Programi za Nutshell
       checklist_subtitle: 'Naj vas pripravimo na doživetja na tej novi družabni meji:'
       checklist_title: Seznam dobrodošlice
       edit_profile_action: Poosebite
@@ -2173,16 +2173,16 @@ sl:
       edit_profile_title: Prilagodite svoj profil
       explanation: Tu je nekaj nasvetov za začetek
       feature_action: Več o tem
-      feature_audience: Mastodon zagotavlja enkratno možnost upravljanja s svojim občinstvom brez posrednika. Mastodon na lastni infrastrukturi omogoča sledenje drugih in drugim na in s poljubljnega povezanega strežnika Masodon in je zgolj pod vašim nadzorom.
+      feature_audience: Nutshell zagotavlja enkratno možnost upravljanja s svojim občinstvom brez posrednika. Nutshell na lastni infrastrukturi omogoča sledenje drugih in drugim na in s poljubljnega povezanega strežnika Masodon in je zgolj pod vašim nadzorom.
       feature_audience_title: Zaupno razvijajte svoje občinstvo
-      feature_control: Sami najbolje veste, kaj želite videti v svojem viru. Brez algoritmov ali oglasov, ki bi predstavljali izgubo vašega časa. Sledite komur koli prek poljubnega strežnika Mastodon na enem samem računu in prejmite njihove objave v kronološkem zaporedju ter ustvarite svoj kotiček interneta malce bolj po svoji meri in okusu.
+      feature_control: Sami najbolje veste, kaj želite videti v svojem viru. Brez algoritmov ali oglasov, ki bi predstavljali izgubo vašega časa. Sledite komur koli prek poljubnega strežnika Nutshell na enem samem računu in prejmite njihove objave v kronološkem zaporedju ter ustvarite svoj kotiček interneta malce bolj po svoji meri in okusu.
       feature_control_title: Ohranite nadzor nad svojo časovnico
-      feature_creativity: Mastodon podpira zvokovne, video in slikovne objave, opise za dostopnost, ankete, opozorila za vsebino, animirane avatarje, čustvenčke po meri, nadzor na obrezavo oglednih sličic in še veliko drugega. Tako se lahko povsem izrazite na spletu. Najsi želite objaviti svoja likovna dela, glasbo ali podkast, Mastodon vam stoji ob strani.
+      feature_creativity: Nutshell podpira zvokovne, video in slikovne objave, opise za dostopnost, ankete, opozorila za vsebino, animirane avatarje, čustvenčke po meri, nadzor na obrezavo oglednih sličic in še veliko drugega. Tako se lahko povsem izrazite na spletu. Najsi želite objaviti svoja likovna dela, glasbo ali podkast, Nutshell vam stoji ob strani.
       feature_creativity_title: Edinstvena ustvarjalnost
-      feature_moderation: Mastodon vrača odločanje v vaše roke. Vsak strežnik ustvari lastna pravila in predpise, ki se uveljavljajo krajevno in ne od zgoraj navzdol, kot to velja za korporacijske družabne medije. Zato je kar se da prilagodljiv pri odzivanju na potrebe različnih skupin ljudi. Pridružite se strežniku s pravili, s katerimi se strinjate, ali gostite lastnega.
+      feature_moderation: Nutshell vrača odločanje v vaše roke. Vsak strežnik ustvari lastna pravila in predpise, ki se uveljavljajo krajevno in ne od zgoraj navzdol, kot to velja za korporacijske družabne medije. Zato je kar se da prilagodljiv pri odzivanju na potrebe različnih skupin ljudi. Pridružite se strežniku s pravili, s katerimi se strinjate, ali gostite lastnega.
       feature_moderation_title: Moderiranje, kot bi moralo biti
       follow_action: Sledite
-      follow_step: Sledenje zanimivim osebam je bistvo Mastodona.
+      follow_step: Sledenje zanimivim osebam je bistvo Nutshella.
       follow_title: Poosebite svoj domači vir
       follows_subtitle: Sledite dobro znanim računom
       follows_title: Komu slediti
@@ -2198,10 +2198,10 @@ sl:
       post_action: Sestavi
       post_step: Pozdravite cel svet z besedilom, fotografijami, videoposnetki ali anketami.
       post_title: Ustvarite svojo prvo objavo
-      share_step: Naj prijatelji izvejo, kako vas najdejo na Mastodonu.
-      share_title: Delite svoj profil Mastodon z drugimi
+      share_step: Naj prijatelji izvejo, kako vas najdejo na Nutshellu.
+      share_title: Delite svoj profil Nutshell z drugimi
       sign_in_action: Prijava
-      subject: Dobrodošli na Mastodon
+      subject: Dobrodošli na Nutshell
       title: Dobrodošli, %{name}!
   users:
     follow_limit_reached: Ne morete spremljati več kot %{limit} ljudi
@@ -2214,7 +2214,7 @@ sl:
   verification:
     extra_instructions_html: <strong>Nasvet:</strong> Povezava na vaši spletni strani je lahko nevidna. Pomembni del je atribut <code>rel="me"</code>, ki preprečuje lažno predstavljanje na spletnih straneh z uporabniško ustvarjeno vsebino. Namesto oznake <code>a</code> lahko uporabite tudi oznako <code>link</code> znotraj glave (<code>head</code>) spletne strani, vendar mora biti HTML dosegljiv brez izvajanja skript JavaScript.
     here_is_how: Kako to poteka
-    hint_html: "<strong>Vsakdo lahko potrdi svojo istovetnost na Mastodonu.</strong> To temelji na odprtih spletnih standardih in je sedaj in za vedno brezplačno. Potrebujete le osebno spletno stran, po kateri vas ljudje prepoznajo. Ko na svoj profil dodate povezavo na to osebno spletno stran, bo Mastodon preveril, ali na njej obstaja povezava nazaj na profil. Če ta obstaja, bo to vidno na profiu."
+    hint_html: "<strong>Vsakdo lahko potrdi svojo istovetnost na Nutshellu.</strong> To temelji na odprtih spletnih standardih in je sedaj in za vedno brezplačno. Potrebujete le osebno spletno stran, po kateri vas ljudje prepoznajo. Ko na svoj profil dodate povezavo na to osebno spletno stran, bo Nutshell preveril, ali na njej obstaja povezava nazaj na profil. Če ta obstaja, bo to vidno na profiu."
     instructions_html: Spodnjo kodo kopirajte in prilepite v HTML svojega spletnega mesta. Nato dodajte naslov svoje spletne strani v eno od dodatnih polj v svojem profilu v zavihku »Uredi profil« in shranite spremembe.
     verification: Potrditev
     verified_links: Vaše preverjene povezave
@@ -2238,5 +2238,5 @@ sl:
     otp_required: Za uporabo varnostnih ključev morate najprej omogočiti 2FA (dvostopenjsko overjanje).
     registered_on: Datum registracije %{date}
   wrapstodon:
-    description: Oglejte si, kako je %{name} letos uporabljal/a Mastodon!
+    description: Oglejte si, kako je %{name} letos uporabljal/a Nutshell!
     title: Wrapstodon %{year} za %{name}

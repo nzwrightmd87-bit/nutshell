@@ -3,7 +3,7 @@ br:
   about:
     contact_missing: Andermenet
     contact_unavailable: N'eus ket
-    hosted_on: Servijer Mastodon herberc'hiet war %{domain}
+    hosted_on: Servijer Nutshell herberc'hiet war %{domain}
     title: Diwar-benn
   accounts:
     followers:
@@ -375,7 +375,7 @@ br:
         manage_rules: Merañ reolennoù ar servijer
         title: Diwar-benn
       appearance:
-        preamble: Personelaat etrefas web Mastodon.
+        preamble: Personelaat etrefas web Nutshell.
         title: Neuz
       content_retention:
         danger_zone: Takad dañjer
@@ -435,7 +435,7 @@ br:
         action: Merañ reolennoù ar servijer
       software_version_check:
         action: Gwelet an hizivadennoù hegerz
-        message_html: Un hizivadenn eus Mastodon a zo hegerz.
+        message_html: Un hizivadenn eus Nutshell a zo hegerz.
       software_version_critical_check:
         action: Gwelet an hizivadennoù hegerz
       software_version_patch_check:
@@ -510,7 +510,7 @@ br:
   appearance:
     discovery: Dizoloadur
     localization:
-      body: Gant tud a-youl vat eo troet Mastodon.
+      body: Gant tud a-youl vat eo troet Nutshell.
       guide_link: https://crowdin.com/project/mastodon
   application_mailer:
     salutation: "%{name},"
@@ -527,7 +527,7 @@ br:
     delete_account: Dilemel ar gont
     delete_account_html: Ma fell deoc'h dilemel ho kont e c'hellit <a href="%{path}">klikañ amañ</a>. Goulennet e vo ganeoc'h kadarnaat an obererezh.
     description:
-      prefix_invited_by_user: Pedet oc'h gant @%{name} da zont e-barzh ar servijer Mastodon-mañ!
+      prefix_invited_by_user: Pedet oc'h gant @%{name} da zont e-barzh ar servijer Nutshell-mañ!
     didnt_get_confirmation: N'ho peus ket degemeret ul liamm kadarnaat?
     dont_have_your_security_key: N'emañ ket hoc'h alc'hwez surentez ganeoc'h?
     forgot_password: Ankouaet ho ker-tremen ganeoc'h?
@@ -781,7 +781,7 @@ br:
       weibo: Weibo
     date: Deiziad
     description: "%{browser} war %{platform}"
-    explanation: Sed amañ ar merdeerioù kevreet gant ho kont Mastodon bremañ.
+    explanation: Sed amañ ar merdeerioù kevreet gant ho kont Nutshell bremañ.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -803,7 +803,7 @@ br:
     account_settings: Arventennoù ar gont
     aliases: Aliasoù ar gont
     appearance: Neuz
-    back: Distreiñ da vMastodon
+    back: Distreiñ da vNutshell
     delete: Dilemel ar gont
     development: Diorren
     edit_profile: Kemmañ ar profil
@@ -908,7 +908,7 @@ br:
       apps_android_action: Tapit anezhañ war Google Play
       apps_ios_action: Pellgargañ war an App Store
       apps_step: Pellgargit hon arloadoù ofisiel.
-      apps_title: Arloadoù Mastodon
+      apps_title: Arloadoù Nutshell
       edit_profile_action: Personelaat
       edit_profile_title: Personelaat ho profil
       feature_action: Gouzout hiroc'h
@@ -919,9 +919,9 @@ br:
       hashtags_title: Gerioù-klik diouzh ar c'hiz
       hashtags_view_more: Gwelet muioc'h a c'herioù-klik diouzh ar c'hiz
       post_title: Grit hoc'h embannadur kentañ
-      share_title: Rannit ho kont Mastodon
+      share_title: Rannit ho kont Nutshell
       sign_in_action: Kevreañ
-      subject: Donemat e Mastodon
+      subject: Donemat e Nutshell
       title: Degemer mat e bourzh, %{name}!
   users:
     follow_limit_reached: N'hallit ket heulian muioc'h eget %{limit} a zen

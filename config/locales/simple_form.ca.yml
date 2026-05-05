@@ -4,10 +4,10 @@ ca:
     hints:
       account:
         attribution_domains: Un per línia. Protegeix de falses atribucions.
-        discoverable: El teu perfil i els teus tuts públics poden aparèixer o ser recomanats en diverses àreas de Mastodon i el teu perfil pot ser suggerit a altres usuaris.
+        discoverable: El teu perfil i els teus tuts públics poden aparèixer o ser recomanats en diverses àreas de Nutshell i el teu perfil pot ser suggerit a altres usuaris.
         display_name: El teu nom complet o el teu nom divertit.
         fields: La teva pàgina d'inici, pronoms, edat, el que vulguis.
-        indexable: Els teus tuts públics poden aparèixer en els resultats de cerca de Mastodon. Les persones que han interaccionat amb el teus tuts seran sempre capaços de cercar-los.
+        indexable: Els teus tuts públics poden aparèixer en els resultats de cerca de Nutshell. Les persones que han interaccionat amb el teus tuts seran sempre capaços de cercar-los.
         note: 'Pots @mencionar altra gent o #etiquetes.'
         show_collections: La gent podrà navegar pels teus seguits i seguidors. Qui segueixis sí que veurà que els segueixes.
         unlocked: Us podran seguir sense la vostra aprovació. Desmarqueu si voleu moderar les peticions de seguiment i decidir quines autoritzeu o denegueu.
@@ -55,8 +55,8 @@ ca:
         phrase: Es combinarà independentment del format en el text o l'avís de contingut del tut
         scopes: API permeses per a accedir a l'aplicació. Si selecciones un àmbit de nivell superior, no cal que en seleccionis un d'individual.
         setting_aggregate_reblogs: No mostra els nous impulsos dels tuts que ja s'han impulsat recentment (només afecta als impulsos nous rebuts)
-        setting_always_send_emails: Normalment, no s'enviarà cap notificació per correu electrònic mentre facis servir Mastodon
-        setting_default_quote_policy_private: Altres no poden citar publicacions fetes a Mastodon només per a seguidors.
+        setting_always_send_emails: Normalment, no s'enviarà cap notificació per correu electrònic mentre facis servir Nutshell
+        setting_default_quote_policy_private: Altres no poden citar publicacions fetes a Nutshell només per a seguidors.
         setting_default_quote_policy_unlisted: Quan la gent et citi la seva publicació estarà amagada de les línies de temps de tendències.
         setting_default_sensitive: El contingut sensible està ocult per defecte i es pot mostrar fent-hi clic
         setting_display_media_default: Amaga el contingut gràfic marcat com a sensible
@@ -87,8 +87,8 @@ ca:
         backups_retention_period: Els usuaris poden generar arxius de les seves publicacions per a baixar-los més endavant. Quan tingui un valor positiu, els arxius s'esborraran del vostre emmagatzematge després del nombre donat de dies.
         closed_registrations_message: Es mostra quan el registres estan tancats
         content_cache_retention_period: S'esborraran totes les publicacions d'altres servidors (impulsos i respostes inclosos) passats els dies indicats, sense tenir en consideració les interaccions d'usuaris locals amb aquestes publicacions. Això inclou les publicacions que un usuari local hagi marcat com a favorites. També es perdran, i no es podran recuperar, les mencions privades entre usuaris d'instàncies diferents. Aquest paràmetre està pensat per a instàncies amb un propòsit especial i trencarà les expectatives dels usuaris si s'utilitza en una instància convencional.
-        custom_css: Pots aplicar estils personalitzats en la versió web de Mastodon.
-        favicon: WEBP, PNG, GIF o JPG. Canvia la icona per defecte de Mastodon a la pestanya del navegador per una de personalitzada.
+        custom_css: Pots aplicar estils personalitzats en la versió web de Nutshell.
+        favicon: WEBP, PNG, GIF o JPG. Canvia la icona per defecte de Nutshell a la pestanya del navegador per una de personalitzada.
         mascot: Anul·la la il·lustració en la interfície web avançada.
         media_cache_retention_period: El vostre servidor conserva una còpia dels fitxers multimèdia de les publicacions dels usuaris remots. Si s'indica un valor positiu, s'esborraran passats els dies indicats. Si el fitxer es torna a demanar un cop esborrat, es tornarà a baixar si el contingut origen segueix disponible. Per causa de les restriccions en la freqüència amb què es poden demanar les targetes de previsualització d'altres servidors, es recomana definir aquest valor com a mínim a 14 dies, o les targetes de previsualització no s'actualizaran a demanda abans d'aquest termini.
         min_age: Es demanarà als usuaris la data de naixement durant la inscripció
@@ -96,7 +96,7 @@ ca:
         profile_directory: El directori de perfils llista tots els usuaris que tenen activat ser descoberts.
         require_invite_text: Quan el registre requereixi aprovació manual, fes que sigui obligatori en lloc d'opcional d'escriure el text de la sol·licitud d'invitació "Per què vols unir-te?"
         site_contact_email: Com pot la gent comunicar amb tu per a consultes legals o de recolzament.
-        site_contact_username: Com pot la gent trobar-te a Mastodon.
+        site_contact_username: Com pot la gent trobar-te a Nutshell.
         site_extended_description: Qualsevol informació addicional que pot ser útil per als visitants i els teus usuaris. Es pot estructurar amb format Markdown.
         site_short_description: Una descripció curta per a ajudar a identificar de manera única el teu servidor. Qui el fa anar, per a qui és?
         site_terms: Fes servir la teva pròpia política de privacitat o deixa-ho en blanc per a la per defecte. Es pot estructurar amb format Markdown.
@@ -106,11 +106,11 @@ ca:
         thumbnail: Una imatge d'aproximadament 2:1 que es mostra al costat la informació del teu servidor.
         trendable_by_default: Omet la revisió manual del contingut en tendència. Els articles individuals poden encara ser eliminats després del fet.
         trends: Les tendències mostren quins tuts, etiquetes i notícies estan guanyant força en el teu servidor.
-        wrapstodon: Oferiu als usuaris de generar un sumari del seu ús de Mastodon durant l'any. Aquesta funció només està disponible entre el 10 i el 31 de desembre de cada any i s'ofereix als usuaris que hagin fet com a mínim una publicació Pública o Pública discreta i hagin fet servir com a mínim una etiqueta durant l'any.
+        wrapstodon: Oferiu als usuaris de generar un sumari del seu ús de Nutshell durant l'any. Aquesta funció només està disponible entre el 10 i el 31 de desembre de cada any i s'ofereix als usuaris que hagin fet com a mínim una publicació Pública o Pública discreta i hagin fet servir com a mínim una etiqueta durant l'any.
       form_challenge:
         current_password: Estàs entrant en una àrea segura
       imports:
-        data: Fitxer CSV exportat des d'un altre servidor de Mastodon
+        data: Fitxer CSV exportat des d'un altre servidor de Nutshell
       invite_request:
         text: Això ens ajudarà a revisar la teva petició
       ip_block:
@@ -328,7 +328,7 @@ ca:
         software_updates:
           all: Notificar sobre totes les actualitzacions
           critical: Notificar només actualitzacions crítiques
-          label: Hi ha disponible una nova versió de Mastodon
+          label: Hi ha disponible una nova versió de Nutshell
           none: No notifiquis mai les actualitzacions (no és recomanable)
           patch: Notificar sobre les actualitzacions de correcció d'errors
         trending_tag: Nova tendència requereix revisió

@@ -24,64 +24,64 @@ ro:
         explanation: Ați creat un cont pe %{host} cu această adresă de e-mail. Sunteți la un clic distanță de a-l activa. Dacă nu ați fost dvs., vă rugăm să ignorați acest e-mail.
         explanation_when_pending: Ați aplicat pentru o invitație pentru %{host} cu această adresă de e-mail. Odată ce vă confirmați adresa de e-mail, vă vom examina cererea. Vă puteți autentifica pentru a vă schimba detaliile sau pentru a vă șterge contul, dar nu puteți accesa majoritatea funcțiilor până când contul dvs. nu este aprobat. Dacă cererea dvs. este respinsă, datele dvs. vor fi șterse, astfel încât nu va fi necesară nicio acțiune suplimentară din partea dvs. Dacă nu ați fost dvs., vă rugăm să ignorați acest e-mail.
         extra_html: Te rugăm să verifici și <a href="%{terms_path}">regulile serverului</a> și <a href="%{policy_path}">termenii noștri de serviciu</a>.
-        subject: 'Mastodon: Instrucțiuni de confirmare pentru %{instance}'
+        subject: 'Nutshell: Instrucțiuni de confirmare pentru %{instance}'
         title: Verificați adresa de e-mail
       email_changed:
         explanation: 'Adresa de e-mail a contului dvs. este schimbată în:'
         extra: Dacă nu v-ați schimbat adresa de e-mail, probabil că cineva a obținut acces la contul dvs. Vă rugăm să vă schimbați parola imediat sau să contactați administratorul serverului dacă nu aveți acces la contul dvs.
-        subject: 'Mastodon: Adresă de e-mail schimbată'
+        subject: 'Nutshell: Adresă de e-mail schimbată'
         title: Adresă de e-mail nouă
       password_change:
         explanation: Parola pentru contul dvs. a fost schimbată.
         extra: Dacă nu v-ați schimbat parola, probabil că cineva a obținut acces la contul dvs. Vă rugăm să vă schimbați parola imediat sau să contactați administratorul serverului dacă nu aveți acces la contul dvs.
-        subject: 'Mastodon: Parolă schimbată'
+        subject: 'Nutshell: Parolă schimbată'
         title: Parolă schimbată
       reconfirmation_instructions:
         explanation: Confirmați noua adresă pentru a vă schimba adresa de e-mail.
-        extra: Dacă această modificare nu a fost inițiată de dvs., vă rugăm să ignorați acest e-mail. Adresa de e-mail pentru contul Mastodon nu se va schimba până când nu accesați link-ul de mai sus.
-        subject: 'Mastodon: Confirmați e-mailul pentru %{instance}'
+        extra: Dacă această modificare nu a fost inițiată de dvs., vă rugăm să ignorați acest e-mail. Adresa de e-mail pentru contul Nutshell nu se va schimba până când nu accesați link-ul de mai sus.
+        subject: 'Nutshell: Confirmați e-mailul pentru %{instance}'
         title: Verificați adresa de e-mail
       reset_password_instructions:
         action: Schimbați parola
         explanation: Ați solicitat o nouă parolă pentru contul dvs.
         extra: Dacă nu ați solicitat acest lucru, vă rugăm să ignorați acest e-mail. Parola dvs. nu se va schimba până când nu veți accesa link-ul de mai sus și nu veți crea unul nou.
-        subject: 'Mastodon: Instrucțiuni pentru resetarea parolei'
+        subject: 'Nutshell: Instrucțiuni pentru resetarea parolei'
         title: Resetare parolă
       two_factor_disabled:
         explanation: Conectarea este acum posibilă folosind doar adresa de e-mail și parola.
-        subject: 'Mastodon: Autentificarea cu doi factori dezactivată'
+        subject: 'Nutshell: Autentificarea cu doi factori dezactivată'
         subtitle: Autentificarea cu doi factori pentru contul dvs. a fost dezactivată.
         title: A2F dezactivată
       two_factor_enabled:
         explanation: Pentru conectare va fi necesar un token generat de aplicația TOTP asociată.
-        subject: 'Mastodon: Autentificare în doi pași activată'
+        subject: 'Nutshell: Autentificare în doi pași activată'
         subtitle: Autentificarea cu doi factori a fost activată pentru contul dvs.
         title: A2F activată
       two_factor_recovery_codes_changed:
         explanation: Codurile de recuperare anterioare au fost invalidate și s-au generat altele noi.
-        subject: 'Mastodon: Coduri de recuperare în doi pași regenerate'
+        subject: 'Nutshell: Coduri de recuperare în doi pași regenerate'
         subtitle: Codurile de recuperare anterioare au fost invalidate și s-au generat altele noi.
         title: Codurile de recuperare în doi pași modificate
       unlock_instructions:
-        subject: 'Mastodon: Instrucțiuni de deblocare'
+        subject: 'Nutshell: Instrucțiuni de deblocare'
       webauthn_credential:
         added:
           explanation: Următoarea cheie de securitate a fost adăugată în contul dvs.
-          subject: 'Mastodon: Noua cheie de securitate'
+          subject: 'Nutshell: Noua cheie de securitate'
           title: A fost adăugată o nouă cheie de securitate
         deleted:
           explanation: Următoarea cheie de securitate a fost ștearsă din contul dvs.
-          subject: 'Mastodon: Cheie de securitate ștearsă'
+          subject: 'Nutshell: Cheie de securitate ștearsă'
           title: Una dintre cheile dvs. de securitate a fost ștearsă
       webauthn_disabled:
         explanation: Autentificarea cu chei de securitate a fost dezactivată pentru contul dvs.
         extra: Conectarea este acum posibilă folosind doar token-ul generat de aplicația TOTP asociată.
-        subject: 'Mastodon: Autentificarea cu chei de securitate dezactivată'
+        subject: 'Nutshell: Autentificarea cu chei de securitate dezactivată'
         title: Chei de securitate dezactivate
       webauthn_enabled:
         explanation: Autentificarea cu cheie de securitate a fost activată pentru contul dvs.
         extra: Cheia ta de securitate poate fi acum folosită pentru conectare.
-        subject: 'Mastodon: Autentificarea prin chei de securitate activată'
+        subject: 'Nutshell: Autentificarea prin chei de securitate activată'
         title: Chei de securitate activate
     omniauth_callbacks:
       failure: Nu v-am putut autentifica de la %{kind} deoarece "%{reason}".

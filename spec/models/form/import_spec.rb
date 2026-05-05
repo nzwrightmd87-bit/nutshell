@@ -277,8 +277,8 @@ RSpec.describe Form::Import do
     ]
 
     it_behaves_like 'on successful import', 'lists', 'merge', 'lists.csv', [
-      { 'acct' => 'gargron@example.com', 'list_name' => 'Mastodon project' },
-      { 'acct' => 'mastodon@example.com', 'list_name' => 'Mastodon project' },
+      { 'acct' => 'gargron@example.com', 'list_name' => 'Nutshell project' },
+      { 'acct' => 'mastodon@example.com', 'list_name' => 'Nutshell project' },
       { 'acct' => 'foo@example.com', 'list_name' => 'test' },
     ]
 

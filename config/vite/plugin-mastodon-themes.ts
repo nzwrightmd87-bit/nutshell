@@ -1,4 +1,4 @@
-/* This plugins handles Mastodon's theme system
+/* This plugin handles Nutshell's theme system
  */
 
 import fs from 'node:fs/promises';

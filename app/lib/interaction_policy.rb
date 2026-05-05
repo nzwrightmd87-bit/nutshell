@@ -2,7 +2,7 @@
 
 class InteractionPolicy
   POLICY_FLAGS = {
-    unsupported_policy: (1 << 0), # Not supported by Mastodon
+    unsupported_policy: (1 << 0), # Not supported by Nutshell
     public: (1 << 1),             # Everyone is allowed to interact
     followers: (1 << 2),          # Only followers may interact
     following: (1 << 3),          # Only accounts followed by the target may interact

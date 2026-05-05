@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Mastodon is not made to be directly accessed without a reverse proxy.
+# Nutshell is not made to be directly accessed without a reverse proxy.
 # This monkey-patch prevents remote IP address spoofing when being accessed
 # directly.
 #
@@ -44,7 +44,7 @@ module ActionDispatch
             "HTTP_X_FORWARDED_FOR=#{@req.x_forwarded_for.inspect}"
         end
 
-        # NOTE: Mastodon addition to make sure we don't get requests from a non-trusted client
+          # NOTE: Nutshell addition to make sure we don't get requests from a non-trusted client
         if @check_ip && (forwarded_ips.last || client_ips.last) && !@proxies.any? { |proxy| proxy === remote_addr }
           raise IpSpoofAttackError, "IP spoofing attack?! client #{remote_addr} is not a trusted proxy " \
             "HTTP_CLIENT_IP=#{@req.client_ip.inspect} " \

@@ -4,10 +4,10 @@ sq:
     hints:
       account:
         attribution_domains: Një për rresht. Kjo mbron nga atribuime të rreme.
-        discoverable: Postimet dhe profili juaj publik mund të shfaqen, ose rekomandohen në zona të ndryshme të Mastodon-it dhe profili juaj mund të sugjerohet përdoruesve të tjerë.
+        discoverable: Postimet dhe profili juaj publik mund të shfaqen, ose rekomandohen në zona të ndryshme të Nutshell-it dhe profili juaj mund të sugjerohet përdoruesve të tjerë.
         display_name: Emri juaj i plotë, ose emri juaj lojcak.
         fields: Faqja juaj hyrëse, përemra, moshë, ç’të keni qejf.
-        indexable: Postimet tuaja publike mund të shfaqen në përfundime kërkimesh në Mastodon. Pavarësisht nga kjo, personat që kanë ndërvepruar me postimet tuaja, mund të jenë në gjendje të kërkojnë për to.
+        indexable: Postimet tuaja publike mund të shfaqen në përfundime kërkimesh në Nutshell. Pavarësisht nga kjo, personat që kanë ndërvepruar me postimet tuaja, mund të jenë në gjendje të kërkojnë për to.
         note: 'Mundeni të @përmendni persona apo #hashtagë të tjerë.'
         show_collections: Njerëzit do të jenë në gjendje të shfletojnë ndjekjet dhe ndjekësit tuaj. Njerëzit që ndiqni, do ta shohin që i ndiqni.
         unlocked: Njerëzit do të jenë në gjendje t’ju ndjekin pa u dashur miratim. Hiqjani shenjën, nëse doni të shqyrtoni kërkesa ndjekjeje dhe të zgjidhni pranimin apo hedhjen poshtë e ndjekësve të rinj.
@@ -54,11 +54,11 @@ sq:
         password: Përdorni të paktën 8 shenja
         phrase: Do të kërkohet përputhje pavarësish se teksti ose sinjalizimi mbi lëndën e një mesazhi është shkruar me të mëdha apo me të vogla
         scopes: Cilat API do të lejohen të përdorin aplikacioni. Nëse përzgjidhni një shkallë të epërme, nuk ju duhet të përzgjidhni individualet një nga një.
-        setting_advanced_layout: Shfaqe Mastodon-in si një skemë me shumë shtylla, duke ju lejuar të shihni rrjedhën kohore, njoftimet dhe një shtyllë të tretë zgjedhur prej jush. Nuk rekomandohet për ekrane të vegjël.
+        setting_advanced_layout: Shfaqe Nutshell-in si një skemë me shumë shtylla, duke ju lejuar të shihni rrjedhën kohore, njoftimet dhe një shtyllë të tretë zgjedhur prej jush. Nuk rekomandohet për ekrane të vegjël.
         setting_aggregate_reblogs: Mos shfaq përforcime të reja për mesazhe që janë përforcuar tani së fundi (prek vetëm përforcime të marra rishtas)
-        setting_always_send_emails: Normalisht s’do të dërgohen njoftime, kur përdorni aktivisht Mastodon-in
+        setting_always_send_emails: Normalisht s’do të dërgohen njoftime, kur përdorni aktivisht Nutshell-in
         setting_boost_modal: Kur është e aktivizuar, përforcimi së pari do të hapë një dialog ripohimi në të cilin mund të ndryshoni dukshmërinë e përforcimit tuaj.
-        setting_default_quote_policy_private: Në Mastodon s’mund të citohen nga të tjerë postim Vetëm-për-ndjekësit.
+        setting_default_quote_policy_private: Në Nutshell s’mund të citohen nga të tjerë postim Vetëm-për-ndjekësit.
         setting_default_quote_policy_unlisted: Kur njerëzit ju citojnë, nga rrjedha kohore e gjërave në modë do të kalohen si të fshehura edhe postimet e tyre.
         setting_default_sensitive: Media rezervat fshihet, si parazgjedhje, dhe mund të shfaqet me një klikim
         setting_display_media_default: Fshih media me shenjën rezervat
@@ -90,8 +90,8 @@ sq:
         bootstrap_timeline_accounts: Këto llogari do të fiksohen në krye të rekomandimeve për ndjekje për përdoruesin e ri. Jepni një listë llogarish ndarë me presje.
         closed_registrations_message: Shfaqur kur mbyllen dritare regjistrimesh
         content_cache_retention_period: Krejt postimet prej shërbyesve të tjerë (përfshi përforcime dhe përgjigje) do të fshihen pas numrit të caktuar të ditëve, pa marrë parasysh çfarëdo ndërveprimi përdoruesi me këto postime. Kjo përfshin postime kur një përdorues vendor u ka vënë shenjë si faqerojtës, ose të parapëlqyer. Do të humbin gjithashtu dhe përmendje private mes përdoruesish nga instanca të ndryshme dhe s’do të jetë e mundshme të rikthehen. Përdorimi i këtij rregullimi është menduar për instanca me qëllim të caktuar dhe ndërhyn në çka presin mjaft përdorues, kur sendërtohet për përdorim të përgjithshëm.
-        custom_css: Stile vetjakë mund të aplikoni në versionin web të Mastodon-it.
-        favicon: WEBP, PNG, GIF, ose JPG. Anashkalon favikonën parazgjedhje Mastodon me një ikonë vetjake.
+        custom_css: Stile vetjakë mund të aplikoni në versionin web të Nutshell-it.
+        favicon: WEBP, PNG, GIF, ose JPG. Anashkalon favikonën parazgjedhje Nutshell me një ikonë vetjake.
         landing_page: Përzgjedh cilën faqe shohin vizitorët e rinj, kur vijnë për herë të parë në shërbyesin tuaj. Nëse përzgjidhni “Në modë”, atëherë “në modë” duhet aktivizuar te Rregullime për Zbulime. Nëse përzgjidhni “Prurje vendore”, atëherë “Hyrje te prurje vendore që përmbajnë postime vendore” duhet vënë si “Gjithkush”, te Rregullime për Zbulime.
         mascot: Anashkalon ilustrimin te ndërfaqja web e thelluar.
         media_cache_retention_period: Kartela media nga postime të bëra nga përdorues të largët ruhen në një fshehtinë në shërbyesin tuaj. Kur i jepet një vlerë pozitive, media do të fshihet pas numrit të dhënë të ditëve. Nëse të dhënat e medias duhen pas fshirjes, do të rishkarkohen, nëse lënda burim mund të kihet ende. Për shkak kufizimesh mbi sa shpesh skeda paraparjesh lidhjesh ndërveprojnë me sajte palësh të treta, rekomandohet të vihet kjo vlerë të paktën 14 ditë, ose skedat e paraparjes së lidhje s’do të përditësohen duke e kërkuar para asaj kohe.
@@ -100,7 +100,7 @@ sq:
         profile_directory: Drejtoria e profileve paraqet krejt përdoruesit që kanë zgjedhur të jenë të zbulueshëm.
         require_invite_text: Kur regjistrimet lypin miratim dorazi, bëje tekstin “Përse doni të bëheni pjesë?” të detyrueshëm, në vend se opsional
         site_contact_email: Si mund të lidhen me ju njerëzit, për çështje ligjore, ose për asistencë.
-        site_contact_username: Si mund të lidhen njerëzit me ju në Mastodon.
+        site_contact_username: Si mund të lidhen njerëzit me ju në Nutshell.
         site_extended_description: Çfarëdo hollësie shtesë që mund të jetë e dobishme për vizitorët dhe përdoruesit tuaj. Mund të hartohet me sintaksë Markdown.
         site_short_description: Një përshkrim i shkurtër për të ndihmuar identifikimin unik të shërbyesit tuaj. Kush e mban në punë, për kë është?
         site_terms: Përdorni rregullat tuaja të privatësisë, ose lëreni të zbrazët që të përdoren ato parazgjedhje. Mund të hartohet me sintaksë Markdown.
@@ -110,11 +110,11 @@ sq:
         thumbnail: Një figurë afërsisht 2:1 e shfaqur tok me hollësi mbi shërbyesin tuaj.
         trendable_by_default: Anashkalo shqyrtim dorazi lënde në modë. Gjëra individuale prapë mund të hiqen nga lëndë në modë pas publikimi.
         trends: Gjërat në modë shfaqin cilat postime, hashtagë dhe histori të reja po tërheqin vëmendjen në shërbyesin tuaj.
-        wrapstodon: Jepuni përdoruesve vendorë mundësinë të prodhojnë një përmbledhje lojcake të përdorimit të Mastodon-it prej tyre përgjatë vitit. Kjo veçori është e përdorshme mes 10 dhe 31 dhjetorit të çdo viti dhe u ofrohet përdoruesve që kanë për të paktën një postim Publik, ose Publik të Heshtur dhe që kanë përdorur të paktën një hashtag brenda vitit.
+        wrapstodon: Jepuni përdoruesve vendorë mundësinë të prodhojnë një përmbledhje lojcake të përdorimit të Nutshell-it prej tyre përgjatë vitit. Kjo veçori është e përdorshme mes 10 dhe 31 dhjetorit të çdo viti dhe u ofrohet përdoruesve që kanë për të paktën një postim Publik, ose Publik të Heshtur dhe që kanë përdorur të paktën një hashtag brenda vitit.
       form_challenge:
         current_password: Po hyni në një zonë të sigurt
       imports:
-        data: Kartelë CSV të eksportuar nga një tjetër shërbyes Mastodon
+        data: Kartelë CSV të eksportuar nga një tjetër shërbyes Nutshell
       invite_request:
         text: Kjo do të na ndihmojë të shqyrtojmë aplikimin tuaj
       ip_block:
@@ -163,7 +163,7 @@ sq:
         name: Emër publik për rolin, nëse roli është ujdisur të shfaqet si një stemë
         permissions_as_keys: Përdoruesit me këtë rol do të mund të…
         position: Role më të lartë vendosin zgjidhje përplasje në disa raste. Disa veprime mund të kryhen vetëm mbi role të një shkalle më të ulët
-        require_2fa: Përdoruesve me këtë rol do t’u kërkohet doemos të ujdisin mirëfilltësim dyfaktorësh, që të përdorin Mastodon-in
+        require_2fa: Përdoruesve me këtë rol do t’u kërkohet doemos të ujdisin mirëfilltësim dyfaktorësh, që të përdorin Nutshell-in
       username_block:
         allow_with_approval: Në vend të pengimit aty për aty të regjistrimit, regjistrime me përkim do të duan miratimin tuaj
         comparison: Ju lutemi, mbani parasysh Problemin Scunthorpe, kur bllokohen përkime të pjesshme
@@ -347,7 +347,7 @@ sq:
         software_updates:
           all: Njofto për krejt përditësimet
           critical: Njofto vetëm për përditësime kritike
-          label: Ka gati një version të ri Mastodon-i
+          label: Ka gati një version të ri Nutshell-i
           none: Mos njofto apo përditëso kurrë (nuk rekomandohet)
           patch: Njofto për ndreqje të metash
         trending_tag: Për gjëra të reja në modë lypset shqyrtim

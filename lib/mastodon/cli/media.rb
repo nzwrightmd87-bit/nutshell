@@ -261,7 +261,7 @@ module Mastodon::CLI
       say("Downloaded #{processed} media attachments (approx. #{number_to_human_size(aggregate)})#{dry_run_mode_suffix}", :green, true)
     end
 
-    desc 'usage', 'Calculate disk space consumed by Mastodon'
+      desc 'usage', 'Calculate disk space consumed by Nutshell'
     def usage
       print_table [
         %w(Object Total Local),

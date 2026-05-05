@@ -1,7 +1,7 @@
 {
   "about.blocks": "معتدل سرورز",
   "about.contact": "رابطہ:",
-  "about.disclaimer": "میسٹادان مفت، اوپن سورس سافٹ ویئر ہے، اور میسٹادان غیر منافع بخش کا ٹریڈ مارک ہے۔",
+  "about.disclaimer": "Nutshell is open-source software built for your community.",
   "about.domain_blocks.no_reason_available": "وجوہات نہیں دستیاب",
   "about.domain_blocks.silenced.title": "محدود",
   "about.domain_blocks.suspended.title": "معطل شدہ",
@@ -101,7 +101,7 @@
   "compose.language.change": "زبان تبدیل کریں",
   "compose.language.search": "زبان تلاش کریں...",
   "compose_form.direct_message_warning_learn_more": "مزید جانیں",
-  "compose_form.encryption_warning": "Posts on Mastodon are not end-to-end encrypted. Do not share any dangerous information over Mastodon.",
+  "compose_form.encryption_warning": "Posts on Nutshell are not end-to-end encrypted. Do not share any dangerous information over Nutshell.",
   "compose_form.hashtag_warning": "This post won't be listed under any hashtag as it is unlisted. Only public posts can be searched by hashtag.",
   "compose_form.lock_disclaimer": "آپ کا اکاؤنٹ {locked} نہیں ہے. کوئی بھی آپ کے مخصوص برائے پیروکار ٹوٹ دیکھنے کی خاطر آپ کی پیروی کر سکتا ہے.",
   "compose_form.lock_disclaimer.lock": "مقفل",

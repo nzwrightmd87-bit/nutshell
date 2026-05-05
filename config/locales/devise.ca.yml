@@ -27,64 +27,64 @@ ca:
         explanation: Has creat un compte a %{host} amb aquesta adreça de correu electrònic. Estàs a un sol clic d'activar-lo. Si no ho has fet tu, ignora aquest correu electrònic.
         explanation_when_pending: Has sol·licitat una invitació a %{host} amb aquesta adreça-e. Revisarem la sol·licitud quan la confirmis. Pots iniciar la sessió per canviar els detalls o eliminar el compte, però no pots accedir a la majoria de les funcions fins que s'hagi aprovat. Si es rebutja la sol·licitud, les teves dades s’eliminaran, de manera que no se t’exigirà cap acció més. Si tu no has fet aquesta sol·licitud, ignora aquest correu-e.
         extra_html: Consulteu també a <a href="%{terms_path}"> les regles del servidor</a> i a <a href="%{policy_path}"> les nostres condicions de servei</a>.
-        subject: 'Mastodon: Instruccions de confirmació de %{instance}'
+        subject: 'Nutshell: Instruccions de confirmació de %{instance}'
         title: Verifica l'adreça-e
       email_changed:
         explanation: 'L''adreça-e del teu compte es canvia a:'
         extra: Si no has canviat el teu correu-e és probable que algú hagi accedit al teu compte. Si us plau, canvia la contrasenya immediatament o posa't en contacte amb l'administrador del servidor si no pots accedir al teu compte.
-        subject: 'Mastodon: s''ha canviat l''adreça-e'
+        subject: 'Nutshell: s''ha canviat l''adreça-e'
         title: Nova adreça-e
       password_change:
         explanation: S'ha canviat la contrasenya del teu compte.
         extra: Si no has canviat la teva contrasenya, és probable que algú hagi accedit al teu compte. Si us plau, canvia-la immediatament o posa't en contacte amb l'administrador del servidor si no pots accedir al teu compte.
-        subject: 'Mastodon: contrasenya canviada'
+        subject: 'Nutshell: contrasenya canviada'
         title: Contrasenya canviada
       reconfirmation_instructions:
         explanation: Confirma la nova adreça per canviar el teu correu-e.
-        extra: Si no has iniciat aquest canvi, ignora aquest correu-e. L'adreça de correu-e del compte de Mastodon no canviarà fins que no accedeixis a l'enllaç que hi ha a dalt.
-        subject: 'Mastodon: confirma l''adreça-e per a %{instance}'
+        extra: Si no has iniciat aquest canvi, ignora aquest correu-e. L'adreça de correu-e del compte de Nutshell no canviarà fins que no accedeixis a l'enllaç que hi ha a dalt.
+        subject: 'Nutshell: confirma l''adreça-e per a %{instance}'
         title: Verifica l'adreça de correu-e
       reset_password_instructions:
         action: Canvia la contrasenya
         explanation: Has sol·licitat una contrasenya nova per al teu compte.
         extra: Si no l'has sol·licitada, ignora aquest correu electrònic. La teva contrasenya no canviarà fins que no accedeixis a l'enllaç que hi ha a dalt i en creïs una de nova.
-        subject: 'Mastodon: Instruccions per a reiniciar contrasenya'
+        subject: 'Nutshell: Instruccions per a reiniciar contrasenya'
         title: Contrasenya restablerta
       two_factor_disabled:
         explanation: Ara es pot accedir amb només compte de correu i contrasenya.
-        subject: 'Mastodon: Autenticació de doble factor desactivada'
+        subject: 'Nutshell: Autenticació de doble factor desactivada'
         subtitle: S'ha deshabilitat l'autenticació de doble factor al vostre compte.
         title: A2F desactivada
       two_factor_enabled:
         explanation: Per accedir cal un token generat per l'aplicació TOTP aparellada.
-        subject: 'Mastodon: Autenticació de doble factor activada'
+        subject: 'Nutshell: Autenticació de doble factor activada'
         subtitle: S'ha habilitat l'autenticació de doble factor al vostre compte.
         title: A2F activada
       two_factor_recovery_codes_changed:
         explanation: Els codis de recuperació anteriors ja no són vàlids i se n'han generat de nous.
-        subject: 'Mastodon: codis de recuperació de doble factor regenerats'
+        subject: 'Nutshell: codis de recuperació de doble factor regenerats'
         subtitle: S'han invalidat els codis de recuperació anteriors i se n'han generat de nous.
         title: Codis de recuperació A2F canviats
       unlock_instructions:
-        subject: 'Mastodon: Instruccions per a desblocar'
+        subject: 'Nutshell: Instruccions per a desblocar'
       webauthn_credential:
         added:
           explanation: La següent clau de seguretat s'ha afegit al teu compte
-          subject: 'Mastodon: nova clau de seguretat'
+          subject: 'Nutshell: nova clau de seguretat'
           title: S'ha afegit una nova clau de seguretat
         deleted:
           explanation: La següent clau de seguretat s'ha esborrat del teu compte
-          subject: 'Mastodon: Clau de seguretat esborrada'
+          subject: 'Nutshell: Clau de seguretat esborrada'
           title: Una de les teves claus de seguretat ha estat esborrada
       webauthn_disabled:
         explanation: S'ha deshabilitat l'autenticació amb claus de seguretat al vostre compte.
         extra: Ara es pot accedir amb només el token generat amb l'aplicació TOTP aparellada.
-        subject: 'Mastodon: S''ha desactivat l''autenticació amb claus de seguretat'
+        subject: 'Nutshell: S''ha desactivat l''autenticació amb claus de seguretat'
         title: Claus de seguretat desactivades
       webauthn_enabled:
         explanation: S'ha habilitat l'accés amb clau de seguretat al vostre compte.
         extra: Ara podeu accedir amb la vostra clau de seguretat.
-        subject: 'Mastodon: Autenticació amb clau de seguretat activada'
+        subject: 'Nutshell: Autenticació amb clau de seguretat activada'
         title: Claus de seguretat activades
     omniauth_callbacks:
       failure: No s'ha pogut autenticar des de %{kind} degut a "%{reason}".

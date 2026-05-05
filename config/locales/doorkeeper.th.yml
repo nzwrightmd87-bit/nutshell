@@ -122,7 +122,7 @@ th:
         admin/accounts: การดูแลบัญชี
         admin/all: ฟังก์ชันการดูแลทั้งหมด
         admin/reports: การดูแลรายงาน
-        all: การเข้าถึงบัญชี Mastodon ของคุณแบบเต็ม
+        all: การเข้าถึงบัญชี Nutshell ของคุณแบบเต็ม
         blocks: การปิดกั้น
         bookmarks: ที่คั่นหน้า
         conversations: การสนทนา
@@ -135,7 +135,7 @@ th:
         media: ไฟล์แนบสื่อ
         mutes: การซ่อน
         notifications: การแจ้งเตือน
-        profile: โปรไฟล์ Mastodon ของคุณ
+        profile: โปรไฟล์ Nutshell ของคุณ
         push: การแจ้งเตือนแบบผลัก
         reports: การรายงาน
         search: ค้นหา

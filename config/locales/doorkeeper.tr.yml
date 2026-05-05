@@ -126,7 +126,7 @@ tr:
         admin/accounts: Hesapların yönetimi
         admin/all: Tüm yönetsel işlevler
         admin/reports: Şikayetlerin yönetimi
-        all: Mastodon hesabınıza tam erişim
+        all: Nutshell hesabınıza tam erişim
         blocks: Engeller
         bookmarks: Yer imleri
         conversations: Sohbetler
@@ -139,7 +139,7 @@ tr:
         media: Medya ekleri
         mutes: Sessize alınanlar
         notifications: Bildirimler
-        profile: Mastodon profiliniz
+        profile: Nutshell profiliniz
         push: Anlık bildirimler
         reports: Şikayetler
         search: Arama

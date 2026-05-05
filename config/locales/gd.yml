@@ -1,10 +1,10 @@
 ---
 gd:
   about:
-    about_mastodon_html: 'An lìonra sòisealta dhan àm ri teachd: Gun sanasachd, gun chaithris corporra, dealbhadh beusail agus dì-mheadhanachadh! Gabh sealbh air an dàta agad fhèin le Mastodon!'
+    about_mastodon_html: 'An lìonra sòisealta dhan àm ri teachd: Gun sanasachd, gun chaithris corporra, dealbhadh beusail agus dì-mheadhanachadh! Gabh sealbh air an dàta agad fhèin le Nutshell!'
     contact_missing: Cha deach a shuidheachadh
     contact_unavailable: Chan eil seo iomchaidh
-    hosted_on: Mastodon ’ga òstadh air %{domain}
+    hosted_on: Nutshell ’ga òstadh air %{domain}
     title: Mu dhèidhinn
   accounts:
     errors:
@@ -847,8 +847,8 @@ gd:
         rules_hint: Tha roinn sònraichte ann dha na riaghailtean air am bu chòir an luchd-cleachdaidh agad a leantainn.
         title: Mu dhèidhinn
       allow_referrer_origin:
-        desc: Nuair a bhriogas an luchd-cleachdaidh agad ceanglaichean gu làraichean air ann taobh a-muigh, dh’fhaoidte gun cuir am brabhsair aca seòladh an fhrithealaiche Mastodon agad thuca mar an referrer. Cuir seo à comas ma dh’aithnicheadh sin an luchd-cleachdaidh fa leth agad, can mas e frithealaiche Mastodon pearsanta a th’ ann.
-        title: Ceadaich gum faic làraichean air an taobh a-muigh an fhrithealaiche Mastodon agad mar thùs trafaige
+        desc: Nuair a bhriogas an luchd-cleachdaidh agad ceanglaichean gu làraichean air ann taobh a-muigh, dh’fhaoidte gun cuir am brabhsair aca seòladh an fhrithealaiche Nutshell agad thuca mar an referrer. Cuir seo à comas ma dh’aithnicheadh sin an luchd-cleachdaidh fa leth agad, can mas e frithealaiche Nutshell pearsanta a th’ ann.
+        title: Ceadaich gum faic làraichean air an taobh a-muigh an fhrithealaiche Nutshell agad mar thùs trafaige
       appearance:
         preamble: Gnàthaich eadar-aghaidh-lìn Mhastodon.
         title: Coltas
@@ -860,14 +860,14 @@ gd:
         title: Iarr air cleachdaichean ùra gum fuasgail iad CAPTCHA gus an cunntas aca a dhearbhadh
       content_retention:
         danger_zone: Earrann chunnartach
-        preamble: Stiùirich mar a tha susbaint an luchd-cleachdaidh ’ga stòradh ann am Mastodon.
+        preamble: Stiùirich mar a tha susbaint an luchd-cleachdaidh ’ga stòradh ann am Nutshell.
         title: Glèidheadh na susbaint
       default_noindex:
         desc_html: Bidh buaidh air a h-uile cleachdaiche nach do dh’atharraich an roghainn seo dhaibh fhèin
         title: Thoir air falbh ro-aonta nan cleachdaichean air inneacsadh le einnseanan-luirg mar a’ bhun-roghainn
       discovery:
         follow_recommendations: Molaidhean leantainn
-        preamble: Tha tighinn an uachdar susbainte inntinniche fìor-chudromach airson toiseach-tòiseachaidh an luchd-cleachdaidh ùr nach eil eòlach air duine sam bith air Mastodon, ma dh’fhaoidte. Stiùirich mar a dh’obraicheas gleusan an rùrachaidh air an fhrithealaiche agad.
+        preamble: Tha tighinn an uachdar susbainte inntinniche fìor-chudromach airson toiseach-tòiseachaidh an luchd-cleachdaidh ùr nach eil eòlach air duine sam bith air Nutshell, ma dh’fhaoidte. Stiùirich mar a dh’obraicheas gleusan an rùrachaidh air an fhrithealaiche agad.
         privacy: Prìobhaideachd
         profile_directory: Eòlaire nam pròifil
         public_timelines: Loidhnichean-ama poblach
@@ -910,7 +910,7 @@ gd:
       destroyed_msg: Chaidh an luchdadh suas dhan làrach a sguabadh às!
     software_updates:
       critical_update: Èiginneach – ùraich cho luath ’s a ghabhas
-      description: Mholamaid gun cùm thu an stàladh agad de Mhastodon ùraichte ach am faigh thu buannachd às na càraidhean ’s gleusan as ùire. A bharrachd air sin, bidh e èiginneach aig amannan gun ùraich thu Mastodon gun dàil airson duilgheadasan tèarainteachd a sheachnadh. Seo as adhbhar gun doir Mastodon sùil airson ùrachaidhean gach leth-uair a thìde ’s gun cuir e brath thugad a-rèir nan roghainnean puist-d agad.
+      description: Mholamaid gun cùm thu an stàladh agad de Mhastodon ùraichte ach am faigh thu buannachd às na càraidhean ’s gleusan as ùire. A bharrachd air sin, bidh e èiginneach aig amannan gun ùraich thu Nutshell gun dàil airson duilgheadasan tèarainteachd a sheachnadh. Seo as adhbhar gun doir Nutshell sùil airson ùrachaidhean gach leth-uair a thìde ’s gun cuir e brath thugad a-rèir nan roghainnean puist-d agad.
       documentation_link: Barrachd fiosrachaidh
       release_notes: Nòtaichean sgaoilidh
       title: Ùrachaidhean a tha ri fhaighinn
@@ -978,7 +978,7 @@ gd:
         message_html: Tha mapachaidhean nan inneacsan Elasticsearch ro shean. Ruith <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Faic an docamaideadh
-        message_html: Tha iomadh nòd aig a’ bhagaid Elasticsearch agad ach cha deach Mastodon a rèiteachadh gus an cleachdadh uile.
+        message_html: Tha iomadh nòd aig a’ bhagaid Elasticsearch agad ach cha deach Nutshell a rèiteachadh gus an cleachdadh uile.
       elasticsearch_preset_single_node:
         action: Faic an docamaideadh
         message_html: Chan eil ach aon nòd a-mhàin air a’ bhagaid Elasticsearch agad, bu chòir dhut <code>single_node_cluster</code> a chur air <code>ES_PRESET</code>.
@@ -996,13 +996,13 @@ gd:
         message_html: Chan eil pròiseas Sidekiq sam bith a ruith dhan chiutha/dha na ciuthan %{value}. Thoir sùil air an rèiteachadh Sidekiq agad
       software_version_check:
         action: Faic na h-ùrachaidhean a tha ri fhaighinn
-        message_html: Tha ùrachadh Mastodon ri fhaighinn.
+        message_html: Tha ùrachadh Nutshell ri fhaighinn.
       software_version_critical_check:
         action: Faic na h-ùrachaidhean a tha ri fhaighinn
-        message_html: Tha ùrachadh èiginneach air Mastodon ri fhaighinn, ùraich cho luath ’s a ghabhas.
+        message_html: Tha ùrachadh èiginneach air Nutshell ri fhaighinn, ùraich cho luath ’s a ghabhas.
       software_version_patch_check:
         action: Faic na h-ùrachaidhean a tha ri fhaighinn
-        message_html: Tha ùrachadh Mastodon le càraidhean ri fhaighinn.
+        message_html: Tha ùrachadh Nutshell le càraidhean ri fhaighinn.
       upload_check_privacy_error:
         action: Thoir sùil an-seo airson barrachd fiosrachaidh
         message_html: "<strong>Chaidh am frithealaiche agad a dhroch-rèiteachadh. Tha prìobhaideachd an luchd-cleachdaidh agad fo chunnart.</strong>"
@@ -1191,7 +1191,7 @@ gd:
       webhook: Webhook
   admin_mailer:
     auto_close_registrations:
-      body: Ri linn dìth gnìomhachd nam maor o chionn goirid, dh’atharraich Mastodon modh nan clàraidhean aig %{instance} ach am feum cunntasan ùra aontachadh a làimh leis an amas gun dèid %{instance} a dhìon o chleachdadh air dòighean droch-rùnach. ’S urrainn dhut na clàraidhean fhosgladh a-rithist uair sam bith.
+      body: Ri linn dìth gnìomhachd nam maor o chionn goirid, dh’atharraich Nutshell modh nan clàraidhean aig %{instance} ach am feum cunntasan ùra aontachadh a làimh leis an amas gun dèid %{instance} a dhìon o chleachdadh air dòighean droch-rùnach. ’S urrainn dhut na clàraidhean fhosgladh a-rithist uair sam bith.
       subject: Feumaidh clàradh le %{instance} aontachadh a-nis
     new_appeal:
       actions:
@@ -1207,7 +1207,7 @@ gd:
       subject: Tha %{username} ag ath-thagradh co-dhùnadh na maorsainneachd air %{instance}
     new_critical_software_updates:
       body: Chaidh tionndaidhean èiginneach ùra de Mhastodon a sgaoileadh, bu chòir dhut ùrachadh cho luath ’s a ghabhas!
-      subject: Tha ùrachaidhean èiginneach air Mastodon ri fhaighinn dha %{instance}!
+      subject: Tha ùrachaidhean èiginneach air Nutshell ri fhaighinn dha %{instance}!
     new_pending_account:
       body: Chì thu mion-fhiosrachadh a’ chunntais ùir gu h-ìosal. ’S urrainn dhut gabhail ris an iarrtas seo no a dhiùltadh.
       subject: Tha cunntas ùr air %{instance} a’ feitheamh air lèirmheas (%{username})
@@ -1241,7 +1241,7 @@ gd:
     boosting_preferences_info_html: "<strong>Gliocas:</strong> Ge b’ e dè na roghainnean, ma nì thu<kbd>Shift</kbd> + <kbd>Briogadh</kbd> air ìomhaigheag%{icon} a’ bhrosnachaidh, thèid a bhrosnachadh sa bhad."
     discovery: Rùrachadh
     localization:
-      body: Tha Mastodon ’ga eadar-theangachadh le saor-thoilich.
+      body: Tha Nutshell ’ga eadar-theangachadh le saor-thoilich.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: "’S urrainn do neach sam bith cuideachadh."
     sensitive_content: Susbaint fhrionasach
@@ -1281,8 +1281,8 @@ gd:
     delete_account_html: Nam bu mhiann leat an cunntas agad a sguabadh às, <a href="%{path}">nì thu an-seo e</a>. Thèid dearbhadh iarraidh ort.
     description:
       prefix_invited_by_user: Thug @%{name} cuireadh dhut ach am faigh thu ballrachd air an fhrithealaiche seo de Mhastodon!
-      prefix_sign_up: Clàraich le Mastodon an-diugh!
-      suffix: Le cunntas, ’s urrainn dhut daoine a leantainn, naidheachdan a phostadh agus conaltradh leis an luchd-chleachdaidh air frithealaiche Mastodon sam bith is a bharrachd!
+      prefix_sign_up: Clàraich le Nutshell an-diugh!
+      suffix: Le cunntas, ’s urrainn dhut daoine a leantainn, naidheachdan a phostadh agus conaltradh leis an luchd-chleachdaidh air frithealaiche Nutshell sam bith is a bharrachd!
     didnt_get_confirmation: Nach d’fhuair thu an ceangal dearbhaidh?
     dont_have_your_security_key: Nach eil iuchair tèarainteachd agad?
     forgot_password: Na dhìochuimhnich thu am facal-faire agad?
@@ -1319,7 +1319,7 @@ gd:
     set_new_password: Suidhich facal-faire ùr
     setup:
       email_below_hint_html: Thoir sùil air pasgan an spama agad no iarr fear eile. ’S urrainn dhut an seòladh puist-d agad a chur ceart ma tha e ceàrr.
-      email_settings_hint_html: Briog air a’ cheangal a chuir sinn gu %{email} airson tòiseachadh air Mastodon a chleachdadh. Fuirichidh sinn ort an-seo.
+      email_settings_hint_html: Briog air a’ cheangal a chuir sinn gu %{email} airson tòiseachadh air Nutshell a chleachdadh. Fuirichidh sinn ort an-seo.
       link_not_received: Nach d’fhuair thu ceangal?
       new_confirmation_instructions_sent: Gheibh thu post-d ùr le ceangal dearbhaidh an ceann corra mionaid!
       title: Thoir sùil air a’ bhogsa a-steach agad
@@ -1328,7 +1328,7 @@ gd:
       title: Clàraich a-steach gu %{domain}
     sign_up:
       manual_review: Nì na maoir againn lèirmheas a làimh air clàraidhean air %{domain}. Airson ar cuideachadh le làimhseachadh do chlàraidh, sgrìobh beagan mu do dhèidhinn agus carson a tha thu ag iarraidh cunntas air %{domain}.
-      preamble: Le cunntas air an fhrithealaiche Mastodon seo, ’s urrainn dhut neach sam bith a leantainn air a’ cho-shaoghal, ge b’ e càit a bheil an cunntas aca-san ’ga òstadh.
+      preamble: Le cunntas air an fhrithealaiche Nutshell seo, ’s urrainn dhut neach sam bith a leantainn air a’ cho-shaoghal, ge b’ e càit a bheil an cunntas aca-san ’ga òstadh.
       title: Suidhicheamaid %{domain} dhut.
     status:
       account_status: Staid a’ chunntais
@@ -1344,7 +1344,7 @@ gd:
     user_privacy_agreement_html: Leugh mi is tha mi ag aontachadh ris a’ <a href="%{privacy_policy_path}" target="_blank">phoileasaidh prìobhaideachd</a>
   author_attribution:
     example_title: Ball-sampaill teacsa
-    hint_html: An sgrìobh thu naidheachdan no bloga taobh a-muigh Mhastodon? Stiùirich mar a thèid iomradh a thoirt ort nuair a bhios na h-artaigilean agad ’gan co-roinneadh air Mastodon.
+    hint_html: An sgrìobh thu naidheachdan no bloga taobh a-muigh Mhastodon? Stiùirich mar a thèid iomradh a thoirt ort nuair a bhios na h-artaigilean agad ’gan co-roinneadh air Nutshell.
     instructions: 'Dèan cinnteach gu bheil an còd seo am broinn HTML an artaigil agad:'
     more_from_html: Barrachd o %{name}
     s_blog: Bloga aig %{name}
@@ -1452,7 +1452,7 @@ gd:
       content: Tha sinn duilich ach chaidh rudeigin ceàrr a-bhos an-seo.
       title: Chan eil an duilleag seo mar bu chòir
     '503': Cha b’ urrainn an duilleag fhrithealadh ri linn mearachd sealach an fhrithealaiche.
-    noscript_html: Airson aplacaid-lìn Mastodon a chleachdadh, cuir JavaScript an comas. Mar roghainn eile, ’s urrainn dhut fear dhe na <a href="%{apps_path}">cliantan tùsail</a> airson Mastodon dhan ùrlar agad fheuchainn.
+    noscript_html: Airson aplacaid-lìn Nutshell a chleachdadh, cuir JavaScript an comas. Mar roghainn eile, ’s urrainn dhut fear dhe na <a href="%{apps_path}">cliantan tùsail</a> airson Nutshell dhan ùrlar agad fheuchainn.
   existing_username_validator:
     not_found: cha b’ urrainn dhuinn cleachdaiche ionadail a lorg air a bheil an t-ainm-cleachdaiche seo
     not_found_multiple: cha b’ urrainn dhuinn %{usernames} a lorg
@@ -1860,13 +1860,13 @@ gd:
     posting_defaults: Bun-roghainnean a’ phostaidh
     public_timelines: Loidhnichean-ama poblach
   privacy:
-    hint_html: "<strong>Gnàthaich an dòigh air an dèid a’ phròifil ’s na postaichean agad a lorg.</strong> Tha grunn ghleusan aig Mastodon a chuidicheas ach an ruig thu èisteachd nas fharsainge nuair a bhios iad an comas. Thoir sùil air na roghainnean seo a dhèanamh cinnteach gum freagair iad ri d’ fheumalachdan."
+    hint_html: "<strong>Gnàthaich an dòigh air an dèid a’ phròifil ’s na postaichean agad a lorg.</strong> Tha grunn ghleusan aig Nutshell a chuidicheas ach an ruig thu èisteachd nas fharsainge nuair a bhios iad an comas. Thoir sùil air na roghainnean seo a dhèanamh cinnteach gum freagair iad ri d’ fheumalachdan."
     privacy: Prìobhaideachd
     privacy_hint_html: Stiùirich na tha thu airson foillseachadh do chàch. Gheibh daoine lorg air pròifilean inntinneach is deagh aplacaidean a’ brabhsadh cò tha daoine eile a’ leantainn ’s a’ faicinn nan aplacaidean a chleachdas iad airson postadh ach dh’fhaoidte gum b’ fheàrr leat seo a chumail falaichte.
     reach: Ruigse
     reach_hint_html: Stiùirich am bu mhiann leat gun rùraich ’s gun lean daoine ùra thu gus nach bu mhiann. A bheil thu airson ’s gun nochd na postaichean agad air duilleag an rùrachaidh? No gum faic càch thu am measg nam molaidhean leantainn aca? An gabh thu ri luchd-leantainn ùr sam bith gu fèin-obrachail no an cùm thu fhèin smachd air gach neach fa leth?
     search: Lorg
-    search_hint_html: Stiùirich an dòigh air an dèid do lorg. Am bu mhiann leat gun lorg daoine thu leis na phostaich thu gu poblach? Am bu mhiann leat gun lorg daoine taobh a-muigh Mastodon a’ phròifil agad nuair a bhios iad a lorg an lìn? Thoir an aire nach urrainn dhuinn gealladh le cinnt gun dèid am fiosrachadh poblach agad a dhùnadh a-mach gu tur às gach einnsean-luirg poblach.
+    search_hint_html: Stiùirich an dòigh air an dèid do lorg. Am bu mhiann leat gun lorg daoine thu leis na phostaich thu gu poblach? Am bu mhiann leat gun lorg daoine taobh a-muigh Nutshell a’ phròifil agad nuair a bhios iad a lorg an lìn? Thoir an aire nach urrainn dhuinn gealladh le cinnt gun dèid am fiosrachadh poblach agad a dhùnadh a-mach gu tur às gach einnsean-luirg poblach.
     title: Prìobhaideachd ’s ruigse
   privacy_policy:
     title: Poileasaidh prìobhaideachd
@@ -1941,7 +1941,7 @@ gd:
     current_session: An seisean làithreach
     date: Ceann-là
     description: "%{browser} air %{platform}"
-    explanation: Seo na bhrabhsairean-lìn a tha clàraichte a-staigh sa chunntas Mastodon agad aig an àm seo.
+    explanation: Seo na bhrabhsairean-lìn a tha clàraichte a-staigh sa chunntas Nutshell agad aig an àm seo.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1967,7 +1967,7 @@ gd:
     aliases: Aliasan a’ chunntais
     appearance: Coltas
     authorized_apps: Aplacaidean ùghdarraichte
-    back: Till gu Mastodon
+    back: Till gu Nutshell
     delete: Sguabadh às cunntais
     development: Leasachadh
     edit_profile: Deasaich a’ phròifil
@@ -2144,7 +2144,7 @@ gd:
       subtitle: Chaidh an t-ath-thagradh agad a dhiùltadh.
       title: Chaidh ath-thagradh a dhiùltadh
     backup_ready:
-      explanation: Dh’iarr thu lethbhreac-glèidhidh slàn dhen chunntas Mastodon agad.
+      explanation: Dh’iarr thu lethbhreac-glèidhidh slàn dhen chunntas Nutshell agad.
       extra: Tha e deis ri luchdadh a-nuas a-nis!
       subject: Tha an tasg-lann agad deis ri luchdadh a-nuas
       title: Tasg-lann dhut
@@ -2205,7 +2205,7 @@ gd:
       apps_android_action: Faigh aplacaid air Google Play
       apps_ios_action: Luchdaich a-nuas aplacaid on App Store
       apps_step: Luchdaich a-nuas na h-aplacaidean oifigeil againn.
-      apps_title: Aplacaidean Mastodon
+      apps_title: Aplacaidean Nutshell
       checklist_subtitle: 'Seo toiseach-tòiseachaidh dhut air an t-saoghal shòisealta ùr:'
       checklist_title: Liosta-chromagan fàilteachaidh
       edit_profile_action: Cuir dreach pearsanta air
@@ -2213,13 +2213,13 @@ gd:
       edit_profile_title: Cuir dreach pearsanta air a’ phròifil agad
       explanation: Seo gliocas no dhà gus tòiseachadh
       feature_action: Barrachd fiosrachaidh
-      feature_audience: Bheir Mastodon comas sònraichte dhut gun stiùirich thu d’ èisteachd gun eadar-mheadhanaich. Ma ruitheas tu Mastodon air a’ bhun-structar agad fhèin, ’s urrainn dhut frithealaiche Mastodon sam bith a leantainn air loidhne ’s an caochladh agus cha bhi smachd aig duine sam bith air ach agad fhèin.
+      feature_audience: Bheir Nutshell comas sònraichte dhut gun stiùirich thu d’ èisteachd gun eadar-mheadhanaich. Ma ruitheas tu Nutshell air a’ bhun-structar agad fhèin, ’s urrainn dhut frithealaiche Nutshell sam bith a leantainn air loidhne ’s an caochladh agus cha bhi smachd aig duine sam bith air ach agad fhèin.
       feature_audience_title: Stèidhich d’ èisteachd le misneachd
-      feature_control: Chan eil duine sam bith nas eòlaiche air na bu mhiann leat fhaicinn air do dhachaigh na thu fhèin. Cha chaith algairim no sanasachd d’ ùine. Lean duine sam bith air frithealaiche Mastodon sam bith on aon chunntas agus faigh na postaichean aca ann an òrdugh na h-ama agus cuir dreach nas pearsanta air an oisean agad-sa dhen eadar-lìon.
+      feature_control: Chan eil duine sam bith nas eòlaiche air na bu mhiann leat fhaicinn air do dhachaigh na thu fhèin. Cha chaith algairim no sanasachd d’ ùine. Lean duine sam bith air frithealaiche Nutshell sam bith on aon chunntas agus faigh na postaichean aca ann an òrdugh na h-ama agus cuir dreach nas pearsanta air an oisean agad-sa dhen eadar-lìon.
       feature_control_title: Cùm smachd air an loidhne-ama agad
-      feature_creativity: Cuiridh Mastodon taic ri postaichean le faidhlichean fuaime, videothan is dealbhan, tuairisgeulan so-ruigsinneachd, cunntasan-bheachd, rabhaidhean susbainte, avataran beòthaichte, emojis gnàthaichte, smachd air bearradh nan dealbhagan is mòran a bharrachd ach an cuir thu do bheachdan an cèill air loidhne. Ge b’ e a bheil thu a’ foillseachadh an obair-ealain, an ceòl no am pod-chraoladh agad, tha Mastodon ri làimh dhut.
+      feature_creativity: Cuiridh Nutshell taic ri postaichean le faidhlichean fuaime, videothan is dealbhan, tuairisgeulan so-ruigsinneachd, cunntasan-bheachd, rabhaidhean susbainte, avataran beòthaichte, emojis gnàthaichte, smachd air bearradh nan dealbhagan is mòran a bharrachd ach an cuir thu do bheachdan an cèill air loidhne. Ge b’ e a bheil thu a’ foillseachadh an obair-ealain, an ceòl no am pod-chraoladh agad, tha Nutshell ri làimh dhut.
       feature_creativity_title: Cho cruthachail ’s a ghabhas
-      feature_moderation: Cuiridh Mastodon na co-dhùnaidhean ’nad làmhan fhèin. Cruthaichidh gach frithealaiche na riaghailtean aige fhèin a thèid a chur an gnìomh gu h-ionadail seach on àirde mar a thachras air meadhanan sòisealta corporra agus mar sin dheth, ’s urrainnear freagairt gu sùbailte do dh’fheumalachdan choimhearsnachdan eadar-dhealaichte. Faigh ballrachd air frithealaiche far a bheil thu ag aontachadh ris na riaghailtean ann no òstaich fear agad fhèin.
+      feature_moderation: Cuiridh Nutshell na co-dhùnaidhean ’nad làmhan fhèin. Cruthaichidh gach frithealaiche na riaghailtean aige fhèin a thèid a chur an gnìomh gu h-ionadail seach on àirde mar a thachras air meadhanan sòisealta corporra agus mar sin dheth, ’s urrainnear freagairt gu sùbailte do dh’fheumalachdan choimhearsnachdan eadar-dhealaichte. Faigh ballrachd air frithealaiche far a bheil thu ag aontachadh ris na riaghailtean ann no òstaich fear agad fhèin.
       feature_moderation_title: Maorsainneachd mar gu chòir
       follow_action: Lean
       follow_step: Tha leantainn dhaoine inntinneach air cridhe Mhastodon.
@@ -2238,10 +2238,10 @@ gd:
       post_action: Sgrìobh
       post_step: Cuir an aithne air an t-saoghal le teacsa, dealbhan, videothan no cunntasan-bheachd.
       post_title: Cruthaich a’ chiad phost agad
-      share_step: Leig fios dha do charaidean mar a gheibh iad grèim ort air Mastodon.
-      share_title: Co-roinn a’ phròifil Mastodon agad
+      share_step: Leig fios dha do charaidean mar a gheibh iad grèim ort air Nutshell.
+      share_title: Co-roinn a’ phròifil Nutshell agad
       sign_in_action: Clàraich a-steach
-      subject: Fàilte gu Mastodon
+      subject: Fàilte gu Nutshell
       title: Fàilte air bòrd, %{name}!
   users:
     follow_limit_reached: Chan urrainn dhut còrr is %{limit} daoine a leantainn
@@ -2254,7 +2254,7 @@ gd:
   verification:
     extra_instructions_html: <strong>Gliocas:</strong>Faodaidh an ceangal air an làrach-lìn agad a bhith do-fhaicsinneach. ’S e <code>rel="me"</code> a tha sa phàirt chudromach a bhacas riochd cuideigin eile air làraichean-lìn le susbaint air a gintinn o chleachdaiche. ’S urrainn dhut fiù taga <code>link</code> a chleachdadh ann am bann-cinn na duilleige seach <code>a</code> ach feumaidh sinn an HTML ruigsinn gun a bhith a’ ruith JavaScript.
     here_is_how: Seo mar a nì thu e
-    hint_html: "<strong>Gheibh duine sam bith dearbhadh an aithne air Mastodon.</strong> Tha seo stèidhichte air stannardan-lìn fosgailte agus bidh e saor ’s an-asgaidh gu bràth. Chan fheum thu dad ach làrach-lìn phearsanta leis an aithnich daoine thu. Nuair a nì thu ceangal dhan làrach-lìn sin on phròifil agad, dearbhaidh sinn gu bheil an làrach-lìn a’ ceangal air ais dhan phròifil agad agus seallaidh sinn taisbeanair lèirsinneach oirre."
+    hint_html: "<strong>Gheibh duine sam bith dearbhadh an aithne air Nutshell.</strong> Tha seo stèidhichte air stannardan-lìn fosgailte agus bidh e saor ’s an-asgaidh gu bràth. Chan fheum thu dad ach làrach-lìn phearsanta leis an aithnich daoine thu. Nuair a nì thu ceangal dhan làrach-lìn sin on phròifil agad, dearbhaidh sinn gu bheil an làrach-lìn a’ ceangal air ais dhan phròifil agad agus seallaidh sinn taisbeanair lèirsinneach oirre."
     instructions_html: Dèan lethbhreac dhen chòd gu h-ìosal is cuir a-steach ann an HTML na làraich-lìn agad e. An uairsin, cuir seòladh na làraich-lìn agad ri fear dhe na raointean a bharrachd air a’ phròifil agad o thaba “Deasaich a’ phròifil” agus sàbhail na h-atharraichean.
     verification: Dearbhadh
     verified_links: Na ceanglaichean dearbhte agad
@@ -2278,5 +2278,5 @@ gd:
     otp_required: Mus cleachd thu iuchraichean tèarainteachd, feumaidh tu an dearbhadh dà-cheumnach a chur an comas.
     registered_on: Air a chlàradh %{date}
   wrapstodon:
-    description: Seall mar a chleachd %{name} Mastodon am bliadhna!
+    description: Seall mar a chleachd %{name} Nutshell am bliadhna!
     title: Wrapstodon %{year} dha %{name}

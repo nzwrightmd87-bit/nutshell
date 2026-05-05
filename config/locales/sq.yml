@@ -1,10 +1,10 @@
 ---
 sq:
   about:
-    about_mastodon_html: 'Rrjeti social i së ardhmes: Pa reklama, pa sy vëzhguese nga korporata, etik dhe i decentralizuar! Merrni sërisht zotësinë e të dhënave tuaja, me Mastodon!'
+    about_mastodon_html: 'Rrjeti social i së ardhmes: Pa reklama, pa sy vëzhguese nga korporata, etik dhe i decentralizuar! Merrni sërisht zotësinë e të dhënave tuaja, me Nutshell!'
     contact_missing: E pacaktuar
     contact_unavailable: N/A
-    hosted_on: Server Mastodon i strehuar në %{domain}
+    hosted_on: Server Nutshell i strehuar në %{domain}
     title: Mbi
   accounts:
     errors:
@@ -761,7 +761,7 @@ sq:
         moderation: Moderim
         special: Special
       delete: Fshije
-      description_html: Me <strong>role përdoruesi</strong>, mund të përshtatni cilat funksione dhe fusha të Mastodon-it mund të përdorin përdoruesit tuaj.
+      description_html: Me <strong>role përdoruesi</strong>, mund të përshtatni cilat funksione dhe fusha të Nutshell-it mund të përdorin përdoruesit tuaj.
       edit: Përpunoni rolin e '%{name}'
       everyone: Leje parazgjedhje
       everyone_full_description_html: Ky është <strong>roli bazë</strong> që prek <strong>krejt përdoruesit</strong>, madje edhe ata pa një rol të caktuar. Krejt rolet e tjerë trashëgojnë lejet prej tij.
@@ -830,27 +830,27 @@ sq:
         rules_hint: Ka një zonë enkas për rregulla me të cilat pritet që përdoruesit tuaj të pajtohen.
         title: Mbi
       allow_referrer_origin:
-        desc: Kur përdoruesit tuaj klikojnë lidhje në sajte të jashtëm, shfletuesi i tyre mund të dërgojë si referues adresën e shërbyesit tuaj Mastodon. Çaktivizojeni këtë, nëse kjo do të lejonte identifikim unik të përdoruesve tuaj, për shembull, nëse është një shërbyes personal Mastodon.
-        title: Lejoni sajte të jashtëm të shohin shërbyesin tuaj Mastodon si burim traffiku
+        desc: Kur përdoruesit tuaj klikojnë lidhje në sajte të jashtëm, shfletuesi i tyre mund të dërgojë si referues adresën e shërbyesit tuaj Nutshell. Çaktivizojeni këtë, nëse kjo do të lejonte identifikim unik të përdoruesve tuaj, për shembull, nëse është një shërbyes personal Nutshell.
+        title: Lejoni sajte të jashtëm të shohin shërbyesin tuaj Nutshell si burim traffiku
       appearance:
-        preamble: Përshtatni ndërfaqen web të Mastodon-it.
+        preamble: Përshtatni ndërfaqen web të Nutshell-it.
         title: Dukje
       branding:
-        preamble: Elementët e markës të shërbyesit tuaj e dallojnë atë nga shërbyes të tjerë në rrjet. Këto hollësi mund të shfaqen në një larmi mjedisesh, bie fjala, në ndërfaqen web të Mastodon-it, aplikacione për platforma të ndryshme, në paraparje lidhjesh në sajte të tjerë dhe brenda aplikacionesh për shkëmbim mesazhesh, e me radhë. Për këtë arsyes, më e mira është që këto hollësi të jenë të qarta, të shkurtra dhe të kursyera.
+        preamble: Elementët e markës të shërbyesit tuaj e dallojnë atë nga shërbyes të tjerë në rrjet. Këto hollësi mund të shfaqen në një larmi mjedisesh, bie fjala, në ndërfaqen web të Nutshell-it, aplikacione për platforma të ndryshme, në paraparje lidhjesh në sajte të tjerë dhe brenda aplikacionesh për shkëmbim mesazhesh, e me radhë. Për këtë arsyes, më e mira është që këto hollësi të jenë të qarta, të shkurtra dhe të kursyera.
         title: Elementë marke
       captcha_enabled:
         desc_html: Kjo bazohet në programthe të jashtëm prej hCaptcha, çka mund të përbëjë një shqetësim për sigurinë dhe privatësinë. Veç kësaj, <strong>kjo mund ta bëjë procesin e regjistrimit në shkallë të madhe më pak të përdorshëm për disa persona (veçanërisht ata me paaftësi)</strong>. Për këto arsye, ju lutemi, shihni mundësinë e masave alternative, fjala vjen, bazuar në miratim, ose regjistrim vetëm me ftesa.
         title: Kërko prej përdoruesve të rinj të zgjidhin një CAPTCHA, si ripohim të llogarisë të tyre
       content_retention:
         danger_zone: Zonë rreziku
-        preamble: Kontrolloni se si depozitohen në Mastodon lënda e prodhuar nga përdoruesit.
+        preamble: Kontrolloni se si depozitohen në Nutshell lënda e prodhuar nga përdoruesit.
         title: Mbajtje lënde
       default_noindex:
         desc_html: Prek krejt përdoruesit që s’e kanë ndryshuar vetë këtë rregullim
         title: Lëri, si parazgjedhje, përdoruesit jashtë indeksimi nga motorë kërkimesh
       discovery:
         follow_recommendations: Rekomandime ndjekjeje
-        preamble: Shpërfaqja e lëndës interesante është me rëndësi për mirëseardhjen e përdoruesve të rinj, të cilët mund të mos njohin njeri në Mastodon. Kontrolloni se funksionojnë në shërbyesin tuaj veçori të ndryshme zbulimi lënde.
+        preamble: Shpërfaqja e lëndës interesante është me rëndësi për mirëseardhjen e përdoruesve të rinj, të cilët mund të mos njohin njeri në Nutshell. Kontrolloni se funksionojnë në shërbyesin tuaj veçori të ndryshme zbulimi lënde.
         privacy: Privatësi
         profile_directory: Drejtori profilesh
         public_timelines: Rrjedha kohore publike
@@ -893,7 +893,7 @@ sq:
       destroyed_msg: Ngarkimi në sajt u fshi me sukses!
     software_updates:
       critical_update: Kritik — ju lutemi, përditësojeni pa humbur kohë
-      description: Rekomandohet ta mbani të përditësuar instalimin tuaj të Mastodon-it, që të përfitoni nga ndreqjet dhe veçoritë më të reja. Për më tej, ndonjëherë është kritike të përditësohet Mastodon-i në kohën e duhur, për të shmangur probleme sigurie. Për këto arsye, Mastodon-i kontrollon për përditësime çdo 30 minuta dhe do t’ju njoftojë, sipas parapëlqimeve tuaja për njoftime me email.
+      description: Rekomandohet ta mbani të përditësuar instalimin tuaj të Nutshell-it, që të përfitoni nga ndreqjet dhe veçoritë më të reja. Për më tej, ndonjëherë është kritike të përditësohet Nutshell-i në kohën e duhur, për të shmangur probleme sigurie. Për këto arsye, Nutshell-i kontrollon për përditësime çdo 30 minuta dhe do t’ju njoftojë, sipas parapëlqimeve tuaja për njoftime me email.
       documentation_link: Mësoni më tepër
       release_notes: Shënime hedhjeje në qarkullim
       title: Përditësime të gatshme
@@ -961,7 +961,7 @@ sq:
         message_html: Përshoqërimet e treguesit të Elasticsearch-it janë të vjetruara. Ju lutemi, xhironi <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Shihni dokumentimin
-        message_html: Grupi i instancave tuaja Elasticsearch ka më shumë se një nyjë, por Mastodon-i s’është formësuar t’i përdorë ato.
+        message_html: Grupi i instancave tuaja Elasticsearch ka më shumë se një nyjë, por Nutshell-i s’është formësuar t’i përdorë ato.
       elasticsearch_preset_single_node:
         action: Shihni dokumentimin
         message_html: Grupi i instancave tuaja Elasticsearch ka vetëm një nyjë, <code>ES_PRESET</code> i duhet dhënë vlera <code>single_node_cluster</code>.
@@ -979,13 +979,13 @@ sq:
         message_html: S’ka proces Sidekiq në punë për %{value} radhë. Ju lutemi, shqyrtoni formësimin tuaj për Sidekiq-un
       software_version_check:
         action: Shihni përditësimet e gatshme
-        message_html: Ka gati një përditësim Mastodon-i.
+        message_html: Ka gati një përditësim Nutshell-i.
       software_version_critical_check:
         action: Shihni përditësimet e gatshme
-        message_html: Ka të gatshëm një përditësim kritik të Mastodon-it, ju lutemi, përditësojeni sa më shpejt të jetë e mundur.
+        message_html: Ka të gatshëm një përditësim kritik të Nutshell-it, ju lutemi, përditësojeni sa më shpejt të jetë e mundur.
       software_version_patch_check:
         action: Shihni përditësimet e gatshme
-        message_html: Ka të gatshëm një përditësim ndreqjeje të metash Mastodon-i.
+        message_html: Ka të gatshëm një përditësim ndreqjeje të metash Nutshell-i.
       upload_check_privacy_error:
         action: Për më tepër hollësi, shihni këtu
         message_html: "<strong>Shërbyesi juaj është formësuar keq. Privatësia e përdoruesve tuaj është në rrezik.</strong>"
@@ -1142,7 +1142,7 @@ sq:
     webhooks:
       add_new: Shtoni pikëmbarim
       delete: Fshije
-      description_html: Një <strong>webhook</strong> i bën të mundur Mastodon-it t’i dërgojë aplikacioni tuaj <strong>njoftime aty për aty</strong> rreth aktesh që keni zgjedhur, që kështu aplikacioni juaj të mund <strong>të prodhojë automatikisht reagime</strong>.
+      description_html: Një <strong>webhook</strong> i bën të mundur Nutshell-it t’i dërgojë aplikacioni tuaj <strong>njoftime aty për aty</strong> rreth aktesh që keni zgjedhur, që kështu aplikacioni juaj të mund <strong>të prodhojë automatikisht reagime</strong>.
       disable: Çaktivizoje
       disabled: Të çaktivizuar
       edit: Përpunoni pikëmbarim
@@ -1176,8 +1176,8 @@ sq:
       next_steps: Apelimin mund të miratoni, që të zhbëhet vendimi i marrë, ose ta shpërfillni.
       subject: "%{username} po apelon një vendim moderimi te %{instance}"
     new_critical_software_updates:
-      body: Janë hedhur në qarkullim versione të rinj të Mastodon-it, mund të donit ta përditësonit sa më shpejt të jetë e mundur!
-      subject: Për %{instance} ka përditësime kritike Mastodon-i!
+      body: Janë hedhur në qarkullim versione të rinj të Nutshell-it, mund të donit ta përditësonit sa më shpejt të jetë e mundur!
+      subject: Për %{instance} ka përditësime kritike Nutshell-i!
     new_pending_account:
       body: Hollësitë e llogarisë së re gjenden më poshtë. Mund ta miratoni ose hidhni poshtë këtë aplikim.
       subject: Llogari e re për shqyrtim në %{instance} (%{username})
@@ -1186,8 +1186,8 @@ sq:
       body_remote: Dikush nga %{domain} ka raportuar %{target}
       subject: Raportim i ri për %{instance} (#%{id})
     new_software_updates:
-      body: Janë hedhur në qarkullim versione të rinj Mastodon-i, mund të donit ta përditësoni!
-      subject: Për %{instance} ka të gatshëm versione të rinj Mastodon-i!
+      body: Janë hedhur në qarkullim versione të rinj Nutshell-i, mund të donit ta përditësoni!
+      subject: Për %{instance} ka të gatshëm versione të rinj Nutshell-i!
     new_trends:
       body: 'Gjërat vijuese lypin një shqyrtim, përpara se të mund të shfaqen publikisht:'
       new_trending_links:
@@ -1211,7 +1211,7 @@ sq:
     boosting_preferences_info_html: "<strong>Ndihmëz:</strong> Pavarësisht rregullimeve, <kbd>Shift</kbd> + <kbd>Klikim</kbd> mbi ikonën e Përforcimeve %{icon} do të bëjë menjëherë përforcim."
     discovery: Zbulim
     localization:
-      body: Mastodon-i përkthehet nga vullnetarë.
+      body: Nutshell-i përkthehet nga vullnetarë.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Çdokush mund të kontribuojë.
     sensitive_content: Lëndë rezervat
@@ -1250,9 +1250,9 @@ sq:
     delete_account: Fshije llogarinë
     delete_account_html: Nëse dëshironi të fshihni llogarinë tuaj, mund <a href="%{path}">ta bëni që këtu</a>. Do t’ju kërkohet ta ripohoni.
     description:
-      prefix_invited_by_user: "@%{name} ju fton të bëheni pjesë e këtij shërbyesi Mastodon!"
-      prefix_sign_up: Regjistrohuni në Mastodon që sot!
-      suffix: Me një llogari, do të jeni në gjendje të ndiqni persona, përditësime postimesh dhe të shkëmbeni mesazhe me përdorues nga cilido shërbyes Mastodon, etj!
+      prefix_invited_by_user: "@%{name} ju fton të bëheni pjesë e këtij shërbyesi Nutshell!"
+      prefix_sign_up: Regjistrohuni në Nutshell që sot!
+      suffix: Me një llogari, do të jeni në gjendje të ndiqni persona, përditësime postimesh dhe të shkëmbeni mesazhe me përdorues nga cilido shërbyes Nutshell, etj!
     didnt_get_confirmation: S’morët një lidhje ripohimi?
     dont_have_your_security_key: S’i keni kyçet tuaj të sigurisë?
     forgot_password: Harruat fjalëkalimin tuaj?
@@ -1289,7 +1289,7 @@ sq:
     set_new_password: Caktoni fjalëkalim të ri
     setup:
       email_below_hint_html: Shihni te dosja juaj e të padëshiruarve, ose kërkoni një tjetër. Mundeni të saktësoni adresën tuaj email, nëse është gabim.
-      email_settings_hint_html: Që të filloni të përdorni Mastodon-in, klikoni mbi lidhjen që dërguam te%{email}. Do të presim këtu.
+      email_settings_hint_html: Që të filloni të përdorni Nutshell-in, klikoni mbi lidhjen që dërguam te%{email}. Do të presim këtu.
       link_not_received: S’morët lidhje?
       new_confirmation_instructions_sent: Brenda pak mintuash do të merrni një email të ri me lidhjen e ripohimit!
       title: Shihni te email-et tuaj
@@ -1298,7 +1298,7 @@ sq:
       title: Bëni hyrjen te %{domain}
     sign_up:
       manual_review: Regjistrimet te %{domain} kalojnë një shqyrtim dorazi nga moderatorët tanë. Që të na ndihmoni të përfundojmë regjistrimin tuaj, na shkruani pakëz mbi veten dhe pse doni një llogari në %{domain}.
-      preamble: Me një llogari te ky shërbyes Mastodon do të jeni në gjendje të ndiqni cilindo person në fedivers, pavarësisht se ku strehohet llogaria e tij.
+      preamble: Me një llogari te ky shërbyes Nutshell do të jeni në gjendje të ndiqni cilindo person në fedivers, pavarësisht se ku strehohet llogaria e tij.
       title: Le të ujdisim llogarinë tuaj në %{domain}.
     status:
       account_status: Gjendje llogarie
@@ -1314,7 +1314,7 @@ sq:
     user_privacy_agreement_html: I kam lexuar dhe pajtohem me <a href="%{privacy_policy_path}" target="_blank">rregullat e privatësisë</a>
   author_attribution:
     example_title: Tekst shembull
-    hint_html: Shkruani lajme, apo artikuj blogu jashtë Mastodon-it? Kontrolloni se si ju jepet hakë, kur ndahen me të tjerët në Mastodon.
+    hint_html: Shkruani lajme, apo artikuj blogu jashtë Nutshell-it? Kontrolloni se si ju jepet hakë, kur ndahen me të tjerët në Nutshell.
     instructions: 'Sigurohuni që ky kod të jetë në HTML-në e artikullit tuaj:'
     more_from_html: Më tepër nga %{name}
     s_blog: Blogu i %{name}
@@ -1418,7 +1418,7 @@ sq:
       content: Na ndjeni, diçka shkoi ters në anën tonë.
       title: Kjo faqe s’është e saktë
     '503': Kjo faqe s’u shërbye dot për shkak të një dështimi të përkohshëm të shërbyesit.
-    noscript_html: Që të përdorni aplikacionin web Mastodon, ju lutemi, aktivizoni JavaScript-in. Ndryshe, provoni për Mastodon-in një nga <a href="%{apps_path}">aplikacionet e brendshëm</a> të platformës tuaj.
+    noscript_html: Që të përdorni aplikacionin web Nutshell, ju lutemi, aktivizoni JavaScript-in. Ndryshe, provoni për Nutshell-in një nga <a href="%{apps_path}">aplikacionet e brendshëm</a> të platformës tuaj.
   existing_username_validator:
     not_found: s’u gjet dot përdorues vendor me atë emër përdoruesi
     not_found_multiple: s’u gjet dot %{usernames}
@@ -1638,7 +1638,7 @@ sq:
     unsubscribe:
       action: Po, shpajtomëni
       complete: U shpajtuat
-      confirmation_html: Jeni i sigurt se doni të shpajtoheni nga marrje %{type} për Mastodon te %{domain} në email-in tuaj %{email}? Mundeni përherë të ripajtoheni që nga <a href="%{settings_path}">rregullimet tuaja për njoftime me email</a>.
+      confirmation_html: Jeni i sigurt se doni të shpajtoheni nga marrje %{type} për Nutshell te %{domain} në email-in tuaj %{email}? Mundeni përherë të ripajtoheni që nga <a href="%{settings_path}">rregullimet tuaja për njoftime me email</a>.
       emails:
         notification_emails:
           favourite: email-e njoftimesh parapëlqimesh
@@ -1647,7 +1647,7 @@ sq:
           mention: email-e njoftimesh përmendjesh
           reblog: email-e njoftimesh përforcimesh
       resubscribe_html: Nëse u shpajtuat gabimisht, mund të ripajtoheni që nga <a href="%{settings_path}">rregullimet tuaja për njoftime me email</a>.
-      success_html: S’do të merrni më %{type} për Mastodon te %{domain} në email-in tuaj te %{email}.
+      success_html: S’do të merrni më %{type} për Nutshell te %{domain} në email-in tuaj te %{email}.
       title: Shpajtohuni
   media_attachments:
     validations:
@@ -1786,13 +1786,13 @@ sq:
     posting_defaults: Parazgjedhje postimesh
     public_timelines: Rrjedha kohore publike
   privacy:
-    hint_html: "<strong>Përshtatni mënyrën se si dëshironi të gjenden prej të tjerëve profili dhe postimet tuaja.</strong> Një larmi veçorish të Mastodon-it mund t’ju ndihmojnë të shtriheni në një publik më të gjerë, kur aktivizohen. Ndaluni një çast t’i shqyrtoni këto rregullime, për t’u siguruar se i përshtaten rastit tuaj."
+    hint_html: "<strong>Përshtatni mënyrën se si dëshironi të gjenden prej të tjerëve profili dhe postimet tuaja.</strong> Një larmi veçorish të Nutshell-it mund t’ju ndihmojnë të shtriheni në një publik më të gjerë, kur aktivizohen. Ndaluni një çast t’i shqyrtoni këto rregullime, për t’u siguruar se i përshtaten rastit tuaj."
     privacy: Privatësi
     privacy_hint_html: Kontrolloni sa doni të tregoni prej vetes për të mirën e të tjerëve. Njerëzit zbulojnë profile interensante dhe aplikacione të lezetshme duke shfletuar ndjekjet e personave të tjerë dhe duke parë se prej cilëve aplikacione postuan, por mund të parapëlqeni ta mbani të fshehur këtë.
     reach: Shtrirje
     reach_hint_html: Kontrolloni zbulimin dhe ndjekjen tuaj nga persona të rinj. Doni që postimet tuaja të shfaqen në skenën Exploroni? Doni që persona të tjerë t’ju shohin te rekomandimet për ndjekje prej tyre? Doni të pranohen automatikisht ndjekësit e rinj, apo të keni kontroll të imët mbi secilin rast?
     search: Kërkim
-    search_hint_html: Kontrolloni mënyrën se si do t’ju gjejnë. Doni që njerëzit t’ju gjejnë përmes çka keni postuar botërisht? Doni që njerëz jashtë Mastodon-it ta gjejnë profilin tuaj kur kërkojnë në internet? Ju lutemi, kini parasysh se për informacione publike s’mund të garantohet përjashtimi tërësor nga krejt motorët e kërkimeve.
+    search_hint_html: Kontrolloni mënyrën se si do t’ju gjejnë. Doni që njerëzit t’ju gjejnë përmes çka keni postuar botërisht? Doni që njerëz jashtë Nutshell-it ta gjejnë profilin tuaj kur kërkojnë në internet? Ju lutemi, kini parasysh se për informacione publike s’mund të garantohet përjashtimi tërësor nga krejt motorët e kërkimeve.
     title: Privatësi dhe shtrirje
   privacy_policy:
     title: Rregulla Privatësie
@@ -1867,7 +1867,7 @@ sq:
     current_session: Sesioni i tanishëm
     date: Datë
     description: "%{browser} në %{platform}"
-    explanation: Këta janë shfletuesit e përdorur tani për hyrje te llogaria juaj Mastodon.
+    explanation: Këta janë shfletuesit e përdorur tani për hyrje te llogaria juaj Nutshell.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1893,7 +1893,7 @@ sq:
     aliases: Aliase llogarish
     appearance: Dukje
     authorized_apps: Aplikacione të autorizuara
-    back: Mbrapsht te Mastodon
+    back: Mbrapsht te Nutshell
     delete: Fshirje llogarie
     development: Zhvillim
     edit_profile: Përpunoni profilin
@@ -1968,8 +1968,8 @@ sq:
       direct: Përmendje private
       private: Vetëm ndjekës
       public: Publike
-      public_long: Cilido që hyn e del në Mastodon
-      unlisted_long: Fshehur nga përfundime kërkimi në Mastodon, rrjedha kohore gjërash në modë dhe publike
+      public_long: Cilido që hyn e del në Nutshell
+      unlisted_long: Fshehur nga përfundime kërkimi në Nutshell, rrjedha kohore gjërash në modë dhe publike
   statuses_cleanup:
     enabled: Fshi automatikisht postime të vjetra
     enabled_hint: Fshin automatikisht postimet tuaja, pasi mbërrijnë një prag të caktuar moshe, hiq rastin kur ka përputhje me një nga përjashtimet më poshtë
@@ -2020,7 +2020,7 @@ sq:
     review_link: Shqyrtoni termat e shërbimit
     title: Termat e shërbimit të %{domain} po ndryshojnë
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%d %b, %Y, %H:%M"
@@ -2046,7 +2046,7 @@ sq:
     recovery_codes_regenerated: Kodet e rikthimeve u riprodhuan me sukses
     recovery_instructions_html: Në ndodhtë që të humbni hyrje te telefoni juaj, mund të përdorni një nga kodet e rikthimit më poshtë, që të rifitoni hyrje te llogaria juaj. <strong>Mbajini të parrezik kodet e rikthimeve</strong>. Për shembull, mund t’i shtypni dhe t’i ruani tok me dokumente të tjerë të rëndësishëm.
     resume_app_authorization: Rinis autorizim aplikacioni
-    role_requirement: "%{domain} lyp që të ujdisni Mirëfilltësim Dyfaktorësh, para se të përdorni Mastodon-in."
+    role_requirement: "%{domain} lyp që të ujdisni Mirëfilltësim Dyfaktorësh, para se të përdorni Nutshell-in."
     webauthn: Kyçe sigurie
   user_mailer:
     announcement_published:
@@ -2065,7 +2065,7 @@ sq:
       subtitle: Apelimi juaj është hedhur poshtë.
       title: Apelimi u hodh poshtë
     backup_ready:
-      explanation: Kërkuat një kopjeruajtje të plotë të llogarisë tuaj Mastodon.
+      explanation: Kërkuat një kopjeruajtje të plotë të llogarisë tuaj Nutshell.
       extra: Tani është gati për shkarkim!
       subject: Arkivi juaj është gati për shkarkim
       title: Marrje arkivi me vete
@@ -2126,7 +2126,7 @@ sq:
       apps_android_action: Merreni në Google Play
       apps_ios_action: Shkarkojeni nga App Store
       apps_step: Shkarkoni aplikacionet tona zyrtare.
-      apps_title: Aplikacione Mastodon
+      apps_title: Aplikacione Nutshell
       checklist_subtitle: 'Le t’ju vëmë në udhë drejt këtij horizonti të ri rrjetesh shoqërorë:'
       checklist_title: Listë hapash mirëseardhjeje
       edit_profile_action: Personalizojeni
@@ -2134,16 +2134,16 @@ sq:
       edit_profile_title: Personalizoni profilin tuaj
       explanation: Ja disa ndihmëza, sa për t’ia filluar
       feature_action: Mësoni më tepër
-      feature_audience: Mastodon-i ju sjell një mundësi unike për administrimin e publikut tuaj pa të tjerë në mes. Mastodon-i i sendërtuar në infrastrukturë tuajën ju lejon të ndiqni dhe të ndiqeni nga cilido shërbyes tjetër Mastodon në internet dhe është nën kontroll vetëm nga ju dhe askush tjetër.
+      feature_audience: Nutshell-i ju sjell një mundësi unike për administrimin e publikut tuaj pa të tjerë në mes. Nutshell-i i sendërtuar në infrastrukturë tuajën ju lejon të ndiqni dhe të ndiqeni nga cilido shërbyes tjetër Nutshell në internet dhe është nën kontroll vetëm nga ju dhe askush tjetër.
       feature_audience_title: Krijoni me vetëbesim publikun tuaj
-      feature_control: E dini më mirë se kushdo se ç’doni të shihni në prurjen tuaj të kreut. Pa algoritme apo reklama që ju hanë kot kohën. Ndiqni këdo, në çfarëdo shërbyesi Mastodon, që nga një llogari e vetme dhe merrni postimet e tyre në rend kohor dhe bëjeni këndin tuaj të internetit pak më tepër si ju.
+      feature_control: E dini më mirë se kushdo se ç’doni të shihni në prurjen tuaj të kreut. Pa algoritme apo reklama që ju hanë kot kohën. Ndiqni këdo, në çfarëdo shërbyesi Nutshell, që nga një llogari e vetme dhe merrni postimet e tyre në rend kohor dhe bëjeni këndin tuaj të internetit pak më tepër si ju.
       feature_control_title: Mbani kontrollin e rrjedhës tuaj kohore
-      feature_creativity: Mastodon-i mbulon postime audio, video dhe foto, përshkrime për persona me aftësi të kufizuara, pyetësorë, sinjalizime rreth lënde, avatarë të animuar, emoxhi vetjake, kontroll qethjeje miniaturash, etj, për t’ju ndihmuar të shpreheni në internet. Qoftë kur po botoni art tuajin, muzikë tuajën apo podkastin tuaj, Mastodon-i është gati.
+      feature_creativity: Nutshell-i mbulon postime audio, video dhe foto, përshkrime për persona me aftësi të kufizuara, pyetësorë, sinjalizime rreth lënde, avatarë të animuar, emoxhi vetjake, kontroll qethjeje miniaturash, etj, për t’ju ndihmuar të shpreheni në internet. Qoftë kur po botoni art tuajin, muzikë tuajën apo podkastin tuaj, Nutshell-i është gati.
       feature_creativity_title: Frymë krijuese e pashoqe
-      feature_moderation: Mastodon-i e rikthen marrjen e vendimeve në duart tuaja. Çdo shërbyes krijon rregullat dhe rregulloren e vet, të cilat vihen në zbatim lokalisht dhe jo nga sipër, si me mediat shoqërore të korporatave, duke e bërë më të zhdërvjellëtin për t’iu përgjigjur nevojave të grupeve të ndryshme të personave. Bëhuni pjesë e një shërbyesi me rregullat e të cilit pajtoheni, ose strehojeni ju vetë një të tillë.
+      feature_moderation: Nutshell-i e rikthen marrjen e vendimeve në duart tuaja. Çdo shërbyes krijon rregullat dhe rregulloren e vet, të cilat vihen në zbatim lokalisht dhe jo nga sipër, si me mediat shoqërore të korporatave, duke e bërë më të zhdërvjellëtin për t’iu përgjigjur nevojave të grupeve të ndryshme të personave. Bëhuni pjesë e një shërbyesi me rregullat e të cilit pajtoheni, ose strehojeni ju vetë një të tillë.
       feature_moderation_title: Moderim ashtu si duhet bërë
       follow_action: Ndiqeni
-      follow_step: Ndjekje personash interesantë është ajo çka përbën thelbin e Mastodon-it.
+      follow_step: Ndjekje personash interesantë është ajo çka përbën thelbin e Nutshell-it.
       follow_title: Personalizoni prurjen tuaj të kreut
       follows_subtitle: Ndiqni llogari të mirënjohura
       follows_title: Cilët të ndiqen
@@ -2157,10 +2157,10 @@ sq:
       post_action: Hartoni
       post_step: Përshëndetni botën me tekst, foto, video, ose pyetësorë.
       post_title: Shkruani postimin tuaj të parë
-      share_step: Bëjuni të ditur shokëve si t’ju gjejnë në Mastodon.
-      share_title: Ndani me të tjerët profilin tuaj Mastodon
+      share_step: Bëjuni të ditur shokëve si t’ju gjejnë në Nutshell.
+      share_title: Ndani me të tjerët profilin tuaj Nutshell
       sign_in_action: Hyni
-      subject: Mirë se vini te Mastodon-i
+      subject: Mirë se vini te Nutshell-i
       title: Mirë se vini, %{name}!
   users:
     follow_limit_reached: S’mund të ndiqni më tepër se %{limit} persona
@@ -2173,7 +2173,7 @@ sq:
   verification:
     extra_instructions_html: <strong>Ndihmëz:</strong> Lidhja te sajti juaj mund të jetë e padukshme. Pjesa e rëndësishme është <code>rel="me"</code>, e cila pengon të hiqen gjoja në sajte me lëndë të prodhuar nga përdorues. Mundeni edhe të përdorni një etiketë <code>link</code> te kryet e faqes, në vend se <code>a</code>, por HTML-ja duhet të jetë e përdorshme pa ekzekutim JavaScript-i.
     here_is_how: Ja se si
-    hint_html: "<strong>Verifikimi i identitetit të secilit në Mastodon është për këdo.</strong> Bazuar në standarde web të hapët, falas për so dhe për mot. Krejt ç’ju duhet është një sajt personal me të cilin ju njohin njerëzit. Kur bëni lidhjen me këtë sajt që nga profili juaj, do të kontrollojmë nëse sajti përgjigjet me një lidhje për te profili juaj dhe shfaq një tregues në të."
+    hint_html: "<strong>Verifikimi i identitetit të secilit në Nutshell është për këdo.</strong> Bazuar në standarde web të hapët, falas për so dhe për mot. Krejt ç’ju duhet është një sajt personal me të cilin ju njohin njerëzit. Kur bëni lidhjen me këtë sajt që nga profili juaj, do të kontrollojmë nëse sajti përgjigjet me një lidhje për te profili juaj dhe shfaq një tregues në të."
     instructions_html: Kopjoni dhe ngjitni në HTML-në e sajtit tuaj kodin më poshtë. Mandej shtoni adresën e sajtit tuaj te një nga fushat shtesë në profilin tuaj, që nga skeda “Përpunoni profil” dhe ruani ndryshimet.
     verification: Verifikim
     verified_links: Lidhjet tuaja të verifikuara
@@ -2197,5 +2197,5 @@ sq:
     otp_required: Që të përdoren kyçe sigurie, ju lutemi, së pari aktivizoni mirëfilltësimin dyfaktorësh.
     registered_on: Regjistruar më %{date}
   wrapstodon:
-    description: Shihni si u përdor Mastodon-in këtë vit nga %{name}!
+    description: Shihni si u përdor Nutshell-in këtë vit nga %{name}!
     title: Përmbledhjedon %{year} për %{name}

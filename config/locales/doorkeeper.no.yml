@@ -121,7 +121,7 @@
         admin/accounts: Administrasjon av kontoer
         admin/all: All administrativ funksjonalitet
         admin/reports: Administrasjon av rapporteringer
-        all: Full tilgang til din Mastodon-konto
+        all: Full tilgang til din Nutshell-konto
         blocks: Blokkeringer
         bookmarks: Bokmerker
         conversations: Samtaler

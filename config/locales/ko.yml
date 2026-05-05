@@ -1,7 +1,7 @@
 ---
 ko:
   about:
-    about_mastodon_html: '미래의 소셜 네트워크: 광고 없음, 기업 감시 없음, 윤리적 설계, 탈중앙화! 여러분만의 데이터를 Mastodon으로 보호하고 누리세요!'
+    about_mastodon_html: '미래의 소셜 네트워크: 광고 없음, 기업 감시 없음, 윤리적 설계, 탈중앙화! 여러분만의 데이터를 Nutshell으로 보호하고 누리세요!'
     contact_missing: 미설정
     contact_unavailable: 없음
     hosted_on: "%{domain}에서 호스팅 되는 마스토돈"
@@ -871,7 +871,7 @@ ko:
       destroyed_msg: 사이트 업로드를 성공적으로 삭제했습니다!
     software_updates:
       critical_update: 긴급 — 빠른 업데이트 요망
-      description: 최신 수정 사항과 기능을 활용하기 위해 Mastodon 설치를 최신 상태로 유지하기를 권장합니다. 더욱이, 때로는 보안 문제를 피하기 위해 Mastodon을 적절한 시점에 긴급 업데이트해야 하는 경우도 있습니다. 따라서 Mastodon은 30분마다 업데이트를 확인하며, 이메일 알림 환경설정에 따라 사용자에게 알려드립니다.
+      description: 최신 수정 사항과 기능을 활용하기 위해 Nutshell 설치를 최신 상태로 유지하기를 권장합니다. 더욱이, 때로는 보안 문제를 피하기 위해 Nutshell을 적절한 시점에 긴급 업데이트해야 하는 경우도 있습니다. 따라서 Nutshell은 30분마다 업데이트를 확인하며, 이메일 알림 환경설정에 따라 사용자에게 알려드립니다.
       documentation_link: 더 알아보기
       release_notes: 릴리스 노트
       title: 사용 가능한 업데이트
@@ -1969,7 +1969,7 @@ ko:
     review_link: 이용 약관 검토하기
     title: "%{domain} 도메인의 이용 약관에 변경 있음"
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%Y-%m-%d %H:%M"
@@ -2073,7 +2073,7 @@ ko:
       apps_android_action: Google Play에서 다운로드
       apps_ios_action: App Store에서 다운로드
       apps_step: 공식 앱을 다운로드해보세요.
-      apps_title: Mastodon 앱
+      apps_title: Nutshell 앱
       checklist_subtitle: '이 새로운 소셜미디어를 시작해봅시다:'
       checklist_title: 환영 체크리스트
       edit_profile_action: 개인 맞춤

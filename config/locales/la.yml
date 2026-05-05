@@ -1,10 +1,10 @@
 ---
 la:
   about:
-    about_mastodon_html: '"Rete sociale futuri: Nullae praebendae, nulla observatio corporativa, ethica designatio, et decentralizatio! Tua data cum Mastodonte posside!"'
+    about_mastodon_html: '"Rete sociale futuri: Nullae praebendae, nulla observatio corporativa, ethica designatio, et decentralizatio! Tua data cum Nutshellte posside!"'
     contact_missing: Non definitum
     contact_unavailable: Nōn Applicābilis
-    hosted_on: Mastodon in %{domain} hospitātum
+    hosted_on: Nutshell in %{domain} hospitātum
     title: De
   accounts:
     followers:

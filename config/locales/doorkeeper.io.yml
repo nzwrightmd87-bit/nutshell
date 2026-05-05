@@ -122,7 +122,7 @@ io:
         admin/accounts: Administrar di konti
         admin/all: Omna administrofuncioni
         admin/reports: Administro di raporti
-        all: Kompleta aceso a vua Mastodon-konto
+        all: Kompleta aceso a vua Nutshell-konto
         blocks: Restriktita
         bookmarks: Lektosigni
         conversations: Konversi
@@ -135,7 +135,7 @@ io:
         media: Audvidajaddonaji
         mutes: Silencigati
         notifications: Avizi
-        profile: Vua Mastodon-profilo
+        profile: Vua Nutshell-profilo
         push: Pulsavizi
         reports: Raporti
         search: Trovez

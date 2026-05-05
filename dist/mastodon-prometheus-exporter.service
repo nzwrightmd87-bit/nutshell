@@ -1,5 +1,5 @@
 [Unit]
-Description=Prometheus Metrics Exporter Server for Mastodon
+Description=Prometheus Metrics Exporter Server for Nutshell
 Documentation="https://docs.joinmastodon.org/admin/config/#prometheus https://github.com/discourse/prometheus_exporter/?tab=readme-ov-file#exporter-process-configuration"
 After=network.target
 

@@ -3,10 +3,10 @@ ms:
   simple_form:
     hints:
       account:
-        discoverable: Siaran awam dan profil anda mungkin dipaparkan atau disyorkan dalam pelbagai kawasan Mastodon dan profil anda mungkin dicadangkan kepada pengguna lain.
+        discoverable: Siaran awam dan profil anda mungkin dipaparkan atau disyorkan dalam pelbagai kawasan Nutshell dan profil anda mungkin dicadangkan kepada pengguna lain.
         display_name: Nama penuh anda atau nama anda yang menyeronokkan.
         fields: Halaman utama anda, kata ganti nama, umur, apa sahaja yang anda mahukan.
-        indexable: Kiriman awam anda mungkin muncul dalam hasil carian di Mastodon. Orang yang telah berinteraksi dengan kiriman anda mungkin boleh mencarinya.
+        indexable: Kiriman awam anda mungkin muncul dalam hasil carian di Nutshell. Orang yang telah berinteraksi dengan kiriman anda mungkin boleh mencarinya.
         note: 'Anda boleh @menyebut orang lain atau #hashtags.'
         show_collections: Orang akan dapat menyemak imbas ikutan dan pengikut anda. Orang yang anda ikuti akan melihat bahawa anda tetap mengikuti mereka.
       account_alias:
@@ -51,7 +51,7 @@ ms:
         phrase: Akan dipadankan tanpa mengira sarung dalam teks atau amaran kandungan siaran
         scopes: API mana yang akan dibenarkan untuk diakses oleh aplikasi. Jika anda memilih skop peringkat atasan, anda tidak perlu memilih skop individu.
         setting_aggregate_reblogs: Jangan tunjukkan rangsangan baharu untuk siaran yang telah dirangsang baru-baru ini (hanya menjejaskan rangsangan yang baru diterima)
-        setting_always_send_emails: Biasanya pemberitahuan e-mel tidak akan dihantar apabila anda selalu menggunakan Mastodon
+        setting_always_send_emails: Biasanya pemberitahuan e-mel tidak akan dihantar apabila anda selalu menggunakan Nutshell
         setting_default_sensitive: Media sensitif disembunyikan secara lalai dan boleh didedahkan dengan satu klik
         setting_display_media_default: Sembunyikan media yang ditanda sebagai sensitif
         setting_display_media_hide_all: Sentiasa sembunyikan media
@@ -74,14 +74,14 @@ ms:
       form_admin_settings:
         activity_api_enabled: Kiraan siaran tempatan yang diterbitkan, pengguna aktif dan pendaftaran baharu dalam baldi mingguan
         closed_registrations_message: Dipaparkan semasa pendaftaran ditutup
-        custom_css: Anda boleh menggunakan gaya tersuai pada versi web Mastodon.
-        favicon: WEBP, PNG, GIF, atau JPG. Arca tersuai diutamakan dari arca kegemaran Mastodon lalai.
+        custom_css: Anda boleh menggunakan gaya tersuai pada versi web Nutshell.
+        favicon: WEBP, PNG, GIF, atau JPG. Arca tersuai diutamakan dari arca kegemaran Nutshell lalai.
         mascot: Mengatasi ilustrasi dalam antara muka web lanjutan.
         peers_api_enabled: Senarai nama domain yang pernah ditemui oleh server ini dalam fediverse. Tiada data disertakan di sini tentang sama ada anda bersekutu dengan server tertentu, cuma server anda mengetahuinya. Ini digunakan oleh perkhidmatan yang mengumpul statistik mengenai persekutuan dalam pengertian umum.
         profile_directory: Direktori profil menyenaraikan semua pengguna yang telah mengikut serta untuk ditemui.
         require_invite_text: Apabila pendaftaran memerlukan kelulusan manual, buat "Mengapa anda mahu menyertai?" input teks wajib dan bukannya pilihan
         site_contact_email: Cara orang boleh menghubungi anda untuk pertanyaan undang-undang atau sokongan.
-        site_contact_username: Bagaimana orang boleh menghubungi anda pada Mastodon.
+        site_contact_username: Bagaimana orang boleh menghubungi anda pada Nutshell.
         site_extended_description: Apa-apa maklumat tambahan yang mungkin berguna untuk pelawat dan pengguna anda. Boleh distruktur dengan sintaks Markdown.
         site_short_description: Penerangan ringkas untuk membantu mengenal pasti server anda. Siapa yang menjalankannya, untuk siapa?
         site_terms: Gunakan dasar polisi anda atau biarkan kosong untuk menggunakan lalai. Boleh distruktur dengan sintaks Markdown.
@@ -94,7 +94,7 @@ ms:
       form_challenge:
         current_password: Anda sedang memasuki kawasan selamat
       imports:
-        data: Fail CSV dieksport daripada pelayan Mastodon yang lain
+        data: Fail CSV dieksport daripada pelayan Nutshell yang lain
       invite_request:
         text: Ini akan membantu kami menyemak permohonan anda
       ip_block:
@@ -281,7 +281,7 @@ ms:
         software_updates:
           all: Beritahu mengenai semua kemas kini
           critical: Beritahu mengenai kemas kini kritikal sahaja
-          label: Versi baharu Mastodon kini tersedia
+          label: Versi baharu Nutshell kini tersedia
           none: Tidak pernah memberitahu mengenai kemas kini (tidak disarankan)
           patch: Beritahu mengenai kemas kini pembetulan pepijat
         trending_tag: Trend baru memerlukan semakan

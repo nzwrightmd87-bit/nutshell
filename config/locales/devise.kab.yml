@@ -38,32 +38,32 @@ kab:
         title: Awal uffir yettubeddel
       reconfirmation_instructions:
         explanation: Sentem tansa imayl tamaynut akken ad tbeddleḍ imayl-inek.
-        extra: Ma yella mačči d kečč·kem i yebdan aya, ttxil suref i yimayl-a. Tansa n imayl n Mastodon ur tettbeddil ara skud ur tkecmeḍ ara ɣer useɣwen-nni ufella.
+        extra: Ma yella mačči d kečč·kem i yebdan aya, ttxil suref i yimayl-a. Tansa n imayl n Nutshell ur tettbeddil ara skud ur tkecmeḍ ara ɣer useɣwen-nni ufella.
         subject: 'Maṣṭudun: Sentem tansa imayl n %{instance}'
         title: Senqed tansa-inek imayl
       reset_password_instructions:
         action: Beddel awal uffir
         explanation: Tessutreḍ awal uffir amaynut i umiḍan-ik.
         extra: Ma yella ur tsutreḍ aya, suref i yimayl-a. Awal-ik·im uffir ir ittbeddil ara skud ur tekcimeḍ ara ɣer useɣwen-nni ufella sakin ad tsutreḍ amaynut.
-        subject: 'Mastodon: Iwellihen n uwennez n wawal uffir'
+        subject: 'Nutshell: Iwellihen n uwennez n wawal uffir'
         title: Aɛiwed n wawal uffir
       two_factor_disabled:
         explanation: Tuqqna tella tura s useqdec n tansa n yimayl tasuft d wawal n uεeddi.
-        subject: 'Mastodon: Asesteb s snat n tarrayin yensa'
+        subject: 'Nutshell: Asesteb s snat n tarrayin yensa'
         subtitle: Asesteb s snat tarrayin i umiḍan-ik yensan.
         title: Asesteb s snat n tarrayin insa
       two_factor_enabled:
         explanation: Ajuṭu yettusirwen s usnas TOTP yeqqnen ilaq i wakken ad teqqneḍ.
-        subject: 'Mastodon: Asesteb s snat n tarrayin yermed'
+        subject: 'Nutshell: Asesteb s snat n tarrayin yermed'
         subtitle: Asesteb s snat tarrayin yettwarmed i umiḍan-ik.
         title: Asesteb s snat n tarrayin irmed
       two_factor_recovery_codes_changed:
         explanation: Tangalt n tuɣalin tettwaḥbes sakin nesnulfa-d yiwet d tamaynut.
-        subject: 'Mastodon: Tingalin n tuɣalin n snat n tarayin ttwarnanat i tikkelt-nniḍen'
+        subject: 'Nutshell: Tingalin n tuɣalin n snat n tarayin ttwarnanat i tikkelt-nniḍen'
         subtitle: Tangalt n tuɣalin tettwaḥbes sakin nesnulfa-d yiwet d tamaynut.
         title: Tangalt n tuɣalin 2FA tettwabeddel
       unlock_instructions:
-        subject: 'Mastodon: iwelihhen n userreḥ'
+        subject: 'Nutshell: iwelihhen n userreḥ'
       webauthn_credential:
         added:
           explanation: Tasarut-a n tɣellist tettwarna ɣer umiḍan-ik·im
@@ -71,17 +71,17 @@ kab:
           title: Tasarut tamaynutt n tɣellist tamaynut tettwarna
         deleted:
           explanation: Tasarut-a n tɣellist tettwakkes seg umiḍan-ik·im
-          subject: 'Mastodon: Tasarut n tɣellsit tettwakkes'
+          subject: 'Nutshell: Tasarut n tɣellsit tettwakkes'
           title: Yiwet seg tsura-k·m n tɣellist tettwakkes
       webauthn_disabled:
         explanation: Yensa usesteb s tsura n tɣellist i umiḍan-ik.
         extra: Tzemreḍ ad tkecmeḍ tura s useqdec asuf n ujuṭu yettwasran s usnas TOPTP yeqqnen.
-        subject: 'Mastodon: Asesteb s tsura n tɣellist yensa'
+        subject: 'Nutshell: Asesteb s tsura n tɣellist yensa'
         title: Tisura n tɣellist nsant
       webauthn_enabled:
         explanation: Asesteb n tsarut n tɣellist tettwarmed i umiḍan-ik.
         extra: Tasarut-ik n tɣellist tezmer tura ad tettuseqdec i unekcum.
-        subject: 'Mastodon: Asesteb n tsarut n tɣellist yermed'
+        subject: 'Nutshell: Asesteb n tsarut n tɣellist yermed'
         title: Tisura n tɣellist remdent
     omniauth_callbacks:
       failure: Ur nezmir ara ad ak·akem-nsesṭeb seg %{kind} acku "%{reason}".

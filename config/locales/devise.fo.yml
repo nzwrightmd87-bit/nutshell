@@ -25,64 +25,64 @@ fo:
         explanation: Tú hevur stovnað eina kontu hjá %{host} við hesari teldupostadressuni og tú ert eitt klikk frá at virkja hana. Um tað ikki vart tú, vinarliga sí burtur frá hesum teldupostinum.
         explanation_when_pending: Tú hevur fingið innbjóðing tkl %{host}, við teldupostaddressu. Tá tú hevur vátta tín tína teldupostaddressu, verður umsóknin viðgjørd. Tú kann innrita og broyta ymsar stillingar, men flestu funkur kunnu ikki broytast, fyrr enn kontan er góðkend. Um kontan ikki verður góðkend, verða allar dátur um teg slettaðar. Um umsóknin ikki kom frá tær, skal tú síggja burtur frá teldupostinum.
         extra_html: Kanna eisini <a href="%{terms_path}">reglurnar fyri henda ambætaran</a> og <a href="%{policy_path}">okkara nýtslu treytir</a>.
-        subject: 'Mastodon: Góðkenningartreytir fyri %{instance}'
+        subject: 'Nutshell: Góðkenningartreytir fyri %{instance}'
         title: Vátta teldupostadressuna
       email_changed:
         explanation: 'Telupostaddressan ryri kontina verður broytt til:'
         extra: Um tú ikki hevur skift teldupostin, er sannlíkt at onkur annar hevur fingið atgongd til tína kontu. Vinarliga skift loyniorðið beinanvegin. Set teg í samband við fyrisitaran, um tú ikki sleppur inn á tína kontu.
-        subject: 'Mastodon: Teldupostur broyttur'
+        subject: 'Nutshell: Teldupostur broyttur'
         title: Nýggjur eldupostur
       password_change:
         explanation: Loyniorðið til kontoina hjá tær er broytt.
         extra: Um tú ikki hevur skift loyniorðið, er sannlíkt at onkur annar hevur fingið atgongd til tína kontu. Vinarliga skift loyniorðið beinanvegin. Um tú ikki sleppur inn á tína kontu, hav samband við fyrisitarin.
-        subject: 'Mastodon: Loyniorð broytt'
+        subject: 'Nutshell: Loyniorð broytt'
         title: Loyniorðið er broytt
       reconfirmation_instructions:
         explanation: Vátta nýggja bústaðin fyri at broyta teldupostin.
-        extra: Um henda broytingin ikki kemur frá tær, so skal tú ignorera hetta teldubrævið. Telduposturin til Mastodon kontuna verður ikki broytt, uttan so at tú fylgir leinkinum omanfyri.
-        subject: 'Mastodon: Vátta teldupost fyri %{instance}'
+        extra: Um henda broytingin ikki kemur frá tær, so skal tú ignorera hetta teldubrævið. Telduposturin til Nutshell kontuna verður ikki broytt, uttan so at tú fylgir leinkinum omanfyri.
+        subject: 'Nutshell: Vátta teldupost fyri %{instance}'
         title: Vátta teldupostadressu
       reset_password_instructions:
         action: Broyt loyniorð
         explanation: Tú hevur biðið um eitt nýtt loyniorð til kontoina.
         extra: Um tú ikki hevur umbiðið hetta, so skalt tú ikki gera nakað. Loyniorðið verður bert broytt, um tú brúkar leinkið omanfyri og gert eitt nýtt.
-        subject: 'Mastodon: Vegleiðing at skifta loyniorð'
+        subject: 'Nutshell: Vegleiðing at skifta loyniorð'
         title: Skift loyniorð
       two_factor_disabled:
         explanation: Innritan er nú møgulig við einans at brúka teldupost og loyniorð.
-        subject: 'Mastodon: Váttan í tveimum stigum er gjørd óvirkin'
+        subject: 'Nutshell: Váttan í tveimum stigum er gjørd óvirkin'
         subtitle: Váttan í tveimum stigum (2FA) er gjørd óvirkin fyri tína kontu.
         title: 2FA óvirkið
       two_factor_enabled:
         explanation: Eitt tekin, sum er gjørt við eini paraðari TOTP app, verður kravt fyri at rita inn.
-        subject: 'Mastodon: Váttan í tveimum stigum er virkin'
+        subject: 'Nutshell: Váttan í tveimum stigum er virkin'
         subtitle: Váttan í tveimum stigum (2FA) er gjørd virkin fyri tína kontu.
         title: 2FA virkið
       two_factor_recovery_codes_changed:
         explanation: Undanfarnu endurskapanarkodurnar eru ógildaðar og nýggjar eru framleiddar.
-        subject: 'Mastodon: Endurskapanarkodurnar til váttan í tveimum stigum eru framleiddar umaftur'
+        subject: 'Nutshell: Endurskapanarkodurnar til váttan í tveimum stigum eru framleiddar umaftur'
         subtitle: Undanfarnu kodur til endurgerð eru nú óvirknar og nýggjar eru gjørdar.
         title: 2FA endurskapanarkodur eru broyttar
       unlock_instructions:
-        subject: 'Mastodon: Vegleiðing í at læsa upp'
+        subject: 'Nutshell: Vegleiðing í at læsa upp'
       webauthn_credential:
         added:
           explanation: Hesir trygdarlyklarnir eru lagdir afturat kontu tínari
-          subject: 'Mastodon: Nýggjur trygdarlykil'
+          subject: 'Nutshell: Nýggjur trygdarlykil'
           title: Nýggjur trygdarlykil er gjørdur
         deleted:
           explanation: Hesin trygdarlyklin er strikaður av kontu tíni
-          subject: 'Mastodon: Trygdarlykilin strikaður'
+          subject: 'Nutshell: Trygdarlykilin strikaður'
           title: Ein av trygdarlyklunum hjá tær er strikaður
       webauthn_disabled:
         explanation: Samgildi við trygdarlyklum er gjørt óvirkið fyri tína kontu.
         extra: Innritan er nú møgulig við einans at brúka teknið, sum er gjørt við paraðu TOTP appini.
-        subject: 'Mastodon: Váttan við trygdarlyklum er gjørd óvirkin'
+        subject: 'Nutshell: Váttan við trygdarlyklum er gjørd óvirkin'
         title: Trygdarlyklar óvirknir
       webauthn_enabled:
         explanation: Trygdarlyklasamgildi er gjørt virkið fyri tína kontu.
         extra: Trygdarlyklarnir hjá tær kunnu nú brúkast til innritan.
-        subject: 'Mastodon: Váttan við trygdarlykli gjørd virkin'
+        subject: 'Nutshell: Váttan við trygdarlykli gjørd virkin'
         title: Trygdarlyklar gjørdir virknir
     omniauth_callbacks:
       failure: Tað bar ikki til at vátta teg frá %{kind} av tí at “%{reason}”.

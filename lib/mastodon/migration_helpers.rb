@@ -730,7 +730,7 @@ module Mastodon
 Your database user is not allowed to create, drop, or execute triggers on the
 table #{table}.
 
-If you are using PostgreSQL you can solve this by logging in to the Mastodon
+If you are using PostgreSQL you can solve this by logging in to the Nutshell
 database (#{dbname}) using a super user and running:
 
     ALTER USER #{user} WITH SUPERUSER

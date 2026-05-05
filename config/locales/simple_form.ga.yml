@@ -4,10 +4,10 @@ ga:
     hints:
       account:
         attribution_domains: Ceann in aghaidh an líne. Cosnaíonn sé ó sannadh bréagach.
-        discoverable: Seans go mbeidh do phostálacha poiblí agus do phróifíl le feiceáil nó molta i réimsí éagsúla de Mastodon agus is féidir do phróifíl a mholadh d’úsáideoirí eile.
+        discoverable: Seans go mbeidh do phostálacha poiblí agus do phróifíl le feiceáil nó molta i réimsí éagsúla de Nutshell agus is féidir do phróifíl a mholadh d’úsáideoirí eile.
         display_name: D'ainm iomlán nó d'ainm spraoi.
         fields: Do leathanach baile, forainmneacha, aois, rud ar bith is mian leat.
-        indexable: Seans go mbeidh do phostálacha poiblí le feiceáil sna torthaí cuardaigh ar Mastodon. Seans go mbeidh daoine a d’idirghníomhaigh le do phostálacha in ann iad a chuardach beag beann ar.
+        indexable: Seans go mbeidh do phostálacha poiblí le feiceáil sna torthaí cuardaigh ar Nutshell. Seans go mbeidh daoine a d’idirghníomhaigh le do phostálacha in ann iad a chuardach beag beann ar.
         note: 'Is féidir leat @trá a dhéanamh ar dhaoine eile nó #hashtags.'
         show_collections: Beidh daoine in ann brabhsáil trí do seo a leanas agus do leanúna. Feicfidh na daoine a leanann tú go leanann tú iad beag beann ar.
         unlocked: Beidh daoine in ann tú a leanúint gan cead a iarraidh. Díthiceáil an dteastaíonn uait athbhreithniú a dhéanamh ar iarratais leantacha agus roghnaigh cé acu an nglacfaidh nó an diúltóidh tú do leantóirí nua.
@@ -54,11 +54,11 @@ ga:
         password: Úsáid ar a laghad 8 gcarachtar
         phrase: Déanfar é a mheaitseáil beag beann ar chásáil an téacs nó ar an ábhar atá ag tabhairt foláireamh do phostáil
         scopes: Cé na APIanna a mbeidh cead ag an bhfeidhmchlár rochtain a fháil orthu. Má roghnaíonn tú raon feidhme barrleibhéil, ní gá duit cinn aonair a roghnú.
-        setting_advanced_layout: Taispeáin Mastodon mar leagan amach ilcholún, rud a ligeann duit an t-amlíne, fógraí, agus tríú colún de do rogha féin a fheiceáil. Ní mholtar é seo do scáileáin níos lú.
+        setting_advanced_layout: Taispeáin Nutshell mar leagan amach ilcholún, rud a ligeann duit an t-amlíne, fógraí, agus tríú colún de do rogha féin a fheiceáil. Ní mholtar é seo do scáileáin níos lú.
         setting_aggregate_reblogs: Ná taispeáin treisithe nua do phoist a treisíodh le déanaí (ní dhéanann difear ach do threisithe nuafhaighte)
-        setting_always_send_emails: Go hiondúil ní sheolfar fógraí ríomhphoist agus tú ag úsáid Mastodon go gníomhach
+        setting_always_send_emails: Go hiondúil ní sheolfar fógraí ríomhphoist agus tú ag úsáid Nutshell go gníomhach
         setting_boost_modal: Nuair a bheidh sé cumasaithe, osclóidh borradh dialóg deimhnithe ar dtús inar féidir leat infheictheacht do bhorrtha a athrú.
-        setting_default_quote_policy_private: Ní féidir le daoine eile poist atá scríofa ar Mastodon agus atá dírithe ar leanúna amháin a lua.
+        setting_default_quote_policy_private: Ní féidir le daoine eile poist atá scríofa ar Nutshell agus atá dírithe ar leanúna amháin a lua.
         setting_default_quote_policy_unlisted: Nuair a luann daoine thú, beidh a bpost i bhfolach ó amlínte treochta freisin.
         setting_default_sensitive: Tá meáin íogair i bhfolach de réir réamhshocraithe agus is féidir iad a nochtadh le cliceáil
         setting_display_media_default: Folaigh meáin atá marcáilte mar íogair
@@ -91,8 +91,8 @@ ga:
         bootstrap_timeline_accounts: Beidh na cuntais seo bioráilte ag barr mholtaí leantacha úsáideoirí nua. Cuir liosta cuntas ar fáil atá scartha le camóga.
         closed_registrations_message: Ar taispeáint nuair a dhúntar clárúcháin
         content_cache_retention_period: Scriosfar gach postáil ó fhreastalaithe eile (lena n-áirítear treisithe agus freagraí) tar éis an líon sonraithe laethanta, gan aird ar aon idirghníomhaíocht úsáideora áitiúil leis na postálacha sin. Áirítear leis seo postálacha ina bhfuil úsáideoir áitiúil tar éis é a mharcáil mar leabharmharcanna nó mar cheanáin. Caillfear tagairtí príobháideacha idir úsáideoirí ó chásanna éagsúla freisin agus ní féidir iad a athchóiriú. Tá úsáid an tsocraithe seo beartaithe le haghaidh cásanna sainchuspóra agus sáraítear go leor ionchais úsáideoirí nuair a chuirtear i bhfeidhm é le haghaidh úsáid ghinearálta.
-        custom_css: Is féidir leat stíleanna saincheaptha a chur i bhfeidhm ar an leagan gréasáin de Mastodon.
-        favicon: WEBP, PNG, GIF nó JPG. Sáraíonn sé an favicon Mastodon réamhshocraithe le deilbhín saincheaptha.
+        custom_css: Is féidir leat stíleanna saincheaptha a chur i bhfeidhm ar an leagan gréasáin de Nutshell.
+        favicon: WEBP, PNG, GIF nó JPG. Sáraíonn sé an favicon Nutshell réamhshocraithe le deilbhín saincheaptha.
         landing_page: Roghnaíonn sé seo an leathanach a fheiceann cuairteoirí nua nuair a shroicheann siad do fhreastalaí den chéad uair. Má roghnaíonn tú "Treochtaí", ní mór treochtaí a chumasú sna Socruithe Fionnachtana. Má roghnaíonn tú "Fotha Áitiúil", ní mór "Rochtain ar fhothaí beo ina bhfuil poist áitiúla" a shocrú go "Gach Duine" sna Socruithe Fionnachtana.
         mascot: Sáraíonn sé an léaráid san ardchomhéadan gréasáin.
         media_cache_retention_period: Déantar comhaid meán ó phoist a dhéanann cianúsáideoirí a thaisceadh ar do fhreastalaí. Nuair a bheidh luach dearfach socraithe, scriosfar na meáin tar éis an líon sonraithe laethanta. Má iarrtar na sonraí meán tar éis é a scriosadh, déanfar é a ath-íoslódáil, má tá an t-ábhar foinse fós ar fáil. Mar gheall ar shrianta ar cé chomh minic is atá cártaí réamhamhairc ag vótaíocht do shuíomhanna tríú páirtí, moltar an luach seo a shocrú go 14 lá ar a laghad, nó ní dhéanfar cártaí réamhamhairc naisc a nuashonrú ar éileamh roimh an am sin.
@@ -101,7 +101,7 @@ ga:
         profile_directory: Liostaíonn an t-eolaire próifíle na húsáideoirí go léir a roghnaigh isteach le bheith in-aimsithe.
         require_invite_text: Nuair a bhíonn faomhadh láimhe ag teastáil le haghaidh clárúcháin, déan an "Cén fáth ar mhaith leat a bheith páirteach?" ionchur téacs éigeantach seachas roghnach
         site_contact_email: Conas is féidir le daoine dul i dteagmháil leat le haghaidh fiosrúchán dlíthiúil nó tacaíochta.
-        site_contact_username: Conas is féidir le daoine dul i dteagmháil leat ar Mastodon.
+        site_contact_username: Conas is féidir le daoine dul i dteagmháil leat ar Nutshell.
         site_extended_description: Aon fhaisnéis bhreise a d’fhéadfadh a bheith úsáideach do chuairteoirí agus d’úsáideoirí. Is féidir é a struchtúrú le comhréir Markdown.
         site_short_description: Cur síos gairid chun cabhrú le do fhreastalaí a aithint go uathúil. Cé atá á rith, cé dó a bhfuil sé?
         site_terms: Bain úsáid as do pholasaí príobháideachta féin nó fág bán é chun an réamhshocrú a úsáid. Is féidir é a struchtúrú le comhréir Markdown.
@@ -111,11 +111,11 @@ ga:
         thumbnail: Íomhá thart ar 2:1 ar taispeáint taobh le faisnéis do fhreastalaí.
         trendable_by_default: Léim ar athbhreithniú láimhe ar ábhar treochta. Is féidir míreanna aonair a bhaint as treochtaí fós tar éis an fhíric.
         trends: Léiríonn treochtaí cé na postálacha, hashtags agus scéalta nuachta atá ag tarraingt ar do fhreastalaí.
-        wrapstodon: Iarr ar úsáideoirí áitiúla achoimre spraíúil a ghiniúint ar a n-úsáid Mastodon i rith na bliana. Bíonn an ghné seo ar fáil idir an 10ú agus an 31ú Nollaig gach bliain, agus tairgtear é d’úsáideoirí a rinne post Poiblí nó Ciúin Poiblí amháin ar a laghad agus a d’úsáid hais clib amháin ar a laghad laistigh den bhliain.
+        wrapstodon: Iarr ar úsáideoirí áitiúla achoimre spraíúil a ghiniúint ar a n-úsáid Nutshell i rith na bliana. Bíonn an ghné seo ar fáil idir an 10ú agus an 31ú Nollaig gach bliain, agus tairgtear é d’úsáideoirí a rinne post Poiblí nó Ciúin Poiblí amháin ar a laghad agus a d’úsáid hais clib amháin ar a laghad laistigh den bhliain.
       form_challenge:
         current_password: Tá tú ag dul isteach i limistéar slán
       imports:
-        data: Comhad CSV easpórtáilte ó fhreastalaí Mastodon eile
+        data: Comhad CSV easpórtáilte ó fhreastalaí Nutshell eile
       invite_request:
         text: Cabhróidh sé seo linn d’iarratas a athbhreithniú
       ip_block:
@@ -167,7 +167,7 @@ ga:
         name: Ainm poiblí an róil, má tá an ról socraithe le taispeáint mar shuaitheantas
         permissions_as_keys: Beidh rochtain ag úsáideoirí a bhfuil an ról seo acu ar...
         position: Cinneann ról níos airde réiteach coinbhleachta i gcásanna áirithe. Ní féidir gníomhartha áirithe a dhéanamh ach amháin ar róil a bhfuil tosaíocht níos ísle acu
-        require_2fa: Beidh ar úsáideoirí leis an ról seo fíordheimhniú dhá fhachtóir a shocrú chun Mastodon a úsáid
+        require_2fa: Beidh ar úsáideoirí leis an ról seo fíordheimhniú dhá fhachtóir a shocrú chun Nutshell a úsáid
       username_block:
         allow_with_approval: In ionad cosc iomlán a chur ar chlárú, beidh ort do cheadú a fháil chun clárúcháin a mheaitseáil
         comparison: Tabhair aird ar Fhadhb Scunthorpe agus tú ag blocáil cluichí páirteacha
@@ -351,7 +351,7 @@ ga:
         software_updates:
           all: Fógra a thabhairt ar gach nuashonrú
           critical: Fógra a thabhairt ar nuashonruithe ríthábhachtacha amháin
-          label: Tá leagan nua Mastodon ar fáil
+          label: Tá leagan nua Nutshell ar fáil
           none: Ná cuir nuashonruithe ar an eolas choíche (ní mholtar é)
           patch: Fógra ar nuashonruithe bugfix
         trending_tag: Teastaíonn athbhreithniú ar threocht nua

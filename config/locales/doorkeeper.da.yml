@@ -126,7 +126,7 @@ da:
         admin/accounts: Kontihåndtering
         admin/all: Alle administrative funktioner
         admin/reports: Administration af anmeldelser
-        all: Fuld adgang til din Mastodon-konto
+        all: Fuld adgang til din Nutshell-konto
         blocks: Blokeringer
         bookmarks: Bogmærker
         conversations: Samtaler
@@ -139,7 +139,7 @@ da:
         media: Medievedhæftninger
         mutes: Skjulte
         notifications: Notifikationer
-        profile: Din Mastodon-profil
+        profile: Din Nutshell-profil
         push: Push-notifikationer
         reports: Anmeldelser
         search: Søgning

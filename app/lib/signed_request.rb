@@ -52,10 +52,10 @@ class SignedRequest
     end
 
     def verify_signature_strength!
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the Date header or (created) pseudo-header to be signed' unless signed_headers.include?('date') || signed_headers.include?('(created)')
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the Digest header or (request-target) pseudo-header to be signed' unless signed_headers.include?(HttpSignatureDraft::REQUEST_TARGET) || signed_headers.include?('digest')
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the Host header to be signed when doing a GET request' if @request.get? && !signed_headers.include?('host')
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the Digest header to be signed when doing a POST request' if @request.post? && !signed_headers.include?('digest')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the Date header or (created) pseudo-header to be signed' unless signed_headers.include?('date') || signed_headers.include?('(created)')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the Digest header or (request-target) pseudo-header to be signed' unless signed_headers.include?(HttpSignatureDraft::REQUEST_TARGET) || signed_headers.include?('digest')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the Host header to be signed when doing a GET request' if @request.get? && !signed_headers.include?('host')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the Digest header to be signed when doing a POST request' if @request.post? && !signed_headers.include?('digest')
     end
 
     def verify_body_digest!
@@ -64,7 +64,7 @@ class SignedRequest
 
       digests = @request.headers['Digest'].split(',').map { |digest| digest.split('=', 2) }.map { |key, value| [key.downcase, value] }
       sha256  = digests.assoc('sha-256')
-      raise Mastodon::SignatureVerificationError, "Mastodon only supports SHA-256 in Digest header. Offered algorithms: #{digests.map(&:first).join(', ')}" if sha256.nil?
+      raise Mastodon::SignatureVerificationError, "Nutshell only supports SHA-256 in Digest header. Offered algorithms: #{digests.map(&:first).join(', ')}" if sha256.nil?
 
       return if body_digest == sha256[1]
 
@@ -179,9 +179,9 @@ class SignedRequest
     end
 
     def verify_signature_strength!
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the (created) parameter to be signed' if @signature.parameters['created'].blank?
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the @method and @target-uri derived components to be signed' unless @signature.components.include?('@method') && @signature.components.include?('@target-uri')
-      raise Mastodon::SignatureVerificationError, 'Mastodon requires the Content-Digest header to be signed when doing a POST request' if @request.post? && !signed_headers.include?('content-digest')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the (created) parameter to be signed' if @signature.parameters['created'].blank?
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the @method and @target-uri derived components to be signed' unless @signature.components.include?('@method') && @signature.components.include?('@target-uri')
+      raise Mastodon::SignatureVerificationError, 'Nutshell requires the Content-Digest header to be signed when doing a POST request' if @request.post? && !signed_headers.include?('content-digest')
     end
 
     def verify_body_digest!
@@ -189,7 +189,7 @@ class SignedRequest
       raise Mastodon::SignatureVerificationError, 'Content-Digest header missing' if @message.header('content-digest').nil?
 
       digests = Starry.parse_dictionary(@message.header('content-digest'))
-      raise Mastodon::SignatureVerificationError, "Mastodon only supports SHA-256 in Content-Digest header. Offered algorithms: #{digests.keys.join(', ')}" unless digests.key?('sha-256')
+      raise Mastodon::SignatureVerificationError, "Nutshell only supports SHA-256 in Content-Digest header. Offered algorithms: #{digests.keys.join(', ')}" unless digests.key?('sha-256')
 
       received_digest = Base64.strict_encode64(digests['sha-256'].value)
       return if body_digest == received_digest

@@ -4,10 +4,10 @@ es-AR:
     hints:
       account:
         attribution_domains: Uno por línea. Protege de falsas atribuciones.
-        discoverable: Tu perfil y publicaciones pueden ser destacadas o recomendadas en varias áreas de Mastodon, y tu perfil puede ser sugerido a otros usuarios.
+        discoverable: Tu perfil y publicaciones pueden ser destacadas o recomendadas en varias áreas de Nutshell, y tu perfil puede ser sugerido a otros usuarios.
         display_name: Tu nombre completo o tu pseudónimo.
         fields: Tu sitio web, pronombres, edad, o lo que quieras.
-        indexable: Tus mensajes públicos pueden aparecer en los resultados de la búsqueda en Mastodon. La gente que interactuó con tus mensajes puede ser capaz de buscarlos sin importar el momento.
+        indexable: Tus mensajes públicos pueden aparecer en los resultados de la búsqueda en Nutshell. La gente que interactuó con tus mensajes puede ser capaz de buscarlos sin importar el momento.
         note: 'Podés @mencionar otras cuentas o usar #etiquetas.'
         show_collections: La gente podrá navegar a través de tus seguidos y seguidores. Sin embargo, la gente que sigás, sabrá que lo estás haciendo.
         unlocked: Las personas podrán seguirte sin solicitar aprobación. Desmarcá si querés revisar las solicitudes de seguimiento y elegir si querés aceptar o rechazar nuevos seguidores.
@@ -54,11 +54,11 @@ es-AR:
         password: Usá al menos 8 caracteres
         phrase: Se aplicará sin importar las mayúsculas o las advertencias de contenido de un mensaje
         scopes: Qué APIs de la aplicación tendrán acceso. Si seleccionás el alcance de nivel más alto, no necesitás seleccionar las individuales.
-        setting_advanced_layout: Mostrar Mastodon como una disposición de varias columnas, permitiéndote ver la línea temporal, las notificaciones y una tercera columna de tu elección. No recomendado para pantallas pequeñas.
+        setting_advanced_layout: Mostrar Nutshell como una disposición de varias columnas, permitiéndote ver la línea temporal, las notificaciones y una tercera columna de tu elección. No recomendado para pantallas pequeñas.
         setting_aggregate_reblogs: No mostrar nuevas adhesiones de los mensajes que fueron recientemente adheridos (sólo afecta a las adhesiones recibidas recientemente)
-        setting_always_send_emails: Normalmente las notificaciones por correo electrónico no se enviarán cuando estés usando Mastodon activamente
+        setting_always_send_emails: Normalmente las notificaciones por correo electrónico no se enviarán cuando estés usando Nutshell activamente
         setting_boost_modal: Al estar activado, la adhesión abrirá primero un diálogo de confirmación en el que podés cambiar su visibilidad.
-        setting_default_quote_policy_private: Los mensajes solo para seguidores redactados en Mastodon no pueden ser citados por otras cuentas.
+        setting_default_quote_policy_private: Los mensajes solo para seguidores redactados en Nutshell no pueden ser citados por otras cuentas.
         setting_default_quote_policy_unlisted: Cuando otras cuentas te citen, sus publicaciones también se ocultarán de las líneas temporales de tendencias.
         setting_default_sensitive: El contenido de medios sensibles está oculto predeterminadamente y puede ser mostrado con un clic
         setting_display_media_default: Ocultar medios marcados como sensibles
@@ -91,8 +91,8 @@ es-AR:
         bootstrap_timeline_accounts: Estas cuentas se fijarán en la parte superior de las recomendaciones de seguimiento para los nuevos usuarios. Proporcioná una lista de cuentas separadas por comas.
         closed_registrations_message: Mostrado cuando los registros están cerrados
         content_cache_retention_period: Todos los mensajes de otros servidores (incluyendo adhesiones y respuestas) se eliminarán después del número de días especificado, sin tener en cuenta la interacción del usuario local con esos mensajes. Esto incluye mensajes que un usuario local haya agregado a marcadores o los haya marcado como favoritos. Las menciones privadas entre usuarios de diferentes servidores también se perderán y también serán imposibles de restaurar. El uso de esta configuración está destinado a servidores de propósito especial y rompe muchas expectativas de los usuarios cuando se implementa para uso general.
-        custom_css: Podés aplicar estilos personalizados a la versión web de Mastodon.
-        favicon: WEBP, PNG, GIF o JPG. Reemplaza el favicón predeterminado de Mastodon con uno personalizado.
+        custom_css: Podés aplicar estilos personalizados a la versión web de Nutshell.
+        favicon: WEBP, PNG, GIF o JPG. Reemplaza el favicón predeterminado de Nutshell con uno personalizado.
         landing_page: Selecciona qué página se carga para los nuevos visitantes cuando llegan por primera vez a tu servidor. Si seleccionás «Tendencias», entonces las tendencias tienen que estar habilitadas en la configuración de «Descubrimiento». Si seleccionás «Línea temporal local», entonces «Acceso a líneas temporales en vivo, destacando mensajes locales» tiene que estar establecida a «Todos» en la configuración de «Descubrimiento».
         mascot: Reemplaza la ilustración en la interface web avanzada.
         media_cache_retention_period: Los archivos de medios de mensajes publicados por usuarios remotos se almacenan en la memoria caché en tu servidor. Cuando se establece un valor positivo, los medios se eliminarán después del número especificado de días. Si los datos multimedia se solicitan después de eliminarse, se volverán a descargar, si es que el contenido fuente todavía está disponible. Debido a restricciones en la frecuencia con la que las tarjetas de previsualización de enlace consultan a sitios web de terceros, se recomienda establecer este valor a, al menos, 14 días, o las tarjetas de previsualización de enlaces no se actualizarán a pedido antes de ese momento.
@@ -101,7 +101,7 @@ es-AR:
         profile_directory: El directorio de perfiles lista a todos los usuarios que han optado a que su cuenta pueda ser descubierta.
         require_invite_text: Cuando registros aprobación manual, hacé que la solicitud de invitación "¿Por qué querés unirte?" sea obligatoria, en vez de opcional
         site_contact_email: Cómo la gente puede estar en contacto con vos para consultas legales o de ayuda.
-        site_contact_username: Cómo la gente puede estar en contacto con vos en Mastodon.
+        site_contact_username: Cómo la gente puede estar en contacto con vos en Nutshell.
         site_extended_description: Cualquier información adicional que pueda ser útil para los visitantes y tus usuarios. Se puede estructurar con sintaxis Markdown.
         site_short_description: Una breve descripción para ayudar a identificar individualmente a tu servidor. ¿Quién lo administra, a quién va dirigido?
         site_terms: Usá tu propia política de privacidad o dejala en blanco para usar la predeterminada. Puede estructurarse con sintaxis Markdown.
@@ -111,11 +111,11 @@ es-AR:
         thumbnail: Una imagen de aproximadamente 2:1 se muestra junto a la información de tu servidor.
         trendable_by_default: Omití la revisión manual del contenido en tendencia. Los elementos individuales aún podrán eliminarse de las tendencias.
         trends: Las tendencias muestran qué mensajes, etiquetas y noticias están ganando tracción en tu servidor.
-        wrapstodon: Ofrecer a los usuarios locales un resumen lúdico de su uso en Mastodon durante el año. Esta función está disponible entre los días 10 y 31 de diciembre de cada año, y se ofrece a los usuarios que enviaron a Mastodon, al menos, un mensaje público o un mensaje público pero silencioso, y que utilizaron, al menos, una etiqueta durante el año.
+        wrapstodon: Ofrecer a los usuarios locales un resumen lúdico de su uso en Nutshell durante el año. Esta función está disponible entre los días 10 y 31 de diciembre de cada año, y se ofrece a los usuarios que enviaron a Nutshell, al menos, un mensaje público o un mensaje público pero silencioso, y que utilizaron, al menos, una etiqueta durante el año.
       form_challenge:
         current_password: Estás ingresando en un área segura
       imports:
-        data: Archivo CSV exportado desde otro servidor de Mastodon
+        data: Archivo CSV exportado desde otro servidor de Nutshell
       invite_request:
         text: Esto nos ayudará a revisar tu solicitud
       ip_block:
@@ -164,7 +164,7 @@ es-AR:
         name: Nombre público del rol, si el rol se establece para que se muestre como una insignia
         permissions_as_keys: Los usuarios con este rol tendrán acceso a…
         position: Un rol más alto decide la resolución de conflictos en ciertas situaciones. Ciertas acciones sólo pueden llevarse a cabo en roles con prioridad inferior
-        require_2fa: Los usuarios con este rol serán requeridos para configurar la autenticación de dos factores para usar Mastodon
+        require_2fa: Los usuarios con este rol serán requeridos para configurar la autenticación de dos factores para usar Nutshell
       username_block:
         allow_with_approval: En lugar de impedir el registro total, los registros coincidentes requerirán tu aprobación
         comparison: Por favor, tené en cuenta el Problema de Scunthorpe al bloquear coincidencias parciales
@@ -317,7 +317,7 @@ es-AR:
         thumbnail: Miniatura del servidor
         trendable_by_default: Permitir tendencias sin revisión previa
         trends: Habilitar tendencias
-        wrapstodon: Habilitar MastodonAnual
+        wrapstodon: Habilitar NutshellAnual
       interactions:
         must_be_follower: Bloquear notificaciones de cuentas que no te siguen
         must_be_following: Bloquear notificaciones de cuentas que no seguís
@@ -348,7 +348,7 @@ es-AR:
         software_updates:
           all: Notificar en todas las actualizaciones
           critical: Notificar solamente sobre actualizaciones críticas
-          label: Una nueva versión de Mastodon está disponible
+          label: Una nueva versión de Nutshell está disponible
           none: Nunca notificar sobre actualizaciones (no recomendado)
           patch: Notificar sobre actualizaciones de corrección de errores
         trending_tag: Una nueva tendencia requiere revisión

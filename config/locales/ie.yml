@@ -1,10 +1,10 @@
 ---
 ie:
   about:
-    about_mastodon_html: 'Li social rete del futur: sin reclams, sin supervision de corporationes, con un dessine etical e decentralisation! Repossede vor data med Mastodon!'
+    about_mastodon_html: 'Li social rete del futur: sin reclams, sin supervision de corporationes, con un dessine etical e decentralisation! Repossede vor data med Nutshell!'
     contact_missing: Ne assignat
     contact_unavailable: Ne disponibil
-    hosted_on: Mastodon logiat che %{domain}
+    hosted_on: Nutshell logiat che %{domain}
     title: Pri
   accounts:
     followers:
@@ -649,7 +649,7 @@ ie:
         moderation: Moderation
         special: Special
       delete: Deleter
-      description_html: Con <strong>roles por usatores</strong>, tu posse customisar li functiones e locs de Mastodon in queles tui usatores posse accesser.
+      description_html: Con <strong>roles por usatores</strong>, tu posse customisar li functiones e locs de Nutshell in queles tui usatores posse accesser.
       edit: Modificar rol '%{name}'
       everyone: Permissiones predefinit
       everyone_full_description_html: Ti es li <strong>fundamental rol</strong> quel afecta <strong>omni usatores</strong>, mem tis sin un assignat rol. Omni altri roles hereda permissiones de it.
@@ -710,17 +710,17 @@ ie:
         rules_hint: Hay un dedicat area por regules queles vor usatores es expectat obedir.
         title: Pri
       appearance:
-        preamble: Customisar li interfacie web de Mastodon.
+        preamble: Customisar li interfacie web de Nutshell.
         title: Aspecte
       branding:
-        preamble: Li reclamage de tui servitor diferentia it de altri servitores in li retage. Ti-ci information posse esser monstrat tra mult ambientes, tales quam li interfacie web de Mastodon, nativ aplicationes, previsiones de ligamentes sur altri web-situs, altri missage-aplicationes, etc. Pro to it es recomendat a mantener li information clar, curt, e concis.
+        preamble: Li reclamage de tui servitor diferentia it de altri servitores in li retage. Ti-ci information posse esser monstrat tra mult ambientes, tales quam li interfacie web de Nutshell, nativ aplicationes, previsiones de ligamentes sur altri web-situs, altri missage-aplicationes, etc. Pro to it es recomendat a mantener li information clar, curt, e concis.
         title: Marca
       captcha_enabled:
         desc_html: To ci usa extern scrites de hCaptcha, quel posse esser ínquietant pro rasones de securitá e privatie. In plu, <strong>it posse far li processu de registration mult plu desfacil (particularimen por tis con deshabilitás)</strong>. Pro ti rasones, ples considerar alternativ mesuras, tales quam registration per aprobation o invitation.
         title: Exige que nov usatores solue un CAPTCHA por confirmar lor conto
       content_retention:
         danger_zone: Zone de dangere
-        preamble: Decider qualmen usator-generat contenete es inmagasinat in Mastodon.
+        preamble: Decider qualmen usator-generat contenete es inmagasinat in Nutshell.
         title: Retention de contenete
       default_noindex:
         desc_html: Afecta omni usatores qui ne ha changeat ti parametre personalmen
@@ -813,7 +813,7 @@ ie:
         message_html: Índex-mappamentes de Elasticsearch es oldijat. Ples executer <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Vider li documentation
-        message_html: Tui cluster Elasticsearch have plu quam un node, ma Mastodon ne es configurat por usar les.
+        message_html: Tui cluster Elasticsearch have plu quam un node, ma Nutshell ne es configurat por usar les.
       elasticsearch_preset_single_node:
         action: Vider li documentation
         message_html: Tui cluster Elasticsearch have solmen un node, ples configurar <code>ES_PRESET</code> quam <code>single_node_cluster</code>.
@@ -831,10 +831,10 @@ ie:
         message_html: Null processe Sidekiq executet por li caude %{value}(s). Ples reviser tui configuration Sidekiq
       software_version_critical_check:
         action: Vider actualisationes disponibil
-        message_html: Un critical actualisation por Mastodon es disposibil, ples actualisar tam rapidmen possibil.
+        message_html: Un critical actualisation por Nutshell es disposibil, ples actualisar tam rapidmen possibil.
       software_version_patch_check:
         action: Vider actualisationes disponibil
-        message_html: Un actualisation por Mastodon quel fixa problemas es disponibil.
+        message_html: Un actualisation por Nutshell quel fixa problemas es disponibil.
       upload_check_privacy_error:
         action: Vider ci por plu information
         message_html: "<strong>Vor web-servitor es misconfigurat. Li privatie de vor usatores es in risca.</strong>"
@@ -916,7 +916,7 @@ ie:
     webhooks:
       add_new: Adjunter punctu terminal
       delete: Deleter
-      description_html: Un <strong>webhook</strong> possibilisa que Mastodon pussa <strong>actual notificationes</strong> pri selectet evenimentes a tui propri aplication, por que it mey <strong>automaticmen activar reactiones</strong>.
+      description_html: Un <strong>webhook</strong> possibilisa que Nutshell pussa <strong>actual notificationes</strong> pri selectet evenimentes a tui propri aplication, por que it mey <strong>automaticmen activar reactiones</strong>.
       disable: Desactivisar
       disabled: Desactivisat
       edit: Redacter punctu terminal
@@ -950,8 +950,8 @@ ie:
       next_steps: Tu posse aprobar li apelle por desfar li decision moderatori, o ignorar it.
       subject: "%{username} apella un moderatori decision che %{instance}"
     new_critical_software_updates:
-      body: Nov critic versiones de Mastodon ha esset lansat, vu fórsan vole actualisar tam tost quam es possibil!
-      subject: Critic actualisationes por Mastodon es disponibil por %{instance}!
+      body: Nov critic versiones de Nutshell ha esset lansat, vu fórsan vole actualisar tam tost quam es possibil!
+      subject: Critic actualisationes por Nutshell es disponibil por %{instance}!
     new_pending_account:
       body: Li detallies del nov conto es in-infra. Vu posse aprobar o rejecter ti aplication.
       subject: Nov conto por tractation che %{instance} (%{username})
@@ -960,8 +960,8 @@ ie:
       body_remote: Alqui de %{domain} ha raportet %{target}
       subject: Nov raporte por %{instance} (#%{id})
     new_software_updates:
-      body: Nov versiones de Mastodon ha esset lansat, vu fórsan vole actualisar!
-      subject: Nov versiones Mastodon es disponibil por %{instance}!
+      body: Nov versiones de Nutshell ha esset lansat, vu fórsan vole actualisar!
+      subject: Nov versiones Nutshell es disponibil por %{instance}!
     new_trends:
       body: 'Li sequent elementes besona un revision ante que on posse monstrar les publicmen:'
       new_trending_links:
@@ -982,7 +982,7 @@ ie:
     animations_and_accessibility: Animationes e accessibilitá
     discovery: Decovriment
     localization:
-      body: Mastodon es traductet de voluntarios.
+      body: Nutshell es traductet de voluntarios.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Omnes posse contribuer.
     sensitive_content: Sensitiv contenete
@@ -1017,9 +1017,9 @@ ie:
     delete_account: Deleter li conto
     delete_account_html: Si tu vole deleter tui conto, tu posse <a href="%{path}">proceder ci</a>. On va petir confirmation de te.
     description:
-      prefix_invited_by_user: "@%{name} invita te adherer ti-ci servitor de Mastodon!"
-      prefix_sign_up: Adherer Mastodon hodie!
-      suffix: Med un conto, tu va posser sequer persones, postar actualisationes e exchangear missages con usatores de quelcunc Mastodon-servitor e plu!
+      prefix_invited_by_user: "@%{name} invita te adherer ti-ci servitor de Nutshell!"
+      prefix_sign_up: Adherer Nutshell hodie!
+      suffix: Med un conto, tu va posser sequer persones, postar actualisationes e exchangear missages con usatores de quelcunc Nutshell-servitor e plu!
     didnt_get_confirmation: Ne recivet un confirmation-ligament?
     dont_have_your_security_key: Ne have tui clave de securitá?
     forgot_password: Obliviat tu tui passa-parol?
@@ -1158,7 +1158,7 @@ ie:
       content: Pardona nos, alquo errat in nor servitor.
       title: Ti-ci págine ne es corect
     '503': On ne posset servir li págine pro un falliment temporari del servitor.
-    noscript_html: Por usar li web-aplication de Mastodon, ples activisar JavaScript. Alternativmen, prova un del <a href="%{apps_path}">nativ aplicationes</a> por Mastodon por tui platform.
+    noscript_html: Por usar li web-aplication de Nutshell, ples activisar JavaScript. Alternativmen, prova un del <a href="%{apps_path}">nativ aplicationes</a> por Nutshell por tui platform.
   existing_username_validator:
     not_found: ne posset trovar un local usator con ti usator-nómine
     not_found_multiple: ne posset trovar %{usernames}
@@ -1453,13 +1453,13 @@ ie:
     posting_defaults: Predefinitiones por postar
     public_timelines: Public témpor-lineas
   privacy:
-    hint_html: "<strong>Customisa qualmen tu vole que tui profil e tui postas posse esser trovat.</strong> Mastodon have un varietá de manieres por auxiliar te atinger un auditorie plu grand quande activisat. Prende un moment por reviser ti parametres por far cert que ili concorda tui casu de usation."
+    hint_html: "<strong>Customisa qualmen tu vole que tui profil e tui postas posse esser trovat.</strong> Nutshell have un varietá de manieres por auxiliar te atinger un auditorie plu grand quande activisat. Prende un moment por reviser ti parametres por far cert que ili concorda tui casu de usation."
     privacy: Privatie
     privacy_hint_html: Decide quant mult tu vole revelar por li beneficie de altres. Gente decovri interessant profiles e frisc aplicationes per vider li seques de altres e vider de quel aplicationes ili posta, ma tu fórsan prefere celar ti.
     reach: Atingement
     reach_hint_html: Decide ca tu vole esser decovrit e sequet de nov persones. Vole tu que tui postas mey aparir sur li págine "Explorar"? Vole tu que altri gente posse vider te in lor seque-recomandationes? Vole tu acceptar omni nov sequitores automaticmen, o manualmen tractar chascun?
     search: Sercha
-    search_hint_html: Decide qualmen tu vole esser trovat. Vole tu que gente trova te per ti pri quel tu ha postat publicmen? Vole tu que gente éxter Mastodon trova tui profil quande ili sercha li web? Ples memorar que complet exclusion de omni serchatores ne posse esser garantit por public information.
+    search_hint_html: Decide qualmen tu vole esser trovat. Vole tu que gente trova te per ti pri quel tu ha postat publicmen? Vole tu que gente éxter Nutshell trova tui profil quande ili sercha li web? Ples memorar que complet exclusion de omni serchatores ne posse esser garantit por public information.
     title: Privatie e atingement
   privacy_policy:
     title: Politica pri Privatie
@@ -1533,7 +1533,7 @@ ie:
     current_session: Actual session
     date: Date
     description: "%{browser} in %{platform}"
-    explanation: Tis-ci es li navigatores queles actualmen ha initiat sessiones a tui Mastodon-conto.
+    explanation: Tis-ci es li navigatores queles actualmen ha initiat sessiones a tui Nutshell-conto.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1559,7 +1559,7 @@ ie:
     aliases: Aliases del conto
     appearance: Aspecte
     authorized_apps: Autorisat aplicationes
-    back: Retornar a Mastodon
+    back: Retornar a Nutshell
     delete: Deletion de conto
     development: Developation
     edit_profile: Modificar profil
@@ -1694,7 +1694,7 @@ ie:
       subtitle: Tui apelle ha esset rejectet.
       title: Apelle rejectet
     backup_ready:
-      explanation: Tu petit un complet archive de tui conto de Mastodon.
+      explanation: Tu petit un complet archive de tui conto de Nutshell.
       extra: It es ja pret a descargar!
       subject: Tui archive es pret por descargar
       title: Descargar archive
@@ -1746,7 +1746,7 @@ ie:
       apps_android_action: Obtener it sur Google Play
       apps_ios_action: Descargar sur li App Store
       apps_step: Descargar nor aplis oficial.
-      apps_title: Aplis de Mastodon
+      apps_title: Aplis de Nutshell
       checklist_subtitle: 'Lass nos auxiliar te comensar sur ti-ci frontiera social:'
       checklist_title: Lista de benevenit
       edit_profile_action: Personalisar
@@ -1754,16 +1754,16 @@ ie:
       edit_profile_title: Personalisar tui profil
       explanation: Vi quelc suggestiones por que tu mey comensar
       feature_action: Aprender plu
-      feature_audience: Mastodon te da un possibilitá unic de administrar tui audientie sin intervenitores. Mastodon, desplegat che tui propri servitor, permisse que tu sequeye e esseye sequet de quelcunc altri Mastodon-servitores in li internet, e ne es controlat de quicunc quam tu.
+      feature_audience: Nutshell te da un possibilitá unic de administrar tui audientie sin intervenitores. Nutshell, desplegat che tui propri servitor, permisse que tu sequeye e esseye sequet de quelcunc altri Nutshell-servitores in li internet, e ne es controlat de quicunc quam tu.
       feature_audience_title: Agrandar tui audientie in confidentie
-      feature_control: Tu save max bon ti quel tu vole vider sur tui initial témpor-linea. Null algoritmes o reclames por prodigar tui témpor. Seque quicunc che quelcunc Mastodon-servitor de un singul conto e recive lor postas in órdine cronologic, e fa que tui parte del internet esseye un poc plu quam tu.
+      feature_control: Tu save max bon ti quel tu vole vider sur tui initial témpor-linea. Null algoritmes o reclames por prodigar tui témpor. Seque quicunc che quelcunc Nutshell-servitor de un singul conto e recive lor postas in órdine cronologic, e fa que tui parte del internet esseye un poc plu quam tu.
       feature_control_title: Resta in control de tui propri témpor-linea
-      feature_creativity: Mastodon permisse postas con audio, video e images, descriptiones de accessibilitá, avises de contenete, animat profil-images, personalisat emojis, control del acurtation de images de previse, a plu, por auxiliar te expresser te. Si tu publica tui art, tui musica, o tui podcast, Mastodon va apoyar te.
+      feature_creativity: Nutshell permisse postas con audio, video e images, descriptiones de accessibilitá, avises de contenete, animat profil-images, personalisat emojis, control del acurtation de images de previse, a plu, por auxiliar te expresser te. Si tu publica tui art, tui musica, o tui podcast, Nutshell va apoyar te.
       feature_creativity_title: Ínparalelat creativitá
-      feature_moderation: Mastodon retromette li potentie de far decisiones in tui manus. Chascun servitor crea su propri regules, queles es infortiat localmen e ne universalmen quam che social medies corporat, dunc it es li max flexibil pri responder al besones de diferent gruppes de gente. Adhere a un servitor con regules con queles tu concorda, o mantene tui propri.
+      feature_moderation: Nutshell retromette li potentie de far decisiones in tui manus. Chascun servitor crea su propri regules, queles es infortiat localmen e ne universalmen quam che social medies corporat, dunc it es li max flexibil pri responder al besones de diferent gruppes de gente. Adhere a un servitor con regules con queles tu concorda, o mantene tui propri.
       feature_moderation_title: Moderandi moderation
       follow_action: Sequer
-      follow_step: Sequer interessant gente es to quo importa in Mastodon.
+      follow_step: Sequer interessant gente es to quo importa in Nutshell.
       follow_title: Personalisar tui hemal témpor-linea
       follows_subtitle: Sequer famosi contos
       follows_title: Persones a sequer
@@ -1777,10 +1777,10 @@ ie:
       post_action: Composir
       post_step: Saluta li munde con textu, images, videos o balotationes.
       post_title: Crear tui unesim posta
-      share_step: Informar tui amics qualmen trovar te che Mastodon.
-      share_title: Partir tui profil Mastodon
+      share_step: Informar tui amics qualmen trovar te che Nutshell.
+      share_title: Partir tui profil Nutshell
       sign_in_action: Intrar
-      subject: Benevenit a Mastodon
+      subject: Benevenit a Nutshell
       title: Benevenit, %{name}!
   users:
     follow_limit_reached: Tu ne posse sequer plu quam %{limit} persones
@@ -1792,7 +1792,7 @@ ie:
   verification:
     extra_instructions_html: '<strong>Nota</strong>: Li ligament in tui websitu posse esser ínvisibil. Li important parte es <code>rel="me"</code> quel prevente fals self-identification in websitus con contenete generat de usatores. Tu posse mem usar un <code>link</code> element in li cap-section del págine vice <code>a</code>, ma li HTML code deve esser accessibil sin executer JavaScript.'
     here_is_how: Vide qualmen
-    hint_html: "<strong>Verificar tui identitá che Mastodon es por omnes.</strong> Basat sur apert web-criteries, líber nu e sempre. Omno quel tu besona es un websitu personal per quel gente reconosse te. Quande tu fa un ligament a tui websitu de tui profil, on va controlar que li websitu have un ligament reciproc a tui profil e monstrar un visual indicator sur it."
+    hint_html: "<strong>Verificar tui identitá che Nutshell es por omnes.</strong> Basat sur apert web-criteries, líber nu e sempre. Omno quel tu besona es un websitu personal per quel gente reconosse te. Quande tu fa un ligament a tui websitu de tui profil, on va controlar que li websitu have un ligament reciproc a tui profil e monstrar un visual indicator sur it."
     instructions_html: Copiar e collar li code ci infra in li HTML de tui web-situ. Poy adjunter li adresse de tui web-situ ad-in un del aditional campes sur tui profil ex li section "Modificar profil" e salvar li changes.
     verification: Verification
     verified_links: Tui verificat ligamentes

@@ -174,7 +174,7 @@ module Mastodon::CLI
 
       This is useful if your database indexes are corrupted because of issues such as https://wiki.postgresql.org/wiki/Locale_data_changes
 
-      Mastodon has to be stopped to run this task, which will take a long time and may be destructive.
+      Nutshell has to be stopped to run this task, which will take a long time and may be destructive.
     LONG_DESC
     def fix_duplicates
       verify_system_ready!
@@ -234,7 +234,7 @@ module Mastodon::CLI
       if migrator_version < MIN_SUPPORTED_VERSION
         fail_with_message <<~ERROR
           Your version of the database schema is too old and is not supported by this script.
-          Please update to at least Mastodon 3.0.0 before running this script.
+          Please update to at least Nutshell 3.0.0 before running this script.
         ERROR
       elsif migrator_version > MAX_SUPPORTED_VERSION
         say 'Your version of the database schema is more recent than this script, this may cause unexpected errors.', :yellow
@@ -243,12 +243,12 @@ module Mastodon::CLI
     end
 
     def verify_sidekiq_not_active!
-      fail_with_message 'It seems Sidekiq is running. All Mastodon processes need to be stopped when using this script.' if Sidekiq::ProcessSet.new.any?
+      fail_with_message 'It seems Sidekiq is running. All Nutshell processes need to be stopped when using this script.' if Sidekiq::ProcessSet.new.any?
     end
 
     def verify_backup_warning!
       say 'This task will take a long time to run and is potentially destructive.', :yellow
-      say 'Please make sure to stop Mastodon and have a backup.', :yellow
+      say 'Please make sure to stop Nutshell and have a backup.', :yellow
       fail_with_message 'Maintenance process stopped.' unless yes?('Continue? (Yes/No)')
     end
 

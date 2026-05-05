@@ -23,7 +23,7 @@ tt:
         title: 2FA кабызылды
       webauthn_credential:
         deleted:
-          subject: 'Mastodon: Иминлек ачкычы бетерелгән'
+          subject: 'Nutshell: Иминлек ачкычы бетерелгән'
     passwords:
       updated: Серсүзегез уңышлы үзгәртелде. Сез хәзер кердегез.
       updated_not_active: Серсүзегез уңышлы үзгәртелде.

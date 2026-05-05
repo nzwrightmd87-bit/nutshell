@@ -122,7 +122,7 @@ ro:
         admin/accounts: Administrarea conturilor
         admin/all: Toate funcțiile administrative
         admin/reports: Administrarea rapoartelor
-        all: Acces deplin la contul tău Mastodon
+        all: Acces deplin la contul tău Nutshell
         blocks: Blocuri
         bookmarks: Marcaje
         conversations: Conversații
@@ -135,7 +135,7 @@ ro:
         media: Atașamente media
         mutes: Pus pe silențios
         notifications: Notificări
-        profile: Profilul tău Mastodon
+        profile: Profilul tău Nutshell
         push: Notificări push
         reports: Rapoarte
         search: Căutare

@@ -1,7 +1,7 @@
 {
   "about.blocks": "நடுநிலையான சேவையகங்கள்",
   "about.contact": "தொடர்பு:",
-  "about.disclaimer": "மாஸ்டோடன் இலவச, திறந்த மூல மென்பொருள் மற்றும் மாஸ்டோடன் gGmbH இன் வர்த்தக முத்திரை.",
+  "about.disclaimer": "Nutshell is open-source software built for your community.",
   "about.domain_blocks.no_reason_available": "காரணம் கிடைக்கவில்லை",
   "about.domain_blocks.preamble": "மாஸ்டோடன் பொதுவாக நீங்கள் ஃபெடிவர்ஸில் உள்ள வேறு எந்தச் சர்வரிலிருந்தும் உள்ளடக்கத்தைப் பார்க்கவும், பயனர்களுடன் தொடர்பு கொள்ளவும் அனுமதிக்கிறது. இந்தக் குறிப்பிட்ட சர்வரில் செய்யப்பட்ட விதிவிலக்குகள் இவை.",
   "account.add_or_remove_from_list": "பட்டியல்களில் சேர்/நீக்கு",
@@ -105,7 +105,7 @@
   "compose.published.open": "திற",
   "compose.saved.body": "பதிவு சேமிக்கப்பட்டது.",
   "compose_form.direct_message_warning_learn_more": "மேலும் அறிய",
-  "compose_form.encryption_warning": "Mastodonல் உள்ள பதிவுகள் முறையாக என்க்ரிப்ட்(encrypt) செய்யபடவில்லை. அதனால் முக்கிய தகவல்களை இங்கே பகிர வேண்டாம்.",
+  "compose_form.encryption_warning": "Nutshellல் உள்ள பதிவுகள் முறையாக என்க்ரிப்ட்(encrypt) செய்யபடவில்லை. அதனால் முக்கிய தகவல்களை இங்கே பகிர வேண்டாம்.",
   "compose_form.hashtag_warning": "This post won't be listed under any hashtag as it is unlisted. Only public posts can be searched by hashtag.",
   "compose_form.lock_disclaimer": "உங்கள் கணக்கு {locked} செய்யப்படவில்லை. உங்கள் பதிவுகளை யார் வேண்டுமானாலும் பின்தொடர்ந்து காணலாம்.",
   "compose_form.lock_disclaimer.lock": "பூட்டப்பட்டது",

@@ -16,9 +16,9 @@
 - [FEP-044f: Consent-respecting quote posts](https://codeberg.org/fediverse/fep/src/branch/main/fep/044f/fep-044f.md)
 - [FEP-3b86: Activity Intents](https://codeberg.org/fediverse/fep/src/branch/main/fep/3b86/fep-3b86.md): offer handlers for `Object` and `Create` (with support for the `content` parameter only), has support for the `Follow`, `Announce`, `Like` and `Object` intents
 
-## ActivityPub in Mastodon
+## ActivityPub in Nutshell
 
-Mastodon largely follows the ActivityPub server-to-server specification but it makes uses of some non-standard extensions, some of which are required for interacting with Mastodon at all.
+Nutshell largely follows the ActivityPub server-to-server specification inherited from upstream, but it makes use of some non-standard extensions, some of which are required for interacting with compatible servers at all.
 
 - [Supported ActivityPub vocabulary](https://docs.joinmastodon.org/spec/activitypub/)
 
@@ -26,18 +26,18 @@ Mastodon largely follows the ActivityPub server-to-server specification but it m
 
 #### WebFinger
 
-In Mastodon, users are identified by a `username` and `domain` pair (e.g., `Gargron@mastodon.social`).
-This is used both for discovery and for unambiguously mentioning users across the fediverse. Furthermore, this is part of Mastodon's database design from its very beginnings.
+In Nutshell, users are identified by a `username` and `domain` pair.
+This is used both for discovery and for unambiguously mentioning users across the fediverse. Furthermore, this is part of the inherited database design from its very beginnings.
 
-As a result, Mastodon requires that each ActivityPub actor uniquely maps back to an `acct:` URI that can be resolved via WebFinger.
+As a result, Nutshell requires that each ActivityPub actor uniquely maps back to an `acct:` URI that can be resolved via WebFinger.
 
 - [WebFinger information and examples](https://docs.joinmastodon.org/spec/webfinger/)
 
 #### HTTP Signatures
 
-In order to authenticate activities, Mastodon relies on HTTP Signatures, signing every `POST` and `GET` request to other ActivityPub implementations on behalf of the user authoring an activity (for `POST` requests) or an actor representing the Mastodon server itself (for most `GET` requests).
+In order to authenticate activities, Nutshell relies on HTTP Signatures, signing every `POST` and `GET` request to other ActivityPub implementations on behalf of the user authoring an activity (for `POST` requests) or an actor representing the Nutshell server itself (for most `GET` requests).
 
-Mastodon requires all `POST` requests to be signed, and MAY require `GET` requests to be signed, depending on the configuration of the Mastodon server.
+Nutshell requires all `POST` requests to be signed, and MAY require `GET` requests to be signed, depending on server configuration.
 
 - [HTTP Signatures information and examples](https://docs.joinmastodon.org/spec/security/#http)
 
@@ -48,12 +48,12 @@ Mastodon requires all `POST` requests to be signed, and MAY require `GET` reques
 
 ### Additional documentation
 
-- [Mastodon documentation](https://docs.joinmastodon.org/)
+- [Upstream documentation](https://docs.joinmastodon.org/)
 
 ## Size limits
 
-Mastodon imposes a few hard limits on federated content.
-These limits are intended to be very generous and way above what the Mastodon user experience is optimized for, so as to accommodate future changes and unusual or unforeseen usage patterns, while still providing some limits for performance reasons.
+Nutshell imposes a few hard limits on federated content.
+These limits are intended to be very generous and way above what the Nutshell user experience is optimized for, so as to accommodate future changes and unusual or unforeseen usage patterns, while still providing some limits for performance reasons.
 The following table summarizes those limits.
 
 | Limited property                                              | Size limit | Consequence of exceeding the limit |

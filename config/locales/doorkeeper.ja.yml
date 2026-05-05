@@ -122,7 +122,7 @@ ja:
         admin/accounts: アカウント管理
         admin/all: すべての管理機能
         admin/reports: 通報の管理
-        all: Mastodonアカウントへのフルアクセス
+        all: Nutshellアカウントへのフルアクセス
         blocks: ブロック
         bookmarks: ブックマーク
         conversations: 会話
@@ -135,7 +135,7 @@ ja:
         media: メディアの添付
         mutes: ミュート
         notifications: 通知
-        profile: Mastodonのプロフィール
+        profile: Nutshellのプロフィール
         push: プッシュ通知
         reports: 通報
         search: 検索

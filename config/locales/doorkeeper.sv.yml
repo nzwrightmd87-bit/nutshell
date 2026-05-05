@@ -126,7 +126,7 @@ sv:
         admin/accounts: Administrering av konton
         admin/all: Alla administrativa funktioner
         admin/reports: Administrering av rapporter
-        all: Full åtkomst till ditt Mastodon-konto
+        all: Full åtkomst till ditt Nutshell-konto
         blocks: Blockeringar
         bookmarks: Bokmärken
         conversations: Konversationer
@@ -139,7 +139,7 @@ sv:
         media: Mediebilagor
         mutes: Tystade användare
         notifications: Aviseringar
-        profile: Din Mastodon-profil
+        profile: Din Nutshell-profil
         push: Push-aviseringar
         reports: Rapporter
         search: Sök

@@ -3,10 +3,10 @@ ro:
   simple_form:
     hints:
       account:
-        discoverable: Este posibil ca postările și profilul tău să fie recomandate în diferite zone ale Mastodon, iar profilul tău ar poate fi sugerat altor utilizatori.
+        discoverable: Este posibil ca postările și profilul tău să fie recomandate în diferite zone ale Nutshell, iar profilul tău ar poate fi sugerat altor utilizatori.
         display_name: Numele dvs. complet sau numele dvs. amuzant.
         fields: Pagina ta principală, pronumele tale, vârsta, sau orice îți dorești.
-        indexable: Postările tale publice pot apărea în rezultatele căutărilor pe Mastodon. Persoanele care au interacționat cu postările tale vor putea să le caute oricând.
+        indexable: Postările tale publice pot apărea în rezultatele căutărilor pe Nutshell. Persoanele care au interacționat cu postările tale vor putea să le caute oricând.
         note: 'Poți @menționa alte persoane sau #hashtag-uri.'
         show_collections: Oamenii vor putea să răsfoiască urmăriți și urmăritorii dvs. Oamenii pe care îi urmăriți vor vedea că îi urmăriți indiferent.
         unlocked: Alte persoane vă vor putea urmări fără a solicita aprobare. Debifați dacă doriți să revizuiți cererile de urmărire și să alegeți dacă doriți să acceptați sau să respingeți noii urmăritori.
@@ -54,7 +54,7 @@ ro:
         phrase: Vor fi potrivite indiferent de textul din casetă sau advertismentul unei postări
         scopes: La care API-uri aplicația are nevoie de acces. Dacă selectezi un scop principal nu mai e nevoie să selectezi fiecare sub-scop al acestuia.
         setting_aggregate_reblogs: Nu afișa impulsurile noi pentru postările care au fost deja recent impulsionate (afectează doar noile impulsuri primite)
-        setting_always_send_emails: În mod normal, notificările prin e-mail nu vor fi trimise când utilizați în mod activ Mastodon
+        setting_always_send_emails: În mod normal, notificările prin e-mail nu vor fi trimise când utilizați în mod activ Nutshell
         setting_default_sensitive: Fișierele media sensibile sunt ascunse implicit și pot fi dezvăluite cu un clic
         setting_display_media_default: Ascunde conținutul media marcat ca sensibil (NSFW)
         setting_display_media_hide_all: Întotdeauna ascunde tot conținutul media
@@ -80,15 +80,15 @@ ro:
         backups_retention_period: Utilizatorii au posibilitatea de a genera arhive ale postărilor lor pentru a le descărca mai târziu. Când este setat la o valoare pozitivă, aceste arhive vor fi șterse automat din spațiul dvs. de stocare după numărul de zile specificat.
         closed_registrations_message: Afișat când înscrierile sunt închise
         content_cache_retention_period: Toate postările de pe alte servere (inclusiv amplificarea și răspunsurile) vor fi șterse după numărul specificat de zile, fără a ține cont de interacțiunea utilizatorului local cu acele postări. Aceasta include postările în care un utilizator local le-a marcat ca marcaje sau favorite. Mențiunile private între utilizatorii din diferite instanțe se vor pierde și vor fi imposibil de restaurat. Utilizarea acestei setări este destinată cazurilor cu scop special și încalcă multe așteptări ale utilizatorilor atunci când este implementată pentru uz general.
-        custom_css: Puteți aplica stiluri personalizate pe versiunea web a Mastodon.
-        favicon: WEBP, PNG, GIF sau JPG. Suprascrie favicon-ul implicit Mastodon cu o pictogramă personalizată.
+        custom_css: Puteți aplica stiluri personalizate pe versiunea web a Nutshell.
+        favicon: WEBP, PNG, GIF sau JPG. Suprascrie favicon-ul implicit Nutshell cu o pictogramă personalizată.
         mascot: Suprascrie ilustrația din interfața web avansată.
         media_cache_retention_period: Fișierele media din postările făcute de utilizatorii la distanță sunt stocate în cache pe serverul dvs. Când este setată la o valoare pozitivă, fișierele media vor fi ștearse după numărul specificat de zile. Dacă datele media sunt solicitate după ce sunt șterse, acestea vor fi re-descărcate, dacă conținutul sursă este încă disponibil. Din cauza restricțiilor cu privire la frecvența cu care cardurile de previzualizare a linkurilor interogează site-urile terțelor părți, se recomandă să setați această valoare la cel puțin 14 zile, sau cardurile de previzualizare a linkurilor nu vor fi actualizate la cerere înainte de această oră.
         peers_api_enabled: O listă de nume de domenii pe care acest server le-a întâlnit în fediverse. Nu sunt incluse aici date despre dacă vă federați cu un anumit server, doar că serverul dvs. știe despre asta. Acesta este folosit de serviciile care colectează statistici despre federație în sens general.
         profile_directory: Directorul de profil listează toți utilizatorii care au optat pentru a fi descoperibili.
         require_invite_text: Când înscrierile necesită aprobare manuală, faceți introducerea textului „De ce doriți să vă alăturați?” obligatorie și nu opțională
         site_contact_email: Cum vă pot contacta oamenii pentru întrebări juridice sau de asistență.
-        site_contact_username: Cum vă pot contacta oamenii pe Mastodon.
+        site_contact_username: Cum vă pot contacta oamenii pe Nutshell.
         site_extended_description: Orice informație suplimentară care poate fi utilă vizitatorilor și utilizatorilor dvs. Poate fi structurată cu sintaxa Markdown.
         site_short_description: O descriere scurtă pentru a ajuta la identificarea unică a serverului dvs. Cine-l conduce, pentru cine este?
         site_terms: Utilizați propria politică de confidențialitate sau lăsați necompletat pentru a o utiliza pe cea implicit. Poate fi structurată cu sintaxa Markdown.

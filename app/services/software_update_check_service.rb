@@ -19,7 +19,7 @@ class SoftwareUpdateCheckService < BaseService
   end
 
   def fetch_update_notices
-    Request.new(:get, "#{api_url}?version=#{version}").add_headers('Accept' => 'application/json', 'User-Agent' => 'Mastodon update checker').perform do |res|
+    Request.new(:get, "#{api_url}?version=#{version}").add_headers('Accept' => 'application/json', 'User-Agent' => 'Nutshell update checker').perform do |res|
       return Oj.load(res.body_with_limit, mode: :strict) if res.code == 200
     end
   rescue *Mastodon::HTTP_CONNECTION_ERRORS, Oj::ParseError

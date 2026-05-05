@@ -9,7 +9,7 @@ import {
 import { AnnualReport } from '.';
 
 const SAMPLE_HASHTAG = {
-  name: 'Mastodon',
+  name: 'Nutshell',
   count: 14,
 };
 

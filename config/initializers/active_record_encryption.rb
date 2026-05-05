@@ -15,7 +15,7 @@
   if value.blank?
     abort <<~MESSAGE # rubocop:disable Rails/Exit
 
-      Mastodon now requires that these variables are set:
+      Nutshell now requires that these variables are set:
 
         - ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY
         - ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT
@@ -30,7 +30,7 @@
 
   abort <<~MESSAGE # rubocop:disable Rails/Exit
 
-    It looks like you are trying to run Mastodon in production with a #{key} value from the test environment.
+    It looks like you are trying to run Nutshell in production with a #{key} value from the test environment.
 
     Please generate fresh secrets using `bin/rails db:encryption:init` and use them instead.
   MESSAGE

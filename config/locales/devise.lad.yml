@@ -25,64 +25,64 @@ lad:
         explanation: Tyenes kriyado un kuento en %{host} kon este adreso de posta elektronika. Estas a un solo klik de aktivarlo. Si no fuites tu, por favor ignora esta posta elektronika.
         explanation_when_pending: Tienes solisitado una envitasyon a %{host} kon este adreso de posta elektronika. Una vez ke konfirmes tu adreso de posta elektronika, revizaremos tu solisitud. Puedes konektarte kon tu kuento para trokar tus datos o supremir tu kuento, pero no puedes akseder a la majorita de las funciones hasta ke tu kuento sea achetado. Si tu solisitud es refuzada, tus datos seran supremidos, por lo ke no ay menester de dinguna aksyon adicional por tu parte. Si no fuites tu, por favor ignora esta posta elektronika.
         extra_html: Por favor, reviza <a href="%{terms_path}">las reglas del sirvidor</a> i <a href="%{policy_path}">muestros terminos de sirvisyo</a>.
-        subject: 'Mastodon: Instruksyones de konfirmasyon para %{instance}'''
+        subject: 'Nutshell: Instruksyones de konfirmasyon para %{instance}'''
         title: Verifika tu adreso de posta elektronika
       email_changed:
         explanation: 'La posta elektronika para tu kuento esta siendo trokado a:'
         extra: Si no tienes trokado tu posta elektronika, es probavle ke algun aya konsigido akseso a tu kuento. Por favor troka tu kod inmediatamente o kontakta al administrador de la instansya si no puedes konektarte kon tu kuento.
-        subject: 'Mastodon: Posta elektronika trokada'
+        subject: 'Nutshell: Posta elektronika trokada'
         title: Muevo adreso de posta elektronika
       password_change:
         explanation: El kod de tu kuento tyene sido trokado.
         extra: Si no tienes trokado tu kod. es probavle ke algun a konsigido akseso a tu kuento. Por favor troka tu kod inmediatamente o kontakta al administrador de la instansya si no puedes konektarte kon tu kuento.
-        subject: 'Mastodon: Kod trokado'
+        subject: 'Nutshell: Kod trokado'
         title: Kod trokado
       reconfirmation_instructions:
         explanation: Konfirma el muevo adreso para trokar tu posta elektronika.
-        extra: Si no inisyates este trokamiento, por favor ignora esta posta. Este adreso de posta elektronika para el kuento de Mastodon no trokara asta ke aksedas al atadijo arriva.
-        subject: 'Mastodon: Konfirma posta elektronika para %{instance}'
+        extra: Si no inisyates este trokamiento, por favor ignora esta posta. Este adreso de posta elektronika para el kuento de Nutshell no trokara asta ke aksedas al atadijo arriva.
+        subject: 'Nutshell: Konfirma posta elektronika para %{instance}'
         title: Verifika tu adreso de posta elektronika
       reset_password_instructions:
         action: Troka el kod
         explanation: Solisitates un muevo kod para tu kuento.
         extra: Si no solisitates esto, por favor ignora esta posta. Tu kod no trokara asta ke tu aksedas al atadijo arriva i kriyes un muevo.
-        subject: 'Mastodon: Instruksyones para reinisyar kod'
+        subject: 'Nutshell: Instruksyones para reinisyar kod'
         title: Reinisya kod
       two_factor_disabled:
         explanation: Agora puedes konektarte kon tu kuento uzando solo tu adreso de posta i kod.
-        subject: 'Mastodon: La autentifikasyon de dos pasos esta inkapasitada'
+        subject: 'Nutshell: La autentifikasyon de dos pasos esta inkapasitada'
         subtitle: La autentifikasyon en dos pasos para tu kuento tiene sido inkapasitada.
         title: Autentifikasyon de dos pasos inkapasitada
       two_factor_enabled:
         explanation: Se rekierira un token djenerado por la aplikasyon TOTP konektada para entrar.
-        subject: 'Mastodon: La autentifikasyon de dos pasos esta kapasitada'
+        subject: 'Nutshell: La autentifikasyon de dos pasos esta kapasitada'
         subtitle: La autentifikasyon de dos pasos para tu kuento tiene sido kapasitada.
         title: Autentifikasyon de dos pasos aktivada
       two_factor_recovery_codes_changed:
         explanation: Los kodiches de rekuperasyon previos tienen sido invalidados i se djeneraron kodiches muevos.
-        subject: 'Mastodon: Los kodiches de rekuperasyon de dos pasos fueron rejenerados'
+        subject: 'Nutshell: Los kodiches de rekuperasyon de dos pasos fueron rejenerados'
         subtitle: Los kodiches de rekuperasyon previos tienen sido invalidados i se djeneraron kodiches muevos.
         title: Kodiches de rekuperasyon 2FA trokados
       unlock_instructions:
-        subject: 'Mastodon: Instruksyones para dezblokar'
+        subject: 'Nutshell: Instruksyones para dezblokar'
       webauthn_credential:
         added:
           explanation: La sigiente yave de sigurita tiene sido adjustada a tu kuento
-          subject: 'Mastodon: Mueva yave de sigurita'
+          subject: 'Nutshell: Mueva yave de sigurita'
           title: Se tiene adjustado una mueva yave de sigurita
         deleted:
           explanation: La sigiente yave de sigurita a sido suprimida de tu kuento
-          subject: 'Mastodon: Yave de sigurita supremida'
+          subject: 'Nutshell: Yave de sigurita supremida'
           title: Una de tus yaves de sigurita tiene sido suprimida
       webauthn_disabled:
         explanation: La autentifikasyon kon yaves de sigurita tiene sido inkapasitada para tu kuento.
         extra: Agora el inisyo de sesyon solo es posivle utilizando el token djeenerado por la aplikasyon TOTP konektada.
-        subject: 'Mastodon: autentifikasyon kon yaves de sigurita inkapasitada'
+        subject: 'Nutshell: autentifikasyon kon yaves de sigurita inkapasitada'
         title: Yaves de sigurita inkapasitadas
       webauthn_enabled:
         explanation: La autentifikasyon kon yave de sigurita tiene sido kapasitada para tu kuento.
         extra: Agora tu yave de sigurita puede ser utilizada para konektarte kon tu kuento.
-        subject: 'Mastodon: Autentifikasyon de yave de sigurita aktivada'
+        subject: 'Nutshell: Autentifikasyon de yave de sigurita aktivada'
         title: Yaves de sigurita kapasitadas
     omniauth_callbacks:
       failure: No se te pudo autentifikar dizde %{kind} porke “%{reason}”.

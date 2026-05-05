@@ -4,10 +4,10 @@ fi:
     hints:
       account:
         attribution_domains: Yksi riviä kohti. Suojaa vääriltä tekijän nimeämisiltä.
-        discoverable: Julkisia julkaisujasi ja profiiliasi voidaan esitellä tai suositella Mastodonin eri alueilla, ja profiiliasi voidaan ehdottaa toisille käyttäjille.
+        discoverable: Julkisia julkaisujasi ja profiiliasi voidaan esitellä tai suositella Nutshellin eri alueilla, ja profiiliasi voidaan ehdottaa toisille käyttäjille.
         display_name: Koko nimesi tai lempinimesi.
         fields: Verkkosivustosi, pronominisi, ikäsi ja mitä ikinä haluatkaan ilmoittaa.
-        indexable: Julkiset julkaisusi voivat näkyä Mastodonin hakutuloksissa. Käyttäjät, jotka ovat olleet vuorovaikutuksessa julkaisujesi kanssa, voivat etsiä niitä asetuksesta riippumatta.
+        indexable: Julkiset julkaisusi voivat näkyä Nutshellin hakutuloksissa. Käyttäjät, jotka ovat olleet vuorovaikutuksessa julkaisujesi kanssa, voivat etsiä niitä asetuksesta riippumatta.
         note: 'Voit @mainita muita käyttäjiä tai #aihetunnisteita.'
         show_collections: Käyttäjät voivat selata seurattaviasi ja seuraajiasi. Käyttäjät, joita seuraat, näkevät joka tapauksessa, että seuraat heitä.
         unlocked: Käyttäjät voivat seurata sinua pyytämättä hyväksyntääsi. Poista valinta, jos haluat tarkistaa sekä hyväksyä tai hylätä vastaanottamasi seurantapyynnöt.
@@ -54,11 +54,11 @@ fi:
         password: Käytä vähintään 8:aa merkkiä
         phrase: Täsmää riippumatta tekstin aakkoslajista tai julkaisun sisältövaroituksesta
         scopes: Mihin ohjelmointirajapintoihin sovelluksella on pääsy. Jos valitset ylätason käyttöoikeuden, sinun ei tarvitse valita yksittäisiä.
-        setting_advanced_layout: Näytä Mastodon usean sarakkeen asetteluna, jossa voit tarkastella aikajanaa, ilmoituksia ja valitsemaasi kolmatta saraketta. Ei suositella pienemmille näytöille.
+        setting_advanced_layout: Näytä Nutshell usean sarakkeen asetteluna, jossa voit tarkastella aikajanaa, ilmoituksia ja valitsemaasi kolmatta saraketta. Ei suositella pienemmille näytöille.
         setting_aggregate_reblogs: Älä näytä uusia tehostuksia julkaisuille, joita on äskettäin tehostettu (koskee vain juuri vastaanotettuja tehostuksia)
-        setting_always_send_emails: Yleensä sähköposti-ilmoituksia ei lähetetä, kun käytät Mastodonia aktiivisesti
+        setting_always_send_emails: Yleensä sähköposti-ilmoituksia ei lähetetä, kun käytät Nutshellia aktiivisesti
         setting_boost_modal: Kun käytössä, tehostaminen avaa ensin vahvistusikkunan, josta voit vaihtaa tehostuksesi näkyvyyttä.
-        setting_default_quote_policy_private: Muut eivät voi lainata vain seuraajille tarkoitettuja, Mastodonissa kirjoitettuja julkaisuja.
+        setting_default_quote_policy_private: Muut eivät voi lainata vain seuraajille tarkoitettuja, Nutshellissa kirjoitettuja julkaisuja.
         setting_default_quote_policy_unlisted: Kun ihmiset lainaavat sinua, heidän julkaisunsa piilotetaan suosittujen julkaisujen aikajanoilta.
         setting_default_sensitive: Arkaluonteinen media piilotetaan oletusarvoisesti, ja se voidaan näyttää yhdellä napsautuksella
         setting_display_media_default: Piilota arkaluonteiseksi merkitty mediasisältö
@@ -91,8 +91,8 @@ fi:
         bootstrap_timeline_accounts: Nämä tilit kiinnittyvät uusien käyttäjien seurantasuositusten alkuun. Syötä pilkuin eroteltu luettelo tilejä.
         closed_registrations_message: Näkyy, kun rekisteröityminen on suljettu
         content_cache_retention_period: Kaikki muiden palvelinten julkaisut (mukaan lukien tehostukset ja vastaukset) poistuvat, kun määritetty määrä päiviä on kulunut, lukuun ottamatta paikallisen käyttäjän vuorovaikutusta näiden julkaisujen kanssa. Tämä sisältää julkaisut, jotka paikallinen käyttäjä on merkinnyt kirjanmerkiksi tai suosikiksi. Myös yksityismaininnat eri palvelinten käyttäjien välillä menetetään, eikä niitä voi palauttaa. Tämä asetus on tarkoitettu käytettäväksi erityistapauksissa ja rikkoo monia käyttäjien odotuksia, kun sitä sovelletaan yleiskäyttöön.
-        custom_css: Voit käyttää mukautettuja tyylejä Mastodonin selainversiossa.
-        favicon: WEBP, PNG, GIF tai JPG. Korvaa oletusarvoisen Mastodonin sivustokuvakkeen haluamallasi kuvakkeella.
+        custom_css: Voit käyttää mukautettuja tyylejä Nutshellin selainversiossa.
+        favicon: WEBP, PNG, GIF tai JPG. Korvaa oletusarvoisen Nutshellin sivustokuvakkeen haluamallasi kuvakkeella.
         landing_page: Valitsee, minkä sivun uudet kävijät näkevät saapuessaan palvelimellesi. Jos valitset ”Trendit”, trendien tulee olla käytössä Löydettävyys-asetuksissa. Jos valitset ”Paikallinen syöte”, kohta ”Pääsy paikallisia julkaisuja esitteleviin livesyötteisiin” tulee asettaa arvoon ”Kaikki” Löydettävyys-asetuksissa.
         mascot: Korvaa kuvituksen edistyneessä selainkäyttöliittymässä.
         media_cache_retention_period: Etäkäyttäjien tekemien julkaisujen mediatiedostot ovat välimuistissa palvelimellasi. Kun kentän arvo on positiivinen, media poistuu, kun määritetty määrä päiviä on kulunut. Jos mediaa pyydetään sen poistamisen jälkeen, se ladataan uudelleen, jos lähdesisältö on vielä saatavilla. Koska linkkien esikatselun kyselyitä kolmansien osapuolien sivustoille on rajoitettu, on suositeltavaa asettaa tämä arvo vähintään 14 päivään, tai linkkien kortteja ei päivitetä pyynnöstä ennen tätä ajankohtaa.
@@ -101,7 +101,7 @@ fi:
         profile_directory: Profiilihakemisto luetteloi kaikki käyttäjät, jotka ovat valinneet olla löydettävissä.
         require_invite_text: Kun rekisteröityminen vaatii manuaalisen hyväksynnän, tee ”Miksi haluat liittyä?” -⁠tekstikentästä pakollinen vapaaehtoisen sijaan
         site_contact_email: Miten sinut voi tavoittaa oikeus- tai tukikysymyksissä.
-        site_contact_username: Miten sinut voi tavoittaa Mastodonissa.
+        site_contact_username: Miten sinut voi tavoittaa Nutshellissa.
         site_extended_description: Kaikki lisätiedot, jotka voivat olla hyödyllisiä kävijöille ja käyttäjille. Voidaan jäsentää Markdown-syntaksilla.
         site_short_description: Lyhyt kuvaus, joka auttaa yksilöimään palvelimesi. Kuka sitä johtaa, ja keille se on tarkoitettu?
         site_terms: Käytä omaa tietosuojakäytäntöä tai jätä tyhjäksi, jos haluat käyttää oletusta. Voidaan jäsentää Markdown-syntaksilla.
@@ -111,11 +111,11 @@ fi:
         thumbnail: Noin 2:1 kuva näkyy palvelimen tietojen ohessa.
         trendable_by_default: Ohita suositun sisällön manuaalinen tarkastus. Yksittäisiä kohteita voidaan edelleen poistaa jälkikäteen.
         trends: Trendit osoittavat, mitkä julkaisut, aihetunnisteet ja uutiset keräävät huomiota palvelimellasi.
-        wrapstodon: Tarjoa paikallisille käyttäjille mahdollisuus luoda leikkisä koonti heidän Mastodonin käytöstään vuoden aikana. Tämä ominaisuus on saatavilla vuosittain 10.–⁠31. joulukuuta, ja sitä tarjotaan käyttäjille, jotka ovat laatineet ainakin yhden julkisen tai vaihvihkaa julkisen julkaisun ja käyttäneet ainakin yhtä aihetunnistetta vuoden aikana.
+        wrapstodon: Tarjoa paikallisille käyttäjille mahdollisuus luoda leikkisä koonti heidän Nutshellin käytöstään vuoden aikana. Tämä ominaisuus on saatavilla vuosittain 10.–⁠31. joulukuuta, ja sitä tarjotaan käyttäjille, jotka ovat laatineet ainakin yhden julkisen tai vaihvihkaa julkisen julkaisun ja käyttäneet ainakin yhtä aihetunnistetta vuoden aikana.
       form_challenge:
         current_password: Olet menossa suojatulle alueelle
       imports:
-        data: Toiselta Mastodon-palvelimelta tuotu CSV-tiedosto
+        data: Toiselta Nutshell-palvelimelta tuotu CSV-tiedosto
       invite_request:
         text: Tämä auttaa meitä arvioimaan hakemustasi
       ip_block:
@@ -164,7 +164,7 @@ fi:
         name: Roolin julkinen nimi, jos rooli on asetettu näytettäväksi merkkinä
         permissions_as_keys: Käyttäjillä, joilla on tämä rooli, on käyttöoikeus…
         position: Korkeampi rooli ratkaisee konfliktit tietyissä tilanteissa. Tiettyjä toimia voidaan suorittaa vain rooleilla, joiden prioriteetti on pienempi
-        require_2fa: Tämän roolin käyttäjiä vaaditaan ottamaan kaksivaiheinen todennus käyttöön, jotta he voivat käyttää Mastodonia
+        require_2fa: Tämän roolin käyttäjiä vaaditaan ottamaan kaksivaiheinen todennus käyttöön, jotta he voivat käyttää Nutshellia
       username_block:
         allow_with_approval: Sen sijaan, että rekisteröityminen estetään kokonaan, sääntöä vastaavat rekisteröitymiset edellyttävät hyväksyntääsi
         comparison: Ota Scunthorpe-ongelma huomioon, kun estät osittaisia osumia
@@ -348,7 +348,7 @@ fi:
         software_updates:
           all: Ilmoita kaikista päivityksistä
           critical: Ilmoita vain kriittisistä päivityksistä
-          label: Uusi Mastodon-versio on saatavilla
+          label: Uusi Nutshell-versio on saatavilla
           none: Älä koskaan ilmoita päivityksistä (ei suositeltu)
           patch: Ilmoita virheenkorjauspäivityksistä
         trending_tag: Uusi trendi vaatii tarkastuksen

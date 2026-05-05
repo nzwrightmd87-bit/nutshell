@@ -24,16 +24,16 @@ namespace :db do
         pastel = Pastel.new
         puts pastel.red(<<~MSG)
           WARNING: It looks like encryption secrets have already been set.
-          WARNING: Ensure you are not changing secrets for a Mastodon installation that already uses them, as this will cause data loss and other issues that are difficult to recover from.
+          WARNING: Ensure you are not changing secrets for a Nutshell installation that already uses them, as this will cause data loss and other issues that are difficult to recover from.
           WARNING: Only proceed if you are absolutely sure of what you are doing!
         MSG
 
         puts <<~MSG
-          If you are sure of what you are doing, add the following secret environment variables to your Mastodon environment (e.g. .env.production), ensure they are shared across all your nodes and do not change them after they are set:#{' '}
+          If you are sure of what you are doing, add the following secret environment variables to your Nutshell environment (e.g. .env.production), ensure they are shared across all your nodes and do not change them after they are set:#{' '}
         MSG
       else
         puts <<~MSG
-          Add the following secret environment variables to your Mastodon environment (e.g. .env.production), ensure they are shared across all your nodes and do not change them after they are set:#{' '}
+          Add the following secret environment variables to your Nutshell environment (e.g. .env.production), ensure they are shared across all your nodes and do not change them after they are set:#{' '}
         MSG
       end
 
@@ -63,12 +63,12 @@ namespace :db do
 
   task pre_migration_check: :environment do
     pg_version = ActiveRecord::Base.connection.database_version
-    abort 'This version of Mastodon requires PostgreSQL 14.0 or newer. Please update PostgreSQL before updating Mastodon.' if pg_version < 140_000
+    abort 'This version of Nutshell requires PostgreSQL 14.0 or newer. Please update PostgreSQL before updating Nutshell.' if pg_version < 140_000
 
     schema_version = ActiveRecord::Migrator.current_version
     abort <<~MESSAGE if ENV['SKIP_POST_DEPLOYMENT_MIGRATIONS'] && schema_version < 2023_09_07_150100
-      Zero-downtime migrations from Mastodon versions earlier than 4.2.0 are not supported.
-      Please update to Mastodon 4.2.x first or upgrade by stopping all services and running migrations without `SKIP_POST_DEPLOYMENT_MIGRATIONS`.
+      Zero-downtime migrations from Nutshell versions earlier than 4.2.0 are not supported.
+      Please update to Nutshell 4.2.x first or upgrade by stopping all services and running migrations without `SKIP_POST_DEPLOYMENT_MIGRATIONS`.
     MESSAGE
   end
 

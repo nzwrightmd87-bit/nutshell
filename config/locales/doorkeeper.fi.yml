@@ -126,7 +126,7 @@ fi:
         admin/accounts: Tilien hallinnointi
         admin/all: Kaikki hallinnolliset toiminnot
         admin/reports: Raporttien hallinnointi
-        all: Täysi pääsy Mastodon-tiliisi
+        all: Täysi pääsy Nutshell-tiliisi
         blocks: Estot
         bookmarks: Kirjanmerkit
         conversations: Keskustelut
@@ -139,7 +139,7 @@ fi:
         media: Medialiitteet
         mutes: Mykistykset
         notifications: Ilmoitukset
-        profile: Mastodon-profiilisi
+        profile: Nutshell-profiilisi
         push: Puskuilmoitukset
         reports: Raportit
         search: Haku

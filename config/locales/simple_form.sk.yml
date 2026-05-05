@@ -4,10 +4,10 @@ sk:
     hints:
       account:
         attribution_domains: Jeden na riadok. Chráni vás pred falošným pripisovaním autorstva.
-        discoverable: Vaše verejné príspevky a profil môžu byť zobrazované a odporúčané v rôznych častiach Mastodonu a váš profil môže byť navrhovaný ostatným.
+        discoverable: Vaše verejné príspevky a profil môžu byť zobrazované a odporúčané v rôznych častiach Nutshellu a váš profil môže byť navrhovaný ostatným.
         display_name: Vaše meno a priezvisko alebo prezývka.
         fields: Váš web, zámená, vek, čokoľvek, čo chcete o sebe uviesť.
-        indexable: Vaše verejné príspevky sa môžu zobrazovať vo výsledkoch vyhľadávania na Mastodone. Ľudia, ktorí s nimi interagovali, ich môžu nájsť vždy.
+        indexable: Vaše verejné príspevky sa môžu zobrazovať vo výsledkoch vyhľadávania na Nutshelle. Ľudia, ktorí s nimi interagovali, ich môžu nájsť vždy.
         note: 'Môžete @označiť iných ľudí alebo #hashtagy.'
         show_collections: Ľudia si budú môcť prezrieť, ktoré účty sledujete a ktoré účty sledujú vás. Ľudia, ktorých sledujete, o tom budú vždy vedieť.
         unlocked: Ľudia vás budú môcť sledovať bez vášho schválenia. Zrušenie vám dá možnosť kontrolovať žiadosti o sledovanie a rozhodovať sa o prijímaní alebo zamietaní nových sledujúcich.
@@ -40,7 +40,7 @@ sk:
         phrase: Zhoda sa nájde nezávisle od toho, či je text napísaný, veľkými, alebo malými písmenami, či už v tele, alebo v hlavičke
         scopes: Ktoré API budú povolené aplikácii pre prístup. Ak vyberieš vrcholný stupeň, nemusíš už potom vyberať po jednom.
         setting_aggregate_reblogs: Nezobrazovať nové zdieľania pre nedávno zdieľané príspevky (týka sa iba nových zdieľaní)
-        setting_always_send_emails: Pri bežnom používaní Mastodonu nebudete dostávať e-mailové upozornenia
+        setting_always_send_emails: Pri bežnom používaní Nutshellu nebudete dostávať e-mailové upozornenia
         setting_default_sensitive: Citlivé médiá sú predvolene ukryté a môžu byť zobrazené kliknutím
         setting_display_media_default: Skrývať médiá označené ako citlivé
         setting_display_media_hide_all: Vždy skrývať médiá
@@ -55,12 +55,12 @@ sk:
         name: 'Nedávno ste použili napríklad tieto hashtagy:'
       form_admin_settings:
         site_contact_email: Spôsob, ako vás môžu ľudia kontaktovať pre právne účely alebo podporu.
-        site_contact_username: Ako vás môžu ľudia na Mastodone nájsť.
+        site_contact_username: Ako vás môžu ľudia na Nutshelle nájsť.
         thumbnail: 'Obrázok v pomere približne 2 : 1, ktorý sa zobrazí pri informáciách o serveri.'
       form_challenge:
         current_password: Vstupuješ do zabezpečenej časti
       imports:
-        data: CSV súbor vyexportovaný z iného Mastodon serveru
+        data: CSV súbor vyexportovaný z iného Nutshell serveru
       invite_request:
         text: Toto pomôže s vyhodnocovaním tvojej žiadosti
       ip_block:
@@ -194,7 +194,7 @@ sk:
         software_updates:
           all: Upozorňovať na všetky novinky
           critical: Upozorňovať iba na kritické novinky
-          label: Je dostupná nová verzia Mastodonu
+          label: Je dostupná nová verzia Nutshellu
           none: Nikdy neupozorňovať na novinky (neodporúčané)
           patch: Upozorňovať na novinky s riešením chýb
         trending_tag: Je potrebné skontrolovať nový trend

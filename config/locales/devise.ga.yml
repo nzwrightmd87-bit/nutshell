@@ -25,64 +25,64 @@ ga:
         explanation: Tá cuntas cruthaithe agat ar %{host} leis an seoladh ríomhphoist seo. Tá tú ceann cliceáil ar shiúl ó é a ghníomhachtú. Mura tusa a bhí ann, déan neamhaird den ríomhphost seo le do thoil.
         explanation_when_pending: Chuir tú isteach ar chuireadh chuig %{host} leis an seoladh ríomhphoist seo. Nuair a dheimhníonn tú do sheoladh r-phoist, déanfaimid athbhreithniú ar d’iarratas. Is féidir leat logáil isteach chun do shonraí a athrú nó chun do chuntas a scriosadh, ach ní féidir leat rochtain a fháil ar fhormhór na bhfeidhmeanna go dtí go mbeidh do chuntas faofa. Má dhiúltaítear do d’iarratas, bainfear do shonraí, mar sin ní bheidh aon ghníomh eile ag teastáil uait. Mura tusa a bhí ann, déan neamhaird den ríomhphost seo le do thoil.
         extra_html: Seiceáil freisin <a href="%{terms_path}">rialacha an fhreastalaí</a> agus <a href="%{policy_path}">ár dtéarmaí seirbhíse</a>.
-        subject: 'Mastodon: Treoracha dearbhaithe do %{instance}'
+        subject: 'Nutshell: Treoracha dearbhaithe do %{instance}'
         title: Fíoraigh seoladh ríomhphoist
       email_changed:
         explanation: 'Tá seoladh ríomhphoist do chuntais á athrú go:'
         extra: Murar athraigh tú do ríomhphost, is dócha go bhfuil rochtain faighte ag duine éigin ar do chuntas. Athraigh do phasfhocal láithreach le do thoil nó déan teagmháil le riarthóir an fhreastalaí má tá tú glasáilte amach as do chuntas.
-        subject: 'Mastodon: Athraíodh an ríomhphost'
+        subject: 'Nutshell: Athraíodh an ríomhphost'
         title: Seoladh ríomhphoist nua
       password_change:
         explanation: Athraíodh an pasfhocal do do chuntas.
         extra: Murar athraigh tú do phasfhocal, is dócha go bhfuil rochtain faighte ag duine éigin ar do chuntas. Athraigh do phasfhocal láithreach le do thoil nó déan teagmháil le riarthóir an fhreastalaí má tá tú glasáilte amach as do chuntas.
-        subject: 'Mastodon: Athraíodh an pasfhocal'
+        subject: 'Nutshell: Athraíodh an pasfhocal'
         title: Pasfhocal athraithe
       reconfirmation_instructions:
         explanation: Deimhnigh an seoladh nua chun do ríomhphost a athrú.
-        extra: Murar tusa a thionscain an t-athrú seo, déan neamhaird den ríomhphost seo le do thoil. Ní athrófar seoladh ríomhphoist an chuntais Mastodon go dtí go bhfaighidh tú rochtain ar an nasc thuas.
-        subject: 'Mastodon: Deimhnigh ríomhphost le haghaidh %{instance}'
+        extra: Murar tusa a thionscain an t-athrú seo, déan neamhaird den ríomhphost seo le do thoil. Ní athrófar seoladh ríomhphoist an chuntais Nutshell go dtí go bhfaighidh tú rochtain ar an nasc thuas.
+        subject: 'Nutshell: Deimhnigh ríomhphost le haghaidh %{instance}'
         title: Fíoraigh seoladh ríomhphoist
       reset_password_instructions:
         action: Athraigh pasfhocal
         explanation: D'iarr tú pasfhocal nua do do chuntas.
         extra: Murar iarr tú é seo, déan neamhaird den ríomhphost seo le do thoil. Ní athrófar do phasfhocal go dtí go bhfaighidh tú rochtain ar an nasc thuas agus go gcruthóidh tú ceann nua.
-        subject: 'Mastodon: Athshocraigh treoracha pasfhocail'
+        subject: 'Nutshell: Athshocraigh treoracha pasfhocail'
         title: Athshocrú pasfhocal
       two_factor_disabled:
         explanation: Is féidir logáil isteach anois ach úsáid a bhaint as seoladh ríomhphoist agus pasfhocal amháin.
-        subject: 'Mastodon: Díchumasaíodh fíordheimhniú dhá fhachtóir'
+        subject: 'Nutshell: Díchumasaíodh fíordheimhniú dhá fhachtóir'
         subtitle: Díchumasaíodh fíordheimhniú dhá-fhachtóir do do chuntas.
         title: 2FA díchumasaithe
       two_factor_enabled:
         explanation: Beidh comhartha ginte ag an aip TOTP péireáilte ag teastáil chun logáil isteach.
-        subject: 'Mastodon: Fíordheimhniú dhá-fhachtóir cumasaithe'
+        subject: 'Nutshell: Fíordheimhniú dhá-fhachtóir cumasaithe'
         subtitle: Cumasaíodh fíordheimhniú dhá fhachtóir do do chuntas.
         title: 2FA cumasaithe
       two_factor_recovery_codes_changed:
         explanation: Tá na cóid athshlánaithe roimhe seo neamhbhailí agus gineadh cinn nua.
-        subject: 'Mastodon: Cóid aisghabhála dhá-fhachtóir athghinte'
+        subject: 'Nutshell: Cóid aisghabhála dhá-fhachtóir athghinte'
         subtitle: Tá na cóid athshlánaithe roimhe seo neamhbhailí agus gineadh cinn nua.
         title: Athraíodh cóid aisghabhála 2FA
       unlock_instructions:
-        subject: 'Mastodon: Díghlasáil treoracha'
+        subject: 'Nutshell: Díghlasáil treoracha'
       webauthn_credential:
         added:
           explanation: Cuireadh an eochair shlándála seo a leanas le do chuntas
-          subject: 'Mastodon: Eochair shlándála nua'
+          subject: 'Nutshell: Eochair shlándála nua'
           title: Tá eochair shlándála nua curtha leis
         deleted:
           explanation: Scriosadh an eochair shlándála seo a leanas ó do chuntas
-          subject: 'Mastodon: Scriosadh an eochair shlándála'
+          subject: 'Nutshell: Scriosadh an eochair shlándála'
           title: Scriosadh ceann de d'eochracha slándála
       webauthn_disabled:
         explanation: Díchumasaíodh fíordheimhniú le heochracha slándála do do chuntas.
         extra: Is féidir logáil isteach anois ag baint úsáide as an comhartha a ghineann an aip TOTP péireáilte amháin.
-        subject: 'Mastodon: Díchumasaíodh fíordheimhniú le heochracha slándála'
+        subject: 'Nutshell: Díchumasaíodh fíordheimhniú le heochracha slándála'
         title: Eochracha slándála díchumasaithe
       webauthn_enabled:
         explanation: Cumasaíodh fíordheimhniú eochair shlándála do do chuntas.
         extra: Is féidir d'eochair shlándála a úsáid le logáil isteach anois.
-        subject: 'Mastodon: Fíordheimhniú eochair shlándála cumasaithe'
+        subject: 'Nutshell: Fíordheimhniú eochair shlándála cumasaithe'
         title: Eochracha slándála cumasaithe
     omniauth_callbacks:
       failure: Níorbh fhéidir tú a fhíordheimhniú ó %{kind} toisc "%{reason}".

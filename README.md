@@ -2,7 +2,7 @@
 
 Nutshell is a paid-membership social platform for people who want a quieter social network without ads, engagement bait, or selling user data.
 
-This repository contains the main Nutshell social app. It is built from a heavily customized Mastodon codebase and adds Nutshell branding, paid memberships, a closed-community posture, custom onboarding, and an integration bridge to BlackEnvelope, the platform's private encrypted messaging and groups app.
+This repository contains the main Nutshell social app. It is built from a heavily customized upstream social-app codebase and adds Nutshell branding, paid memberships, a closed-community posture, custom onboarding, and an integration bridge to BlackEnvelope, the platform's private encrypted messaging and groups app.
 
 Canonical GitHub repository: `https://github.com/dissident5678/nutshell`
 
@@ -30,7 +30,7 @@ Nutshell is intended for members who want:
 - A separate E2EE space for private direct messages and private group conversation.
 - Clearer privacy boundaries than a typical social network.
 
-It is not intended to be a stock Mastodon instance or a broad open fediverse server. Federation is disabled or heavily restricted by default in this project.
+It is not intended to be a stock upstream instance or a broad open fediverse server. Federation is disabled or heavily restricted by default in this project.
 
 ## Main User Features
 
@@ -43,12 +43,12 @@ Nutshell includes the normal social features members expect:
 - Follow/follower relationships and follow requests.
 - Likes, shares, bookmarks, lists, filters, muted words, blocks, mutes, and relationship controls.
 - Notifications, search, and discovery features where enabled.
-- Account export and backup tools inherited from the Mastodon base.
+- Account export and backup tools inherited from the upstream base.
 - Admin and moderation tools for reports, user management, roles, site settings, webhooks, and operational review.
 
 Nutshell also has custom product behavior:
 
-- Logged-out visitors see a custom Nutshell landing page instead of a default Mastodon explore feed.
+- Logged-out visitors see a custom Nutshell landing page instead of a default upstream explore feed.
 - Main feed/discovery routes are routed through the paid/member access model.
 - Profile header editing includes a custom rectangular placement editor with drag positioning and zoom.
 - UI copy, logos, icons, colors, mailer visuals, and error-page branding are Nutshell-specific.
@@ -62,7 +62,7 @@ Nutshell has two different privacy models:
 - Public/social Nutshell posts are stored by the main Rails app and are not end-to-end encrypted.
 - BlackEnvelope messages are encrypted client-side before message content reaches the server.
 
-Use BlackEnvelope for private encrypted direct messages and private group conversations. Do not treat Mastodon-style posts, replies, mentions, or social direct/private visibility settings as E2EE.
+Use BlackEnvelope for private encrypted direct messages and private group conversations. Do not treat Nutshell posts, replies, mentions, or social direct/private visibility settings as E2EE.
 
 BlackEnvelope still stores metadata needed for routing, delivery, account state, notifications, group membership, abuse handling, and operations. E2EE protects message content, not every possible piece of metadata.
 
@@ -142,7 +142,7 @@ BlackEnvelope service code is managed as a separate companion app in the full pl
 
 ## Technical Stack
 
-Nutshell is still fundamentally a Rails/Mastodon-derived application:
+Nutshell is still fundamentally a Rails-based application derived from the upstream social stack:
 
 - Ruby on Rails for web and API requests.
 - React and TypeScript for the logged-in frontend.
@@ -201,7 +201,7 @@ Never commit a real production `.env.production`, API key, webhook secret, datab
 
 ## Federation Posture
 
-Nutshell is configured as a closed or limited-membership platform, not as a normal open federated Mastodon server.
+Nutshell is configured as a closed or limited-membership platform, not as a normal open federated server.
 
 The current product direction includes:
 
@@ -236,8 +236,8 @@ When changing this project:
 
 - Prefer repo-first changes so the Docker environment remains reproducible.
 - Keep runtime-only changes clearly documented.
-- Do not overwrite Nutshell customizations with stock Mastodon behavior.
-- Do not pull/rebase from upstream Mastodon without a deliberate migration plan.
+- Do not overwrite Nutshell customizations with stock upstream behavior.
+- Do not pull/rebase from upstream without a deliberate migration plan.
 - Run the narrowest meaningful validation for the files changed.
 - Update project progress notes in the full workspace when work is performed there.
 

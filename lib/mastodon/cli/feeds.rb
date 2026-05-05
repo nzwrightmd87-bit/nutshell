@@ -51,7 +51,7 @@ module Mastodon::CLI
 
     desc 'vacuum', 'Remove home feeds of inactive users from Redis'
     long_desc <<-LONG_DESC
-      Running this task should not be needed in most cases, as Mastodon will
+      Running this task should not be needed in most cases, as Nutshell will
       automatically clean up feeds from inactive accounts every day.
 
       However, this task is more aggressive in order to clean up feeds that

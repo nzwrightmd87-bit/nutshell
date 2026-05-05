@@ -146,7 +146,7 @@ All notable changes to this project will be documented in this file.
 - Fix scroll shift caused by fetch-all-replies alerts (#36807 by @diondiondion)
 - Fix dropdown menu not focusing first item when opened via keyboard (#36804 by @diondiondion)
 - Fix assets build issue on arch64 (#36781 by @ClearlyClaire)
-- Fix `/api/v1/statuses/:id/context` sometimes returing `Mastodon-Async-Refresh` without `result_count` (#36779 by @ClearlyClaire)
+- Fix `/api/v1/statuses/:id/context` sometimes returing `Nutshell-Async-Refresh` without `result_count` (#36779 by @ClearlyClaire)
 - Fix prepared quote not being discarded with contents when replying (#36778 by @ClearlyClaire)
 
 ## [4.5.0] - 2025-11-06
@@ -413,7 +413,7 @@ All notable changes to this project will be documented in this file.
 - Add a warning in Web UI when composing a post when the selected and detected language are different (#33042, #33683, #33700, #33724, #33770, and #34193 by @ClearlyClaire and @Gargron)
 - Add support for verifying and displaying remote quote posts (#34370, #34481, #34510, #34551, #34480, #34479, #34553, #34584, #34623, #34738, #34766, #34770, #34772, #34773, #34786, #34790, #34864, #34957, #34961, #35016, #35022, #35036, #34946, #34945 and #34958 by @ClearlyClaire and @diondiondion)\
   Support for verifying remote quotes according to [FEP-044f](https://codeberg.org/fediverse/fep/src/branch/main/fep/044f/fep-044f.md) and displaying them in the Web UI has been implemented.\
-  Quoting other people is not implemented yet, and it is currently not possible to mark your own posts as allowing quotes. However, a new “Who can quote” setting has been added to the “Posting defaults” section of the user settings. This setting allows you to set a default that will be used for new posts made on Mastodon 4.5 and newer, when quote posts will be fully implemented.\
+  Quoting other people is not implemented yet, and it is currently not possible to mark your own posts as allowing quotes. However, a new “Who can quote” setting has been added to the “Posting defaults” section of the user settings. This setting allows you to set a default that will be used for new posts made on Nutshell 4.5 and newer, when quote posts will be fully implemented.\
   In the REST API, quote posts are represented by a new `quote` attribute on `Status` and `StatusEdit` entities: https://docs.joinmastodon.org/entities/StatusEdit/#quote https://docs.joinmastodon.org/entities/Status/#quote
 - Add ability to reorder and translate server rules (#34637, #34737, #34494, #34756, #34820, #34997, #35170, #35174 and #35174 by @ChaosExAnima and @ClearlyClaire)\
   Rules are now shown in the user’s language, if a translation has been set.\
@@ -426,7 +426,7 @@ All notable changes to this project will be documented in this file.
   In the REST API, this adds a new possible value of `blur` to the `filter_action` attribute: https://docs.joinmastodon.org/entities/Filter/#filter_action
 - Add dropdown menu to hashtag links in web UI (#34393 by @Gargron)
 - **Add server setting to allow referrer** (#33214, #33239, #33903, and #34731 by @ChaosExAnima, @ClearlyClaire, @Gargron, and @renchap)\
-  In order to protect the privacy of users of small or thematic servers, Mastodon previously avoided transmitting referrer information when clicking outside links, which unfortunately made Mastodon completely invisible to other websites, even though the privacy implications on large generic servers are very limited.\
+  In order to protect the privacy of users of small or thematic servers, Nutshell previously avoided transmitting referrer information when clicking outside links, which unfortunately made Nutshell completely invisible to other websites, even though the privacy implications on large generic servers are very limited.\
   Server administrators can now chose to opt in to transmit referrer information when following an external link. Only the domain name is transmitted, not the referrer path.
 - Add double tap to zoom and swipe to dismiss to media modal in web UI (#34210 by @Gargron)
 - Add link from Web UI for Hashtags to the Moderation UI (#31448 by @ThisIsMissEm)
@@ -503,7 +503,7 @@ All notable changes to this project will be documented in this file.
 - Add userinfo OAuth endpoint (#32548 by @ThisIsMissEm)
 - Add the standard VCS attributes to OpenTelemetry spans (#32904 by @renchap)
 - Add endpoint to remove web push subscription (#32626 by @oneiros)\
-  Mastodon now sets a new `Unsubscribe-URL` request header when performing WebPush requests. This URL can be used by the WebPush server to disable the WebPush subscription on Mastodon’s side in case of unfixable errors.
+  Nutshell now sets a new `Unsubscribe-URL` request header when performing WebPush requests. This URL can be used by the WebPush server to disable the WebPush subscription on Nutshell’s side in case of unfixable errors.
 - Add missing content warning text to RSS feeds (#32406 by @mjankowski)
 - Add Swiss German to languages dropdown (#29281 by @FlohEinstein)
 
@@ -577,7 +577,7 @@ All notable changes to this project will be documented in this file.
 
 - **Remove support for Redis namespaces** (#34664 and #34665 by @ClearlyClaire)\
   See https://github.com/mastodon/redis_namespace_migration
-- Remove support for imports started on pre-4.2.0 Mastodon versions (#34371 by @mjankowski)
+- Remove support for imports started on pre-4.2.0 Nutshell versions (#34371 by @mjankowski)
 - Remove support for PostgreSQL 12 and earlier (#34744 by @ClearlyClaire)
 - Remove support for Node.JS < 20 (#34390 by @renchap)
 - Remove support for Redis < 6.2 (#30413 by @ClearlyClaire)
@@ -867,7 +867,7 @@ All notable changes to this project will be documented in this file.
 
 - Remove ability to get embed code for remote posts (#32578 by @ClearlyClaire)\
   Getting the embed code is only reliable for local posts.\
-  It never worked for non-Mastodon servers, and stopped working correctly with the changes made in 4.3.0.\
+  It never worked for non-Nutshell servers, and stopped working correctly with the changes made in 4.3.0.\
   We have therefore decided to remove the menu entry while we investigate solutions.
 
 ### Fixed
@@ -899,7 +899,7 @@ The following changelog entries focus on changes visible to users, administrator
 ### Security
 
 - **Add confirmation interstitial instead of silently redirecting logged-out visitors to remote resources** (#27792, #28902, and #30651 by @ClearlyClaire and @Gargron)\
-  This fixes a longstanding open redirect in Mastodon, at the cost of added friction when local links to remote resources are shared.
+  This fixes a longstanding open redirect in Nutshell, at the cost of added friction when local links to remote resources are shared.
 - Fix ReDoS vulnerability on some Ruby versions ([GHSA-jpxp-r43f-rhvx](https://github.com/mastodon/mastodon/security/advisories/GHSA-jpxp-r43f-rhvx))
 - Change `form-action` Content-Security-Policy directive to be more restrictive (#26897 and #32241 by @ClearlyClaire)
 - Update dependencies
@@ -950,7 +950,7 @@ The following changelog entries focus on changes visible to users, administrator
   You can now see public posts mentioning currently-trending articles from people who have opted into discovery features.\
   This adds a new REST API endpoint: https://docs.joinmastodon.org/methods/timelines/#link
 - **Add author highlight for news articles whose authors are on the fediverse** (#30398, #30670, #30521, #30846, #31819, #31900 and #32188 by @Gargron, @mjankowski and @oneiros)\
-  This adds a mechanism to [highlight the author of news articles](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/) shared on Mastodon.\
+  This adds a mechanism to [highlight the author of news articles](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/) shared on Nutshell.\
   Articles hosted outside the fediverse can indicate a fediverse author with a meta tag:
   ```html
   <meta name="fediverse:creator" content="username@domain" />
@@ -966,7 +966,7 @@ The following changelog entries focus on changes visible to users, administrator
 - **Add support for Redis sentinel** (#31694, #31623, #31744, #31767, and #31768 by @ThisIsMissEm and @oneiros)\
   See https://docs.joinmastodon.org/admin/scaling/#redis-sentinel
 - **Add ability to reorder uploaded media before posting in web UI** (#28456 and #32093 by @Gargron)
-- Add “A Mastodon update is available.” message on admin dashboard for non-bugfix updates (#32106 by @ClearlyClaire)
+- Add “A Nutshell update is available.” message on admin dashboard for non-bugfix updates (#32106 by @ClearlyClaire)
 - Add ability to view alt text by clicking the ALT badge in web UI (#32058 by @Gargron)
 - Add preview of followers removed in domain block modal in web UI (#32032 and #32105 by @ClearlyClaire and @Gargron)
 - Add reblogs and favourites counts to statuses in ActivityPub (#32007 by @Gargron)
@@ -1059,7 +1059,7 @@ The following changelog entries focus on changes visible to users, administrator
 ### Changed
 
 - **Change icons throughout the web interface** (#27385, #27539, #27555, #27579, #27700, #27817, #28519, #28709, #28064, #28775, #28780, #27924, #29294, #29395, #29537, #29569, #29610, #29612, #29649, #29844, #27780, #30974, #30963, #30962, #30961, #31362, #31363, #31359, #31371, #31360, #31512, #31511, #31525, #32153, and #32201 by @ClearlyClaire, @Gargron, @arbolitoloco1, @mjankowski, @nclm, @renchap, @ronilaukkarinen, and @zunda)\
-  This changes all the interface icons from FontAwesome to Material Symbols for a more modern look, consistent with the official Mastodon Android app.\
+  This changes all the interface icons from FontAwesome to Material Symbols for a more modern look, consistent with the official Nutshell Android app.\
   In addition, better care is given to pixel alignment, and icon variants are used to better highlight active/inactive state.
 - **Change design of compose form in web UI** (#28119, #29059, #29248, #29372, #29384, #29417, #29456, #29406, #29651, #29659, #31889 and #32033 by @ClearlyClaire, @Gargron, @eai04191, @hinaloe, and @ronilaukkarinen)\
   The compose form has been completely redesigned for a more modern and consistent look, as well as spelling out the chosen privacy setting and language name at all times.\
@@ -1090,7 +1090,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Change responsive break points on navigation panel in web UI (#32034 by @Gargron)
 - Change cursor to `not-allowed` on disabled buttons (#32076 by @mjankowski)
 - Change OAuth authorization prompt to not refer to apps as “third-party” (#32005 by @Gargron)
-- Change Mastodon to issue correct HTTP signatures by default (#31994 by @ClearlyClaire)
+- Change Nutshell to issue correct HTTP signatures by default (#31994 by @ClearlyClaire)
 - Change zoom icon in web UI (#29683 by @Gargron)
 - Change directory page to use URL query strings for options (#31980, #31977 and #31984 by @ClearlyClaire and @renchap)
 - Change report action buttons to be disabled when action has already been taken (#31773, #31822, and #31899 by @ClearlyClaire and @ThisIsMissEm)
@@ -1120,7 +1120,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Change border of active compose field search inputs (#29832 and #29839 by @vmstan)
 - Change instances of Nokogiri HTML4 parsing to HTML5 (#31812, #31815, #31813, and #31814 by @flavorjones)
 - Change link detection to allow `@` at the end of an URL (#31124 by @adamniedzielski)
-- Change User-Agent to use Mastodon as the product, and http.rb as platform details (#31192 by @ClearlyClaire)
+- Change User-Agent to use Nutshell as the product, and http.rb as platform details (#31192 by @ClearlyClaire)
 - Change layout and wording of the Content Retention server settings page (#27733 by @vmstan)
 - Change unconfirmed users to be kept for one week instead of two days (#30285 by @renchap)
 - Change maximum page size for Admin Domain Management APIs from 200 to 500 (#31253 by @ThisIsMissEm)
@@ -1142,12 +1142,12 @@ The following changelog entries focus on changes visible to users, administrator
 - Change materialized views to be refreshed concurrently to avoid locks (#29015 by @Gargron)
 - Change compose form to use server-provided post character and poll options limits (#28928 and #29490 by @ClearlyClaire and @renchap)
 - Change streaming server logging from `npmlog` to `pino` and `pino-http` (#27828 by @ThisIsMissEm)\
-  This changes the Mastodon streaming server log format, so this might be considered a breaking change if you were parsing the logs.
+  This changes the Nutshell streaming server log format, so this might be considered a breaking change if you were parsing the logs.
 - Change media “ALT” label to use a specific CSS class (#28777 by @ClearlyClaire)
 - Change streaming API host to not be overridden to localhost in development mode (#28557 by @ClearlyClaire)
 - Change cookie rotator to use SHA1 digest for new cookies (#27392 by @ClearlyClaire)\
-  Note that this requires that no pre-4.2.0 Mastodon web server is running when this code is deployed, as those would not understand the new cookies.\
-  Therefore, zero-downtime updates are only supported if you're coming from 4.2.0 or newer. If you want to skip Mastodon 4.2, you will need to completely stop Mastodon services before updating.
+  Note that this requires that no pre-4.2.0 Nutshell web server is running when this code is deployed, as those would not understand the new cookies.\
+  Therefore, zero-downtime updates are only supported if you're coming from 4.2.0 or newer. If you want to skip Nutshell 4.2, you will need to completely stop Nutshell services before updating.
 - Change preview card deletes to be done using batch method (#28183 by @vmstan)
 - Change `img-src` and `media-src` CSP directives to not include `https:` (#28025 and #28561 by @ClearlyClaire)
 - Change self-destruct procedure (#26439, #29049, and #29420 by @ClearlyClaire and @zunda)\
@@ -1349,7 +1349,7 @@ The following changelog entries focus on changes visible to users, administrator
 ### Added
 
 - Add hourly task to automatically require approval for new registrations in the absence of moderators ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/29318), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/29355))
-  In order to prevent future abandoned Mastodon servers from being used for spam, harassment and other malicious activity, Mastodon will now automatically switch new user registrations to require moderator approval whenever they are left open and no activity (including non-moderation actions from apps) from any logged-in user with permission to access moderation reports has been detected in a full week.
+  In order to prevent future abandoned Nutshell servers from being used for spam, harassment and other malicious activity, Nutshell will now automatically switch new user registrations to require moderator approval whenever they are left open and no activity (including non-moderation actions from apps) from any logged-in user with permission to access moderation reports has been detected in a full week.
   When this happens, users with the permission to change server settings will receive an email notification.
   This feature is disabled when `EMAIL_DOMAIN_ALLOWLIST` is used, and can also be disabled with `DISABLE_AUTOMATIC_SWITCHING_TO_APPROVED_REGISTRATIONS=true`.
 
@@ -1388,11 +1388,11 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix ongoing streaming sessions not being invalidated when applications get deleted in some cases ([GHSA-7w3c-p9j8-mq3x](https://github.com/mastodon/mastodon/security/advisories/GHSA-7w3c-p9j8-mq3x))
   In some rare cases, the streaming server was not notified of access tokens revocation on application deletion.
 - Change external authentication behavior to never reattach a new identity to an existing user by default ([GHSA-vm39-j3vx-pch3](https://github.com/mastodon/mastodon/security/advisories/GHSA-vm39-j3vx-pch3))
-  Up until now, Mastodon has allowed new identities from external authentication providers to attach to an existing local user based on their verified e-mail address.
+  Up until now, Nutshell has allowed new identities from external authentication providers to attach to an existing local user based on their verified e-mail address.
   This allowed upgrading users from a database-stored password to an external authentication provider, or move from one authentication provider to another.
   However, this behavior may be unexpected, and means that when multiple authentication providers are configured, the overall security would be that of the least secure authentication provider.
   For these reasons, this behavior is now locked under the `ALLOW_UNSAFE_AUTH_PROVIDER_REATTACH` environment variable.
-  In addition, regardless of this environment variable, Mastodon will refuse to attach two identities from the same authentication provider to the same account.
+  In addition, regardless of this environment variable, Nutshell will refuse to attach two identities from the same authentication provider to the same account.
 
 ## [4.2.5] - 2024-02-01
 
@@ -1408,7 +1408,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix processing of compacted single-item JSON-LD collections ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28816))
 - Retry 401 errors on replies fetching ([ShadowJonathan](https://github.com/mastodon/mastodon/pull/28788))
 - Fix `RecordNotUnique` errors in LinkCrawlWorker ([tribela](https://github.com/mastodon/mastodon/pull/28748))
-- Fix Mastodon not correctly processing HTTP Signatures with query strings ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28443), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/28476))
+- Fix Nutshell not correctly processing HTTP Signatures with query strings ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28443), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/28476))
 - Fix potential redirection loop of streaming endpoint ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28665))
 - Fix streaming API redirection ignoring the port of `streaming_api_base_url` ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28558))
 - Fix error when processing link preview with an array as `inLanguage` ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/28252))
@@ -1509,7 +1509,7 @@ The following changelog entries focus on changes visible to users, administrator
   This introduces a new `public_statuses` Elasticsearch index for public posts by users who have opted in to their posts being searchable (`toot#indexable` flag).
   This also revisits the other indexes to provide more useful indexing, and adds new search operators such as `from:me`, `before:2022-11-01`, `after:2022-11-01`, `during:2022-11-01`, `language:fr`, `has:poll`, or `in:library` (for searching only in posts you have written or interacted with).
   Results are now ordered chronologically.
-- **Add admin notifications for new Mastodon versions** ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/26582))
+- **Add admin notifications for new Nutshell versions** ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/26582))
   This is done by querying `https://api.joinmastodon.org/update-check` every 30 minutes in a background job.
   That URL can be changed using the `UPDATE_CHECK_URL` environment variable, and the feature outright disabled by setting that variable to an empty string (`UPDATE_CHECK_URL=`).
 - **Add “Privacy and reach” tab in profile settings** ([Gargron](https://github.com/mastodon/mastodon/pull/26484), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26508))
@@ -1621,10 +1621,10 @@ The following changelog entries focus on changes visible to users, administrator
 - **Change `statsd` integration to disable sidekiq metrics by default** ([mjankowski](https://github.com/mastodon/mastodon/pull/25265), [mjankowski](https://github.com/mastodon/mastodon/pull/25336), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26310))
   This deprecates `statsd` support and disables the sidekiq integration unless `STATSD_SIDEKIQ` is set to `true`.
   This is because the `nsa` gem is unmaintained, and its sidekiq integration is known to add very significant overhead.
-  Later versions of Mastodon will have other ways to get the same metrics.
+  Later versions of Nutshell will have other ways to get the same metrics.
 - **Change replica support to native Rails adapter** ([krainboltgreene](https://github.com/mastodon/mastodon/pull/25693), [Gargron](https://github.com/mastodon/mastodon/pull/25849), [Gargron](https://github.com/mastodon/mastodon/pull/25874), [Gargron](https://github.com/mastodon/mastodon/pull/25851), [Gargron](https://github.com/mastodon/mastodon/pull/25977), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26074), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26326), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26386), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/26856))
   This is a breaking change, dropping `makara` support, and requiring you to update your database configuration if you are using replicas.
-  To tell Mastodon to use a read replica, you can either set the `REPLICA_DB_NAME` environment variable (along with `REPLICA_DB_USER`, `REPLICA_DB_PASS`, `REPLICA_DB_HOST`, and `REPLICA_DB_PORT`, if they differ from the primary database), or the `REPLICA_DATABASE_URL` environment variable if your configuration is based on `DATABASE_URL`.
+  To tell Nutshell to use a read replica, you can either set the `REPLICA_DB_NAME` environment variable (along with `REPLICA_DB_USER`, `REPLICA_DB_PASS`, `REPLICA_DB_HOST`, and `REPLICA_DB_PORT`, if they differ from the primary database), or the `REPLICA_DATABASE_URL` environment variable if your configuration is based on `DATABASE_URL`.
 - Change DCT method used for JPEG encoding to float ([electroCutie](https://github.com/mastodon/mastodon/pull/26675))
 - Change from `node-redis` to `ioredis` for streaming ([gmemstr](https://github.com/mastodon/mastodon/pull/26581))
 - Change private statuses index to index without crutches ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/26713))
@@ -1738,7 +1738,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix UI overlap with the loupe icon in the Explore Tab ([gol-cha](https://github.com/mastodon/mastodon/pull/26113))
 - Fix unexpected redirection to `/explore` after sign-in ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/26143))
 - Fix `/api/v1/statuses/:id/unfavourite` and `/api/v1/statuses/:id/unreblog` returning non-updated counts ([c960657](https://github.com/mastodon/mastodon/pull/24365))
-- Fix clicking the “Back” button sometimes leading out of Mastodon ([c960657](https://github.com/mastodon/mastodon/pull/23953), [CSFlorin](https://github.com/mastodon/mastodon/pull/24835), [S-H-GAMELINKS](https://github.com/mastodon/mastodon/pull/24867), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/25281))
+- Fix clicking the “Back” button sometimes leading out of Nutshell ([c960657](https://github.com/mastodon/mastodon/pull/23953), [CSFlorin](https://github.com/mastodon/mastodon/pull/24835), [S-H-GAMELINKS](https://github.com/mastodon/mastodon/pull/24867), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/25281))
 - Fix processing of `null` ActivityPub activities ([tribela](https://github.com/mastodon/mastodon/pull/26021))
 - Fix hashtag posts not being removed from home feed on hashtag unfollow ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/26028))
 - Fix for "follows you" indicator in light web UI not readable ([vmstan](https://github.com/mastodon/mastodon/pull/25993))
@@ -1768,7 +1768,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix video player offering to expand in a lightbox when it's in an `iframe` ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/25067))
 - Fix post embed previews ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/25071))
 - Fix inadequate error handling in several API controllers when given invalid parameters ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24947), [danielmbrasil](https://github.com/mastodon/mastodon/pull/24958), [danielmbrasil](https://github.com/mastodon/mastodon/pull/25063), [danielmbrasil](https://github.com/mastodon/mastodon/pull/25072), [danielmbrasil](https://github.com/mastodon/mastodon/pull/25386), [danielmbrasil](https://github.com/mastodon/mastodon/pull/25595))
-- Fix uncaught `ActiveRecord::StatementInvalid` in Mastodon::IpBlocksCLI ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24861))
+- Fix uncaught `ActiveRecord::StatementInvalid` in Nutshell::IpBlocksCLI ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24861))
 - Fix various edge cases with local moves ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/24812))
 - Fix `tootctl accounts cull` crashing when encountering a domain resolving to a private address ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/23378))
 - Fix `tootctl accounts approve --number N` not aproving the N earliest registrations ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24605))
@@ -1778,7 +1778,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix cutting off first letter of hashtag links sometimes in web UI ([Gargron](https://github.com/mastodon/mastodon/pull/24623))
 - Fix crash in `tootctl accounts create --reattach --force` ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/24557), [danielmbrasil](https://github.com/mastodon/mastodon/pull/24680))
 - Fix characters being emojified even when using Variation Selector 15 (text) ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/20949), [ClearlyClaire](https://github.com/mastodon/mastodon/pull/24615))
-- Fix uncaught ActiveRecord::StatementInvalid exception in `Mastodon::AccountsCLI#approve` ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24590))
+- Fix uncaught ActiveRecord::StatementInvalid exception in `Nutshell::AccountsCLI#approve` ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24590))
 - Fix email confirmation skip option in `tootctl accounts modify USERNAME --email EMAIL --confirm` ([danielmbrasil](https://github.com/mastodon/mastodon/pull/24578))
 - Fix tooltip for dates without time ([c960657](https://github.com/mastodon/mastodon/pull/24244))
 - Fix missing loading spinner and loading more on scroll in Private Mentions column ([c960657](https://github.com/mastodon/mastodon/pull/24446))
@@ -1950,7 +1950,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix server error when attempting to display the edit history of a trendable post in the admin interface ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/23574))
 - Fix `tootctl accounts migrate` crashing because of a typo ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/23567))
 - Fix original account being unfollowed on migration before the follow request to the new account could be sent ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/21957))
-- Fix the “Back” button in column headers sometimes leaving Mastodon ([c960657](https://github.com/mastodon/mastodon/pull/23953))
+- Fix the “Back” button in column headers sometimes leaving Nutshell ([c960657](https://github.com/mastodon/mastodon/pull/23953))
 - Fix pgBouncer resetting application name on every transaction ([Gargron](https://github.com/mastodon/mastodon/pull/23958))
 - Fix unconfirmed accounts being counted as active users ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/23803))
 - Fix `/api/v1/streaming` sub-paths not being redirected ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/23988))
@@ -2174,7 +2174,7 @@ The following changelog entries focus on changes visible to users, administrator
 - Fix `scheduled_at` input not using `datetime-local` when editing announcements ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/21896))
 - Fix REST API serializer for `Account` not including `moved` when the moved account has itself moved ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/22483))
 - Fix `/api/v1/admin/trends/tags` using wrong serializer ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/18943))
-- Fix situations in which instance actor can be set to a Mastodon-incompatible name ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/22307))
+- Fix situations in which instance actor can be set to a Nutshell-incompatible name ([ClearlyClaire](https://github.com/mastodon/mastodon/pull/22307))
 
 ### Security
 

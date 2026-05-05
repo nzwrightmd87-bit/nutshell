@@ -126,7 +126,7 @@ nl:
         admin/accounts: Accountbeheer
         admin/all: Alle beheerfuncties
         admin/reports: Rapportagebeheer
-        all: Volledige toegang tot je Mastodon-account
+        all: Volledige toegang tot je Nutshell-account
         blocks: Blokkeren
         bookmarks: Bladwijzers
         conversations: Gesprekken
@@ -139,7 +139,7 @@ nl:
         media: Mediabijlagen
         mutes: Negeren
         notifications: Meldingen
-        profile: Jouw Mastodonprofiel
+        profile: Jouw Nutshellprofiel
         push: Pushmeldingen
         reports: Rapportages
         search: Zoeken

@@ -4,10 +4,10 @@ sv:
     hints:
       account:
         attribution_domains: En per rad. Skyddar mot falska attributioner.
-        discoverable: Dina offentliga inlägg och din profil kan komma att presenteras eller rekommenderas inom olika områden av Mastodon och din profil kan komma att föreslås till andra användare.
+        discoverable: Dina offentliga inlägg och din profil kan komma att presenteras eller rekommenderas inom olika områden av Nutshell och din profil kan komma att föreslås till andra användare.
         display_name: Ditt fullständiga namn eller ditt roliga namn.
         fields: Din hemsida, ditt pronomen, din ålder, vadhelst du vill.
-        indexable: Dina offentliga inlägg kan visas i sökresultat på Mastodon. Personer som har interagerat med dina inlägg kan söka dem oavsett.
+        indexable: Dina offentliga inlägg kan visas i sökresultat på Nutshell. Personer som har interagerat med dina inlägg kan söka dem oavsett.
         note: 'Du kan @nämna andra personer eller #hashtaggar.'
         show_collections: Andra kan se vem du följer och vem som följer dig. De du följer kan alltid se att du följer dem.
         unlocked: Andra kommer att kunna följa dig utan att begära godkännande. Avmarkera om du vill granska följeslagare och välja om du vill acceptera eller avvisa nya följare.
@@ -54,11 +54,11 @@ sv:
         password: Använd minst 8 tecken
         phrase: Matchas oavsett användande i text eller innehållsvarning för ett inlägg
         scopes: 'Vilka API: er applikationen kommer tillåtas åtkomst till. Om du väljer en omfattning på högstanivån behöver du inte välja individuella sådana.'
-        setting_advanced_layout: Visa Mastodon med en layout med flera kolumner, så att du kan se tidslinjen, aviseringar, och en tredje kolumn som du väljer själv. Rekommenderas inte för mindre skärmar.
+        setting_advanced_layout: Visa Nutshell med en layout med flera kolumner, så att du kan se tidslinjen, aviseringar, och en tredje kolumn som du väljer själv. Rekommenderas inte för mindre skärmar.
         setting_aggregate_reblogs: Visa inte nya boostar för inlägg som nyligen blivit boostade (påverkar endast nymottagna boostar)
-        setting_always_send_emails: E-postnotiser kommer vanligtvis inte skickas när du aktivt använder Mastodon
+        setting_always_send_emails: E-postnotiser kommer vanligtvis inte skickas när du aktivt använder Nutshell
         setting_boost_modal: När den är aktiverad kommer boostningen först att öppna en dialogruta där du kan ändra synligheten på din boost.
-        setting_default_quote_policy_private: Inlägg som endast är för följare och som författats på Mastodon kan inte citeras av andra.
+        setting_default_quote_policy_private: Inlägg som endast är för följare och som författats på Nutshell kan inte citeras av andra.
         setting_default_quote_policy_unlisted: När folk citerar dig, kommer deras inlägg också att döljas från trendande tidslinjer.
         setting_default_sensitive: Känslig media döljs som standard och kan visas med ett klick
         setting_display_media_default: Dölj media markerad som känslig
@@ -91,7 +91,7 @@ sv:
         bootstrap_timeline_accounts: Dessa konton kommer att fästas på toppen av nya användares följ-rekommendationer. Ange en kommaseparerad lista över konton.
         closed_registrations_message: Visas när nyregistreringar är avstängda
         content_cache_retention_period: Alla inlägg från andra servrar (inklusive booster och svar) kommer att raderas efter det angivna antalet dagar, utan hänsyn till någon lokal användarinteraktion med dessa inlägg. Detta inkluderar inlägg där en lokal användare har markerat det som bokmärke eller favoriter. Privata omnämnanden mellan användare från olika instanser kommer också att gå förlorade och blir omöjliga att återställa. Användningen av denna inställning är avsedd för specialfall och bryter många användarförväntningar när de implementeras för allmänt bruk.
-        custom_css: Du kan använda anpassade stilar på webbversionen av Mastodon.
+        custom_css: Du kan använda anpassade stilar på webbversionen av Nutshell.
         favicon: WEBP, PNG, GIF eller JPG. Används på mobila enheter istället för appens egen ikon.
         landing_page: Väljer vilken sida nya besökare ser när de först anländer till din server. Om du väljer "Trender" måste trenderna aktiveras i Upptäckningsinställningarna. Om du väljer "Lokalt flöde" måste "Åtkomst till live-flöden med lokala inlägg" sättas till "Alla" i Upptäckningsinställningarna.
         mascot: Åsidosätter illustrationen i det avancerade webbgränssnittet.
@@ -101,7 +101,7 @@ sv:
         profile_directory: Profilkatalogen visar alla användare som har samtyckt till att bli upptäckbara.
         require_invite_text: Gör fältet "Varför vill du gå med?" obligatoriskt när nyregistreringar kräver manuellt godkännande
         site_contact_email: Hur människor kan nå dig för juridiska spörsmål eller supportfrågor.
-        site_contact_username: Hur folk kan nå dig på Mastodon.
+        site_contact_username: Hur folk kan nå dig på Nutshell.
         site_extended_description: Eventuell övrig information som kan vara användbar för besökare och dina användare. Kan struktureras med Markdown-syntax.
         site_short_description: En kort beskrivning för att unikt identifiera din server. Vem är det som driver den, vilka är den till för?
         site_terms: Använd din egen sekretesspolicy eller lämna tomt för att använda standardinställningen. Kan struktureras med Markdown-syntax.
@@ -111,11 +111,11 @@ sv:
         thumbnail: En bild i cirka 2:1-proportioner som visas tillsammans med din serverinformation.
         trendable_by_default: Hoppa över manuell granskning av trendande innehåll. Enskilda objekt kan ändå raderas från trender retroaktivt.
         trends: Trender visar vilka inlägg, hashtaggar och nyheter det pratas om på din server.
-        wrapstodon: Erbjud lokala användare att generera en lekfull sammanfattning av deras Mastodon-användning under året. Denna funktion är tillgänglig mellan den 10 och 31 december varje år, och erbjuds till användare som gjort minst ett Offentligt eller Tyst Offentligt inlägg och använt minst en hashtag under året.
+        wrapstodon: Erbjud lokala användare att generera en lekfull sammanfattning av deras Nutshell-användning under året. Denna funktion är tillgänglig mellan den 10 och 31 december varje år, och erbjuds till användare som gjort minst ett Offentligt eller Tyst Offentligt inlägg och använt minst en hashtag under året.
       form_challenge:
         current_password: Du går in i ett säkert område
       imports:
-        data: CSV-fil som exporterats från en annan Mastodon-server
+        data: CSV-fil som exporterats från en annan Nutshell-server
       invite_request:
         text: Detta kommer hjälpa oss att granska din ansökan
       ip_block:
@@ -164,7 +164,7 @@ sv:
         name: Offentligt namn på rollen, om rollen är inställd på att visas som ett emblem
         permissions_as_keys: Användare med denna roll kommer ha tillgång till...
         position: Högre roll avgör konfliktlösning i vissa situationer. Vissa åtgärder kan endast utföras på roller med lägre prioritet
-        require_2fa: Användare med denna roll kommer att krävas för att ställa in tvåfaktorsautentisering för att använda Mastodon
+        require_2fa: Användare med denna roll kommer att krävas för att ställa in tvåfaktorsautentisering för att använda Nutshell
       username_block:
         allow_with_approval: I stället för att förhindra direkt registrering kräver matchning av registreringar ditt godkännande
         comparison: Var uppmärksam på Scunthorpe Problem vid blockering av partiella matcher
@@ -348,7 +348,7 @@ sv:
         software_updates:
           all: Meddela om alla uppdateringar
           critical: Meddela endast om kritiska uppdateringar
-          label: En ny version av Mastodon är tillgänglig
+          label: En ny version av Nutshell är tillgänglig
           none: Meddela inte om uppdateringar (rekommenderas inte)
           patch: Meddela vid buggfix-uppdateringar
         trending_tag: En ny trend kräver granskning

@@ -487,7 +487,7 @@ kab:
       rules_check:
         action: Sefrek ilugan n uqeddac
       software_version_check:
-        message_html: Yella lqem n Mastodon.
+        message_html: Yella lqem n Nutshell.
       software_version_critical_check:
         action: Wali ileqqman yellan
       software_version_patch_check:
@@ -560,7 +560,7 @@ kab:
     advanced_settings: Iɣewwaren leqqayen
     discovery: Asnirem
     localization:
-      body: Mastodon suqqlen-t-id yiwiziwen.
+      body: Nutshell suqqlen-t-id yiwiziwen.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Yal yiwen·t y·tezmer a ttekki.
     sensitive_content: Agbur amḥulfu
@@ -588,9 +588,9 @@ kab:
       welcome_title: Ansuf yessek·em, %{name}!
     delete_account: Kkes amiḍan
     description:
-      prefix_invited_by_user: "@%{name} inced-ik·ikem ad ternuḍ ɣer uqeddac-a n Mastodon!"
+      prefix_invited_by_user: "@%{name} inced-ik·ikem ad ternuḍ ɣer uqeddac-a n Nutshell!"
       prefix_sign_up: Zeddi di Maṣṭudun ass-a!
-      suffix: S umiḍan, tzemreḍ ad tḍefreḍ imdanen, ad d-tessufɣeḍ tisuffaɣ d wembadal n yiznan akked yiseqdacen n yal aqeddac Mastodon d wayen-nniḍen!
+      suffix: S umiḍan, tzemreḍ ad tḍefreḍ imdanen, ad d-tessufɣeḍ tisuffaɣ d wembadal n yiznan akked yiseqdacen n yal aqeddac Nutshell d wayen-nniḍen!
     didnt_get_confirmation: Ur d-teṭṭifeḍ ara aseɣwen n usentem ?
     dont_have_your_security_key: Ulac ɣur-k·m tasarut-ik·im n tɣellist?
     forgot_password: Tettud awal-ik uffir?
@@ -627,7 +627,7 @@ kab:
       preamble_html: Kcem ar <strong>%{domain}</strong> s inekcam-inek n tuqqna. Ma yella yezga-d umiḍan-ik deg uqeddac-nniḍen, ur tezmireḍ ara ad tkecmeḍ sya.
       title: Akeččum ɣer %{domain}
     sign_up:
-      preamble: S umiḍan yellan deg uqeddac-a n Mastodon, ad tizimreḍ ad t-ḍefreḍ yal yiwen nniḍen i yellan deg fediverse, akken yebɣu yili wanda i yella umiḍan-nsen.
+      preamble: S umiḍan yellan deg uqeddac-a n Nutshell, ad tizimreḍ ad t-ḍefreḍ yal yiwen nniḍen i yellan deg fediverse, akken yebɣu yili wanda i yella umiḍan-nsen.
       title: Iyya ad d-nessewjed tiɣawsiwin i %{domain}.
     status:
       account_status: Addad n umiḍan
@@ -884,7 +884,7 @@ kab:
     current_session: Tiɣimit tamirant
     date: Azemz
     description: "%{browser} ɣef %{platform}"
-    explanation: Ha-t-en yiminigen web ikecmen akka tura ɣer umiḍan-ik·im Mastodon.
+    explanation: Ha-t-en yiminigen web ikecmen akka tura ɣer umiḍan-ik·im Nutshell.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1004,7 +1004,7 @@ kab:
       apps_android_action: Awi-t-id seg Google Play
       apps_ios_action: Sader-it-id seg App Store
       apps_step: Zdem-d isnasen-nneɣ unṣiben.
-      apps_title: Isnasen n Mastodon
+      apps_title: Isnasen n Nutshell
       edit_profile_action: Sagen
       edit_profile_title: Sagen amaɣnu-inek·inem
       feature_action: Issin ugar
@@ -1019,8 +1019,8 @@ kab:
       post_action: Aru
       post_step: Ini-as azul i umaḍal s uḍris, s tiwlafin, s tividyutin neɣ s tefranin.
       post_title: Aru tasuffeɣt-inek·inem tamezwarut
-      share_step: Init-asen i yimeddukal-nwen amek ara ken-id-afen deg Mastodon.
-      share_title: Bḍu amaɣnu-inek·inem n Mastodon
+      share_step: Init-asen i yimeddukal-nwen amek ara ken-id-afen deg Nutshell.
+      share_title: Bḍu amaɣnu-inek·inem n Nutshell
       sign_in_action: Qqen
       subject: Ansuf ɣer Maṣṭudun
       title: Ansuf yessek·em, %{name}!

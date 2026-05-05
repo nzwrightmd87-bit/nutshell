@@ -1,10 +1,10 @@
 ---
 nan-TW:
   about:
-    about_mastodon_html: 社交網路ê未來：Bô廣告、bô企業監控、設計有道德，兼非中心化！加入Mastodon，保有lí ê資料！
+    about_mastodon_html: 社交網路ê未來：Bô廣告、bô企業監控、設計有道德，兼非中心化！加入Nutshell，保有lí ê資料！
     contact_missing: Iáu bē設定
     contact_unavailable: 無開放
-    hosted_on: 佇 %{domain} 運作 ê Mastodon站
+    hosted_on: 佇 %{domain} 運作 ê Nutshell站
     title: 關係本站
   accounts:
     errors:
@@ -751,7 +751,7 @@ nan-TW:
         moderation: 管理
         special: 特別
       delete: Thâi掉
-      description_html: 用<strong>用者角色</strong>，lí通自訂lí ê用者ē當接近使用Mastodon ê siánn物功能kap區域。
+      description_html: 用<strong>用者角色</strong>，lí通自訂lí ê用者ē當接近使用Nutshell ê siánn物功能kap區域。
       edit: 編「%{name}」ê角色
       everyone: 預設ê權限
       everyone_full_description_html: Tse是ē影響<strong>所有用者</strong>ê<strong>基本角色</strong>，就算是無分配tio̍h角色ê mā kâng款。所有其他ê角色繼承伊ê權限。
@@ -822,27 +822,27 @@ nan-TW:
         rules_hint: Tse是關係lí ê用者應該遵守ê規則ê專區。
         title: 關係本站
       allow_referrer_origin:
-        desc: Nā是lí ê用者點連結kàu外部網站，in ê瀏覽器可能ē kā lí ê Mastodon服侍器ê地址當做流量ê來源送出。如果tse ē唯一區別lí ê用者，比如tse是個人ê Mastodon服侍器，請kā停止使用。
-        title: 允准外部網站kā lí ê Mastodon服侍器當做流量ê來源
+        desc: Nā是lí ê用者點連結kàu外部網站，in ê瀏覽器可能ē kā lí ê Nutshell服侍器ê地址當做流量ê來源送出。如果tse ē唯一區別lí ê用者，比如tse是個人ê Nutshell服侍器，請kā停止使用。
+        title: 允准外部網站kā lí ê Nutshell服侍器當做流量ê來源
       appearance:
-        preamble: 自訂Mastodon網頁ê界面。
+        preamble: 自訂Nutshell網頁ê界面。
         title: 外觀
       branding:
-        preamble: Lí ê服侍器品牌hōo伊kap別ê服侍器區別。Tsit ê資訊可能展示佇無kâng ê環境，比如Mastodon ê網頁界面、原底ê app、佇別站ê sing看連結ê所在kap佇通信app內底等。因為tsit ê緣故，上好kā資訊保持kah清楚、短koh簡要。
+        preamble: Lí ê服侍器品牌hōo伊kap別ê服侍器區別。Tsit ê資訊可能展示佇無kâng ê環境，比如Nutshell ê網頁界面、原底ê app、佇別站ê sing看連結ê所在kap佇通信app內底等。因為tsit ê緣故，上好kā資訊保持kah清楚、短koh簡要。
         title: 品牌
       captcha_enabled:
         desc_html: Tsit ê功能需要tuì hCaptcha來ê外部kha本，可能有安全kap隱私ê顧慮。另外，<strong>tse ē明顯降kē tsi̍t寡lâng（特別是障礙者）註冊ê容易程度</strong>。因為tsiah ê緣故，請考慮別ê替代方案，比如審核制á是邀請制ê註冊。
         title: 要求新ê用者解決CAPTCHA問題，來確認in ê口座
       content_retention:
         danger_zone: 危險ê所在
-        preamble: 控制使用者產生ê內容tiông佇Mastodon ê方法。
+        preamble: 控制使用者產生ê內容tiông佇Nutshell ê方法。
         title: 內容保存期間
       default_noindex:
         desc_html: 影響逐ê iáu buē改變tsit ê設定ê用者
         title: 預設kā用者tuì tshiau-tshuē ia̋n-jín ê索引排除
       discovery:
         follow_recommendations: 跟tuè建議
-        preamble: Kā心適ê內容浮現出來，ē當幫tsān tī Mastodon頂siáng lóng可能m̄知ê新手。控制tsē-tsē發現lí ê服侍器ê特色作品ê功能án-nuá運作。
+        preamble: Kā心適ê內容浮現出來，ē當幫tsān tī Nutshell頂siáng lóng可能m̄知ê新手。控制tsē-tsē發現lí ê服侍器ê特色作品ê功能án-nuá運作。
         privacy: 隱私權
         profile_directory: 個人資料ê目錄
         public_timelines: 公共ê時間線
@@ -885,7 +885,7 @@ nan-TW:
       destroyed_msg: 成功thâi掉傳上去kàu本站ê內容ah！
     software_updates:
       critical_update: 重要—請緊升級
-      description: 建議kā lí ê Mastodon安裝維持上新ê狀態，the̍h著上新ê修正kap功能。另外，隨時更新Mastodon有時陣真重要，ē當避免安全問題。因為tsiah-ê原因，Mastodon每30分鐘檢查更新，mā ē根據lí ê電子phue通知ê偏愛設定kā lí通知。
+      description: 建議kā lí ê Nutshell安裝維持上新ê狀態，the̍h著上新ê修正kap功能。另外，隨時更新Nutshell有時陣真重要，ē當避免安全問題。因為tsiah-ê原因，Nutshell每30分鐘檢查更新，mā ē根據lí ê電子phue通知ê偏愛設定kā lí通知。
       documentation_link: 看詳細
       release_notes: 版本ê資訊
       title: Ē當the̍h ê更新
@@ -953,7 +953,7 @@ nan-TW:
         message_html: Elasticsearch索引對應過期ah。請執行 <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: 看文件
-        message_html: Lí ê Elasticsearch ê cluster有超過tsi̍t ê節點，m̄-kú Mastodon iáu無設定用in。
+        message_html: Lí ê Elasticsearch ê cluster有超過tsi̍t ê節點，m̄-kú Nutshell iáu無設定用in。
       elasticsearch_preset_single_node:
         action: 看文件
         message_html: Lí ê Elasticsearch 叢集kan-ta有tsi̍t ê節點，<code>ES_PRESET</code> 應該設定做 <code>single_node_cluster</code>。
@@ -971,13 +971,13 @@ nan-TW:
         message_html: 排列 %{value} 無leh pháng Sidekiq ê程序。請檢視lí ê Sidekiq 設定
       software_version_check:
         action: 看ē當the̍h ê更新
-        message_html: 有Mastodon ê更新ē當載落去。
+        message_html: 有Nutshell ê更新ē當載落去。
       software_version_critical_check:
         action: 看ē當the̍h ê更新
-        message_html: 有重大ê Mastodon更新ē當載落去，請趕緊更新。
+        message_html: 有重大ê Nutshell更新ē當載落去，請趕緊更新。
       software_version_patch_check:
         action: 看ē當the̍h ê更新
-        message_html: 有修正錯誤ê Mastodon ê更新，ē當載落去。
+        message_html: 有修正錯誤ê Nutshell ê更新，ē當載落去。
       upload_check_privacy_error:
         action: 檢查tse，the̍h著其他資訊
         message_html: "<strong>Lí ê網頁服侍器設定錯誤。Lí ê服侍器ê隱私權有風險。</strong>"
@@ -1133,7 +1133,7 @@ nan-TW:
     webhooks:
       add_new: 加添端點
       delete: Thâi掉
-      description_html: "<strong>Webhook</strong> hōo Mastodon 通kā關係所揀ê事件ê<strong>即時通知</strong>sak kàu lí 家己ê應用程式，就án-ne lí ê應用程式ē當<strong>自動啟動反應</strong>。"
+      description_html: "<strong>Webhook</strong> hōo Nutshell 通kā關係所揀ê事件ê<strong>即時通知</strong>sak kàu lí 家己ê應用程式，就án-ne lí ê應用程式ē當<strong>自動啟動反應</strong>。"
       disable: 停止使用
       disabled: 停用ah
       edit: 編輯端點
@@ -1166,8 +1166,8 @@ nan-TW:
       next_steps: Lí通允准申訴來取消管理決定，á是kā忽略。
       subject: "%{username} teh tuì tī %{instance} 頂ê管理決定送申訴"
     new_critical_software_updates:
-      body: Mastodon 推出新ê重大版本，請liōng早升級！
-      subject: "%{instance} 有通the̍h ê Mastodon ê重大更新！"
+      body: Nutshell 推出新ê重大版本，請liōng早升級！
+      subject: "%{instance} 有通the̍h ê Nutshell ê重大更新！"
     new_pending_account:
       body: 下kha是新口座ê詳細。Lí通允准á是拒絕tsit ê申請。
       subject: "%{instance} 頂有新ê口座 (%{username}) 愛審查"
@@ -1176,8 +1176,8 @@ nan-TW:
       body_remote: Tuì %{domain} 來ê有檢舉 %{target}
       subject: "%{instance} ê 新檢舉（#%{id}）"
     new_software_updates:
-      body: Mastodon推出新ê版本ah，lí huân-sè想beh升級！
-      subject: "%{instance} 有通the̍h ê Mastodon ê新版本！"
+      body: Nutshell推出新ê版本ah，lí huân-sè想beh升級！
+      subject: "%{instance} 有通the̍h ê Nutshell ê新版本！"
     new_trends:
       body: 下kha ê項目愛審查，tsiah ē當公開顯示：
       new_trending_links:
@@ -1201,7 +1201,7 @@ nan-TW:
     boosting_preferences_info_html: "<strong>撇步：</strong>無論án-nuá設定，<kbd>Shift</kbd> + <kbd>Click</kbd> 佇%{icon} 轉送標á ē liâm-mī轉送。"
     discovery: 發現
     localization:
-      body: Mastodon是由志工翻譯。
+      body: Nutshell是由志工翻譯。
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Ta̍k家lóng ē當貢獻。
     sensitive_content: 敏感ê內容
@@ -1240,9 +1240,9 @@ nan-TW:
     delete_account: Thâi掉口座
     delete_account_html: Nā lí behthâi掉lí ê口座，lí ē當<a href="%{path}">ji̍h tsia繼續</a>。Lí著確認動作。
     description:
-      prefix_invited_by_user: "@%{name} 邀請lí加入tsit ê Mastodon 服侍器！"
-      prefix_sign_up: Tsit-má註冊Mastodon ê口座！
-      suffix: 有口座，lí當tuì ta̍k ê Mastodon 服侍器跟tuè lâng、PO更新kap交換訊息等等！
+      prefix_invited_by_user: "@%{name} 邀請lí加入tsit ê Nutshell 服侍器！"
+      prefix_sign_up: Tsit-má註冊Nutshell ê口座！
+      suffix: 有口座，lí當tuì ta̍k ê Nutshell 服侍器跟tuè lâng、PO更新kap交換訊息等等！
     didnt_get_confirmation: Kám無收著確認ê連結？
     dont_have_your_security_key: Lí iáu無安全鎖(security key)？
     forgot_password: 密碼be記得？
@@ -1279,7 +1279,7 @@ nan-TW:
     set_new_password: 設新ê密碼
     setup:
       email_below_hint_html: 請檢查lí ê pùn-sò phue資料giap-á，á是請求koh送tsi̍t改。Lí通改電子phue地址，nā是有出入。
-      email_settings_hint_html: 請tshi̍h guán送kàu %{email} ê連結，來開始用 Mastodon。Guán ē佇tsia等。
+      email_settings_hint_html: 請tshi̍h guán送kàu %{email} ê連結，來開始用 Nutshell。Guán ē佇tsia等。
       link_not_received: Kám iáu bē收著連結？
       new_confirmation_instructions_sent: Lí ē tī幾分鐘後收著新ê電子phue，有確認連結！
       title: 請檢查lí ê收件giap-á
@@ -1304,7 +1304,7 @@ nan-TW:
     user_privacy_agreement_html: 我有讀而且同意 <a href="%{privacy_policy_path}" target="_blank">隱私權政策</a>
   author_attribution:
     example_title: 見本文字
-    hint_html: Lí kám佇Mastodon外口寫新聞á是blog文章？控制當in佇Mastodon分享ê時陣，án-tsuánn表示作者資訊。
+    hint_html: Lí kám佇Nutshell外口寫新聞á是blog文章？控制當in佇Nutshell分享ê時陣，án-tsuánn表示作者資訊。
     instructions: 請確認lí ê文章HTML內底有tsit ê code：
     more_from_html: 看 %{name} ê其他內容
     s_blog: "%{name} ê Blog"
@@ -1412,7 +1412,7 @@ nan-TW:
       content: 歹勢，guán ê後臺出問題ah。
       title: Tsit頁無正確
     '503': Tsit頁bē當提供，因為服侍器暫時出tshê。
-    noscript_html: Beh用Mastodon web app，請拍開JavaScript。另外，請試Mastodon hōo lí ê平臺用ê <a href="%{apps_path}">app</a>。
+    noscript_html: Beh用Nutshell web app，請拍開JavaScript。另外，請試Nutshell hōo lí ê平臺用ê <a href="%{apps_path}">app</a>。
   existing_username_validator:
     not_found: bē當用tsit ê名tshuē著本地ê用者
     not_found_multiple: tshuē無 %{usernames}
@@ -1612,7 +1612,7 @@ nan-TW:
     unsubscribe:
       action: Hennh，mài訂
       complete: 無訂ah
-      confirmation_html: Lí kám確定beh取消訂 %{domain} ê Mastodon 內底 ê %{type} kàu lí ê電子批 %{email}？Lí ē當隨時對lí ê<a href="%{settings_path}">電子批通知設定</a>重訂。
+      confirmation_html: Lí kám確定beh取消訂 %{domain} ê Nutshell 內底 ê %{type} kàu lí ê電子批 %{email}？Lí ē當隨時對lí ê<a href="%{settings_path}">電子批通知設定</a>重訂。
       emails:
         notification_emails:
           favourite: 收藏通知電子批
@@ -1621,7 +1621,7 @@ nan-TW:
           mention: 提起通知電子批
           reblog: 轉送通知電子批
       resubscribe_html: Nā出tshê取消訂，lí通重訂tuì lí ê<a href="%{settings_path}">電子批通知設定</a>。
-      success_html: Lí bē koh收著佇 %{domain} ê Mastodon內底ê %{type} kàu lí ê電子批 %{email}。
+      success_html: Lí bē koh收著佇 %{domain} ê Nutshell內底ê %{type} kàu lí ê電子批 %{email}。
       title: 取消訂
   media_attachments:
     validations:
@@ -1760,13 +1760,13 @@ nan-TW:
     posting_defaults: PO文預設值
     public_timelines: 公共ê時間線
   privacy:
-    hint_html: "<strong>自訂lí beh án-nuá hōo lí ê個人資料kap PO文受lâng發現。</strong>Mastodon ê tsē-tsē功能nā是拍開，通幫tsān lí接觸kàu較闊ê觀眾。請開一寡時間重看tsiah ê設定，確認in合lí ê使用例。"
+    hint_html: "<strong>自訂lí beh án-nuá hōo lí ê個人資料kap PO文受lâng發現。</strong>Nutshell ê tsē-tsē功能nā是拍開，通幫tsān lí接觸kàu較闊ê觀眾。請開一寡時間重看tsiah ê設定，確認in合lí ê使用例。"
     privacy: 隱私權
     privacy_hint_html: 控制lí想欲為別lâng ê利益，公開guā tsē內容。Lâng用瀏覽別lâng ê跟tuè koh看in用啥物應用程式PO文，來發現心適ê個人資料kap時行ê應用程式，但是lí凡勢beh保持khàm起來。
     reach: 接觸
     reach_hint_html: 控制lí kám beh 受新lâng發現kap跟tuè。Lí kám beh予lí ê PO文出現佇探索ê頁？Lí kám 想beh予別lâng佇in ê新ê跟tuè建議內看著lí？Lí kám beh允准別lâng自動跟tuè lí，á是beh一ê一ê控制？
     search: Tshiau-tshuē
-    search_hint_html: 控制lí想beh予lâng發現ê方法。Lí kám beh予別lâng用lí公開PO文ê主題揣著lí？Lí kám beh予Mastodon以外ê lâng，佇網路tshiau-tshuē ê時，tshuē著lí ê個人資料？請注意，公開ê資訊bē當保證lóng總予所有tshiau-tshuē ia̋n-jín排除。
+    search_hint_html: 控制lí想beh予lâng發現ê方法。Lí kám beh予別lâng用lí公開PO文ê主題揣著lí？Lí kám beh予Nutshell以外ê lâng，佇網路tshiau-tshuē ê時，tshuē著lí ê個人資料？請注意，公開ê資訊bē當保證lóng總予所有tshiau-tshuē ia̋n-jín排除。
     title: 隱私kap資訊ê及至
   privacy_policy:
     title: 隱私權政策
@@ -1841,7 +1841,7 @@ nan-TW:
     current_session: 目前ê session
     date: 日期
     description: "%{platform} ê %{browser}"
-    explanation: Tsiah ê是當leh登入lí ê Mastodon 口座ê網頁瀏覽器。
+    explanation: Tsiah ê是當leh登入lí ê Nutshell 口座ê網頁瀏覽器。
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1867,7 +1867,7 @@ nan-TW:
     aliases: 口座ê別名
     appearance: 外觀
     authorized_apps: 受授權ê應用程式
-    back: 轉去Mastodon
+    back: 轉去Nutshell
     delete: Thâi掉口座
     development: 開發
     edit_profile: 編輯個人資料
@@ -1898,9 +1898,9 @@ nan-TW:
     visibilities:
       private: Kan-ta hōo跟tuè ê lâng
       public: 公開ê
-      public_long: 逐ê lâng（無論佇Mastodon以內á是以外）
+      public_long: 逐ê lâng（無論佇Nutshell以內á是以外）
       unlisted: 恬靜公開
-      unlisted_long: Mài顯示tī Mastodon ê tshiau-tshuē結果、趨勢kap公共ê時間線。
+      unlisted_long: Mài顯示tī Nutshell ê tshiau-tshuē結果、趨勢kap公共ê時間線。
   statuses_cleanup:
     enabled: 自動thâi掉舊ê PO文
     enabled_hint: PO文一下kàu指定ê期限，會自動thâi掉PO文，除非in符合下kha其中一个特例
@@ -1914,10 +1914,10 @@ nan-TW:
   terms_of_service:
     title: 服務規定
   themes:
-    default: Mastodon
+    default: Nutshell
   two_factor_authentication:
     disable: 停止用雙因素認證
   user_mailer:
     welcome:
-      feature_creativity: Mastodon支持聲音、影kap圖片êPO文、容易使用性ê描述、投票、內容ê警告、動畫ê標頭、自訂ê繪文字kap裁縮小圖ê控制等等，幫tsān lí展現家己。無論beh發表藝術作品、音樂，á是podcast，Mastodon佇tsia為lí服務。
+      feature_creativity: Nutshell支持聲音、影kap圖片êPO文、容易使用性ê描述、投票、內容ê警告、動畫ê標頭、自訂ê繪文字kap裁縮小圖ê控制等等，幫tsān lí展現家己。無論beh發表藝術作品、音樂，á是podcast，Nutshell佇tsia為lí服務。
       sign_in_action: 登入

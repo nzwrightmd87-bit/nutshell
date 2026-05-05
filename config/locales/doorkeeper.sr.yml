@@ -121,7 +121,7 @@ sr:
         admin/accounts: Администрација налога
         admin/all: Све функције администрације
         admin/reports: Администрација пријава
-        all: Потпуни приступ вашем Mastodon налогу
+        all: Потпуни приступ вашем Nutshell налогу
         blocks: Блокирани
         bookmarks: Обележивачи
         conversations: Разговори
@@ -134,7 +134,7 @@ sr:
         media: Мултимедијални прилози
         mutes: Игнорисани
         notifications: Обавештења
-        profile: Ваш Mastodon профил
+        profile: Ваш Nutshell профил
         push: Прослеђена обавештења
         reports: Пријаве
         search: Претрага

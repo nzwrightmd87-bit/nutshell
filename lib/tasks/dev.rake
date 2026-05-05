@@ -70,10 +70,10 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/600x400.png'),
-        description: 'Mastodon logo'
+        description: 'Nutshell logo'
       ).find_or_create_by!(id: 10_000_000)
       status_with_media = Status.create_with(
-        text: "This is a public status with a picture and tags. The attached picture has an alt text\n\n#Mastodon #Logo #English #Test",
+        text: "This is a public status with a picture and tags. The attached picture has an alt text\n\n#Nutshell #Logo #English #Test",
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public
@@ -84,10 +84,10 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/600x400.png'),
-        description: 'Mastodon logo'
+        description: 'Nutshell logo'
       ).find_or_create_by!(id: 10_000_001)
       status_with_sensitive_media = Status.create_with(
-        text: "This is the same public status with a picture and tags, but it is marked as sensitive. The attached picture has an alt text\n\n#Mastodon #Logo #English #Test",
+        text: "This is the same public status with a picture and tags, but it is marked as sensitive. The attached picture has an alt text\n\n#Nutshell #Logo #English #Test",
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public,
@@ -100,11 +100,11 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/600x400.png'),
-        description: 'Mastodon logo'
+        description: 'Nutshell logo'
       ).find_or_create_by!(id: 10_000_002)
       status_with_cw_media = Status.create_with(
-        text: "This is the same public status with a picture and tags, but it is behind a CW. The attached picture has an alt text\n\n#Mastodon #Logo #English #Test",
-        spoiler_text: 'Mastodon logo',
+        text: "This is the same public status with a picture and tags, but it is behind a CW. The attached picture has an alt text\n\n#Nutshell #Logo #English #Test",
+        spoiler_text: 'Nutshell logo',
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public,
@@ -117,10 +117,10 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/boop.ogg'),
-        description: 'Mastodon boop'
+        description: 'Nutshell boop'
       ).find_or_create_by!(id: 10_000_003)
       status_with_audio = Status.create_with(
-        text: "This is the same public status with an audio file and tags. The attached picture has an alt text\n\n#Mastodon #English #Test",
+        text: "This is the same public status with an audio file and tags. The attached picture has an alt text\n\n#Nutshell #English #Test",
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public,
@@ -132,10 +132,10 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/boop.ogg'),
-        description: 'Mastodon boop'
+        description: 'Nutshell boop'
       ).find_or_create_by!(id: 10_000_004)
       status_with_sensitive_audio = Status.create_with(
-        text: "This is the same public status with an audio file and tags, but it is marked as sensitive. The attached picture has an alt text\n\n#Mastodon #English #Test",
+        text: "This is the same public status with an audio file and tags, but it is marked as sensitive. The attached picture has an alt text\n\n#Nutshell #English #Test",
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public,
@@ -148,11 +148,11 @@ namespace :dev do
       media_attachment = MediaAttachment.create_with(
         account: showcase_account,
         file: File.open('spec/fixtures/files/boop.ogg'),
-        description: 'Mastodon boop'
+        description: 'Nutshell boop'
       ).find_or_create_by!(id: 10_000_005)
       status_with_cw_audio = Status.create_with(
-        text: "This is the same public status with an audio file and tags, but it is behind a CW. The attached picture has an alt text\n\n#Mastodon #English #Test",
-        spoiler_text: 'Mastodon boop',
+        text: "This is the same public status with an audio file and tags, but it is behind a CW. The attached picture has an alt text\n\n#Nutshell #English #Test",
+        spoiler_text: 'Nutshell boop',
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public,
@@ -166,7 +166,7 @@ namespace :dev do
         MediaAttachment.create_with(
           account: showcase_account,
           file: File.open('spec/fixtures/files/600x400.png'),
-          description: 'Mastodon logo'
+          description: 'Nutshell logo'
         ).find_or_create_by!(id: 10_000_006),
         MediaAttachment.create_with(
           account: showcase_account,
@@ -180,11 +180,11 @@ namespace :dev do
         MediaAttachment.create_with(
           account: showcase_account,
           file: File.open('spec/fixtures/files/text.png'),
-          description: 'Text saying “Hello Mastodon”'
+          description: 'Text saying “Hello Nutshell”'
         ).find_or_create_by!(id: 10_000_009),
       ]
       status_with_multiple_attachments = Status.create_with(
-        text: "This is a post with multiple attachments, not all of which have a description\n\n#Mastodon #English #Test",
+        text: "This is a post with multiple attachments, not all of which have a description\n\n#Nutshell #English #Test",
         spoiler_text: 'multiple attachments',
         ordered_media_attachment_ids: media_attachments.pluck(:id),
         account: showcase_account,
@@ -349,8 +349,8 @@ namespace :dev do
       StatusPin.create_with(account: showcase_account, status: private_mentionless).find_or_create_by!(id: 10_000_001)
 
       showcase_account.update!(
-        display_name: 'Mastodon test/showcase account',
-        note: 'Test account to showcase many Mastodon features. Most of its posts are public, but some are private!'
+        display_name: 'Nutshell test/showcase account',
+        note: 'Test account to showcase many Nutshell features. Most of its posts are public, but some are private!'
       )
 
       remote_quote = Status.create_with(
@@ -377,7 +377,7 @@ namespace :dev do
         file: File.open('spec/fixtures/files/attachment.jpg')
       ).find_or_create_by!(id: 10_000_010)
       quote_post_with_media = Status.create_with(
-        text: "This is a status with a picture and tags which also quotes a status with a picture.\n\n#Mastodon #Test",
+        text: "This is a status with a picture and tags which also quotes a status with a picture.\n\n#Nutshell #Test",
         ordered_media_attachment_ids: [media_attachment.id],
         account: showcase_account,
         visibility: :public

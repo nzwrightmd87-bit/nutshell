@@ -122,7 +122,7 @@ ia:
         admin/accounts: Gestion de contos
         admin/all: Tote le functiones administrative
         admin/reports: Gestion de reportos
-        all: Accesso complete a tu conto de Mastodon
+        all: Accesso complete a tu conto de Nutshell
         blocks: Blocadas
         bookmarks: Marcapaginas
         conversations: Conversationes
@@ -135,7 +135,7 @@ ia:
         media: Annexos multimedial
         mutes: Silentiates
         notifications: Notificationes
-        profile: Tu profilo de Mastodon
+        profile: Tu profilo de Nutshell
         push: Notificationes push
         reports: Reportos
         search: Cercar

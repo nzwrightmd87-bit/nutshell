@@ -188,7 +188,7 @@ RSpec.describe ActivityPub::Activity::Update do
           :status,
           uri: 'https://example.com/statuses/article',
           account: sender,
-          text: "<h2>Future of the Fediverse</h2>\n\n<p>Guest article by John Mastodon</p><p>The fediverse is great reading this you will find out why!</p>"
+          text: "<h2>Future of the Fediverse</h2>\n\n<p>Guest article by John Nutshell</p><p>The fediverse is great reading this you will find out why!</p>"
         )
       end
 
@@ -202,7 +202,7 @@ RSpec.describe ActivityPub::Activity::Update do
             type: 'Article',
             id: status.uri,
             name: 'Future of the Fediverse',
-            summary: '<p>Guest article by Jane Mastodon</p><p>The fediverse is great reading this you will find out why!</p>',
+            summary: '<p>Guest article by Jane Nutshell</p><p>The fediverse is great reading this you will find out why!</p>',
             content: 'Foo',
             updated: updated,
             likes: {
@@ -252,7 +252,7 @@ RSpec.describe ActivityPub::Activity::Update do
           expect { subject.perform }
             .to(change { status.reload.text })
 
-          expect(status.text).to start_with("<h2>Future of the Fediverse</h2>\n\n<p>Guest article by Jane Mastodon</p><p>The fediverse is great reading this you will find out why!</p>")
+          expect(status.text).to start_with("<h2>Future of the Fediverse</h2>\n\n<p>Guest article by Jane Nutshell</p><p>The fediverse is great reading this you will find out why!</p>")
         end
       end
     end

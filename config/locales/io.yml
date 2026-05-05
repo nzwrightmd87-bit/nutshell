@@ -1,10 +1,10 @@
 ---
 io:
   about:
-    about_mastodon_html: Mastodon esas <em>gratuita, apertitkodexa</em> sociala reto. Ol esas <em>sencentra</em> altra alternativo a komercala servadi. Ol evitigas, ke sola firmo guvernez tua tota komunikadol. Selektez servero, quan tu fidas. Irge qua esas tua selekto, tu povas komunikar kun omna altra uzeri. Irgu povas krear sua propra instaluro di Mastodon en sua servero, e partoprenar en la <em>sociala reto</em> tote glate.
+    about_mastodon_html: Nutshell esas <em>gratuita, apertitkodexa</em> sociala reto. Ol esas <em>sencentra</em> altra alternativo a komercala servadi. Ol evitigas, ke sola firmo guvernez tua tota komunikadol. Selektez servero, quan tu fidas. Irge qua esas tua selekto, tu povas komunikar kun omna altra uzeri. Irgu povas krear sua propra instaluro di Nutshell en sua servero, e partoprenar en la <em>sociala reto</em> tote glate.
     contact_missing: Ne fixigita
     contact_unavailable: Nula
-    hosted_on: Mastodon hostigesas che %{domain}
+    hosted_on: Nutshell hostigesas che %{domain}
     title: Pri co
   accounts:
     followers:
@@ -698,7 +698,7 @@ io:
         moderation: Jero
         special: Specala
       delete: Efacez
-      description_html: Per <strong>uzantoroli</strong>, vu povas kustumizar funciono e siti di Mastodon quon vua uzanti povas uzar.
+      description_html: Per <strong>uzantoroli</strong>, vu povas kustumizar funciono e siti di Nutshell quon vua uzanti povas uzar.
       edit: Redaktar rolo di '%{name}'
       everyone: Originala permisi
       everyone_full_description_html: Co esas <strong>bazrolo</strong> quo efektigas <strong>omna uzanti</strong>, mem personi sen rolo. Omna altra roli ganas sama permisi de ol.
@@ -761,7 +761,7 @@ io:
         rules_hint: Havas partikulara areo por reguli quo uzanti expektesar sequar.
         title: Pri co
       appearance:
-        preamble: Kustumizitez retintervizajo di Mastodon.
+        preamble: Kustumizitez retintervizajo di Nutshell.
         title: Aspekto
       branding:
         preamble: Fabrikmarko di ca servilo diferentigas lu de altra servili en la reto. Ca informi forsan montresas che diversa loki. Do, ca informi debas esar klara.
@@ -771,7 +771,7 @@ io:
         title: Postular ke nova uzanti solvos CAPTCHA por konfirmar lia konti
       content_retention:
         danger_zone: Danjerzono
-        preamble: Selektar quale uzantigita kontenajo retenesar en Mastodon.
+        preamble: Selektar quale uzantigita kontenajo retenesar en Nutshell.
         title: Kontenajreteneso
       default_noindex:
         desc_html: Efektigas omna uzanti qui ne personale chanjis ca opciono
@@ -808,7 +808,7 @@ io:
       destroyed_msg: Reteyadkargo sucese forigesis!
     software_updates:
       critical_update: Urjanta — voluntez aktualigar rapide
-      description: On rekomendesis lasar Mastodon-instalo esar tildatigita por bone ganar maxim nova repari e traiti. Do, Mastodon kontrolas tildatigi ye singla 30 minuti, e savigos vu segun vua retpostosavigpreferi.
+      description: On rekomendesis lasar Nutshell-instalo esar tildatigita por bone ganar maxim nova repari e traiti. Do, Nutshell kontrolas tildatigi ye singla 30 minuti, e savigos vu segun vua retpostosavigpreferi.
       documentation_link: Lernez pluse
       release_notes: Emiso-noti
       title: Aktualigi disponebla
@@ -870,7 +870,7 @@ io:
         message_html: Elastiksercharo es nekapabla, vu darfas volar inquestar la motivo
       elasticsearch_preset:
         action: Videz la dokumentajo
-        message_html: Vua elastiksercharo havas plu kam un nodo, ma Mastodon ne povas uzar ili.
+        message_html: Vua elastiksercharo havas plu kam un nodo, ma Nutshell ne povas uzar ili.
       elasticsearch_preset_single_node:
         action: Videz la dokumentajo
         message_html: Vua elastiksercharo havas nur un nodo, <code>ES_PRESET</code> devas fixesesar ad <code>single_node_cluster</code>.
@@ -888,13 +888,13 @@ io:
         message_html: Sidekiq procedo ne funcionas ye %{value} fask(o)
       software_version_check:
         action: Vidar disponebla tildatigi
-        message_html: Mastodon-tildatigo es disponebla.
+        message_html: Nutshell-tildatigo es disponebla.
       software_version_critical_check:
         action: Videz la aktualigi disponebla
-        message_html: Urjanta Mastodon-aktualigo es disponebla, voluntez aktualigar la servilo tam rapide kam es posibla.
+        message_html: Urjanta Nutshell-aktualigo es disponebla, voluntez aktualigar la servilo tam rapide kam es posibla.
       software_version_patch_check:
         action: Videz la aktualigi disponebla
-        message_html: Problemosolvanta Mastodon-aktualigo es disponebla.
+        message_html: Problemosolvanta Nutshell-aktualigo es disponebla.
       upload_check_privacy_error:
         action: Konsultez hike por plu multa informo
         message_html: "<strong>Vua retservilo es misfigurizita. La privateso di vua uzanti es domajebla.</strong>"
@@ -1032,7 +1032,7 @@ io:
     webhooks:
       add_new: Adjuntar finpunto
       delete: Efacez
-      description_html: "<strong>Rethoko</strong> povigas Mastodon sendar <strong>samtempoavizi</strong> pri selektita eventi a vua sua apliko, por ke vua apliko povas <strong>automate kauzigar reakti</strong>."
+      description_html: "<strong>Rethoko</strong> povigas Nutshell sendar <strong>samtempoavizi</strong> pri selektita eventi a vua sua apliko, por ke vua apliko povas <strong>automate kauzigar reakti</strong>."
       disable: Desebligar
       disabled: Desebligita
       edit: Redaktar finpunto
@@ -1065,8 +1065,8 @@ io:
       next_steps: Vu povas aprobar apelo por deagar jerdecido o ignorar.
       subject: "%{username} apela jerdecido che %{instance}"
     new_critical_software_updates:
-      body: Nova urjanta versioni di Mastodon emisesis, vu forsan volas aktualigar tam balde kam es posibla!
-      subject: Urjanta Mastodon-aktualigi es disponebla por %{instance}!
+      body: Nova urjanta versioni di Nutshell emisesis, vu forsan volas aktualigar tam balde kam es posibla!
+      subject: Urjanta Nutshell-aktualigi es disponebla por %{instance}!
     new_pending_account:
       body: Detali de nova konto esas la subo. Vu povas aprobar o refuzar ca apliko.
       subject: Nova konto bezonas kontrolesar che %{instance} (%{username})
@@ -1075,8 +1075,8 @@ io:
       body_remote: Ulu de %{domain} raportizis %{target}
       subject: Nova raporto por %{instance} (#%{id})
     new_software_updates:
-      body: Nova Mastodon-versioni emisesis, vu forsan volas aktualigar!
-      subject: Nova Mastodon-versioni es disponebla por %{instance}!
+      body: Nova Nutshell-versioni emisesis, vu forsan volas aktualigar!
+      subject: Nova Nutshell-versioni es disponebla por %{instance}!
     new_trends:
       body: 'Ca kozi bezonas kontrol ante ol povas montresar publike:'
       new_trending_links:
@@ -1097,7 +1097,7 @@ io:
     animations_and_accessibility: Animi e adirebleso
     discovery: Deskovro
     localization:
-      body: Mastodon tradukesas da voluntarii.
+      body: Nutshell tradukesas da voluntarii.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Omnu povas kontributar.
     sensitive_content: Sentoza kontenajo
@@ -1135,9 +1135,9 @@ io:
     delete_account: Efacez konto
     delete_account_html: Se vu volas efacar vua konto, vu povas <a href="%{path}">irar hike</a>. Vu demandesos konfirmar.
     description:
-      prefix_invited_by_user: "@%{name} invitas vu adeskar ca servilo di Mastodon!"
-      prefix_sign_up: Registrez che Mastodon hodie!
-      suffix: Per konto, vu povos sequar personi, postigar novaji e interchanjar mesaji kun uzanti de irga servilo di Mastodon e plu multo!
+      prefix_invited_by_user: "@%{name} invitas vu adeskar ca servilo di Nutshell!"
+      prefix_sign_up: Registrez che Nutshell hodie!
+      suffix: Per konto, vu povos sequar personi, postigar novaji e interchanjar mesaji kun uzanti de irga servilo di Nutshell e plu multo!
     didnt_get_confirmation: Ka vu ne recevis konfirmoligilo?
     dont_have_your_security_key: Ka vu ne havas sekuresklefo?
     forgot_password: Pasvorto obliviita?
@@ -1174,7 +1174,7 @@ io:
     set_new_password: Selektar nova pasvorto
     setup:
       email_below_hint_html: Kontrolez vua spamdosieruyo, o demandez altra ligilo.
-      email_settings_hint_html: Klikez la ligilo quan ni sendis ad %{email} por komencar uzar Mastodon.
+      email_settings_hint_html: Klikez la ligilo quan ni sendis ad %{email} por komencar uzar Nutshell.
       link_not_received: Ka vu ne recevis ligilo?
       new_confirmation_instructions_sent: Vu recevos nova retposto kun la konfirmligilo pos kelka minuti!
       title: Kontrolez vua retposti
@@ -1183,7 +1183,7 @@ io:
       title: Enirez a %{domain}
     sign_up:
       manual_review: Registragi che %{domain} es revuata da nia personaro. Por helpar ni traktar vua aplikajo, skribez kelko pri vu e pro quo vu volas konto che %{domain}.
-      preamble: Per konto en ca servilo di Mastodon, on povas sequar irga persono en ca fediverso, ne ye ube ona konto gastigesis.
+      preamble: Per konto en ca servilo di Nutshell, on povas sequar irga persono en ca fediverso, ne ye ube ona konto gastigesis.
       title: Ni komencigez vu en %{domain}.
     status:
       account_status: Kontostando
@@ -1199,7 +1199,7 @@ io:
     user_privacy_agreement_html: Me lektas e konsentas <a href="%{privacy_policy_path}" target="_blank">privatesguidilo</a>
   author_attribution:
     example_title: Exemplotexto
-    hint_html: Ka vu skribas novaji o blogartikli ne en Mastodon?
+    hint_html: Ka vu skribas novaji o blogartikli ne en Nutshell?
     instructions: 'Certigez ke ca kodexo es en HTML di vua artiklo:'
     more_from_html: Plu de %{name}
     s_blog: Blogo di %{name}
@@ -1593,7 +1593,7 @@ io:
     reach: Atingo
     reach_hint_html: Selektar ka vu volas deskovresar e sequesar da nova personi. Ka vu volas altra personi vidar vu en ilia sequrekomendi?
     search: Sercho
-    search_hint_html: Selektar quale vu volas trovesar. Ka vu volas personi ne ek Mastodon trovar vua profilo kande serchar la interreto?
+    search_hint_html: Selektar quale vu volas trovesar. Ka vu volas personi ne ek Nutshell trovar vua profilo kande serchar la interreto?
     title: Privateso e atingo
   privacy_policy:
     title: Privatesguidilo
@@ -1663,7 +1663,7 @@ io:
       weibo: Weibo
     current_session: Nuna sesiono
     description: "%{browser} che %{platform}"
-    explanation: Co esas retvidili quo nun konektesis a vua konto di Mastodon.
+    explanation: Co esas retvidili quo nun konektesis a vua konto di Nutshell.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1689,7 +1689,7 @@ io:
     aliases: Kontoaltnomi
     appearance: Aspekto
     authorized_apps: Yurizita apliki
-    back: Retro a Mastodon
+    back: Retro a Nutshell
     delete: Kontoefaco
     development: Developo
     edit_profile: Redaktar la profilo
@@ -1854,10 +1854,10 @@ io:
       apps_ios_action: Deskargez sur la aplikajbutiko
       apps_step: Deskargez nia oficala aplikaji.
       explanation: Subo esas guidilo por helpar vu komencar
-      feature_creativity: Mastodon subtenas sono, video e imajafishi, adirpriskribi, votinquesti, enhavajaverti, anima imaji, personesigita emocimaji, imajettranchregulado e plu multo por helpar on expresar su enrete.
-      feature_moderation: Mastodon adportas decidebleso ad on. Adeskez servilo kun reguli quan vu akordas o gastigas vua sua kozo.
+      feature_creativity: Nutshell subtenas sono, video e imajafishi, adirpriskribi, votinquesti, enhavajaverti, anima imaji, personesigita emocimaji, imajettranchregulado e plu multo por helpar on expresar su enrete.
+      feature_moderation: Nutshell adportas decidebleso ad on. Adeskez servilo kun reguli quan vu akordas o gastigas vua sua kozo.
       post_step: Salutez per texto, fotografi, videi o votinquesti.
-      subject: Bonveno a Mastodon
+      subject: Bonveno a Nutshell
       title: Bonveno, %{name}!
   users:
     follow_limit_reached: Vu ne povas sequar plu kam %{limit} personi

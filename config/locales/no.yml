@@ -1,10 +1,10 @@
 ---
 'no':
   about:
-    about_mastodon_html: Mastodon er et sosialt nettverk laget med <em>fri programvare</em>. Et <em>desentralisert</em> alternativ til kommersielle plattformer. Slik kan det unngå risikoene ved å ha et enkelt selskap som monopoliserer din kommunikasjon. Velg en tjener du stoler på &mdash; uansett hvilken du velger så kan du kommunisere med alle andre. Alle kan kjøre sin egen Mastodon og delta sømløst i det sosiale nettverket.
+    about_mastodon_html: Nutshell er et sosialt nettverk laget med <em>fri programvare</em>. Et <em>desentralisert</em> alternativ til kommersielle plattformer. Slik kan det unngå risikoene ved å ha et enkelt selskap som monopoliserer din kommunikasjon. Velg en tjener du stoler på &mdash; uansett hvilken du velger så kan du kommunisere med alle andre. Alle kan kjøre sin egen Nutshell og delta sømløst i det sosiale nettverket.
     contact_missing: Ikke innstilt
     contact_unavailable: Ikke tilgjengelig
-    hosted_on: Mastodon driftet på %{domain}
+    hosted_on: Nutshell driftet på %{domain}
     title: Om
   accounts:
     followers:
@@ -650,7 +650,7 @@
         moderation: Moderering
         special: Spesiell
       delete: Slett
-      description_html: Med <strong>brukerroller</strong>kan du tilpasse hvilke funksjoner og områder av Mastodon dine brukere har tilgang til.
+      description_html: Med <strong>brukerroller</strong>kan du tilpasse hvilke funksjoner og områder av Nutshell dine brukere har tilgang til.
       edit: Rediger rollen '%{name}'
       everyone: Standard-tillatelser
       everyone_full_description_html: Dette er <strong>basis-rollen</strong> som påvirker <strong>alle brukere</strong>, selv de uten en tilordnet rolle. Alle andre roller arver tillatelser fra den.
@@ -711,16 +711,16 @@
         rules_hint: Det er et eget område for regler som brukerne skal følge her.
         title: Om
       appearance:
-        preamble: Tilpass Mastodons webgrensesnitt.
+        preamble: Tilpass Nutshells webgrensesnitt.
         title: Utseende
       branding:
-        preamble: Serverens merkevarebygging skiller den fra andre servere i nettverket. Denne informasjonen kan vises på tvers av en rekke miljøer, for eksempel Mastodons webgrensesnitt, native applikasjoner, i forhåndsvisning av lenker på andre nettsteder og i meldingsapper, osv. Av denne grunn er det best å holde denne informasjonen klar, kort og kortfattet.
+        preamble: Serverens merkevarebygging skiller den fra andre servere i nettverket. Denne informasjonen kan vises på tvers av en rekke miljøer, for eksempel Nutshells webgrensesnitt, native applikasjoner, i forhåndsvisning av lenker på andre nettsteder og i meldingsapper, osv. Av denne grunn er det best å holde denne informasjonen klar, kort og kortfattet.
         title: Merkevare
       captcha_enabled:
         desc_html: Dette er avhengig av eksterne skript fra hCaptcha, som kan være et sikkerhets- og personvernproblem.<strong> I tillegg kan dette gjøre registreringsprosessen betydelig mindre tilgjengelig for noen (spesielt funksjonshemmede) personer</strong>. Av disse grunnene bør du vurdere alternative tiltak som godkjenningsbasert eller invitasjonsbasert registrering.
         title: Krev at nye brukere løser en CAPTCHA for å bekrefte kontoen sin
       content_retention:
-        preamble: Kontroller hvordan brukergenerert innhold lagres i Mastodon.
+        preamble: Kontroller hvordan brukergenerert innhold lagres i Nutshell.
         title: Oppbevaring av innhold
       default_noindex:
         desc_html: Påvirker alle brukerne som ikke selv har justert denne innstillingen
@@ -812,7 +812,7 @@
         message_html: Elasticsearch indeksen ("index mappings") er utdatert. Vennligst kjør <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Se dokumentasjon
-        message_html: Din Elasticsearch-klynge har mer enn en node, men Mastodon er ikke konfigurert til å bruke dem.
+        message_html: Din Elasticsearch-klynge har mer enn en node, men Nutshell er ikke konfigurert til å bruke dem.
       elasticsearch_preset_single_node:
         action: Se dokumentasjon
         message_html: Din Elasticsearch-klynge har bare en node, <code>ES_PRESET</code> bør settes til <code>single_node_cluster</code>.
@@ -830,10 +830,10 @@
         message_html: Ingen Sidekiq-prosess kjører for %{value} køen(e). Vennligst se gjennom Sidekiq-konfigurasjonen din
       software_version_critical_check:
         action: Se tilgjengelige oppdateringer
-        message_html: En kritisk oppdatering av Mastodon er tilgjengelig. Vennligst oppdater så raskt som mulig.
+        message_html: En kritisk oppdatering av Nutshell er tilgjengelig. Vennligst oppdater så raskt som mulig.
       software_version_patch_check:
         action: Se tilgjengelige oppdateringer
-        message_html: En oppdatering av Mastodon som inneholder feilrettinger er tilgjengelig.
+        message_html: En oppdatering av Nutshell som inneholder feilrettinger er tilgjengelig.
       upload_check_privacy_error:
         action: Sjekk her for mer informasjon
         message_html: "<strong>Webserveren din er feilkonfigurert. Personvernet til brukerne dine er i fare.</strong>"
@@ -932,7 +932,7 @@
     webhooks:
       add_new: Legg til endepunkt
       delete: Slett
-      description_html: En <strong>webhook</strong> gjør det mulig for Mastodon å dytte <strong>varsler i sanntid</strong> om utvalgte arrangementer til din egen applikasjon, Derfor kan søknaden din <strong>utløse reaksjoner</strong> automatisk.
+      description_html: En <strong>webhook</strong> gjør det mulig for Nutshell å dytte <strong>varsler i sanntid</strong> om utvalgte arrangementer til din egen applikasjon, Derfor kan søknaden din <strong>utløse reaksjoner</strong> automatisk.
       disable: Deaktiver
       disabled: Deaktivert
       edit: Rediger sluttpunkt
@@ -965,8 +965,8 @@
       next_steps: Du kan godkjenne anken for å angre på moderasjonsvedtaket eller ignorere det.
       subject: "%{username} anker en moderasjonsbeslutning for %{instance}"
     new_critical_software_updates:
-      body: Nye kritiske versjoner av Mastodon har blitt utgitt, det kan være fordelaktig å oppdatere så snart som mulig!
-      subject: Kritiske Mastodon-oppdateringer er tilgjengelige for %{instance}!
+      body: Nye kritiske versjoner av Nutshell har blitt utgitt, det kan være fordelaktig å oppdatere så snart som mulig!
+      subject: Kritiske Nutshell-oppdateringer er tilgjengelige for %{instance}!
     new_pending_account:
       body: Detaljer om den nye kontoen er nedenfor. Du kan godkjenne eller avvise denne søknaden.
       subject: Ny konto opp til vurdering på %{instance} (%{username})
@@ -975,8 +975,8 @@
       body_remote: Noen fra %{domain} har rapportert %{target}
       subject: Ny rapport for %{instance} (#%{id})
     new_software_updates:
-      body: Nye versjoner av Mastodoner har blitt utgitt, du ønsker kanskje å oppdatere!
-      subject: Nye versjoner av Mastodon er tilgjengelige for %{instance}!
+      body: Nye versjoner av Nutsheller har blitt utgitt, du ønsker kanskje å oppdatere!
+      subject: Nye versjoner av Nutshell er tilgjengelige for %{instance}!
     new_trends:
       body: 'Følgende elementer trenger en gjennomgang før de kan vises offentlig:'
       new_trending_links:
@@ -997,7 +997,7 @@
     animations_and_accessibility: Animasjoner og tilgjengelighet
     discovery: Oppdagelse
     localization:
-      body: Mastodon er oversatt av frivillige.
+      body: Nutshell er oversatt av frivillige.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Alle kan bidra.
     sensitive_content: Følsomt innhold
@@ -1032,9 +1032,9 @@
     delete_account: Slett konto
     delete_account_html: Hvis du ønsker å slette kontoen din, kan du <a href="%{path}">gå hit</a>. Du vil bli spurt om bekreftelse.
     description:
-      prefix_invited_by_user: "@%{name} inviterer deg til å bli med på denne serveren til Mastodon!"
-      prefix_sign_up: Registrer deg på Mastodon i dag!
-      suffix: Med en konto, vil kunne følge folk, skrive innlegg, og utveksle meldinger med brukere fra enhver Mastodon-tjener, og mer til!
+      prefix_invited_by_user: "@%{name} inviterer deg til å bli med på denne serveren til Nutshell!"
+      prefix_sign_up: Registrer deg på Nutshell i dag!
+      suffix: Med en konto, vil kunne følge folk, skrive innlegg, og utveksle meldinger med brukere fra enhver Nutshell-tjener, og mer til!
     didnt_get_confirmation: Mottok du ikke en bekreftelseslenke?
     dont_have_your_security_key: Har du ikke sikkerhetsnøkkelen din?
     forgot_password: Har du glemt passordet ditt?
@@ -1174,7 +1174,7 @@
       content: Beklager men noe gikk galt ved vår ende.
       title: Denne siden er ikke korrekt
     '503': Siden kunne ikke vises på grunn av en midlertidig serverfeil.
-    noscript_html: For å bruke Mastodon webapplikasjon må du aktivere JavaScript. Alternativt kan du forsøke en av de mange <a href="%{apps_path}">integrerte appene</a> for Mastodon til din plattform.
+    noscript_html: For å bruke Nutshell webapplikasjon må du aktivere JavaScript. Alternativt kan du forsøke en av de mange <a href="%{apps_path}">integrerte appene</a> for Nutshell til din plattform.
   existing_username_validator:
     not_found: kunne ikke finne en lokal bruker med det brukernavnet
     not_found_multiple: klarte ikke å finne %{usernames}
@@ -1469,13 +1469,13 @@
     posting_defaults: Innleggsstandarder
     public_timelines: Offentlige tidslinjer
   privacy:
-    hint_html: "<strong>Tilpass hvordan du vil at din profil og dine innlegg skal bli funnet.</strong> En rekke funksjoner i Mastodon kan hjelpe deg med å nå et bredere publikum når det er aktivert. Ta deg et øyeblikk til å vurdere disse innstillingene for å forsikre deg om at de passer deg og ditt bruk."
+    hint_html: "<strong>Tilpass hvordan du vil at din profil og dine innlegg skal bli funnet.</strong> En rekke funksjoner i Nutshell kan hjelpe deg med å nå et bredere publikum når det er aktivert. Ta deg et øyeblikk til å vurdere disse innstillingene for å forsikre deg om at de passer deg og ditt bruk."
     privacy: Personvern
     privacy_hint_html: Kontrollér hvor mye du ønsker å dele til fordel for andre. Folk oppdager interessante profiler og kule app'er ved å bla gjennom andres følgere og ved å se hvilke app'er de bruker, men du kan velge å holde det skjult.
     reach: Rekkevidde
     reach_hint_html: Kontrollér om du ønsker å kunne bli oppdaget og fulgt av nye personer. Vil du at dine innlegg vises på Utforsk-siden? Vil du at andre personer skal kunne se deg i sine følgeranbefalinger? Vil du akseptere alle nye følgere automatisk, eller godkjenne hver enkelt?
     search: Søk
-    search_hint_html: Kontrollér hvordan du ønsker å bli oppdaget. Vil du at folk skal kunne finne deg basert på dine offentlige innlegg? Vil du at personer utenfor Mastodon skal kunne finne din profil når de søker på nettet? Vennligst husk at en total utestengelse fra alle søkemotorer ikke kan garanteres for offentlig informasjon.
+    search_hint_html: Kontrollér hvordan du ønsker å bli oppdaget. Vil du at folk skal kunne finne deg basert på dine offentlige innlegg? Vil du at personer utenfor Nutshell skal kunne finne din profil når de søker på nettet? Vennligst husk at en total utestengelse fra alle søkemotorer ikke kan garanteres for offentlig informasjon.
     title: Personvern og rekkevidde
   privacy_policy:
     title: Retningslinjer for personvern
@@ -1549,7 +1549,7 @@
     current_session: Nåværende økt
     date: Dato
     description: "%{browser} på %{platform}"
-    explanation: Dette er nettlesere som er pålogget på din Mastodon-konto akkurat nå.
+    explanation: Dette er nettlesere som er pålogget på din Nutshell-konto akkurat nå.
     ip: IP-adresse
     platforms:
       adobe_air: Adobe Air
@@ -1575,7 +1575,7 @@
     aliases: Kontoaliaser
     appearance: Utseende
     authorized_apps: Autoriserte applikasjoner
-    back: Tilbake til Mastodon
+    back: Tilbake til Nutshell
     delete: Kontosletting
     development: Utvikling
     edit_profile: Endre profil
@@ -1703,7 +1703,7 @@
       subtitle: Anken din har blitt avvist.
       title: Anke avvist
     backup_ready:
-      explanation: Du etterspurte en fullstendig sikkerhetskopi av din Mastodon-konto.
+      explanation: Du etterspurte en fullstendig sikkerhetskopi av din Nutshell-konto.
       extra: Den er nå klar for nedlasting!
       subject: Arkivet ditt er klart til å lastes ned
       title: Nedlasting av arkiv
@@ -1755,7 +1755,7 @@
       apps_android_action: Få den på Google Play
       apps_ios_action: Last ned på App Store
       apps_step: Last ned våre offisielle apper.
-      apps_title: Mastodon-apper
+      apps_title: Nutshell-apper
       checklist_title: Velkomst-sjekkliste
       edit_profile_action: Tilpass
       edit_profile_title: Tilpass profilen din
@@ -1772,10 +1772,10 @@
       post_action: Sett sammen
       post_step: Si hallo til verdenen med tekst, bilder, videoer, eller meningsmålinger.
       post_title: Lag ditt første innlegg
-      share_step: La vennene dine vite hvordan finne deg på Mastodon.
+      share_step: La vennene dine vite hvordan finne deg på Nutshell.
       share_title: Del Mastadon-profilen din
       sign_in_action: Logg inn
-      subject: Velkommen til Mastodon
+      subject: Velkommen til Nutshell
       title: Velkommen ombord, %{name}!
   users:
     follow_limit_reached: Du kan ikke følge mer enn %{limit} personer
@@ -1787,7 +1787,7 @@
   verification:
     extra_instructions_html: <strong>Tips:</strong> Lenken på din nettside kan være usynlig. Den viktige delen er <code>rel="me"</code> som sikrer at nettsteder med brukergenerert innhold ikke kan utgi seg for å være deg. Du kan til og med bruke en <code>link</code> lenke i sidens topptekst i stedet for <code>a</code>, men HTML-koden må være tilgjengelig uten å kjøre JavaScript.
     here_is_how: Slik gjør du
-    hint_html: "<strong>Verifisering av identiteten din på Mastodon er for alle.</strong> Basert på åpne nettstandarder, gratis nå og for alltid. Alt du trenger er en personlig nettside som gjør at folk kjenner deg igjen. Når du lenker til dette nettstedet fra din profil, vil vi sjekke at nettstedet lenker tilbake til profilen din og viser dette på profilen din."
+    hint_html: "<strong>Verifisering av identiteten din på Nutshell er for alle.</strong> Basert på åpne nettstandarder, gratis nå og for alltid. Alt du trenger er en personlig nettside som gjør at folk kjenner deg igjen. Når du lenker til dette nettstedet fra din profil, vil vi sjekke at nettstedet lenker tilbake til profilen din og viser dette på profilen din."
     instructions_html: Kopier og lim inn koden nedenfor i HTML til ditt nettsted. Deretter legger du til adressen til nettstedet ditt i et av ekstrafeltene på profilen din fra fanen "Rediger profil" og lagre endringer.
     verification: Bekreftelse
     verified_links: Dine bekreftede lenker

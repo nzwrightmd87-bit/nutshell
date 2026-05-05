@@ -1,10 +1,10 @@
 ---
 ga:
   about:
-    about_mastodon_html: 'Líonra sóisialta a sheasfaidh an aimsir: Gan fógraíocht, gan faire chorparáideach, le leagan amach eiticiúil agus dílárú. Bíodh do chuid sonraí agatsa féin le Mastodon!'
+    about_mastodon_html: 'Líonra sóisialta a sheasfaidh an aimsir: Gan fógraíocht, gan faire chorparáideach, le leagan amach eiticiúil agus dílárú. Bíodh do chuid sonraí agatsa féin le Nutshell!'
     contact_missing: Gan socrú
     contact_unavailable: N/A
-    hosted_on: Mastodon arna óstáil ar %{domain}
+    hosted_on: Nutshell arna óstáil ar %{domain}
     title: Maidir le
   accounts:
     errors:
@@ -811,7 +811,7 @@ ga:
         moderation: Measarthacht
         special: Speisialta
       delete: Scrios
-      description_html: Le <strong>róil úsáideora</strong>, is féidir leat na feidhmeanna agus na réimsí de Mastodon ar féidir le d'úsáideoirí rochtain a fháil orthu a shaincheapadh.
+      description_html: Le <strong>róil úsáideora</strong>, is féidir leat na feidhmeanna agus na réimsí de Nutshell ar féidir le d'úsáideoirí rochtain a fháil orthu a shaincheapadh.
       edit: Cuir ról '%{name}' in eagar
       everyone: Ceadanna réamhshocraithe
       everyone_full_description_html: Seo é an <strong>bunról</strong> a théann i bhfeidhm ar <strong>gach úsáideoir</strong>, fiú iad siúd nach bhfuil ról sannta acu. Faigheann gach ról eile cead uaidh.
@@ -886,27 +886,27 @@ ga:
         rules_hint: Tá réimse tiomnaithe rialacha ann a bhfuiltear ag súil go gcloífidh d’úsáideoirí leis.
         title: Faoi
       allow_referrer_origin:
-        desc: Nuair a chliceálann d’úsáideoirí ar naisc chuig suíomhanna seachtracha, féadfaidh a mbrabhsálaí seoladh do fhreastalaí Mastodon a sheoladh mar an tagairt. Díchumasaigh é seo má shainaithníonn sé seo d’úsáideoirí go huathúil, e.g. más freastalaí pearsanta Mastodon é seo.
-        title: Lig do shuíomhanna seachtracha do fhreastalaí Mastodon a fheiceáil mar fhoinse tráchta
+        desc: Nuair a chliceálann d’úsáideoirí ar naisc chuig suíomhanna seachtracha, féadfaidh a mbrabhsálaí seoladh do fhreastalaí Nutshell a sheoladh mar an tagairt. Díchumasaigh é seo má shainaithníonn sé seo d’úsáideoirí go huathúil, e.g. más freastalaí pearsanta Nutshell é seo.
+        title: Lig do shuíomhanna seachtracha do fhreastalaí Nutshell a fheiceáil mar fhoinse tráchta
       appearance:
-        preamble: Saincheap comhéadan gréasáin Mastodon.
+        preamble: Saincheap comhéadan gréasáin Nutshell.
         title: Cuma
       branding:
-        preamble: Déanann brandáil do fhreastalaí é a idirdhealú ó fhreastalaithe eile sa líonra. Féadfar an fhaisnéis seo a thaispeáint ar fud timpeallachtaí éagsúla, mar shampla comhéadan gréasáin Mastodon, feidhmchláir dhúchasacha, i réamhamhairc naisc ar láithreáin ghréasáin eile agus laistigh d’aipeanna teachtaireachtaí, agus mar sin de. Ar an ábhar sin, is fearr an fhaisnéis seo a choinneáil soiléir, gearr agus gonta.
+        preamble: Déanann brandáil do fhreastalaí é a idirdhealú ó fhreastalaithe eile sa líonra. Féadfar an fhaisnéis seo a thaispeáint ar fud timpeallachtaí éagsúla, mar shampla comhéadan gréasáin Nutshell, feidhmchláir dhúchasacha, i réamhamhairc naisc ar láithreáin ghréasáin eile agus laistigh d’aipeanna teachtaireachtaí, agus mar sin de. Ar an ábhar sin, is fearr an fhaisnéis seo a choinneáil soiléir, gearr agus gonta.
         title: Brandáil
       captcha_enabled:
         desc_html: Braitheann sé seo ar scripteanna seachtracha ó hCaptcha, rud a d’fhéadfadh a bheith ina ábhar imní maidir le slándáil agus príobháideacht. Ina theannta sin, <strong>is féidir leis seo an próiseas clárúcháin a dhéanamh i bhfad níos lú inrochtana ag roinnt daoine (go háirithe faoi mhíchumas)</strong>. Ar na cúiseanna seo, smaoinigh le do thoil ar bhearta eile amhail clárú bunaithe ar fhormheas nó ar chuireadh.
         title: A cheangal ar úsáideoirí nua CAPTCHA a réiteach chun a gcuntas a dhearbhú
       content_retention:
         danger_zone: Crios contúirte
-        preamble: Rialú conas a stóráiltear ábhar a ghintear ag úsáideoirí i Mastodon.
+        preamble: Rialú conas a stóráiltear ábhar a ghintear ag úsáideoirí i Nutshell.
         title: Coinneáil ábhair
       default_noindex:
         desc_html: I bhfeidhm do ghach úsáideoir nár athraigh an socrú seo iad féin
         title: Diúltaigh d'innéacsú inneall cuardaigh mar réamhshocrú d'úsáideoirí
       discovery:
         follow_recommendations: Lean na moltaí
-        preamble: Tá sé ríthábhachtach ábhar suimiúil a chur chun cinn chun úsáideoirí nua a thabhairt isteach ar Mastodon, úsáideoirí nach mbeadh aithne acu ar aon duine. Rialú conas a oibríonn gnéithe éagsúla fionnachtana ar do fhreastalaí.
+        preamble: Tá sé ríthábhachtach ábhar suimiúil a chur chun cinn chun úsáideoirí nua a thabhairt isteach ar Nutshell, úsáideoirí nach mbeadh aithne acu ar aon duine. Rialú conas a oibríonn gnéithe éagsúla fionnachtana ar do fhreastalaí.
         privacy: Príobháideacht
         profile_directory: Eolaire próifíle
         public_timelines: Amlínte poiblí
@@ -949,7 +949,7 @@ ga:
       destroyed_msg: D'éirigh le huaslódáil an tsuímh a scriosadh!
     software_updates:
       critical_update: Criticiúil - nuashonraigh go tapa le do thoil
-      description: Moltar do shuiteáil Mastodon a choinneáil cothrom le dáta chun leas a bhaint as na socruithe agus na gnéithe is déanaí. Ina theannta sin, tá sé ríthábhachtach uaireanta Mastodon a nuashonrú go tráthúil chun saincheisteanna slándála a sheachaint. Ar na cúiseanna seo, seiceálann Mastodon nuashonruithe gach 30 nóiméad, agus tabharfaidh sé fógra duit de réir do shainroghanna fógra ríomhphoist.
+      description: Moltar do shuiteáil Nutshell a choinneáil cothrom le dáta chun leas a bhaint as na socruithe agus na gnéithe is déanaí. Ina theannta sin, tá sé ríthábhachtach uaireanta Nutshell a nuashonrú go tráthúil chun saincheisteanna slándála a sheachaint. Ar na cúiseanna seo, seiceálann Nutshell nuashonruithe gach 30 nóiméad, agus tabharfaidh sé fógra duit de réir do shainroghanna fógra ríomhphoist.
       documentation_link: Foghlaim níos mó
       release_notes: Nótaí scaoilte
       title: Nuashonruithe ar fáil
@@ -1017,7 +1017,7 @@ ga:
         message_html: Tá mapálacha innéacs Elasticsearch as dáta. Rith <code>tootctl search deploy --only=%{value}</code> le do thoil
       elasticsearch_preset:
         action: Féach doiciméadú
-        message_html: Tá níos mó ná nód amháin ag do bhraisle Elasticsearch, ach níl Mastodon cumraithe chun iad a úsáid.
+        message_html: Tá níos mó ná nód amháin ag do bhraisle Elasticsearch, ach níl Nutshell cumraithe chun iad a úsáid.
       elasticsearch_preset_single_node:
         action: Féach doiciméadú
         message_html: Níl ach nód amháin ag do bhraisle Elasticsearch, ba cheart <code>ES_PRESET</code> a shocrú go <code>single_node_cluster</code>.
@@ -1035,13 +1035,13 @@ ga:
         message_html: Níl próiseas Sidekiq ag rith don scuaine/(scuainí) %{value}. Déan athbhreithniú ar do chumraíocht Sidekiq
       software_version_check:
         action: Féach nuashonruithe atá ar fáil
-        message_html: Tá nuashonrú Mastodon ar fáil.
+        message_html: Tá nuashonrú Nutshell ar fáil.
       software_version_critical_check:
         action: Féach nuashonruithe atá ar fáil
-        message_html: Tá nuashonrú ríthábhachtach Mastodon ar fáil, nuashonraigh chomh tapa agus is féidir le do thoil.
+        message_html: Tá nuashonrú ríthábhachtach Nutshell ar fáil, nuashonraigh chomh tapa agus is féidir le do thoil.
       software_version_patch_check:
         action: Féach nuashonruithe atá ar fáil
-        message_html: Tá nuashonrú bugfix Mastodon ar fáil.
+        message_html: Tá nuashonrú bugfix Nutshell ar fáil.
       upload_check_privacy_error:
         action: Seiceáil anseo le haghaidh tuilleadh eolais
         message_html: "<strong>Tá do fhreastalaí gréasáin míchumraithe. Tá príobháideacht d'úsáideoirí i mbaol.</strong>"
@@ -1213,7 +1213,7 @@ ga:
     webhooks:
       add_new: Cuir críochphointe leis
       delete: Scrios
-      description_html: Cuireann <strong>cuadóg gréasáin</strong> ar chumas Mastodon <strong>fógraí fíor-ama</strong> faoi imeachtaí roghnaithe a bhrú le d'iarratas féin, ionas gur féidir le d'iarratas <strong>imoibrithe a spreagadh go huathoibríoch</strong>.
+      description_html: Cuireann <strong>cuadóg gréasáin</strong> ar chumas Nutshell <strong>fógraí fíor-ama</strong> faoi imeachtaí roghnaithe a bhrú le d'iarratas féin, ionas gur féidir le d'iarratas <strong>imoibrithe a spreagadh go huathoibríoch</strong>.
       disable: Díchumasaigh
       disabled: Díchumasaithe
       edit: Cuir críochphointe in eagar
@@ -1250,8 +1250,8 @@ ga:
       next_steps: Is féidir leat an t-achomharc a cheadú chun an cinneadh modhnóireachta a chealú, nó neamhaird a dhéanamh air.
       subject: Tá %{username} ag achomharc in aghaidh cinneadh modhnóireachta ar %{instance}
     new_critical_software_updates:
-      body: Tá leaganacha criticiúla nua de Mastodon eisithe, b'fhéidir gur mhaith leat a nuashonrú chomh luath agus is féidir!
-      subject: Tá nuashonruithe Critical Mastodon ar fáil do %{instance}!
+      body: Tá leaganacha criticiúla nua de Nutshell eisithe, b'fhéidir gur mhaith leat a nuashonrú chomh luath agus is féidir!
+      subject: Tá nuashonruithe Critical Nutshell ar fáil do %{instance}!
     new_pending_account:
       body: Tá sonraí an chuntais nua thíos. Is féidir leat an t-iarratas seo a cheadú nó a dhiúltú.
       subject: Cuntas nua le léirmheas ar %{instance} (%{username})
@@ -1260,8 +1260,8 @@ ga:
       body_remote: Thuairiscigh duine éigin ó %{domain} %{target}
       subject: Tuairisc nua do %{instance} (#%{id})
     new_software_updates:
-      body: Tá leaganacha nua Mastodon eisithe, b'fhéidir gur mhaith leat a nuashonrú!
-      subject: Tá leaganacha nua Mastodon ar fáil do %{instance}!
+      body: Tá leaganacha nua Nutshell eisithe, b'fhéidir gur mhaith leat a nuashonrú!
+      subject: Tá leaganacha nua Nutshell ar fáil do %{instance}!
     new_trends:
       body: 'Is gá na míreanna seo a leanas a athbhreithniú sular féidir iad a thaispeáint go poiblí:'
       new_trending_links:
@@ -1287,7 +1287,7 @@ ga:
       <kbd>Cliceáil</kbd> ar an deilbhín %{icon} Tabharfaidh an deilbhín borradh láithreach.
     discovery: Fionnachtain
     localization:
-      body: Oibrithe deonacha a dhéanann aistriúchán Mastodon.
+      body: Oibrithe deonacha a dhéanann aistriúchán Nutshell.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Is féidir le gach duine cur leis.
     sensitive_content: Ábhar íogair
@@ -1326,9 +1326,9 @@ ga:
     delete_account: Scrios cuntas
     delete_account_html: Más mian leat do chuntas a scriosadh, is féidir leat <a href="%{path}">leanúint ar aghaidh anseo</a>. Iarrfar ort deimhniú.
     description:
-      prefix_invited_by_user: Tugann @%{name} cuireadh duit páirt a ghlacadh sa fhreastalaí seo de Mastodon!
-      prefix_sign_up: Cláraigh ar Mastodon inniu!
-      suffix: Le cuntas, beidh tú in ann daoine a leanúint, nuashonruithe a phostáil agus teachtaireachtaí a mhalartú le húsáideoirí ó aon fhreastalaí Mastodon agus níos mó!
+      prefix_invited_by_user: Tugann @%{name} cuireadh duit páirt a ghlacadh sa fhreastalaí seo de Nutshell!
+      prefix_sign_up: Cláraigh ar Nutshell inniu!
+      suffix: Le cuntas, beidh tú in ann daoine a leanúint, nuashonruithe a phostáil agus teachtaireachtaí a mhalartú le húsáideoirí ó aon fhreastalaí Nutshell agus níos mó!
     didnt_get_confirmation: Nach bhfuair tú nasc deimhnithe?
     dont_have_your_security_key: Nach bhfuil d'eochair shlándála agat?
     forgot_password: Ar rinne tú dearmad ar do Phásfhocail?
@@ -1365,7 +1365,7 @@ ga:
     set_new_password: Socraigh pasfhocal nua
     setup:
       email_below_hint_html: Seiceáil d'fhillteán turscair, nó iarr ceann eile. Is féidir leat do sheoladh ríomhphoist a cheartú má tá sé mícheart.
-      email_settings_hint_html: Cliceáil ar an nasc a sheolamar chuig %{email} chun tús a chur le Mastodon a úsáid. Beidh muid ag fanacht ar dheis anseo.
+      email_settings_hint_html: Cliceáil ar an nasc a sheolamar chuig %{email} chun tús a chur le Nutshell a úsáid. Beidh muid ag fanacht ar dheis anseo.
       link_not_received: Nach bhfuair tú nasc?
       new_confirmation_instructions_sent: Gheobhaidh tú ríomhphost nua leis an nasc deimhnithe i gceann cúpla bomaite!
       title: Seiceáil do bhosca isteach
@@ -1374,7 +1374,7 @@ ga:
       title: Logáil isteach go %{domain}
     sign_up:
       manual_review: Téann clárúcháin ar %{domain} trí athbhreithniú láimhe ag ár modhnóirí. Chun cabhrú linn do chlárúchán a phróiseáil, scríobh beagán fút féin agus cén fáth a bhfuil cuntas uait ar %{domain}.
-      preamble: Agus cuntas agat ar an bhfreastalaí Mastodon seo, beidh tú in ann aon duine eile ar an bhfealsúnacht a leanúint, is cuma cá bhfuil a gcuntas á óstáil.
+      preamble: Agus cuntas agat ar an bhfreastalaí Nutshell seo, beidh tú in ann aon duine eile ar an bhfealsúnacht a leanúint, is cuma cá bhfuil a gcuntas á óstáil.
       title: Déanaimis tú a shocrú ar %{domain}.
     status:
       account_status: Stádas cuntais
@@ -1390,7 +1390,7 @@ ga:
     user_privacy_agreement_html: Léigh mé agus aontaím leis an <a href="%{privacy_policy_path}" target="_blank">polasaí príobháideachais</a>
   author_attribution:
     example_title: Téacs samplach
-    hint_html: An bhfuil tú ag scríobh altanna nuachta nó blag lasmuigh de Mastodon? Rialú conas a gheobhaidh tú creidmheas nuair a roinntear iad ar Mastodon.
+    hint_html: An bhfuil tú ag scríobh altanna nuachta nó blag lasmuigh de Nutshell? Rialú conas a gheobhaidh tú creidmheas nuair a roinntear iad ar Nutshell.
     instructions: 'Cinntigh go bhfuil an cód seo i HTML d''alt:'
     more_from_html: Tuilleadh ó %{name}
     s_blog: Blag %{name}
@@ -1498,7 +1498,7 @@ ga:
       content: Tá brón orainn, ach chuaigh rud éigin mícheart ar ár deireadh.
       title: Níl an leathanach seo ceart
     '503': Níorbh fhéidir an leathanach a sheirbheáil mar gheall ar theip shealadach ar an bhfreastalaí.
-    noscript_html: Chun feidhmchlár gréasáin Mastodon a úsáid, cumasaigh JavaScript le do thoil. Nó, bain triail as ceann de na <a href="%{apps_path}">aipeanna dúchasacha</a> do Mastodon do d'ardán.
+    noscript_html: Chun feidhmchlár gréasáin Nutshell a úsáid, cumasaigh JavaScript le do thoil. Nó, bain triail as ceann de na <a href="%{apps_path}">aipeanna dúchasacha</a> do Nutshell do d'ardán.
   existing_username_validator:
     not_found: níorbh fhéidir úsáideoir áitiúil a aimsiú leis an ainm úsáideora sin
     not_found_multiple: níorbh fhéidir %{usernames} a aimsiú
@@ -1778,7 +1778,7 @@ ga:
     unsubscribe:
       action: Sea, díliostáil
       complete: Gan liostáil
-      confirmation_html: An bhfuil tú cinnte gur mhaith leat díliostáil ó %{type} a fháil do Mastodon ar %{domain} chuig do ríomhphost ag %{email}? Is féidir leat liostáil arís i gcónaí ó do <a href="%{settings_path}">socruithe fógra ríomhphoist</a>.
+      confirmation_html: An bhfuil tú cinnte gur mhaith leat díliostáil ó %{type} a fháil do Nutshell ar %{domain} chuig do ríomhphost ag %{email}? Is féidir leat liostáil arís i gcónaí ó do <a href="%{settings_path}">socruithe fógra ríomhphoist</a>.
       emails:
         notification_emails:
           favourite: ríomhphoist fógra is fearr leat
@@ -1787,7 +1787,7 @@ ga:
           mention: trácht ar ríomhphoist fógra
           reblog: ríomhphoist fógraí a threisiú
       resubscribe_html: Má dhíliostáil tú de dhearmad, is féidir leat liostáil arís ó do <a href="%{settings_path}">socruithe fógra ríomhphoist</a>.
-      success_html: Ní bhfaighidh tú %{type} le haghaidh Mastodon ar %{domain} chuig do ríomhphost ag %{email} a thuilleadh.
+      success_html: Ní bhfaighidh tú %{type} le haghaidh Nutshell ar %{domain} chuig do ríomhphost ag %{email} a thuilleadh.
       title: Díliostáil
   media_attachments:
     validations:
@@ -1926,13 +1926,13 @@ ga:
     posting_defaults: Réamhshocruithe á bpostáil
     public_timelines: Amlínte poiblí
   privacy:
-    hint_html: "<strong>Saincheap conas is mian leat do phróifíl agus do phostálacha a fháil.</strong> Is féidir le gnéithe éagsúla i Mastodon cabhrú leat teacht ar lucht féachana níos leithne nuair atá tú cumasaithe. Tóg nóiméad chun athbhreithniú a dhéanamh ar na socruithe seo chun a chinntiú go n-oireann siad do do chás úsáide."
+    hint_html: "<strong>Saincheap conas is mian leat do phróifíl agus do phostálacha a fháil.</strong> Is féidir le gnéithe éagsúla i Nutshell cabhrú leat teacht ar lucht féachana níos leithne nuair atá tú cumasaithe. Tóg nóiméad chun athbhreithniú a dhéanamh ar na socruithe seo chun a chinntiú go n-oireann siad do do chás úsáide."
     privacy: Príobháideacht
     privacy_hint_html: Rialú ar an méid is mian leat a nochtadh ar mhaithe le daoine eile. Aimsíonn daoine próifílí suimiúla agus aipeanna fionnuara trí na haipeanna seo a leanas a bhrabhsáil agus a fheiceáil cé na haipeanna a bpostálann siad, ach b’fhéidir gurbh fhearr leat é a choinneáil faoi cheilt.
     reach: Shroich
     reach_hint_html: Smacht a fháil ar cé acu is mian leat a fháil amach agus daoine nua a leanúint. Ar mhaith leat do phostálacha a thaispeáint ar an scáileán Explore? Ar mhaith leat go bhfeicfeadh daoine eile tú sna moltaí a leanann siad? Ar mhaith leat glacadh le gach leantóir nua go huathoibríoch, nó smacht gráinneach a bheith agat ar gach leantóir?
     search: Cuardach
-    search_hint_html: Rialú conas ba mhaith leat a fháil. Ar mhaith leat go bhfaighidh daoine tú tríd an rud a chuir tú suas go poiblí faoi? Ar mhaith leat go bhfaighidh daoine lasmuigh de Mastodon do phróifíl agus iad ag cuardach an ghréasáin? Tabhair faoi deara le do thoil nach féidir eisiamh iomlán ó gach inneall cuardaigh a chinntiú mar fhaisnéis don phobal.
+    search_hint_html: Rialú conas ba mhaith leat a fháil. Ar mhaith leat go bhfaighidh daoine tú tríd an rud a chuir tú suas go poiblí faoi? Ar mhaith leat go bhfaighidh daoine lasmuigh de Nutshell do phróifíl agus iad ag cuardach an ghréasáin? Tabhair faoi deara le do thoil nach féidir eisiamh iomlán ó gach inneall cuardaigh a chinntiú mar fhaisnéis don phobal.
     title: Príobháideacht agus teacht
   privacy_policy:
     title: Beartas Príobháideachais
@@ -2007,7 +2007,7 @@ ga:
     current_session: Seisiún reatha
     date: Dáta
     description: "%{browser} ar %{platform}"
-    explanation: Seo iad na brabhsálaithe gréasáin atá logáilte isteach i do chuntas Mastodon faoi láthair.
+    explanation: Seo iad na brabhsálaithe gréasáin atá logáilte isteach i do chuntas Nutshell faoi láthair.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -2033,7 +2033,7 @@ ga:
     aliases: Ailiasanna cuntais
     appearance: Cuma
     authorized_apps: Aipeanna údaraithe
-    back: Ar ais go Mastodon
+    back: Ar ais go Nutshell
     delete: Scriosadh cuntais
     development: Forbairt
     edit_profile: Cuir an phróifíl in eagar
@@ -2120,9 +2120,9 @@ ga:
       direct: Lua príobháideach
       private: Leantóirí amháin
       public: Poiblí
-      public_long: Aon duine ar Mastodon agus lasmuigh de
+      public_long: Aon duine ar Nutshell agus lasmuigh de
       unlisted: Pobal ciúin
-      unlisted_long: I bhfolach ó thorthaí cuardaigh Mastodon, treochtaí, agus amlínte poiblí
+      unlisted_long: I bhfolach ó thorthaí cuardaigh Nutshell, treochtaí, agus amlínte poiblí
   statuses_cleanup:
     enabled: Scrios seanphostálacha go huathoibríoch
     enabled_hint: Scriostar do phostálacha go huathoibríoch nuair a shroicheann siad tairseach aoise sonraithe, ach amháin má thagann siad le ceann de na heisceachtaí thíos
@@ -2173,7 +2173,7 @@ ga:
     review_link: Athbhreithnigh téarmaí seirbhíse
     title: Tá téarmaí seirbhíse %{domain} ag athrú
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
@@ -2199,7 +2199,7 @@ ga:
     recovery_codes_regenerated: D'éirigh le hathghiniúint cóid athshlánaithe
     recovery_instructions_html: Má chailleann tú rochtain ar do ghuthán riamh, is féidir leat ceann de na cóid athshlánaithe thíos a úsáid chun rochtain a fháil ar do chuntas arís. <strong>Coinnigh na cóid athshlánaithe slán</strong>. Mar shampla, is féidir leat iad a phriontáil agus iad a stóráil le doiciméid thábhachtacha eile.
     resume_app_authorization: Údarú iarratais atosú
-    role_requirement: Éilíonn %{domain} ort Fíordheimhniú Dhá Fhachtóir a shocrú sula bhféadfaidh tú Mastodon a úsáid.
+    role_requirement: Éilíonn %{domain} ort Fíordheimhniú Dhá Fhachtóir a shocrú sula bhféadfaidh tú Nutshell a úsáid.
     webauthn: Eochracha slándála
   user_mailer:
     announcement_published:
@@ -2218,7 +2218,7 @@ ga:
       subtitle: Diúltaíodh do d'achomharc.
       title: Diúltaíodh don achomharc
     backup_ready:
-      explanation: D'iarr tú cúltaca iomlán de do chuntas Mastodon.
+      explanation: D'iarr tú cúltaca iomlán de do chuntas Nutshell.
       extra: Tá sé réidh le híoslódáil anois!
       subject: Tá do chartlann réidh le híoslódáil
       title: Tógáil cartlainne
@@ -2279,7 +2279,7 @@ ga:
       apps_android_action: Faigh é ar Google Play
       apps_ios_action: Íoslódáil ar an App Store
       apps_step: Íoslódáil ár n-aipanna oifigiúla.
-      apps_title: Aipeanna Mastodon
+      apps_title: Aipeanna Nutshell
       checklist_subtitle: 'Cuirimis tús leat ar an teorainn shóisialta nua seo:'
       checklist_title: Seicliosta Fáilte
       edit_profile_action: Pearsanú
@@ -2287,16 +2287,16 @@ ga:
       edit_profile_title: Déan do phróifíl a phearsantú
       explanation: Seo roinnt leideanna chun tú a chur ar bun
       feature_action: Foghlaim níos mó
-      feature_audience: Soláthraíonn Mastodon deis uathúil duit do lucht féachana a bhainistiú gan fir lár. Ligeann Mastodon a imlonnaítear ar do bhonneagar féin duit leanúint agus leanúint ó aon fhreastalaí Mastodon eile ar líne agus níl sé faoi smacht aon duine ach mise.
+      feature_audience: Soláthraíonn Nutshell deis uathúil duit do lucht féachana a bhainistiú gan fir lár. Ligeann Nutshell a imlonnaítear ar do bhonneagar féin duit leanúint agus leanúint ó aon fhreastalaí Nutshell eile ar líne agus níl sé faoi smacht aon duine ach mise.
       feature_audience_title: Tóg do lucht féachana faoi rún
-      feature_control: Is fearr a fhios agat cad ba mhaith leat a fheiceáil ar do bheathú baile. Gan algartam nó fógraí chun do chuid ama a chur amú. Lean aon duine ar fud aon fhreastalaí Mastodon ó chuntas amháin agus faigh a gcuid post in ord croineolaíoch, agus déan do chúinne den idirlíon beagán níos mó cosúil leatsa.
+      feature_control: Is fearr a fhios agat cad ba mhaith leat a fheiceáil ar do bheathú baile. Gan algartam nó fógraí chun do chuid ama a chur amú. Lean aon duine ar fud aon fhreastalaí Nutshell ó chuntas amháin agus faigh a gcuid post in ord croineolaíoch, agus déan do chúinne den idirlíon beagán níos mó cosúil leatsa.
       feature_control_title: Coinnigh smacht ar d’amlíne féin
-      feature_creativity: Tacaíonn Mastodon le postálacha fuaime, físe agus pictiúr, tuairiscí inrochtaineachta, pobalbhreitheanna, rabhaidh inneachair, avatars beoite, emojis saincheaptha, rialú barr mionsamhlacha, agus níos mó, chun cabhrú leat tú féin a chur in iúl ar líne. Cibé an bhfuil do chuid ealaíne, do cheol nó do phodchraoladh á fhoilsiú agat, tá Mastodon ann duit.
+      feature_creativity: Tacaíonn Nutshell le postálacha fuaime, físe agus pictiúr, tuairiscí inrochtaineachta, pobalbhreitheanna, rabhaidh inneachair, avatars beoite, emojis saincheaptha, rialú barr mionsamhlacha, agus níos mó, chun cabhrú leat tú féin a chur in iúl ar líne. Cibé an bhfuil do chuid ealaíne, do cheol nó do phodchraoladh á fhoilsiú agat, tá Nutshell ann duit.
       feature_creativity_title: Cruthaitheacht gan sárú
-      feature_moderation: Cuireann Mastodon cinnteoireacht ar ais i do lámha. Cruthaíonn gach freastalaí a rialacha agus a rialacháin féin, a chuirtear i bhfeidhm go háitiúil agus nach bhfuil ó bharr anuas cosúil le meáin shóisialta chorparáideacha, rud a fhágann gurb é an ceann is solúbtha é chun freagairt do riachtanais grúpaí éagsúla daoine. Bí ar fhreastalaí leis na rialacha a n-aontaíonn tú leo, nó do chuid féin a óstáil.
+      feature_moderation: Cuireann Nutshell cinnteoireacht ar ais i do lámha. Cruthaíonn gach freastalaí a rialacha agus a rialacháin féin, a chuirtear i bhfeidhm go háitiúil agus nach bhfuil ó bharr anuas cosúil le meáin shóisialta chorparáideacha, rud a fhágann gurb é an ceann is solúbtha é chun freagairt do riachtanais grúpaí éagsúla daoine. Bí ar fhreastalaí leis na rialacha a n-aontaíonn tú leo, nó do chuid féin a óstáil.
       feature_moderation_title: Ag maolú ar an mbealach ar cheart dó a bheith
       follow_action: Lean
-      follow_step: Is éard atá i gceist le daoine suimiúla a leanúint ná Mastodon.
+      follow_step: Is éard atá i gceist le daoine suimiúla a leanúint ná Nutshell.
       follow_title: Cuir do chuid fotha baile in oiriúint duit féin
       follows_subtitle: Lean cuntais aitheanta
       follows_title: Cé a leanúint
@@ -2313,10 +2313,10 @@ ga:
       post_action: Cum
       post_step: Abair hello leis an domhan le téacs, grianghraif, físeáin, nó pobalbhreith.
       post_title: Déan do chéad phostáil
-      share_step: Cuir in iúl do do chairde conas tú a aimsiú ar Mastodon.
-      share_title: Roinn do phróifíl Mastodon
+      share_step: Cuir in iúl do do chairde conas tú a aimsiú ar Nutshell.
+      share_title: Roinn do phróifíl Nutshell
       sign_in_action: Sínigh isteach
-      subject: Fáilte go Mastodon
+      subject: Fáilte go Nutshell
       title: Fáilte ar bord, %{name}!
   users:
     follow_limit_reached: Ní féidir leat níos mó ná %{limit} duine a leanúint
@@ -2329,7 +2329,7 @@ ga:
   verification:
     extra_instructions_html: <strong>Leid:</strong> Is féidir an nasc ar do shuíomh Gréasáin a bheith dofheicthe. Is í an chuid thábhachtach ná <code>rel="me"</code> a chuireann cosc ​​ar phearsanú ar shuímh Ghréasáin a bhfuil inneachar a ghintear leis an úsáideoir. Is féidir leat fiú clib <code>nasc</code> a úsáid i gceanntásc an leathanaigh in ionad <code>a</code>, ach caithfidh an HTML a bheith inrochtana gan JavaScript a chur i gcrích.
     here_is_how: Seo é an chaoi
-    hint_html: "<strong>Is do chách é d'aitheantas a fhíorú ar Mastodon.</strong> Bunaithe ar chaighdeáin oscailte gréasáin, saor in aisce anois agus go deo. Níl uait ach láithreán gréasáin pearsanta a aithníonn daoine thú. Nuair a nascann tú leis an suíomh Gréasáin seo ó do phróifíl, seiceóimid go bhfuil nasc idir an suíomh Gréasáin agus do phróifíl agus taispeánfaimid táscaire amhairc air."
+    hint_html: "<strong>Is do chách é d'aitheantas a fhíorú ar Nutshell.</strong> Bunaithe ar chaighdeáin oscailte gréasáin, saor in aisce anois agus go deo. Níl uait ach láithreán gréasáin pearsanta a aithníonn daoine thú. Nuair a nascann tú leis an suíomh Gréasáin seo ó do phróifíl, seiceóimid go bhfuil nasc idir an suíomh Gréasáin agus do phróifíl agus taispeánfaimid táscaire amhairc air."
     instructions_html: Cóipeáil agus greamaigh an cód thíos isteach i HTML do shuíomh Gréasáin. Ansin cuir seoladh do shuíomh Gréasáin isteach i gceann de na réimsí breise ar do phróifíl ón gcluaisín "Cuir próifíl in eagar" agus sábháil athruithe.
     verification: Fíorú
     verified_links: Do naisc fhíoraithe
@@ -2353,5 +2353,5 @@ ga:
     otp_required: Chun eochracha slándála a úsáid cumasaigh fíordheimhniú dhá fhachtóir ar dtús.
     registered_on: Cláraithe ar %{date}
   wrapstodon:
-    description: Féach conas a d'úsáid %{name} Mastodon i mbliana!
+    description: Féach conas a d'úsáid %{name} Nutshell i mbliana!
     title: Wrapstodon %{year} do %{name}

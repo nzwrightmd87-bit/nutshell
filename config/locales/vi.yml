@@ -1,10 +1,10 @@
 ---
 vi:
   about:
-    about_mastodon_html: 'Mạng xã hội của tương lai: Không quảng cáo, không bán thông tin người dùng và phi tập trung! Làm chủ dữ liệu của bạn với Mastodon!'
+    about_mastodon_html: 'Mạng xã hội của tương lai: Không quảng cáo, không bán thông tin người dùng và phi tập trung! Làm chủ dữ liệu của bạn với Nutshell!'
     contact_missing: Chưa thiết lập
     contact_unavailable: N/A
-    hosted_on: "%{domain} vận hành nhờ Mastodon"
+    hosted_on: "%{domain} vận hành nhờ Nutshell"
     title: Giới thiệu
   accounts:
     errors:
@@ -751,7 +751,7 @@ vi:
         moderation: Kiểm duyệt
         special: Đặc biệt
       delete: Xóa
-      description_html: Thông qua <strong>vai trò</strong>, bạn có thể tùy chỉnh những tính năng và vị trí của Mastodon mà mọi người có thể truy cập.
+      description_html: Thông qua <strong>vai trò</strong>, bạn có thể tùy chỉnh những tính năng và vị trí của Nutshell mà mọi người có thể truy cập.
       edit: Sửa vai trò '%{name}'
       everyone: Quyền hạn mặc định
       everyone_full_description_html: Đây <strong>vai trò cơ bản</strong> ảnh hưởng tới <strong>mọi người khác</strong>, kể cả những người không có vai trò được chỉ định. Tất cả các vai trò khác đều kế thừa quyền từ vai trò đó.
@@ -822,27 +822,27 @@ vi:
         rules_hint: Có một khu vực dành riêng cho các nội quy mà người tham gia máy chủ của bạn phải tuân thủ.
         title: Giới thiệu
       allow_referrer_origin:
-        desc: 'Khi người dùng của bạn nhấn vào liên kết đến các trang web bên ngoài, trình duyệt của họ có thể gửi địa chỉ máy chủ Mastodon của bạn làm người giới thiệu. Tắt tùy chọn này nếu điều này sẽ xác định duy nhất người dùng của bạn, ví dụ: nếu đây là máy chủ Mastodon cá nhân.'
-        title: Cho phép các trang web bên ngoài xem máy chủ Mastodon của bạn như một nguồn lưu lượng truy cập
+        desc: 'Khi người dùng của bạn nhấn vào liên kết đến các trang web bên ngoài, trình duyệt của họ có thể gửi địa chỉ máy chủ Nutshell của bạn làm người giới thiệu. Tắt tùy chọn này nếu điều này sẽ xác định duy nhất người dùng của bạn, ví dụ: nếu đây là máy chủ Nutshell cá nhân.'
+        title: Cho phép các trang web bên ngoài xem máy chủ Nutshell của bạn như một nguồn lưu lượng truy cập
       appearance:
-        preamble: Tùy chỉnh giao diện web của Mastodon.
+        preamble: Tùy chỉnh giao diện web của Nutshell.
         title: Giao diện
       branding:
-        preamble: Thương hiệu máy chủ của bạn phân biệt nó với các máy chủ khác trong mạng. Thông tin này có thể được hiển thị trên nhiều môi trường khác nhau, chẳng hạn như giao diện web của Mastodon, các ứng dụng gốc, trong bản xem trước liên kết trên các trang web khác và trong các ứng dụng nhắn tin, v.v. Vì lý do này, cách tốt nhất là giữ cho thông tin này rõ ràng, ngắn gọn và súc tích.
+        preamble: Thương hiệu máy chủ của bạn phân biệt nó với các máy chủ khác trong mạng. Thông tin này có thể được hiển thị trên nhiều môi trường khác nhau, chẳng hạn như giao diện web của Nutshell, các ứng dụng gốc, trong bản xem trước liên kết trên các trang web khác và trong các ứng dụng nhắn tin, v.v. Vì lý do này, cách tốt nhất là giữ cho thông tin này rõ ràng, ngắn gọn và súc tích.
         title: Thương hiệu
       captcha_enabled:
         desc_html: Điều này phụ thuộc vào các mã lệnh bên ngoài từ hCaptcha, đây có thể là mối lo ngại về bảo mật và quyền riêng tư. Thêm vào đó, <strong>điều này có thể làm cho quá trình đăng ký khó hơn đối với một số người (đặc biệt là người khuyết tật)</strong>. Vì những lý do này, vui lòng xem xét các biện pháp thay thế như duyệt đăng ký thủ công hoặc tạo thư mời.
         title: Yêu cầu người dùng mới dùng CAPTCHA để xác minh tài khoản của họ
       content_retention:
         danger_zone: Khu vực nguy hiểm
-        preamble: Kiểm soát cách lưu trữ nội dung cá nhân trong Mastodon.
+        preamble: Kiểm soát cách lưu trữ nội dung cá nhân trong Nutshell.
         title: Lưu giữ nội dung
       default_noindex:
         desc_html: Ảnh hưởng đến tất cả người không tự thay đổi cài đặt này
         title: Mặc định người dùng không xuất hiện trong công cụ tìm kiếm
       discovery:
         follow_recommendations: Gợi ý theo dõi
-        preamble: Hiển thị nội dung thú vị là công cụ để thu hút người dùng mới, những người có thể không quen bất kỳ ai trên Mastodon. Kiểm soát cách các tính năng khám phá hoạt động trên máy chủ của bạn.
+        preamble: Hiển thị nội dung thú vị là công cụ để thu hút người dùng mới, những người có thể không quen bất kỳ ai trên Nutshell. Kiểm soát cách các tính năng khám phá hoạt động trên máy chủ của bạn.
         privacy: Riêng tư
         profile_directory: Danh bạ
         public_timelines: Bảng tin
@@ -885,7 +885,7 @@ vi:
       destroyed_msg: Đã xóa tập tin tải lên thành công!
     software_updates:
       critical_update: Quan trọng — vui lòng cập nhật sớm
-      description: Bạn nên cập nhật Mastodon phiên bản mới nhất để được hưởng lợi từ các bản sửa lỗi và thêm tính năng mới. Nhất là để tránh các vấn đề bảo mật. Vì những lý do này, Mastodon sẽ kiểm tra các bản cập nhật 30 phút một lần và sẽ thông báo cho bạn theo tùy chọn thông báo qua email của bạn.
+      description: Bạn nên cập nhật Nutshell phiên bản mới nhất để được hưởng lợi từ các bản sửa lỗi và thêm tính năng mới. Nhất là để tránh các vấn đề bảo mật. Vì những lý do này, Nutshell sẽ kiểm tra các bản cập nhật 30 phút một lần và sẽ thông báo cho bạn theo tùy chọn thông báo qua email của bạn.
       documentation_link: Tìm hiểu thêm
       release_notes: Có gì mới?
       title: Bản cập nhật mới
@@ -953,7 +953,7 @@ vi:
         message_html: Mapping chỉ mục Elaticsearch đã lỗi thời. Hãy chạy <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Xem tài liệu
-        message_html: Cụm Elaticsearch của bạn có nhiều node nhưng Mastodon không được định cấu hình để sử dụng chúng.
+        message_html: Cụm Elaticsearch của bạn có nhiều node nhưng Nutshell không được định cấu hình để sử dụng chúng.
       elasticsearch_preset_single_node:
         action: Xem tài liệu
         message_html: Cụm Elaticsearch của bạn chỉ có một node, <code>ES_PRESET</code> nên đặt thành <code>single_node_cluster</code>.
@@ -971,13 +971,13 @@ vi:
         message_html: Sidekiq không hoạt động khi truy vấn %{value}. Hãy kiểm tra lại cấu hình Sidekiq
       software_version_check:
         action: Bản cập nhật mới
-        message_html: Có bản cập nhật Mastodon mới.
+        message_html: Có bản cập nhật Nutshell mới.
       software_version_critical_check:
         action: Bản cập nhật mới
-        message_html: Có bản cập nhật quan trọng của Mastodon, vui lòng cập nhật nhanh nhất có thể.
+        message_html: Có bản cập nhật quan trọng của Nutshell, vui lòng cập nhật nhanh nhất có thể.
       software_version_patch_check:
         action: Bản cập nhật mới
-        message_html: Có bản cập nhật sửa lỗi Mastodon.
+        message_html: Có bản cập nhật sửa lỗi Nutshell.
       upload_check_privacy_error:
         action: Nhấn vào đây để biết thêm thông tin
         message_html: "<strong>Máy chủ web của bạn bị cấu hình sai. Có nguy cơ ảnh hưởng bảo mật của người dùng.</strong>"
@@ -1133,7 +1133,7 @@ vi:
     webhooks:
       add_new: Thêm endpoint
       delete: Xóa bỏ
-      description_html: "<strong>Webhook</strong> cho phép Mastodon gửi nhận <strong>thông báo đẩy thời gian thật</strong> về những sự kiện cho ứng dụng thứ ba của bạn, cho ứng dụng của bạn có thể <strong>tự động kích hoạt reaction</strong>."
+      description_html: "<strong>Webhook</strong> cho phép Nutshell gửi nhận <strong>thông báo đẩy thời gian thật</strong> về những sự kiện cho ứng dụng thứ ba của bạn, cho ứng dụng của bạn có thể <strong>tự động kích hoạt reaction</strong>."
       disable: Tắt
       disabled: Đã tắt
       edit: Sửa endpoint
@@ -1166,8 +1166,8 @@ vi:
       next_steps: Bạn có thể chấp nhận khiếu nại để bỏ kiểm duyệt, hoặc không.
       subject: "%{username} đang khiếu nại quyết định kiểm duyệt trên %{instance}"
     new_critical_software_updates:
-      body: Các phiên bản quan trọng mới của Mastodon đã được phát hành, bạn nên cập nhật càng sớm càng tốt!
-      subject: Các bản cập nhật quan trọng của Mastodon cho %{instance}!
+      body: Các phiên bản quan trọng mới của Nutshell đã được phát hành, bạn nên cập nhật càng sớm càng tốt!
+      subject: Các bản cập nhật quan trọng của Nutshell cho %{instance}!
     new_pending_account:
       body: Thông tin chi tiết của tài khoản mới ở phía dưới. Bạn có thể phê duyệt hoặc từ chối người này.
       subject: Tài khoản chờ xét duyệt trên %{instance} (%{username})
@@ -1176,8 +1176,8 @@ vi:
       body_remote: Ai đó từ %{domain} đã báo cáo %{target}
       subject: "(%{instance}) Báo cáo #%{id}"
     new_software_updates:
-      body: Phiên bản Mastodon mới đã được phát hành, bạn nên cập nhật!
-      subject: Các bản cập nhật mới của Mastodon cho %{instance}!
+      body: Phiên bản Nutshell mới đã được phát hành, bạn nên cập nhật!
+      subject: Các bản cập nhật mới của Nutshell cho %{instance}!
     new_trends:
       body: 'Các mục sau đây cần được xem xét trước khi chúng hiển thị công khai:'
       new_trending_links:
@@ -1201,7 +1201,7 @@ vi:
     boosting_preferences_info_html: "<strong>Mẹo:</strong> Bất kể cài đặt, <kbd>Shift</kbd> + <kbd>Click</kbd> trên biểu tượng %{icon} Đăng lại sẽ lập tức đăng lại."
     discovery: Khám phá
     localization:
-      body: Mastodon được dịch bởi tình nguyện viên.
+      body: Nutshell được dịch bởi tình nguyện viên.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Ai cũng có thể đóng góp.
     sensitive_content: Nội dung nhạy cảm
@@ -1240,9 +1240,9 @@ vi:
     delete_account: Xóa tài khoản
     delete_account_html: Thực hiện <a href="%{path}">xóa tài khoản</a> của bạn.
     description:
-      prefix_invited_by_user: "@%{name} mời bạn tham gia máy chủ Mastodon này!"
-      prefix_sign_up: Tham gia Mastodon ngay hôm nay!
-      suffix: Với tài khoản, bạn sẽ có thể theo dõi mọi người, đăng tút và nhắn tin với người từ bất kỳ máy chủ Mastodon khác!
+      prefix_invited_by_user: "@%{name} mời bạn tham gia máy chủ Nutshell này!"
+      prefix_sign_up: Tham gia Nutshell ngay hôm nay!
+      suffix: Với tài khoản, bạn sẽ có thể theo dõi mọi người, đăng tút và nhắn tin với người từ bất kỳ máy chủ Nutshell khác!
     didnt_get_confirmation: Không nhận được email xác minh?
     dont_have_your_security_key: Bạn có khóa bảo mật chưa?
     forgot_password: Quên mật khẩu
@@ -1279,7 +1279,7 @@ vi:
     set_new_password: Đặt mật khẩu mới
     setup:
       email_below_hint_html: Kiểm tra hộp thư rác hoặc yêu cầu gửi lại. Bạn có thể sửa địa chỉ email của mình nếu sai.
-      email_settings_hint_html: Nhấn vào link được gửi đến %{email} để bắt đầu dùng Mastodon. Chúng tôi đợi bạn.
+      email_settings_hint_html: Nhấn vào link được gửi đến %{email} để bắt đầu dùng Nutshell. Chúng tôi đợi bạn.
       link_not_received: Không nhận được mã?
       new_confirmation_instructions_sent: Bạn sẽ nhận được một email mới với liên kết xác minh sau vài phút!
       title: Kiểm tra email của bạn
@@ -1288,7 +1288,7 @@ vi:
       title: Đăng nhập %{domain}
     sign_up:
       manual_review: "%{domain} sẽ duyệt đăng ký thủ công. Để giúp chúng tôi duyệt nhanh, hãy viết một chút về bản thân và lý do bạn muốn có một tài khoản trên %{domain}."
-      preamble: Với tài khoản trên máy chủ Mastodon này, bạn sẽ có thể theo dõi bất kỳ người nào trên các máy chủ khác, bất kể tài khoản của họ ở đâu.
+      preamble: Với tài khoản trên máy chủ Nutshell này, bạn sẽ có thể theo dõi bất kỳ người nào trên các máy chủ khác, bất kể tài khoản của họ ở đâu.
       title: Đang đăng ký trên %{domain}.
     status:
       account_status: Trạng thái tài khoản
@@ -1304,7 +1304,7 @@ vi:
     user_privacy_agreement_html: Tôi đã đọc và đồng ý <a href="%{privacy_policy_path}" target="_blank">chính sách bảo mật</a>
   author_attribution:
     example_title: Văn bản mẫu
-    hint_html: Bạn là nhà báo hoặc blogger? Kiểm soát cách ghi nhận bài viết của bạn khi chúng được chia sẻ trên Mastodon.
+    hint_html: Bạn là nhà báo hoặc blogger? Kiểm soát cách ghi nhận bài viết của bạn khi chúng được chia sẻ trên Nutshell.
     instructions: 'Đặt mã này trong HTML bài viết:'
     more_from_html: Viết bởi %{name}
     s_blog: "%{name}'s Blog"
@@ -1412,7 +1412,7 @@ vi:
       content: Chúng tôi xin lỗi, nhưng đã xảy ra sự cố.
       title: Múi giờ trên thiết bị không đúng
     '503': Trang không thể hiển thị do lỗi máy chủ tạm thời.
-    noscript_html: Để vào Mastodon bản web, vui lòng bật JavaScript. Ngoài ra, hãy thử dùng một <a href="%{apps_path}">ứng dụng lướt Mastodon</a> cho thiết bị của bạn.
+    noscript_html: Để vào Nutshell bản web, vui lòng bật JavaScript. Ngoài ra, hãy thử dùng một <a href="%{apps_path}">ứng dụng lướt Nutshell</a> cho thiết bị của bạn.
   existing_username_validator:
     not_found: không có tên người dùng này trên máy chủ
     not_found_multiple: không tìm thấy %{usernames}
@@ -1612,7 +1612,7 @@ vi:
     unsubscribe:
       action: Đúng, hủy đăng ký
       complete: Đã hủy đăng ký
-      confirmation_html: Bạn có chắc muốn hủy đăng ký %{type} Mastodon trên %{domain} tới %{email}? Bạn có thể đăng ký lại từ <a href="%{settings_path}">cài đặt thông báo email</a>.
+      confirmation_html: Bạn có chắc muốn hủy đăng ký %{type} Nutshell trên %{domain} tới %{email}? Bạn có thể đăng ký lại từ <a href="%{settings_path}">cài đặt thông báo email</a>.
       emails:
         notification_emails:
           favourite: email thông báo lượt thích
@@ -1621,7 +1621,7 @@ vi:
           mention: email thông báo lượt nhắc đến
           reblog: email thông báo lượt đăng lại
       resubscribe_html: Nếu đổi ý, bạn có thể đăng ký lại từ <a href="%{settings_path}">cài đặt thông báo email</a>.
-      success_html: Bạn sẽ không còn nhận %{type} Mastodon trên %{domain} tới %{email}.
+      success_html: Bạn sẽ không còn nhận %{type} Nutshell trên %{domain} tới %{email}.
       title: Hủy đăng ký
   media_attachments:
     validations:
@@ -1766,7 +1766,7 @@ vi:
     reach: Tiếp cận
     reach_hint_html: Kiểm soát cách bạn được đề xuất và theo dõi. Bạn có muốn tút của mình xuất hiện trên trang Khám phá không? Bạn có muốn bạn xuất hiện trong các đề xuất theo dõi của người khác không? Bạn muốn tự động chấp nhận tất cả những người theo dõi mới hay tự duyệt từng người theo dõi?
     search: Tìm kiếm
-    search_hint_html: Kiểm soát cách tìm thấy bạn. Bạn có muốn mọi người tìm thấy bạn bằng những gì bạn đã đăng công khai không? Bạn có muốn những người bên ngoài Mastodon tìm thấy hồ sơ của bạn khi tìm kiếm trên web không? Lưu ý là không thể đảm bảo tránh khỏi các công cụ tìm kiếm đối với thông tin công khai.
+    search_hint_html: Kiểm soát cách tìm thấy bạn. Bạn có muốn mọi người tìm thấy bạn bằng những gì bạn đã đăng công khai không? Bạn có muốn những người bên ngoài Nutshell tìm thấy hồ sơ của bạn khi tìm kiếm trên web không? Lưu ý là không thể đảm bảo tránh khỏi các công cụ tìm kiếm đối với thông tin công khai.
     title: Riêng tư và tiếp cận
   privacy_policy:
     title: Chính sách bảo mật
@@ -1841,7 +1841,7 @@ vi:
     current_session: Phiên hiện tại
     date: Thời gian
     description: "%{browser} trên %{platform}"
-    explanation: Đây là các ứng dụng đã từng đăng nhập vào tài khoản Mastodon của bạn.
+    explanation: Đây là các ứng dụng đã từng đăng nhập vào tài khoản Nutshell của bạn.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1867,7 +1867,7 @@ vi:
     aliases: Kết nối tài khoản
     appearance: Giao diện
     authorized_apps: Ứng dụng
-    back: Quay lại Mastodon
+    back: Quay lại Nutshell
     delete: Xóa tài khoản
     development: Lập trình
     edit_profile: Sửa hồ sơ
@@ -1938,9 +1938,9 @@ vi:
       direct: Nhắn riêng
       private: Chỉ người theo dõi
       public: Công khai
-      public_long: Bất kỳ ai trong và ngoài Mastodon
+      public_long: Bất kỳ ai trong và ngoài Nutshell
       unlisted: Hạn chế
-      unlisted_long: Ẩn khỏi kết quả tìm kiếm, xu hướng và dòng thời gian công khai của Mastodon
+      unlisted_long: Ẩn khỏi kết quả tìm kiếm, xu hướng và dòng thời gian công khai của Nutshell
   statuses_cleanup:
     enabled: Tự động xóa những tút cũ
     enabled_hint: Trừ những ngoại lệ bên dưới
@@ -1991,7 +1991,7 @@ vi:
     review_link: Xem lại điều khoản dịch vụ
     title: Sửa đổi điều khoản dịch vụ %{domain}
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%-d.%m.%Y %H:%M"
@@ -2017,7 +2017,7 @@ vi:
     recovery_codes_regenerated: Mã khôi phục được phục hồi thành công
     recovery_instructions_html: Nếu bạn bị mất điện thoại, hãy dùng một trong các mã khôi phục bên dưới để lấy lại quyền truy cập vào tài khoản của mình. <strong>Giữ mã khôi phục an toàn</strong>. Ví dụ, bạn có thể in chúng ra giấy.
     resume_app_authorization: Tiếp tục xác thực bằng ứng dụng
-    role_requirement: "%{domain} yêu cầu bạn thiết lập Xác thụec 2 bước trước khi sử dụng Mastodon."
+    role_requirement: "%{domain} yêu cầu bạn thiết lập Xác thụec 2 bước trước khi sử dụng Nutshell."
     webauthn: Khóa bảo mật
   user_mailer:
     announcement_published:
@@ -2036,7 +2036,7 @@ vi:
       subtitle: Khiếu nại của bạn bị từ chối.
       title: Khiếu nại bị từ chối
     backup_ready:
-      explanation: Bạn đã yêu cầu bản sao tài khoản Mastodon của mình.
+      explanation: Bạn đã yêu cầu bản sao tài khoản Nutshell của mình.
       extra: Hiện nó đã sẵn sàng tải xuống!
       subject: Dữ liệu cá nhân của bạn đã sẵn sàng để tải về
       title: Nhận dữ liệu cá nhân
@@ -2097,7 +2097,7 @@ vi:
       apps_android_action: Tải trên Google Play
       apps_ios_action: Tải trên App Store
       apps_step: Tải ứng dụng chính thức.
-      apps_title: Ứng dụng Mastodon
+      apps_title: Ứng dụng Nutshell
       checklist_subtitle: 'Hãy bắt đầu trên mạng xã hội mới này:'
       checklist_title: Danh sách việc cần làm
       edit_profile_action: Cá nhân hoá
@@ -2105,16 +2105,16 @@ vi:
       edit_profile_title: Tùy biến hồ sơ
       explanation: Dưới đây là một số mẹo để giúp bạn bắt đầu
       feature_action: Tìm hiểu
-      feature_audience: Mastodon cung cấp cho bạn khả năng độc đáo để quản lý người theo dõi của bạn mà không cần bên trung gian. Mastodon có thể triển khai trên cơ sở hạ tầng của riêng bạn, cho phép bạn theo dõi và được theo dõi từ bất kỳ máy chủ Mastodon nào khác và không nằm dưới sự kiểm soát của ai ngoài bạn.
+      feature_audience: Nutshell cung cấp cho bạn khả năng độc đáo để quản lý người theo dõi của bạn mà không cần bên trung gian. Nutshell có thể triển khai trên cơ sở hạ tầng của riêng bạn, cho phép bạn theo dõi và được theo dõi từ bất kỳ máy chủ Nutshell nào khác và không nằm dưới sự kiểm soát của ai ngoài bạn.
       feature_audience_title: Tạo cộng đồng của riêng bạn
-      feature_control: Bạn biết rõ nhất những gì bạn muốn xem trên bảng tin. Không có thuật toán hoặc quảng cáo để lãng phí thời gian của bạn. Theo dõi bất kỳ ai trên bất kỳ máy chủ Mastodon nào từ một tài khoản và nhận các tút của họ theo thứ tự thời gian — làm cho góc internet của bạn là của bạn.
+      feature_control: Bạn biết rõ nhất những gì bạn muốn xem trên bảng tin. Không có thuật toán hoặc quảng cáo để lãng phí thời gian của bạn. Theo dõi bất kỳ ai trên bất kỳ máy chủ Nutshell nào từ một tài khoản và nhận các tút của họ theo thứ tự thời gian — làm cho góc internet của bạn là của bạn.
       feature_control_title: Kiểm soát bảng tin của bạn
-      feature_creativity: Mastodon hỗ trợ đăng âm thanh, video, hình ảnh, mô tả trợ năng, thăm dò ý kiến, cảnh báo nội dung, hình đại diện Gif, emoji tùy chỉnh, kiểm soát cắt hình thu nhỏ... để giúp bạn thể hiện cá tính. Cho dù bạn đang xuất bản tác phẩm nghệ thuật, âm nhạc hay podcast của mình, Mastodon luôn hợp cho bạn.
+      feature_creativity: Nutshell hỗ trợ đăng âm thanh, video, hình ảnh, mô tả trợ năng, thăm dò ý kiến, cảnh báo nội dung, hình đại diện Gif, emoji tùy chỉnh, kiểm soát cắt hình thu nhỏ... để giúp bạn thể hiện cá tính. Cho dù bạn đang xuất bản tác phẩm nghệ thuật, âm nhạc hay podcast của mình, Nutshell luôn hợp cho bạn.
       feature_creativity_title: Sáng tạo không giới hạn
-      feature_moderation: Mastodon giành quyền tự quyết về tay bạn. Mỗi máy chủ tạo ra các nội quy của riêng họ, được thực thi nội bộ chứ không phải từ trên xuống như dịch vụ mạng xã hội của Big Tech, giúp linh hoạt trong việc đáp ứng nhu cầu của các nhóm người dùng khác nhau. Tham gia một máy chủ với các quy tắc bạn đồng ý hoặc tự chạy máy chủ của riêng bạn.
+      feature_moderation: Nutshell giành quyền tự quyết về tay bạn. Mỗi máy chủ tạo ra các nội quy của riêng họ, được thực thi nội bộ chứ không phải từ trên xuống như dịch vụ mạng xã hội của Big Tech, giúp linh hoạt trong việc đáp ứng nhu cầu của các nhóm người dùng khác nhau. Tham gia một máy chủ với các quy tắc bạn đồng ý hoặc tự chạy máy chủ của riêng bạn.
       feature_moderation_title: Kiểm duyệt đúng nghĩa
       follow_action: Theo dõi
-      follow_step: Theo dõi những người thú vị trên Mastodon.
+      follow_step: Theo dõi những người thú vị trên Nutshell.
       follow_title: Cá nhân hóa bảng tin của bạn
       follows_subtitle: Theo dõi những người thú vị
       follows_title: Gợi ý theo dõi
@@ -2127,10 +2127,10 @@ vi:
       post_action: Soạn tút
       post_step: Chào cộng đồng bằng lời nói, ảnh hoặc video.
       post_title: Đăng tút đầu tiên
-      share_step: Hãy để bạn bè của bạn biết cách tìm thấy bạn trên Mastodon.
-      share_title: Chia sẻ hồ sơ Mastodon của bạn
+      share_step: Hãy để bạn bè của bạn biết cách tìm thấy bạn trên Nutshell.
+      share_title: Chia sẻ hồ sơ Nutshell của bạn
       sign_in_action: Đăng nhập
-      subject: Chào mừng đến với Mastodon
+      subject: Chào mừng đến với Nutshell
       title: Xin chào %{name}!
   users:
     follow_limit_reached: Bạn chỉ có thể theo dõi tối đa %{limit} người
@@ -2143,7 +2143,7 @@ vi:
   verification:
     extra_instructions_html: <strong>Mẹo:</strong> Có thể ẩn liên kết trên trang web của bạn. Quan trọng là <code>rel="me"</code> giúp ngăn chặn việc mạo danh trên các trang web có nội dung do người dùng tạo. Bạn cũng có thể sử dụng một thẻ <code>link</code> trên header của trang thay vì <code>a</code>, nhưng HTML phải có thể truy cập được mà không cần thực thi JavaScript.
     here_is_how: Cách thực hiện
-    hint_html: "<strong>Xác minh danh tính trên Mastodon là dành cho tất cả mọi người.</strong> Dựa trên các tiêu chuẩn web mở, miễn phí bây giờ và mãi mãi. Tất cả những gì bạn cần là một trang web cá nhân để mọi người nhận ra bạn. Khi bạn liên kết đến trang web này từ hồ sơ của mình, chúng tôi sẽ kiểm tra xem trang web đó có liên kết lại với hồ sơ của bạn hay không và hiển thị một chỉ báo trực quan trên đó."
+    hint_html: "<strong>Xác minh danh tính trên Nutshell là dành cho tất cả mọi người.</strong> Dựa trên các tiêu chuẩn web mở, miễn phí bây giờ và mãi mãi. Tất cả những gì bạn cần là một trang web cá nhân để mọi người nhận ra bạn. Khi bạn liên kết đến trang web này từ hồ sơ của mình, chúng tôi sẽ kiểm tra xem trang web đó có liên kết lại với hồ sơ của bạn hay không và hiển thị một chỉ báo trực quan trên đó."
     instructions_html: Sao chép và dán mã bên dưới vào mã nguồn trang web của bạn. Sau đó, thêm địa chỉ trang web của bạn vào một trong các trường metadata trên hồ sơ của bạn từ tab "Sửa hồ sơ" và lưu thay đổi.
     verification: Xác minh
     verified_links: Những liên kết bạn đã xác minh
@@ -2167,5 +2167,5 @@ vi:
     otp_required: Để dùng khóa bảo mật, trước tiên hãy kích hoạt xác thực 2 bước.
     registered_on: Đăng ký vào %{date}
   wrapstodon:
-    description: Xem năm nay %{name} đã dùng Mastodon như thế nào!
+    description: Xem năm nay %{name} đã dùng Nutshell như thế nào!
     title: Wrapstodon %{year} cho %{name}

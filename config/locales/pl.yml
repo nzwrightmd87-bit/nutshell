@@ -1,10 +1,10 @@
 ---
 pl:
   about:
-    about_mastodon_html: 'Sieć społecznościowa przyszłości: Bez reklam, bez inwigilacji, zaprojektowana etycznie i zdecentralizowanie! Władaj swoimi danymi z Mastodonem!'
+    about_mastodon_html: 'Sieć społecznościowa przyszłości: Bez reklam, bez inwigilacji, zaprojektowana etycznie i zdecentralizowanie! Władaj swoimi danymi z Nutshellem!'
     contact_missing: Nie ustawiono
     contact_unavailable: Nie dotyczy
-    hosted_on: Mastodon prowadzony na %{domain}
+    hosted_on: Nutshell prowadzony na %{domain}
     title: O nas
   accounts:
     followers:
@@ -768,7 +768,7 @@ pl:
         moderation: Moderacja
         special: Specjalne
       delete: Usuń
-      description_html: Za pomocą <strong>ról użytkowników</strong>możesz dostosowywać funkcje i obszary Mastodon, do których użytkownicy mogą uzyskać dostęp.
+      description_html: Za pomocą <strong>ról użytkowników</strong>możesz dostosowywać funkcje i obszary Nutshell, do których użytkownicy mogą uzyskać dostęp.
       edit: Edytuj rolę '%{name}'
       everyone: Domyślnie uprawnienia
       everyone_full_description_html: To jest <strong>rola podstawowa</strong> wpływająca na <strong>wszystkich użytkowników</strong>, nawet tych, którzy nie mają przypisanej roli. Wszystkie inne role dziedziczą z niej uprawnienia.
@@ -841,17 +841,17 @@ pl:
         rules_hint: Istnieje dedykowany obszar dla reguł, których twoi użytkownicy mają przestrzegać.
         title: O...
       appearance:
-        preamble: Dostosuj interfejs www Mastodon.
+        preamble: Dostosuj interfejs www Nutshell.
         title: Wygląd
       branding:
-        preamble: Marka Twojego serwera odróżnia go od innych serwerów w sieci. Informacje te mogą być wyświetlane w różnych środowiskach, takich jak interfejs internetowy Mastodon, aplikacje natywne, w podglądzie linków na innych stronach internetowych i w aplikacjach do wysyłania wiadomości itd. Z tego względu najlepiej zachować jasną, krótką i zwięzłą informację.
+        preamble: Marka Twojego serwera odróżnia go od innych serwerów w sieci. Informacje te mogą być wyświetlane w różnych środowiskach, takich jak interfejs internetowy Nutshell, aplikacje natywne, w podglądzie linków na innych stronach internetowych i w aplikacjach do wysyłania wiadomości itd. Z tego względu najlepiej zachować jasną, krótką i zwięzłą informację.
         title: Marka
       captcha_enabled:
         desc_html: Wymaga użycia zewnętrznych skryptów hCaptcha, co może negatywnie wpływać na bezpieczeństwo i prywatność. <strong>Może również przyczynić się do znaczącego utrudnienia procesu rejestracji niektórym, np. niepełnosprawnym, osobom.</strong> Dlatego sugeruje się używanie zaproszeń bądź ręcznie potwierdzanie kont.
         title: W celu potwierdzenia ich kont wymagaj rozwiązania zadania CAPTCHA przez nowych użytkowników
       content_retention:
         danger_zone: Strefa niebezpieczeństwa
-        preamble: Kontroluj, jak treści generowane przez użytkownika są przechowywane w Mastodon.
+        preamble: Kontroluj, jak treści generowane przez użytkownika są przechowywane w Nutshell.
         title: Retencja treści
       default_noindex:
         desc_html: Wpłynie to na wszystkich użytkowników, którzy sami tego nie zmienili w swoich ustawieniach
@@ -900,7 +900,7 @@ pl:
       destroyed_msg: Pomyślnie usunięto przesłany plik!
     software_updates:
       critical_update: Krytyczna — zaktualizuj szybko
-      description: Zalecamy aktualizować instalacje Mastodona na bieżąco by korzystać z najnowszych poprawek i funkcji. Co więcej, czasami krytycznym jest aktualizować szybko by uniknąć problemów zw. z bezpieczeństwem. Z tego powodu, Mastodon co pół godziny sprawdza czy wydane zostały aktualizacje i powiadomi cię o tym zgodnie z twoimi ustawieniami powiadomień.
+      description: Zalecamy aktualizować instalacje Nutshella na bieżąco by korzystać z najnowszych poprawek i funkcji. Co więcej, czasami krytycznym jest aktualizować szybko by uniknąć problemów zw. z bezpieczeństwem. Z tego powodu, Nutshell co pół godziny sprawdza czy wydane zostały aktualizacje i powiadomi cię o tym zgodnie z twoimi ustawieniami powiadomień.
       documentation_link: Dowiedz się więcej
       release_notes: Informacje o wydaniu
       title: Dostępne aktualizacje
@@ -965,7 +965,7 @@ pl:
         message_html: Mapa indeksu Elasticsearch jest przestarzała. Uruchom <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Dokumentacja
-        message_html: Twój klaster Elasticsearch ma więcej niż jeden node, ale Mastodon nie jest odpowiednio ustawiony by ich używać.
+        message_html: Twój klaster Elasticsearch ma więcej niż jeden node, ale Nutshell nie jest odpowiednio ustawiony by ich używać.
       elasticsearch_preset_single_node:
         action: Dokumentacja
         message_html: Twój klaster Elasticsearch ma tylko jeden node, więc <code>ES_PRESET</code> powinno mieć wartość <code>single_node_cluster</code>.
@@ -983,13 +983,13 @@ pl:
         message_html: Brak uruchomionego procesu Sidekiq dla kolejki(-ek) %{value}. Sprawdź konfigurację Sidekiq
       software_version_check:
         action: Pokaż dostępne aktualizacje
-        message_html: Dostępna aktualizacja Mastodona.
+        message_html: Dostępna aktualizacja Nutshella.
       software_version_critical_check:
         action: Pokaż dostępne aktualizacje
-        message_html: Dostępna krytyczna aktualizacja Mastodona, zaktualizuj jak tylko będzie to możliwe.
+        message_html: Dostępna krytyczna aktualizacja Nutshella, zaktualizuj jak tylko będzie to możliwe.
       software_version_patch_check:
         action: Pokaż dostępne aktualizacje
-        message_html: Dostępna aktualizacja poprawkowa Mastodona.
+        message_html: Dostępna aktualizacja poprawkowa Nutshella.
       upload_check_privacy_error:
         action: Kliknij tutaj, aby dowiedzieć się więcej
         message_html: "<strong>Twój serwer internetowy jest nieprawidłowo skonfigurowany. Prywatność twoich użytkowników jest zagrożona.</strong>"
@@ -1154,7 +1154,7 @@ pl:
     webhooks:
       add_new: Dodaj punkt końcowy
       delete: Usuń
-      description_html: "<strong>webhook</strong> umożliwia Mastodon dostarczanie <strong>powiadomień w czasie rzeczywistym</strong> o wybranych wydarzeniach do twojej aplikacji, aby mogła <strong>automatycznie wyzwalać reakcje</strong>."
+      description_html: "<strong>webhook</strong> umożliwia Nutshell dostarczanie <strong>powiadomień w czasie rzeczywistym</strong> o wybranych wydarzeniach do twojej aplikacji, aby mogła <strong>automatycznie wyzwalać reakcje</strong>."
       disable: Wyłącz
       disabled: Wyłączone
       edit: Edytuj punkt końcowy
@@ -1190,8 +1190,8 @@ pl:
       next_steps: Możesz zaakceptować odwołanie o cofnięcie decyzji o moderacji lub je zignorować.
       subject: "%{username} odwołuje się od decyzji moderacyjnej na %{instance}"
     new_critical_software_updates:
-      body: Zostały wydane nowe krytyczne wersje Mastodona, pewnie chcesz zaktualizować jak najszybciej!
-      subject: Krytyczne aktualizacje Mastodona dostępne dla %{instance}!
+      body: Zostały wydane nowe krytyczne wersje Nutshella, pewnie chcesz zaktualizować jak najszybciej!
+      subject: Krytyczne aktualizacje Nutshella dostępne dla %{instance}!
     new_pending_account:
       body: Poniżej znajdują się szczegóły dotycząće nowego konta. Możesz przyjąć lub odrzucić to podanie.
       subject: Nowe konto czeka na przegląd na %{instance} (%{username})
@@ -1200,8 +1200,8 @@ pl:
       body_remote: Użytkownik instancji %{domain} zgłosił(a) %{target}
       subject: Nowe zgłoszenie na %{instance} (#%{id})
     new_software_updates:
-      body: Zostały wydane nowe wersje Mastodona, pewnie chcesz zaktualizować!
-      subject: Nowe wersje Mastodona dostępne dla %{instance}!
+      body: Zostały wydane nowe wersje Nutshella, pewnie chcesz zaktualizować!
+      subject: Nowe wersje Nutshella dostępne dla %{instance}!
     new_trends:
       body: 'Następujące elementy potrzebują recenzji zanim będą mogły być wyświetlane publicznie:'
       new_trending_links:
@@ -1223,7 +1223,7 @@ pl:
     animations_and_accessibility: Animacje i dostępność
     discovery: Odkrywanie
     localization:
-      body: Mastodon jest tłumaczony przez wolontariuszy.
+      body: Nutshell jest tłumaczony przez wolontariuszy.
       guide_link: https://pl.crowdin.com/project/mastodon
       guide_link_text: Każdy może wnieść swój wkład.
     sensitive_content: Wrażliwa zawartość
@@ -1262,9 +1262,9 @@ pl:
     delete_account: Usunięcie konta
     delete_account_html: Jeżeli chcesz usunąć konto, <a href="%{path}">przejdź tutaj</a>. Otrzymasz prośbę o potwierdzenie.
     description:
-      prefix_invited_by_user: "@%{name} zaprasza Cię do dołączenia na ten serwer Mastodona!"
-      prefix_sign_up: Zarejestruj się na Mastodon już dziś!
-      suffix: Mając konto, możesz obserwować ludzi, publikować wpisy i wymieniać się wiadomościami z użytkownikami innych serwerów Mastodona i nie tylko!
+      prefix_invited_by_user: "@%{name} zaprasza Cię do dołączenia na ten serwer Nutshella!"
+      prefix_sign_up: Zarejestruj się na Nutshell już dziś!
+      suffix: Mając konto, możesz obserwować ludzi, publikować wpisy i wymieniać się wiadomościami z użytkownikami innych serwerów Nutshella i nie tylko!
     didnt_get_confirmation: Nie otrzymano linku potwierdzającego?
     dont_have_your_security_key: Nie masz klucza bezpieczeństwa?
     forgot_password: Nie pamiętasz hasła?
@@ -1301,7 +1301,7 @@ pl:
     set_new_password: Ustaw nowe hasło
     setup:
       email_below_hint_html: Sprawdź folder ze spamem lub poproś o inny link potwierdzający. Możesz poprawić swój adres e-mail, jeśli jest niepoprawny.
-      email_settings_hint_html: Kliknij link, który wysłaliśmy do %{email} , aby rozpocząć korzystanie z Mastodon. Poczekamy tutaj.
+      email_settings_hint_html: Kliknij link, który wysłaliśmy do %{email} , aby rozpocząć korzystanie z Nutshell. Poczekamy tutaj.
       link_not_received: Nie otrzymano linku?
       new_confirmation_instructions_sent: Za kilka minut otrzymasz nowy e-mail z linkiem potwierdzającym!
       title: Sprawdź swoją skrzynkę odbiorczą
@@ -1310,7 +1310,7 @@ pl:
       title: Zaloguj się do %{domain}
     sign_up:
       manual_review: Rejestracja na %{domain} przechodzi przez ręczne sprawdzanie przez naszych moderatorów. Aby pomóc nam usprawnić ten proces, napisz coś o sobie oraz dlaczego chcesz założyć konto na %{domain}.
-      preamble: Z kontem na tym serwerze Mastodon będziesz mógł obserwować każdą inną osobę w sieci, niezależnie od miejsca przechowywania ich konta.
+      preamble: Z kontem na tym serwerze Nutshell będziesz mógł obserwować każdą inną osobę w sieci, niezależnie od miejsca przechowywania ich konta.
       title: Skonfigurujmy Twoje konto na %{domain}.
     status:
       account_status: Stan konta
@@ -1326,7 +1326,7 @@ pl:
     user_privacy_agreement_html: Przeczytałem/am/o i akceptuję <a href="%{privacy_policy_path}" target="_blank">politykę prywatności</a>
   author_attribution:
     example_title: Przykładowy tekst
-    hint_html: Piszesz wiadomości albo bloga poza Mastodonem? Kontroluj jak będą ci przypisywane podczas dizielenia się nimi na Mastodonie.
+    hint_html: Piszesz wiadomości albo bloga poza Nutshellem? Kontroluj jak będą ci przypisywane podczas dizielenia się nimi na Nutshellie.
     instructions: 'Upewnij się, że ten kod jest w HTMLu twojego artykułu:'
     more_from_html: Więcej od %{name}
     s_blog: Blog %{name}
@@ -1434,7 +1434,7 @@ pl:
       content: Przepraszamy, coś poszło nie tak, po naszej stronie.
       title: Ta strona jest nieprawidłowa
     '503': Strona nie może zostać wyświetlona z powodu tymczasowego niepowodzenia serwera.
-    noscript_html: Aby korzystać z aplikacji Mastodon, włącz JavaScript. Możesz też skorzystać z jednej z <a href="%{apps_path}">natywnych aplikacji</a> obsługującej Twoje urządzenie.
+    noscript_html: Aby korzystać z aplikacji Nutshell, włącz JavaScript. Możesz też skorzystać z jednej z <a href="%{apps_path}">natywnych aplikacji</a> obsługującej Twoje urządzenie.
   existing_username_validator:
     not_found: nie znaleziono lokalnego użytkownika o tej nazwie
     not_found_multiple: nie znaleziono %{usernames}
@@ -1691,7 +1691,7 @@ pl:
     unsubscribe:
       action: Tak, wypisuję się
       complete: Anulowano subskrypcję
-      confirmation_html: Czy na pewno chcesz wypisać się z otrzymywania %{type} z Mastodona na %{domain} na adres %{email}? Zawsze możesz zapisać się ponownie ze strony <a href="%{settings_path}">ustawień powiadomień mejlowych</a>.
+      confirmation_html: Czy na pewno chcesz wypisać się z otrzymywania %{type} z Nutshella na %{domain} na adres %{email}? Zawsze możesz zapisać się ponownie ze strony <a href="%{settings_path}">ustawień powiadomień mejlowych</a>.
       emails:
         notification_emails:
           favourite: powiadomień mejlowych o polubieniach
@@ -1700,7 +1700,7 @@ pl:
           mention: powiadomień mejlowych o wspomnieniach
           reblog: powiadomień mejlowych o podbiciach
       resubscribe_html: W przypadku przypadkowego wypisania możesz zapisać się ponownie z <a href="%{settings_path}">ustawień powiadomień mejlowych</a>.
-      success_html: Już nie będziesz otrzymywać %{type} z Mastodona na %{domain} na adres %{email}.
+      success_html: Już nie będziesz otrzymywać %{type} z Nutshella na %{domain} na adres %{email}.
       title: Anuluj subskrypcję
   media_attachments:
     validations:
@@ -1829,13 +1829,13 @@ pl:
     posting_defaults: Domyślne ustawienia wpisów
     public_timelines: Publiczne osie czasu
   privacy:
-    hint_html: "<strong>Dostosuj tryb odnajdowania twojego profilu i wpisów.</strong> Funkcje Mastodona mogą pomóc ci zwiększać twoją publiczność – przejrzyj te ustawienia i dostosuj je do swojego sposobu użytkowania."
+    hint_html: "<strong>Dostosuj tryb odnajdowania twojego profilu i wpisów.</strong> Funkcje Nutshella mogą pomóc ci zwiększać twoją publiczność – przejrzyj te ustawienia i dostosuj je do swojego sposobu użytkowania."
     privacy: Prywatność
     privacy_hint_html: Ustaw, ile chcesz ujawniać innym. Ciekawe profile i programy często znajduje się przy przeglądaniu cudzych list obserwowanych i tego, z jakich programów zamieszczają, ale może wolisz to ukryć.
     reach: Zasięg
     reach_hint_html: Ustaw, czy chcesz dać się odkryć i zaobserwować. Chcesz, żeby twoje wpisy pojawiały się w zakładce "Odkrywaj"? Chcesz, żeby sugerowano twoje konto do obserwacji? Chcesz przyjmować nowych obserwujących automatycznie, czy aprobować ich ręcznie?
     search: Wyszukiwanie
-    search_hint_html: Ustaw, w jakim zakresie będziesz znajdowalny(a). Chcesz pojawiać się w wynikach po twoich publicznych wpisach? Chcesz by twój profil dało się znaleźć spoza Mastodona? Pamiętaj, że nie da się zapewnić całkowitego wykluczenia wszystkich informacji publicznie dostępnych z wyszukiwarek.
+    search_hint_html: Ustaw, w jakim zakresie będziesz znajdowalny(a). Chcesz pojawiać się w wynikach po twoich publicznych wpisach? Chcesz by twój profil dało się znaleźć spoza Nutshella? Pamiętaj, że nie da się zapewnić całkowitego wykluczenia wszystkich informacji publicznie dostępnych z wyszukiwarek.
     title: Prywatność i zasięg
   privacy_policy:
     title: Polityka prywatności
@@ -1936,7 +1936,7 @@ pl:
     aliases: Aliasy konta
     appearance: Wygląd
     authorized_apps: Uwierzytelnione aplikacje
-    back: Powrót do Mastodona
+    back: Powrót do Nutshella
     delete: Usuń konto
     development: Tworzenie aplikacji
     edit_profile: Edytuj profil
@@ -2009,7 +2009,7 @@ pl:
     visibilities:
       public: Publiczne
       unlisted: Niewidoczny
-      unlisted_long: Ukryte w wynikach wyszukiwania Mastodona, trendach i publicznych osiach czasu
+      unlisted_long: Ukryte w wynikach wyszukiwania Nutshella, trendach i publicznych osiach czasu
   statuses_cleanup:
     enabled: Automatycznie usuwaj stare wiadomości
     enabled_hint: Automatycznie usuwa Twoje posty, gdy osiągną określony próg wiekowy, chyba że spełniają jeden z poniższych wyjątków
@@ -2099,7 +2099,7 @@ pl:
       subtitle: Twoje odwołanie zostało odrzucone.
       title: Odwołanie odrzucone
     backup_ready:
-      explanation: Zamówiono pełną kopię zapasową twojego konta Mastodon.
+      explanation: Zamówiono pełną kopię zapasową twojego konta Nutshell.
       extra: Gotowe do pobrania!
       subject: Twoje archiwum jest gotowe do pobrania
       title: Odbiór archiwum
@@ -2160,21 +2160,21 @@ pl:
       apps_android_action: Pobierz z Google Play
       apps_ios_action: Pobierz z App Store
       apps_step: Pobierz oficjalne aplikacje.
-      apps_title: Aplikacje Mastodon
-      checklist_subtitle: 'Aby porządnie rozpocząć użytkowanie Mastodona:'
+      apps_title: Aplikacje Nutshell
+      checklist_subtitle: 'Aby porządnie rozpocząć użytkowanie Nutshella:'
       checklist_title: Powitalna lista kontrolna
       edit_profile_action: Personalizuj
       edit_profile_step: Inni użytkownicy są bardziej skłonni do interakcji z Tobą jeśli posiadasz wypełniony profil.
       edit_profile_title: Spersonalizuj swój profil
       explanation: Kilka wskazówek, które pomogą Ci rozpocząć
       feature_action: Dowiedz się więcej
-      feature_audience: Mastodon zapewnia ci unikalne możliwości docierania do twojego grona odbiorców bez żadnych pośredników. Postawiony na własnej infrastrukturze, Mastodon pozwala ci obserwować i być obserwowanym z dowolnego innego serwera Mastodona. Nikt, poza tobą samym(-ą), nie ma nad tym kontroli.
+      feature_audience: Nutshell zapewnia ci unikalne możliwości docierania do twojego grona odbiorców bez żadnych pośredników. Postawiony na własnej infrastrukturze, Nutshell pozwala ci obserwować i być obserwowanym z dowolnego innego serwera Nutshella. Nikt, poza tobą samym(-ą), nie ma nad tym kontroli.
       feature_audience_title: Buduj swoją publiczność z pewnością
-      feature_control: Sam(a) wiesz najlepiej, co chcesz widzieć na swojej osi czasu. Brak algorytmów i reklam, które marnują twój cenny czas. Obserwuj dowolne osoby z dowolnego serwera Mastodona przy pomocy jednego konta i otrzymuj ich wpisy w kolejności chronologicznej. Każdy zasługuje na własny kąt w internecie.
+      feature_control: Sam(a) wiesz najlepiej, co chcesz widzieć na swojej osi czasu. Brak algorytmów i reklam, które marnują twój cenny czas. Obserwuj dowolne osoby z dowolnego serwera Nutshella przy pomocy jednego konta i otrzymuj ich wpisy w kolejności chronologicznej. Każdy zasługuje na własny kąt w internecie.
       feature_control_title: Miej kontrolę nad swoją osią czasu
-      feature_creativity: Mastodon obsługuje wpisy audio, wideo oraz zdjęcia, jak również opisy zdjęć na potrzeby dostępności, ankiety, ostrzeżenia dotyczące treści, animowane awatary, niestandardowe emoji, kontrolę miniatur zdjęć i więcej, aby pomóc Ci wyrażać siebie. Bez względu na to, czy dzielisz się swoją sztuką, muzyką czy podcastem, Mastodon jest dla ciebie.
+      feature_creativity: Nutshell obsługuje wpisy audio, wideo oraz zdjęcia, jak również opisy zdjęć na potrzeby dostępności, ankiety, ostrzeżenia dotyczące treści, animowane awatary, niestandardowe emoji, kontrolę miniatur zdjęć i więcej, aby pomóc Ci wyrażać siebie. Bez względu na to, czy dzielisz się swoją sztuką, muzyką czy podcastem, Nutshell jest dla ciebie.
       feature_creativity_title: Niezrównana kreatywność
-      feature_moderation: Mastodon oddaje w twoje ręce prawo podejmowania decyzji. Każdy serwer tworzy własne zasady i regulacje, które są egzekwowane lokalnie a nie odgórnie jak w przypadku korporacyjnych mediów społecznościowych. Czyni to Mastodona najbardziej elastyczną platformą dla różnych grup ludzi z różnymi potrzebami. Dołącz do serwera, z którego zasadami zgadzasz się najbardziej, lub stwórz swój własny.
+      feature_moderation: Nutshell oddaje w twoje ręce prawo podejmowania decyzji. Każdy serwer tworzy własne zasady i regulacje, które są egzekwowane lokalnie a nie odgórnie jak w przypadku korporacyjnych mediów społecznościowych. Czyni to Nutshella najbardziej elastyczną platformą dla różnych grup ludzi z różnymi potrzebami. Dołącz do serwera, z którego zasadami zgadzasz się najbardziej, lub stwórz swój własny.
       feature_moderation_title: Moderacja we właściwy sposób
       follow_action: Obserwuj
       follow_step: Zarządzasz swoim własnym kanałem. Wypełnij go interesującymi ludźmi.
@@ -2193,10 +2193,10 @@ pl:
       post_action: Utwórz wpis
       post_step: Przywitaj się ze światem.
       post_title: Utwórz swój pierwszy post
-      share_step: Poinformuj swoich przyjaciół jak znaleźć cię na Mastodonie.
+      share_step: Poinformuj swoich przyjaciół jak znaleźć cię na Nutshellie.
       share_title: Udostępnij swój profil
       sign_in_action: Zaloguj się
-      subject: Witaj w Mastodonie
+      subject: Witaj w Nutshellie
       title: Witaj na pokładzie, %{name}!
   users:
     follow_limit_reached: Nie możesz obserwować więcej niż %{limit} osób
@@ -2209,7 +2209,7 @@ pl:
   verification:
     extra_instructions_html: <strong>Wskazówka:</strong> link na twojej stronie może być niewidoczny. Istotną częścią, zapobiegającą podszywaniu na stronach z treściami dodawanymi przez użytkowników, jest <code>rel="me"</code>. Zamiast tagu <code>a</code> możesz w nagłówek osadzić tag <code>link</code>. Oba jednak muszą być dostępne bez JavaScriptu.
     here_is_how: Oto jak
-    hint_html: "<strong>Weryfikacja tożsamości na Mastodonie jest dla wszystkich,</strong> oparta na otwartych standardach, i darmowa. Potrzebna ci tylko osobista strona WWW po której inni cię rozpoznają – kiedy linkujesz do niej z twojego profilu, sprawdzamy czy ona linkuje doń z powrotem, i wskazujemy to wizualnie."
+    hint_html: "<strong>Weryfikacja tożsamości na Nutshellie jest dla wszystkich,</strong> oparta na otwartych standardach, i darmowa. Potrzebna ci tylko osobista strona WWW po której inni cię rozpoznają – kiedy linkujesz do niej z twojego profilu, sprawdzamy czy ona linkuje doń z powrotem, i wskazujemy to wizualnie."
     instructions_html: Skopiuj poniższy kod HTML i wklej go na swoją stronę. Potem dodaj link do twojej strony do jednego z wolnych pól na profilu z zakładki "Edytuj profil".
     verification: Weryfikacja
     verified_links: Twoje zweryfikowane linki

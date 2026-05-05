@@ -100,7 +100,7 @@ az:
         admin/accounts: Hesabların administrasiyası
         admin/all: Bütün administrativ funksiyalar
         admin/reports: Şikayətlərin administrasiyası
-        all: Mastodon hesabınıza tam erişim
+        all: Nutshell hesabınıza tam erişim
         blocks: Əngəlləmələr
         bookmarks: Əlfəcinlər
         conversations: Danışıqlar
@@ -113,7 +113,7 @@ az:
         media: Media qoşmaları
         mutes: Səssizdəkilər
         notifications: Bildirişlər
-        profile: Mastodon profiliniz
+        profile: Nutshell profiliniz
         push: Ani bildirişlər
         reports: Şikayətlər
         search: Axtar

@@ -23,7 +23,7 @@ ast:
         locale: La llingua de la interfaz, los mensaxes per corréu electrónicu y los avisos push
         password: Usa polo menos 8 caráuteres
         setting_aggregate_reblogs: Nun amuesa los artículos compartíos nuevos que yá se compartieren de recién (namás afeuta a los artículos compartíos d'agora)
-        setting_always_send_emails: Los avisos nun se suelen unviar per corréu electrónicu si uses activamente Mastodon
+        setting_always_send_emails: Los avisos nun se suelen unviar per corréu electrónicu si uses activamente Nutshell
         setting_default_sensitive: El conteníu multimedia sensible escuéndrese por defeutu y pue amosase al calcar nelli
         setting_display_media_default: Escondelu cuando se marque como sensible
         setting_display_media_hide_all: Escondelu siempre
@@ -33,17 +33,17 @@ ast:
         name: 'Equí tán dalgunes de les etiquetes qu''usesti apocayá:'
       form_admin_settings:
         closed_registrations_message: Apaez cuando'l rexistru ta desactiváu
-        custom_css: Pues aplicar estilos personalizaos a la versión web de Mastodon.
+        custom_css: Pues aplicar estilos personalizaos a la versión web de Nutshell.
         mascot: Anula la ilustración na interfaz web avanzada.
         require_invite_text: Cuando los rexistros riquen una aprobación manual, el campu «¿Por qué quies xunite?» vuélvese obligatoriu
-        site_extended_description: Cualesquier tipu d'información adicional que pueda ser útil pa visitantes y pa perfiles rexistraos. El testu pue estructurase cola sintaxis de Mastodon.
+        site_extended_description: Cualesquier tipu d'información adicional que pueda ser útil pa visitantes y pa perfiles rexistraos. El testu pue estructurase cola sintaxis de Nutshell.
         site_short_description: Un descripción curtia qu'ayuda a identificar de forma única al sirvidor. ¿Quién lu lleva?, ¿pa quién ye?
         theme: L'estilu que los visitantes y los perfiles nuevos usen.
         trends: Les tendencies amuesen artículos, etiquetes y noticies que tean ganando popularidá nesti sirvidor.
       form_challenge:
         current_password: Tas entrando a una área segura
       imports:
-        data: El ficheru CSV que s'esportó d'otru sirvidor de Mastodon
+        data: El ficheru CSV que s'esportó d'otru sirvidor de Nutshell
       invite_request:
         text: Esto va ayudanos a revisar la to solicitú
       ip_block:
@@ -164,7 +164,7 @@ ast:
         reblog: Daquién compartió la to publicación
         report: Unvióse un informe nuevu
         software_updates:
-          label: Hai disponible un anovamientu de Mastodon
+          label: Hai disponible un anovamientu de Nutshell
         trending_tag: Una tendencia rique una revisión
       rule:
         text: Norma

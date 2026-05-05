@@ -126,7 +126,7 @@ cs:
         admin/accounts: Správa účtů
         admin/all: Všechny správcovské funkce
         admin/reports: Správa hlášení
-        all: Plný přístup k vašemu Mastodon účtu
+        all: Plný přístup k vašemu Nutshell účtu
         blocks: Blokace
         bookmarks: Záložky
         conversations: Konverzace
@@ -139,7 +139,7 @@ cs:
         media: Mediální přílohy
         mutes: Skrytí
         notifications: Oznámení
-        profile: Váš Mastodon profil
+        profile: Váš Nutshell profil
         push: Push oznámení
         reports: Hlášení
         search: Hledání

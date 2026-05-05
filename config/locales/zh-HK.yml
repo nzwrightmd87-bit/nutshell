@@ -1,10 +1,10 @@
 ---
 zh-HK:
   about:
-    about_mastodon_html: Mastodon（萬象）是屬於未來的社交網路︰無廣告煩擾、無企業監控、設計講道義、分散無大台！立即重奪個人資料的控制權，使用 Mastodon 吧！
+    about_mastodon_html: Nutshell（萬象）是屬於未來的社交網路︰無廣告煩擾、無企業監控、設計講道義、分散無大台！立即重奪個人資料的控制權，使用 Nutshell 吧！
     contact_missing: 未設定
     contact_unavailable: 不適用
-    hosted_on: 在 %{domain} 運作的 Mastodon 伺服器
+    hosted_on: 在 %{domain} 運作的 Nutshell 伺服器
     title: 關於
   accounts:
     followers:
@@ -653,7 +653,7 @@ zh-HK:
         moderation: 審核
         special: 特殊
       delete: 刪除
-      description_html: 透過<strong>使用者身份</strong>，你可以自訂使用者可以存取 Mastodon 的哪些功能和區域。
+      description_html: 透過<strong>使用者身份</strong>，你可以自訂使用者可以存取 Nutshell 的哪些功能和區域。
       edit: 編輯「%{name}」身份
       everyone: 預設權限
       everyone_full_description_html: 這是會影響所有<strong>使用者</strong>的<strong>基本身份</strong>，包括沒有被指派身份的使用者。所有身份都會繼承它的權限。
@@ -717,17 +717,17 @@ zh-HK:
         rules_hint: 這是有關你的使用者應遵守的規則的專區。
         title: 關於
       appearance:
-        preamble: 自訂 Mastodon 網頁介面。
+        preamble: 自訂 Nutshell 網頁介面。
         title: 外觀
       branding:
-        preamble: 你的伺服器的品牌使它與網絡上的其他伺服器區分開來。這些資訊可能會在各種情境下顯示，如 Mastodon 的網頁介面、原生應用程式，以及其他網站和通訊應用程式內的連結預覽等。因此，請盡量保持資訊簡短精煉。
+        preamble: 你的伺服器的品牌使它與網絡上的其他伺服器區分開來。這些資訊可能會在各種情境下顯示，如 Nutshell 的網頁介面、原生應用程式，以及其他網站和通訊應用程式內的連結預覽等。因此，請盡量保持資訊簡短精煉。
         title: 品牌
       captcha_enabled:
         desc_html: 這倚賴 hCaptcha 的外部腳本，或會引起安全和私隱疑慮。此外，<strong>此註冊流程亦可能對特定人士（尤其是殘疾人士）有較多障礙</strong>。有鑑於此，請考慮使用其他以審核或邀請的註冊方式。
         title: 要求新使用者解答 CAPTCHA 以驗證帳號
       content_retention:
         danger_zone: 危險區域
-        preamble: 控制使用者生成的內容如何儲存在 Mastodon。
+        preamble: 控制使用者生成的內容如何儲存在 Nutshell。
         title: 內容留存
       default_noindex:
         desc_html: 影響所有未自行設定的用戶
@@ -821,7 +821,7 @@ zh-HK:
         message_html: Elasticsearch 索引配置已過期。請執行<code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: 查看文檔
-        message_html: 你的 Elasticsearch 叢集有多個節點，但 Mastodon 並未配置來使用它們。
+        message_html: 你的 Elasticsearch 叢集有多個節點，但 Nutshell 並未配置來使用它們。
       elasticsearch_preset_single_node:
         action: 查看文檔
         message_html: 你的 Elasticsearch 叢集只有一個節點，<code>ES_PRESET</code>應設定為<code>single_node_cluster</code>。
@@ -839,10 +839,10 @@ zh-HK:
         message_html: 沒有 %{value} 佇列的 Sidekiq 處理程序。請檢查 Sidekiq 設定檔案
       software_version_critical_check:
         action: 查看可用的更新
-        message_html: 有重要的 Mastodon 更新可用，請盡快更新。
+        message_html: 有重要的 Nutshell 更新可用，請盡快更新。
       software_version_patch_check:
         action: 查看可用的更新
-        message_html: 有可用的 Mastodon 除錯更新。
+        message_html: 有可用的 Nutshell 除錯更新。
       upload_check_privacy_error:
         action: 在此查看更多資訊
         message_html: "<strong>你的網絡伺服器配置錯誤。你的使用者的私隱有危險。</strong>"
@@ -936,7 +936,7 @@ zh-HK:
     webhooks:
       add_new: 新增端點
       delete: 刪除
-      description_html: "<strong>Webhook</strong> 讓 Mastodon 將有關所選事件的<strong>實時通知</strong>推送到你自己的應用程式，如此應用程式便可以<strong>自動觸發反應</strong>。"
+      description_html: "<strong>Webhook</strong> 讓 Nutshell 將有關所選事件的<strong>實時通知</strong>推送到你自己的應用程式，如此應用程式便可以<strong>自動觸發反應</strong>。"
       disable: 停用
       disabled: 已停用
       edit: 編輯端點
@@ -969,8 +969,8 @@ zh-HK:
       next_steps: 您可以批准此申訴以撤銷審核裁決，又或者忽略它。
       subject: "%{username} 對 %{instance} 上的審核裁決提出申訴"
     new_critical_software_updates:
-      body: 全新關鍵性 Mastodon 版本已釋出，你也許想盡快更新！
-      subject: "%{instance} 有關鍵的 Mastodon 更新可用！"
+      body: 全新關鍵性 Nutshell 版本已釋出，你也許想盡快更新！
+      subject: "%{instance} 有關鍵的 Nutshell 更新可用！"
     new_pending_account:
       body: 以下是新帳戶的資訊。你可以審核這項申請。
       subject: 在 %{instance} 上未審核的新用戶(%{username})
@@ -979,8 +979,8 @@ zh-HK:
       body_remote: 來自 %{domain} 的人舉報了 %{target}
       subject: 針對 %{instance} 的舉報（#%{id}）
     new_software_updates:
-      body: 已推出全新 Mastodon 版本，你或許想要更新它！
-      subject: "%{instance} 有全新的 Mastodon 版本可用！"
+      body: 已推出全新 Nutshell 版本，你或許想要更新它！
+      subject: "%{instance} 有全新的 Nutshell 版本可用！"
     new_trends:
       body: 以下項目需要經過審核才能公開顯示：
       new_trending_links:
@@ -1001,7 +1001,7 @@ zh-HK:
     animations_and_accessibility: 動畫和輔助功能
     discovery: 探索
     localization:
-      body: Mastodon 是由志願者翻譯的。
+      body: Nutshell 是由志願者翻譯的。
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: 每個人都能貢獻。
     sensitive_content: 敏感內容
@@ -1036,9 +1036,9 @@ zh-HK:
     delete_account: 刪除帳號
     delete_account_html: 如果你想刪除你的帳號，請<a href="%{path}">點擊這裡繼續</a>。你需要確認你的操作。
     description:
-      prefix_invited_by_user: "@%{name} 邀請你加入這個 Mastodon 服務站！"
-      prefix_sign_up: 立即註冊 Mastodon！
-      suffix: 有了一個帳戶，就可以從任何Mastodon服務器關注任何人，發佈更新並與任何Mastodon服務器的用戶交流！
+      prefix_invited_by_user: "@%{name} 邀請你加入這個 Nutshell 服務站！"
+      prefix_sign_up: 立即註冊 Nutshell！
+      suffix: 有了一個帳戶，就可以從任何Nutshell服務器關注任何人，發佈更新並與任何Nutshell服務器的用戶交流！
     didnt_get_confirmation: 沒有收到確認連結嗎？
     dont_have_your_security_key: 找不到安全密鑰？
     forgot_password: 忘記了密碼？
@@ -1179,7 +1179,7 @@ zh-HK:
       content: 抱歉，我們的後台出錯了。
       title: 這個頁面有問題
     '503': 因短暫的伺服器錯誤而未能提供此頁面
-    noscript_html: 使用 Mastodon 網頁版應用需要啟用 JavaScript。你也可以選擇適用於你的平台的 <a href="%{apps_path}">Mastodon 應用</a>。
+    noscript_html: 使用 Nutshell 網頁版應用需要啟用 JavaScript。你也可以選擇適用於你的平台的 <a href="%{apps_path}">Nutshell 應用</a>。
   existing_username_validator:
     not_found: 無法找到位於本伺服器的用戶
     not_found_multiple: 無法找到%{usernames}
@@ -1466,13 +1466,13 @@ zh-HK:
     posting_defaults: 發佈預設值
     public_timelines: 公共時間軸
   privacy:
-    hint_html: "<strong>自訂個人檔案和帖文被他人找到的方式。</strong>啟用 Mastodon 一系列的功能助你觸及更多受眾。花點時間查閱這些設定並確保它符合你的用法。"
+    hint_html: "<strong>自訂個人檔案和帖文被他人找到的方式。</strong>啟用 Nutshell 一系列的功能助你觸及更多受眾。花點時間查閱這些設定並確保它符合你的用法。"
     privacy: 私隱
     privacy_hint_html: 控制你欲向他人透露的資訊。透過瀏覽他人的追蹤可發現有趣的個人檔案，展示發佈所用的媒介也幫助他人發掘酷炫的應用程式，但你也能選擇隱藏它們。
     reach: 觸及
     reach_hint_html: 控制你是否被使用者發現和追蹤。你希望自己的帖文出現在探索中嗎？想讓他人在追蹤推薦中看到你嗎？自動接受新追蹤者，還是逐一設定？
     search: 搜尋
-    search_hint_html: 控制你被發現的方式。你想他人從你公開發佈的內容找到你嗎？想讓 Mastodon 以外的人們在網站搜尋中找到你的個人檔案？請注意，公開資訊無法被搜尋引擎全部排除。
+    search_hint_html: 控制你被發現的方式。你想他人從你公開發佈的內容找到你嗎？想讓 Nutshell 以外的人們在網站搜尋中找到你的個人檔案？請注意，公開資訊無法被搜尋引擎全部排除。
     title: 私隱及觸及
   privacy_policy:
     title: 私隱政策
@@ -1546,7 +1546,7 @@ zh-HK:
     current_session: 目前的作業階段
     date: 日期
     description: "%{platform} 上的 %{browser}"
-    explanation: 這些是現在正登入於你的 Mastodon 帳號的瀏覽器。
+    explanation: 這些是現在正登入於你的 Nutshell 帳號的瀏覽器。
     ip: IP 位址
     platforms:
       adobe_air: Adobe Air
@@ -1572,7 +1572,7 @@ zh-HK:
     aliases: 帳戶別名(aliases)
     appearance: 外觀設定
     authorized_apps: 授權應用程式
-    back: 回到 Mastodon
+    back: 回到 Nutshell
     delete: 刪除帳戶
     development: 開發
     edit_profile: 修改個人資料
@@ -1706,7 +1706,7 @@ zh-HK:
       subtitle: 你的申訴已被駁回.
       title: 申訴被駁回
     backup_ready:
-      explanation: 你要求完整備份你的 Mastodon 帳號。
+      explanation: 你要求完整備份你的 Nutshell 帳號。
       extra: 現在可以下載了！
       subject: 你的備份檔已可供下載
       title: 檔案匯出
@@ -1760,7 +1760,7 @@ zh-HK:
       apps_android_action: 從 Google Play 下載
       apps_ios_action: 從 App Store 下載
       apps_step: 下載官方應用程式。
-      apps_title: Mastodon 應用程式
+      apps_title: Nutshell 應用程式
       checklist_subtitle: 讓我們帶你進入全新的社交領域：
       checklist_title: 歡迎清單
       edit_profile_action: 自訂
@@ -1768,16 +1768,16 @@ zh-HK:
       edit_profile_title: 自訂你的個人檔案。
       explanation: 下面是幾個小貼士，希望它們能幫到你
       feature_action: 了解更多
-      feature_audience: 在 Mastodon 上，無需仲介，你也可以管理受眾。將 Mastodon 部署在自己的基礎架構上，既可以追蹤來自其他 Mastodon 伺服器上的人，也可以被他們追蹤。完全不受他人控制，一切由你掌控。
+      feature_audience: 在 Nutshell 上，無需仲介，你也可以管理受眾。將 Nutshell 部署在自己的基礎架構上，既可以追蹤來自其他 Nutshell 伺服器上的人，也可以被他們追蹤。完全不受他人控制，一切由你掌控。
       feature_audience_title: 自信地建立受眾
-      feature_control: 由你決定首頁時間軸的內容，不讓演算法和廣告干擾你！你可以使用同一帳號追蹤 Mastodon 伺服器上的使用者，並按時序瀏覽帖文，打造你專屬的網絡世界，讓這角落更貼近你的喜好。
+      feature_control: 由你決定首頁時間軸的內容，不讓演算法和廣告干擾你！你可以使用同一帳號追蹤 Nutshell 伺服器上的使用者，並按時序瀏覽帖文，打造你專屬的網絡世界，讓這角落更貼近你的喜好。
       feature_control_title: 掌控自己的時間軸
-      feature_creativity: Mastodon 囊括多元格式，助你盡情表達自我：干台支援音訊、影片、圖片帖文、無障礙描述、投票、內容警告，還有動態頭像、自訂表情符號、縮圖裁剪控制等功能。無論你想發佈藝術作品、音樂還是 podcast，Mastodon 都是你的理想平台。
+      feature_creativity: Nutshell 囊括多元格式，助你盡情表達自我：干台支援音訊、影片、圖片帖文、無障礙描述、投票、內容警告，還有動態頭像、自訂表情符號、縮圖裁剪控制等功能。無論你想發佈藝術作品、音樂還是 podcast，Nutshell 都是你的理想平台。
       feature_creativity_title: 無與倫比的創意
-      feature_moderation: 在 Mastodon，一切由你掌控。每台伺服器都能各自制訂並實施自身守則，而非像企業社交媒體那樣由上而下。這讓 Mastodon 能夠靈活地滿足不同群體的需要。你可以加入你認同其規則的伺服器，也可以自行架設。
+      feature_moderation: 在 Nutshell，一切由你掌控。每台伺服器都能各自制訂並實施自身守則，而非像企業社交媒體那樣由上而下。這讓 Nutshell 能夠靈活地滿足不同群體的需要。你可以加入你認同其規則的伺服器，也可以自行架設。
       feature_moderation_title: 以應有的方式管理社群
       follow_action: 追蹤
-      follow_step: 追蹤有趣的人正是 Mastodon 的核心所在。
+      follow_step: 追蹤有趣的人正是 Nutshell 的核心所在。
       follow_title: 自訂你的首頁時間軸
       follows_subtitle: 追蹤知名帳號
       follows_title: 追蹤對象
@@ -1790,10 +1790,10 @@ zh-HK:
       post_action: 撰寫
       post_step: 用文字、相片、影片或投票跟大家打個招呼吧。
       post_title: 發表你的第一則帖文
-      share_step: 讓你的朋友知道如何在 Mastodon 上找到你。
-      share_title: 分享你的 Mastodon 個人檔案
+      share_step: 讓你的朋友知道如何在 Nutshell 上找到你。
+      share_title: 分享你的 Nutshell 個人檔案
       sign_in_action: 登入
-      subject: 歡迎來到 Mastodon (萬象)
+      subject: 歡迎來到 Nutshell (萬象)
       title: 歡迎 %{name} 加入！
   users:
     follow_limit_reached: 你不能關注多於%{limit} 人
@@ -1805,7 +1805,7 @@ zh-HK:
   verification:
     extra_instructions_html: <strong>提示：</strong>你是可以隱藏網站上的連結的。重點是<code>rel="me"</code>，它可以防止有用戶生成內容的網站假冒身份。你甚至可以在頁面標頭 (header) 使用 <code>link</code> 標籤，而非 <code>a</code>，但你必須確保沒有執行 Javascript 下也可存取 HTML。
     here_is_how: 驗證方法
-    hint_html: "<strong>所有人都可以在 Mastodon 上驗證身份。</strong>基於開放網絡標準，不論是現在還是以後也是免費的。你只需要一個可以識別你的個人網站。當你連接個人檔案到該網站時，我們會檢查該網站是否有反向連結到個人檔案，若成功偵測便會在個人檔案標示它。"
+    hint_html: "<strong>所有人都可以在 Nutshell 上驗證身份。</strong>基於開放網絡標準，不論是現在還是以後也是免費的。你只需要一個可以識別你的個人網站。當你連接個人檔案到該網站時，我們會檢查該網站是否有反向連結到個人檔案，若成功偵測便會在個人檔案標示它。"
     instructions_html: 複製並貼上以下的程式碼到你網站的 HTML 中，然後在個人檔案的「修改個人檔案」頁籤中的額外欄位加入你該網址，並儲存變更。
     verification: 驗證
     verified_links: 已驗證的連結

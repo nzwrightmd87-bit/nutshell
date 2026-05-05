@@ -17,7 +17,7 @@ Doorkeeper.configure do
   # Doorkeeper provides some administrative interfaces for managing OAuth
   # Applications, allowing creation, edit, and deletion of applications from the
   # server. At present, these administrative routes are not integrated into
-  # Mastodon, and as such, we've disabled them by always return a 403 forbidden
+  # Nutshell, and as such, we've disabled them by always returning a 403 forbidden
   # response for them. This does not affect the ability for users to manage
   # their own OAuth Applications.
   admin_authenticator do

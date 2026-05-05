@@ -22,7 +22,7 @@ echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo deb
 echo iptables-persistent iptables-persistent/autosave_v6 boolean true | sudo debconf-set-selections
 sudo apt-get install iptables-persistent -y
 
-# Add packages to build and run Mastodon
+# Add packages to build and run Nutshell
 sudo apt-get install \
   git-core \
   g++ \
@@ -119,7 +119,7 @@ sudo corepack enable
 corepack prepare
 yarn install
 
-# Build Mastodon
+# Build Nutshell
 export RAILS_ENV=development
 export $(cat ".env.vagrant" | xargs)
 bundle exec rails db:setup

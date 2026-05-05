@@ -1,12 +1,12 @@
 # Contributing
 
-Thank you for considering contributing to Mastodon 🐘
+Thank you for considering contributing to Nutshell 🐘
 
 You can contribute in the following ways:
 
 - Finding and reporting bugs
-- Translating the Mastodon interface into various languages
-- Contributing code to Mastodon by fixing bugs or implementing features
+- Translating the Nutshell interface into various languages
+- Contributing code to Nutshell by fixing bugs or implementing features
 - Improving the documentation
 
 Please review the org-level [contribution guidelines] for high-level acceptance
@@ -27,7 +27,7 @@ there are not duplicate bug reports or feature requests.
 
 ## Security Issues
 
-If you believe you have identified a security issue in Mastodon or our own apps,
+If you believe you have identified a security issue in Nutshell or our own apps,
 check [SECURITY].
 
 ## Translations
@@ -54,7 +54,7 @@ aim to keep each distinct PR to a "smallest viable change" chunk of work.
 
 Unless the Pull Request is about refactoring code, updating dependencies or
 other internal tasks, assume that the audience are not developers, but a
-Mastodon user or server admin, and try to describe it from their perspective.
+Nutshell user or server admin, and try to describe it from their perspective.
 
 The final commit in the main branch will carry the title from the PR. The main
 branch is then fed into the changelog and ultimately into release notes. We try
@@ -80,7 +80,7 @@ particular, please keep in mind:
 
 ## Documentation
 
-The [Mastodon documentation] is a statically generated site that contains guides
+The [Nutshell documentation] is a statically generated site that contains guides
 and API docs. Improvements are made via PRs to the [documentation repository].
 
 [contribution guidelines]: https://github.com/mastodon/.github/blob/main/CONTRIBUTING.md
@@ -89,6 +89,6 @@ and API docs. Improvements are made via PRs to the [documentation repository].
 [documentation repository]: https://github.com/mastodon/documentation
 [GitHub Issues]: https://github.com/mastodon/mastodon/issues
 [keepachangelog]: https://keepachangelog.com/en/1.0.0/
-[Mastodon documentation]: https://docs.joinmastodon.org
+[Nutshell documentation]: https://docs.joinmastodon.org
 [SECURITY]: SECURITY.md
 [AI Contribution Policy]: https://github.com/mastodon/.github/blob/main/AI_POLICY.md

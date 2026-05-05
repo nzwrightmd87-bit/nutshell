@@ -515,7 +515,7 @@ namespace :tests do
         INSERT INTO "preview_cards"
           (id, url, title, created_at, updated_at)
         VALUES
-          (1, 'https://joinmastodon.org/', 'Mastodon - Decentralized social media', now(), now());
+          (1, 'https://joinmastodon.org/', 'Nutshell - Decentralized social media', now(), now());
 
         -- many-to-many association between preview cards and statuses
 

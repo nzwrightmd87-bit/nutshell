@@ -1,7 +1,7 @@
 ---
 hr:
   about:
-    about_mastodon_html: 'Društvena mreža budućnosti: bez oglasa, bez korporativnog nadzora, etički dizajn i decentralizacija! Budite u vlasništvu svojih podataka pomoću Mastodona!'
+    about_mastodon_html: 'Društvena mreža budućnosti: bez oglasa, bez korporativnog nadzora, etički dizajn i decentralizacija! Budite u vlasništvu svojih podataka pomoću Nutshella!'
     contact_missing: Nije postavljeno
     title: O aplikaciji
   accounts:
@@ -79,7 +79,7 @@ hr:
     add_new: Stvori alias
   appearance:
     localization:
-      body: Mastodon prevode dobrovoljci.
+      body: Nutshell prevode dobrovoljci.
       guide_link_text: Svi mogu doprinjeti.
   application_mailer:
     view: 'Vidi:'
@@ -199,7 +199,7 @@ hr:
     aliases: Pseudonimi računa
     appearance: Izgled
     authorized_apps: Autorizirane aplikacije
-    back: Natrag na Mastodon
+    back: Natrag na Nutshell
     delete: Brisanje računa
     development: Razvijanje
     edit_profile: Uredi profil
@@ -228,7 +228,7 @@ hr:
         silence: Račun je ograničen
         suspend: Račun je suspendiran
     welcome:
-      subject: Dobro došli na Mastodon
+      subject: Dobro došli na Nutshell
   users:
     invalid_otp_token: Nevažeći dvo-faktorski kôd
     signed_in_as: 'Prijavljeni kao:'

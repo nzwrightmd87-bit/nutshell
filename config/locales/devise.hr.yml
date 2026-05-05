@@ -21,40 +21,40 @@ hr:
         action: Potvrdi adresu e-pošte
         action_with_app: Potvrdi i vrati se na %{app}
         extra_html: Važno je da pročitaš <a href="%{terms_path}">pravila ovog servera</a> i <a href="%{policy_path}">naše uvjete korištenja</a>.
-        subject: 'Mastodon: upute za potvrđivanje za %{instance}'
+        subject: 'Nutshell: upute za potvrđivanje za %{instance}'
         title: Potvrdi adresu e-pošte
       email_changed:
         explanation: 'Email adresa za ovaj račun je izmijenjena u:'
-        subject: 'Mastodon: adresa e-pošte je promijenjena'
+        subject: 'Nutshell: adresa e-pošte je promijenjena'
         title: Nova adresa e-pošte
       password_change:
         explanation: Lozinka tvog računa je promijenjena.
-        subject: 'Mastodon: lozinka je promijenjena'
+        subject: 'Nutshell: lozinka je promijenjena'
         title: Lozinka je promijenjena
       reconfirmation_instructions:
         explanation: Potvrdi novu adresu kako bi promijenio email.
-        subject: 'Mastodon: Potvrdi email za %{instance}'
+        subject: 'Nutshell: Potvrdi email za %{instance}'
         title: Potvrdi adresu e-pošte
       reset_password_instructions:
         action: Promijeni lozinku
         explanation: Zatražili ste novu lozinku za svoj račun.
         extra: Ako nisi ovo zatražio, samo ignoriraj ovu email poruku. Tvoja lozinka neće biti promijenjena sve dok ne pristupiš linku iznad kako bi stvorio novu.
-        subject: 'Mastodon: upute za ponovno postavljanje lozinke'
+        subject: 'Nutshell: upute za ponovno postavljanje lozinke'
         title: Ponovno postavljanje lozinke
       two_factor_disabled:
-        subject: 'Mastodon: Dvo-faktorska autentifikacija je onemogućena'
+        subject: 'Nutshell: Dvo-faktorska autentifikacija je onemogućena'
         title: 2FA je onemogućen
       two_factor_enabled:
-        subject: 'Mastodon: Dvo-faktorska autentifikacija je omogućena'
+        subject: 'Nutshell: Dvo-faktorska autentifikacija je omogućena'
         title: 2FA omogućena
       unlock_instructions:
-        subject: 'Mastodon: upute za otključavanje'
+        subject: 'Nutshell: upute za otključavanje'
       webauthn_credential:
         added:
-          subject: 'Mastodon: Novi sigurnosni ključ'
+          subject: 'Nutshell: Novi sigurnosni ključ'
           title: Dodan je novi sigurnosni ključ
         deleted:
-          subject: 'Mastodon: Sigurnosni ključ je obrisan'
+          subject: 'Nutshell: Sigurnosni ključ je obrisan'
           title: Jedan od tvojih sigurnosnih ključeva je obrisan
       webauthn_disabled:
         title: Sigurnosni ključevi su onemogućeni

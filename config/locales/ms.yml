@@ -1,10 +1,10 @@
 ---
 ms:
   about:
-    about_mastodon_html: 'Rangkaian sosial masa hadapan: Tiada iklan, tiada pengawasan korporat, reka bentuk beretika, dan desentralisasi! Miliki data anda dengan Mastodon!'
+    about_mastodon_html: 'Rangkaian sosial masa hadapan: Tiada iklan, tiada pengawasan korporat, reka bentuk beretika, dan desentralisasi! Miliki data anda dengan Nutshell!'
     contact_missing: Tidak ditetapkan
     contact_unavailable: Tidak tersedia
-    hosted_on: Mastodon dihoskan di %{domain}
+    hosted_on: Nutshell dihoskan di %{domain}
     title: Perihal
   accounts:
     followers:
@@ -636,7 +636,7 @@ ms:
         moderation: Penyederhanaan
         special: Khas
       delete: Padam
-      description_html: Dengan <strong>peranan pengguna</strong>, anda boleh menyesuaikan fungsi dan kawasan Mastodon yang boleh diakses oleh pengguna anda.
+      description_html: Dengan <strong>peranan pengguna</strong>, anda boleh menyesuaikan fungsi dan kawasan Nutshell yang boleh diakses oleh pengguna anda.
       edit: Sunting peranan '%{name}'
       everyone: Kebenaran lalai
       everyone_full_description_html: Ini ialah <strong>peranan asas</strong> yang mempengaruhi <strong>semua pengguna</strong>, walaupun mereka yang tidak mempunyai peranan yang ditetapkan. Semua peranan lain mewarisi kebenaran daripadanya.
@@ -696,16 +696,16 @@ ms:
         rules_hint: Terdapat kawasan khas untuk peraturan yang dijangka untuk dipatuhi oleh pengguna anda.
         title: Tentang
       appearance:
-        preamble: Menyesuaikan antara muka web Mastodon.
+        preamble: Menyesuaikan antara muka web Nutshell.
         title: Penampilan
       branding:
-        preamble: Penjenamaan server anda membezakannya daripada server lain dalam rangkaian. Maklumat ini mungkin dipaparkan merentasi pelbagai persekitaran, seperti antara muka web Mastodon, aplikasi asli, dalam pratonton pautan di tapak web lain dan dalam aplikasi pemesejan, dan sebagainya. Atas sebab ini, adalah lebih baik untuk memastikan maklumat ini jelas, pendek dan padat.
+        preamble: Penjenamaan server anda membezakannya daripada server lain dalam rangkaian. Maklumat ini mungkin dipaparkan merentasi pelbagai persekitaran, seperti antara muka web Nutshell, aplikasi asli, dalam pratonton pautan di tapak web lain dan dalam aplikasi pemesejan, dan sebagainya. Atas sebab ini, adalah lebih baik untuk memastikan maklumat ini jelas, pendek dan padat.
         title: Penjenamaan
       captcha_enabled:
         desc_html: Ini bergantung pada skrip luaran daripada hCaptcha, yang mungkin menjadi kebimbangan keselamatan dan privasi. Selain itu, <strong>ini boleh menjadikan proses pendaftaran menjadi kurang dapat diakses oleh sesetengah orang (terutamanya orang kurang upaya)</strong>. Atas sebab ini, sila pertimbangkan langkah alternatif seperti pendaftaran berasaskan kelulusan atau jemputan.
         title: Memerlukan pengguna baharu menyelesaikan CAPTCHA untuk mengesahkan akaun mereka
       content_retention:
-        preamble: Kawal cara kandungan yang dijana pengguna disimpan dalam Mastodon.
+        preamble: Kawal cara kandungan yang dijana pengguna disimpan dalam Nutshell.
         title: Pengekalan kandungan
       default_noindex:
         desc_html: Mempengaruhi semua pengguna yang tidak menukar tetapan ini sendiri
@@ -795,7 +795,7 @@ ms:
         message_html: Pemetaan indeks Elasticsearch sudah lapuk. Sila jalankan <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Lihat pendokumenan
-        message_html: Kelompok Elasticsearch anda mempunyai lebih daripada satu nod, tetapi Mastodon tidak ditatarajah untuk menggunakannya.
+        message_html: Kelompok Elasticsearch anda mempunyai lebih daripada satu nod, tetapi Nutshell tidak ditatarajah untuk menggunakannya.
       elasticsearch_preset_single_node:
         action: Lihat pendokumenan
         message_html: Kelompok Elasticsearch anda hanya mempunyai satu nod, <code>ES_PRESET</code> hendaklah ditetapkan kepada <code>single_node_cluster</code>.
@@ -813,10 +813,10 @@ ms:
         message_html: Tiada proses Sidekiq berjalan untuk baris gilir %{value}. Sila semak konfigurasi Sidekiq anda
       software_version_critical_check:
         action: Lihat kemas kini yang tersedia
-        message_html: Kemas kini kritikal Mastodon telah tersedia, sila kemas kini secepat yang mungkin.
+        message_html: Kemas kini kritikal Nutshell telah tersedia, sila kemas kini secepat yang mungkin.
       software_version_patch_check:
         action: Lihat kemas kini yang tersedia
-        message_html: Kemas kini pembetulan pepijat Mastodon telah tersedia.
+        message_html: Kemas kini pembetulan pepijat Nutshell telah tersedia.
       upload_check_privacy_error:
         action: Semak di sini untuk maklumat lanjut
         message_html: "<strong>Server web anda salah konfigurasi. Privasi pengguna anda berisiko</strong>"
@@ -895,7 +895,7 @@ ms:
     webhooks:
       add_new: Tambah titik akhir
       delete: Padam
-      description_html: "<strong>Webhook</strong> membolehkan Mastodon menolak <strong>pemberitahuan masa nyata</strong> tentang acara yang dipilih ke aplikasi anda sendiri, supaya aplikasi anda boleh <strong>mencetuskan reaksi secara automatik</strong>."
+      description_html: "<strong>Webhook</strong> membolehkan Nutshell menolak <strong>pemberitahuan masa nyata</strong> tentang acara yang dipilih ke aplikasi anda sendiri, supaya aplikasi anda boleh <strong>mencetuskan reaksi secara automatik</strong>."
       disable: Lumpuhkan
       disabled: Dilumpuhkan
       edit: Edit titik akhir
@@ -925,8 +925,8 @@ ms:
       next_steps: Anda boleh meluluskan rayuan untuk membuat asal keputusan penyederhanaan atau mengabaikannya.
       subject: "%{username} sedang merayu keputusan penyederhanaan pada %{instance}"
     new_critical_software_updates:
-      body: Versi kritikal baharu Mastodon telah dikeluarkan, anda mungkin ingin mengemas kini secepat yang mungkin!
-      subject: Kemas kini kritikal Mastodon telah tersedia untuk %{instance}!
+      body: Versi kritikal baharu Nutshell telah dikeluarkan, anda mungkin ingin mengemas kini secepat yang mungkin!
+      subject: Kemas kini kritikal Nutshell telah tersedia untuk %{instance}!
     new_pending_account:
       body: Butiran akaun baharu ada di bawah. Anda boleh meluluskan atau menolak aplikasi ini.
       subject: Akaun baharu disediakan untuk semakan pada %{instance} (%{username})
@@ -935,8 +935,8 @@ ms:
       body_remote: Seseorang daripada %{domain} telah melaporkan %{target}
       subject: Laporan baharu untuk %{instance} (#%{id})
     new_software_updates:
-      body: Versi baharu Mastodon telah dikeluarkan, anda mungkin mahu mengemas kini!
-      subject: Versi baharu Mastodon telah tersedia untuk %{instance}!
+      body: Versi baharu Nutshell telah dikeluarkan, anda mungkin mahu mengemas kini!
+      subject: Versi baharu Nutshell telah tersedia untuk %{instance}!
     new_trends:
       body: 'Item berikut memerlukan semakan sebelum boleh dipaparkan secara terbuka:'
       new_trending_links:
@@ -957,7 +957,7 @@ ms:
     animations_and_accessibility: Animasi dan kebolehaksesan
     discovery: Penemuan
     localization:
-      body: Mastodon diterjemahkan oleh sukarelawan.
+      body: Nutshell diterjemahkan oleh sukarelawan.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Sesiapa sahaja boleh memberi sumbangan.
     sensitive_content: Kandungan sensitif
@@ -984,9 +984,9 @@ ms:
     delete_account: Padam akaun
     delete_account_html: Jika anda ingin memadamkan akaun anda, anda boleh <a href="%{path}">teruskan ke sini</a>. Anda akan diminta untuk pengesahan.
     description:
-      prefix_invited_by_user: "@%{name} menjemput anda untuk menyertai server Mastodon ini!"
-      prefix_sign_up: Daftar pada Mastodon hari ini!
-      suffix: Dengan akaun, anda akan dapat mengikuti orang, menyiarkan kemas kini dan bertukar-tukar mesej dengan pengguna dari mana-mana server Mastodon dan banyak lagi!
+      prefix_invited_by_user: "@%{name} menjemput anda untuk menyertai server Nutshell ini!"
+      prefix_sign_up: Daftar pada Nutshell hari ini!
+      suffix: Dengan akaun, anda akan dapat mengikuti orang, menyiarkan kemas kini dan bertukar-tukar mesej dengan pengguna dari mana-mana server Nutshell dan banyak lagi!
     didnt_get_confirmation: Tidak menerima pautan pengesahan?
     dont_have_your_security_key: Tiada kunci keselamatan anda?
     forgot_password: Terlupa kata laluan anda?
@@ -1125,7 +1125,7 @@ ms:
       content: Kami minta maaf, tetapi ada masalah di pihak kami.
       title: Halaman ini tidak betul
     '503': Halaman tidak dapat disampaikan kerana kegagalan pelayan sementara.
-    noscript_html: Untuk menggunakan aplikasi web Mastodon, sila dayakan JavaScript. Sebagai alternatif, cuba salah satu <a href="%{apps_path}">apl asli</a> untuk Mastodon untuk platform anda.
+    noscript_html: Untuk menggunakan aplikasi web Nutshell, sila dayakan JavaScript. Sebagai alternatif, cuba salah satu <a href="%{apps_path}">apl asli</a> untuk Nutshell untuk platform anda.
   existing_username_validator:
     not_found: tidak dapat mencari pengguna tempatan dengan nama pengguna itu
     not_found_multiple: tidak dapat mencari %{usernames}
@@ -1405,13 +1405,13 @@ ms:
     posting_defaults: Penyiaran lalai
     public_timelines: Garis masa awam
   privacy:
-    hint_html: "<strong>Sesuaikan cara anda mahu profil anda dan pos anda ditemui.</strong> Pelbagai ciri dalam Mastodon boleh membantu anda menjangkau khalayak yang lebih luas apabila didayakan. Luangkan sedikit masa untuk menyemak tetapan ini untuk memastikan ia sesuai dengan kes penggunaan anda."
+    hint_html: "<strong>Sesuaikan cara anda mahu profil anda dan pos anda ditemui.</strong> Pelbagai ciri dalam Nutshell boleh membantu anda menjangkau khalayak yang lebih luas apabila didayakan. Luangkan sedikit masa untuk menyemak tetapan ini untuk memastikan ia sesuai dengan kes penggunaan anda."
     privacy: Privasi
     privacy_hint_html: Kawal berapa banyak yang anda ingin dedahkan untuk manfaat orang lain. Orang ramai menemui profil menarik dan apl hebat dengan menyemak imbas ikutan orang lain dan melihat apl mana yang mereka siarkan, tetapi anda mungkin lebih suka menyembunyikannya.
     reach: Tercapai
     reach_hint_html: Kawal sama ada anda ingin ditemui dan diikuti oleh orang baharu. Adakah anda mahu pos anda dipaparkan pada skrin Teroka? Adakah anda mahu orang lain melihat anda dalam pengesyoran ikutan mereka? Adakah anda mahu menerima semua pengikut baharu secara automatik atau mempunyai kawalan terperinci ke atas setiap pengikut?
     search: Cari
-    search_hint_html: Kawal cara anda ingin ditemui. Adakah anda mahu orang mencari anda melalui perkara yang anda siarkan secara terbuka? Adakah anda mahu orang di luar Mastodon mencari profil anda semasa mencari di web? Harap maklum bahawa jumlah pengecualian daripada semua enjin carian tidak boleh dijamin untuk maklumat awam.
+    search_hint_html: Kawal cara anda ingin ditemui. Adakah anda mahu orang mencari anda melalui perkara yang anda siarkan secara terbuka? Adakah anda mahu orang di luar Nutshell mencari profil anda semasa mencari di web? Harap maklum bahawa jumlah pengecualian daripada semua enjin carian tidak boleh dijamin untuk maklumat awam.
     title: Privasi dan capaian
   privacy_policy:
     title: Dasar Privasi
@@ -1481,7 +1481,7 @@ ms:
       weibo: Weibo
     current_session: Sesi sekarang
     description: "%{browser} pada %{platform}"
-    explanation: Pelayar-pelayar web berikut sedang didaftar masuk pada akaun Mastodon anda.
+    explanation: Pelayar-pelayar web berikut sedang didaftar masuk pada akaun Nutshell anda.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1507,7 +1507,7 @@ ms:
     aliases: Alias ​​akaun
     appearance: Penampilan
     authorized_apps: Apl yang dibenarkan
-    back: Kembali ke Mastodon
+    back: Kembali ke Nutshell
     delete: Pemadaman akaun
     development: Pembangunan
     edit_profile: Sunting profil
@@ -1665,7 +1665,7 @@ ms:
         suspend: Akaun digantung
     welcome:
       explanation: Berikut ialah beberapa petua untuk anda bermula
-      subject: Selamat datang kepada Mastodon
+      subject: Selamat datang kepada Nutshell
       title: Selamat datang, %{name}!
   users:
     follow_limit_reached: Anda tidak boleh mengikut lebih daripada %{limit} orang
@@ -1676,7 +1676,7 @@ ms:
   verification:
     extra_instructions_html: <strong>Petua:</strong> Pautan di tapak web anda mungkin tidak kelihatan. Bahagian penting ialah <code>rel="me"</code> yang menghalang penyamaran pada tapak web dengan kandungan yang dijana pengguna. Anda juga boleh menggunakan tag <code>link</code> dalam pengepala halaman dan bukannya <code>a</code>, tetapi HTML mesti boleh diakses tanpa melaksanakan JavaScript.
     here_is_how: Ini caranya
-    hint_html: "<strong>Mengesahkan identiti anda di Mastodon adalah untuk semua orang.</strong> Berdasarkan standard web terbuka, percuma kini dan selamanya. Apa yang anda perlukan ialah tapak web peribadi yang orang mengenali anda. Apabila anda memaut ke tapak web ini dari profil anda, kami akan menyemak sama ada tapak web tersebut memaut kembali ke profil anda dan menunjukkan penunjuk visual padanya."
+    hint_html: "<strong>Mengesahkan identiti anda di Nutshell adalah untuk semua orang.</strong> Berdasarkan standard web terbuka, percuma kini dan selamanya. Apa yang anda perlukan ialah tapak web peribadi yang orang mengenali anda. Apabila anda memaut ke tapak web ini dari profil anda, kami akan menyemak sama ada tapak web tersebut memaut kembali ke profil anda dan menunjukkan penunjuk visual padanya."
     instructions_html: Salin dan tampal kod di bawah ke dalam HTML tapak web anda. Kemudian tambahkan alamat tapak web anda ke dalam salah satu medan tambahan pada profil anda daripada tab "Edit profil" dan simpan perubahan.
     verification: Pengesahan
     verified_links: Pautan anda yang disahkan

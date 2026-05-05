@@ -30,22 +30,22 @@ ARG UID="991"
 # Linux GID (group id) for the mastodon user, change with [--build-arg GID=1234]
 ARG GID="991"
 
-# Apply Mastodon build options based on options above
+# Apply Nutshell build options based on options above
 ENV \
-  # Apply Mastodon version information
+  # Apply Nutshell version information
   MASTODON_VERSION_PRERELEASE="${MASTODON_VERSION_PRERELEASE}" \
   MASTODON_VERSION_METADATA="${MASTODON_VERSION_METADATA}" \
   # Apply timezone
   TZ=${TZ}
 
 ENV \
-  # Configure the IP to bind Mastodon to when serving traffic
+  # Configure the IP to bind Nutshell to when serving traffic
   BIND="0.0.0.0" \
   # Explicitly set PORT to match the exposed port
   PORT=4000 \
   # Use production settings for Yarn, Node and related nodejs based tools
   NODE_ENV="production" \
-  # Add Ruby and Mastodon installation to the PATH
+  # Add Ruby and Nutshell installation to the PATH
   DEBIAN_FRONTEND="noninteractive"
 
 # Set default shell used for running commands

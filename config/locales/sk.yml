@@ -1,10 +1,10 @@
 ---
 sk:
   about:
-    about_mastodon_html: Mastodon je sociálna sieť založená na otvorených webových protokoloch a na slobodnom softvéri. Je decentralizovaná, podobne ako email.
+    about_mastodon_html: Nutshell je sociálna sieť založená na otvorených webových protokoloch a na slobodnom softvéri. Je decentralizovaná, podobne ako email.
     contact_missing: Nezadaný
     contact_unavailable: Neuvedený/á
-    hosted_on: Mastodon hostovaný na %{domain}
+    hosted_on: Nutshell hostovaný na %{domain}
     title: Ohľadom
   accounts:
     followers:
@@ -804,7 +804,7 @@ sk:
     animations_and_accessibility: Animácie a prístupnosť
     discovery: Objavovanie
     localization:
-      body: Mastodon je prekladaný dobrovoľníkmi.
+      body: Nutshell je prekladaný dobrovoľníkmi.
       guide_link_text: Prispievať môže každý.
     sensitive_content: Citlivý obsah
   application_mailer:
@@ -832,9 +832,9 @@ sk:
     delete_account: Odstránenie účtu
     delete_account_html: Pokiaľ chcete odstrániť svoj účet, môžete to <a href="%{path}">urobiť tu</a>. Toto rozhodnutie ešte budete musieť potvrdiť.
     description:
-      prefix_invited_by_user: "@%{name} ťa pozýva na tento Mastodon server!"
-      prefix_sign_up: Zaregistruj sa na Mastodone už dnes!
-      suffix: S účtom budeš môcť nasledovať ľudí, posielať príspevky, a vymieňať si správy s užívateľmi z hocijakého Mastodon servera a viac!
+      prefix_invited_by_user: "@%{name} ťa pozýva na tento Nutshell server!"
+      prefix_sign_up: Zaregistruj sa na Nutshelle už dnes!
+      suffix: S účtom budeš môcť nasledovať ľudí, posielať príspevky, a vymieňať si správy s užívateľmi z hocijakého Nutshell servera a viac!
     didnt_get_confirmation: Neobdržal/a si odkaz na potvrdenie?
     dont_have_your_security_key: Nemáš svoj bezpečnostný kľúč?
     forgot_password: Zabudnuté heslo?
@@ -876,7 +876,7 @@ sk:
     use_security_key: Použi bezpečnostný kľúč
   author_attribution:
     example_title: Názorný text
-    hint_html: Píšete novinové alebo blogové články mimo Mastodonu? Rozhodujte o tom, ako sú vám pripisované, keď ich niekto zdieľa na Mastodone.
+    hint_html: Píšete novinové alebo blogové články mimo Nutshellu? Rozhodujte o tom, ako sú vám pripisované, keď ich niekto zdieľa na Nutshelle.
     instructions: 'Vložte tento kód do kódu HTML vo vašom článku:'
     more_from_html: Viac od %{name}
     s_blog: Blog %{name}
@@ -952,7 +952,7 @@ sk:
       content: Ospravedlňujem sa. Niečo sa pokazilo na našom konci.
       title: Táto stránka nieje v poriadku
     '503': Táto stránka nemôže byť načítaná, kvôli dočasnému výpadku servera.
-    noscript_html: Aby bolo možné používať Mastodon web aplikáciu, povoľ prosím JavaScript. Alebo skús jednu z <a href="%{apps_path}"> aplikácii </a> dostupných pre vašu platformu.
+    noscript_html: Aby bolo možné používať Nutshell web aplikáciu, povoľ prosím JavaScript. Alebo skús jednu z <a href="%{apps_path}"> aplikácii </a> dostupných pre vašu platformu.
   existing_username_validator:
     not_found: nepodarilo sa nájsť miestného užívateľa s takouto prezývkou
     not_found_multiple: nepodarilo sa nájsť %{usernames}
@@ -1025,7 +1025,7 @@ sk:
       merge_long: Ponechať existujúce záznamy a pridať k nim nové
       overwrite: Prepísať
       overwrite_long: Nahradiť súčasné záznamy novými
-    preface: Môžete importovať dáta exportované z iného serveru na Mastodone, napríklad zoznam sledovaných alebo blokovaných účtov.
+    preface: Môžete importovať dáta exportované z iného serveru na Nutshelle, napríklad zoznam sledovaných alebo blokovaných účtov.
     recent_imports: Nedávne nahrania
     states:
       finished: Dokončené
@@ -1181,13 +1181,13 @@ sk:
     posting_defaults: Predvolené nastavenia príspevkov
     public_timelines: Verejné časové osi
   privacy:
-    hint_html: "<strong>Upravte si spôsob nachádzania vášho profilu a príspevkov.</strong> Tieto funkcie vám môžu pomôcť osloviť väčšie publikum na Mastodone. Skontrolujte tieto nastavenia, aby bolo všetko tak, ako to chcete."
+    hint_html: "<strong>Upravte si spôsob nachádzania vášho profilu a príspevkov.</strong> Tieto funkcie vám môžu pomôcť osloviť väčšie publikum na Nutshelle. Skontrolujte tieto nastavenia, aby bolo všetko tak, ako to chcete."
     privacy: Súkromie
     privacy_hint_html: Rozhodujte o tom, koľko svojej aktivity chcete ukázať ostatným. Ľudia nachádzajú zaujímavé profily a aplikácie aj v profiloch iných, v zoznamoch sledovateľov a sledovaných. Máte možnosť ich skryť.
     reach: Dosah
     reach_hint_html: Rozhodnite o tom, či chcete aby vás iní ľudia nachádzali a sledovali. Chcete, aby sa vaše príspevky zobrazovali vo feede Objavovanie? Chcete, aby bol váš účet zobrazovaný ostatným v návrhoch na sledovanie? Chcete automatický schváliť všetky sledovania vás alebo o nich chcete jednotlivo rozhodovať?
     search: Vyhľadávanie
-    search_hint_html: Rozhodujte o tom, ako je možné vás nájsť. Chcete, aby vás ľudia mohli nájsť cez vaše verejné príspevky? Chcete, aby ľudia mimo Mastodonu mohli nachádzať váš profil pri prehľadávaní internetu? Upozorňujeme, že verejné informácie nie je možné úplne odizolovať od vyhľadávačov.
+    search_hint_html: Rozhodujte o tom, ako je možné vás nájsť. Chcete, aby vás ľudia mohli nájsť cez vaše verejné príspevky? Chcete, aby ľudia mimo Nutshellu mohli nachádzať váš profil pri prehľadávaní internetu? Upozorňujeme, že verejné informácie nie je možné úplne odizolovať od vyhľadávačov.
     title: Súkromie a dosah
   privacy_policy:
     title: Pravidlá ochrany súkromia
@@ -1245,7 +1245,7 @@ sk:
     current_session: Vaše aktuálne prihlásenie
     date: Dátum
     description: "%{browser} na %{platform}"
-    explanation: Tieto prehliadače sú práve prihlásené do vášho účtu na Mastodone.
+    explanation: Tieto prehliadače sú práve prihlásené do vášho účtu na Nutshelle.
     ip: IP adresa
     platforms:
       ios: Apple iOS
@@ -1263,7 +1263,7 @@ sk:
     aliases: Aliasy účtov
     appearance: Vzhľad
     authorized_apps: Povolené aplikácie
-    back: Späť na Mastodon
+    back: Späť na Nutshell
     delete: Vymazanie účtu
     development: Vývoj
     edit_profile: Úprava profilu
@@ -1319,9 +1319,9 @@ sk:
       direct: Súkromné označenie
       private: Iba pre sledujúce účty
       public: Verejné
-      public_long: Ktokoľvek na Mastodone aj mimo neho
+      public_long: Ktokoľvek na Nutshelle aj mimo neho
       unlisted: Tiché verejné
-      unlisted_long: Skryté z výsledkov vyhľadávania, populárnych tém a verejných časových osí na Mastodone
+      unlisted_long: Skryté z výsledkov vyhľadávania, populárnych tém a verejných časových osí na Nutshelle
   statuses_cleanup:
     enabled: Automaticky mazať staré príspevky
     enabled_hint: Automaticky vymaže vaše príspevky po dosiahnutí stanoveného veku, pokiaľ nespadajú do niektorej z výnimiek nižšie
@@ -1389,7 +1389,7 @@ sk:
       subtitle: Tvoje odvolanie bolo zamietnuté.
       title: Námietka zamietnutá
     backup_ready:
-      explanation: Vyžiadal/a si si úplnú zálohu svojho Mastodon účtu.
+      explanation: Vyžiadal/a si si úplnú zálohu svojho Nutshell účtu.
       extra: Teraz je pripravená na stiahnutie!
       subject: Váš archív je pripravený na stiahnutie
       title: Odber archívu
@@ -1418,19 +1418,19 @@ sk:
       apps_android_action: Získaj ju na Google Play
       apps_ios_action: Stiahni z App Store
       apps_step: Stiahni naše oficiálne aplikácie.
-      apps_title: Mastodon aplikácie
+      apps_title: Nutshell aplikácie
       edit_profile_action: Prispôsob
       edit_profile_step: Naštartuje svoje interakcie vyplnením svojho profilu.
       edit_profile_title: Prispôsob si svoj profil
       explanation: Tu nájdeš nejaké tipy do začiatku
       feature_action: Zisti viac
-      feature_creativity: Mastodon vám pri tvorbe obsahu a vyjadrovaní sa online umožňuje používať audio, video, obrázky a fotky, opisy pre zleplšenie prístupnosti, ankety, varovania o obsahu, animované profilové fotky, vlastné emoji, upravené náhľady a ďalšie. Nech už chcete zverejňovať svoje vizuálne diela, hudbu či podcasty, Mastodon je tu pre vás.
+      feature_creativity: Nutshell vám pri tvorbe obsahu a vyjadrovaní sa online umožňuje používať audio, video, obrázky a fotky, opisy pre zleplšenie prístupnosti, ankety, varovania o obsahu, animované profilové fotky, vlastné emoji, upravené náhľady a ďalšie. Nech už chcete zverejňovať svoje vizuálne diela, hudbu či podcasty, Nutshell je tu pre vás.
       follow_action: Nasleduj
       follow_title: Prispôsob svoj domáci kanál
       follows_title: Koho nasledovať
       post_title: Vytvor svoj prvý príspevok
       sign_in_action: Prihlás sa
-      subject: Vitaj na Mastodone
+      subject: Vitaj na Nutshelle
       title: Vitaj na palube, %{name}!
   users:
     follow_limit_reached: Nemôžete sledovať viac ako %{limit} ľudí
@@ -1441,7 +1441,7 @@ sk:
   verification:
     extra_instructions_html: <strong>Tip:</strong> Odkaz na vašom webe môže byť neviditeľný. Najdôležitejšia časť je <code>rel="me"</code>, zabraňuje tomu, že sa za vás bude niekto vydávať na weboch s obsahom generovaným používateľmi. V záhlaví stránky môžete dokonca namiesto tagu <code>a</code> použiť tag <code>link</code>, ale kód HTML musí byť prístupný bez potreby spustenia JavaScriptu.
     here_is_how: Ako na to
-    hint_html: "<strong>Každý na Mastodone môže overiť svoju totožnosť.</strong> Okamžite, zadarmo a navždy s využitím otvorených webových štandardov. Potrebujete len svoju vlastnú webovú stránku. Keď odkaz na ňu uvediete vo svojom profile, skontrolujeme, či je prepojená s vaším profilom a úspešné overenie zvýrazníme vizuálnym indikátorom."
+    hint_html: "<strong>Každý na Nutshelle môže overiť svoju totožnosť.</strong> Okamžite, zadarmo a navždy s využitím otvorených webových štandardov. Potrebujete len svoju vlastnú webovú stránku. Keď odkaz na ňu uvediete vo svojom profile, skontrolujeme, či je prepojená s vaším profilom a úspešné overenie zvýrazníme vizuálnym indikátorom."
     instructions_html: Skopírujte kód nižšie a vložte ho do kódu HTML svojho webu. Potom pridajte svoju webovú stránku do jedného z extra polí v karte Úprava profilu a uložte zmeny.
     verification: Overenie
     website_verification: Overenie webu

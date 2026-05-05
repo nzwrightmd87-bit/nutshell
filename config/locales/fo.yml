@@ -1,10 +1,10 @@
 ---
 fo:
   about:
-    about_mastodon_html: 'Framtíðar sosiali miðilin: ongar lýsingar, eingin stórfyritøku-yvirvøka, etiskt snið og desentralisering! Eig tínar dátur við Mastodon!'
+    about_mastodon_html: 'Framtíðar sosiali miðilin: ongar lýsingar, eingin stórfyritøku-yvirvøka, etiskt snið og desentralisering! Eig tínar dátur við Nutshell!'
     contact_missing: Ikki sett
     contact_unavailable: Ikki tøk/ur
-    hosted_on: Mastodon hýst á %{domain}
+    hosted_on: Nutshell hýst á %{domain}
     title: Um
   accounts:
     errors:
@@ -766,7 +766,7 @@ fo:
         moderation: Umsjón
         special: Serstakt
       delete: Strika
-      description_html: Við <strong>brúkaraleiklutum</strong> kanst tú stýra, hvørjar funktiónir og hvørji Mastodon-øki tínir brúkarar kunnu fáa atgongd til.
+      description_html: Við <strong>brúkaraleiklutum</strong> kanst tú stýra, hvørjar funktiónir og hvørji Nutshell-øki tínir brúkarar kunnu fáa atgongd til.
       edit: Broyt '%{name}' leiklutin
       everyone: Sjálvsett loyvi
       everyone_full_description_html: Hetta er <strong>støðisleikluturin</strong>, sum ávirkar <strong>allar brúkarar</strong>, sjálvt teir, sum ikki hava ein ásettan leiklut. Allir aðrir leiklutir arva loyvi frá honum.
@@ -838,27 +838,27 @@ fo:
         rules_hint: Eitt øki er burturav fyri reglur, sum brúkararnir hjá tær skulu fylgja.
         title: Um
       allow_referrer_origin:
-        desc: Tá brúkarar tínir klikkja á leinki til uttanhýsis vevstøð, so kann kagin senda adressuna á tínum Mastodon ambætara við. Óvirkja hetta, um hetta kann eyðmerkja brúkarar tínar, t.d. um hetta er ein persónligur Mastodon ambætari.
-        title: Loyv uttanhýsis vevstøðum at síggja tín Mastodon ambætara sum ferðslukeldu
+        desc: Tá brúkarar tínir klikkja á leinki til uttanhýsis vevstøð, so kann kagin senda adressuna á tínum Nutshell ambætara við. Óvirkja hetta, um hetta kann eyðmerkja brúkarar tínar, t.d. um hetta er ein persónligur Nutshell ambætari.
+        title: Loyv uttanhýsis vevstøðum at síggja tín Nutshell ambætara sum ferðslukeldu
       appearance:
-        preamble: Tillaga brúkaramarkamótið hjá Mastodon.
+        preamble: Tillaga brúkaramarkamótið hjá Nutshell.
         title: Útsjónd
       branding:
-        preamble: Brandingin av tínum ambætara skilir hann út frá øðrum ambætarum í netverkinum. Hesar upplýsingar kunnu vera vístar í nógvum ymiskum umhvørvum, so sum í vev-markamótinum hjá Mastodon, uppruna-appum, í undanvísingum av leinkjum á øðrum vevstøðum, í boðs-appum og so framvegis. Av hesi orsøk er tað best, um hesar upplýsingar eru klárar, stuttar og beinraknar.
+        preamble: Brandingin av tínum ambætara skilir hann út frá øðrum ambætarum í netverkinum. Hesar upplýsingar kunnu vera vístar í nógvum ymiskum umhvørvum, so sum í vev-markamótinum hjá Nutshell, uppruna-appum, í undanvísingum av leinkjum á øðrum vevstøðum, í boðs-appum og so framvegis. Av hesi orsøk er tað best, um hesar upplýsingar eru klárar, stuttar og beinraknar.
         title: Branding
       captcha_enabled:
         desc_html: Hetta er bundið at uttanhýsis skriptum frá hCaptcha, sum kann vera ein trygdar- og privatlívsváði. Harafturat, so <strong>kann hetta gera skrásetingartilgongdina munandi minni atkomuliga til summi (brekaði) fólk</strong>. Tískil eigur tú at umhugsa aðrar hættir sosum góðkenningar-grundaða ella innbjóðingar-grundaða skráseting.
         title: Set krav til nýggjar brúkarar at loysa eina CAPTHA fyri at vátta teirra kontu
       content_retention:
         danger_zone: Vandaøki
-        preamble: Stýr hvussu brúkara-skapt tilfar er goymt í Mastodon.
+        preamble: Stýr hvussu brúkara-skapt tilfar er goymt í Nutshell.
         title: Varðveitsla av tilfari
       default_noindex:
         desc_html: Hevur ávirkan á allar brúkarar, sum ikki hava broytt hesa stillingina sjálvi
         title: Tekur brúkarar úr leitimaskinu-indeksering, um ikki annað er valt
       discovery:
         follow_recommendations: Tilmæli um at fylgja
-        preamble: At fáa áhugavert innihald í ljósmála er avgerandi fyri at nýggir brúkarar, sum kanska ongan kenna á Mastodon, kunnu koma væl umborð. Stýr, hvussu hentleikarnir at uppdaga ymiskt rigga á ambætaranum hjá tær.
+        preamble: At fáa áhugavert innihald í ljósmála er avgerandi fyri at nýggir brúkarar, sum kanska ongan kenna á Nutshell, kunnu koma væl umborð. Stýr, hvussu hentleikarnir at uppdaga ymiskt rigga á ambætaranum hjá tær.
         privacy: Privatlív
         profile_directory: Vangaskrá
         public_timelines: Almennar tíðarlinjur
@@ -901,7 +901,7 @@ fo:
       destroyed_msg: Vevstaðs-uppsending strikað!
     software_updates:
       critical_update: Kritiskt - vinarliga dagfør beinan vegin
-      description: Mælt verður til, at Mastodon-innleggingin hjá tær altíð er dagførd, soleiðis at hon fær gagn av nýggjastu ábótunum og hentleikunum. Harumframt er tað summatíðir kritiskt, at Mastodon umgangandi verður dagført fyri at mótvirka trygdartrupulleikum. Tí kekkar Mastodon hvørjar 30 minuttir, um dagføringar eru neyðugar, og letur teg frætta samsvarandi teldubrævafráboðanarstillingunum hjá tær.
+      description: Mælt verður til, at Nutshell-innleggingin hjá tær altíð er dagførd, soleiðis at hon fær gagn av nýggjastu ábótunum og hentleikunum. Harumframt er tað summatíðir kritiskt, at Nutshell umgangandi verður dagført fyri at mótvirka trygdartrupulleikum. Tí kekkar Nutshell hvørjar 30 minuttir, um dagføringar eru neyðugar, og letur teg frætta samsvarandi teldubrævafráboðanarstillingunum hjá tær.
       documentation_link: Lær meira
       release_notes: Útgávuviðmerkingar
       title: Tøkar dagføringar
@@ -969,7 +969,7 @@ fo:
         message_html: Elasticsearch indeks-mappingar eru avoldaðar. Vinarliga koyr <code>tootctl search deploy --only=%{value}</code>
       elasticsearch_preset:
         action: Sí skjalfesting
-        message_html: Elasticsearch cluster'ið hjá tær hevur meira enn eina nodu, men Mastodon er ikki sett upp at brúka tær.
+        message_html: Elasticsearch cluster'ið hjá tær hevur meira enn eina nodu, men Nutshell er ikki sett upp at brúka tær.
       elasticsearch_preset_single_node:
         action: Sí skjalfesting
         message_html: Elasticsearch cluster'ið hjá tær hevur einans eina nodu, <code>ES_PRESET</code> átt at verið sett til <code>single_node_cluster</code>.
@@ -987,10 +987,10 @@ fo:
         message_html: Eingin Sidekiq gongd koyrir fyri %{value} bíðirøðina(r). Vinarliga eftirkanna Sidekiq uppsetingina
       software_version_check:
         action: Sí tøkar dagføringar
-        message_html: Ein Mastodon-dagføring er tøk.
+        message_html: Ein Nutshell-dagføring er tøk.
       software_version_critical_check:
         action: Sí tøkar dagføringar
-        message_html: Ein kritisk Mastodon-dagføring er tøk, vinarliga dagfør sum skjótast.
+        message_html: Ein kritisk Nutshell-dagføring er tøk, vinarliga dagfør sum skjótast.
       software_version_patch_check:
         action: Sí tøkar dagføringar
         message_html: Ein Mastdon-dagføring við feilrættingum er tøk.
@@ -1153,7 +1153,7 @@ fo:
     webhooks:
       add_new: Legg endapunkt afturat
       delete: Strika
-      description_html: Ein <strong>webhook/vevkrókur</strong> ger tað møguligt hjá Mastodon at trýsta <strong>samtíðarfráboðanir</strong> um valdar hendingar til tína egnu nýtsluskipan, soleiðis at hon <strong>sjálvvirkandi kann birta í aftursvar</strong>.
+      description_html: Ein <strong>webhook/vevkrókur</strong> ger tað møguligt hjá Nutshell at trýsta <strong>samtíðarfráboðanir</strong> um valdar hendingar til tína egnu nýtsluskipan, soleiðis at hon <strong>sjálvvirkandi kann birta í aftursvar</strong>.
       disable: Ger óvirkið
       disabled: Óvirkið
       edit: Rætta endapunkt
@@ -1187,8 +1187,8 @@ fo:
       next_steps: Tú kanst góðtaka kæruna og soleiðis ógilda umsjónaravgerðina, ella ikki látast at síggja hana.
       subject: "%{username} kærir eina umsjónaravgerð á %{instance}"
     new_critical_software_updates:
-      body: Nýggjar kritiskar útgávur av Mastodon eru útgivnar. Dagfør sum skjótast!
-      subject: Kritiskar Mastodon-dagføringar eru tøkar fyri %{instance}!
+      body: Nýggjar kritiskar útgávur av Nutshell eru útgivnar. Dagfør sum skjótast!
+      subject: Kritiskar Nutshell-dagføringar eru tøkar fyri %{instance}!
     new_pending_account:
       body: Smálutirnir hjá tí nýggju kontuni eru niðanfyri. Tú kanst góðkenna ella vraka hesa umsóknina.
       subject: Nýggj konta klár til ummælis á %{instance} (%{username})
@@ -1197,8 +1197,8 @@ fo:
       body_remote: Onkur frá %{domain} hevur meldað %{target}
       subject: Nýggj melding fyri %{instance} (#%{id})
     new_software_updates:
-      body: Nýggjar Mastodon-útgávur eru útgivnar; umhugsa at dagføra!
-      subject: Nýggjar Mastodon-útgávur eru tøkar fyri %{instance}!
+      body: Nýggjar Nutshell-útgávur eru útgivnar; umhugsa at dagføra!
+      subject: Nýggjar Nutshell-útgávur eru tøkar fyri %{instance}!
     new_trends:
       body: 'Niðanfyristandandi lutir mugu eftirhyggjast áðrenn teir kunnu verða vístir alment:'
       new_trending_links:
@@ -1222,7 +1222,7 @@ fo:
     boosting_preferences_info_html: "<strong>Góð ráð:</strong> Óansæð stillingar, so verður beinan vegin stimbrað, um trýst verður á <kbd>Shift</kbd> + <kbd>klikk</kbd> á %{icon} stimbranar-ímyndina."
     discovery: Uppdaging
     localization:
-      body: Mastodon er umsett av sjálvbodnum.
+      body: Nutshell er umsett av sjálvbodnum.
       guide_link: https://crowdin.com/project/mastodon
       guide_link_text: Øll kunnu geva íkast.
     sensitive_content: Viðkvæmt innihald
@@ -1261,9 +1261,9 @@ fo:
     delete_account: Strika kontu
     delete_account_html: Ynskir tú at strika kontuna, so kanst tú <a href="%{path}">halda fram her</a>. Tú verður spurd/ur um váttan.
     description:
-      prefix_invited_by_user: "@%{name} bjóðar tær at verða við í hesum Mastodon-ambætaranum!"
-      prefix_sign_up: Tilmelda teg á Mastodon í dag!
-      suffix: Við eini kontu, so er møguligt hjá tær at fylgja fólki, at posta dagføringar og at senda og móttaka boð til og frá brúkarum á øllum Mastodon ambætarum, umframt annað!
+      prefix_invited_by_user: "@%{name} bjóðar tær at verða við í hesum Nutshell-ambætaranum!"
+      prefix_sign_up: Tilmelda teg á Nutshell í dag!
+      suffix: Við eini kontu, so er møguligt hjá tær at fylgja fólki, at posta dagføringar og at senda og móttaka boð til og frá brúkarum á øllum Nutshell ambætarum, umframt annað!
     didnt_get_confirmation: Móttók tú ikki váttanarleinkið?
     dont_have_your_security_key: Hevur tú ikki trygdarlyklin hjá tær?
     forgot_password: Hevur tú gloymt loyniorðið?
@@ -1300,7 +1300,7 @@ fo:
     set_new_password: Áset nýtt loyniorð
     setup:
       email_below_hint_html: Kekka mappuna við ruskposti ella bið um ein annan. Tú kanst rætta teldupostadressuna, um hon er skeiv.
-      email_settings_hint_html: Trýst á leinkið, sum vit sendu til %{email} fyri at byrja at brúka Mastodon. Vit bíða beint her.
+      email_settings_hint_html: Trýst á leinkið, sum vit sendu til %{email} fyri at byrja at brúka Nutshell. Vit bíða beint her.
       link_not_received: Fekk tú einki leinki?
       new_confirmation_instructions_sent: Tú fer at móttaka eitt nýtt teldubræv við váttanarleinkinum um nakrar fáar minuttir!
       title: Kekka innbakkan hjá tær
@@ -1309,7 +1309,7 @@ fo:
       title: Rita inn á %{domain}
     sign_up:
       manual_review: Tilmeldingar til %{domain} fara ígjøgnum eina manuella eftirkanning av okkara kjakleiðarum. Fyri at hjálpa okkum at skunda undir skrásetingina, skriva eitt sindur um teg sjálva/n og hví tú vil hava eina kontu á %{domain}.
-      preamble: Við eini kontu á hesum Mastodon ambætaranum ber til hjá tær at fylgja ein og hvønn annan persón á fediversinum, óansæð hvar teirra konta er hýst.
+      preamble: Við eini kontu á hesum Nutshell ambætaranum ber til hjá tær at fylgja ein og hvønn annan persón á fediversinum, óansæð hvar teirra konta er hýst.
       title: Latum okkum fáa teg settan upp á %{domain}.
     status:
       account_status: Kontustøða
@@ -1325,7 +1325,7 @@ fo:
     user_privacy_agreement_html: I have lisið og taki undir við <a href="%{privacy_policy_path}" target="_blank">privatlívspolitikkinum</a>
   author_attribution:
     example_title: Tekstadømi
-    hint_html: Skrivar tú tíðindi ella greinar til bloggin uttanfyri Mastodon? Her kanst tú stýra, hvussu tú verður tilsipað/ur, tá ið títt tilfar verður deilt á Mastodon.
+    hint_html: Skrivar tú tíðindi ella greinar til bloggin uttanfyri Nutshell? Her kanst tú stýra, hvussu tú verður tilsipað/ur, tá ið títt tilfar verður deilt á Nutshell.
     instructions: 'Tryggja tær, at henda kota er í HTML''inum á tíni grein:'
     more_from_html: Meiri frá %{name}
     s_blog: Bloggurin hjá %{name}
@@ -1433,7 +1433,7 @@ fo:
       content: Vit eru kedd av tí, men okkurt gekk galið hjá okkum.
       title: Hendan síðan er ikki røtt
     '503': Ikki var til at veita hesa síðuna vegna ein bráðfeingis feil á ambætaranum.
-    noscript_html: Fyri at brúka vevskipanina hjá Mastodon, vinarliga ger JavaScript virkið. Um ikki, royn so eina <a href="%{apps_path}">uppruna-app</a> til Mastodon á tínum tøkniliga palli.
+    noscript_html: Fyri at brúka vevskipanina hjá Nutshell, vinarliga ger JavaScript virkið. Um ikki, royn so eina <a href="%{apps_path}">uppruna-app</a> til Nutshell á tínum tøkniliga palli.
   existing_username_validator:
     not_found: eydnaðist ikki at finna ein lokalan brúkara við hasum brúkaranavninum
     not_found_multiple: fann ikki %{usernames}
@@ -1653,7 +1653,7 @@ fo:
     unsubscribe:
       action: Ja, strika hald
       complete: Hald strikað
-      confirmation_html: Ert tú vís/ur í, at tú vil gevast at móttaka %{type} fyri Mastodon á %{domain} til tína teldupostadressu á %{email}? Tú kanst altíð gera haldið virkið aftur frá tínum <a href="%{settings_path}">teldupostfráboðanarstillingum</a>.
+      confirmation_html: Ert tú vís/ur í, at tú vil gevast at móttaka %{type} fyri Nutshell á %{domain} til tína teldupostadressu á %{email}? Tú kanst altíð gera haldið virkið aftur frá tínum <a href="%{settings_path}">teldupostfráboðanarstillingum</a>.
       emails:
         notification_emails:
           favourite: yndisfráboðanarteldupostar
@@ -1662,7 +1662,7 @@ fo:
           mention: nevn fráboðanarteldupostar
           reblog: framhevja fráboðanarpostar
       resubscribe_html: Um tú hevur strikað haldið av misgávum, so kanst tú tekna haldið av nýggjum í tínum <a href="%{settings_path}">teldupostfráboðarstillingum</a>.
-      success_html: Tú fer ikki longur at móttaka %{type} fyri Mastodon á %{domain} til tín teldupost á %{email}.
+      success_html: Tú fer ikki longur at móttaka %{type} fyri Nutshell á %{domain} til tín teldupost á %{email}.
       title: Strika hald
   media_attachments:
     validations:
@@ -1801,13 +1801,13 @@ fo:
     posting_defaults: Postingarstillingar
     public_timelines: Almennar tíðarlinjur
   privacy:
-    hint_html: "<strong>Tillaga hvussu tú vilt hava tín vanga og tínar postar at blíva funnar</strong> Eitt úrval av tættum í Mastodon kunnu hjálpa tær at røkka einum størri skara, tá teir eru settir til. Brúka eina løtu at eftirhyggja hesar stillingar fyri at fáa vissu um at tær eru hóskandi fyri teg."
+    hint_html: "<strong>Tillaga hvussu tú vilt hava tín vanga og tínar postar at blíva funnar</strong> Eitt úrval av tættum í Nutshell kunnu hjálpa tær at røkka einum størri skara, tá teir eru settir til. Brúka eina løtu at eftirhyggja hesar stillingar fyri at fáa vissu um at tær eru hóskandi fyri teg."
     privacy: Privatlív
     privacy_hint_html: Stýr hvussu nógv tú vil avdúka til gagns fyri onnur. Fólk varnast áhugaverdar vangar og kular appir tá tey síggja, hvørji fólk fylgja teimum og hvørjar appir, tey brúka at posta við, men tað kann vera, at tú heldur vilt halda tað fjalt.
     reach: Útbreiðsla
     reach_hint_html: Stýr um onnur skulu kunna finna teg og fylgja tær. Vilt tú hava, at postar tínir síggjast á Rannsaka-síðuni? Vilt tú hava at onnur síggja teg í viðmælum um hvørji tey skulu fylgja? Vilt tú góðkenna allar nýggjar fylgjarar sjálvvirkandi ella vilt tú stýra nágreiniliga hvør kann fylgja tær?
     search: Leita
-    search_hint_html: Stýr, hvussu tú verður funnin. Vilt tú hava at fólk finna teg við tí, sum tú hevur postað fyri almenninginum? Vilt tú hava, at fólk uttan fyri Mastodon finna vangan hjá tær tá tey leita á netinum? Gev gætur, at vissa fyri fullkomnari verja móti øllum leitimaskinum ikki kann gevast fyri almennar upplýsingar.
+    search_hint_html: Stýr, hvussu tú verður funnin. Vilt tú hava at fólk finna teg við tí, sum tú hevur postað fyri almenninginum? Vilt tú hava, at fólk uttan fyri Nutshell finna vangan hjá tær tá tey leita á netinum? Gev gætur, at vissa fyri fullkomnari verja móti øllum leitimaskinum ikki kann gevast fyri almennar upplýsingar.
     title: Privatlív og skotmál
   privacy_policy:
     title: Privatlívspolitikkur
@@ -1882,7 +1882,7 @@ fo:
     current_session: Verandi seta
     date: Dagfesting
     description: "%{browser} á %{platform}"
-    explanation: Hetta eru vevkagarnir, sum í løtuni eru ritaðir inn á tína Mastodon kontu.
+    explanation: Hetta eru vevkagarnir, sum í løtuni eru ritaðir inn á tína Nutshell kontu.
     ip: IP
     platforms:
       adobe_air: Adobe Air
@@ -1908,7 +1908,7 @@ fo:
     aliases: Tøkuheiti hjá kontuni
     appearance: Útsjónd
     authorized_apps: Góðkendar appir
-    back: Aftur til Mastodon
+    back: Aftur til Nutshell
     delete: Striking av kontu
     development: Menning
     edit_profile: Rætta vanga
@@ -1983,9 +1983,9 @@ fo:
       direct: Privat umrøða
       private: Einans fylgjarar
       public: Alment
-      public_long: Øll í og uttanfyri Mastodon
+      public_long: Øll í og uttanfyri Nutshell
       unlisted: Stillur almenningur
-      unlisted_long: Fjalt frá leitiúrslitum, rákum og almennum tíðarlinjum í Mastodon
+      unlisted_long: Fjalt frá leitiúrslitum, rákum og almennum tíðarlinjum í Nutshell
   statuses_cleanup:
     enabled: Strika gamlar postar sjálvvirkandi
     enabled_hint: Strikar postar tínar sjálvvirkandi, tá teir verða eldri enn eitt vist, uttan so at teir samsvara við eitt av undantøkunum niðanfyri
@@ -2036,7 +2036,7 @@ fo:
     review_link: Eftirkanna tænastutreytir
     title: Tænastutreytirnar á %{domain} verða broyttar
   themes:
-    default: Mastodon
+    default: Nutshell
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
@@ -2062,7 +2062,7 @@ fo:
     recovery_codes_regenerated: Kodur til endurgerð gjørdar av nýggjum
     recovery_instructions_html: Missir tú atgongd til telefonina, so kanst tú brúka eina av kodunum til endurgerð niðanfyri at fáa atgongd aftur til kontu tína. <strong>Goym kodurnar til endurgerð trygt</strong>. Til dømis kanst tú prenta tær og goyma tær saman við øðrum týdningarmiklum skjølum.
     resume_app_authorization: Tak góðkenning av applikatión uppaftur
-    role_requirement: "%{domain} krevur, at tú setur upp váttan í tveimum stigum áðrenn tú kann brúka Mastodon."
+    role_requirement: "%{domain} krevur, at tú setur upp váttan í tveimum stigum áðrenn tú kann brúka Nutshell."
     webauthn: Trygdarlyklar
   user_mailer:
     announcement_published:
@@ -2081,7 +2081,7 @@ fo:
       subtitle: Kæra tín er vrakað.
       title: Kæra vrakað
     backup_ready:
-      explanation: Tú hevur biðið um eitt fult trygdaravrit av Mastodon-kontuni hjá tær.
+      explanation: Tú hevur biðið um eitt fult trygdaravrit av Nutshell-kontuni hjá tær.
       extra: Tað er nú klárt at taka niður!
       subject: Savnið hjá tær er tøkt at taka niður
       title: Tak savn niður
@@ -2142,7 +2142,7 @@ fo:
       apps_android_action: Fá hana á Google Play
       apps_ios_action: Tak niður á App Store
       apps_step: Tak okkara almennu appir niður.
-      apps_title: Mastodon appir
+      apps_title: Nutshell appir
       checklist_subtitle: 'Kom í gongd á hesum nýggja miðli:'
       checklist_title: Vælkomukekklisti
       edit_profile_action: Ger persónligt
@@ -2150,16 +2150,16 @@ fo:
       edit_profile_title: Ger vangan hjá tær persónligan
       explanation: Her eru nøkur ráð so tú kann koma gott ígongd
       feature_action: Lær meira
-      feature_audience: Mastodon gevur við ein einastandandi høvi at stýra tínar áskoðarar uttan millumfólk. Mastodon á tínum egnu ambætarum gevur tær høvi at fylgja og at blíva fylgd ella fylgdur frá einum og hvørjum Mastodon ambætara á netinum og er bert undir tínum ræði.
+      feature_audience: Nutshell gevur við ein einastandandi høvi at stýra tínar áskoðarar uttan millumfólk. Nutshell á tínum egnu ambætarum gevur tær høvi at fylgja og at blíva fylgd ella fylgdur frá einum og hvørjum Nutshell ambætara á netinum og er bert undir tínum ræði.
       feature_audience_title: Uppbygg tína áskoðarafjøld í treysti
-      feature_control: Tú veitst best, hvat tú vilt síggja á tíni heimarás. Ongar algoritmur ella lýsingar at oyðsla tíðina hjá tær við. Fylg hvønn tú vilt á øllum Mastodon ambætarum umvegis eina kontu og móttak teirra postar í tíðarrað, og ger tín part av internetinum eitt sindur meira sum teg.
+      feature_control: Tú veitst best, hvat tú vilt síggja á tíni heimarás. Ongar algoritmur ella lýsingar at oyðsla tíðina hjá tær við. Fylg hvønn tú vilt á øllum Nutshell ambætarum umvegis eina kontu og móttak teirra postar í tíðarrað, og ger tín part av internetinum eitt sindur meira sum teg.
       feature_control_title: Varðveit ræði á tíni egnu tíðarrás
-      feature_creativity: Mastodon hevur postar við ljóði, video og myndum, atkomulýsingar, spurnarkanningar, innihaldsávarðingar, livandi avatarar, sergjørd kenslutekn, klipping av smámyndum og annað, sum hjálpir tær at bera teg fram á netinum. Sama um tú útgevur list, tónleik ella poddvarp, Mastodon er har fyri teg.
+      feature_creativity: Nutshell hevur postar við ljóði, video og myndum, atkomulýsingar, spurnarkanningar, innihaldsávarðingar, livandi avatarar, sergjørd kenslutekn, klipping av smámyndum og annað, sum hjálpir tær at bera teg fram á netinum. Sama um tú útgevur list, tónleik ella poddvarp, Nutshell er har fyri teg.
       feature_creativity_title: Makaleys skapan
-      feature_moderation: Mastodon leggur avgerðirnar aftur í tínar hendur. Hvør ambætari hevur sínar egnu reglur og fyriskipanir, sum vera útinnaðar lokalt og ikki frá í erva og niðureftir sum sosialir miðlar hjá stórfyritøkum. Hetta ger tað til tað smidliga at svara tørvinum hjá ymsum bólkum av fólki. Luttak á einum ambætara við reglum, sum tú er samd ella samdur við, ella hýs tín egna ambætara.
+      feature_moderation: Nutshell leggur avgerðirnar aftur í tínar hendur. Hvør ambætari hevur sínar egnu reglur og fyriskipanir, sum vera útinnaðar lokalt og ikki frá í erva og niðureftir sum sosialir miðlar hjá stórfyritøkum. Hetta ger tað til tað smidliga at svara tørvinum hjá ymsum bólkum av fólki. Luttak á einum ambætara við reglum, sum tú er samd ella samdur við, ella hýs tín egna ambætara.
       feature_moderation_title: Umsjón, sum hon eigur at vera
       follow_action: Fylg
-      follow_step: At fylgja áhugaverdum fólki er tað, sum Mastodon snýr seg um.
+      follow_step: At fylgja áhugaverdum fólki er tað, sum Nutshell snýr seg um.
       follow_title: Ger tína heimarás persónliga
       follows_subtitle: Fylg vælkendar kontur
       follows_title: Hvørji tú átti at fylgt
@@ -2173,10 +2173,10 @@ fo:
       post_action: Skriva
       post_step: Sig hey við verðina við teksti, myndum, video ella spurnarkanningum.
       post_title: Stovna tín fyrsta post
-      share_step: Lat vinir tínar vita, hvussu tey finna teg á Mastodon.
-      share_title: Deil tín Mastodon vanga
+      share_step: Lat vinir tínar vita, hvussu tey finna teg á Nutshell.
+      share_title: Deil tín Nutshell vanga
       sign_in_action: Rita inn
-      subject: Vælkomin til Mastodon
+      subject: Vælkomin til Nutshell
       title: Vælkomin umborð, %{name}!
   users:
     follow_limit_reached: Tú kanst ikki fylgja fleiri enn %{limit} fólk
@@ -2189,7 +2189,7 @@ fo:
   verification:
     extra_instructions_html: <strong>Góð ráð:</strong> Leinkið á heimasíðuni hjá tær kann vera ósjónligt. Tann týdningarmikli parturin er <code>rel="me"</code> sum forðar tí, at onkur kann látast at vera ein annar á heimasíðuni við brúkara-gjørdum tilfari. Tú kanst enntá brúka eitt <code>link</code> frámerki í høvdinum á síðuni heldur enn <code>a</code>, men HTML kodan má vera atkomulig uttan at JavaScript skal koyra.
     here_is_how: Her er hvussu
-    hint_html: "<strong>At vátta samleikan hjá tær á Mastodon er fyri øll.</strong> Grundað á opnar vevstandarar, nú og í allar ævir frítt. Alt, tú hevur tørv á, er ein persónlig heimasíða, sum fólk kunnu kenna teg aftur á. Tá tú ger leinki til ta heimasíðuna frá vanga tínum, so eftirkanna vit, at heimasíðan hevur eitt leinki aftur til vangan hjá tær og vísa tað á vanganum."
+    hint_html: "<strong>At vátta samleikan hjá tær á Nutshell er fyri øll.</strong> Grundað á opnar vevstandarar, nú og í allar ævir frítt. Alt, tú hevur tørv á, er ein persónlig heimasíða, sum fólk kunnu kenna teg aftur á. Tá tú ger leinki til ta heimasíðuna frá vanga tínum, so eftirkanna vit, at heimasíðan hevur eitt leinki aftur til vangan hjá tær og vísa tað á vanganum."
     instructions_html: Avrita og innset koduna niðanfyri inn í HTML'ið á heimasíðuni hjá tær. Legg síðani adressuna á heimasíðuni hjá tær inn á eitt av eyka teigunum á vanganum hjá tær umvegis "Rætta vanga" teigin og goym broytingar.
     verification: Váttan
     verified_links: Tíni váttaðu leinki
@@ -2213,5 +2213,5 @@ fo:
     otp_required: Fyri at brúka trygdarlyklar er neyðugt at gera váttan í tveimum stigum virkna fyrst.
     registered_on: Skrásett %{date}
   wrapstodon:
-    description: Sí hvussu %{name} brúkti Mastodon í ár!
+    description: Sí hvussu %{name} brúkti Nutshell í ár!
     title: Wrapstodon %{year} fyri %{name}

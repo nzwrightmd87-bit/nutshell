@@ -4,10 +4,10 @@ nl:
     hints:
       account:
         attribution_domains: Eén per regel. Beschermt tegen ongeldige attributies.
-        discoverable: Jouw openbare berichten kunnen worden uitgelicht op verschillende plekken binnen Mastodon en jouw account kan worden aanbevolen aan andere gebruikers.
+        discoverable: Jouw openbare berichten kunnen worden uitgelicht op verschillende plekken binnen Nutshell en jouw account kan worden aanbevolen aan andere gebruikers.
         display_name: Jouw volledige naam of een leuke bijnaam.
         fields: Jouw website, persoonlijke voornaamwoorden, leeftijd, alles wat je maar kwijt wilt.
-        indexable: Jouw openbare berichten kunnen in de zoekresultaten op Mastodon verschijnen. Mensen die op jouw berichten hebben gereageerd kunnen ze sowieso doorzoeken.
+        indexable: Jouw openbare berichten kunnen in de zoekresultaten op Nutshell verschijnen. Mensen die op jouw berichten hebben gereageerd kunnen ze sowieso doorzoeken.
         note: 'Je kunt andere mensen @vermelden of #hashtags gebruiken.'
         show_collections: Mensen kunnen zien wie jij volgt en wie jou volgen.
         unlocked: Mensen kunnen jou volgen zonder daarvoor toestemming te hoeven vragen. Wanneer je nieuwe volgers handmatig wil goedkeuren moet je deze optie deselecteren.
@@ -54,11 +54,11 @@ nl:
         password: Gebruik tenminste 8 tekens
         phrase: Komt overeen ongeacht hoofd-/kleine letters of een inhoudswaarschuwing
         scopes: Tot welke API's heeft de toepassing toegang. Wanneer je een toestemming van het bovenste niveau kiest, hoef je geen individuele toestemmingen meer te kiezen.
-        setting_advanced_layout: Geef Mastodon in meerdere kolommen weer, waarmee je jouw tijdlijn, meldingen en een derde kolom naar keuze in één opslag kunt bekijken. Niet aanbevolen voor kleinere schermen.
+        setting_advanced_layout: Geef Nutshell in meerdere kolommen weer, waarmee je jouw tijdlijn, meldingen en een derde kolom naar keuze in één opslag kunt bekijken. Niet aanbevolen voor kleinere schermen.
         setting_aggregate_reblogs: Geen nieuwe boosts tonen voor berichten die recentelijk nog zijn geboost (heeft alleen effect op nieuw ontvangen boosts)
-        setting_always_send_emails: Normaliter worden er geen e-mailmeldingen verstuurd wanneer je actief Mastodon gebruikt
+        setting_always_send_emails: Normaliter worden er geen e-mailmeldingen verstuurd wanneer je actief Nutshell gebruikt
         setting_boost_modal: Wanneer dit is ingeschakeld, krijg je eerst een bevestigingsvenster te zien waarmee je de zichtbaarheid van je boost kunt wijzigen.
-        setting_default_quote_policy_private: Berichten aan alleen volgers afkomstig van Mastodon kunnen niet door anderen worden geciteerd.
+        setting_default_quote_policy_private: Berichten aan alleen volgers afkomstig van Nutshell kunnen niet door anderen worden geciteerd.
         setting_default_quote_policy_unlisted: Wanneer mensen jou citeren, verschijnt hun bericht ook niet onder trends.
         setting_default_sensitive: Gevoelige media wordt standaard verborgen en kan met één klik worden getoond
         setting_display_media_default: Als gevoelig gemarkeerde media verbergen
@@ -91,8 +91,8 @@ nl:
         bootstrap_timeline_accounts: Deze accounts worden bovenaan de aanbevelingen aan nieuwe gebruikers getoond. Meerdere gebruikersnamen met komma's scheiden.
         closed_registrations_message: Weergegeven wanneer registratie van nieuwe accounts is uitgeschakeld
         content_cache_retention_period: Alle berichten van andere servers (inclusief boosts en reacties) worden verwijderd na het opgegeven aantal dagen, ongeacht enige lokale gebruikersinteractie met die berichten. Dit betreft ook berichten die een lokale gebruiker aan diens bladwijzers heeft toegevoegd of als favoriet heeft gemarkeerd. Privéberichten tussen gebruikers van verschillende servers gaan ook verloren en zijn onmogelijk te herstellen. Het gebruik van deze instelling is bedoeld voor servers die een speciaal doel dienen en overtreedt veel gebruikersverwachtingen wanneer deze voor algemeen gebruik wordt geïmplementeerd.
-        custom_css: Je kunt aangepaste CSS toepassen op de webversie van deze Mastodon-server.
-        favicon: WEBP, PNG, GIF of JPG. Vervangt de standaard Mastodon favicon met een aangepast pictogram.
+        custom_css: Je kunt aangepaste CSS toepassen op de webversie van deze Nutshell-server.
+        favicon: WEBP, PNG, GIF of JPG. Vervangt de standaard Nutshell favicon met een aangepast pictogram.
         landing_page: Selecteert welke pagina nieuwe bezoekers te zien krijgen wanneer ze voor het eerst op jouw server terechtkomen. Wanneer je ‘Trends’ selecteert, moeten trends ingeschakeld zijn onder 'Serverinstellingen > Ontdekken'. Wanneer je ‘Lokale tijdlijn’ selecteert, moet ‘Toegang tot openbare lokale berichten’ worden ingesteld op ‘Iedereen’ onder 'Serverinstellingen > Ontdekken'.
         mascot: Overschrijft de illustratie in de geavanceerde webomgeving.
         media_cache_retention_period: Mediabestanden van berichten van externe gebruikers worden op jouw server in de cache opgeslagen. Indien ingesteld op een positieve waarde, worden media verwijderd na het opgegeven aantal dagen. Als de mediagegevens worden opgevraagd nadat ze zijn verwijderd, worden ze opnieuw gedownload wanneer de originele inhoud nog steeds beschikbaar is. Vanwege beperkingen op hoe vaak linkvoorbeelden sites van derden raadplegen, wordt aanbevolen om deze waarde in te stellen op ten minste 14 dagen. Anders worden linkvoorbeelden niet op aanvraag bijgewerkt.
@@ -101,7 +101,7 @@ nl:
         profile_directory: De gebruikersgids bevat een lijst van alle gebruikers die ervoor gekozen hebben om ontdekt te kunnen worden.
         require_invite_text: Maak het invullen van "Waarom wil je je hier registreren?" verplicht in plaats van optioneel, wanneer registraties handmatig moeten worden goedgekeurd
         site_contact_email: Hoe mensen je kunnen bereiken voor juridische vragen of support.
-        site_contact_username: Hoe mensen je op Mastodon kunnen bereiken.
+        site_contact_username: Hoe mensen je op Nutshell kunnen bereiken.
         site_extended_description: Alle aanvullende informatie die nuttig kan zijn voor bezoekers en jouw gebruikers. Kan worden opgemaakt met Markdown.
         site_short_description: Een korte beschrijving om het unieke karakter van je server te tonen. Wie beheert de server, wat is de doelgroep?
         site_terms: Gebruik je eigen privacybeleid of laat leeg om de standaardwaarde te gebruiken. Kan worden opgemaakt met Markdown.
@@ -111,11 +111,11 @@ nl:
         thumbnail: Een afbeelding van ongeveer een verhouding van 2:1 die naast jouw serverinformatie wordt getoond.
         trendable_by_default: Handmatige beoordeling van trends overslaan. Individuele items kunnen later alsnog worden afgekeurd.
         trends: Trends laten zien welke berichten, hashtags en nieuwsberichten op jouw server aan populariteit winnen.
-        wrapstodon: Lokale gebruikers de mogelijkheid geven om een speelse samenvatting van hun Mastodon-gebruik over het afgelopen jaar aan te maken. Deze functie is elk jaar beschikbaar tussen 10 en 31 december, en wordt aangeboden aan gebruikers die tijdens het afgelopen jaar ten minste één openbaar of minder openbaar bericht hebben geplaatst en ten minste één hashtag hebben gebruikt.
+        wrapstodon: Lokale gebruikers de mogelijkheid geven om een speelse samenvatting van hun Nutshell-gebruik over het afgelopen jaar aan te maken. Deze functie is elk jaar beschikbaar tussen 10 en 31 december, en wordt aangeboden aan gebruikers die tijdens het afgelopen jaar ten minste één openbaar of minder openbaar bericht hebben geplaatst en ten minste één hashtag hebben gebruikt.
       form_challenge:
         current_password: Je betreedt een veilige omgeving
       imports:
-        data: CSV-bestand dat op een andere Mastodonserver werd geëxporteerd
+        data: CSV-bestand dat op een andere Nutshellserver werd geëxporteerd
       invite_request:
         text: Dit helpt ons om jouw aanvraag te beoordelen
       ip_block:
@@ -164,7 +164,7 @@ nl:
         name: Openbare naam van de rol, wanneer de rol als badge op profielpagina's wordt getoond
         permissions_as_keys: Gebruikers met deze rol hebben toegang tot...
         position: Een hogere rol beslist in bepaalde situaties over het oplossen van conflicten. Bepaalde acties kunnen alleen worden uitgevoerd op rollen met een lagere prioriteit
-        require_2fa: Gebruikers met deze rol zijn verplicht om tweestapsverificatie in te stellen om Mastodon te gebruiken
+        require_2fa: Gebruikers met deze rol zijn verplicht om tweestapsverificatie in te stellen om Nutshell te gebruiken
       username_block:
         allow_with_approval: In plaats van dat het registreren helemaal wordt voorkomen, zullen overeenkomstige registraties jouw goedkeuring vereisen
         comparison: Houd rekening met het Scunthorpe-probleem wanneer je gedeeltelijke overeenkomsten blokkeert
@@ -176,7 +176,7 @@ nl:
     labels:
       account:
         attribution_domains: Websites die jou credit mogen geven
-        discoverable: Jouw account en berichten laten uitlichten door Mastodon
+        discoverable: Jouw account en berichten laten uitlichten door Nutshell
         fields:
           name: Label
           value: Inhoud
@@ -348,7 +348,7 @@ nl:
         software_updates:
           all: Meldingen geven voor alle updates
           critical: Alleen meldingen voor kritieke updates geven
-          label: Er is een nieuwe versie van Mastodon beschikbaar
+          label: Er is een nieuwe versie van Nutshell beschikbaar
           none: Nooit meldingen van updates geven (niet aanbevolen)
           patch: Meldingen bij bugfix-updates
         trending_tag: Nieuwe trend vereist beoordeling

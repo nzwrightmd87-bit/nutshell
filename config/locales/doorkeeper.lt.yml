@@ -122,7 +122,7 @@ lt:
         admin/accounts: Paskyrų administravimas
         admin/all: Visi administraciniai funkcijos
         admin/reports: Ataskaitų administravimas
-        all: Pilna prieiga prie tavo „Mastodon“ paskyros
+        all: Pilna prieiga prie tavo „Nutshell“ paskyros
         blocks: Blokavimai
         bookmarks: Žymės
         conversations: Pokalbiai
@@ -135,7 +135,7 @@ lt:
         media: Medijos priedai
         mutes: Nutildymai
         notifications: Pranešimai
-        profile: Tavo „Mastodon“ profilis
+        profile: Tavo „Nutshell“ profilis
         push: Tiesioginiai pranešimai
         reports: Ataskaitos
         search: Paieška

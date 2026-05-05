@@ -1,6 +1,6 @@
 # Nutshell Local Setup
 
-This repo contains the Nutshell social app in `mastodon/`, built from a Mastodon fork with Nutshell-specific defaults, branding, membership gating, and BlackEnvelope integration.
+This repo contains the Nutshell social app in `mastodon/`, built from an upstream fork with Nutshell-specific defaults, branding, membership gating, and BlackEnvelope integration.
 
 ## 1. Start local services (Docker dev environment)
 
@@ -57,7 +57,7 @@ Then rebuild assets and restart app/sidekiq/streaming services.
 ## 5. Quick checks
 
 ```bash
-rg -n "Mastodon|mastodon" app/views app/helpers config/locales/en.yml config/locales/en-GB.yml config/templates
+rg -n "Nutshell|mastodon" app/views app/helpers config/locales/en.yml config/locales/en-GB.yml config/templates
 rg -n -i "nutshell\.localhost|nutshell\.sbs|black.?envelope" app config docs README.md
 ```
 

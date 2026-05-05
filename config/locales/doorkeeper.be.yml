@@ -126,7 +126,7 @@ be:
         admin/accounts: Кіраванне ўліковымі запісамі
         admin/all: Усе кіравальныя функцыі
         admin/reports: Кіраванне скардамі
-        all: Поўны доступ да ўліковага запісу Mastodon
+        all: Поўны доступ да ўліковага запісу Nutshell
         blocks: Блакаванні
         bookmarks: Закладкі
         conversations: Размовы
@@ -139,7 +139,7 @@ be:
         media: Мультымедыйныя далучэнні
         mutes: Ігнараваныя
         notifications: Апавяшчэнні
-        profile: Ваш профіль Mastodon
+        profile: Ваш профіль Nutshell
         push: Push-апавяшчэнні
         reports: Скаргі
         search: Пошук
