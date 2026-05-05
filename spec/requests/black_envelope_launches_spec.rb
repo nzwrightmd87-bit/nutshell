@@ -28,6 +28,7 @@ RSpec.describe 'BlackEnvelope launches' do
         expect(response.content_type).to start_with('text/html')
         expect(response.body).to include('action="https://app.nutshell.sbs/integrations/nutshell/sso"')
         expect(response.body).to include('name="token"')
+        expect(response.body).to match(/<script nonce="[^"]+">/)
         expect(response.body).not_to include('?token=')
       end
     end
@@ -47,6 +48,14 @@ RSpec.describe 'BlackEnvelope launches' do
 
         expect(response).to redirect_to('https://app.nutshell.sbs')
       end
+    end
+  end
+
+  describe 'GET /blackenvelope' do
+    it 'redirects legacy path to /black_envelope' do
+      get '/blackenvelope'
+
+      expect(response).to redirect_to('/black_envelope')
     end
   end
 end

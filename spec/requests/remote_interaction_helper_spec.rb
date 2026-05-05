@@ -4,6 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'Remote Interaction Helper' do
   describe 'GET /remote_interaction_helper' do
+    before { allow(SecureRandom).to receive(:base64).with(16).and_return('ZbA+JmE7+bK8F5qvADZHuQ==') }
+
     it 'returns http success' do
       get remote_interaction_helper_path
 
@@ -28,7 +30,7 @@ RSpec.describe 'Remote Interaction Helper' do
       default-src 'none';
       frame-ancestors 'self';
       form-action 'none';
-      script-src 'self' #{local_domain} 'wasm-unsafe-eval';
+      script-src 'self' #{local_domain} 'wasm-unsafe-eval' 'nonce-ZbA+JmE7+bK8F5qvADZHuQ==';
       connect-src https:
     CSP
   end

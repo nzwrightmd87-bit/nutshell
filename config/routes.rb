@@ -223,6 +223,7 @@ Rails.application.routes.draw do
     get :cancel
     get :checkout
   end
+  get '/blackenvelope', to: redirect('/black_envelope', status: 302)
   get '/black_envelope', to: 'black_envelope_launches#show'
 
   namespace :webhooks do

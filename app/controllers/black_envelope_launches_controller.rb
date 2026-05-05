@@ -31,6 +31,7 @@ class BlackEnvelopeLaunchesController < ApplicationController
 
     handoff_url = ERB::Util.html_escape(raw_handoff_url)
     token = ERB::Util.html_escape(BlackEnvelope::IntegrationTokenService.new.call(current_user))
+    script_nonce = ERB::Util.html_escape(view_context.content_security_policy_nonce.to_s)
 
     <<~HTML
       <!doctype html>
@@ -50,7 +51,7 @@ class BlackEnvelopeLaunchesController < ApplicationController
             </form>
             <p style="margin:0.9rem 0 0;color:#9aa4b2;font-size:0.9rem;">If you are not redirected automatically, use the button above.</p>
           </main>
-          <script>
+          <script nonce="#{script_nonce}">
             (function() {
               var form = document.getElementById('black-envelope-sso-handoff');
               if (form) form.submit();
