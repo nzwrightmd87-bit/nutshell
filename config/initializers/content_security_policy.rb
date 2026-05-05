@@ -7,6 +7,8 @@
 # https://guides.rubyonrails.org/security.html#content-security-policy-header
 
 require_relative '../../app/lib/content_security_policy'
+require_relative '../../app/services/black_envelope/configuration'
+require 'uri'
 
 policy = ContentSecurityPolicy.new
 assets_host = policy.assets_host
@@ -21,11 +23,18 @@ Rails.application.config.content_security_policy do |p|
   p.media_src       :self, :data, *media_hosts
   p.manifest_src    :self, assets_host
 
-  if policy.sso_host.present?
-    p.form_action :self, policy.sso_host
-  else
-    p.form_action :self
+  black_envelope_form_host = begin
+    handoff_url = BlackEnvelope::Configuration.handoff_url
+    parsed = URI.parse(handoff_url.to_s)
+    parsed.is_a?(URI::HTTP) ? parsed.origin : nil
+  rescue URI::InvalidURIError
+    nil
   end
+
+  form_action_hosts = [:self]
+  form_action_hosts << policy.sso_host if policy.sso_host.present?
+  form_action_hosts << black_envelope_form_host if black_envelope_form_host.present?
+  p.form_action(*form_action_hosts)
 
   p.child_src  :self, :blob, assets_host
   p.worker_src :self, :blob, assets_host
