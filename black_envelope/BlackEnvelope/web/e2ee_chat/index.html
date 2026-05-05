@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Nutshell's BlackEnvelope</title>
+  <meta name="theme-color" content="#101016" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Nutshell's BlackEnvelope" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <!-- AUTH -->
+  <section id="authSection" class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <img src="nutshell-logo.svg" alt="Nutshell" class="auth-logo-lockup" />
+        <h1>Nutshell's BlackEnvelope</h1>
+        <div class="tagline">Encrypted messages and groups for paid Nutshell members</div>
+      </div>
+      <div id="authTabs" class="auth-tabs">
+        <button class="auth-tab active" data-auth="login">Login</button>
+        <button class="auth-tab" data-auth="register">Register</button>
+      </div>
+      <div id="authLogin" class="auth-form">
+        <input id="loginUsername" placeholder="Username" autocomplete="username" />
+        <input id="loginPassword" type="password" placeholder="Password" autocomplete="current-password" />
+        <button id="loginBtn" class="primary-btn">Login</button>
+        <div class="auth-divider"><span>or</span></div>
+        <div id="googleSignInBtn" class="google-auth-btn"></div>
+        <div class="auth-links">
+          <a href="#" id="forgotPasswordLink">Forgot password?</a>
+        </div>
+        <div id="billingNotice" class="auth-billing-notice hidden"></div>
+        <button id="billingCheckoutBtn" class="primary-btn hidden">Start Subscription</button>
+        <div class="auth-hint">Your keypair is generated locally in this browser.</div>
+      </div>
+      <div id="authRegister" class="auth-form hidden">
+        <input id="regUsername" placeholder="Username" autocomplete="username" />
+        <input id="regEmail" placeholder="Email" autocomplete="email" required />
+        <input id="regPassword" type="password" placeholder="Password (12+ characters)" autocomplete="new-password" />
+        <input id="regAccessCode" type="password" placeholder="Promo Code (optional)" autocomplete="one-time-code" />
+        <button id="regBtn" class="primary-btn">Create Account</button>
+        <div class="auth-hint">Promo code is optional. Valid free promo codes skip billing; otherwise normal billing applies.</div>
+      </div>
+      <div id="authForgotPassword" class="auth-form hidden">
+        <p class="auth-form-text">Enter your email to receive a password reset link.</p>
+        <input id="forgotEmail" placeholder="Email" autocomplete="email" />
+        <button id="forgotBtn" class="primary-btn">Send Reset Link</button>
+        <a href="#" id="backToLoginFromForgot" class="auth-back-link">Back to login</a>
+      </div>
+      <div id="authResetPassword" class="auth-form hidden">
+        <p class="auth-form-text">Enter your new password.</p>
+        <input id="resetNewPassword" type="password" placeholder="New password (12+ characters)" autocomplete="new-password" />
+        <input id="resetConfirmPassword" type="password" placeholder="Confirm new password" autocomplete="new-password" />
+        <button id="resetBtn" class="primary-btn">Reset Password</button>
+        <a href="#" id="backToLoginFromReset" class="auth-back-link">Back to login</a>
+      </div>
+      <div id="authLinkEmail" class="auth-form hidden">
+        <p class="auth-form-text">Add your email to enable account recovery.</p>
+        <input id="linkEmailInput" placeholder="Email" autocomplete="email" />
+        <button id="linkEmailBtn" class="primary-btn">Save Email</button>
+      </div>
+      <div id="authGoogleUsername" class="auth-form hidden">
+        <p class="auth-form-text">Choose a username to finish Google sign-in.</p>
+        <input id="googleNewUsername" placeholder="Username" autocomplete="username" />
+        <input id="googleNewAccessCode" type="password" placeholder="Promo Code (optional)" autocomplete="one-time-code" />
+        <button id="googleUsernameBtn" class="primary-btn">Continue with Google</button>
+        <a href="#" id="backToLoginFromGoogleUsername" class="auth-back-link">Back to login</a>
+      </div>
+      <div id="authNutshell" class="auth-form hidden">
+        <div class="auth-nutshell-card">
+          <p class="auth-nutshell-eyebrow">Nutshell member access</p>
+          <h2>BlackEnvelope is part of Nutshell</h2>
+          <p id="authNutshellMessage" class="auth-form-text">
+            Sign in through Nutshell first. Paid Nutshell members are brought into Nutshell's BlackEnvelope automatically for private messages and groups.
+          </p>
+          <a id="authNutshellLaunch" class="primary-btn auth-nutshell-launch" href="http://127.0.0.1:3000/black_envelope">Continue from Nutshell</a>
+          <a id="authNutshellHome" class="auth-back-link" href="http://127.0.0.1:3000/">Go to Nutshell</a>
+        </div>
+      </div>
+      <button id="authHelpBtn" class="auth-help-link">Need help?</button>
+    </div>
+    <div id="paymentVerifyOverlay" class="payment-verify-overlay hidden">
+      <div class="payment-verify-card">
+        <div id="paymentVerifySpinner" class="payment-verify-spinner"></div>
+        <div id="paymentVerifyMsg" class="payment-verify-msg">Verifying your payment...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section id="appSection" class="hidden">
+    <div class="app-layout">
+
+      <!-- SIDEBAR -->
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-brand">
+          <img src="nutshell-logo.svg" alt="Nutshell" class="sidebar-brand-lockup" />
+        </div>
+        <div class="sidebar-header">
+          <button id="hamburgerBtn" class="hamburger-btn" title="Settings">&#9776;</button>
+          <div class="search-bar">
+            <input id="searchInput" placeholder="Search..." autocomplete="off" />
+          </div>
+          <div class="notification-badge">
+            <button id="notificationBtn" class="hamburger-btn" title="Notifications">&#128276;</button>
+            <span id="notificationCount" class="badge-count hidden">0</span>
+            <div id="notificationDropdown" class="notification-dropdown hidden">
+              <div class="notification-dropdown-header">
+                <span>Notifications</span>
+                <button id="markAllReadBtn" class="ghost notification-mark-read">Mark all read</button>
+              </div>
+              <div id="notificationDropdownList" class="notification-dropdown-list"></div>
+            </div>
+          </div>
+        </div>
+        <div id="conversationList" class="conversation-list"></div>
+        <div id="searchResults" class="search-results hidden"></div>
+
+        <!-- FAB -->
+        <button id="fabBtn" class="fab" title="New">+</button>
+        <div id="fabMenu" class="fab-menu">
+          <button class="fab-menu-item" data-action="new-chat">
+            <span class="fab-menu-icon">&#128172;</span> New Chat
+          </button>
+          <button class="fab-menu-item" data-action="new-group">
+            <span class="fab-menu-icon">&#128101;</span> New Group
+          </button>
+        </div>
+      </div>
+
+      <!-- CHAT PANEL -->
+      <div id="chatPanel" class="chat-panel">
+        <!-- Empty State -->
+        <div id="chatEmpty" class="chat-empty">
+          <div class="empty-icon">&#128274;</div>
+          <div class="empty-text">Select a conversation to start messaging with end-to-end encryption</div>
+        </div>
+
+        <!-- Active Chat -->
+        <div id="chatActive" class="hidden" style="display:none;flex-direction:column;height:100%;">
+          <div class="chat-header">
+            <button id="backBtn" class="back-btn">&#8592;</button>
+            <div id="chatAvatar" class="avatar sm"></div>
+            <div class="chat-header-info">
+              <div id="chatName" class="chat-header-name"></div>
+              <div id="chatStatus" class="chat-header-status"></div>
+            </div>
+            <div class="chat-header-actions">
+              <button id="chatInfoBtn" class="header-action-btn hidden" title="Group Info">&#9432;</button>
+            </div>
+          </div>
+
+          <!-- Group Topics Bar -->
+          <div id="topicsBar" class="topics-bar hidden"></div>
+
+          <!-- View Toggle Bar -->
+          <div id="viewToggleBar" class="view-toggle-bar hidden">
+            <button class="view-toggle-btn active" data-view="all">All</button>
+            <button class="view-toggle-btn" data-view="relevant">Most Relevant</button>
+            <button class="view-toggle-btn" data-view="mentions">My Tags</button>
+          </div>
+
+          <!-- Messages -->
+          <div id="messagesArea" class="messages-area"></div>
+
+          <!-- Compose -->
+          <div id="voiceRecordingBar" class="voice-recording-bar hidden">
+            <button id="voiceCancelBtn" class="ghost voice-cancel-btn" title="Cancel">&#10005;</button>
+            <div class="voice-recording-indicator">
+              <span class="voice-pulse"></span>
+              <span id="voiceTimer" class="voice-timer">0:00</span>
+            </div>
+            <button id="voiceSendBtn" class="send-btn voice-send-btn" title="Send voice message">&#10148;</button>
+          </div>
+          <div class="compose-bar">
+            <button id="attachBtn" class="attach-btn" title="Attach media">&#128206;</button>
+            <button id="micBtn" class="mic-btn" title="Voice message">&#127908;</button>
+            <div class="composer-wrap">
+              <div id="composerOverlay" class="composer-overlay" aria-hidden="true">
+                <div id="composerOverlayInner" class="composer-overlay-inner"></div>
+              </div>
+              <textarea id="composer" placeholder="Message" rows="1"></textarea>
+              <div id="mentionSuggestions" class="mention-suggestions hidden"></div>
+            </div>
+            <button id="sendBtn" class="send-btn" title="Send">&#10148;</button>
+          </div>
+          <div id="attachmentPreview" class="attachment-preview hidden">
+            <span id="attachmentName"></span>
+            <button id="attachmentClearBtn" class="ghost" title="Remove attachment">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADMIN USERS PAGE -->
+    <section id="adminUsersPage" class="admin-users-page hidden" aria-label="Admin users">
+      <div class="admin-users-page-header">
+        <button id="adminUsersPageBackBtn" class="admin-users-page-back" type="button">&#8592; Back</button>
+        <h2 class="admin-users-page-title">Admin: Users</h2>
+      </div>
+      <div id="adminUsersPageBody" class="admin-users-page-body"></div>
+    </section>
+
+    <!-- SETTINGS PANEL -->
+    <div id="settingsOverlay" class="settings-overlay"></div>
+    <div id="settingsPanel" class="settings-panel">
+      <div id="settingsProfile" class="settings-profile" style="cursor:pointer" title="View Profile">
+        <div class="settings-avatar-wrap">
+          <div id="settingsAvatar" class="avatar lg"></div>
+        </div>
+        <div id="settingsName" class="profile-name"></div>
+        <div id="settingsDisplayName" class="profile-detail"></div>
+        <div id="settingsKeyStatus" class="profile-detail"></div>
+      </div>
+      <div class="settings-menu">
+        <!-- General -->
+        <div class="settings-section-label">General</div>
+        <button id="notifSoundToggle" class="settings-item">
+          <span class="settings-icon">&#128264;</span> Notification Sound
+          <span id="notifSoundStatus" class="settings-toggle-status">On</span>
+        </button>
+        <button id="refreshAllBtn" class="settings-item">
+          <span class="settings-icon">&#128260;</span> Refresh All
+        </button>
+        <button id="friendsBtn" class="settings-item">
+          <span class="settings-icon">&#128101;</span> Friends
+        </button>
+        <button id="docsBtn" class="settings-item">
+          <span class="settings-icon">&#128214;</span> Docs
+        </button>
+
+        <div class="settings-divider"></div>
+
+        <!-- Subscription -->
+        <div id="subscriptionSettingsSection" class="hidden">
+          <div class="settings-section-label">Subscription</div>
+          <button id="subscriptionBtn" class="settings-item">
+            <span class="settings-icon">&#128179;</span> Manage Subscription
+            <span id="subscriptionStatusShort" class="settings-detail-right"></span>
+          </button>
+          <div class="settings-divider"></div>
+        </div>
+
+        <!-- Data Storage -->
+        <div class="settings-section-label">Data Storage</div>
+        <button id="storageBtn" class="settings-item">
+          <span class="settings-icon">&#128202;</span> Storage Usage
+          <span id="storageUsageBrief" class="settings-detail-right"></span>
+        </button>
+
+        <div class="settings-divider"></div>
+
+        <div class="settings-divider"></div>
+        <div id="adminSettingsSection" class="hidden">
+          <div class="settings-section-label">Admin</div>
+          <button id="adminUsersBtn" class="settings-item">
+            <span class="settings-icon">&#128101;</span> Manage Users
+          </button>
+          <button id="adminExportCsvBtn" class="settings-item">
+            <span class="settings-icon">&#128229;</span> Export Users CSV
+          </button>
+          <button id="adminAccessCodeBtn" class="settings-item">
+            <span class="settings-icon">&#128273;</span> Promo Codes
+          </button>
+          <div class="settings-divider"></div>
+        </div>
+        <div class="settings-section-label">Danger Zone</div>
+        <button id="deleteAccountBtn" class="settings-item danger">
+          <span class="settings-icon">&#128465;</span> Delete Account
+        </button>
+        <button id="logoutBtn" class="settings-item danger">
+          <span class="settings-icon">&#9211;</span> Logout
+        </button>
+      </div>
+      <div style="padding: 12px 20px; margin-top: auto;">
+        <div id="wsLabel" style="font-size: 12px; color: var(--muted);">WS: disconnected</div>
+        <div id="keyLabel" style="font-size: 12px; color: var(--muted);">Key: unknown</div>
+        <div id="keyIdLabel" style="font-size: 12px; color: var(--muted);">Key ID: n/a</div>
+      </div>
+    </div>
+    <input id="importKeyFile" type="file" accept=".json,application/json" class="hidden" />
+    <input id="mediaInput" type="file" accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt,.zip,.csv" class="hidden" />
+    <input id="avatarInput" type="file" accept="image/*" class="hidden" />
+
+    <!-- TOAST CONTAINER -->
+    <div id="toastContainer" class="toast-container"></div>
+  </section>
+
+  <!-- MODAL (outside appSection so it works on login screen too) -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button id="modalClose" class="modal-close">&times;</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

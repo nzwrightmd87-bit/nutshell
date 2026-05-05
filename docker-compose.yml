@@ -106,7 +106,7 @@ services:
 
   black-envelope:
     build:
-      context: ../black_envelope/BlackEnvelope
+      context: ./black_envelope/BlackEnvelope
       dockerfile: deployment/e2ee_chat/Dockerfile
     restart: always
     environment:

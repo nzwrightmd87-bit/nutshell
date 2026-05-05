@@ -29,6 +29,7 @@
 stats.html
 .env
 .env.production
+secrets/
 node_modules/
 /build/
 
@@ -38,6 +39,11 @@ node_modules/
 # Ignore IDE files
 .vscode/
 .idea/
+.agent/
+.agents/
+.claude/
+.trae/
+skills-lock.json
 
 # Ignore postgres + redis + elasticsearch volume optionally created by docker-compose
 /postgres

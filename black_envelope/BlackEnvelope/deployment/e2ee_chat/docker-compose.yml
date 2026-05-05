@@ -1,0 +1,66 @@
+services:
+  black-envelope:
+    container_name: black-envelope
+    build:
+      context: ../..
+      dockerfile: deployment/e2ee_chat/Dockerfile
+    restart: unless-stopped
+    environment:
+      CYPHER_CHAT_DB: /data/chat.db
+      CYPHER_CHAT_WEB_DIR: /app/web/e2ee_chat
+      CYPHER_CHAT_DIRECT_PAYLOAD_MAX_BYTES: ${CYPHER_CHAT_DIRECT_PAYLOAD_MAX_BYTES:-40000000}
+      CYPHER_CHAT_GROUP_PAYLOAD_MAX_BYTES: ${CYPHER_CHAT_GROUP_PAYLOAD_MAX_BYTES:-150000000}
+      CYPHER_CHAT_STORAGE_LIMIT_BYTES: ${CYPHER_CHAT_STORAGE_LIMIT_BYTES:-524288000}
+      CYPHER_CHAT_STORAGE_WARN_BYTES: ${CYPHER_CHAT_STORAGE_WARN_BYTES:-471859200}
+      CYPHER_CHAT_TOKEN_SECRET: ${CYPHER_CHAT_TOKEN_SECRET}
+      CYPHER_CHAT_NUTSHELL_SSO_SECRET: ${CYPHER_CHAT_NUTSHELL_SSO_SECRET:-}
+      CYPHER_CHAT_NUTSHELL_SSO_TTL_SECONDS: ${CYPHER_CHAT_NUTSHELL_SSO_TTL_SECONDS:-300}
+      CYPHER_CHAT_NUTSHELL_PUBLIC_URL: ${CYPHER_CHAT_NUTSHELL_PUBLIC_URL:-}
+      CYPHER_CHAT_ADMIN_USERNAME: ${CYPHER_CHAT_ADMIN_USERNAME:-}
+      CYPHER_CHAT_REGISTRATION_CODE: ${CYPHER_CHAT_REGISTRATION_CODE:-}
+      SQUARE_ENV: ${SQUARE_ENV:-production}
+      SQUARE_ACCESS_TOKEN: ${SQUARE_ACCESS_TOKEN:-}
+      SQUARE_LOCATION_ID: ${SQUARE_LOCATION_ID:-}
+      SQUARE_PLAN_VARIATION_ID: ${SQUARE_PLAN_VARIATION_ID:-}
+      SQUARE_WEBHOOK_SIGNATURE_KEY: ${SQUARE_WEBHOOK_SIGNATURE_KEY:-}
+      SQUARE_WEBHOOK_NOTIFICATION_URL: ${SQUARE_WEBHOOK_NOTIFICATION_URL:-}
+      SQUARE_CHECKOUT_REDIRECT_URL: ${SQUARE_CHECKOUT_REDIRECT_URL:-}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-}
+      APP_BASE_URL: ${APP_BASE_URL:-}
+      PASSWORD_RESET_TTL_SECONDS: ${PASSWORD_RESET_TTL_SECONDS:-3600}
+      VAPID_PRIVATE_KEY: ${VAPID_PRIVATE_KEY:-}
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:-}
+      VAPID_SUBJECT: ${VAPID_SUBJECT:-mailto:admin@example.com}
+    volumes:
+      - black_envelope_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/health').read()\""]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  black-envelope-caddy:
+    container_name: black-envelope-caddy
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    depends_on:
+      black-envelope:
+        condition: service_started
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      CYPHER_CHAT_HOST: ${CYPHER_CHAT_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - black_envelope_caddy_data:/data
+      - black_envelope_caddy_config:/config
+
+volumes:
+  black_envelope_data:
+  black_envelope_caddy_data:
+  black_envelope_caddy_config:

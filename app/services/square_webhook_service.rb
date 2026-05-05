@@ -89,7 +89,7 @@ class SquareWebhookService
 
     membership.save!
 
-    Rails.logger.info("[paid-memberships] Subscription created: #{subscription_id} (#{plan}, #{membership.status}) — access code: #{membership.access_code}")
+    Rails.logger.info("[paid-memberships] Subscription created: #{subscription_id} (#{plan}, #{membership.status})")
   end
 
   def handle_subscription_updated

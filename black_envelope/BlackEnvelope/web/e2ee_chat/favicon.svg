@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Simple envelope mark for browser tabs (works well at small sizes). -->
+  <g fill="none" stroke="#3b3f45" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="96" y="176" width="320" height="224" rx="28" />
+    <path d="M96 208L256 320L416 208" />
+  </g>
+</svg>
+
