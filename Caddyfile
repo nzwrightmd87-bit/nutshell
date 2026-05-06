@@ -25,7 +25,7 @@ nutshell.sbs {
   # Media uploads - allow larger bodies
   handle /api/v1/media* {
     request_body {
-      max_size 200MB
+      max_size 104MB
     }
     reverse_proxy web:3000 {
       header_up -Forwarded
@@ -34,7 +34,7 @@ nutshell.sbs {
 
   handle /api/v2/media* {
     request_body {
-      max_size 200MB
+      max_size 104MB
     }
     reverse_proxy web:3000 {
       header_up -Forwarded

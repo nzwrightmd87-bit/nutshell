@@ -285,6 +285,109 @@ RSpec.describe MediaAttachment, :attachment_processing do
     end
   end
 
+  describe '#compress_oversized_video' do
+    subject(:compress) { media.send(:compress_oversized_video) }
+
+    let(:media) { described_class.new }
+    let(:original_size) { 3.kilobytes }
+    let(:compressed_size) { 512 }
+    let(:movie_valid) { true }
+    let(:movie_duration) { 10.0 }
+    let(:queued_file) { double('queued file', path: original_video.path) }
+    let(:file) { double('file', queued_for_write: { original: queued_file }) }
+    let(:movie) { double('movie', valid?: movie_valid, duration: movie_duration) }
+    let(:original_video) do
+      Tempfile.new(['oversized-video', '.mp4']).tap do |tempfile|
+        tempfile.binmode
+        tempfile.write('0' * original_size)
+        tempfile.flush
+      end
+    end
+
+    before do
+      stub_const 'MediaAttachment::VIDEO_LIMIT', 1.kilobyte
+      stub_const 'MediaAttachment::VIDEO_UPLOAD_LIMIT', 4.kilobytes
+      allow(media).to receive_messages(video?: true, file: file)
+      allow(media).to receive(:ffmpeg_data).with(original_video.path).and_return(movie)
+      allow(media).to receive(:run_ffmpeg_compression) do |_original_path, compressed_path, _bitrate|
+        File.binwrite(compressed_path, '1' * compressed_size)
+        true
+      end
+    end
+
+    after do
+      original_video.close!
+    end
+
+    context 'when compression produces a file under the final video limit' do
+      it 'replaces the upload and leaves the attachment valid' do
+        compress
+
+        expect(File.size(original_video.path)).to eq compressed_size
+        expect(media.errors[:file]).to be_blank
+      end
+    end
+
+    context 'when compression output is still over the final video limit' do
+      let(:compressed_size) { 2.kilobytes }
+
+      it 'rejects the upload instead of accepting the smaller oversized file' do
+        compress
+
+        expect(File.size(original_video.path)).to eq original_size
+        expect(media.errors[:file]).to be_present
+      end
+    end
+
+    context 'when ffmpeg does not produce an acceptable output' do
+      before do
+        allow(media).to receive(:run_ffmpeg_compression).and_return(false)
+      end
+
+      it 'rejects the upload' do
+        compress
+
+        expect(media.errors[:file]).to be_present
+      end
+    end
+
+    context 'when ffmpeg metadata cannot be read' do
+      let(:movie_valid) { false }
+
+      it 'rejects the upload without attempting compression' do
+        expect(media).to_not receive(:run_ffmpeg_compression)
+
+        compress
+
+        expect(media.errors[:file]).to be_present
+      end
+    end
+
+    context 'when video duration is invalid' do
+      let(:movie_duration) { 0 }
+
+      it 'rejects the upload without attempting compression' do
+        expect(media).to_not receive(:run_ffmpeg_compression)
+
+        compress
+
+        expect(media.errors[:file]).to be_present
+      end
+    end
+
+    context 'when the raw upload exceeds the staging cap' do
+      let(:original_size) { 5.kilobytes }
+
+      it 'rejects the upload before invoking ffmpeg' do
+        expect(media).to_not receive(:run_ffmpeg_compression)
+
+        compress
+
+        expect(media.errors[:file]).to be_present
+      end
+    end
+  end
+
   describe 'cache deletion hooks' do
     let(:media) { Fabricate(:media_attachment) }
 
