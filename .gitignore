@@ -28,6 +28,7 @@
 /public/packs-test
 stats.html
 .env
+.env.development
 .env.production
 secrets/
 DEPLOYMENT.md
