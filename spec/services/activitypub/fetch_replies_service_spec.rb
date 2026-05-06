@@ -143,6 +143,35 @@ RSpec.describe ActivityPub::FetchRepliesService do
           expect(FetchReplyWorker).to have_received(:push_bulk).with(['http://example.com/self-reply-1', 'http://example.com/self-reply-2', 'http://example.com/self-reply-3', 'http://example.com/self-reply-4', 'http://example.com/self-reply-5'])
         end
       end
+
+      context 'when synchronous requests are not allowed and first is a URL' do
+        let(:payload) do
+          {
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            type: 'Collection',
+            id: collection_uri,
+            first: "#{collection_uri}/page1",
+          }.with_indifferent_access
+        end
+
+        before do
+          stub_request(:get, "#{collection_uri}/page1").to_return(status: 200, body: Oj.dump({
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            type: 'CollectionPage',
+            id: "#{collection_uri}/page1",
+            items: items,
+          }), headers: { 'Content-Type': 'application/activity+json' })
+        end
+
+        it 'does not fetch the linked first page' do
+          allow(FetchReplyWorker).to receive(:push_bulk)
+
+          subject.call(status.account.uri, payload, allow_synchronous_requests: false)
+
+          expect(a_request(:get, "#{collection_uri}/page1")).to_not have_been_made
+          expect(FetchReplyWorker).to_not have_received(:push_bulk)
+        end
+      end
     end
   end
 end

@@ -8,7 +8,7 @@ class ActivityPub::FetchFeaturedCollectionService < BaseService
 
     @account = account
     @options = options
-    @json    = fetch_collection_page(options[:collection].presence || @account.featured_collection_url)
+    @json    = fetch_collection_page(options[:collection].presence || @account.featured_collection_url, reference_uri: @account.uri, on_behalf_of: local_follower)
     return if @json.blank?
 
     @items, = collection_items(@json, max_pages: 1, reference_uri: @account.uri, on_behalf_of: local_follower)

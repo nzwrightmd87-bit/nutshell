@@ -107,6 +107,21 @@ RSpec.describe ActivityPub::FetchFeaturedCollectionService do
         it_behaves_like 'sets pinned posts'
       end
 
+      context 'when the collection URL is on another host' do
+        let(:collection_or_uri) { 'https://evil.example/account/pinned' }
+
+        before do
+          stub_request(:get, collection_or_uri).to_return(status: 200, body: Oj.dump(payload), headers: { 'Content-Type': 'application/activity+json' })
+        end
+
+        it 'does not fetch the off-host collection URL' do
+          subject
+
+          expect(a_request(:get, collection_or_uri)).to_not have_been_made
+          expect(actor.pinned_statuses).to be_empty
+        end
+      end
+
       context 'when the collection is inlined' do
         let(:collection_or_uri) do
           {
@@ -126,6 +141,20 @@ RSpec.describe ActivityPub::FetchFeaturedCollectionService do
       end
 
       it_behaves_like 'sets pinned posts'
+    end
+
+    context 'when the stored endpoint is on another host' do
+      before do
+        actor.update!(featured_collection_url: 'https://evil.example/account/pinned')
+        stub_request(:get, actor.featured_collection_url).to_return(status: 200, body: Oj.dump(payload), headers: { 'Content-Type': 'application/activity+json' })
+      end
+
+      it 'does not fetch the off-host stored collection URL' do
+        subject
+
+        expect(a_request(:get, actor.featured_collection_url)).to_not have_been_made
+        expect(actor.pinned_statuses).to be_empty
+      end
     end
 
     context 'when the endpoint is an OrderedCollection' do

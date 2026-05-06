@@ -132,6 +132,48 @@ RSpec.describe ActivityPub::SynchronizeFollowersService do
       it_behaves_like 'synchronizes followers'
     end
 
+    context 'when a paginated Collection points next to another host' do
+      before do
+        stub_request(:get, collection_uri)
+          .to_return(status: 200, headers: { 'Content-Type': 'application/activity+json' }, body: Oj.dump({
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            type: 'Collection',
+            id: collection_uri,
+            first: "#{collection_uri}/1",
+          }))
+
+        stub_request(:get, "#{collection_uri}/1")
+          .to_return(status: 200, headers: { 'Content-Type': 'application/activity+json' }, body: Oj.dump({
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            type: 'CollectionPage',
+            id: "#{collection_uri}/1",
+            partOf: collection_uri,
+            next: 'https://evil.example/partial-followers/2',
+            items: [mallory].map { |account| ActivityPub::TagManager.instance.uri_for(account) },
+          }))
+
+        stub_request(:get, 'https://evil.example/partial-followers/2')
+          .to_return(status: 200, headers: { 'Content-Type': 'application/activity+json' }, body: Oj.dump({
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            type: 'CollectionPage',
+            id: 'https://evil.example/partial-followers/2',
+            items: [alice, eve].map { |account| ActivityPub::TagManager.instance.uri_for(account) },
+          }))
+      end
+
+      it 'does not fetch the off-host next page or remove followers' do
+        previous_follower_ids = actor.followers.pluck(:id)
+
+        subject.call(actor, collection_uri)
+
+        expect(a_request(:get, 'https://evil.example/partial-followers/2')).to_not have_been_made
+        expect(previous_follower_ids - actor.followers.reload.pluck(:id))
+          .to be_empty
+        expect(mallory)
+          .to be_following(actor)
+      end
+    end
+
     context 'when the endpoint is a paginated Collection of actor URIs split across, but one page errors out' do
       before do
         stub_request(:get, 'https://example.com/partial-followers')

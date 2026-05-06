@@ -243,15 +243,17 @@ module JsonLdHelper
   #   If not nil, a URI to compare to the collection URI.
   #   If the host of the collection URI does not match the reference URI,
   #   do not fetch the collection page.
+  # @param allow_synchronous_requests [Boolean]
+  #   If false, do not fetch string collection/page URIs; only use prefetched Hash pages.
   # @param on_behalf_of [Account, nil]
   #   Sign the request on behalf of the Account, if not nil
   # @return [Array<Array<Hash>, Integer>, nil]
   #   The collection items and the number of pages fetched
-  def collection_items(collection_or_uri, max_pages: 1, max_items: nil, reference_uri: nil, on_behalf_of: nil)
-    collection = fetch_collection_page(collection_or_uri, reference_uri: reference_uri, on_behalf_of: on_behalf_of)
+  def collection_items(collection_or_uri, max_pages: 1, max_items: nil, reference_uri: nil, allow_synchronous_requests: true, on_behalf_of: nil)
+    collection = fetch_collection_page(collection_or_uri, reference_uri: reference_uri, allow_synchronous_requests: allow_synchronous_requests, on_behalf_of: on_behalf_of)
     return unless collection.is_a?(Hash)
 
-    collection = fetch_collection_page(collection['first'], reference_uri: reference_uri, on_behalf_of: on_behalf_of) if collection['first'].present?
+    collection = fetch_collection_page(collection['first'], reference_uri: reference_uri, allow_synchronous_requests: allow_synchronous_requests, on_behalf_of: on_behalf_of) if collection['first'].present?
     return unless collection.is_a?(Hash)
 
     items = []
@@ -262,7 +264,7 @@ module JsonLdHelper
       break if !max_items.nil? && items.size >= max_items
       break if !max_pages.nil? && n_pages >= max_pages
 
-      collection = collection['next'].present? ? fetch_collection_page(collection['next'], reference_uri: reference_uri, on_behalf_of: on_behalf_of) : nil
+      collection = collection['next'].present? ? fetch_collection_page(collection['next'], reference_uri: reference_uri, allow_synchronous_requests: allow_synchronous_requests, on_behalf_of: on_behalf_of) : nil
       n_pages += 1
     end
 
@@ -286,11 +288,14 @@ module JsonLdHelper
   #   If not nil, a URI to compare to the collection URI.
   #   If the host of the collection URI does not match the reference URI,
   #   do not fetch the collection page.
+  # @param allow_synchronous_requests [Boolean]
+  #   If false, do not fetch string collection/page URIs; only return prefetched Hash pages.
   # @param on_behalf_of [Account, nil]
   #   Sign the request on behalf of the Account, if not nil
   # @return [Hash, nil]
-  def fetch_collection_page(collection_or_uri, reference_uri: nil, on_behalf_of: nil)
+  def fetch_collection_page(collection_or_uri, reference_uri: nil, allow_synchronous_requests: true, on_behalf_of: nil)
     return collection_or_uri if collection_or_uri.is_a?(Hash)
+    return if collection_or_uri.blank? || !allow_synchronous_requests
     return if !reference_uri.nil? && non_matching_uri_hosts?(reference_uri, collection_or_uri)
 
     fetch_resource_without_id_validation(collection_or_uri, on_behalf_of, raise_on_error: :temporary)
