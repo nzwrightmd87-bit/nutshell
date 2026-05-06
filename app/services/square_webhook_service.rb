@@ -55,23 +55,12 @@ class SquareWebhookService
     validate_replay_protection!
 
     SquareWebhookEvent.transaction do
-      record_event!
-
-      case event_type
-      when 'subscription.created'
-        handle_subscription_created
-      when 'subscription.updated'
-        handle_subscription_updated
-      when 'invoice.payment_made'
-        handle_invoice_payment_made
-      when 'invoice.scheduled_charge_failed'
-        handle_invoice_charge_failed
+      if record_event!
+        dispatch_event!
       else
-        Rails.logger.info("[paid-memberships] Ignoring Square event: #{event_type}")
+        Rails.logger.info("[paid-memberships] Ignoring duplicate Square event: #{event_id}")
       end
     end
-  rescue ActiveRecord::RecordNotUnique
-    Rails.logger.info("[paid-memberships] Ignoring duplicate Square event: #{event_id}")
   end
 
   private
@@ -85,12 +74,38 @@ class SquareWebhookService
   end
 
   def record_event!
-    SquareWebhookEvent.create!(
-      event_id: event_id,
-      event_type: event_type,
-      event_created_at: event_created_at,
-      processed_at: Time.current
+    now = Time.current
+    result = SquareWebhookEvent.insert_all(
+      [
+        {
+          event_id: event_id,
+          event_type: event_type,
+          event_created_at: event_created_at,
+          processed_at: now,
+          created_at: now,
+          updated_at: now,
+        },
+      ],
+      unique_by: :index_square_webhook_events_on_event_id,
+      returning: %w[id]
     )
+
+    result.rows.any?
+  end
+
+  def dispatch_event!
+    case event_type
+    when 'subscription.created'
+      handle_subscription_created
+    when 'subscription.updated'
+      handle_subscription_updated
+    when 'invoice.payment_made'
+      handle_invoice_payment_made
+    when 'invoice.scheduled_charge_failed'
+      handle_invoice_charge_failed
+    else
+      Rails.logger.info("[paid-memberships] Ignoring Square event: #{event_type}")
+    end
   end
 
   def subscription_data
