@@ -39,8 +39,12 @@ class PostStatusService < BaseService
     @text        = @options[:text] || ''
     @in_reply_to = @options[:thread]
     @quoted_status = @options[:quoted_status]
+    @status = nil
+    @scheduled_at = nil
+    @idempotency_duplicate = nil
+    assign_scheduled_at! if idempotency_given?
 
-    with_idempotency do
+    @status = with_idempotency do
       validate_media!
       preprocess_attributes!
 
@@ -49,7 +53,11 @@ class PostStatusService < BaseService
       else
         process_status!
       end
+
+      @status
     end
+
+    return @status if @idempotency_duplicate.present?
 
     unless scheduled?
       postprocess_status!
@@ -69,10 +77,7 @@ class PostStatusService < BaseService
     @visibility   = @options[:visibility] || @account.user&.setting_default_privacy
     @visibility   = :unlisted if @visibility&.to_sym == :public && @account.silenced?
     @visibility   = :private if @quoted_status&.private_visibility? && %i(public unlisted).include?(@visibility&.to_sym)
-    @scheduled_at = @options[:scheduled_at]&.to_datetime
-    @scheduled_at = nil if scheduled_in_the_past?
-  rescue ArgumentError
-    raise ActiveRecord::RecordInvalid
+    assign_scheduled_at!
   end
 
   def process_status!
@@ -187,6 +192,13 @@ class PostStatusService < BaseService
     @scheduled_at.present?
   end
 
+  def assign_scheduled_at!
+    @scheduled_at = @options[:scheduled_at]&.to_datetime
+    @scheduled_at = nil if scheduled_in_the_past?
+  rescue ArgumentError
+    raise ActiveRecord::RecordInvalid
+  end
+
   def idempotency_key
     "idempotency:status:#{@account.id}:#{@options[:idempotency]}"
   end
@@ -213,9 +225,10 @@ class PostStatusService < BaseService
     with_redis_lock("idempotency:lock:status:#{@account.id}:#{@options[:idempotency]}") do
       return idempotency_duplicate if idempotency_duplicate?
 
-      yield
+      status = yield
 
       redis.setex(idempotency_key, 3_600, @status.id)
+      status
     end
   end
 
