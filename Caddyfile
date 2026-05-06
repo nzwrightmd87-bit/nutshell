@@ -17,7 +17,9 @@ nutshell.sbs {
 
   # Streaming API (WebSocket)
   handle /api/v1/streaming* {
-    reverse_proxy streaming:4000
+    reverse_proxy streaming:4000 {
+      header_up -Forwarded
+    }
   }
 
   # Media uploads - allow larger bodies
@@ -25,19 +27,25 @@ nutshell.sbs {
     request_body {
       max_size 200MB
     }
-    reverse_proxy web:3000
+    reverse_proxy web:3000 {
+      header_up -Forwarded
+    }
   }
 
   handle /api/v2/media* {
     request_body {
       max_size 200MB
     }
-    reverse_proxy web:3000
+    reverse_proxy web:3000 {
+      header_up -Forwarded
+    }
   }
 
   # Everything else goes to Rails
   handle {
-    reverse_proxy web:3000
+    reverse_proxy web:3000 {
+      header_up -Forwarded
+    }
   }
 }
 
@@ -50,5 +58,7 @@ app.nutshell.sbs {
     Referrer-Policy "strict-origin-when-cross-origin"
   }
 
-  reverse_proxy black-envelope:8787
+  reverse_proxy black-envelope:8787 {
+    header_up -Forwarded
+  }
 }
