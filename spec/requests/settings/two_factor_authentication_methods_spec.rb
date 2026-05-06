@@ -31,5 +31,27 @@ RSpec.describe 'Settings TwoFactorAuthenticationMethods' do
         end
       end
     end
+
+    describe 'POST to /settings/two_factor_authentication_methods/disable' do
+      around do |example|
+        previous_requirement = UserRole.everyone.require_2fa?
+        example.run
+      ensure
+        UserRole.everyone.update!(require_2fa: previous_requirement)
+      end
+
+      before do
+        UserRole.everyone.update!(require_2fa: true)
+        user.update!(role: Fabricate(:user_role, require_2fa: false), otp_required_for_login: true)
+      end
+
+      it 'does not disable 2FA when the everyone role requires it' do
+        expect { post disable_settings_two_factor_authentication_methods_path }
+          .to_not change { user.reload.otp_required_for_login }.from(true)
+
+        expect(response)
+          .to redirect_to(settings_two_factor_authentication_methods_path)
+      end
+    end
   end
 end

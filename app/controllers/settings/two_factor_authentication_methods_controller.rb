@@ -7,6 +7,7 @@ module Settings
     skip_before_action :check_self_destruct!
     skip_before_action :require_functional!
 
+    before_action :redirect_if_2fa_required, only: :disable
     before_action :require_challenge!, only: :disable
     before_action :require_otp_enabled
 
@@ -23,6 +24,10 @@ module Settings
 
     def require_otp_enabled
       redirect_to settings_otp_authentication_path(params.permit(:oauth)) unless current_user.otp_enabled?
+    end
+
+    def redirect_if_2fa_required
+      redirect_to settings_two_factor_authentication_methods_path if current_user.role_requires_2fa?
     end
   end
 end
