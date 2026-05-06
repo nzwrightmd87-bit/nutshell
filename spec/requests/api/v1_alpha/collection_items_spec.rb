@@ -20,6 +20,10 @@ RSpec.describe 'Api::V1Alpha::CollectionItems', feature: :collections do
         let(:other_account) { Fabricate(:account) }
         let(:params) { { account_id: other_account.id } }
 
+        before do
+          user.account.follow!(other_account)
+        end
+
         it 'creates a collection item and returns http success' do
           expect do
             subject
@@ -27,6 +31,19 @@ RSpec.describe 'Api::V1Alpha::CollectionItems', feature: :collections do
 
           expect(response).to have_http_status(200)
           expect(response.parsed_body).to have_key('collection_item')
+        end
+      end
+
+      context 'when the user does not follow the account' do
+        let(:other_account) { Fabricate(:account) }
+        let(:params) { { account_id: other_account.id } }
+
+        it 'returns http forbidden' do
+          expect do
+            subject
+          end.to_not change(collection.collection_items, :count)
+
+          expect(response).to have_http_status(403)
         end
       end
 

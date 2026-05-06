@@ -159,8 +159,22 @@ RSpec.describe AccountPolicy do
 
   permissions :feature? do
     context 'when account is featureable?' do
-      it 'permits' do
+      before { alice.follow!(john) }
+
+      it 'permits followed accounts' do
         expect(subject).to permit(alice, john)
+      end
+    end
+
+    context 'when account is not followed' do
+      it 'denies' do
+        expect(subject).to_not permit(alice, john)
+      end
+    end
+
+    context 'when account is itself' do
+      it 'permits' do
+        expect(subject).to permit(alice, alice)
       end
     end
 
@@ -173,7 +187,10 @@ RSpec.describe AccountPolicy do
     end
 
     context 'when account is blocked' do
-      before { alice.block!(john) }
+      before do
+        alice.follow!(john)
+        alice.block!(john)
+      end
 
       it 'denies' do
         expect(subject).to_not permit(alice, john)
@@ -181,7 +198,10 @@ RSpec.describe AccountPolicy do
     end
 
     context 'when account is blocking' do
-      before { john.block!(alice) }
+      before do
+        alice.follow!(john)
+        john.block!(alice)
+      end
 
       it 'denies' do
         expect(subject).to_not permit(alice, john)

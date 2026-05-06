@@ -204,6 +204,36 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
 
         expect(response).to have_http_status(200)
       end
+
+      context 'with followed account ids' do
+        let(:target_account) { Fabricate(:account) }
+        let(:params) { super().merge(account_ids: [target_account.id]) }
+
+        before do
+          user.account.follow!(target_account)
+        end
+
+        it 'creates collection items' do
+          expect do
+            subject
+          end.to change(CollectionItem, :count).by(1)
+
+          expect(response).to have_http_status(200)
+        end
+      end
+
+      context 'with account ids the user does not follow' do
+        let(:target_account) { Fabricate(:account) }
+        let(:params) { super().merge(account_ids: [target_account.id]) }
+
+        it 'returns http forbidden' do
+          expect do
+            subject
+          end.to_not change(Collection, :count)
+
+          expect(response).to have_http_status(403)
+        end
+      end
     end
 
     context 'with invalid params' do

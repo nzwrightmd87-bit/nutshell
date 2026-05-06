@@ -44,6 +44,10 @@ RSpec.describe CreateCollectionService do
           )
         end
 
+        before do
+          remote_accounts.each { |account| author.follow!(account) }
+        end
+
         it 'does not federate collection or feature request activities', feature: :collections_federation do
           subject.call(params, author)
 
@@ -61,6 +65,10 @@ RSpec.describe CreateCollectionService do
           base_params.merge(account_ids:)
         end
 
+        before do
+          accounts.each { |account| author.follow!(account) }
+        end
+
         it 'also creates collection items' do
           expect do
             subject.call(params, author)
@@ -70,6 +78,18 @@ RSpec.describe CreateCollectionService do
         context 'when one account may not be added' do
           before do
             accounts.last.update(discoverable: false)
+          end
+
+          it 'raises an error' do
+            expect do
+              subject.call(params, author)
+            end.to raise_error(Mastodon::NotPermittedError)
+          end
+        end
+
+        context 'when one account is not followed' do
+          before do
+            author.unfollow!(accounts.last)
           end
 
           it 'raises an error' do

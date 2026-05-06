@@ -66,10 +66,19 @@ class AccountPolicy < ApplicationPolicy
   end
 
   def feature?
-    record.featureable_by?(current_account) && !current_account.blocking?(record) && !current_account.blocked_by?(record)
+    record.featureable_by?(current_account) &&
+      following_or_self? &&
+      !current_account.blocking?(record) &&
+      !current_account.blocked_by?(record)
   end
 
   def index_collections?
     current_account.nil? || !record.blocking_or_domain_blocking?(current_account)
+  end
+
+  private
+
+  def following_or_self?
+    current_account == record || current_account.following?(record)
   end
 end

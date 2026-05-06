@@ -11,6 +11,10 @@ RSpec.describe AddAccountToCollectionService do
     context 'when given a featurable account' do
       let(:account) { Fabricate(:account) }
 
+      before do
+        collection.account.follow!(account)
+      end
+
       it 'creates a new CollectionItem in the `accepted` state' do
         expect do
           subject.call(collection, account)
@@ -60,8 +64,22 @@ RSpec.describe AddAccountToCollectionService do
       end
     end
 
+    context 'when the collection owner does not follow the account' do
+      let(:account) { Fabricate(:account) }
+
+      it 'raises an error' do
+        expect do
+          subject.call(collection, account)
+        end.to raise_error(Mastodon::NotPermittedError)
+      end
+    end
+
     context 'when given an account that is not featureable' do
       let(:account) { Fabricate(:account, discoverable: false) }
+
+      before do
+        collection.account.follow!(account)
+      end
 
       it 'raises an error' do
         expect do
