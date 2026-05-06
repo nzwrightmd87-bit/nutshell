@@ -104,6 +104,78 @@ RSpec.describe ActivityPub::ProcessAccountService do
     end
   end
 
+  context 'with malformed remote image descriptions' do
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        image: {
+          type: 'Image',
+          url: 'https://foo.test/image.png',
+          name: ['not a string'],
+        },
+        icon: {
+          type: 'Image',
+          url: 'https://foo.test/icon.png',
+          summary: { '@value' => 'not a string' },
+        },
+      }.with_indifferent_access
+    end
+
+    before do
+      stub_request(:get, 'https://foo.test/image.png').to_return(request_fixture('avatar.txt'))
+      stub_request(:get, 'https://foo.test/icon.png').to_return(request_fixture('avatar.txt'))
+    end
+
+    it 'ignores non-string image descriptions' do
+      account = nil
+
+      expect { account = subject.call('alice', 'example.com', payload) }
+        .to_not raise_error
+      expect(account).to have_attributes(
+        avatar_remote_url: 'https://foo.test/icon.png',
+        header_remote_url: 'https://foo.test/image.png',
+        avatar_description: '',
+        header_description: ''
+      )
+    end
+  end
+
+  context 'with remote image descriptions' do
+    let(:long_description) { " #{'x' * (MediaAttachment::MAX_DESCRIPTION_LENGTH + 10)} " }
+
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        image: {
+          type: 'Image',
+          url: 'https://foo.test/image.png',
+          summary: long_description,
+        },
+        icon: {
+          type: 'Image',
+          url: 'https://foo.test/icon.png',
+          name: ' Avatar description ',
+        },
+      }.with_indifferent_access
+    end
+
+    before do
+      stub_request(:get, 'https://foo.test/image.png').to_return(request_fixture('avatar.txt'))
+      stub_request(:get, 'https://foo.test/icon.png').to_return(request_fixture('avatar.txt'))
+    end
+
+    it 'strips and truncates string descriptions' do
+      account = subject.call('alice', 'example.com', payload)
+
+      expect(account.avatar_description).to eq 'Avatar description'
+      expect(account.header_description).to eq 'x' * MediaAttachment::MAX_DESCRIPTION_LENGTH
+    end
+  end
+
   context 'with inlined feature collection' do
     let(:payload) do
       {

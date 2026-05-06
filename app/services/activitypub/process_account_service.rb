@@ -231,8 +231,7 @@ class ActivityPub::ProcessAccountService < BaseService
     if value.is_a?(Hash) && value['type'] == 'Image'
       url = first_of_value(value['url'])
       url = url['href'] if url.is_a?(Hash)
-      description = value['summary'].presence || value['name'].presence
-      description = description.strip[0...MediaAttachment::MAX_DESCRIPTION_LENGTH] if description.present?
+      description = image_description(value)
     else
       url = value
     end
@@ -243,6 +242,18 @@ class ActivityPub::ProcessAccountService < BaseService
     description = nil unless description.is_a?(String)
 
     [url, description]
+  end
+
+  def image_description(image)
+    description = first_string_value(image['summary']).presence || first_string_value(image['name']).presence
+
+    description&.strip&.[](0...MediaAttachment::MAX_DESCRIPTION_LENGTH)
+  end
+
+  def first_string_value(value)
+    value = first_of_value(value)
+
+    value if value.is_a?(String)
   end
 
   def public_key
