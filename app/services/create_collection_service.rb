@@ -40,8 +40,12 @@ class CreateCollectionService
     @accounts_to_add.each do |account_to_add|
       raise Mastodon::NotPermittedError, I18n.t('accounts.errors.cannot_be_added_to_collections') unless AccountPolicy.new(@account, account_to_add).feature?
 
-      @collection.collection_items.build(account: account_to_add, state: :accepted)
+      @collection.collection_items.build(account: account_to_add, state: collection_item_state(account_to_add))
     end
+  end
+
+  def collection_item_state(account)
+    account.feature_policy_for_account(@account) == :manual ? :pending : :accepted
   end
 
   def activity_json

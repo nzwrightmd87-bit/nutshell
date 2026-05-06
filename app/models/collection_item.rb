@@ -47,6 +47,16 @@ class CollectionItem < ApplicationRecord
     update!(state: :revoked)
   end
 
+  def accept!(approval_uri:)
+    update!(state: :accepted, approval_uri:)
+  end
+
+  def reject!
+    return if revoked?
+
+    update!(state: accepted? ? :revoked : :rejected, approval_uri: nil)
+  end
+
   def local_item_with_remote_account?
     local? && account&.remote?
   end

@@ -65,7 +65,20 @@ RSpec.describe AddAccountToCollectionService do
         it 'federates a `FeatureRequest` activity' do
           subject.call(collection, account)
 
+          expect(collection.collection_items.last).to be_accepted
           expect(ActivityPub::FeatureRequestWorker).to have_enqueued_sidekiq_job
+        end
+
+        context 'when the account only allows manual feature approval' do
+          let(:account) { Fabricate(:remote_account, feature_approval_policy: InteractionPolicy::POLICY_FLAGS[:public]) }
+
+          it 'creates a pending item and requests approval before exposing it' do
+            subject.call(collection, account)
+
+            expect(collection.collection_items.last).to be_pending
+            expect(ActivityPub::FeatureRequestWorker).to have_enqueued_sidekiq_job
+            expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+          end
         end
 
         context 'when the collection is not discoverable' do

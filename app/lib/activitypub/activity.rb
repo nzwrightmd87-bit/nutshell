@@ -161,6 +161,24 @@ class ActivityPub::Activity
     @quote_request_from_object ||= Quote.find_by(quoted_account: @account, activity_uri: object_uri) unless object_uri.nil?
   end
 
+  def feature_request_from_object
+    @feature_request_from_object ||= CollectionItem.pending.find_by(account: @account, activity_uri: object_uri) unless object_uri.nil?
+  end
+
+  def feature_request_from_request_json(json)
+    request_uri = value_or_id(json)
+    target_uri = value_or_id(json['object'])
+    collection_uri = value_or_id(json['instrument'])
+
+    return if target_uri != @account.uri || unsupported_uri_scheme?(collection_uri)
+
+    collection = ActivityPub::TagManager.instance.uri_to_resource(collection_uri, Collection)
+    return if collection.nil? || !collection.local?
+
+    scope = collection.collection_items.pending.where(account: @account)
+    request_uri.present? ? scope.find_by(activity_uri: request_uri) : scope.first
+  end
+
   def follow_from_object
     @follow_from_object ||= ::Follow.find_by(target_account: @account, uri: object_uri) unless object_uri.nil?
   end
