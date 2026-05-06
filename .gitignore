@@ -34,6 +34,9 @@ secrets/
 DEPLOYMENT.md
 security.md
 progress.md
+security_checklist.md
+security_patching/
+security_patched/
 node_modules/
 /build/
 
