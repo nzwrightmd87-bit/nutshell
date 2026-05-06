@@ -15,6 +15,20 @@ RSpec.describe 'Api::V1Alpha::CollectionItems', feature: :collections do
 
     it_behaves_like 'forbidden for wrong scope', 'read'
 
+    context 'when collections are disabled' do
+      let(:headers) { {} }
+
+      before do
+        allow(Mastodon::Feature).to receive(:collections_enabled?).and_return(false)
+      end
+
+      it 'returns http not found before authentication' do
+        subject
+
+        expect(response).to have_http_status(404)
+      end
+    end
+
     context 'when user is owner of the collection' do
       context 'with valid params' do
         let(:other_account) { Fabricate(:account) }

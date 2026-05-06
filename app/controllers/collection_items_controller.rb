@@ -38,6 +38,6 @@ class CollectionItemsController < ApplicationController
   end
 
   def check_feature_enabled
-    raise ActionController::RoutingError unless Mastodon::Feature.collections_enabled?
+    raise ActionController::RoutingError, 'Collections are unavailable' unless Mastodon::Feature.collections_enabled?
   end
 end

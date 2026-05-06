@@ -61,6 +61,6 @@ class Api::Fasp::BaseController < ApplicationController
   end
 
   def check_fasp_enabled
-    raise ActionController::RoutingError unless Mastodon::Feature.fasp_enabled?
+    raise ActionController::RoutingError, 'FASP is unavailable' unless Mastodon::Feature.fasp_enabled?
   end
 end

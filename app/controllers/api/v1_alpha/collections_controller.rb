@@ -94,7 +94,7 @@ class Api::V1Alpha::CollectionsController < Api::BaseController
   end
 
   def check_feature_enabled
-    raise ActionController::RoutingError unless Mastodon::Feature.collections_enabled?
+    raise ActionController::RoutingError, 'Collections are unavailable' unless Mastodon::Feature.collections_enabled?
   end
 
   def next_path
