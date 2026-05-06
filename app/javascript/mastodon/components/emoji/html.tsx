@@ -41,3 +41,24 @@ export const EmojiHTML = polymorphicForwardRef<'div', EmojiHTMLProps>(
   },
 );
 EmojiHTML.displayName = 'EmojiHTML';
+
+export interface EmojiTextProps {
+  text: string;
+  extraEmojis?: CustomEmojiMapArg;
+  className?: string;
+}
+
+export const EmojiText = polymorphicForwardRef<'span', EmojiTextProps>(
+  ({ extraEmojis, text, ...props }, ref) => {
+    const contents = useMemo(() => textToEmojis(text), [text]);
+
+    return (
+      <CustomEmojiProvider emojis={extraEmojis}>
+        <AnimateEmojiProvider {...props} ref={ref}>
+          {contents}
+        </AnimateEmojiProvider>
+      </CustomEmojiProvider>
+    );
+  },
+);
+EmojiText.displayName = 'EmojiText';

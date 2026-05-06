@@ -2,6 +2,16 @@ import React from 'react';
 
 import * as html from '../html';
 
+function expectElementWithoutProp(
+  node: React.ReactNode,
+  propName: string,
+): void {
+  expect(React.isValidElement<Record<string, unknown>>(node)).toBe(true);
+  if (React.isValidElement<Record<string, unknown>>(node)) {
+    expect(node.props[propName]).toBeUndefined();
+  }
+}
+
 describe('html', () => {
   describe('unescapeHTML', () => {
     it('returns unescaped HTML', () => {
@@ -36,6 +46,22 @@ describe('html', () => {
         '<a href="https://example.com" target="_blank" rel="nofollow">link</a>';
       const output = html.htmlStringToComponents(input);
       expect(output).toMatchSnapshot();
+    });
+
+    it('drops unsafe URL attributes', () => {
+      const output = html.htmlStringToComponents(
+        '<a href="javascript:alert(1)">link</a><img src="data:image/svg+xml,<svg></svg>" alt="bad">',
+      );
+
+      expectElementWithoutProp(output[0], 'href');
+      expectElementWithoutProp(output[1], 'src');
+    });
+
+    it('drops unsafe URL attributes returned by custom handlers', () => {
+      const onAttribute = vi.fn(() => ['href', 'javascript:alert(1)'] as [string, string]);
+      const output = html.htmlStringToComponents('<a href="https://example.com">link</a>', { onAttribute });
+
+      expectElementWithoutProp(output[0], 'href');
     });
 
     it('respects maxDepth option', () => {

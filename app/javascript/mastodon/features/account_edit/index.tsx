@@ -11,8 +11,7 @@ import { Avatar } from '@/mastodon/components/avatar';
 import { Button } from '@/mastodon/components/button';
 import { DismissibleCallout } from '@/mastodon/components/callout/dismissible';
 import { CustomEmojiProvider } from '@/mastodon/components/emoji/context';
-import { EmojiHTML } from '@/mastodon/components/emoji/html';
-import { useElementHandledLink } from '@/mastodon/components/status/handled_link';
+import { EmojiText } from '@/mastodon/components/emoji/html';
 import { useAccount } from '@/mastodon/hooks/useAccount';
 import { useCurrentAccountId } from '@/mastodon/hooks/useAccountId';
 import { autoPlayGif } from '@/mastodon/initial_state';
@@ -142,9 +141,6 @@ export const AccountEdit: FC = () => {
 
   // Normally we would use the account emoji, but we want all custom emojis to be available to render after editing.
   const emojis = useAppSelector((state) => state.custom_emojis);
-  const htmlHandlers = useElementHandledLink({
-    hashtagAccountId: profile?.id,
-  });
 
   if (!accountId || !account || !profile) {
     return <AccountEditEmptyColumn notFound={!accountId} />;
@@ -181,7 +177,7 @@ export const AccountEdit: FC = () => {
             />
           }
         >
-          <EmojiHTML htmlString={profile.displayName} {...htmlHandlers} />
+          <EmojiText text={profile.displayName} />
         </AccountEditSection>
 
         <AccountEditSection
@@ -196,7 +192,7 @@ export const AccountEdit: FC = () => {
             />
           }
         >
-          <EmojiHTML htmlString={profile.bio} {...htmlHandlers} />
+          <EmojiText text={profile.bio} />
         </AccountEditSection>
 
         <AccountEditSection
@@ -228,7 +224,7 @@ export const AccountEdit: FC = () => {
               {profile.fields.map((field) => (
                 <li key={field.id} className={classes.field}>
                   <div>
-                    <AccountField {...field} {...htmlHandlers} />
+                    <AccountField {...field} />
                   </div>
                   <AccountFieldActions
                     item={intl.formatMessage(messages.customFieldsName)}

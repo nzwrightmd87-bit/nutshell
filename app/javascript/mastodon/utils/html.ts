@@ -25,6 +25,33 @@ type AllowedTagsType = {
 
 const globalAttributes: Record<string, boolean | string> = htmlConfig.global;
 const defaultAllowedTags: AllowedTagsType = htmlConfig.tags;
+const urlAttributes = new Set(['href', 'src']);
+const safeUrlProtocols = new Set(['http:', 'https:', 'mailto:']);
+
+function safeAttributeValue(name: string, value: unknown) {
+  if (!urlAttributes.has(name)) {
+    return true;
+  }
+
+  if (typeof value !== 'string') {
+    return false;
+  }
+
+  const normalizedValue = value.trim();
+  if (
+    normalizedValue === '' ||
+    normalizedValue.startsWith('/') ||
+    normalizedValue.startsWith('#')
+  ) {
+    return true;
+  }
+
+  try {
+    return safeUrlProtocols.has(new URL(normalizedValue, document.baseURI).protocol);
+  } catch {
+    return false;
+  }
+}
 
 interface QueueItem {
   node: Node;
@@ -148,6 +175,9 @@ export function htmlStringToComponents<Arg extends Record<string, unknown>>(
             // Rewrite this attribute.
             if (result) {
               const [cbName, value] = result;
+              if (!safeAttributeValue(cbName, value)) {
+                continue;
+              }
               props[cbName] = value;
               continue;
             } else if (result === null) {
@@ -179,6 +209,10 @@ export function htmlStringToComponents<Arg extends Record<string, unknown>>(
             value = true;
           } else if (value === 'false') {
             value = false;
+          }
+
+          if (!safeAttributeValue(name, value)) {
+            continue;
           }
 
           props[name] = value;

@@ -1,28 +1,23 @@
 import type { FC } from 'react';
 
-import { EmojiHTML } from '@/mastodon/components/emoji/html';
-import type { useElementHandledLink } from '@/mastodon/components/status/handled_link';
+import { EmojiText } from '@/mastodon/components/emoji/html';
 import type { FieldData } from '@/mastodon/reducers/slices/profile_edit';
 
 import classes from '../styles.module.scss';
 
-export const AccountField: FC<
-  FieldData & Partial<ReturnType<typeof useElementHandledLink>>
-> = ({ onElement, ...field }) => {
+export const AccountField: FC<FieldData> = (field) => {
   return (
     <>
-      <EmojiHTML
+      <EmojiText
         as='h2'
-        htmlString={field.name}
+        text={field.name}
         className={classes.fieldName}
-        onElement={onElement}
       />
 
-      <EmojiHTML
+      <EmojiText
         as='p'
-        htmlString={field.value}
+        text={field.value}
         className={classes.fieldValue}
-        onElement={onElement}
       />
     </>
   );
