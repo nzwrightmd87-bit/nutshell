@@ -129,6 +129,19 @@ RSpec.describe 'ActivityPub Inboxes' do
         end
       end
 
+      context 'with duplicate synchronization parameters' do
+        let(:synchronization_header) { 'digest="first", digest="second"' }
+
+        it 'ignores the malformed header' do
+          subject
+
+          expect(response)
+            .to have_http_status(202)
+          expect(ActivityPub::FollowersSynchronizationWorker)
+            .to_not have_received(:perform_async)
+        end
+      end
+
       it 'returns http accepted' do
         subject
 

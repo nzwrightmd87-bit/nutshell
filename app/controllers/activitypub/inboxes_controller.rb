@@ -68,7 +68,7 @@ class ActivityPub::InboxesController < ActivityPub::BaseController
     params = SignatureParser.parse(raw_params)
 
     ActivityPub::PrepareFollowersSynchronizationService.new.call(signed_request_account, params)
-  rescue SignatureParser::ParsingError
+  rescue SignatureParser::ParsingError, Mastodon::SignatureVerificationError
     Rails.logger.warn 'Error parsing Collection-Synchronization header'
   end
 
