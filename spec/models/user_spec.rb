@@ -248,6 +248,95 @@ RSpec.describe User do
     end
   end
 
+  describe '#role_requires_2fa?' do
+    around do |example|
+      previous_requirement = UserRole.everyone.require_2fa?
+      example.run
+    ensure
+      UserRole.everyone.update!(require_2fa: previous_requirement)
+    end
+
+    before do
+      UserRole.everyone.update!(require_2fa: everyone_requirement)
+    end
+
+    context 'when the user has no explicit role' do
+      let(:user) { Fabricate(:user, role: nil) }
+
+      context 'when the everyone role requires 2FA' do
+        let(:everyone_requirement) { true }
+
+        it 'returns true' do
+          expect(user.role_requires_2fa?).to be true
+        end
+      end
+
+      context 'when the everyone role does not require 2FA' do
+        let(:everyone_requirement) { false }
+
+        it 'returns false' do
+          expect(user.role_requires_2fa?).to be false
+        end
+      end
+    end
+
+    context 'when the user has an explicit role' do
+      let(:user) { Fabricate(:user, role: explicit_role) }
+      let(:explicit_role) { Fabricate(:user_role, require_2fa: explicit_role_requirement) }
+      let(:explicit_role_requirement) { false }
+
+      context 'when the explicit role requires 2FA' do
+        let(:everyone_requirement) { false }
+        let(:explicit_role_requirement) { true }
+
+        it 'returns true' do
+          expect(user.role_requires_2fa?).to be true
+        end
+      end
+
+      context 'when the everyone role requires 2FA' do
+        let(:everyone_requirement) { true }
+
+        it 'returns true' do
+          expect(user.role_requires_2fa?).to be true
+        end
+      end
+
+      context 'when neither the explicit role nor everyone role requires 2FA' do
+        let(:everyone_requirement) { false }
+
+        it 'returns false' do
+          expect(user.role_requires_2fa?).to be false
+        end
+      end
+    end
+  end
+
+  describe '#missing_2fa?' do
+    around do |example|
+      previous_requirement = UserRole.everyone.require_2fa?
+      example.run
+    ensure
+      UserRole.everyone.update!(require_2fa: previous_requirement)
+    end
+
+    before do
+      UserRole.everyone.update!(require_2fa: true)
+    end
+
+    it 'returns true for users with explicit roles when everyone requires 2FA' do
+      user = Fabricate(:user, role: Fabricate(:user_role, require_2fa: false), otp_required_for_login: false)
+
+      expect(user.missing_2fa?).to be true
+    end
+
+    it 'returns false when 2FA is enabled' do
+      user = Fabricate(:user, role: Fabricate(:user_role, require_2fa: false), otp_required_for_login: true)
+
+      expect(user.missing_2fa?).to be false
+    end
+  end
+
   describe '#disable_two_factor!' do
     it 'saves false for otp_required_for_login' do
       user = Fabricate.build(:user, otp_required_for_login: true)

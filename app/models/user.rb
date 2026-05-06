@@ -245,7 +245,11 @@ class User < ApplicationRecord
   end
 
   def missing_2fa?
-    !two_factor_enabled? && role.require_2fa?
+    !two_factor_enabled? && role_requires_2fa?
+  end
+
+  def role_requires_2fa?
+    role.require_2fa? || (role_id.present? && UserRole.everyone.require_2fa?)
   end
 
   def unconfirmed_or_pending?
