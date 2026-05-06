@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import sqlite3
 import subprocess
 import time
 import urllib.error
@@ -85,6 +86,19 @@ def main() -> int:
             "/api/register",
             {"username": "charlie", "email": "charlie@example.com", "password": "charlie_password_123"},
         )
+
+        conn = sqlite3.connect(db_path)
+        try:
+            alice_admin = conn.execute(
+                "SELECT is_admin FROM users WHERE username = ?",
+                ("alice",),
+            ).fetchone()
+            assert alice_admin is not None and int(alice_admin[0]) == 0
+            # Seed admin rights explicitly for the admin-only checks below.
+            conn.execute("UPDATE users SET is_admin = 1 WHERE username = ?", ("alice",))
+            conn.commit()
+        finally:
+            conn.close()
 
         alice_login = _request("POST", "/api/login", {"username": "alice", "password": "alice_password_123"})
         bob_login = _request("POST", "/api/login", {"username": "bob", "password": "bob_password_123"})
@@ -191,7 +205,7 @@ def main() -> int:
         )
         assert send2["ok"] is True
         dm_id2 = int(send2["id"])
-        # Alice is site admin (first user) and can delete Bob's message.
+        # Alice was explicitly seeded as site admin and can delete Bob's message.
         deleted_dm2 = _request("DELETE", f"/api/messages/{dm_id2}", token=alice_token)
         assert deleted_dm2["ok"] is True
         convo_a3 = _request("GET", "/api/messages/with/bob", token=alice_token)

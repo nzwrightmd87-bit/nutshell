@@ -58,22 +58,8 @@ def _assert(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
-def main() -> int:
-    db_path = Path(".tmp/test_auth_recovery.db")
-    if db_path.exists():
-        db_path.unlink()
-
-    env = os.environ.copy()
-    env["CYPHER_CHAT_DB"] = str(db_path)
-    env["CYPHER_CHAT_WEB_DIR"] = "web/e2ee_chat"
-    env["CYPHER_CHAT_TOKEN_SECRET"] = "smoke-auth-recovery-secret"
-    env["APP_BASE_URL"] = "http://localhost:8789"
-    # Non-empty values enable forgot-password path; delivery failures are swallowed by API.
-    env["RESEND_API_KEY"] = "dummy-local-key"
-    env["RESEND_FROM_EMAIL"] = "noreply@example.com"
-    env["GOOGLE_CLIENT_ID"] = "local-test-client-id.apps.googleusercontent.com"
-
-    proc = subprocess.Popen(
+def _start_server(env: dict[str, str]) -> subprocess.Popen[str]:
+    return subprocess.Popen(
         [
             "python3",
             "-m",
@@ -89,6 +75,24 @@ def main() -> int:
         stderr=subprocess.PIPE,
         text=True,
     )
+
+
+def main() -> int:
+    db_path = Path(".tmp/test_auth_recovery.db")
+    if db_path.exists():
+        db_path.unlink()
+
+    env = os.environ.copy()
+    env["CYPHER_CHAT_DB"] = str(db_path)
+    env["CYPHER_CHAT_WEB_DIR"] = "web/e2ee_chat"
+    env["CYPHER_CHAT_TOKEN_SECRET"] = "smoke-auth-recovery-secret"
+    env["APP_BASE_URL"] = "http://localhost:8789"
+    # Non-empty values enable forgot-password path; delivery failures are swallowed by API.
+    env["RESEND_API_KEY"] = "dummy-local-key"
+    env["RESEND_FROM_EMAIL"] = "noreply@example.com"
+    env["GOOGLE_CLIENT_ID"] = "local-test-client-id.apps.googleusercontent.com"
+
+    proc = _start_server(env)
 
     error: Exception | None = None
     stderr_out = ""
@@ -106,6 +110,22 @@ def main() -> int:
             },
         )
         _assert(status == 200 and body.get("ok") is True, f"register failed: {status} {body}")
+
+        proc.terminate()
+        _stdout, restart_stderr = proc.communicate(timeout=4)
+        stderr_out = restart_stderr
+        proc = _start_server(env)
+        _wait_health()
+
+        conn = sqlite3.connect(db_path)
+        try:
+            row = conn.execute(
+                "SELECT is_admin FROM users WHERE username = ?",
+                ("authtester",),
+            ).fetchone()
+            _assert(row is not None and int(row[0]) == 0, "startup unexpectedly promoted first user")
+        finally:
+            conn.close()
 
         # 2) Public config should expose Google client id.
         status, body = _request("GET", "/api/config/public")
@@ -127,11 +147,14 @@ def main() -> int:
         conn = sqlite3.connect(db_path)
         try:
             user_id_row = conn.execute(
-                "SELECT id FROM users WHERE username = ?",
+                "SELECT id, is_admin FROM users WHERE username = ?",
                 ("authtester",),
             ).fetchone()
             _assert(user_id_row is not None, "user missing in DB after register")
+            _assert(int(user_id_row[1]) == 0, "public registration unexpectedly granted admin")
             user_id = int(user_id_row[0])
+            # Seed admin rights explicitly for the admin-only access-code checks below.
+            conn.execute("UPDATE users SET is_admin = 1 WHERE id = ?", (user_id,))
             active_tokens = conn.execute(
                 "SELECT COUNT(*) FROM password_reset_tokens WHERE user_id = ? AND used = 0",
                 (user_id,),

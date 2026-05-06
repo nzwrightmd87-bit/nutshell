@@ -1868,15 +1868,14 @@ def _bootstrap_admin_and_registration_code() -> None:
     try:
         if BOOTSTRAP_ADMIN_USERNAME:
             conn.execute(
-                "UPDATE users SET is_admin = 1 WHERE username = ?",
-                (BOOTSTRAP_ADMIN_USERNAME,),
+                """
+                UPDATE users
+                SET is_admin = 1
+                WHERE username = ?
+                  AND external_provider = ?
+                """,
+                (BOOTSTRAP_ADMIN_USERNAME, NUTSHELL_PROVIDER),
             )
-
-        has_admin = conn.execute("SELECT 1 FROM users WHERE is_admin = 1 LIMIT 1").fetchone()
-        if has_admin is None:
-            first_user = conn.execute("SELECT id FROM users ORDER BY id ASC LIMIT 1").fetchone()
-            if first_user is not None:
-                conn.execute("UPDATE users SET is_admin = 1 WHERE id = ?", (first_user["id"],))
 
         # One-time migration from legacy single-code app_settings storage.
         if _count_registration_access_codes(conn) == 0:
@@ -2427,11 +2426,9 @@ async def register(payload: dict[str, Any]) -> JSONResponse:
         if existing_email is not None:
             raise HTTPException(status_code=409, detail="Email already registered.")
 
-        is_admin = 1 if (BOOTSTRAP_ADMIN_USERNAME and username == BOOTSTRAP_ADMIN_USERNAME) else 0
-        if not is_admin:
-            existing_admin = conn.execute("SELECT 1 FROM users WHERE is_admin = 1 LIMIT 1").fetchone()
-            if existing_admin is None:
-                is_admin = 1
+        # Public self-registration must never bootstrap site-admin privileges.
+        # Admin rights are granted through trusted Nutshell SSO or admin APIs.
+        is_admin = 0
 
         cur = conn.execute(
             """
@@ -2579,11 +2576,9 @@ async def google_auth(payload: dict[str, Any]) -> JSONResponse:
             if promo_code and _registration_access_code_valid(conn, promo_code):
                 grants_free_access = _registration_access_code_grants_free_access(conn, promo_code)
 
-            is_admin = 1 if (BOOTSTRAP_ADMIN_USERNAME and desired_username == BOOTSTRAP_ADMIN_USERNAME) else 0
-            if not is_admin:
-                existing_admin = conn.execute("SELECT 1 FROM users WHERE is_admin = 1 LIMIT 1").fetchone()
-                if existing_admin is None:
-                    is_admin = 1
+            # Public self-signup must never bootstrap site-admin privileges.
+            # Admin rights are granted through trusted Nutshell SSO or admin APIs.
+            is_admin = 0
 
             # Generate a random internal password hash so schema invariants remain intact.
             salt = secrets.token_bytes(PASSWORD_SALT_BYTES)
