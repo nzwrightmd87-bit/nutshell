@@ -151,6 +151,16 @@ RSpec.describe Rack::Attack, type: :request do
     it_behaves_like 'throttled endpoint'
   end
 
+  describe 'throttle excessive billing checkout requests by IP address' do
+    let(:throttle) { 'throttle_billing_checkout/ip' }
+    let(:limit)  { 5 }
+    let(:period) { 10.minutes }
+    let(:path) { '/billing/checkout' }
+    let(:request) { -> { post path, params: { plan: 'monthly' }, headers: { 'REMOTE_ADDR' => remote_ip } } }
+
+    it_behaves_like 'throttled endpoint'
+  end
+
   describe 'throttle excessive password change requests by account' do
     let(:user) { Fabricate(:user, email: 'user@host.example') }
     let(:throttle) { 'throttle_password_change/account' }

@@ -26,6 +26,8 @@ RSpec.describe DisallowedHashtagsValidator do
 
         it { is_expected.to_not allow_values(tag_string).for(:text).with_message(disallow_message) }
 
+        it { is_expected.to_not allow_values('ok (#a)', 'ok .#a', 'ok,#a', 'ok -#a').for(:text).with_message(disallow_message) }
+
         def disallow_message
           I18n.t('statuses.disallowed_hashtags', tags: 'a', count: 1)
         end

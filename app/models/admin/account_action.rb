@@ -105,6 +105,13 @@ class Admin::AccountAction < Admin::BaseAction
     target_account.suspend!(origin: :local)
   end
 
+  def process_strike!(action = type)
+    super
+
+    # A log entry is only interesting if the warning contains custom text from someone.
+    log_action(:create, warning) if action == 'none' && warning.text.present?
+  end
+
   def text_for_warning
     [warning_preset&.text, text].compact.join("\n\n")
   end

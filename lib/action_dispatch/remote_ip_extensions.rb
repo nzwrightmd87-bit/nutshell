@@ -20,8 +20,12 @@ module ActionDispatch
         remote_addr = sanitize_ips(ips_from(@req.remote_addr)).last
 
         # Could be a CSV list and/or repeated headers that were concatenated.
-        client_ips    = sanitize_ips(ips_from(@req.client_ip)).reverse!
-        forwarded_ips = sanitize_ips(@req.forwarded_for || []).reverse!
+        client_ips = sanitize_ips(ips_from(@req.client_ip)).reverse!
+
+        # Only trust the proxy-managed X-Forwarded-For header. Rack's
+        # forwarded_for abstraction can include a client-supplied Forwarded
+        # header if an upstream proxy passes it through.
+        forwarded_ips = sanitize_ips(ips_from(@req.x_forwarded_for)).reverse!
 
         # `Client-Ip` and `X-Forwarded-For` should not, generally, both be set. If they
         # are both set, it means that either:

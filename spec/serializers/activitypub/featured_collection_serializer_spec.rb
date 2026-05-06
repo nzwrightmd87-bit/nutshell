@@ -16,6 +16,7 @@ RSpec.describe ActivityPub::FeaturedCollectionSerializer do
   end
   let!(:collection_items) { Fabricate.times(2, :collection_item, collection:) }
   let!(:pending_collection_item) { Fabricate(:collection_item, collection:, state: :pending) }
+  let!(:revoked_collection_item) { Fabricate(:collection_item, collection:, state: :revoked) }
 
   it 'serializes to the expected structure' do
     expect(subject).to include({
@@ -57,6 +58,7 @@ RSpec.describe ActivityPub::FeaturedCollectionSerializer do
     expect(subject['totalItems']).to eq 2
     expect(subject['orderedItems'].pluck('id'))
       .to_not include(ActivityPub::TagManager.instance.uri_for(pending_collection_item))
+      .and not_include(ActivityPub::TagManager.instance.uri_for(revoked_collection_item))
   end
 
   context 'when a language is set' do

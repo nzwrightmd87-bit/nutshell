@@ -171,5 +171,87 @@ RSpec.describe ActivityPub::Activity::Accept do
         end
       end
     end
+
+    context 'with a FeatureRequest' do
+      let(:collection) { Fabricate(:collection, account: recipient) }
+      let(:collection_item) { Fabricate(:collection_item, collection:, account: sender, state: :pending, approval_uri: nil) }
+      let(:approval_uri) { "https://#{sender.domain}/feature-authorizations/1" }
+
+      let(:json) do
+        {
+          '@context': [
+            'https://www.w3.org/ns/activitystreams',
+            {
+              FeatureRequest: 'https://w3id.org/fep/044f#FeatureRequest',
+            },
+          ],
+          id: 'foo',
+          type: 'Accept',
+          actor: ActivityPub::TagManager.instance.uri_for(sender),
+          object: {
+            id: collection_item.activity_uri,
+            type: 'FeatureRequest',
+            actor: ActivityPub::TagManager.instance.uri_for(recipient),
+            object: ActivityPub::TagManager.instance.uri_for(sender),
+            instrument: ActivityPub::TagManager.instance.uri_for(collection),
+          },
+          result: approval_uri,
+        }.with_indifferent_access
+      end
+
+      it 'marks the collection item as accepted and distributes the add', feature: :collections_federation do
+        expect { subject.perform }
+          .to change { collection_item.reload.accepted? }.from(false).to(true)
+          .and change { collection_item.reload.approval_uri }.to(approval_uri)
+
+        expect(ActivityPub::AccountRawDistributionWorker)
+          .to have_enqueued_sidekiq_job(anything, recipient.id)
+      end
+
+      context 'when the FeatureRequest is referenced by its identifier' do
+        let(:json) do
+          {
+            '@context': 'https://www.w3.org/ns/activitystreams',
+            id: 'foo',
+            type: 'Accept',
+            actor: ActivityPub::TagManager.instance.uri_for(sender),
+            object: collection_item.activity_uri,
+            result: approval_uri,
+          }.with_indifferent_access
+        end
+
+        it 'marks the collection item as accepted', feature: :collections_federation do
+          expect { subject.perform }
+            .to change { collection_item.reload.accepted? }.from(false).to(true)
+            .and change { collection_item.reload.approval_uri }.to(approval_uri)
+        end
+      end
+
+      context 'when approval_uri is missing' do
+        let(:approval_uri) { nil }
+
+        it 'does not mark the collection item as accepted' do
+          expect { subject.perform }
+            .to not_change { collection_item.reload.accepted? }.from(false)
+            .and not_change { collection_item.reload.approval_uri }.from(nil)
+
+          expect(ActivityPub::AccountRawDistributionWorker)
+            .to_not have_enqueued_sidekiq_job(anything, recipient.id)
+        end
+      end
+
+      context 'when the request targets another account' do
+        let(:json) do
+          super().tap do |payload|
+            payload['object']['object'] = ActivityPub::TagManager.instance.uri_for(Fabricate(:remote_account, domain: sender.domain))
+          end
+        end
+
+        it 'does not mark the collection item as accepted' do
+          expect { subject.perform }
+            .to not_change { collection_item.reload.accepted? }.from(false)
+        end
+      end
+    end
   end
 end

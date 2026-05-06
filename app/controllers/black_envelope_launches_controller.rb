@@ -29,6 +29,8 @@ class BlackEnvelopeLaunchesController < ApplicationController
     raw_handoff_url = BlackEnvelope::Configuration.handoff_url.to_s
     raise ArgumentError, 'BlackEnvelope handoff URL is not configured' if raw_handoff_url.blank?
 
+    request.content_security_policy_nonce_directives = %w(script-src)
+
     handoff_url = ERB::Util.html_escape(raw_handoff_url)
     token = ERB::Util.html_escape(BlackEnvelope::IntegrationTokenService.new.call(current_user))
     script_nonce = ERB::Util.html_escape(view_context.content_security_policy_nonce.to_s)

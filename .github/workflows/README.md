@@ -1,4 +1,5 @@
-# CI Workflows Disabled
+# CI Workflows
 
-Upstream Mastodon CI workflows have been removed. Nutshell is a custom fork
-and does not use upstream's CI pipeline.
+Nutshell does not use the full upstream Mastodon CI pipeline. Repository
+security checks are still enabled here for CodeQL analysis and Ruby dependency
+auditing.

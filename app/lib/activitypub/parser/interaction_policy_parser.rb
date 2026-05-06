@@ -8,7 +8,7 @@ class ActivityPub::Parser::InteractionPolicyParser
 
   def bitmap
     flags = 0
-    return flags if @json.blank?
+    return flags unless @json.is_a?(Hash)
 
     flags |= subpolicy(@json['automaticApproval'])
     flags <<= 16

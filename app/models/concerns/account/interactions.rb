@@ -256,6 +256,24 @@ module Account::Interactions
   private
 
   def preloaded_relation(type, key)
-    @preloaded_relations && @preloaded_relations[type] ? @preloaded_relations[type][key].present? : yield
+    relations = @preloaded_relations&.[](type)
+    return yield unless relations && preloaded_relation_key?(type, key)
+
+    relations[preloaded_relation_lookup_key(type, key)].present?
+  end
+
+  def preloaded_relation_key?(type, key)
+    return false if key.nil?
+
+    case type
+    when :domain_blocking_by_domain
+      @preloaded_relation_domains&.include?(key)
+    else
+      @preloaded_relation_account_ids&.include?(key.to_i)
+    end
+  end
+
+  def preloaded_relation_lookup_key(type, key)
+    type == :domain_blocking_by_domain ? key : key.to_i
   end
 end

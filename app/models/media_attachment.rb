@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'timeout'
+
 # == Schema Information
 #
 # Table name: media_attachments
@@ -43,6 +45,7 @@ class MediaAttachment < ApplicationRecord
   IMAGE_LIMIT = 16.megabytes
   VIDEO_LIMIT = 99.megabytes
   VIDEO_UPLOAD_LIMIT = 200.megabytes
+  VIDEO_COMPRESSION_TIMEOUT = 60 # seconds
 
   MAX_VIDEO_MATRIX_LIMIT = 8_294_400 # 3840x2160px
   MAX_VIDEO_FRAME_RATE   = 120
@@ -191,7 +194,7 @@ class MediaAttachment < ApplicationRecord
   before_file_validate :check_video_dimensions
 
   validates_attachment_content_type :file, content_type: IMAGE_MIME_TYPES + VIDEO_MIME_TYPES + AUDIO_MIME_TYPES
-  validates_attachment_size :file, less_than: ->(m) { m.larger_media_format? ? VIDEO_UPLOAD_LIMIT : IMAGE_LIMIT }
+  validates_attachment_size :file, less_than: ->(m) { m.larger_media_format? ? VIDEO_LIMIT : IMAGE_LIMIT }
   remotable_attachment :file, VIDEO_LIMIT, suppress_errors: false, download_on_assign: false, attribute_name: :remote_url
 
   has_attached_file :thumbnail,
@@ -222,7 +225,7 @@ class MediaAttachment < ApplicationRecord
       .where.not(Status.local.where(Status.arel_table[:in_reply_to_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
       .where.not(Status.local.where(Status.arel_table[:reblog_of_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
       .where.not(Quote.joins(:status).merge(Status.local).where(Quote.arel_table[:quoted_status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
-      .where.not(Quote.joins(:quoted_status).merge(Status.local).where(Quote.arel_table[:status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
+      .where.not(Quote.accepted.joins(:quoted_status).merge(Status.local).where(Quote.arel_table[:status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
   }
 
   attr_accessor :skip_download
@@ -372,6 +375,8 @@ class MediaAttachment < ApplicationRecord
 
     return unless file_size > VIDEO_LIMIT
 
+    return reject_oversized_video!(:upload_limit_exceeded, file_size) if file_size > VIDEO_UPLOAD_LIMIT
+
     Rails.logger.info("[media-compress] Video #{file_size} bytes exceeds #{VIDEO_LIMIT}, compressing with ffmpeg")
 
     compressed_path = "#{original_path}.compressed.mp4"
@@ -379,10 +384,10 @@ class MediaAttachment < ApplicationRecord
     begin
       # Target bitrate to fit under VIDEO_LIMIT with some headroom
       movie = ffmpeg_data(original_path)
-      return unless movie.valid?
+      return reject_oversized_video!(:invalid_metadata, file_size) unless movie.valid?
 
       duration = movie.duration.to_f
-      return if duration <= 0
+      return reject_oversized_video!(:invalid_duration, file_size) if duration <= 0
 
       # Target 90% of limit to leave room for container overhead
       target_bytes = VIDEO_LIMIT * 0.9
@@ -390,35 +395,32 @@ class MediaAttachment < ApplicationRecord
       # Reserve 128kbps for audio
       video_bitrate_kbps = [target_bitrate_kbps - 128, 500].max
 
-      system(
-        'ffmpeg', '-y', '-i', original_path,
-        '-c:v', 'libx264', '-preset', 'fast',
-        '-b:v', "#{video_bitrate_kbps}k",
-        '-maxrate', "#{video_bitrate_kbps * 2}k",
-        '-bufsize', "#{video_bitrate_kbps * 4}k",
-        '-c:a', 'aac', '-b:a', '128k',
-        '-movflags', '+faststart',
-        compressed_path,
-        out: File::NULL, err: File::NULL
-      )
+      compressed = run_ffmpeg_compression(original_path, compressed_path, video_bitrate_kbps)
+      compressed_size = File.size(compressed_path) if compressed && File.exist?(compressed_path)
 
-      if File.exist?(compressed_path) && File.size(compressed_path) < file_size
+      if compressed_size.present? && compressed_size <= VIDEO_LIMIT
         FileUtils.mv(compressed_path, original_path)
         # Reset memoized ffmpeg data since the file changed
         @ffmpeg_data = nil
         Rails.logger.info("[media-compress] Compressed to #{File.size(original_path)} bytes")
+      elsif compressed_size.present? && compressed_size < file_size
+        Rails.logger.warn("[media-compress] Compression output #{compressed_size} bytes still exceeds #{VIDEO_LIMIT}, rejecting upload")
+        reject_oversized_video!(:still_oversized, compressed_size)
       else
-        Rails.logger.warn('[media-compress] Compression did not reduce file size, keeping original')
-        File.delete(compressed_path) if File.exist?(compressed_path)
+        Rails.logger.warn('[media-compress] Compression did not produce an acceptable output, rejecting upload')
+        reject_oversized_video!(:compression_failed, file_size)
       end
     rescue => e
       Rails.logger.warn("[media-compress] Compression failed: #{e.message}")
+      reject_oversized_video!(:compression_failed, file_size)
+    ensure
       File.delete(compressed_path) if compressed_path && File.exist?(compressed_path)
     end
   end
 
   def check_video_dimensions
     return unless (video? || gifv?) && file.queued_for_write[:original].present?
+    return if errors[:file].present?
 
     movie = ffmpeg_data(file.queued_for_write[:original].path)
 
@@ -427,6 +429,56 @@ class MediaAttachment < ApplicationRecord
     raise Mastodon::StreamValidationError, 'Video has no video stream' if movie.width.nil? || movie.frame_rate.nil?
     raise Mastodon::DimensionsValidationError, "#{movie.width}x#{movie.height} videos are not supported" if movie.width * movie.height > MAX_VIDEO_MATRIX_LIMIT
     raise Mastodon::DimensionsValidationError, "#{movie.frame_rate.floor}fps videos are not supported" if movie.frame_rate.floor > MAX_VIDEO_FRAME_RATE
+  end
+
+  def reject_oversized_video!(reason, size)
+    Rails.logger.warn("[media-compress] Rejecting oversized video (#{reason}): #{size} bytes exceeds #{VIDEO_LIMIT}")
+    errors.add(:file, :too_large)
+  end
+
+  def run_ffmpeg_compression(original_path, compressed_path, video_bitrate_kbps)
+    pid = Process.spawn(
+      Rails.configuration.x.ffmpeg_binary, '-nostdin', '-y', '-i', original_path,
+      '-c:v', 'libx264', '-preset', 'fast',
+      '-b:v', "#{video_bitrate_kbps}k",
+      '-maxrate', "#{video_bitrate_kbps * 2}k",
+      '-bufsize', "#{video_bitrate_kbps * 4}k",
+      '-c:a', 'aac', '-b:a', '128k',
+      '-movflags', '+faststart',
+      compressed_path,
+      out: File::NULL, err: File::NULL, pgroup: true
+    )
+
+    _pid, status = Timeout.timeout(VIDEO_COMPRESSION_TIMEOUT) { Process.wait2(pid) }
+    status.success?
+  rescue Timeout::Error
+    Rails.logger.warn("[media-compress] Compression exceeded #{VIDEO_COMPRESSION_TIMEOUT}s, terminating ffmpeg")
+    terminate_ffmpeg_process(pid)
+    false
+  rescue SystemCallError => e
+    Rails.logger.warn("[media-compress] Compression process failed: #{e.message}")
+    false
+  ensure
+    begin
+      Process.wait(pid) if pid
+    rescue Errno::ECHILD, Errno::ESRCH
+      nil
+    end
+  end
+
+  def terminate_ffmpeg_process(pid)
+    return if pid.nil?
+
+    Process.kill('TERM', -pid)
+    Timeout.timeout(2) { Process.wait(pid) }
+  rescue Errno::ESRCH, Errno::ECHILD
+    nil
+  rescue Timeout::Error
+    begin
+      Process.kill('KILL', -pid)
+    rescue Errno::ESRCH
+      nil
+    end
   end
 
   def set_meta

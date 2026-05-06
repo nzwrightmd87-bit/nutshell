@@ -16,6 +16,8 @@ class ActivityPub::FetchRemoteKeyService < BaseService
     raise Error, "Unexpected object type for key #{uri}" unless expected_type?
     return find_actor(@json['id'], @json, suppress_errors) if actor_type?
 
+    raise Error, "Invalid owner URI for key #{uri}" unless valid_owner_uri?
+
     @owner = fetch_resource(owner_uri, true)
 
     raise Error, "Unable to fetch actor JSON #{owner_uri}" if @owner.nil?
@@ -46,11 +48,15 @@ class ActivityPub::FetchRemoteKeyService < BaseService
   end
 
   def public_key?
-    @json['publicKeyPem'].present? && @json['owner'].present?
+    @json['publicKeyPem'].present? && owner_uri.present?
   end
 
   def owner_uri
-    @owner_uri ||= value_or_id(@json['owner'])
+    @owner_uri ||= safe_value_or_id(@json['owner'])
+  end
+
+  def valid_owner_uri?
+    owner_uri.present? && Request.valid_url?(owner_uri)
   end
 
   def expected_owner_type?
@@ -58,6 +64,13 @@ class ActivityPub::FetchRemoteKeyService < BaseService
   end
 
   def confirmed_owner?
-    value_or_id(@owner['publicKey']) == @json['id']
+    safe_value_or_id(@owner['publicKey']) == @json['id']
+  end
+
+  def safe_value_or_id(value)
+    return value if value.is_a?(String)
+    return value['id'] if value.is_a?(Hash) && value['id'].is_a?(String)
+
+    nil
   end
 end

@@ -10,6 +10,7 @@ class BillingController < ApplicationController
   layout 'auth'
 
   before_action :set_selected_plan
+  before_action :require_checkout_post!, only: :checkout
 
   def show; end
 
@@ -46,6 +47,12 @@ class BillingController < ApplicationController
 
   def set_selected_plan
     @selected_plan = params[:plan].to_s == 'yearly' ? :yearly : :monthly
+  end
+
+  def require_checkout_post!
+    return if request.post?
+
+    redirect_to billing_path(plan: @selected_plan), status: :see_other
   end
 
   def fallback_to_static_link

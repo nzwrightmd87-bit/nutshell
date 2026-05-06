@@ -31,9 +31,13 @@ class AddAccountToCollectionService
 
       @collection.collection_items.create!(
         account: @account,
-        state: :accepted
+        state: collection_item_state
       )
     end
+  end
+
+  def collection_item_state
+    @account.feature_policy_for_account(@collection.account) == :manual ? :pending : :accepted
   end
 
   def distribute_add_activity

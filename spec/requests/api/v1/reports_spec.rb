@@ -143,6 +143,32 @@ RSpec.describe 'Reports' do
             .to start_with('application/json')
         end
       end
+
+      context 'when the reported account blocks the reporter' do
+        before do
+          target_account.block!(user.account)
+        end
+
+        it 'returns http not found' do
+          expect { subject }.to_not change(Report, :count)
+
+          expect(response).to have_http_status(404)
+          expect(response.content_type)
+            .to start_with('application/json')
+        end
+      end
+
+      context 'when the collection is not discoverable' do
+        let(:collection) { Fabricate(:collection, account: target_account, discoverable: false) }
+
+        it 'returns http not found' do
+          expect { subject }.to_not change(Report, :count)
+
+          expect(response).to have_http_status(404)
+          expect(response.content_type)
+            .to start_with('application/json')
+        end
+      end
     end
   end
 end

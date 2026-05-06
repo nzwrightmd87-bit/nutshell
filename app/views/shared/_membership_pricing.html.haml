@@ -20,6 +20,7 @@
         - else
           %p.membership-paywall__savings= t('auth.sign_up.monthly_plan_note')
 
-        = link_to t('auth.sign_up.square_checkout'), checkout_billing_path(plan: plan), class: 'button button-secondary membership-paywall__cta'
+        - checkout_button_options = { method: :post, class: 'button button-secondary membership-paywall__cta', form: { class: 'membership-paywall__checkout' } }
+        = button_to t('auth.sign_up.square_checkout'), checkout_billing_path(plan: plan), checkout_button_options
 
   %p.membership-paywall__hint= t('auth.sign_up.continue_after_payment')

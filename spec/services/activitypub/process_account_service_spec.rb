@@ -83,6 +83,99 @@ RSpec.describe ActivityPub::ProcessAccountService do
     end
   end
 
+  context 'with malformed profile text fields' do
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        name: true,
+        summary: ['not a string'],
+      }.with_indifferent_access
+    end
+
+    it 'ignores non-string name and summary values' do
+      account = nil
+
+      expect { account = subject.call('alice', 'example.com', payload) }
+        .to_not raise_error
+      expect(account.display_name).to eq ''
+      expect(account.note).to eq ''
+    end
+  end
+
+  context 'with malformed remote image descriptions' do
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        image: {
+          type: 'Image',
+          url: 'https://foo.test/image.png',
+          name: ['not a string'],
+        },
+        icon: {
+          type: 'Image',
+          url: 'https://foo.test/icon.png',
+          summary: { '@value' => 'not a string' },
+        },
+      }.with_indifferent_access
+    end
+
+    before do
+      stub_request(:get, 'https://foo.test/image.png').to_return(request_fixture('avatar.txt'))
+      stub_request(:get, 'https://foo.test/icon.png').to_return(request_fixture('avatar.txt'))
+    end
+
+    it 'ignores non-string image descriptions' do
+      account = nil
+
+      expect { account = subject.call('alice', 'example.com', payload) }
+        .to_not raise_error
+      expect(account).to have_attributes(
+        avatar_remote_url: 'https://foo.test/icon.png',
+        header_remote_url: 'https://foo.test/image.png',
+        avatar_description: '',
+        header_description: ''
+      )
+    end
+  end
+
+  context 'with remote image descriptions' do
+    let(:long_description) { " #{'x' * (MediaAttachment::MAX_DESCRIPTION_LENGTH + 10)} " }
+
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        image: {
+          type: 'Image',
+          url: 'https://foo.test/image.png',
+          summary: long_description,
+        },
+        icon: {
+          type: 'Image',
+          url: 'https://foo.test/icon.png',
+          name: ' Avatar description ',
+        },
+      }.with_indifferent_access
+    end
+
+    before do
+      stub_request(:get, 'https://foo.test/image.png').to_return(request_fixture('avatar.txt'))
+      stub_request(:get, 'https://foo.test/icon.png').to_return(request_fixture('avatar.txt'))
+    end
+
+    it 'strips and truncates string descriptions' do
+      account = subject.call('alice', 'example.com', payload)
+
+      expect(account.avatar_description).to eq 'Avatar description'
+      expect(account.header_description).to eq 'x' * MediaAttachment::MAX_DESCRIPTION_LENGTH
+    end
+  end
+
   context 'with inlined feature collection' do
     let(:payload) do
       {
@@ -311,6 +404,34 @@ RSpec.describe ActivityPub::ProcessAccountService do
         account = subject.call('user1', 'foo.test', payload)
 
         expect(account.feature_approval_policy).to eq 0b100000000000000001100
+      end
+
+      context 'with a malformed interaction policy' do
+        before do
+          payload[:interactionPolicy] = 'https://foo.test/policy'
+        end
+
+        it 'ignores the malformed policy' do
+          account = nil
+
+          expect { account = subject.call('user1', 'foo.test', payload) }
+            .to_not raise_error
+          expect(account.feature_approval_policy).to be_zero
+        end
+      end
+
+      context 'with a malformed canFeature policy' do
+        before do
+          payload[:interactionPolicy][:canFeature] = ['https://foo.test/followers']
+        end
+
+        it 'ignores the malformed policy' do
+          account = nil
+
+          expect { account = subject.call('user1', 'foo.test', payload) }
+            .to_not raise_error
+          expect(account.feature_approval_policy).to be_zero
+        end
       end
     end
   end

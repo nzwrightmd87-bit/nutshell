@@ -61,4 +61,20 @@ RSpec.describe REST::CollectionSerializer do
       end
     end
   end
+
+  context 'when the collection has non-accepted items' do
+    let!(:accepted_item) { Fabricate(:collection_item, collection:) }
+    let!(:revoked_item) { Fabricate(:collection_item, collection:, state: :revoked) }
+
+    it 'only includes accepted items in the public item list and count' do
+      expect(subject)
+        .to include(
+          'item_count' => 1,
+          'items' => contain_exactly(a_hash_including('id' => accepted_item.id.to_s))
+        )
+
+      expect(subject['items'].pluck('id'))
+        .to_not include(revoked_item.id.to_s)
+    end
+  end
 end

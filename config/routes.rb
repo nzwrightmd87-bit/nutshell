@@ -221,7 +221,7 @@ Rails.application.routes.draw do
   resource :billing, only: :show, controller: :billing do
     get :success
     get :cancel
-    get :checkout
+    post :checkout
   end
   get '/blackenvelope', to: redirect('/black_envelope', status: 302)
   get '/black_envelope', to: 'black_envelope_launches#show'

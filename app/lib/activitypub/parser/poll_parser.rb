@@ -12,7 +12,7 @@ class ActivityPub::Parser::PollParser
   end
 
   def valid?
-    equals_or_includes?(@json['type'], 'Question') && items.is_a?(Array)
+    equals_or_includes?(@json['type'], 'Question') && raw_items.is_a?(Array)
   end
 
   # @param [Poll] previous_record
@@ -52,6 +52,12 @@ class ActivityPub::Parser::PollParser
   private
 
   def items
-    (@json['anyOf'] || @json['oneOf'])&.take(MAX_ITEMS)
+    return [] unless raw_items.is_a?(Array)
+
+    raw_items.take(MAX_ITEMS).select { |item| item.is_a?(Hash) }
+  end
+
+  def raw_items
+    @json['anyOf'] || @json['oneOf']
   end
 end

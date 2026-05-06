@@ -20,10 +20,11 @@ RSpec.describe ActivityPub::VerifyFeaturedItemService do
       '@context' => 'https://www.w3.org/ns/activitystreams',
       'type' => 'FeatureAuthorization',
       'id' => 'https://example.com/auth/1',
-      'interactionTarget' => 'https://example.com/actor/1',
+      'interactionTarget' => verification_interaction_target,
       'interactingObject' => collection.uri,
     }
   end
+  let(:verification_interaction_target) { 'https://example.com/actor/1' }
   let(:verification_request) do
     stub_request(:get, 'https://example.com/auth/1')
       .to_return_json(
@@ -81,6 +82,21 @@ RSpec.describe ActivityPub::VerifyFeaturedItemService do
 
       expect(collection_item.account_id).to be_nil
       expect(collection_item).to be_rejected
+    end
+  end
+
+  context 'when the authorization targets a different account on the same host' do
+    let(:verification_interaction_target) { 'https://example.com/actor/2' }
+
+    before { featured_account }
+
+    it 'does not verify the item' do
+      subject.call(collection_item)
+
+      expect(verification_request).to have_been_requested
+
+      expect(collection_item.reload.account_id).to be_nil
+      expect(collection_item).to be_pending
     end
   end
 end

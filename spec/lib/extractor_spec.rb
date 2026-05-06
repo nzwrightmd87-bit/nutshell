@@ -53,6 +53,30 @@ RSpec.describe Extractor do
       expect(extracted).to eq [{ hashtag: 'world', indices: [6, 12] }]
     end
 
+    it 'returns hashtags immediately preceded by punctuation' do
+      texts = ['hello (#world)', 'hello .#world', 'hello,#world', 'hello -#world']
+
+      texts.each do |text|
+        extracted = described_class.extract_hashtags_with_indices(text)
+        expect(extracted.map { |item| item[:hashtag] }).to eq ['world']
+      end
+    end
+
+    it 'does not return hashtags inside URL anchors' do
+      texts = [
+        'Check this out https://medium.com/@alice/some-article#.abcdef123',
+        'https://en.wikipedia.org/wiki/Ghostbusters_(song)#Lawsuit',
+        'https://gcc.gnu.org/bugzilla/show_bug.cgi?id=111895#c4',
+        'https://example.org/testé#foo',
+        'https://en.wikipedia.org/wiki/Ghostbusters_(song)?foo=#Lawsuit',
+        'https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.#Decision',
+      ]
+
+      texts.each do |text|
+        expect(described_class.extract_hashtags_with_indices(text)).to eq []
+      end
+    end
+
     it 'does not exclude normal hash text before ://' do
       text = '#hashtag://'
       extracted = described_class.extract_hashtags_with_indices(text)

@@ -147,5 +147,36 @@ RSpec.describe ActivityPub::Activity::Reject do
           .to change { quote.reload.rejected? }.from(false).to(true)
       end
     end
+
+    context 'with a FeatureRequest' do
+      let(:sender) { Fabricate(:account, domain: 'example.com') }
+      let(:recipient) { Fabricate(:account) }
+      let(:collection) { Fabricate(:collection, account: recipient) }
+      let(:collection_item) { Fabricate(:collection_item, collection:, account: sender, state: :pending, approval_uri: nil) }
+
+      let(:object_json) do
+        {
+          id: collection_item.activity_uri,
+          type: 'FeatureRequest',
+          actor: ActivityPub::TagManager.instance.uri_for(recipient),
+          object: ActivityPub::TagManager.instance.uri_for(sender),
+          instrument: ActivityPub::TagManager.instance.uri_for(collection),
+        }.with_indifferent_access
+      end
+
+      it 'marks the collection item as rejected' do
+        expect { subject.perform }
+          .to change { collection_item.reload.rejected? }.from(false).to(true)
+      end
+
+      context 'when rejecting by request identifier' do
+        let(:object_json) { collection_item.activity_uri }
+
+        it 'marks the collection item as rejected' do
+          expect { subject.perform }
+            .to change { collection_item.reload.rejected? }.from(false).to(true)
+        end
+      end
+    end
   end
 end

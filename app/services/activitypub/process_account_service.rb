@@ -125,8 +125,8 @@ class ActivityPub::ProcessAccountService < BaseService
 
   def set_immediate_attributes!
     @account.featured_collection_url = valid_collection_uri(@json['featured'])
-    @account.display_name            = (@json['name'] || '')[0...(Account::DISPLAY_NAME_LENGTH_HARD_LIMIT)]
-    @account.note                    = (@json['summary'] || '')[0...(Account::NOTE_LENGTH_HARD_LIMIT)]
+    @account.display_name            = account_text_field(@json['name'], Account::DISPLAY_NAME_LENGTH_HARD_LIMIT)
+    @account.note                    = account_text_field(@json['summary'], Account::NOTE_LENGTH_HARD_LIMIT)
     @account.locked                  = @json['manuallyApprovesFollowers'] || false
     @account.fields                  = property_values || {}
     @account.also_known_as           = as_array(@json['alsoKnownAs'] || []).take(Account::ALSO_KNOWN_AS_HARD_LIMIT).map { |item| value_or_id(item) }
@@ -231,8 +231,7 @@ class ActivityPub::ProcessAccountService < BaseService
     if value.is_a?(Hash) && value['type'] == 'Image'
       url = first_of_value(value['url'])
       url = url['href'] if url.is_a?(Hash)
-      description = value['summary'].presence || value['name'].presence
-      description = description.strip[0...MediaAttachment::MAX_DESCRIPTION_LENGTH] if description.present?
+      description = image_description(value)
     else
       url = value
     end
@@ -243,6 +242,16 @@ class ActivityPub::ProcessAccountService < BaseService
     description = nil unless description.is_a?(String)
 
     [url, description]
+  end
+
+  def image_description(image)
+    description = image_string_value(image['summary']).presence || image_string_value(image['name']).presence
+
+    description&.strip&.[](0...MediaAttachment::MAX_DESCRIPTION_LENGTH)
+  end
+
+  def image_string_value(value)
+    value if value.is_a?(String)
   end
 
   def public_key
@@ -383,6 +392,15 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def feature_approval_policy
-    ActivityPub::Parser::InteractionPolicyParser.new(@json.dig('interactionPolicy', 'canFeature'), @account).bitmap
+    interaction_policy = @json['interactionPolicy']
+    can_feature = interaction_policy['canFeature'] if interaction_policy.is_a?(Hash)
+
+    ActivityPub::Parser::InteractionPolicyParser.new(can_feature, @account).bitmap
+  end
+
+  def account_text_field(value, limit)
+    return '' unless value.is_a?(String)
+
+    value[0...limit]
   end
 end

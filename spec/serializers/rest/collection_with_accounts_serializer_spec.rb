@@ -72,13 +72,16 @@ RSpec.describe REST::CollectionWithAccountsSerializer do
 
   context 'when a non-accepted item has an account' do
     let!(:pending_account) { Fabricate(:account) }
+    let!(:pending_item) { Fabricate(:collection_item, collection:, account: pending_account, state: :pending) }
 
     before do
-      Fabricate(:collection_item, collection:, account: pending_account, state: :pending)
       collection.reload
     end
 
-    it 'does not include the non-accepted item account in the side-loaded accounts' do
+    it 'does not include the non-accepted item or account in the response' do
+      expect(subject['collection']['items'].pluck('id'))
+        .to_not include(pending_item.id.to_s)
+
       expect(subject['accounts'].pluck('id'))
         .to contain_exactly(accounts.first.id.to_s, accounts.second.id.to_s, accounts.third.id.to_s)
     end

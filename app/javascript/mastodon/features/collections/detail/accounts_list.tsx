@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useRef, useState } from 'react';
+import { Fragment, useCallback, useRef } from 'react';
 
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 
@@ -114,42 +114,6 @@ const RevokeControls: React.FC<{
   );
 };
 
-const SensitiveScreen: React.FC<{
-  sensitive: boolean | undefined;
-  focusTargetRef: React.RefObject<HTMLHeadingElement>;
-  children: React.ReactNode;
-}> = ({ sensitive, focusTargetRef, children }) => {
-  const [isVisible, setIsVisible] = useState(!sensitive);
-
-  const showAnyway = useCallback(() => {
-    setIsVisible(true);
-    setTimeout(() => {
-      focusTargetRef.current?.focus();
-    }, 0);
-  }, [focusTargetRef]);
-
-  if (isVisible) {
-    return children;
-  }
-
-  return (
-    <div className={classes.sensitiveWarning}>
-      <FormattedMessage
-        id='collections.detail.sensitive_note'
-        defaultMessage='This collection contains accounts and content that may be sensitive to some users.'
-        tagName='p'
-      />
-      <Button onClick={showAnyway}>
-        <FormattedMessage
-          id='content_warning.show'
-          defaultMessage='Show anyway'
-          tagName={Fragment}
-        />
-      </Button>
-    </div>
-  );
-};
-
 /**
  * Returns the collection's account items. If the current user's account
  * is part of the collection, it will be returned separately.
@@ -188,7 +152,6 @@ export const CollectionAccountsList: React.FC<{
   const intl = useIntl();
   const listHeadingRef = useRef<HTMLHeadingElement>(null);
 
-  const isOwnCollection = collection?.account_id === me;
   const { items, currentUserInCollection } = getCollectionItems(collection);
 
   return (
@@ -244,25 +207,19 @@ export const CollectionAccountsList: React.FC<{
           {intl.formatMessage(messages.accounts)}
         </h3>
       )}
-      {collection && (
-        <SensitiveScreen
-          sensitive={!isOwnCollection && collection.sensitive}
-          focusTargetRef={listHeadingRef}
-        >
-          {items.map(({ account_id }, index, items) => (
-            <Article
-              key={account_id}
-              aria-posinset={index + (currentUserInCollection ? 2 : 1)}
-              aria-setsize={items.length}
-            >
-              <AccountItem
-                accountId={account_id}
-                collectionOwnerId={collection.account_id}
-              />
-            </Article>
-          ))}
-        </SensitiveScreen>
-      )}
+      {collection &&
+        items.map(({ account_id }, index, items) => (
+          <Article
+            key={account_id}
+            aria-posinset={index + (currentUserInCollection ? 2 : 1)}
+            aria-setsize={items.length}
+          >
+            <AccountItem
+              accountId={account_id}
+              collectionOwnerId={collection.account_id}
+            />
+          </Article>
+        ))}
     </ItemList>
   );
 };

@@ -12,6 +12,7 @@ export type ApiUserQuotePolicy = 'automatic' | 'manual' | 'denied' | 'unknown';
 interface ApiQuoteEmptyJSON {
   state: Exclude<ApiQuoteState, 'accepted'>;
   quoted_status: null;
+  quoted_status_id?: string;
 }
 
 interface ApiNestedQuoteJSON {

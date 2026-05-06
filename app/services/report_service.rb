@@ -94,7 +94,9 @@ class ReportService < BaseService
   end
 
   def reported_collection_ids
-    @target_account.collections.find(Array(@collection_ids)).pluck(:id)
+    collections = Array.wrap(@target_account.collections.find(Array(@collection_ids)))
+    collections.each { |collection| raise ActiveRecord::RecordNotFound unless CollectionPolicy.new(@source_account, collection).show? }
+    collections.map(&:id)
   end
 
   def payload

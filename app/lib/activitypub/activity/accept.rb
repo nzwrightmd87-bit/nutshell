@@ -5,12 +5,15 @@ class ActivityPub::Activity::Accept < ActivityPub::Activity
     return accept_follow_for_relay if relay_follow?
     return accept_follow!(follow_request_from_object) unless follow_request_from_object.nil?
     return accept_quote!(quote_request_from_object) unless quote_request_from_object.nil?
+    return accept_feature_request!(feature_request_from_object) unless feature_request_from_object.nil?
 
     case @object['type']
     when 'Follow'
       accept_embedded_follow
     when 'QuoteRequest'
       accept_embedded_quote_request
+    when 'FeatureRequest'
+      accept_embedded_feature_request
     end
   end
 
@@ -55,6 +58,30 @@ class ActivityPub::Activity::Accept < ActivityPub::Activity
 
     DistributionWorker.perform_async(quote.status_id, { 'update' => true })
     ActivityPub::StatusUpdateDistributionWorker.perform_async(quote.status_id, { 'updated_at' => Time.now.utc.iso8601 })
+  end
+
+  def accept_embedded_feature_request
+    accept_feature_request!(feature_request_from_request_json(@object))
+  end
+
+  def accept_feature_request!(collection_item)
+    approval_uri = value_or_id(first_of_value(@json['result']))
+    return if collection_item.nil? || unsupported_uri_scheme?(approval_uri) || collection_item.account != @account || !collection_item.collection.local? || !collection_item.pending?
+
+    collection_item.accept!(approval_uri:)
+
+    distribute_featured_item_add(collection_item) if federate_collection_item?(collection_item)
+  end
+
+  def federate_collection_item?(collection_item)
+    Mastodon::Feature.collections_federation_enabled? && collection_item.collection.discoverable?
+  end
+
+  def distribute_featured_item_add(collection_item)
+    ActivityPub::AccountRawDistributionWorker.perform_async(
+      ActiveModelSerializers::SerializableResource.new(collection_item, serializer: ActivityPub::AddFeaturedItemSerializer, adapter: ActivityPub::Adapter).to_json,
+      collection_item.collection.account_id
+    )
   end
 
   def accept_follow_for_relay

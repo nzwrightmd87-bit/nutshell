@@ -53,16 +53,19 @@ module Extractor
     possible_entries
   end
 
-  def extract_hashtags_with_indices(text, _options = {})
+  def extract_hashtags_with_indices(text, options = {})
     return [] unless text&.index(/[#＃]/)
 
     possible_entries = []
+    url_entities = options.fetch(:check_url_overlap, true) ? extract_urls_with_indices(text) : []
 
     text.scan(Tag::HASHTAG_RE) do |hash_text, _|
       match_data     = $LAST_MATCH_INFO
       start_position = match_data.char_begin(1) - 1
       end_position   = match_data.char_end(1)
       after          = ::Regexp.last_match.post_match
+
+      next if overlapping_url?(url_entities, start_position, end_position)
 
       if after.start_with?('://')
         hash_text.match(/(.+)(https?\Z)/) do |matched|
@@ -84,6 +87,13 @@ module Extractor
     end
 
     possible_entries
+  end
+
+  def overlapping_url?(url_entities, start_position, end_position)
+    url_entities.any? do |url|
+      url_start_position, url_end_position = url[:indices]
+      start_position < url_end_position && end_position > url_start_position
+    end
   end
 
   def extract_extra_uris_with_indices(text)

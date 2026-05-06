@@ -107,6 +107,24 @@ RSpec.describe CreateCollectionService do
 
             expect(ActivityPub::FeatureRequestWorker).to have_enqueued_sidekiq_job.exactly(2).times
           end
+
+          context 'when a remote account only allows manual feature approval' do
+            let(:automatic_account) { Fabricate(:remote_account, feature_approval_policy: InteractionPolicy::POLICY_FLAGS[:public] << 16) }
+            let(:manual_account) { Fabricate(:remote_account, feature_approval_policy: InteractionPolicy::POLICY_FLAGS[:public]) }
+            let(:accounts) { [automatic_account, manual_account] }
+
+            it 'stores manual approvals as pending and excludes them from federated collection JSON', feature: :collections_federation do
+              collection = subject.call(params, author)
+
+              expect(collection.collection_items.find_by(account: automatic_account)).to be_accepted
+              expect(collection.collection_items.find_by(account: manual_account)).to be_pending
+
+              serialized_collection = serialized_record_json(collection, ActivityPub::FeaturedCollectionSerializer, adapter: ActivityPub::Adapter)
+              featured_objects = serialized_collection['orderedItems'].map { |item| item['featuredObject'] }
+              expect(featured_objects).to include(ActivityPub::TagManager.instance.uri_for(automatic_account))
+              expect(featured_objects).to_not include(ActivityPub::TagManager.instance.uri_for(manual_account))
+            end
+          end
         end
       end
 
