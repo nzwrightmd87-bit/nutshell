@@ -92,8 +92,13 @@ module Account::Mappings
     end
   end
 
-  def preload_relations!(...)
-    @preloaded_relations = relations_map(...)
+  def preload_relations!(account_ids, domains = nil, **options)
+    account_ids = Array(account_ids).compact
+    domains = Array(domains).compact
+
+    @preloaded_relation_account_ids = account_ids.map(&:to_i)
+    @preloaded_relation_domains = domains
+    @preloaded_relations = relations_map(account_ids, domains, **options)
   end
 
   private

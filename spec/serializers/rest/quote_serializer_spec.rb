@@ -72,6 +72,27 @@ RSpec.describe REST::QuoteSerializer do
     end
   end
 
+  context 'with an accepted quote of a blocked user after a partial relation preload' do
+    let(:quoted_account) { Fabricate(:account) }
+    let(:top_level_account) { Fabricate(:account) }
+    let(:quoted_status) { Fabricate(:status, account: quoted_account, visibility: :public) }
+    let(:status) { Fabricate(:status, account: top_level_account, visibility: :public) }
+    let(:quote) { Fabricate(:quote, status: status, quoted_status: quoted_status, state: :accepted) }
+
+    before do
+      quoted_account.block!(current_user.account)
+      current_user.account.preload_relations!([top_level_account.id])
+    end
+
+    it 'returns expected values' do
+      expect(subject.deep_symbolize_keys)
+        .to include(
+          quoted_status: nil,
+          state: 'unauthorized'
+        )
+    end
+  end
+
   context 'with a recursive accepted quote' do
     let(:status) { Fabricate(:status) }
     let(:quote) { Fabricate(:quote, status: status, quoted_status: status, state: :accepted) }

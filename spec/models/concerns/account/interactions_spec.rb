@@ -406,11 +406,33 @@ RSpec.describe Account::Interactions do
           expect(result).to be true
         end
       end
+
+      context 'when relations are preloaded for a different account' do
+        it 'falls back to the database to get the result' do
+          account.preload_relations!([Fabricate(:account).id])
+
+          result = nil
+          expect { result = subject }.to execute_queries
+
+          expect(result).to be true
+        end
+      end
     end
 
     context 'when not blocked by target_account' do
       it 'returns false' do
         expect(subject).to be false
+      end
+
+      context 'when relations are preloaded for the target account' do
+        it 'does not query the database to get the result' do
+          account.preload_relations!([target_account.id])
+
+          result = nil
+          expect { result = subject }.to_not execute_queries
+
+          expect(result).to be false
+        end
       end
     end
   end
