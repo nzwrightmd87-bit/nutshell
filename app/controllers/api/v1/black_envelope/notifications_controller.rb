@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Api::V1::BlackEnvelope::NotificationsController < Api::BaseController
+  before_action -> { doorkeeper_authorize! :read, :'read:notifications' }
   before_action :require_user!
 
   def unread_count
