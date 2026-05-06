@@ -83,6 +83,27 @@ RSpec.describe ActivityPub::ProcessAccountService do
     end
   end
 
+  context 'with malformed profile text fields' do
+    let(:payload) do
+      {
+        id: 'https://foo.test',
+        type: 'Actor',
+        inbox: 'https://foo.test/inbox',
+        name: true,
+        summary: ['not a string'],
+      }.with_indifferent_access
+    end
+
+    it 'ignores non-string name and summary values' do
+      account = nil
+
+      expect { account = subject.call('alice', 'example.com', payload) }
+        .to_not raise_error
+      expect(account.display_name).to eq ''
+      expect(account.note).to eq ''
+    end
+  end
+
   context 'with inlined feature collection' do
     let(:payload) do
       {

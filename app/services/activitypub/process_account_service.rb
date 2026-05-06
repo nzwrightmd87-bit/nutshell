@@ -125,8 +125,8 @@ class ActivityPub::ProcessAccountService < BaseService
 
   def set_immediate_attributes!
     @account.featured_collection_url = valid_collection_uri(@json['featured'])
-    @account.display_name            = (@json['name'] || '')[0...(Account::DISPLAY_NAME_LENGTH_HARD_LIMIT)]
-    @account.note                    = (@json['summary'] || '')[0...(Account::NOTE_LENGTH_HARD_LIMIT)]
+    @account.display_name            = account_text_field(@json['name'], Account::DISPLAY_NAME_LENGTH_HARD_LIMIT)
+    @account.note                    = account_text_field(@json['summary'], Account::NOTE_LENGTH_HARD_LIMIT)
     @account.locked                  = @json['manuallyApprovesFollowers'] || false
     @account.fields                  = property_values || {}
     @account.also_known_as           = as_array(@json['alsoKnownAs'] || []).take(Account::ALSO_KNOWN_AS_HARD_LIMIT).map { |item| value_or_id(item) }
@@ -387,5 +387,11 @@ class ActivityPub::ProcessAccountService < BaseService
     can_feature = interaction_policy['canFeature'] if interaction_policy.is_a?(Hash)
 
     ActivityPub::Parser::InteractionPolicyParser.new(can_feature, @account).bitmap
+  end
+
+  def account_text_field(value, limit)
+    return '' unless value.is_a?(String)
+
+    value[0...limit]
   end
 end
