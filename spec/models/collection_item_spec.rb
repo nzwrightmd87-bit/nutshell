@@ -60,5 +60,20 @@ RSpec.describe CollectionItem do
 
       expect(item.activity_uri).to be_present
     end
+
+    it 'prevents direct item creation beyond the local collection item limit' do
+      Collection::MAX_ITEMS.times do
+        Fabricate(:collection_item, collection:, account: Fabricate(:account))
+      end
+
+      item = collection.collection_items.build(account: other_account)
+      expected_error = I18n.t(
+        'activerecord.errors.models.collection.attributes.collection_items.too_many',
+        count: Collection::MAX_ITEMS
+      )
+
+      expect(item).to_not be_valid
+      expect(item.errors[:base]).to include(expected_error)
+    end
   end
 end

@@ -26,14 +26,25 @@ class AddAccountToCollectionService
   end
 
   def create_collection_item
-    @collection.collection_items.create!(
-      account: @account,
-      state: :accepted
-    )
+    @collection.with_lock do
+      ensure_collection_has_capacity!
+
+      @collection.collection_items.create!(
+        account: @account,
+        state: :accepted
+      )
+    end
   end
 
   def distribute_add_activity
     ActivityPub::AccountRawDistributionWorker.perform_async(add_activity_json, @collection.account_id)
+  end
+
+  def ensure_collection_has_capacity!
+    return unless @collection.max_items_reached?
+
+    @collection.errors.add(:collection_items, :too_many, count: Collection::MAX_ITEMS)
+    raise Mastodon::ValidationError, @collection.errors.full_messages.to_sentence
   end
 
   def distribute_feature_request_activity

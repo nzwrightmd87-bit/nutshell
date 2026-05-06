@@ -34,6 +34,27 @@ RSpec.describe 'Api::V1Alpha::CollectionItems', feature: :collections do
         end
       end
 
+      context 'when the collection already has the maximum number of items' do
+        let(:other_account) { Fabricate(:account) }
+        let(:params) { { account_id: other_account.id } }
+
+        before do
+          user.account.follow!(other_account)
+
+          Collection::MAX_ITEMS.times do
+            Fabricate(:collection_item, collection:, account: Fabricate(:account))
+          end
+        end
+
+        it 'returns http unprocessable content without creating another item' do
+          expect do
+            subject
+          end.to_not change(collection.collection_items, :count)
+
+          expect(response).to have_http_status(422)
+        end
+      end
+
       context 'when the user does not follow the account' do
         let(:other_account) { Fabricate(:account) }
         let(:params) { { account_id: other_account.id } }

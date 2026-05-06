@@ -25,6 +25,22 @@ RSpec.describe AddAccountToCollectionService do
         expect(new_item.account).to eq account
       end
 
+      context 'when the collection already has the maximum number of items' do
+        before do
+          Collection::MAX_ITEMS.times do
+            Fabricate(:collection_item, collection:, account: Fabricate(:account))
+          end
+        end
+
+        it 'raises a validation error and does not add another item' do
+          expect do
+            expect do
+              subject.call(collection, account)
+            end.to raise_error(Mastodon::ValidationError)
+          end.to_not change(collection.collection_items, :count)
+        end
+      end
+
       context 'when the account is local' do
         it 'federates an `Add` activity', feature: :collections_federation do
           subject.call(collection, account)

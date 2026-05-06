@@ -70,6 +70,10 @@ class Collection < ApplicationRecord
     result
   end
 
+  def max_items_reached?
+    collection_items.count >= MAX_ITEMS
+  end
+
   def tag_name
     tag&.formatted_name
   end

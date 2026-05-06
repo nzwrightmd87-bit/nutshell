@@ -33,6 +33,7 @@ class CollectionItem < ApplicationRecord
   validates :account, presence: true, if: :accepted?
   validates :object_uri, presence: true, if: -> { account.nil? }
   validates :uri, presence: true, if: :remote?
+  validate :local_collection_item_count_does_not_exceed_limit, on: :create
 
   before_validation :set_position, on: :create
   before_validation :set_activity_uri, only: :create, if: :local_item_with_remote_account?
@@ -64,5 +65,18 @@ class CollectionItem < ApplicationRecord
 
   def set_activity_uri
     self.activity_uri = [ActivityPub::TagManager.instance.uri_for(collection.account), '/feature_requests/', SecureRandom.uuid].join
+  end
+
+  def local_collection_item_count_does_not_exceed_limit
+    return if collection.blank? || collection.remote? || !collection.persisted?
+    return unless collection.max_items_reached?
+
+    errors.add(
+      :base,
+      I18n.t(
+        'activerecord.errors.models.collection.attributes.collection_items.too_many',
+        count: Collection::MAX_ITEMS
+      )
+    )
   end
 end
