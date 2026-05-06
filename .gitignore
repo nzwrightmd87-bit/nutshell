@@ -33,7 +33,11 @@ stats.html
 secrets/
 DEPLOYMENT.md
 security.md
+
+# Local operational notes can contain production or customer data.
 progress.md
+progress.local.md
+progress.md.local
 security_checklist.md
 security_patching/
 security_patched/

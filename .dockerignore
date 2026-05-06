@@ -4,6 +4,8 @@
 .tmp
 DEPLOYMENT.md
 progress.md
+progress.local.md
+progress.md.local
 security.md
 security_checklist.md
 security_patching
