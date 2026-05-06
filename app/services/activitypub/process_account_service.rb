@@ -383,6 +383,9 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def feature_approval_policy
-    ActivityPub::Parser::InteractionPolicyParser.new(@json.dig('interactionPolicy', 'canFeature'), @account).bitmap
+    interaction_policy = @json['interactionPolicy']
+    can_feature = interaction_policy['canFeature'] if interaction_policy.is_a?(Hash)
+
+    ActivityPub::Parser::InteractionPolicyParser.new(can_feature, @account).bitmap
   end
 end

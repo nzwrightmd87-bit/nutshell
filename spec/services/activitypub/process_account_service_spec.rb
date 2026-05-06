@@ -312,6 +312,34 @@ RSpec.describe ActivityPub::ProcessAccountService do
 
         expect(account.feature_approval_policy).to eq 0b100000000000000001100
       end
+
+      context 'with a malformed interaction policy' do
+        before do
+          payload[:interactionPolicy] = 'https://foo.test/policy'
+        end
+
+        it 'ignores the malformed policy' do
+          account = nil
+
+          expect { account = subject.call('user1', 'foo.test', payload) }
+            .to_not raise_error
+          expect(account.feature_approval_policy).to be_zero
+        end
+      end
+
+      context 'with a malformed canFeature policy' do
+        before do
+          payload[:interactionPolicy][:canFeature] = ['https://foo.test/followers']
+        end
+
+        it 'ignores the malformed policy' do
+          account = nil
+
+          expect { account = subject.call('user1', 'foo.test', payload) }
+            .to_not raise_error
+          expect(account.feature_approval_policy).to be_zero
+        end
+      end
     end
   end
 

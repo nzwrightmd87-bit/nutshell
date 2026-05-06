@@ -22,6 +22,20 @@ RSpec.describe ActivityPub::Parser::InteractionPolicyParser do
       end
     end
 
+    context 'when the policy is not a hash' do
+      let(:json_policy) { nil }
+
+      it 'returns zero' do
+        [
+          'https://foo.test',
+          ['https://foo.test/followers'],
+          1,
+        ].each do |malformed_policy|
+          expect(described_class.new(malformed_policy, account).bitmap).to be_zero
+        end
+      end
+    end
+
     context 'with special public URI' do
       let(:json_policy) do
         {
