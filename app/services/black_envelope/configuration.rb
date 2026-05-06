@@ -66,7 +66,7 @@ module BlackEnvelope
 
       def local_development_host?(value)
         host = URI.parse(value).host.to_s
-        host.blank? || host == 'localhost' || host == '127.0.0.1' || host.end_with?('.localhost')
+        host.present? && (host == 'localhost' || host == '127.0.0.1' || host.end_with?('.localhost'))
       rescue URI::InvalidURIError
         false
       end

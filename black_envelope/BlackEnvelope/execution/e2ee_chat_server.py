@@ -160,9 +160,9 @@ def _looks_like_local_dev_host(url: str) -> bool:
     try:
         host = urllib_parse.urlparse(url).hostname or ""
     except ValueError:
-        host = ""
+        return False
 
-    return not host or host in {"127.0.0.1", "localhost"} or host.endswith(".localhost")
+    return bool(host) and (host in {"127.0.0.1", "localhost"} or host.endswith(".localhost"))
 
 
 def _default_nutshell_public_url() -> str:
