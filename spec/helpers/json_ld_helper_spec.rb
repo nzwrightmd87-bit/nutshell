@@ -81,6 +81,18 @@ RSpec.describe JsonLdHelper do
     end
   end
 
+  describe '#unsupported_uri_scheme?' do
+    it 'treats non-string values as unsupported' do
+      expect(helper.unsupported_uri_scheme?([{ 'id' => 'https://example.com/alice' }])).to be true
+      expect(helper.unsupported_uri_scheme?(42)).to be true
+    end
+
+    it 'permits http and https string values' do
+      expect(helper.unsupported_uri_scheme?('https://example.com/alice')).to be false
+      expect(helper.unsupported_uri_scheme?('http://example.com/alice')).to be false
+    end
+  end
+
   describe '#fetch_resource' do
     context 'when the second argument is false' do
       it 'returns resource even if the retrieved ID and the given URI does not match' do

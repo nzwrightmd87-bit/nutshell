@@ -75,7 +75,7 @@ module JsonLdHelper
   end
 
   def unsupported_uri_scheme?(uri)
-    uri.nil? || !uri.start_with?('http://', 'https://')
+    !uri.is_a?(String) || !uri.start_with?('http://', 'https://')
   end
 
   def non_matching_uri_hosts?(base_url, comparison_url)

@@ -79,6 +79,80 @@ RSpec.describe ActivityPub::FetchRemoteKeyService do
       end
     end
 
+    context 'when the key owner is a JSON-LD id object' do
+      let(:public_key_id) { 'https://example.com/alice-public-key.json' }
+      let(:key_json) do
+        {
+          id: public_key_id,
+          owner: { id: 'https://example.com/alice' },
+          publicKeyPem: public_key_pem,
+        }
+      end
+
+      before do
+        stub_request(:get, public_key_id).to_return(body: Oj.dump(key_json.merge({ '@context': ['https://w3id.org/security/v1'] })), headers: { 'Content-Type': 'application/activity+json' })
+      end
+
+      it 'returns the expected account' do
+        expect(account.uri).to eq 'https://example.com/alice'
+      end
+    end
+
+    context 'when a security context key has a malformed owner value' do
+      let(:public_key_id) { 'https://example.com/alice-public-key.json' }
+      let(:key_json) do
+        {
+          id: public_key_id,
+          owner: [{ id: 'https://example.com/alice' }],
+          publicKeyPem: public_key_pem,
+        }
+      end
+
+      before do
+        stub_request(:get, public_key_id).to_return(body: Oj.dump(key_json.merge({ '@context': ['https://w3id.org/security/v1'] })), headers: { 'Content-Type': 'application/activity+json' })
+      end
+
+      it 'returns nil instead of raising a type error' do
+        expect(account).to be_nil
+      end
+
+      it 'raises a controlled fetch error when errors are not suppressed' do
+        expect { subject.call(public_key_id, suppress_errors: false) }.to raise_error(described_class::Error)
+      end
+    end
+
+    context 'when a security context key has an invalid owner URI' do
+      let(:public_key_id) { 'https://example.com/alice-public-key.json' }
+      let(:key_json) do
+        {
+          id: public_key_id,
+          owner: { id: 'https:///' },
+          publicKeyPem: public_key_pem,
+        }
+      end
+
+      before do
+        stub_request(:get, public_key_id).to_return(body: Oj.dump(key_json.merge({ '@context': ['https://w3id.org/security/v1'] })), headers: { 'Content-Type': 'application/activity+json' })
+      end
+
+      it 'returns nil without fetching the malformed owner URI' do
+        expect(account).to be_nil
+      end
+    end
+
+    context 'when the owner actor has a malformed public key reference' do
+      let(:public_key_id) { 'https://example.com/alice-public-key.json' }
+      let(:actor_public_key) { [{ id: public_key_id }] }
+
+      before do
+        stub_request(:get, public_key_id).to_return(body: Oj.dump(key_json.merge({ '@context': ['https://w3id.org/security/v1'] })), headers: { 'Content-Type': 'application/activity+json' })
+      end
+
+      it 'returns nil instead of raising a type error' do
+        expect(account).to be_nil
+      end
+    end
+
     context 'when the key and owner do not match' do
       let(:public_key_id) { 'https://example.com/fake-public-key.json' }
       let(:actor_public_key) { 'https://example.com/alice-public-key.json' }
