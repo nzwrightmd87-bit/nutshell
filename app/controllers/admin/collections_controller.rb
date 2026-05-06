@@ -6,7 +6,7 @@ module Admin
     before_action :set_collection, only: :show
 
     def show
-      authorize @collection, :show?
+      authorize [:admin, @collection], :show?
     end
 
     private
