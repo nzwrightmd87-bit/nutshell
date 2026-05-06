@@ -29,6 +29,6 @@ class ActivityPub::FeatureAuthorizationsController < ActivityPub::BaseController
   end
 
   def check_feature_enabled
-    raise ActionController::RoutingError unless Mastodon::Feature.collections_enabled?
+    raise ActionController::RoutingError, 'Feature authorizations are unavailable' unless Mastodon::Feature.collections_enabled?
   end
 end
