@@ -29,6 +29,9 @@ RSpec.describe 'BlackEnvelope launches' do
         expect(response.body).to include('action="https://app.nutshell.sbs/integrations/nutshell/sso"')
         expect(response.body).to include('name="token"')
         expect(response.body).to match(/<script nonce="[^"]+">/)
+        expect(script_src_csp).to include("'nonce-#{script_nonce}'")
+        expect(style_src_csp).to_not include("'nonce-#{script_nonce}'")
+        expect(response.body).to_not include('name="style-nonce"')
         expect(response.body).not_to include('?token=')
       end
     end
@@ -57,5 +60,17 @@ RSpec.describe 'BlackEnvelope launches' do
 
       expect(response).to redirect_to('/black_envelope')
     end
+  end
+
+  def script_nonce
+    response.body.match(/<script nonce="([^"]+)">/)[1]
+  end
+
+  def script_src_csp
+    response.headers['Content-Security-Policy'].split(';').map(&:strip).find { |directive| directive.start_with?('script-src') }.to_s
+  end
+
+  def style_src_csp
+    response.headers['Content-Security-Policy'].split(';').map(&:strip).find { |directive| directive.start_with?('style-src') }.to_s
   end
 end
