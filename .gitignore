@@ -30,6 +30,9 @@ stats.html
 .env
 .env.production
 secrets/
+DEPLOYMENT.md
+security.md
+progress.md
 node_modules/
 /build/
 
