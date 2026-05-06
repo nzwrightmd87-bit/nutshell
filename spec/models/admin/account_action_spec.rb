@@ -53,6 +53,38 @@ RSpec.describe Admin::AccountAction do
       end
     end
 
+    context 'when type is "none"' do
+      let(:type) { 'none' }
+
+      before do
+        account_action.text = text
+        account_action.send_email_notification = false
+      end
+
+      context 'with custom text' do
+        let(:text) { 'Custom warning text' }
+
+        it 'creates an audit log entry for the warning' do
+          expect { subject }
+            .to change(AccountWarning, :count).by(1)
+            .and change(Admin::ActionLog.where(action: 'create', target_type: 'AccountWarning'), :count).by(1)
+
+          expect(Admin::ActionLog.last.target)
+            .to eq(AccountWarning.last)
+        end
+      end
+
+      context 'without custom text' do
+        let(:text) { nil }
+
+        it 'does not create a noisy audit log entry' do
+          expect { subject }
+            .to change(AccountWarning, :count).by(1)
+            .and not_change(Admin::ActionLog.where(action: 'create', target_type: 'AccountWarning'), :count)
+        end
+      end
+    end
+
     context 'when type is invalid' do
       let(:type) { 'whatever' }
 
