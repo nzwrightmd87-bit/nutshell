@@ -70,5 +70,22 @@ RSpec.describe AnnualReport::PublicShare do
       expect(public_share.schema_version)
         .to eq AnnualReport::SCHEMA
     end
+
+    it 'serializes through the annual reports serializer' do
+      payload = ActiveModelSerializers::SerializableResource.new(
+        AnnualReportsPresenter.new([public_share]),
+        serializer: REST::AnnualReportsSerializer,
+        scope: nil,
+        scope_name: :current_user
+      ).as_json.deep_symbolize_keys
+
+      expect(payload.dig(:annual_reports, 0, :data))
+        .to include(
+          time_series: contain_exactly(include(statuses: 3)),
+          top_hashtags: contain_exactly(name: public_tag.name, count: 2)
+        )
+      expect(payload[:statuses].pluck(:id))
+        .to contain_exactly(public_status.id.to_s)
+    end
   end
 end

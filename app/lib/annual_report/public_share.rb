@@ -3,6 +3,10 @@
 class AnnualReport::PublicShare
   delegate :account, :account_id, :year, :share_key, to: :@report
 
+  def self.model_name
+    GeneratedAnnualReport.model_name
+  end
+
   def initialize(report)
     @report = report
   end
