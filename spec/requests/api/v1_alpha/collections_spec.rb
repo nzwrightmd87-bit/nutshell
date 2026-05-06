@@ -150,12 +150,32 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
           user.account.block!(items.first.account)
         end
 
-        it 'only includes the non-blocked account in the response' do
+        it 'only includes the non-blocked account in the response and side-loaded accounts' do
           subject
 
           expect(response).to have_http_status(200)
           expect(response.parsed_body[:collection][:items].size).to eq 1
           expect(response.parsed_body[:collection][:items][0]['id']).to eq items.last.id.to_s
+          expect(response.parsed_body[:accounts].pluck('id'))
+            .to contain_exactly(collection.account_id.to_s, items.last.account_id.to_s)
+        end
+      end
+
+      context 'when the collection has a pending item with an account' do
+        let!(:pending_item) { Fabricate(:collection_item, collection:, account: Fabricate(:account), state: :pending) }
+
+        it 'does not side-load the pending item account' do
+          subject
+
+          pending_item_json = response.parsed_body[:collection][:items].find do |item|
+            item['id'] == pending_item.id.to_s
+          end
+
+          expect(response).to have_http_status(200)
+          expect(pending_item_json).to include('state' => 'pending')
+          expect(pending_item_json).to_not have_key('account_id')
+          expect(response.parsed_body[:accounts].pluck('id'))
+            .to contain_exactly(collection.account_id.to_s, *items.map { |item| item.account_id.to_s })
         end
       end
 

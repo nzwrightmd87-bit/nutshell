@@ -56,4 +56,31 @@ RSpec.describe REST::CollectionWithAccountsSerializer do
       )
     expect(subject['accounts'].size).to eq 3
   end
+
+  context 'when the requester blocked one of the item accounts' do
+    let(:current_user) { Fabricate(:user) }
+
+    before do
+      current_user.account.block!(accounts.last)
+    end
+
+    it 'does not include the blocked account in the side-loaded accounts' do
+      expect(subject['accounts'].pluck('id'))
+        .to contain_exactly(accounts.first.id.to_s, accounts.second.id.to_s)
+    end
+  end
+
+  context 'when a non-accepted item has an account' do
+    let!(:pending_account) { Fabricate(:account) }
+
+    before do
+      Fabricate(:collection_item, collection:, account: pending_account, state: :pending)
+      collection.reload
+    end
+
+    it 'does not include the non-accepted item account in the side-loaded accounts' do
+      expect(subject['accounts'].pluck('id'))
+        .to contain_exactly(accounts.first.id.to_s, accounts.second.id.to_s, accounts.third.id.to_s)
+    end
+  end
 end

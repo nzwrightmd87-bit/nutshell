@@ -10,6 +10,6 @@ class REST::CollectionWithAccountsSerializer < ActiveModel::Serializer
   end
 
   def accounts
-    [object.account] + object.collection_items.map(&:account)
+    ([object.account] + object.items_for(current_user&.account).accepted.map(&:account)).compact.uniq
   end
 end
