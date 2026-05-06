@@ -2,8 +2,11 @@
 
 class SquareWebhookService
   SIGNATURE_HEADER = 'x-square-hmacsha256-signature'
+  MAX_EVENT_AGE_SECONDS = ENV.fetch('SQUARE_WEBHOOK_MAX_EVENT_AGE_SECONDS', 1.day.to_i).to_i
+  MAX_EVENT_FUTURE_DRIFT = 5.minutes
 
   class InvalidSignature < StandardError; end
+  class InvalidEvent < StandardError; end
 
   def initialize(request)
     @request = request
@@ -34,26 +37,61 @@ class SquareWebhookService
     @parsed_event ||= JSON.parse(@raw_body)
   end
 
+  def event_id
+    parsed_event['event_id']
+  end
+
   def event_type
     parsed_event['type']
   end
 
+  def event_created_at
+    @event_created_at ||= Time.zone.parse(parsed_event['created_at'].to_s)
+  rescue ArgumentError, TypeError
+    nil
+  end
+
   def process!
-    case event_type
-    when 'subscription.created'
-      handle_subscription_created
-    when 'subscription.updated'
-      handle_subscription_updated
-    when 'invoice.payment_made'
-      handle_invoice_payment_made
-    when 'invoice.scheduled_charge_failed'
-      handle_invoice_charge_failed
-    else
-      Rails.logger.info("[paid-memberships] Ignoring Square event: #{event_type}")
+    validate_replay_protection!
+
+    SquareWebhookEvent.transaction do
+      record_event!
+
+      case event_type
+      when 'subscription.created'
+        handle_subscription_created
+      when 'subscription.updated'
+        handle_subscription_updated
+      when 'invoice.payment_made'
+        handle_invoice_payment_made
+      when 'invoice.scheduled_charge_failed'
+        handle_invoice_charge_failed
+      else
+        Rails.logger.info("[paid-memberships] Ignoring Square event: #{event_type}")
+      end
     end
+  rescue ActiveRecord::RecordNotUnique
+    Rails.logger.info("[paid-memberships] Ignoring duplicate Square event: #{event_id}")
   end
 
   private
+
+  def validate_replay_protection!
+    raise InvalidEvent, 'Missing event ID' if event_id.blank?
+    raise InvalidEvent, 'Missing event type' if event_type.blank?
+    raise InvalidEvent, 'Missing or invalid event creation timestamp' if event_created_at.blank?
+    raise InvalidEvent, 'Event creation timestamp is too old' if event_created_at < MAX_EVENT_AGE_SECONDS.seconds.ago
+    raise InvalidEvent, 'Event creation timestamp is too far in the future' if event_created_at > MAX_EVENT_FUTURE_DRIFT.from_now
+  end
+
+  def record_event!
+    SquareWebhookEvent.create!(
+      event_id: event_id,
+      event_type: event_type,
+      event_created_at: event_created_at,
+      processed_at: Time.current
+    )
+  end
 
   def subscription_data
     parsed_event.dig('data', 'object', 'subscription') || parsed_event.dig('data', 'object') || {}

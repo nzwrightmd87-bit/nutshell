@@ -13,6 +13,9 @@ module Webhooks
     rescue SquareWebhookService::InvalidSignature => e
       Rails.logger.warn("[paid-memberships] Square webhook signature verification failed: #{e.message}")
       head :unauthorized
+    rescue SquareWebhookService::InvalidEvent => e
+      Rails.logger.warn("[paid-memberships] Square webhook replay protection failed: #{e.message}")
+      head :bad_request
     rescue JSON::ParserError => e
       Rails.logger.warn("[paid-memberships] Square webhook JSON parse error: #{e.message}")
       head :bad_request
