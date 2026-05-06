@@ -4,6 +4,17 @@ require 'rails_helper'
 
 RSpec.describe BillingController do
   describe 'GET #checkout' do
+    it 'does not create a Square checkout link' do
+      expect(controller).to_not receive(:create_square_checkout)
+
+      get :checkout, params: { plan: 'monthly' }
+
+      expect(response).to redirect_to(billing_path(plan: :monthly))
+      expect(response).to have_http_status(303)
+    end
+  end
+
+  describe 'POST #checkout' do
     let(:monthly_checkout_url) { 'https://square.link/u/monthly-subscription' }
 
     it 'prefers the configured hosted subscription checkout link' do
@@ -13,7 +24,7 @@ RSpec.describe BillingController do
         'SQUARE_LOCATION_ID' => 'location',
         'SQUARE_MONTHLY_PLAN_VARIATION_ID' => 'variation-monthly'
       ) do
-        get :checkout, params: { plan: 'monthly' }
+        post :checkout, params: { plan: 'monthly' }
 
         expect(response).to redirect_to(monthly_checkout_url)
       end
@@ -46,7 +57,7 @@ RSpec.describe BillingController do
         'SQUARE_LOCATION_ID' => 'location',
         'SQUARE_MONTHLY_PLAN_VARIATION_ID' => 'variation-monthly'
       ) do
-        get :checkout, params: { plan: 'monthly' }
+        post :checkout, params: { plan: 'monthly' }
 
         expect(response).to redirect_to('https://square.link/u/generated-monthly-subscription')
       end
