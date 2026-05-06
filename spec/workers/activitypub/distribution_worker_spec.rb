@@ -19,7 +19,7 @@ RSpec.describe ActivityPub::DistributionWorker do
       end
 
       it 'delivers to followers' do
-        expect_push_bulk_to_match(ActivityPub::DeliveryWorker, [[match_json_values(type: 'Create'), status.account.id, 'http://example.com', anything]]) do
+        expect_push_bulk_to_match(ActivityPub::DeliveryWorker, [[match_json_values(type: 'Create'), status.account.id, 'http://example.com', hash_including('synchronize_followers' => false)]]) do
           subject.perform(status.id)
         end
       end
@@ -31,8 +31,20 @@ RSpec.describe ActivityPub::DistributionWorker do
       end
 
       it 'delivers to followers' do
-        expect_push_bulk_to_match(ActivityPub::DeliveryWorker, [[match_json_values(type: 'Create'), status.account.id, 'http://example.com', anything]]) do
+        expect_push_bulk_to_match(ActivityPub::DeliveryWorker, [[match_json_values(type: 'Create'), status.account.id, 'http://example.com', hash_including('synchronize_followers' => true)]]) do
           subject.perform(status.id)
+        end
+      end
+
+      context 'when the author has many followers' do
+        before do
+          status.account.update!(followers_count: 25_000)
+        end
+
+        it 'still requests follower synchronization' do
+          expect_push_bulk_to_match(ActivityPub::DeliveryWorker, [[match_json_values(type: 'Create'), status.account.id, 'http://example.com', hash_including('synchronize_followers' => true)]]) do
+            subject.perform(status.id)
+          end
         end
       end
     end
