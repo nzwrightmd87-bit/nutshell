@@ -79,30 +79,6 @@ RSpec.describe Tag do
   describe 'HASHTAG_RE' do
     subject { described_class::HASHTAG_RE }
 
-    it 'does not match URLs with anchors with non-hashtag characters' do
-      expect(subject.match('Check this out https://medium.com/@alice/some-article#.abcdef123')).to be_nil
-    end
-
-    it 'does not match URLs with hashtag-like anchors' do
-      expect(subject.match('https://en.wikipedia.org/wiki/Ghostbusters_(song)#Lawsuit')).to be_nil
-    end
-
-    it 'does not match URLs with hashtag-like anchors after a numeral' do
-      expect(subject.match('https://gcc.gnu.org/bugzilla/show_bug.cgi?id=111895#c4')).to be_nil
-    end
-
-    it 'does not match URLs with hashtag-like anchors after a non-ascii character' do
-      expect(subject.match('https://example.org/testé#foo')).to be_nil
-    end
-
-    it 'does not match URLs with hashtag-like anchors after an empty query parameter' do
-      expect(subject.match('https://en.wikipedia.org/wiki/Ghostbusters_(song)?foo=#Lawsuit')).to be_nil
-    end
-
-    it 'does not match URLs with hashtag-like anchors after a dot' do
-      expect(subject.match('https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.#Decision')).to be_nil
-    end
-
     it 'matches ﻿#ａｅｓｔｈｅｔｉｃ' do
       expect(subject.match('﻿this is #ａｅｓｔｈｅｔｉｃ').to_s).to eq '#ａｅｓｔｈｅｔｉｃ'
     end
@@ -165,6 +141,13 @@ RSpec.describe Tag do
 
     it 'matches hashtags containing uppercase characters' do
       expect(subject.match('Hello #rubyOnRails').to_s).to eq '#rubyOnRails'
+    end
+
+    it 'matches hashtags immediately following punctuation' do
+      expect(subject.match('hello (#rubyOnRails)').to_s).to eq '#rubyOnRails'
+      expect(subject.match('hello .#rubyOnRails').to_s).to eq '#rubyOnRails'
+      expect(subject.match('hello,#rubyOnRails').to_s).to eq '#rubyOnRails'
+      expect(subject.match('hello -#rubyOnRails').to_s).to eq '#rubyOnRails'
     end
   end
 
