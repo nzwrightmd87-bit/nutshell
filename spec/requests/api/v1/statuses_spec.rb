@@ -482,6 +482,46 @@ RSpec.describe '/api/v1/statuses' do
         expect(RemovalWorker).to have_enqueued_sidekiq_job(status.id, { 'redraft' => true })
       end
 
+      context 'when the status has a pending quote' do
+        let(:quoted_status) { Fabricate(:status, account: user.account) }
+
+        before do
+          Fabricate(:quote, status: status, quoted_status: quoted_status, state: :pending)
+        end
+
+        it 'returns only the top-level quoted status id for redrafting', :aggregate_failures do
+          subject
+
+          expect(response).to have_http_status(200)
+          expect(response.parsed_body[:quote]).to include(
+            quoted_status: nil,
+            quoted_status_id: quoted_status.id.to_s,
+            state: 'pending'
+          )
+        end
+      end
+
+      context 'when the status quotes a status with a pending nested quote' do
+        let(:nested_quoted_status) { Fabricate(:status, account: user.account) }
+        let(:quoted_status) { Fabricate(:status, account: user.account) }
+
+        before do
+          Fabricate(:quote, status: quoted_status, quoted_status: nested_quoted_status, state: :pending)
+          Fabricate(:quote, status: status, quoted_status: quoted_status, state: :accepted)
+        end
+
+        it 'does not leak the nested pending quoted status id', :aggregate_failures do
+          subject
+
+          expect(response).to have_http_status(200)
+          expect(response.parsed_body.dig(:quote, :quoted_status, :quote)).to include(
+            state: 'pending'
+          )
+          expect(response.parsed_body.dig(:quote, :quoted_status, :quote))
+            .to_not have_key(:quoted_status_id)
+        end
+      end
+
       context 'when called with truthy delete_media' do
         subject do
           delete "/api/v1/statuses/#{status.id}?delete_media=true", headers: headers

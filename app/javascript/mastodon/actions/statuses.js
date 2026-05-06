@@ -170,7 +170,7 @@ export function deleteStatus(id, withRedraft = false) {
       dispatch(importFetchedAccount(response.data.account));
 
       if (withRedraft) {
-        dispatch(redraft(status, response.data.text, response.data.quote?.quoted_status?.id));
+        dispatch(redraft(status, response.data.text, response.data.quote?.quoted_status_id ?? response.data.quote?.quoted_status?.id));
         ensureComposeIsVisible(getState);
       } else {
         dispatch(showAlert({ message: messages.deleteSuccess }));
