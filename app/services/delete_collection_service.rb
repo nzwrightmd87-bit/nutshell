@@ -11,7 +11,7 @@ class DeleteCollectionService
   private
 
   def federate_collection?
-    Mastodon::Feature.collections_federation_enabled? && @collection.discoverable?
+    Mastodon::Feature.collections_federation_enabled? && @collection.local? && @collection.discoverable?
   end
 
   def distribute_remove_activity

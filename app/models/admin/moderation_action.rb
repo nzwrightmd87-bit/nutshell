@@ -72,7 +72,7 @@ class Admin::ModerationAction < Admin::BaseAction
 
   def delete_collections!
     collections.each do |collection|
-      collection.destroy!
+      DeleteCollectionService.new.call(collection)
       log_action(:destroy, collection)
     end
   end

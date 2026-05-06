@@ -27,5 +27,15 @@ RSpec.describe DeleteCollectionService do
         expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
       end
     end
+
+    context 'when the collection is remote' do
+      let(:collection) { Fabricate(:remote_collection) }
+
+      it 'does not federate a `Remove` activity', feature: :collections_federation do
+        subject.call(collection)
+
+        expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+      end
+    end
   end
 end

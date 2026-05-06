@@ -31,6 +31,16 @@ RSpec.describe UpdateCollectionService do
             expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
           end
         end
+
+        context 'when the collection is remote' do
+          let(:collection) { Fabricate(:remote_collection) }
+
+          it 'does not federate an `Update` activity', feature: :collections_federation do
+            subject.call(collection, { sensitive: true })
+
+            expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+          end
+        end
       end
 
       context 'when nothing changed' do
