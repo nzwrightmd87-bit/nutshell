@@ -245,14 +245,12 @@ class ActivityPub::ProcessAccountService < BaseService
   end
 
   def image_description(image)
-    description = first_string_value(image['summary']).presence || first_string_value(image['name']).presence
+    description = image_string_value(image['summary']).presence || image_string_value(image['name']).presence
 
     description&.strip&.[](0...MediaAttachment::MAX_DESCRIPTION_LENGTH)
   end
 
-  def first_string_value(value)
-    value = first_of_value(value)
-
+  def image_string_value(value)
     value if value.is_a?(String)
   end
 
