@@ -82,7 +82,8 @@ RSpec.describe Mastodon::CLI::Media do
         let!(:replied_to_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
         let!(:reblogged_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
         let!(:remote_quoted_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
-        let!(:remote_quoting_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
+        let!(:remote_accepted_quoting_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
+        let!(:remote_pending_quoting_media) { Fabricate(:media_attachment, created_at: 1.month.ago, remote_url: 'https://example.com/image.jpg') }
 
         before do
           local_account = Fabricate(:account, username: 'alice')
@@ -101,10 +102,12 @@ RSpec.describe Mastodon::CLI::Media do
           local_quoting_status = Fabricate(:status, account: local_account)
           remote_quoted_status = Fabricate(:status, account: remote_account)
           local_status_being_quoted = Fabricate(:status, account: local_account)
-          remote_quoting_status = Fabricate(:status, account: remote_account)
+          remote_accepted_quoting_status = Fabricate(:status, account: remote_account)
+          remote_pending_quoting_status = Fabricate(:status, account: remote_account)
 
           remote_quoted_media.update!(status: remote_quoted_status)
-          remote_quoting_media.update!(status: remote_quoting_status)
+          remote_accepted_quoting_media.update!(status: remote_accepted_quoting_status)
+          remote_pending_quoting_media.update!(status: remote_pending_quoting_status)
 
           non_interacted_status = Fabricate(:status, account: remote_account)
 
@@ -115,20 +118,22 @@ RSpec.describe Mastodon::CLI::Media do
           Fabricate(:status, account: local_account, in_reply_to_id: replied_to_status.id)
           Fabricate(:status, account: local_account, reblog: reblogged_status)
           Fabricate(:quote, account: local_account, status: local_quoting_status, quoted_status: remote_quoted_status)
-          Fabricate(:quote, account: remote_account, status: remote_quoting_status, quoted_status: local_status_being_quoted)
+          Fabricate(:quote, account: remote_account, status: remote_accepted_quoting_status, quoted_status: local_status_being_quoted, state: :accepted)
+          Fabricate(:quote, account: remote_account, status: remote_pending_quoting_status, quoted_status: local_status_being_quoted, state: :pending)
         end
 
-        it 'keeps media associated with statuses that have been favourited, bookmarked, replied to, or reblogged by a local account' do
+        it 'keeps media associated with local interactions or accepted remote quotes of local posts' do
           expect { subject }
-            .to output_results('Removed 1')
+            .to output_results('Removed 2')
 
           expect(favourited_media.reload.file).to be_present
           expect(bookmarked_media.reload.file).to be_present
           expect(replied_to_media.reload.file).to be_present
           expect(reblogged_media.reload.file).to be_present
           expect(remote_quoted_media.reload.file).to be_present
-          expect(remote_quoting_media.reload.file).to be_present
+          expect(remote_accepted_quoting_media.reload.file).to be_present
 
+          expect(remote_pending_quoting_media.reload.file).to be_blank
           expect(media_attachment.reload.file).to be_blank
           expect(media_attachment.reload.thumbnail).to be_blank
         end

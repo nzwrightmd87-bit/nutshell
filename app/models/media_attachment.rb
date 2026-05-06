@@ -225,7 +225,7 @@ class MediaAttachment < ApplicationRecord
       .where.not(Status.local.where(Status.arel_table[:in_reply_to_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
       .where.not(Status.local.where(Status.arel_table[:reblog_of_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
       .where.not(Quote.joins(:status).merge(Status.local).where(Quote.arel_table[:quoted_status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
-      .where.not(Quote.joins(:quoted_status).merge(Status.local).where(Quote.arel_table[:status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
+      .where.not(Quote.accepted.joins(:quoted_status).merge(Status.local).where(Quote.arel_table[:status_id].eq(MediaAttachment.arel_table[:status_id])).select(1).arel.exists)
   }
 
   attr_accessor :skip_download
