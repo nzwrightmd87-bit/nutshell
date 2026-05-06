@@ -15,6 +15,7 @@ RSpec.describe ActivityPub::FeaturedCollectionSerializer do
               discoverable: false)
   end
   let!(:collection_items) { Fabricate.times(2, :collection_item, collection:) }
+  let!(:pending_collection_item) { Fabricate(:collection_item, collection:, state: :pending) }
 
   it 'serializes to the expected structure' do
     expect(subject).to include({
@@ -50,6 +51,12 @@ RSpec.describe ActivityPub::FeaturedCollectionSerializer do
       'published' => match_api_datetime_format,
       'updated' => match_api_datetime_format,
     })
+  end
+
+  it 'only includes accepted collection items' do
+    expect(subject['totalItems']).to eq 2
+    expect(subject['orderedItems'].pluck('id'))
+      .to_not include(ActivityPub::TagManager.instance.uri_for(pending_collection_item))
   end
 
   context 'when a language is set' do

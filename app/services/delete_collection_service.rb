@@ -5,10 +5,14 @@ class DeleteCollectionService
     @collection = collection
     @collection.destroy!
 
-    distribute_remove_activity if Mastodon::Feature.collections_federation_enabled?
+    distribute_remove_activity if federate_collection?
   end
 
   private
+
+  def federate_collection?
+    Mastodon::Feature.collections_federation_enabled? && @collection.discoverable?
+  end
 
   def distribute_remove_activity
     ActivityPub::AccountRawDistributionWorker.perform_async(activity_json, @collection.account.id)

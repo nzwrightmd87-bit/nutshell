@@ -74,9 +74,11 @@ class Api::V1Alpha::CollectionsController < Api::BaseController
     @collections = @account.collections
       .with_tag
       .order(created_at: :desc)
+    @collections = @collections.discoverable unless @account == current_account
+    @collections_count = @collections.count
+    @collections = @collections
       .offset(offset_param)
       .limit(limit_param(DEFAULT_COLLECTIONS_LIMIT))
-    @collections = @collections.discoverable unless @account == current_account
   end
 
   def set_collection
@@ -108,7 +110,7 @@ class Api::V1Alpha::CollectionsController < Api::BaseController
   end
 
   def records_continue?
-    ((offset_param * limit_param(DEFAULT_COLLECTIONS_LIMIT)) + @collections.size) < @account.collections.size
+    (offset_param + @collections.size) < @collections_count
   end
 
   def offset_param

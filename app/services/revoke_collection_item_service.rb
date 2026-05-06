@@ -9,10 +9,14 @@ class RevokeCollectionItemService < BaseService
 
     @collection_item.revoke!
 
-    distribute_stamp_deletion! if Mastodon::Feature.collections_federation_enabled? && @collection_item.remote?
+    distribute_stamp_deletion! if federate_collection? && @collection_item.remote?
   end
 
   private
+
+  def federate_collection?
+    Mastodon::Feature.collections_federation_enabled? && @collection_item.collection.discoverable?
+  end
 
   def distribute_stamp_deletion!
     ActivityPub::AccountRawDistributionWorker.perform_async(signed_activity_json, @collection_item.collection.account_id)

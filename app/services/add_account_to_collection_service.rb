@@ -11,7 +11,7 @@ class AddAccountToCollectionService
 
     @collection_item = create_collection_item
 
-    if Mastodon::Feature.collections_federation_enabled?
+    if federate_collection?
       distribute_add_activity if @account.local?
       distribute_feature_request_activity if @account.remote?
     end
@@ -20,6 +20,10 @@ class AddAccountToCollectionService
   end
 
   private
+
+  def federate_collection?
+    Mastodon::Feature.collections_federation_enabled? && @collection.discoverable?
+  end
 
   def create_collection_item
     @collection.collection_items.create!(

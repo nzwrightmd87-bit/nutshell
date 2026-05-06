@@ -21,5 +21,15 @@ RSpec.describe RevokeCollectionItemService do
 
       expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
     end
+
+    context 'when the collection is not discoverable' do
+      let(:collection) { Fabricate(:remote_collection, discoverable: false) }
+
+      it 'does not federate a `Delete` activity' do
+        subject.call(collection_item)
+
+        expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+      end
+    end
   end
 end

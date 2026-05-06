@@ -16,7 +16,7 @@ RSpec.describe CollectionPolicy do
   end
 
   permissions :show? do
-    it 'permits when no user is given' do
+    it 'permits public access to discoverable collections' do
       expect(policy).to permit(nil, collection)
     end
 
@@ -32,6 +32,17 @@ RSpec.describe CollectionPolicy do
 
       expect(policy).to_not permit(domain_blocked_user, collection)
       expect(policy).to_not permit(other_user, collection)
+    end
+
+    context 'when the collection is not discoverable' do
+      let(:collection) { Fabricate(:collection, discoverable: false) }
+
+      it 'only permits the owner' do
+        expect(policy).to_not permit(nil, collection)
+        expect(policy).to_not permit(other_user, collection)
+
+        expect(policy).to permit(owner, collection)
+      end
     end
   end
 

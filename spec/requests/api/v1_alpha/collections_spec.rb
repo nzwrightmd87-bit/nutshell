@@ -68,6 +68,17 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
           expect(response).to have_http_status(200)
           expect(response.parsed_body[:collections].size).to eq 3
         end
+
+        context 'with a limit matching the number of discoverable collections' do
+          let(:params) { { limit: '3' } }
+
+          it 'does not expose hidden collections through pagination headers' do
+            subject
+
+            expect(response).to have_http_status(200)
+            expect(response.headers['Link']).to be_blank
+          end
+        end
       end
 
       context 'when requesting user owns the collection' do
@@ -117,6 +128,16 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
       let(:headers) { {} }
 
       it_behaves_like 'unfiltered, successful request'
+
+      context 'when the collection is not discoverable' do
+        let(:collection) { Fabricate(:collection, discoverable: false) }
+
+        it 'returns http forbidden' do
+          subject
+
+          expect(response).to have_http_status(403)
+        end
+      end
     end
 
     context 'when user is signed in' do
@@ -136,6 +157,22 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
           expect(response.parsed_body[:collection][:items].size).to eq 1
           expect(response.parsed_body[:collection][:items][0]['id']).to eq items.last.id.to_s
         end
+      end
+
+      context 'when the collection is not discoverable and belongs to another account' do
+        let(:collection) { Fabricate(:collection, discoverable: false) }
+
+        it 'returns http forbidden' do
+          subject
+
+          expect(response).to have_http_status(403)
+        end
+      end
+
+      context 'when the collection is not discoverable and belongs to the user' do
+        let(:collection) { Fabricate(:collection, account: user.account, discoverable: false) }
+
+        it_behaves_like 'unfiltered, successful request'
       end
     end
   end

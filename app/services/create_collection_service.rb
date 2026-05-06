@@ -9,7 +9,7 @@ class CreateCollectionService
 
     @collection.save!
 
-    if Mastodon::Feature.collections_federation_enabled?
+    if federate_collection?
       distribute_add_activity
       distribute_feature_request_activities
     end
@@ -18,6 +18,10 @@ class CreateCollectionService
   end
 
   private
+
+  def federate_collection?
+    Mastodon::Feature.collections_federation_enabled? && @collection.discoverable?
+  end
 
   def distribute_add_activity
     ActivityPub::AccountRawDistributionWorker.perform_async(activity_json, @account.id)

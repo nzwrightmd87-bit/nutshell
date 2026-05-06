@@ -54,8 +54,45 @@ RSpec.describe 'Collections' do
             })
         end
 
+        context 'when account has a non-discoverable collection' do
+          let!(:hidden_collection) { Fabricate(:collection, account:, discoverable: false) }
+
+          it 'does not count it in the public collection', :aggregate_failures do
+            subject
+
+            expect(response)
+              .to have_http_status(200)
+
+            expect(response.parsed_body)
+              .to include({
+                'type' => 'Collection',
+                'totalItems' => 1,
+              })
+          end
+        end
+
         context 'when requesting the first page' do
           subject { get ap_account_featured_collections_path(account.id, page: 1, format: :json) }
+
+          context 'when account has a non-discoverable collection' do
+            let!(:hidden_collection) do
+              Fabricate(:collection, account:, name: 'Hidden collection', discoverable: false)
+            end
+
+            it 'does not include it in the public page', :aggregate_failures do
+              subject
+
+              expect(response)
+                .to have_http_status(200)
+
+              expect(response.parsed_body)
+                .to include({
+                  'type' => 'CollectionPage',
+                  'totalItems' => 1,
+                })
+              expect(response.parsed_body['items'].pluck('name')).to_not include(hidden_collection.name)
+            end
+          end
 
           context 'when account has many collections' do
             before do

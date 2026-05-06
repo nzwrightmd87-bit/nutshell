@@ -9,7 +9,7 @@ class ActivityPub::FeaturedCollectionSerializer < ActivityPub::Serializer
 
   has_one :tag, key: :topic, serializer: ActivityPub::NoteSerializer::TagSerializer
 
-  has_many :collection_items, key: :ordered_items, serializer: ActivityPub::FeaturedItemSerializer
+  has_many :accepted_collection_items, key: :ordered_items, serializer: ActivityPub::FeaturedItemSerializer
 
   def id
     ActivityPub::TagManager.instance.uri_for(object)
@@ -32,7 +32,7 @@ class ActivityPub::FeaturedCollectionSerializer < ActivityPub::Serializer
   end
 
   def total_items
-    object.collection_items.size
+    object.accepted_collection_items.size
   end
 
   def published

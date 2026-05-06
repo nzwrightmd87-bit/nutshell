@@ -35,6 +35,23 @@ RSpec.describe CreateCollectionService do
         expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
       end
 
+      context 'when the collection is not discoverable' do
+        let(:remote_accounts) { Fabricate.times(2, :remote_account, feature_approval_policy: (0b10 << 16)) }
+        let(:params) do
+          base_params.merge(
+            discoverable: false,
+            account_ids: remote_accounts.map { |account| account.id.to_s }
+          )
+        end
+
+        it 'does not federate collection or feature request activities', feature: :collections_federation do
+          subject.call(params, author)
+
+          expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+          expect(ActivityPub::FeatureRequestWorker).to_not have_enqueued_sidekiq_job
+        end
+      end
+
       context 'when given account ids' do
         let(:accounts) do
           Fabricate.times(2, :account)

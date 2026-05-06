@@ -27,6 +27,16 @@ RSpec.describe AddAccountToCollectionService do
 
           expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
         end
+
+        context 'when the collection is not discoverable' do
+          let(:collection) { Fabricate.create(:collection, discoverable: false) }
+
+          it 'does not federate an `Add` activity', feature: :collections_federation do
+            subject.call(collection, account)
+
+            expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+          end
+        end
       end
 
       context 'when the account is remote', feature: :collections_federation do
@@ -36,6 +46,16 @@ RSpec.describe AddAccountToCollectionService do
           subject.call(collection, account)
 
           expect(ActivityPub::FeatureRequestWorker).to have_enqueued_sidekiq_job
+        end
+
+        context 'when the collection is not discoverable' do
+          let(:collection) { Fabricate.create(:collection, discoverable: false) }
+
+          it 'does not federate a `FeatureRequest` activity' do
+            subject.call(collection, account)
+
+            expect(ActivityPub::FeatureRequestWorker).to_not have_enqueued_sidekiq_job
+          end
         end
       end
     end

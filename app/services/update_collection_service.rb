@@ -7,10 +7,14 @@ class UpdateCollectionService
     @collection = collection
     @collection.update!(params)
 
-    distribute_update_activity if Mastodon::Feature.collections_federation_enabled?
+    distribute_update_activity if federate_collection?
   end
 
   private
+
+  def federate_collection?
+    Mastodon::Feature.collections_federation_enabled? && @collection.discoverable?
+  end
 
   def distribute_update_activity
     return unless relevant_attributes_changed?

@@ -17,5 +17,15 @@ RSpec.describe DeleteCollectionService do
 
       expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
     end
+
+    context 'when the collection is not discoverable' do
+      let(:collection) { Fabricate(:collection, discoverable: false) }
+
+      it 'does not federate a `Remove` activity', feature: :collections_federation do
+        subject.call(collection)
+
+        expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+      end
+    end
   end
 end

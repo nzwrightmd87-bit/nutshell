@@ -55,6 +55,17 @@ RSpec.describe 'Collections' do
                 'name' => collection.name,
               })
           end
+
+          context 'when the collection is not discoverable' do
+            let(:collection) { Fabricate(:collection, discoverable: false) }
+
+            it 'returns http not found' do
+              subject
+
+              expect(response)
+                .to have_http_status(404)
+            end
+          end
         end
       end
     end
@@ -131,6 +142,17 @@ RSpec.describe 'Collections' do
               'type' => 'FeaturedCollection',
               'name' => collection.name,
             })
+        end
+
+        context 'when the collection is not discoverable' do
+          let(:collection) { Fabricate(:collection, discoverable: false) }
+
+          it 'returns http not found' do
+            subject
+
+            expect(response)
+              .to have_http_status(404)
+          end
         end
       end
     end

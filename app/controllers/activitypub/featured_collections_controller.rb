@@ -34,7 +34,7 @@ class ActivityPub::FeaturedCollectionsController < ApplicationController
 
   def set_collections
     authorize @account, :index_collections?
-    @collections = @account.collections.page(params[:page]).per(PER_PAGE)
+    @collections = @account.collections.discoverable.page(params[:page]).per(PER_PAGE)
   rescue Mastodon::NotPermittedError
     not_found
   end
@@ -56,7 +56,7 @@ class ActivityPub::FeaturedCollectionsController < ApplicationController
       ActivityPub::CollectionPresenter.new(
         id: ap_account_featured_collections_url(@account, page: params.fetch(:page, 1)),
         type: :unordered,
-        size: @account.collections.count,
+        size: @account.collections.discoverable.count,
         items: @collections,
         part_of: ap_account_featured_collections_url(@account),
         next: next_page_url,
@@ -66,7 +66,7 @@ class ActivityPub::FeaturedCollectionsController < ApplicationController
       ActivityPub::CollectionPresenter.new(
         id: ap_account_featured_collections_url(@account),
         type: :unordered,
-        size: @account.collections.count,
+        size: @account.collections.discoverable.count,
         first: ap_account_featured_collections_url(@account, page: 1)
       )
     end

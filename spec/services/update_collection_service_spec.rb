@@ -21,6 +21,16 @@ RSpec.describe UpdateCollectionService do
 
           expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
         end
+
+        context 'when the collection is not discoverable' do
+          let(:collection) { Fabricate(:collection, discoverable: false) }
+
+          it 'does not federate an `Update` activity', feature: :collections_federation do
+            subject.call(collection, { name: 'updated' })
+
+            expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+          end
+        end
       end
 
       context 'when nothing changed' do
