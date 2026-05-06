@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { Fragment, useCallback, useEffect, useState } from 'react';
 
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 
@@ -10,6 +10,7 @@ import ListAltIcon from '@/material-icons/400-24px/list_alt.svg?react';
 import ShareIcon from '@/material-icons/400-24px/share.svg?react';
 import type { ApiCollectionJSON } from 'mastodon/api_types/collections';
 import { Avatar } from 'mastodon/components/avatar';
+import { Button } from 'mastodon/components/button';
 import { Column } from 'mastodon/components/column';
 import { ColumnHeader } from 'mastodon/components/column_header';
 import {
@@ -27,6 +28,7 @@ import { useAppDispatch, useAppSelector } from 'mastodon/store';
 import { CollectionAccountsList } from './accounts_list';
 import { CollectionMetaData } from './collection_list_item';
 import { CollectionMenu } from './collection_menu';
+import { shouldGateSensitiveCollection } from './sensitive';
 import classes from './styles.module.scss';
 
 const messages = defineMessages({
@@ -39,6 +41,25 @@ const messages = defineMessages({
     defaultMessage: 'Share this collection',
   },
 });
+
+const SensitiveCollectionWarning: React.FC<{ onReveal: () => void }> = ({
+  onReveal,
+}) => (
+  <div className={classes.sensitiveWarning}>
+    <FormattedMessage
+      id='collections.detail.sensitive_note'
+      defaultMessage='This collection contains accounts and content that may be sensitive to some users.'
+      tagName='p'
+    />
+    <Button onClick={onReveal}>
+      <FormattedMessage
+        id='content_warning.show'
+        defaultMessage='Show anyway'
+        tagName={Fragment}
+      />
+    </Button>
+  </div>
+);
 
 export const AuthorNote: React.FC<{ id: string; previewMode?: boolean }> = ({
   id,
@@ -78,9 +99,10 @@ export const AuthorNote: React.FC<{ id: string; previewMode?: boolean }> = ({
   );
 };
 
-const CollectionHeader: React.FC<{ collection: ApiCollectionJSON }> = ({
-  collection,
-}) => {
+const CollectionHeader: React.FC<{
+  collection: ApiCollectionJSON;
+  showDescription: boolean;
+}> = ({ collection, showDescription }) => {
   const intl = useIntl();
   const { name, description, tag, account_id } = collection;
   const dispatch = useAppDispatch();
@@ -132,7 +154,9 @@ const CollectionHeader: React.FC<{ collection: ApiCollectionJSON }> = ({
           />
         </div>
       </div>
-      {description && <p className={classes.description}>{description}</p>}
+      {showDescription && description && (
+        <p className={classes.description}>{description}</p>
+      )}
       <AuthorNote id={collection.account_id} />
       <CollectionMetaData
         extended={account_id === me}
@@ -153,6 +177,8 @@ export const CollectionDetailPage: React.FC<{
     id ? state.collections.collections[id] : undefined,
   );
   const isLoading = !!id && !collection;
+  const [revealedSensitiveCollectionId, setRevealedSensitiveCollectionId] =
+    useState<string>();
 
   useEffect(() => {
     if (id) {
@@ -160,7 +186,16 @@ export const CollectionDetailPage: React.FC<{
     }
   }, [dispatch, id]);
 
+  const revealSensitiveContent = useCallback(() => {
+    setRevealedSensitiveCollectionId(collection?.id);
+  }, [collection?.id]);
+
   const pageTitle = collection?.name ?? intl.formatMessage(messages.loading);
+  const shouldGateSensitiveContent = shouldGateSensitiveCollection(collection);
+  const revealedSensitiveContent =
+    collection?.id === revealedSensitiveCollectionId;
+  const showSensitiveContent =
+    !shouldGateSensitiveContent || revealedSensitiveContent;
 
   return (
     <Column bindToDocument={!multiColumn} label={pageTitle}>
@@ -173,8 +208,20 @@ export const CollectionDetailPage: React.FC<{
       />
 
       <Scrollable>
-        {collection && <CollectionHeader collection={collection} />}
-        <CollectionAccountsList collection={collection} isLoading={isLoading} />
+        {collection && (
+          <CollectionHeader
+            collection={collection}
+            showDescription={showSensitiveContent}
+          />
+        )}
+        {shouldGateSensitiveContent && !revealedSensitiveContent ? (
+          <SensitiveCollectionWarning onReveal={revealSensitiveContent} />
+        ) : (
+          <CollectionAccountsList
+            collection={collection}
+            isLoading={isLoading}
+          />
+        )}
       </Scrollable>
 
       <Helmet>
