@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'ActivityPub FeatureAuthorization endpoint' do
+RSpec.describe 'ActivityPub FeatureAuthorization endpoint', feature: :collections do
   describe 'GET /ap/accounts/:account_id/feature_authorizations/:collection_item_id' do
     let(:account) { Fabricate(:account) }
     let(:collection) { Fabricate(:collection) }
@@ -21,6 +21,19 @@ RSpec.describe 'ActivityPub FeatureAuthorization endpoint' do
 
         expect(response.parsed_body)
           .to include(type: 'FeatureAuthorization')
+      end
+
+      context 'when collections are disabled' do
+        before do
+          allow(Mastodon::Feature).to receive(:collections_enabled?).and_return(false)
+        end
+
+        it 'returns http not found' do
+          get ap_account_feature_authorization_path(account.id, collection_item)
+
+          expect(response)
+            .to have_http_status(404)
+        end
       end
     end
 
