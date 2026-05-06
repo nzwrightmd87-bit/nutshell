@@ -3,7 +3,7 @@
 module WrapstodonHelper
   def render_wrapstodon_share_data(report)
     payload = ActiveModelSerializers::SerializableResource.new(
-      AnnualReportsPresenter.new([report]),
+      AnnualReportsPresenter.new([AnnualReport::PublicShare.new(report)]),
       serializer: REST::AnnualReportsSerializer,
       scope: nil,
       scope_name: :current_user

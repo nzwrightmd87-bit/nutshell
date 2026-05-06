@@ -65,11 +65,21 @@ class AnnualReport
     )
   end
 
+  def public_share_data
+    source_data(public_only: true)
+  end
+
   private
 
   def data
+    source_data
+  end
+
+  def source_data(public_only: false)
     with_read_replica do
-      SOURCES.each_with_object({}) { |klass, hsh| hsh.merge!(klass.new(@account, @year).generate) }
+      SOURCES.each_with_object({}) do |klass, hsh|
+        hsh.merge!(klass.new(@account, @year, public_only: public_only).generate)
+      end
     end
   end
 end
