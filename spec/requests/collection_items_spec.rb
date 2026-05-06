@@ -53,6 +53,17 @@ RSpec.describe 'CollectionItems' do
             })
         end
       end
+
+      context 'when the collection item was revoked' do
+        let(:collection_item) { Fabricate(:collection_item, state: :revoked) }
+
+        it 'returns http not found' do
+          subject
+
+          expect(response)
+            .to have_http_status(404)
+        end
+      end
     end
 
     context 'when signed in' do

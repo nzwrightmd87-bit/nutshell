@@ -115,8 +115,8 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
     let(:collection) { Fabricate(:collection) }
     let!(:items) { Fabricate.times(2, :collection_item, collection:) }
 
-    shared_examples 'unfiltered, successful request' do
-      it 'includes all items in the response' do
+    shared_examples 'successful request' do
+      it 'includes accepted items in the response' do
         subject
 
         expect(response).to have_http_status(200)
@@ -127,7 +127,7 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
     context 'when user is not signed in' do
       let(:headers) { {} }
 
-      it_behaves_like 'unfiltered, successful request'
+      it_behaves_like 'successful request'
 
       context 'when the collection is not discoverable' do
         let(:collection) { Fabricate(:collection, discoverable: false) }
@@ -142,7 +142,7 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
 
     context 'when user is signed in' do
       context 'when the user has not blocked or muted anyone' do
-        it_behaves_like 'unfiltered, successful request'
+        it_behaves_like 'successful request'
       end
 
       context 'when the user has blocked an account' do
@@ -161,21 +161,20 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
         end
       end
 
-      context 'when the collection has a pending item with an account' do
+      context 'when the collection has non-accepted items with accounts' do
         let!(:pending_item) { Fabricate(:collection_item, collection:, account: Fabricate(:account), state: :pending) }
+        let!(:revoked_item) { Fabricate(:collection_item, collection:, account: Fabricate(:account), state: :revoked) }
 
-        it 'does not side-load the pending item account' do
+        it 'does not include the non-accepted items or side-load their accounts' do
           subject
 
-          pending_item_json = response.parsed_body[:collection][:items].find do |item|
-            item['id'] == pending_item.id.to_s
-          end
-
           expect(response).to have_http_status(200)
-          expect(pending_item_json).to include('state' => 'pending')
-          expect(pending_item_json).to_not have_key('account_id')
+          expect(response.parsed_body[:collection][:items].pluck('id'))
+            .to contain_exactly(*items.map { |item| item.id.to_s })
           expect(response.parsed_body[:accounts].pluck('id'))
             .to contain_exactly(collection.account_id.to_s, *items.map { |item| item.account_id.to_s })
+          expect(response.parsed_body[:collection][:items].pluck('id'))
+            .to not_include(pending_item.id.to_s, revoked_item.id.to_s)
         end
       end
 
@@ -192,7 +191,7 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
       context 'when the collection is not discoverable and belongs to the user' do
         let(:collection) { Fabricate(:collection, account: user.account, discoverable: false) }
 
-        it_behaves_like 'unfiltered, successful request'
+        it_behaves_like 'successful request'
       end
     end
   end

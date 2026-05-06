@@ -23,6 +23,10 @@ class REST::CollectionSerializer < ActiveModel::Serializer
     object.items_for(current_user&.account)
   end
 
+  def item_count
+    items.size
+  end
+
   def account_id
     object.account_id.to_s
   end

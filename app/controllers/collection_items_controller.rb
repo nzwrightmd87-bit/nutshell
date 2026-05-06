@@ -31,7 +31,7 @@ class CollectionItemsController < ApplicationController
   private
 
   def set_collection_item
-    @collection_item = @account.curated_collection_items.find(params[:id])
+    @collection_item = @account.curated_collection_items.accepted.find(params[:id])
     authorize @collection_item.collection, :show?
   rescue ActiveRecord::RecordNotFound, Mastodon::NotPermittedError
     not_found

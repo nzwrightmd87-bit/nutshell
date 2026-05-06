@@ -71,9 +71,12 @@ RSpec.describe Collection do
     subject { Fabricate(:collection) }
 
     let!(:items) { Fabricate.times(2, :collection_item, collection: subject) }
+    let!(:pending_item) { Fabricate(:collection_item, collection: subject, state: :pending) }
+    let!(:rejected_item) { Fabricate(:collection_item, collection: subject, state: :rejected) }
+    let!(:revoked_item) { Fabricate(:collection_item, collection: subject, state: :revoked) }
 
     context 'when given no account' do
-      it 'returns all items' do
+      it 'returns accepted items' do
         expect(subject.items_for).to match_array(items)
       end
     end
