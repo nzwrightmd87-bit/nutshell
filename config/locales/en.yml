@@ -1312,7 +1312,7 @@ en:
       preamble: Paid membership is required to join Nutshell. Pick a plan below, complete checkout, and then create your account using the same email you used for payment.
       title: Become a Nutshell member on %{domain}.
       membership_gate_title: Membership plans
-      membership_gate_preamble: Choose a plan and complete checkout. When you sign up, use the same email address you used for payment and your account will be activated automatically.
+      membership_gate_preamble: Choose a plan and complete checkout. When you sign up, use the same email address you used for payment. Your account activates after you confirm that email.
       email_must_match_payment: Use the same email address you used for your membership payment.
       email_opt_in: I would like to receive email notifications from Nutshell
       email_opt_in_hint: You will receive emails about activity on your account such as follows, mentions, and replies. You can change this at any time in your notification settings.
@@ -1330,10 +1330,10 @@ en:
       billing_how_it_works_body: "Getting started with Nutshell takes just a few steps:"
       billing_step_one: Choose a plan above and complete checkout through Square.
       billing_step_two: Come back to this page and click the button below to create your account.
-      billing_step_three: Sign up using the same email address you used for payment. Your membership will be linked automatically.
+      billing_step_three: Sign up using the same email address you used for payment. Your membership will be linked after you confirm that email.
       billing_success_title: Payment received
       billing_success_body: Your membership payment was successful. You're almost done.
-      billing_success_email_hint: "Important: When you create your account, use the same email address you just used for payment. This is how we link your membership to your account."
+      billing_success_email_hint: "Important: When you create your account, use the same email address you just used for payment. We will link your membership after you confirm that email."
       billing_success_cta: Create your account
       billing_cancel_title: Checkout cancelled
       billing_cancel_body: No account was created. Return to the pricing page whenever you are ready to continue.

@@ -40,17 +40,25 @@ module PaidMembershipsHelper
     return true unless paid_memberships_enabled?
     return true if invite.present? && paid_membership_allow_invites?
 
-    # Check for an active membership matching this email
-    find_active_membership_by_email(email).present?
+    email.present?
   end
 
-  # Link a membership to a user after successful registration
+  def mark_paid_membership_registration_pending!(user, invite)
+    return unless paid_memberships_enabled?
+    return if invite.present? && paid_membership_allow_invites?
+    return unless user&.persisted? && user.approved?
+
+    user.update!(approved: false)
+  end
+
+  # Link a membership to a user after they have confirmed ownership of the payment email.
   def claim_membership_for_user!(user)
     return unless paid_memberships_enabled?
+    return unless user&.confirmed?
     return if user.email.blank?
 
     membership = find_active_membership_by_email(user.email)
-    membership&.claim!(user)
+    user.approve! if membership&.claim!(user) && user.pending?
   end
 
   def paid_membership_registration_error_message

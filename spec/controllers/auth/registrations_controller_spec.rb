@@ -252,6 +252,29 @@ RSpec.describe Auth::RegistrationsController do
       end
     end
 
+    context 'with paid memberships enabled' do
+      subject do
+        Setting.registrations_mode = 'open'
+        post :create, params: { user: { account_attributes: { username: 'test' }, email: 'member@example.com', password: '12345678', password_confirmation: '12345678', agreement: 'true' } }
+      end
+
+      let!(:membership) { Fabricate(:membership, email: 'member@example.com', status: 'active') }
+
+      it 'creates a pending user without claiming the membership before email confirmation' do
+        ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
+          subject
+        end
+
+        user = User.find_by(email: 'member@example.com')
+
+        expect(response).to redirect_to(auth_setup_path)
+        expect(user).to be_present
+        expect(user.confirmed?).to be false
+        expect(user.approved?).to be false
+        expect(membership.reload.user_id).to be_nil
+      end
+    end
+
     context 'with Approval-based registrations without invite' do
       subject do
         Setting.registrations_mode = 'approved'

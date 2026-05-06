@@ -2,6 +2,7 @@
 
 class Auth::ConfirmationsController < Devise::ConfirmationsController
   include Auth::CaptchaConcern
+  include PaidMembershipsHelper
 
   layout 'auth'
 
@@ -85,6 +86,8 @@ class Auth::ConfirmationsController < Devise::ConfirmationsController
   end
 
   def after_confirmation_path_for(_resource_name, user)
+    claim_membership_for_user!(user)
+
     if user.created_by_application && redirect_to_app?
       user.created_by_application.confirmation_redirect_uri
     elsif user_signed_in?

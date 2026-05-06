@@ -14,8 +14,8 @@ class AppSignUpService < BaseService
 
     ApplicationRecord.transaction do
       create_user!
+      mark_paid_membership_registration_pending!(@user, invite)
       create_access_token!
-      claim_membership_for_user!(@user)
     end
 
     @access_token

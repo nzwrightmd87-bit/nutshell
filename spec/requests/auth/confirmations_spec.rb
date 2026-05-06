@@ -26,6 +26,23 @@ RSpec.describe 'Auth Confirmation' do
       end
     end
 
+    context 'when user has a matching paid membership' do
+      let!(:membership) { Fabricate(:membership, email: 'member@example.com', status: 'active') }
+      let!(:user) { Fabricate(:user, email: 'member@example.com', confirmation_token: 'foobar', confirmed_at: nil, approved: false) }
+
+      it 'claims the membership and approves the user after email confirmation' do
+        ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
+          expect { get user_confirmation_path(confirmation_token: 'foobar') }
+            .to change { user.reload.confirmed_at }.to(be_present)
+            .and change { user.approved? }.from(false).to(true)
+            .and change { membership.reload.user_id }.from(nil).to(user.id)
+        end
+
+        expect(response)
+          .to redirect_to(new_user_session_path)
+      end
+    end
+
     context 'when user is unconfirmed and unapproved' do
       let!(:user) { Fabricate(:user, confirmation_token: 'foobar', confirmed_at: nil, approved: false) }
 

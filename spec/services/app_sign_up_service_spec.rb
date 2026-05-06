@@ -71,6 +71,30 @@ RSpec.describe AppSignUpService do
       end
     end
 
+    context 'with paid memberships enabled' do
+      let(:params) { good_params.merge(email: 'member@example.com') }
+      let!(:membership) { Fabricate(:membership, email: 'member@example.com', status: 'active') }
+
+      before do
+        Setting.registrations_mode = 'open'
+      end
+
+      it 'creates a pending unconfirmed user without claiming the membership' do
+        access_token = nil
+
+        ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
+          access_token = subject.call(app, remote_ip, params)
+        end
+
+        user = User.find_by(id: access_token.resource_owner_id)
+
+        expect(user).to_not be_nil
+        expect(user.confirmed?).to be false
+        expect(user.approved?).to be false
+        expect(membership.reload.user_id).to be_nil
+      end
+    end
+
     context 'when registrations are closed' do
       before do
         Setting.registrations_mode = 'none'

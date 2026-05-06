@@ -31,7 +31,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   def create
     if paid_membership_registration_allowed_for_email?(@invite, params.dig(:user, :email))
       super do |user|
-        claim_membership_for_user!(user) if user.persisted?
+        mark_paid_membership_registration_pending!(user, @invite)
       end
     else
       build_resource(sign_up_params)

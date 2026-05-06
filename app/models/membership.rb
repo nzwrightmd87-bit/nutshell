@@ -50,9 +50,18 @@ class Membership < ApplicationRecord
     update!(status: 'past_due')
   end
 
-  # Link this membership to a user after they sign up with the access code
+  # Link this membership to a user after they confirm ownership of the membership email.
   def claim!(user)
+    return false unless claimable_by?(user)
+    return true if self.user == user
+
     update!(user: user)
+  end
+
+  def claimable_by?(user)
+    return false unless user.present? && user.confirmed? && active? && email.casecmp?(user.email)
+
+    user_id.blank? || self.user == user
   end
 
   private
