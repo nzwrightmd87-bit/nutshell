@@ -16,6 +16,22 @@ RSpec.describe Form::AdminSettings do
         it { is_expected.to allow_value('Glorp').for(:site_contact_username) }
       end
     end
+
+    describe 'local_topic_feed_access' do
+      it { is_expected.to allow_value('disabled').for(:local_topic_feed_access) }
+    end
+  end
+
+  describe '.local_topic_feed_access_modes' do
+    it 'keeps disabled available for legacy settings' do
+      expect(described_class.local_topic_feed_access_modes('disabled'))
+        .to eq(%w(public authenticated disabled))
+    end
+
+    it 'does not offer disabled for non-disabled settings' do
+      expect(described_class.local_topic_feed_access_modes('authenticated'))
+        .to eq(%w(public authenticated))
+    end
   end
 
   describe '#save' do
