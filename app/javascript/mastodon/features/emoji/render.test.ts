@@ -2,6 +2,7 @@ import { customEmojiFactory, unicodeEmojiFactory } from '@/testing/factories';
 
 import * as db from './database';
 import * as loader from './loader';
+import { unicodeHexToUrl } from './normalize';
 import {
   loadEmojiDataToState,
   stringToEmojiState,
@@ -150,25 +151,38 @@ describe('loadEmojiDataToState', () => {
     const dbLegacyCall = vi
       .spyOn(db, 'loadLegacyShortcodesByShortcode')
       .mockResolvedValueOnce({
-        shortcodes: ['test'],
-        hexcode: 'test',
+        shortcodes: ['copyright'],
+        hexcode: '00A9',
       });
+    const unicodeEmoji = unicodeEmojiFactory({
+      hexcode: '00A9',
+      label: 'copyright',
+      unicode: '©️',
+      shortcodes: ['copyright'],
+    });
     const dbUnicodeCall = vi
       .spyOn(db, 'loadEmojiByHexcode')
-      .mockResolvedValue(unicodeEmojiFactory());
+      .mockResolvedValue(unicodeEmoji);
     const unicodeState = {
       type: 'unicode',
-      code: 'test',
+      code: 'copyright',
     } as const satisfies EmojiStateUnicode;
     const result = await loadEmojiDataToState(unicodeState, 'en');
-    expect(dbLegacyCall).toHaveBeenCalledWith('test');
-    expect(dbUnicodeCall).toHaveBeenCalledWith('test', 'en');
+    expect(dbLegacyCall).toHaveBeenCalledWith('copyright');
+    expect(dbUnicodeCall).toHaveBeenCalledWith('00A9', 'en');
     expect(result).toEqual({
       type: 'unicode',
-      code: 'test',
-      data: unicodeEmojiFactory(),
-      shortcode: 'test',
+      code: '00A9',
+      data: unicodeEmoji,
+      shortcode: 'copyright',
     });
+    expect(
+      unicodeHexToUrl({
+        unicodeHex: result?.code ?? '',
+        darkTheme: false,
+        assetHost: '',
+      }),
+    ).toBe('/emoji/a9.svg');
   });
 
   test('returns null if unicode emoji not found in database', async () => {
