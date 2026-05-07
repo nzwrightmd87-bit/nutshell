@@ -19,7 +19,7 @@ class RevokeCollectionItemService < BaseService
   end
 
   def distribute_stamp_deletion!
-    ActivityPub::AccountRawDistributionWorker.perform_async(signed_activity_json, @collection_item.collection.account_id)
+    ActivityPub::DeliveryWorker.perform_async(signed_activity_json, @account.id, @collection_item.collection.account.inbox_url)
   end
 
   def signed_activity_json
