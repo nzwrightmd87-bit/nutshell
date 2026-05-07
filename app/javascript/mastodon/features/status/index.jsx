@@ -79,6 +79,68 @@ const messages = defineMessages({
   detailedStatus: { id: 'status.detailed_status', defaultMessage: 'Detailed conversation view' },
 });
 
+export const MAX_REPLY_TREE_DEPTH = 64;
+export const MAX_REPLY_TREE_NODES = 4096;
+const MAX_REPLY_TREE_VISUAL_DEPTH = 3;
+
+// Build a parentId -> [childIds] map from context descendants.
+export const buildReplyTree = (descendantsIds, inReplyTos, statusId) => {
+  const childrenMap = {};
+
+  for (const id of descendantsIds) {
+    if (id === statusId) {
+      continue;
+    }
+
+    const inReplyToId = inReplyTos[id];
+    const parentId = inReplyToId && inReplyToId !== id ? inReplyToId : statusId;
+
+    if (!childrenMap[parentId]) {
+      childrenMap[parentId] = [];
+    }
+
+    childrenMap[parentId].push(id);
+  }
+
+  return childrenMap;
+};
+
+// Count nested replies iteratively so cyclic or very deep context graphs cannot exhaust the JS call stack.
+export const countReplyTree = (
+  statusId,
+  childrenMap,
+  { maxDepth = MAX_REPLY_TREE_DEPTH, maxNodes = MAX_REPLY_TREE_NODES } = {},
+) => {
+  const seen = new Set([statusId]);
+  const stack = (childrenMap[statusId] || []).map((id) => ({ id, depth: 1 }));
+  let count = 0;
+
+  while (stack.length > 0 && count < maxNodes) {
+    const { id, depth } = stack.pop();
+
+    if (seen.has(id)) {
+      continue;
+    }
+
+    seen.add(id);
+    count += 1;
+
+    if (depth >= maxDepth) {
+      continue;
+    }
+
+    const children = childrenMap[id] || [];
+
+    for (const childId of children) {
+      if (!seen.has(childId)) {
+        stack.push({ id: childId, depth: depth + 1 });
+      }
+    }
+  }
+
+  return count;
+};
+
 const makeMapStateToProps = () => {
   const getStatus = makeGetStatus();
   const getPictureInPicture = makeGetPictureInPicture();
@@ -493,44 +555,37 @@ class Status extends ImmutablePureComponent {
     }));
   };
 
-  // Build a map of parentId → [childIds] from the descendants
   getReplyTree () {
     const { descendantsIds, inReplyTos, params: { statusId } } = this.props;
-    const childrenMap = {};
-
-    for (const id of descendantsIds) {
-      const parentId = inReplyTos[id] || statusId;
-      if (!childrenMap[parentId]) {
-        childrenMap[parentId] = [];
-      }
-      childrenMap[parentId].push(id);
-    }
-
-    return childrenMap;
+    return buildReplyTree(descendantsIds, inReplyTos, statusId);
   }
 
-  // Count all nested replies under a status (recursive)
   countReplies (statusId, childrenMap) {
-    const children = childrenMap[statusId] || [];
-    let count = children.length;
-    for (const childId of children) {
-      count += this.countReplies(childId, childrenMap);
-    }
-    return count;
+    return countReplyTree(statusId, childrenMap);
   }
 
-  // Recursively render a tree of replies with indentation and collapsing
-  renderReplyTree (parentId, childrenMap, depth = 0) {
+  renderReplyTree (parentId, childrenMap, depth = 0, visited = new Set()) {
     const { params: { statusId } } = this.props;
     const { expandedReplies } = this.state;
     const children = childrenMap[parentId] || [];
 
-    if (children.length === 0) return null;
+    if (children.length === 0 || depth >= MAX_REPLY_TREE_DEPTH || visited.has(parentId)) return null;
+
+    const parentPath = new Set(visited);
+    parentPath.add(parentId);
+    const renderedIds = new Set();
 
     return children.map((id) => {
+      if (parentPath.has(id) || renderedIds.has(id)) {
+        return null;
+      }
+
+      renderedIds.add(id);
+
       const subReplyCount = this.countReplies(id, childrenMap);
       const isExpanded = !!expandedReplies[id];
-      const threadDepth = Math.min(depth, 3);
+      const threadDepth = Math.min(depth, MAX_REPLY_TREE_VISUAL_DEPTH);
+      const canExpandReplies = subReplyCount > 0 && depth + 1 < MAX_REPLY_TREE_DEPTH;
 
       return (
         <div key={id}>
@@ -541,7 +596,7 @@ class Status extends ImmutablePureComponent {
             threadDepth={threadDepth}
             shouldHighlightOnMount={this.state.newRepliesIds.includes(id)}
           />
-          {subReplyCount > 0 && !isExpanded && (
+          {canExpandReplies && !isExpanded && (
             <button
               type='button'
               className='thread-replies-toggle'
@@ -551,7 +606,7 @@ class Status extends ImmutablePureComponent {
               View {subReplyCount} {subReplyCount === 1 ? 'reply' : 'replies'}
             </button>
           )}
-          {subReplyCount > 0 && isExpanded && (
+          {canExpandReplies && isExpanded && (
             <>
               <button
                 type='button'
@@ -561,7 +616,7 @@ class Status extends ImmutablePureComponent {
               >
                 Hide {subReplyCount === 1 ? 'reply' : 'replies'}
               </button>
-              {this.renderReplyTree(id, childrenMap, Math.min(depth + 1, 3))}
+              {this.renderReplyTree(id, childrenMap, depth + 1, parentPath)}
             </>
           )}
         </div>
