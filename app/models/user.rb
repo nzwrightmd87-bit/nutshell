@@ -448,7 +448,11 @@ class User < ApplicationRecord
 
   def grant_approval_on_confirmation?
     # Re-check approval on confirmation if the server has switched to open registrations
-    open_registrations? && !requires_approval?
+    open_registrations? && !requires_approval? && !paid_membership_approval_required?
+  end
+
+  def paid_membership_approval_required?
+    paid_memberships_enabled? && !(invited? && paid_membership_allow_invites?)
   end
 
   def requires_approval?
@@ -461,7 +465,17 @@ class User < ApplicationRecord
 
     yield
 
+    claim_paid_membership_on_confirmation! if new_user
     after_confirmation_tasks if new_user
+  end
+
+  def claim_paid_membership_on_confirmation!
+    return unless paid_membership_approval_required?
+    return unless confirmed?
+    return if email.blank? || approved?
+
+    membership = Membership.active.by_email(email.to_s.strip).where(user_id: [nil, id]).first
+    update!(approved: true) if membership&.claim!(self)
   end
 
   def after_confirmation_tasks
@@ -500,6 +514,18 @@ class User < ApplicationRecord
 
   def open_registrations?
     Setting.registrations_mode == 'open'
+  end
+
+  def paid_memberships_enabled?
+    paid_membership_env_enabled?('PAID_MEMBERSHIPS_ENABLED')
+  end
+
+  def paid_membership_allow_invites?
+    paid_membership_env_enabled?('PAID_MEMBERSHIPS_ALLOW_INVITES')
+  end
+
+  def paid_membership_env_enabled?(key)
+    ActiveModel::Type::Boolean.new.cast(ENV.fetch(key, 'false'))
   end
 
   def sanitize_role

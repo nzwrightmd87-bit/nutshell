@@ -28,18 +28,51 @@ RSpec.describe 'Auth Confirmation' do
 
     context 'when user has a matching paid membership' do
       let!(:membership) { Fabricate(:membership, email: 'member@example.com', status: 'active') }
-      let!(:user) { Fabricate(:user, email: 'member@example.com', confirmation_token: 'foobar', confirmed_at: nil, approved: false) }
+      let!(:user) do
+        Fabricate(:user, email: 'member@example.com', confirmation_token: 'foobar', confirmed_at: nil).tap do |user|
+          user.update!(approved: false)
+        end
+      end
+
+      before do
+        Setting.registrations_mode = 'open'
+      end
 
       it 'claims the membership and approves the user after email confirmation' do
         ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
           expect { get user_confirmation_path(confirmation_token: 'foobar') }
             .to change { user.reload.confirmed_at }.to(be_present)
-            .and change { user.approved? }.from(false).to(true)
+            .and change { user.reload.approved? }.from(false).to(true)
             .and change { membership.reload.user_id }.from(nil).to(user.id)
         end
 
         expect(response)
           .to redirect_to(new_user_session_path)
+      end
+    end
+
+    context 'when paid memberships are enabled without a matching membership' do
+      let!(:user) do
+        Fabricate(:user, email: 'nonmember@example.com', confirmation_token: 'foobar', confirmed_at: nil).tap do |user|
+          user.update!(approved: false)
+        end
+      end
+
+      before do
+        Setting.registrations_mode = 'open'
+      end
+
+      it 'confirms the email but keeps the user pending' do
+        ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
+          expect { get user_confirmation_path(confirmation_token: 'foobar') }
+            .to change { user.reload.confirmed_at }.to(be_present)
+            .and not_change { user.reload.approved? }.from(false)
+        end
+
+        expect(response)
+          .to redirect_to(new_user_session_path)
+        expect(BootstrapTimelineWorker)
+          .to_not have_enqueued_sidekiq_job(user.account_id)
       end
     end
 

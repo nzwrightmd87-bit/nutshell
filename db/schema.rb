@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_07_031900) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -755,6 +755,27 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
     t.index ["status_id"], name: "index_media_attachments_on_status_id"
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.string "access_code", null: false
+    t.datetime "canceled_at"
+    t.datetime "created_at", null: false
+    t.string "email", null: false
+    t.datetime "expires_at"
+    t.datetime "paid_at"
+    t.string "plan", null: false
+    t.string "square_customer_id"
+    t.string "square_invoice_id"
+    t.string "square_subscription_id"
+    t.string "status", default: "pending", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["access_code"], name: "index_memberships_on_access_code", unique: true
+    t.index ["email"], name: "index_memberships_on_email"
+    t.index ["square_subscription_id"], name: "index_memberships_on_square_subscription_id", unique: true, where: "(square_subscription_id IS NOT NULL)"
+    t.index ["status"], name: "index_memberships_on_status"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
+  end
+
   create_table "mentions", force: :cascade do |t|
     t.bigint "account_id", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1131,6 +1152,16 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
     t.index ["version"], name: "index_software_updates_on_version", unique: true
   end
 
+  create_table "square_webhook_events", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "event_created_at", null: false
+    t.string "event_id", null: false
+    t.string "event_type", null: false
+    t.datetime "processed_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_square_webhook_events_on_event_id", unique: true
+  end
+
   create_table "status_edits", force: :cascade do |t|
     t.bigint "account_id"
     t.datetime "created_at", null: false
@@ -1488,6 +1519,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
   add_foreign_key "media_attachments", "accounts", name: "fk_96dd81e81b", on_delete: :nullify
   add_foreign_key "media_attachments", "scheduled_statuses", on_delete: :nullify
   add_foreign_key "media_attachments", "statuses", on_delete: :nullify
+  add_foreign_key "memberships", "users", on_delete: :nullify
   add_foreign_key "mentions", "accounts", name: "fk_970d43f9d1", on_delete: :cascade
   add_foreign_key "mentions", "statuses", on_delete: :cascade
   add_foreign_key "mutes", "accounts", column: "target_account_id", name: "fk_eecff219ea", on_delete: :cascade
@@ -1576,9 +1608,9 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
   add_index "account_summaries", ["account_id"], name: "index_account_summaries_on_account_id", unique: true
 
   create_view "global_follow_recommendations", materialized: true, sql_definition: <<-SQL
-      SELECT account_id,
-      sum(rank) AS rank,
-      array_agg(reason) AS reason
+      SELECT t0.account_id,
+      sum(t0.rank) AS rank,
+      array_agg(t0.reason) AS reason
      FROM ( SELECT account_summaries.account_id,
               ((count(follows.id))::numeric / (1.0 + (count(follows.id))::numeric)) AS rank,
               'most_followed'::text AS reason
@@ -1602,8 +1634,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
                     WHERE (follow_recommendation_suppressions.account_id = statuses.account_id)))))
             GROUP BY account_summaries.account_id
            HAVING (sum((status_stats.reblogs_count + status_stats.favourites_count)) >= (5)::numeric)) t0
-    GROUP BY account_id
-    ORDER BY (sum(rank)) DESC;
+    GROUP BY t0.account_id
+    ORDER BY (sum(t0.rank)) DESC;
   SQL
   add_index "global_follow_recommendations", ["account_id"], name: "index_global_follow_recommendations_on_account_id", unique: true
 
@@ -1633,9 +1665,9 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
   add_index "instances", ["domain"], name: "index_instances_on_domain", unique: true
 
   create_view "user_ips", sql_definition: <<-SQL
-      SELECT user_id,
-      ip,
-      max(used_at) AS used_at
+      SELECT t0.user_id,
+      t0.ip,
+      max(t0.used_at) AS used_at
      FROM ( SELECT users.id AS user_id,
               users.sign_up_ip AS ip,
               users.created_at AS used_at
@@ -1652,6 +1684,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_10_095021) do
               login_activities.created_at
              FROM login_activities
             WHERE (login_activities.success = true)) t0
-    GROUP BY user_id, ip;
+    GROUP BY t0.user_id, t0.ip;
   SQL
 end
