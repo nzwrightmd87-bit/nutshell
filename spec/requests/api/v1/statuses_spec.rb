@@ -494,6 +494,10 @@ RSpec.describe '/api/v1/statuses' do
       let(:status) { Fabricate(:status, account: user.account) }
       let!(:media) { Fabricate(:media_attachment, status: status) }
 
+      before do
+        user.account.account_stat.update!(statuses_count: 3)
+      end
+
       it_behaves_like 'forbidden for wrong scope', 'read read:statuses'
 
       it 'discards the status and schedules removal as a redraft', :aggregate_failures do
@@ -511,6 +515,7 @@ RSpec.describe '/api/v1/statuses' do
             )
           )
         )
+        expect(response.parsed_body.dig(:account, :statuses_count)).to eq 2
         expect(Status.find_by(id: status.id)).to be_nil
         expect(RemovalWorker).to have_enqueued_sidekiq_job(status.id, { 'redraft' => true })
       end
