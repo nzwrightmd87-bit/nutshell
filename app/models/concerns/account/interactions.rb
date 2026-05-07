@@ -76,6 +76,7 @@ module Account::Interactions
 
   def mute!(other_account, notifications: nil, duration: 0)
     notifications = true if notifications.nil?
+    duration = Mute.normalize_duration(duration)
     mute = mute_relationships.create_with(hide_notifications: notifications).find_or_initialize_by(target_account: other_account)
     mute.expires_in = duration.zero? ? nil : duration
     mute.save!

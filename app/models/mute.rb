@@ -14,6 +14,8 @@
 #
 
 class Mute < ApplicationRecord
+  MAX_DURATION = 30.days.to_i
+
   include Paginable
   include RelationshipCacheable
   include Expireable
@@ -25,6 +27,14 @@ class Mute < ApplicationRecord
 
   after_commit :invalidate_blocking_cache
   after_commit :invalidate_follow_recommendations_cache
+
+  def self.normalize_duration(duration)
+    duration = duration.to_i
+
+    return 0 unless duration.positive?
+
+    [duration, MAX_DURATION].min
+  end
 
   private
 
