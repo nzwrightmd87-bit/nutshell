@@ -32,4 +32,17 @@ RSpec.describe 'I18n' do
       end
     end
   end
+
+  describe 'Admin action log locale translations' do
+    it 'renders the Welsh collection update action with the actor as updater' do
+      rendered = I18n.t(
+        'admin.action_logs.actions.update_collection_html',
+        locale: :cy,
+        name: 'mod_admin',
+        target: '@collection_owner'
+      )
+
+      expect(rendered).to eq('Mae mod_admin wedi diweddaru casgliad gan @collection_owner')
+    end
+  end
 end
