@@ -266,8 +266,8 @@ class ActivityPub::TagManager
     path_params = Rails.application.routes.recognize_path(uri)
     return unless path_params[:controller] == 'activitypub/contexts'
 
-    account_id, conversation_id = path_params[:id].split('-')
-    Conversation.find_by(parent_account_id: account_id, id: conversation_id)
+    account_id, status_id = path_params[:id].split('-')
+    Conversation.local.find_by(parent_account_id: account_id, parent_status_id: status_id)
   end
 
   def uri_to_resource(uri, klass)

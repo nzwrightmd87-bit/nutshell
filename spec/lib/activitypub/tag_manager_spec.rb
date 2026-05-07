@@ -647,6 +647,15 @@ RSpec.describe ActivityPub::TagManager do
   end
 
   describe '#uri_to_resource' do
+    def fabricate_status_with_distinct_conversation_id
+      loop do
+        Fabricate(:conversation)
+        status = Fabricate(:status)
+
+        return status if status.conversation_id != status.id
+      end
+    end
+
     it 'returns the local account' do
       account = Fabricate(:account)
       expect(subject.uri_to_resource(subject.uri_for(account), Account)).to eq account
@@ -670,6 +679,21 @@ RSpec.describe ActivityPub::TagManager do
     it 'returns the remote status by matching URI without fragment part' do
       status = Fabricate(:status, uri: 'https://example.com/123')
       expect(subject.uri_to_resource('https://example.com/123#456', Status)).to eq status
+    end
+
+    context 'with a local conversation URI' do
+      let(:status) { fabricate_status_with_distinct_conversation_id }
+      let(:conversation) { status.conversation }
+
+      it 'returns the conversation for its canonical context URI' do
+        expect(subject.uri_to_resource(subject.uri_for(conversation), Conversation)).to eq conversation
+      end
+
+      it 'does not resolve non-canonical context URIs using the conversation id' do
+        non_canonical_uri = "#{host_prefix}/contexts/#{status.account_id}-#{conversation.id}"
+
+        expect(subject.uri_to_resource(non_canonical_uri, Conversation)).to be_nil
+      end
     end
   end
 end
