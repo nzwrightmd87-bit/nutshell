@@ -21,6 +21,7 @@ import { HoverCardController } from 'mastodon/components/hover_card_controller';
 import { PictureInPicture } from 'mastodon/features/picture_in_picture';
 import { identityContextPropShape, withIdentity } from 'mastodon/identity_context';
 import { layoutFromWindow } from 'mastodon/is_mobile';
+import { isRtlLayout } from 'mastodon/utils/layout';
 import { WithRouterPropTypes } from 'mastodon/utils/react_router';
 import { checkAnnualReport } from '@/mastodon/reducers/slices/annual_report';
 import { isClientFeatureEnabled } from '@/mastodon/utils/environment';
@@ -139,12 +140,10 @@ class SwitchingColumnsArea extends PureComponent {
     const {preventMultiColumnAutoScroll} = this.props.location.state ?? {};
 
     if (!this.props.singleColumn && !preventMultiColumnAutoScroll) {
-      const isRtlLayout = document.getElementsByTagName('body')[0]
-        ?.classList.contains('rtl');
-  	  const modifier = isRtlLayout ? -1 : 1;
+      const modifier = isRtlLayout() ? -1 : 1;
 
-  	  scrollRight(this.node, (this.node.scrollWidth - window.innerWidth) * modifier);
-  	}
+      scrollRight(this.node, (this.node.scrollWidth - window.innerWidth) * modifier);
+    }
   }
 
   setRef = c => {
