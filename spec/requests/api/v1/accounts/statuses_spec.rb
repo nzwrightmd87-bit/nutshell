@@ -20,6 +20,21 @@ RSpec.describe 'API V1 Accounts Statuses' do
         .to start_with('application/json')
     end
 
+    it 'preserves exclude_direct in pagination links', :aggregate_failures do
+      Fabricate(:status, account: user.account)
+      Fabricate(:status, account: user.account, visibility: :direct)
+      newest_public_status = Fabricate(:status, account: user.account)
+
+      get "/api/v1/accounts/#{user.account.id}/statuses", params: { limit: 1, exclude_direct: true }, headers: headers
+
+      expect(response)
+        .to have_http_status(200)
+        .and include_pagination_headers(
+          prev: api_v1_account_statuses_url(limit: 1, exclude_direct: true, min_id: newest_public_status.id),
+          next: api_v1_account_statuses_url(limit: 1, exclude_direct: true, max_id: newest_public_status.id)
+        )
+    end
+
     context 'with only media' do
       let(:status_attachments) { [Fabricate(:media_attachment, account: user.account)] }
       let(:removed_status_attachments) { [Fabricate(:media_attachment, account: user.account)] }
