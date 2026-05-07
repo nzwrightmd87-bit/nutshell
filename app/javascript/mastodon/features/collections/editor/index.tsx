@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -44,6 +44,13 @@ export const messages = defineMessages({
   },
 });
 
+export const collectionEditorRouteId = (id: string | undefined) => id ?? null;
+
+export const shouldResetCollectionEditor = (
+  previousRouteId: string | null | undefined,
+  currentRouteId: string | null,
+) => previousRouteId !== currentRouteId;
+
 function usePageTitle(id: string | undefined) {
   const { path } = useRouteMatch();
   const location = useLocation();
@@ -71,7 +78,8 @@ export const CollectionEditorPage: React.FC<{
   const collection = useAppSelector((state) =>
     id ? state.collections.collections[id] : undefined,
   );
-  const editorStateId = useAppSelector((state) => state.collections.editor.id);
+  const editorRouteId = collectionEditorRouteId(id);
+  const previousEditorRouteIdRef = useRef<string | null>();
   const isEditMode = !!id;
   const isLoading = isEditMode && !collection;
 
@@ -82,10 +90,17 @@ export const CollectionEditorPage: React.FC<{
   }, [dispatch, id]);
 
   useEffect(() => {
-    if (id !== editorStateId) {
+    if (
+      shouldResetCollectionEditor(
+        previousEditorRouteIdRef.current,
+        editorRouteId,
+      )
+    ) {
       void dispatch(collectionEditorActions.reset());
     }
-  }, [dispatch, editorStateId, id]);
+
+    previousEditorRouteIdRef.current = editorRouteId;
+  }, [dispatch, editorRouteId]);
 
   useEffect(() => {
     if (collection) {
