@@ -25,7 +25,7 @@ html {
 
   scroll-padding-top: var(--column-header-height);
 
-  &:has(.layout-multi-column) {
+  &:has(body.layout-multiple-columns) {
     --column-header-height: 0;
   }
 }
