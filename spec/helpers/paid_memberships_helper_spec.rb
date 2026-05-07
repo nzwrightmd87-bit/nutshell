@@ -34,13 +34,14 @@ RSpec.describe PaidMembershipsHelper do
 
       ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
         expect { helper.claim_membership_for_user!(user) }
-          .to not_change { membership.reload.user_id }
+          .to(not_change { membership.reload.user_id })
       end
     end
 
     it 'claims a membership and approves the user after email confirmation' do
       membership = Fabricate(:membership, email: 'member@example.com', status: 'active')
-      user = Fabricate(:user, email: 'member@example.com', confirmed_at: 1.hour.ago, approved: false)
+      user = Fabricate(:user, email: 'member@example.com', confirmed_at: 1.hour.ago)
+      user.update!(approved: false)
 
       ClimateControl.modify PAID_MEMBERSHIPS_ENABLED: 'true' do
         expect { helper.claim_membership_for_user!(user) }
