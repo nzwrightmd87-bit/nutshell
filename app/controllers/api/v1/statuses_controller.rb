@@ -127,13 +127,14 @@ class Api::V1::StatusesController < Api::BaseController
     @status = Status.where(account: current_account).find(params[:id])
     authorize @status, :destroy?
 
+    @status.account.statuses_count = @status.account.statuses_count - 1
+
     # JSON is generated before `discard_with_reblogs` in order to have the proper URL
     # for media attachments, as it would otherwise redirect to the media proxy
     json = render_to_body json: @status, serializer: REST::StatusSerializer, source_requested: true, source_status_id: @status.id
 
     @status.discard_with_reblogs
     StatusPin.find_by(status: @status)&.destroy
-    @status.account.statuses_count = @status.account.statuses_count - 1
 
     RemovalWorker.perform_async(@status.id, { 'redraft' => !truthy_param?(:delete_media) })
 

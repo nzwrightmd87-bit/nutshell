@@ -78,13 +78,15 @@ export const MutedBadge: FC<
   let formattedDate: string | null = null;
   if (expiresAt) {
     const expiresDate = new Date(expiresAt);
-    const isCurrentYear =
-      expiresDate.getFullYear() === new Date().getFullYear();
-    formattedDate = intl.formatDate(expiresDate, {
-      month: 'short',
-      day: 'numeric',
-      ...(isCurrentYear ? {} : { year: 'numeric' }),
-    });
+    if (!Number.isNaN(expiresDate.getTime())) {
+      const isCurrentYear =
+        expiresDate.getFullYear() === new Date().getFullYear();
+      formattedDate = intl.formatDate(expiresDate, {
+        month: 'short',
+        day: 'numeric',
+        ...(isCurrentYear ? {} : { year: 'numeric' }),
+      });
+    }
   }
   return (
     <Badge

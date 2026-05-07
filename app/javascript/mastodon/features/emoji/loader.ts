@@ -9,7 +9,7 @@ import {
   loadCacheValue,
 } from './database';
 import { toSupportedLocale, toValidCacheKey } from './locale';
-import type { CustomEmojiData } from './types';
+import type { CacheKey, CustomEmojiData } from './types';
 import { emojiLogger } from './utils';
 
 const log = emojiLogger('loader');
@@ -23,22 +23,39 @@ export async function importEmojiData(localeString: string, shortcodes = true) {
     shortcodes ? ' and shortcodes' : '',
   );
 
-  let emojis = await fetchIfNotLoaded<CompactEmoji[]>({
+  const emojiCache = toCacheRequest({
     key: locale,
     path: localeToEmojiPath(locale),
   });
-  if (!emojis) {
+
+  const shortcodesCache = shortcodes
+    ? toCacheRequest({
+        key: `${locale}-shortcodes`,
+        path: localeToShortcodesPath(locale),
+      })
+    : null;
+
+  const [emojiCacheCurrent, shortcodesCacheCurrent] = await Promise.all([
+    isCacheCurrent(emojiCache),
+    shortcodesCache ? isCacheCurrent(shortcodesCache) : true,
+  ]);
+
+  if (emojiCacheCurrent && shortcodesCacheCurrent) {
+    log('emoji data for %s already loaded, skipping fetch', locale);
     return;
   }
 
+  const emojiResponse = await fetchJson(emojiCache);
+  if (!emojiResponse) {
+    return;
+  }
+  let emojis = emojiResponse.data as CompactEmoji[];
+
   const shortcodesData: ShortcodesDataset[] = [];
-  if (shortcodes) {
-    const shortcodesResponse = await fetchIfNotLoaded<ShortcodesDataset>({
-      key: `${locale}-shortcodes`,
-      path: localeToShortcodesPath(locale),
-    });
+  if (shortcodesCache) {
+    const shortcodesResponse = await fetchJson(shortcodesCache);
     if (shortcodesResponse) {
-      shortcodesData.push(shortcodesResponse);
+      shortcodesData.push(shortcodesResponse.data as ShortcodesDataset);
     } else {
       throw new Error(`No shortcodes data found for locale ${locale}`);
     }
@@ -47,6 +64,11 @@ export async function importEmojiData(localeString: string, shortcodes = true) {
   emojis = joinShortcodes(emojis, shortcodesData);
 
   await putEmojiData(emojis, locale);
+  await putCacheValue(emojiCache.key, emojiCache.path);
+  if (shortcodesCache) {
+    await putCacheValue(shortcodesCache.key, shortcodesCache.path);
+  }
+
   return emojis;
 }
 
@@ -61,15 +83,16 @@ export async function importCustomEmojiData() {
   }
 
   const etag = response.headers.get('ETag');
+  const emojis = (await response.json()) as CustomEmojiData[];
+  await putCustomEmojiData({ emojis, clear: true });
+
   if (etag) {
-    log('Custom emoji data fetched successfully, storing etag %s', etag);
+    log('Custom emoji data fetched and stored successfully, storing etag %s', etag);
     await putCacheValue('custom', etag);
   } else {
     log('No etag found in response for custom emoji data');
   }
 
-  const emojis = (await response.json()) as CustomEmojiData[];
-  await putCustomEmojiData({ emojis, clear: true });
   return emojis;
 }
 
@@ -83,14 +106,23 @@ export async function importLegacyShortcodes() {
   if (!path) {
     throw new Error('IAMCAL shortcodes path not found');
   }
-  const shortcodesData = await fetchIfNotLoaded<ShortcodesDataset>({
+  const shortcodesCache = toCacheRequest({
     key: 'shortcodes',
     path,
   });
-  if (!shortcodesData) {
+  if (await isCacheCurrent(shortcodesCache)) {
+    log('data for %s already loaded, skipping fetch', shortcodesCache.key);
     return;
   }
+
+  const shortcodesResponse = await fetchJson(shortcodesCache);
+  if (!shortcodesResponse) {
+    return;
+  }
+
+  const shortcodesData = shortcodesResponse.data as ShortcodesDataset;
   await putLegacyShortcodes(shortcodesData);
+  await putCacheValue(shortcodesCache.key, shortcodesCache.path);
   return Object.keys(shortcodesData);
 }
 
@@ -128,31 +160,48 @@ function localeToShortcodesPath(locale: Locale) {
   return path;
 }
 
-async function fetchIfNotLoaded<ResultType extends object[] | object>({
+function toCacheRequest({
   key: rawKey,
   path,
 }: {
   key: string;
   path: string;
-}): Promise<ResultType | null> {
-  const key = toValidCacheKey(rawKey);
+}) {
+  return {
+    key: toValidCacheKey(rawKey),
+    path,
+  } satisfies {
+    key: CacheKey;
+    path: string;
+  };
+}
 
+async function isCacheCurrent({ key, path }: { key: CacheKey; path: string }) {
   const value = await loadCacheValue(key);
 
   if (value === path) {
-    log('data for %s already loaded, skipping fetch', key);
-    return null;
+    return true;
   }
 
+  return false;
+}
+
+async function fetchJson({
+  key,
+  path,
+}: {
+  key: CacheKey;
+  path: string;
+}): Promise<{ data: object[] | object } | null> {
   const response = await fetchAndCheckEtag({ path });
   if (!response) {
     return null;
   }
 
-  log('data for %s fetched successfully, storing etag', key);
-  await putCacheValue(key, path);
+  const data = (await response.json()) as object[] | object;
 
-  return (await response.json()) as ResultType;
+  log('data for %s fetched successfully', key);
+  return { data };
 }
 
 async function fetchAndCheckEtag({

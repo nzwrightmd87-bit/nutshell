@@ -13,13 +13,26 @@ RSpec.describe RevokeCollectionItemService do
   end
 
   context 'when the collection is remote', feature: :collections_federation do
-    let(:collection) { Fabricate(:remote_collection) }
-    let(:collection_item) { Fabricate(:collection_item, collection:, uri: 'https://example.com') }
+    let(:collection_owner) { Fabricate(:remote_account, inbox_url: 'https://remote.example/inbox') }
+    let(:collection) { Fabricate(:remote_collection, account: collection_owner) }
+    let(:account) { Fabricate(:account) }
+    let(:collection_item) { Fabricate(:collection_item, collection:, account:, uri: 'https://example.com') }
 
-    it 'federates a `Delete` activity' do
-      subject.call(collection_item)
-
-      expect(ActivityPub::AccountRawDistributionWorker).to have_enqueued_sidekiq_job
+    it 'delivers a `Delete` activity to the collection owner as the revoking account' do
+      expect { subject.call(collection_item) }
+        .to enqueue_sidekiq_job(ActivityPub::DeliveryWorker).with(
+          match_json_values(
+            type: 'Delete',
+            actor: ActivityPub::TagManager.instance.uri_for(account),
+            object: include(
+              type: 'FeatureAuthorization',
+              interactionTarget: ActivityPub::TagManager.instance.uri_for(account),
+              interactingObject: ActivityPub::TagManager.instance.uri_for(collection)
+            )
+          ),
+          account.id,
+          collection_owner.inbox_url
+        )
     end
 
     context 'when the collection is not discoverable' do
@@ -28,7 +41,7 @@ RSpec.describe RevokeCollectionItemService do
       it 'does not federate a `Delete` activity' do
         subject.call(collection_item)
 
-        expect(ActivityPub::AccountRawDistributionWorker).to_not have_enqueued_sidekiq_job
+        expect(ActivityPub::DeliveryWorker).to_not have_enqueued_sidekiq_job
       end
     end
   end

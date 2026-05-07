@@ -23,7 +23,9 @@ RSpec.describe Account::Interactions do
   end
 
   describe '#mute!' do
-    subject { account.mute!(target_account, notifications: arg_notifications) }
+    subject { account.mute!(target_account, notifications: arg_notifications, duration: arg_duration) }
+
+    let(:arg_duration) { 0 }
 
     context 'when Mute does not exist yet' do
       context 'when arg :notifications is nil' do
@@ -135,6 +137,26 @@ RSpec.describe Account::Interactions do
             end.to change { mute.reload.hide_notifications? }.from(false).to(true)
           end
         end
+      end
+    end
+
+    context 'when the requested duration exceeds the supported maximum' do
+      let(:arg_notifications) { true }
+      let(:arg_duration) { Mute::MAX_DURATION * 10 }
+
+      it 'caps the mute expiration' do
+        travel_to Time.zone.local(2026, 5, 7, 12, 0, 0) do
+          expect(subject.expires_at).to be_within(1.second).of(Mute::MAX_DURATION.seconds.from_now)
+        end
+      end
+    end
+
+    context 'when the requested duration is negative' do
+      let(:arg_notifications) { true }
+      let(:arg_duration) { -1 }
+
+      it 'treats the mute as indefinite' do
+        expect(subject.expires_at).to be_nil
       end
     end
   end

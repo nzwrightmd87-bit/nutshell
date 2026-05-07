@@ -22,6 +22,7 @@ import { useAppSelector, useAppDispatch } from '@/mastodon/store';
 
 import { isRedesignEnabled } from '../common';
 
+import { accountHeaderObserverOptions } from './account_header_visibility';
 import { AccountName } from './account_name';
 import { AccountBadges } from './badges';
 import { AccountButtons } from './buttons';
@@ -87,9 +88,7 @@ export const AccountHeader: React.FC<{
 
   const { layout } = useLayout();
   const { observedRef, isIntersecting } = useVisibility({
-    observerOptions: {
-      rootMargin: layout === 'mobile' ? '0px 0px -55px 0px' : '', // Height of bottom nav bar.
-    },
+    observerOptions: accountHeaderObserverOptions(layout),
   });
 
   if (!account) {

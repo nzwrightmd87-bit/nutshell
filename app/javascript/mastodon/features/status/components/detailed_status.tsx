@@ -34,6 +34,7 @@ import { Video } from 'mastodon/features/video';
 import { useIdentity } from 'mastodon/identity_context';
 
 import Card from './card';
+import { shouldScrollDetailedStatus } from './detailed_status_scroll';
 
 interface VideoModalOptions {
   startTime: number;
@@ -71,7 +72,7 @@ export const DetailedStatus: React.FC<{
   pictureInPicture,
   onToggleMediaVisibility,
   onToggleHidden,
-  ancestors = 0,
+  ancestors,
   multiColumn = false,
 }) => {
   const properStatus = status?.get('reblog') ?? status;
@@ -130,9 +131,12 @@ export const DetailedStatus: React.FC<{
   // The component is managed and will change if the status changes
   // Ancestors can increase when loading a thread, in which case we want to scroll,
   // or decrease if a post is deleted, in which case we don't want to mess with it
-  const previousAncestors = useRef(-1);
+  const previousAncestors = useRef<number | undefined>(ancestors);
   useEffect(() => {
-    if (nodeRef.current && previousAncestors.current < ancestors) {
+    if (
+      nodeRef.current &&
+      shouldScrollDetailedStatus(previousAncestors.current, ancestors)
+    ) {
       nodeRef.current.scrollIntoView(true);
 
       // In the single-column interface, `scrollIntoView` will put the post behind the header, so compensate for that.
