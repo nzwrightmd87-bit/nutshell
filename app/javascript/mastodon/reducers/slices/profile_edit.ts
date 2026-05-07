@@ -81,7 +81,7 @@ const profileEditSlice = createSlice({
       }
 
       state.search.query = action.payload;
-      state.search.isLoading = true;
+      state.search.isLoading = action.payload.trim().length > 0;
       state.search.results = undefined;
     },
     clearSearch(state) {
@@ -353,6 +353,8 @@ export const updateSearchQuery = createAppAsyncThunk(
 
     if (query.trim().length > 0) {
       void debouncedFetchSearchResults(dispatch, query);
+    } else {
+      debouncedFetchSearchResults.cancel();
     }
   },
 );
