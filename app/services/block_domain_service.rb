@@ -29,11 +29,11 @@ class BlockDomainService < BaseService
       suspend_accounts!
     end
 
-    if domain_block.suspend?
+    if domain_block.reject_media?
+      DomainClearMediaWorker.perform_async(domain_block.id)
+    elsif domain_block.suspend?
       # Account images and attachments are already handled by `suspend_accounts!`
       PurgeCustomEmojiWorker.perform_async(blocked_domain)
-    elsif domain_block.reject_media?
-      DomainClearMediaWorker.perform_async(domain_block.id)
     end
   end
 

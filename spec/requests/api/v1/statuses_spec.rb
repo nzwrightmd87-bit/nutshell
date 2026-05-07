@@ -340,6 +340,26 @@ RSpec.describe '/api/v1/statuses' do
         end
       end
 
+      context 'with a quote of an inaccessible reblog' do
+        let(:quoted_status) { Fabricate(:status, quote_approval_policy: InteractionPolicy::POLICY_FLAGS[:public] << 16) }
+        let(:reblog) { Fabricate(:status, reblog: quoted_status, visibility: :private) }
+        let(:params) do
+          {
+            status: 'Hello world, this is a quote',
+            quoted_status_id: reblog.id,
+          }
+        end
+
+        it 'returns a not found error and does not create a post', :aggregate_failures do
+          expect { subject }.to_not change(user.account.statuses, :count)
+
+          expect(response).to have_http_status(404)
+          expect(response.content_type)
+            .to start_with('application/json')
+          expect(response.parsed_body[:error]).to eq I18n.t('statuses.errors.quoted_status_not_found')
+        end
+      end
+
       context 'with a self-quote post and a CW but no text' do
         let(:quoted_status) { Fabricate(:status, account: user.account) }
         let(:params) do
@@ -376,6 +396,19 @@ RSpec.describe '/api/v1/statuses' do
           expect(response.content_type)
             .to start_with('application/json')
           expect(response.parsed_body[:unexpected_accounts].map { |a| a.slice(:id, :acct) }).to match [{ id: bob.id.to_s, acct: bob.acct }]
+        end
+
+        context 'when collections feature is enabled', feature: :collections do
+          it 'serializes extra accounts with collection feature approval in body', :aggregate_failures do
+            subject
+
+            expect(response).to have_http_status(422)
+            expect(response.content_type)
+              .to start_with('application/json')
+            expect(response.parsed_body[:unexpected_accounts].map { |account| account.slice(:id, :acct) })
+              .to match [{ id: bob.id.to_s, acct: bob.acct }]
+            expect(response.parsed_body[:unexpected_accounts].first[:feature_approval]).to be_present
+          end
         end
       end
 

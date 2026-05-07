@@ -365,6 +365,23 @@ RSpec.describe StatusCacheHydrator do
       end
 
       it_behaves_like 'shared behavior'
+
+      context 'when the cached payload still has a deleted preview card' do
+        subject { described_class.new(status).hydrate(account.id) }
+
+        let(:preview_card) { Fabricate(:preview_card, unverified_author_account: account) }
+
+        before do
+          PreviewCardsStatus.create!(status: status, preview_card: preview_card)
+          Rails.cache.write("fan-out/#{status.id}", InlineRenderer.render(status, nil, :status))
+          status.reset_preview_card!
+          status.reload
+        end
+
+        it 'clears the stale card payload' do
+          expect(subject[:card]).to be_nil
+        end
+      end
     end
 
     context 'when cache is cold' do

@@ -7,6 +7,7 @@ class AccountStatusesFilter
     only_media
     exclude_replies
     exclude_reblogs
+    exclude_direct
   ).freeze
 
   attr_reader :params, :account, :current_account

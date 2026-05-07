@@ -323,7 +323,7 @@ cy:
         unsilence_account_html: Mae %{name} wedi dadwneud terfyn cyfrif %{target}
         unsuspend_account_html: Mae %{name} wedi dad atal cyfrif %{target}
         update_announcement_html: Mae %{name} wedi diweddaru cyhoeddiad %{target}
-        update_collection_html: Mae casgliad %{name} wedi'i ddiweddaru gan %{target}
+        update_collection_html: Mae %{name} wedi diweddaru casgliad gan %{target}
         update_custom_emoji_html: Mae %{name} wedi diweddaru emoji %{target}
         update_domain_block_html: Mae %{name} wedi diweddaru bloc parth %{target}
         update_ip_block_html: Mae %{name} wedi newid rheol IP %{target}

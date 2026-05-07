@@ -620,6 +620,21 @@ RSpec.describe 'signature verification concern' do
       end
     end
 
+    context 'with a malformed Signature-Input header' do
+      it 'returns `400` (Bad Request)', :aggregate_failures do
+        get '/activitypub/signature_required', headers: {
+          'Host' => 'www.example.com',
+          'Signature-Input' => 'sig1=',
+          'Signature' => 'sig1=:AAAA:',
+        }
+
+        expect(response).to have_http_status(400)
+        expect(response.parsed_body).to match(
+          error: 'Signature-Input could not be parsed. It does not contain a valid HTTP Message Signature.'
+        )
+      end
+    end
+
     context 'with an inaccessible key' do
       let(:signature_input) do
         'sig1=("@method" "@target-uri");created=1703066400;keyid="https://remote.domain/users/alice#main-key"'

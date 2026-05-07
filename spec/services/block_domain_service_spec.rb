@@ -48,6 +48,20 @@ RSpec.describe BlockDomainService do
     end
   end
 
+  describe 'for a suspension with reject media' do
+    before do
+      Fabricate(:report, target_account: bad_account, status_ids: [bad_status_with_attachment.id])
+    end
+
+    it 'clears media attachments that account suspension preserves for unresolved reports', :aggregate_failures, :inline_jobs do
+      subject.call(DomainBlock.create!(domain: 'evil.org', severity: :suspend, reject_media: true))
+
+      expect { bad_status_with_attachment.reload }.to_not raise_error
+      expect { bad_attachment.reload }.to_not raise_error
+      expect(bad_attachment.file.exists?).to be false
+    end
+  end
+
   describe 'for a silence with reject media' do
     it 'does not mark the domain as blocked, but silences accounts with an appropriate silencing date, clears media', :aggregate_failures, :inline_jobs do
       subject.call(DomainBlock.create!(domain: 'evil.org', severity: :silence, reject_media: true))

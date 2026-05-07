@@ -62,6 +62,15 @@ RSpec.describe PostStatusService do
       expect(status2.id).to eq status1.id
     end
 
+    it 'returns existing status from a fresh service when reusing an idempotency key' do
+      status1 = described_class.new.call(account, text: 'test', idempotency: 'meepmeep', scheduled_at: future)
+      status2 = nil
+
+      expect { status2 = described_class.new.call(account, text: 'test', idempotency: 'meepmeep', scheduled_at: future) }
+        .to not_change { account.scheduled_statuses.count }
+      expect(status2.id).to eq status1.id
+    end
+
     context 'when scheduled_at is less than min offset' do
       let(:invalid_scheduled_time) { 4.minutes.from_now }
 
@@ -333,6 +342,16 @@ RSpec.describe PostStatusService do
     account = Fabricate(:account)
     status1 = subject.call(account, text: 'test', idempotency: 'meepmeep')
     status2 = subject.call(account, text: 'test', idempotency: 'meepmeep')
+    expect(status2.id).to eq status1.id
+  end
+
+  it 'returns existing status from a fresh service when reusing an idempotency key' do
+    account = Fabricate(:account)
+    status1 = described_class.new.call(account, text: 'test', idempotency: 'meepmeep')
+    status2 = nil
+
+    expect { status2 = described_class.new.call(account, text: 'test', idempotency: 'meepmeep') }
+      .to not_change { account.statuses.count }
     expect(status2.id).to eq status1.id
   end
 

@@ -94,6 +94,23 @@ RSpec.describe 'Collections' do
             end
           end
 
+          it 'omits boundary pagination links when there is only one page', :aggregate_failures do
+            subject
+
+            expect(response)
+              .to have_http_status(200)
+
+            expect(response.parsed_body)
+              .to include({
+                'type' => 'CollectionPage',
+                'totalItems' => 1,
+              })
+            expect(response.parsed_body)
+              .to_not have_key('next')
+            expect(response.parsed_body)
+              .to_not have_key('prev')
+          end
+
           context 'when account has many collections' do
             before do
               Fabricate.times(5, :collection, account:)
@@ -111,6 +128,34 @@ RSpec.describe 'Collections' do
                   'totalItems' => 6,
                   'next' => match(%r{^https://.*page=2.*$}),
                 })
+              expect(response.parsed_body)
+                .to_not have_key('prev')
+            end
+          end
+        end
+
+        context 'when requesting the last page' do
+          subject { get ap_account_featured_collections_path(account.id, page: 2, format: :json) }
+
+          context 'when account has many collections' do
+            before do
+              Fabricate.times(5, :collection, account:)
+            end
+
+            it 'includes a link to the previous page and omits next', :aggregate_failures do
+              subject
+
+              expect(response)
+                .to have_http_status(200)
+
+              expect(response.parsed_body)
+                .to include({
+                  'type' => 'CollectionPage',
+                  'totalItems' => 6,
+                  'prev' => match(%r{^https://.*page=1.*$}),
+                })
+              expect(response.parsed_body)
+                .to_not have_key('next')
             end
           end
         end

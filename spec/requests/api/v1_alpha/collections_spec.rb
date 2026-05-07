@@ -206,13 +206,11 @@ RSpec.describe 'Api::V1Alpha::Collections', feature: :collections do
     it_behaves_like 'forbidden for wrong scope', 'read'
 
     context 'when collections are disabled' do
-      let(:headers) { {} }
-
       before do
         allow(Mastodon::Feature).to receive(:collections_enabled?).and_return(false)
       end
 
-      it 'returns http not found before authentication' do
+      it 'returns http not found before reaching the endpoint action' do
         subject
 
         expect(response).to have_http_status(404)

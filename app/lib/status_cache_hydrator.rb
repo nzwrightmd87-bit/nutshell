@@ -75,10 +75,21 @@ class StatusCacheHydrator
       end
     end
 
-    payload[:card][:missing_attribution] = status.preview_card.unverified_author_account_id == account_id if payload[:card]
+    hydrate_card_payload(payload, status, account_id)
 
     # Nested statuses are more likely to have a stale cache
     fill_status_stats(payload, status) if nested
+  end
+
+  def hydrate_card_payload(payload, status, account_id)
+    return if payload[:card].blank?
+
+    preview_card = status.preview_card
+    if preview_card.present?
+      payload[:card][:missing_attribution] = preview_card.unverified_author_account_id == account_id
+    else
+      payload[:card] = nil
+    end
   end
 
   def fill_status_stats(payload, status)

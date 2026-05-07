@@ -43,12 +43,16 @@ class ActivityPub::FeaturedCollectionsController < ApplicationController
     params[:page].present?
   end
 
+  def page_url(page)
+    ap_account_featured_collections_url(@account, page: page) unless page.nil?
+  end
+
   def next_page_url
-    ap_account_featured_collections_url(@account, page: @collections.next_page) if @collections.respond_to?(:next_page)
+    page_url(@collections.next_page) if @collections.respond_to?(:next_page)
   end
 
   def prev_page_url
-    ap_account_featured_collections_url(@account, page: @collections.prev_page) if @collections.respond_to?(:prev_page)
+    page_url(@collections.prev_page) if @collections.respond_to?(:prev_page)
   end
 
   def collection_presenter
