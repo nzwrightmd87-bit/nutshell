@@ -161,7 +161,12 @@ class Api::V1::StatusesController < Api::BaseController
   end
 
   def set_quoted_status
-    @quoted_status = Status.find(status_params[:quoted_status_id])&.proper if status_params[:quoted_status_id].present?
+    return if status_params[:quoted_status_id].blank?
+
+    submitted_status = Status.find(status_params[:quoted_status_id])
+    authorize(submitted_status, :show?)
+
+    @quoted_status = submitted_status.proper
     authorize(@quoted_status, :quote?) if @quoted_status.present?
   rescue ActiveRecord::RecordNotFound, Mastodon::NotPermittedError
     # TODO: distinguish between non-existing and non-quotable posts
