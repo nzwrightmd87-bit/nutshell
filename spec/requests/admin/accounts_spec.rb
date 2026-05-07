@@ -65,6 +65,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to reject account' do
         post reject_admin_account_path(id: account.id)
 
@@ -85,6 +87,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to redownload' do
         post redownload_admin_account_path(id: account.id)
 
@@ -102,6 +106,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to remove avatar' do
         expect { post remove_avatar_admin_account_path(id: account.id) }
           .to_not change(Admin::ActionLog.where(action: 'remove_avatar'), :count)
@@ -117,6 +123,8 @@ RSpec.describe 'Admin Accounts' do
 
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
+
+      before { sign_in current_user }
 
       it 'fails to remove header' do
         expect { post remove_header_admin_account_path(id: account.id) }
@@ -136,6 +144,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to unblock email' do
         expect { post unblock_email_admin_account_path(id: account.id) }
           .to_not change(CanonicalEmailBlock.where(reference_account: account), :count)
@@ -151,6 +161,8 @@ RSpec.describe 'Admin Accounts' do
 
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
+
+      before { sign_in current_user }
 
       it 'fails to unsensitive account' do
         post unsensitive_admin_account_path(id: account.id)
@@ -168,6 +180,8 @@ RSpec.describe 'Admin Accounts' do
 
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
+
+      before { sign_in current_user }
 
       it 'fails to unsilence account' do
         post unsilence_admin_account_path(id: account.id)
@@ -188,6 +202,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to unsuspend account' do
         post unsuspend_admin_account_path(id: account.id)
 
@@ -207,6 +223,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:user, role: UserRole.everyone) }
 
+      before { sign_in current_user }
+
       it 'fails to delete account' do
         delete admin_account_path(id: account.id)
 
@@ -225,6 +243,8 @@ RSpec.describe 'Admin Accounts' do
     context 'when user is admin' do
       let(:current_user) { Fabricate(:admin_user) }
 
+      before { sign_in current_user }
+
       context 'when target user is admin' do
         let(:target_role) { UserRole.find_by(name: 'Admin') }
 
@@ -241,6 +261,8 @@ RSpec.describe 'Admin Accounts' do
 
     context 'when user is not admin' do
       let(:current_user) { Fabricate(:moderator_user) }
+
+      before { sign_in current_user }
 
       context 'when target user is admin' do
         let(:target_role) { UserRole.find_by(name: 'Admin') }
