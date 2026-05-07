@@ -5,8 +5,8 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import { EmojiTextAreaField } from '@/mastodon/components/form_fields';
 import type { TextAreaProps } from '@/mastodon/components/form_fields/text_area_field';
-import type { BaseConfirmationModalProps } from '@/mastodon/features/ui/components/confirmation_modals';
-import { ConfirmationModal } from '@/mastodon/features/ui/components/confirmation_modals';
+import type { BaseConfirmationModalProps } from '@/mastodon/features/ui/components/confirmation_modals/confirmation_modal';
+import { ConfirmationModal } from '@/mastodon/features/ui/components/confirmation_modals/confirmation_modal';
 import { patchProfile } from '@/mastodon/reducers/slices/profile_edit';
 import { useAppDispatch, useAppSelector } from '@/mastodon/store';
 
@@ -67,6 +67,7 @@ export const BioModal: FC<BaseConfirmationModalProps> = ({ onClose }) => {
       onClose={onClose}
       updating={isPending}
       disabled={!!maxLength && newBio.length > maxLength}
+      noCloseOnConfirm
       noFocusButton
     >
       <EmojiTextAreaField
