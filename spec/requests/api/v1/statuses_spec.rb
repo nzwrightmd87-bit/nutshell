@@ -397,6 +397,19 @@ RSpec.describe '/api/v1/statuses' do
             .to start_with('application/json')
           expect(response.parsed_body[:unexpected_accounts].map { |a| a.slice(:id, :acct) }).to match [{ id: bob.id.to_s, acct: bob.acct }]
         end
+
+        context 'when collections feature is enabled', feature: :collections do
+          it 'serializes extra accounts with collection feature approval in body', :aggregate_failures do
+            subject
+
+            expect(response).to have_http_status(422)
+            expect(response.content_type)
+              .to start_with('application/json')
+            expect(response.parsed_body[:unexpected_accounts].map { |account| account.slice(:id, :acct) })
+              .to match [{ id: bob.id.to_s, acct: bob.acct }]
+            expect(response.parsed_body[:unexpected_accounts].first[:feature_approval]).to be_present
+          end
+        end
       end
 
       context 'with missing parameters' do

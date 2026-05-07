@@ -225,6 +225,11 @@ class Api::V1::StatusesController < Api::BaseController
   end
 
   def serialized_accounts(accounts)
-    ActiveModel::Serializer::CollectionSerializer.new(accounts, serializer: REST::AccountSerializer)
+    ActiveModel::Serializer::CollectionSerializer.new(
+      accounts,
+      serializer: REST::AccountSerializer,
+      scope_name: :current_user,
+      scope: current_user
+    )
   end
 end
