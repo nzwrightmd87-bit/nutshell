@@ -12,7 +12,7 @@ nutshell.sbs {
   header {
     Strict-Transport-Security "max-age=31536000; includeSubDomains"
     X-Content-Type-Options "nosniff"
-    Referrer-Policy "strict-origin-when-cross-origin"
+    # Rails sets Referrer-Policy from Setting.allow_referrer_origin.
   }
 
   # Streaming API (WebSocket)
