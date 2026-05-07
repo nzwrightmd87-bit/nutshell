@@ -120,7 +120,10 @@ const EmojiFieldWrapper: FC<
   EmojiInputProps & {
     disabled?: boolean;
     children: (
-      inputProps: InputProps & { onChange: ChangeEventHandler },
+      inputProps: InputProps & {
+        disabled?: boolean;
+        onChange: ChangeEventHandler;
+      },
     ) => ReactNode;
     inputRef: RefObject<HTMLTextAreaElement | HTMLInputElement>;
   }
@@ -161,7 +164,7 @@ const EmojiFieldWrapper: FC<
     >
       {(inputProps) => (
         <>
-          {children({ ...inputProps, onChange: handleChange })}
+          {children({ ...inputProps, disabled, onChange: handleChange })}
           <EmojiPickerButton onPick={handlePickEmoji} disabled={disabled} />
           {counterMax && (
             <CharacterCounter
