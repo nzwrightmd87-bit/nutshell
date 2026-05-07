@@ -124,15 +124,14 @@ export async function loadEmojiDataToState(
   // First, try to load the data from IndexedDB.
   try {
     const legacyCode = await loadLegacyShortcodesByShortcode(state.code);
+    const code = legacyCode?.hexcode ?? state.code;
     // This is duplicative, but that's because TS can't distinguish the state type easily.
-    const data = await loadEmojiByHexcode(
-      legacyCode?.hexcode ?? state.code,
-      locale,
-    );
+    const data = await loadEmojiByHexcode(code, locale);
     if (data) {
       return {
         ...state,
         type: EMOJI_TYPE_UNICODE,
+        code,
         data,
         // TODO: Use CLDR shortcodes when the picker supports them.
         shortcode: legacyCode?.shortcodes.at(0),

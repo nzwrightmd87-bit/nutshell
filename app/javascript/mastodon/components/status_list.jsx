@@ -60,37 +60,35 @@ export default class StatusList extends ImmutablePureComponent {
       return <RegenerationIndicator />;
     }
 
-    let scrollableContent = (isLoading || statusIds.size > 0) ? (
-      statusIds.map((statusId, index) => {
-        switch(statusId) {
-        case TIMELINE_SUGGESTIONS:
-          return (
-            <InlineFollowSuggestions key={TIMELINE_SUGGESTIONS} />
-          );
-        case TIMELINE_GAP:
-          return (
-            <LoadGap
-              key={'gap:' + statusIds.get(index + 1)}
-              disabled={isLoading}
-              param={index > 0 ? statusIds.get(index - 1) : null}
-              onClick={onLoadMore}
-            />
-          );
-        default:
-          return (
-            <StatusQuoteManager
-              key={statusId}
-              id={statusId}
-              contextType={timelineId}
-              scrollKey={this.props.scrollKey}
-              showThread
-              withCounters={this.props.withCounters}
-              {...statusProps}
-            />
-          );
-        }
-      })
-    ) : null;
+    let scrollableContent = statusIds.map((statusId, index) => {
+      switch(statusId) {
+      case TIMELINE_SUGGESTIONS:
+        return (
+          <InlineFollowSuggestions key={TIMELINE_SUGGESTIONS} />
+        );
+      case TIMELINE_GAP:
+        return (
+          <LoadGap
+            key={'gap:' + statusIds.get(index + 1)}
+            disabled={isLoading}
+            param={index > 0 ? statusIds.get(index - 1) : null}
+            onClick={onLoadMore}
+          />
+        );
+      default:
+        return (
+          <StatusQuoteManager
+            key={statusId}
+            id={statusId}
+            contextType={timelineId}
+            scrollKey={this.props.scrollKey}
+            showThread
+            withCounters={this.props.withCounters}
+            {...statusProps}
+          />
+        );
+      }
+    });
 
     if (scrollableContent && featuredStatusIds) {
       scrollableContent = featuredStatusIds.map(statusId => {

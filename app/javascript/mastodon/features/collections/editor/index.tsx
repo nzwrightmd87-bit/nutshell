@@ -4,6 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import { Helmet } from 'react-helmet';
 import {
+  Redirect,
   Switch,
   Route,
   useParams,
@@ -51,21 +52,33 @@ export const shouldResetCollectionEditor = (
   currentRouteId: string | null,
 ) => previousRouteId !== currentRouteId;
 
-function usePageTitle(id: string | undefined) {
-  const { path } = useRouteMatch();
-  const location = useLocation();
-
+export const getCollectionEditorPageTitle = ({
+  id,
+  path,
+  pathname,
+}: {
+  id: string | undefined;
+  path: string;
+  pathname: string;
+}) => {
   if (!id) {
     return messages.newCollection;
   }
 
-  if (matchPath(location.pathname, { path, exact: true })) {
+  if (matchPath(pathname, { path, exact: true })) {
     return messages.manageAccounts;
-  } else if (matchPath(location.pathname, { path: `${path}/details` })) {
+  } else if (matchPath(pathname, { path: `${path}/details`, exact: true })) {
     return messages.editDetails;
   } else {
-    throw new Error('No page title defined for route');
+    return messages.manageAccounts;
   }
+};
+
+function usePageTitle(id: string | undefined) {
+  const { path } = useRouteMatch();
+  const location = useLocation();
+
+  return getCollectionEditorPageTitle({ id, path, pathname: location.pathname });
 }
 
 export const CollectionEditorPage: React.FC<{
@@ -74,7 +87,7 @@ export const CollectionEditorPage: React.FC<{
   const intl = useIntl();
   const dispatch = useAppDispatch();
   const { id } = useParams<{ id?: string }>();
-  const { path } = useRouteMatch();
+  const { path, url } = useRouteMatch();
   const collection = useAppSelector((state) =>
     id ? state.collections.collections[id] : undefined,
   );
@@ -136,6 +149,10 @@ export const CollectionEditorPage: React.FC<{
               path={`${path}/details`}
               // eslint-disable-next-line react/jsx-no-bind
               render={() => <CollectionDetails />}
+            />
+            <Route
+              // eslint-disable-next-line react/jsx-no-bind
+              render={() => <Redirect to={url} />}
             />
           </Switch>
         )}

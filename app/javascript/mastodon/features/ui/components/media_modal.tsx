@@ -76,7 +76,7 @@ export const MediaModal: FC<MediaModalProps> = forwardRef<
     }));
 
     const handleChangeIndex = useCallback(
-      (newIndex: number, animate = false) => {
+      (newIndex: number) => {
         if (newIndex < 0) {
           newIndex = media.size + newIndex;
         } else if (newIndex >= media.size) {
@@ -84,17 +84,15 @@ export const MediaModal: FC<MediaModalProps> = forwardRef<
         }
         setIndex(newIndex);
         setZoomedIn(false);
-        if (animate) {
-          void api.start({ x: `calc(-${newIndex * 100}% + 0px)` });
-        }
+        void api.start({ x: `calc(-${newIndex * 100}% + 0px)` });
       },
       [api, media.size],
     );
     const handlePrevClick = useCallback(() => {
-      handleChangeIndex(index - 1, true);
+      handleChangeIndex(index - 1);
     }, [handleChangeIndex, index]);
     const handleNextClick = useCallback(() => {
-      handleChangeIndex(index + 1, true);
+      handleChangeIndex(index + 1);
     }, [handleChangeIndex, index]);
 
     const handleKeyDown = useCallback(
@@ -126,6 +124,7 @@ export const MediaModal: FC<MediaModalProps> = forwardRef<
         ) {
           handleChangeIndex(index - xDir);
           cancel();
+          return;
         }
         // Set the x position via calc to ensure proper centering regardless of screen size.
         const x = active ? mx : 0;

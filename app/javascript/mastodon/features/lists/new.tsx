@@ -26,11 +26,13 @@ import { LoadingIndicator } from 'mastodon/components/loading_indicator';
 import type { List } from 'mastodon/models/list';
 import { useAppDispatch, useAppSelector } from 'mastodon/store';
 
-import { messages as membersMessages } from './members';
-
 const messages = defineMessages({
   edit: { id: 'column.edit_list', defaultMessage: 'Edit list' },
   create: { id: 'column.create_list', defaultMessage: 'Create list' },
+  manageMembers: {
+    id: 'column.list_members',
+    defaultMessage: 'Manage list members',
+  },
 });
 
 const MembersLink: React.FC<{
@@ -55,7 +57,7 @@ const MembersLink: React.FC<{
     <Link to={`/lists/${id}/members`} className='app-form__link'>
       <div className='app-form__link__text'>
         <strong>
-          {intl.formatMessage(membersMessages.manageMembers)}
+          {intl.formatMessage(messages.manageMembers)}
           <Icon id='chevron_right' icon={ChevronRightIcon} />
         </strong>
         <FormattedMessage
@@ -274,7 +276,11 @@ const NewListWrapper: React.FC<{
       />
 
       <div className='scrollable'>
-        {isLoading ? <LoadingIndicator /> : <NewList list={list} />}
+        {isLoading ? (
+          <LoadingIndicator />
+        ) : (
+          <NewList key={id ?? 'new'} list={list} />
+        )}
       </div>
 
       <Helmet>

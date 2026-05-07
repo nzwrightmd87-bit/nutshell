@@ -65,7 +65,7 @@
   "account.followers": "abonné·e·s",
   "account.followers.empty": "Personne ne suit ce compte pour l'instant.",
   "account.followers_counter": "{count, plural, one {{counter} abonné·e} other {{counter} abonné·e·s}}",
-  "account.followers_you_know_counter": "{count, plural, one {{counter} suivi·e}, other {{counter} suivi·e·s}}",
+  "account.followers_you_know_counter": "{count, plural, one {{counter} suivi·e} other {{counter} suivi·e·s}}",
   "account.following": "Abonné·e",
   "account.following_counter": "{count, plural, one {{counter} abonnement} other {{counter} abonnements}}",
   "account.follows.empty": "Ce compte ne suit personne présentement.",
