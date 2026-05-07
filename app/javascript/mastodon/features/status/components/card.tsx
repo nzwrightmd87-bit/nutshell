@@ -37,7 +37,11 @@ const getHostname = (url: string) => {
 
 const domParser = new DOMParser();
 
-const handleIframeUrl = (html: string, url: string, providerName: string) => {
+export const handleIframeUrl = (
+  html: string,
+  url: string,
+  providerName: string,
+) => {
   const document = domParser.parseFromString(html, 'text/html').documentElement;
   const iframe = document.querySelector('iframe');
   const startTime = new URL(url).searchParams.get('t');
@@ -50,7 +54,6 @@ const handleIframeUrl = (html: string, url: string, providerName: string) => {
 
     if (providerName === 'YouTube') {
       iframeUrl.searchParams.set('start', startTime ?? '');
-      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
     }
 
     iframe.src = iframeUrl.href;
