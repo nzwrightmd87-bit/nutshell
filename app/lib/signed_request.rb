@@ -152,6 +152,8 @@ class SignedRequest
         'signature' => @request.headers['signature'],
       })
       @message = Linzer::Message.new(@request.rack_request)
+    rescue Linzer::Error
+      raise Mastodon::MalformedHeaderError, 'Signature-Input could not be parsed. It does not contain a valid HTTP Message Signature.'
     end
 
     def key_id
@@ -176,6 +178,8 @@ class SignedRequest
       Linzer.verify(key, @message, @signature)
     rescue Linzer::VerifyError
       false
+    rescue Linzer::Error
+      raise Mastodon::SignatureVerificationError, 'Error verifying HTTP Message Signature'
     end
 
     def verify_signature_strength!

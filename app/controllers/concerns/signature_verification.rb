@@ -26,7 +26,7 @@ module SignatureVerification
 
   def signature_key_id
     signed_request.key_id
-  rescue Mastodon::SignatureVerificationError
+  rescue Mastodon::MalformedHeaderError, Mastodon::SignatureVerificationError
     nil
   end
 
